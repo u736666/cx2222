@@ -4,6 +4,7 @@ import { getSite, resolveTextStyle, formatRich } from '../lib/content';
 interface Props {
   title?: string;
   desc?: string;
+  headingTag?: string;
 }
 
 const site = getSite() as any;
@@ -21,12 +22,15 @@ const emailRequired = cs.emailRequired !== false;
 const companyRequired = cs.companyRequired === true;
 const descRequired = cs.descRequired === true;
 const formAction = cs.formAction || '';
-const HeadingTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(cs.headingTag || '') ? cs.headingTag : 'h2') as any;
 
 const {
   title = cs.title,
-  desc = cs.desc
+  desc = cs.desc,
+  headingTag,
 } = Astro.props;
+
+const isContactPage = headingTag === 'h1' || Astro.url.pathname.includes('iletisim');
+const HeadingTag = (headingTag || (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(cs.headingTag || '') ? cs.headingTag : (isContactPage ? 'h1' : 'h2'))) as any;
 
 const titleStyle = resolveTextStyle(cs, 'title') || resolveTextStyle(cs, 'heading');
 const descStyle = resolveTextStyle(cs, 'desc');

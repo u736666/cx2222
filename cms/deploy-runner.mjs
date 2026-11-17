@@ -10,7 +10,7 @@ export const DEFAULT_DEPLOY_CONFIG = {
   provider: 'vercel',
   projectName: 'cxfolks',
   productionBranch: 'main',
-  productionUrl: 'https://cxfolks.vercel.app',
+  productionUrl: 'https://cx2222.vercel.app',
   githubRepo: 'u736666/cxfolks',
   githubRemote: 'origin',
 };
@@ -52,8 +52,8 @@ export async function writeDeployConfig(rootDir, input) {
     .replace(/[^a-z0-9-]+/g, '-')
     .replace(/^-+|-+$/g, '') || 'cxfolks';
 
-  const productionUrl = String(input.productionUrl ?? current.productionUrl).trim() || 'https://cxfolks.vercel.app';
-  const githubRepo = String(input.githubRepo ?? current.githubRepo).trim() || 'u736666/cxfolks';
+  const productionUrl = String(input.productionUrl ?? current.productionUrl).trim() || 'https://cx2222.vercel.app';
+  const githubRepo = String(input.githubRepo ?? current.githubRepo).trim() || 'u736666/cx2222';
   const productionBranch = String(input.productionBranch ?? current.productionBranch).trim() || 'main';
 
   const next = {
@@ -393,7 +393,7 @@ export async function runVercelDeploy(rootDir, options = {}) {
         committed,
         commitMessage,
         lastCommit: lastCommitRes.output.trim(),
-        productionUrl: config.productionUrl || 'https://cxfolks.vercel.app',
+        productionUrl: config.productionUrl || 'https://cx2222.vercel.app',
         repoUrl: `https://github.com/${repo}`,
         logs: logs.join('\n\n'),
       },

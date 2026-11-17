@@ -35,7 +35,9 @@ const {
   breadcrumbs,
 } = Astro.props;
 
-const siteUrl = site.brand.siteUrl;
+const siteUrl = (Astro.url.origin && !Astro.url.origin.includes('localhost') && !Astro.url.origin.includes('127.0.0.1'))
+  ? Astro.url.origin
+  : (site.brand?.siteUrl || 'https://cx2222.vercel.app');
 const currentPath = Astro.url.pathname;
 
 const resolvedTitle = seo?.title || title;
@@ -146,10 +148,67 @@ const webPageSchema = rawCustomSchemas.length === 0 ? {
   ...geoExtras,
 } : null;
 
+const homeFaqSchema = isHome ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/#faq`,
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Müşteri Deneyimi (CX) Danışmanlığı nedir ve şirketlere ne kazandırır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Müşteri Deneyimi (CX) danışmanlığı, müşterilerin markanızla temas ettiği tüm fiziksel ve dijital kanalları uçtan uca inceleyerek sürtünme noktalarını ortadan kaldırır. Müşteri memnuniyetini ve sadakatini artırırken churn oranını düşürür ve sürdürülebilir gelir artışı sağlar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Müşteri Yolculuk Haritası (Customer Journey Map) nasıl çıkarılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kullanıcı araştırmaları, derinlemesine kalitatif görüşmeler ve analitik verilerle müşterinin farkındalıktan satın alma ve sadakat aşamasına kadarki tüm adımları, temas noktaları, duygusal iniş çıkışları ve fırsat alanları adım adım görselleştirilerek haritalandırılır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Servis Tasarımı (Service Design) ile Design Thinking arasındaki fark nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Design Thinking insan odaklı problem çözme metodolojisini sunarken, Servis Tasarımı bu metodolojiyi hem ön yüzdeki müşteri deneyimine hem de arka plandaki operasyonel süreçlere, çalışanlara ve teknoloji ekosistemine uçtan uca uygular."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kalitatif ve Etnografik kullanıcı araştırmaları neden kritiktir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Geleneksel anketlerin gösteremediği bilinçdışı ihtiyaçları, gerçek davranış motivasyonlarını ve duygu durumlarını kullanıcıların doğal yaşam alanlarında doğrudan gözlemleyerek derinlemesine içgörüler elde etmeyi sağlar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yapay zeka müşteri deneyimi süreçlerini nasıl dönüştürür?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Büyük dil modelleri ve yapay zeka ajanları ile anlık müşteri duygu analizi, hiper-kişiselleştirilmiş dinamik yolculuklar, otomatik kök neden analizleri ve proaktif destek süreçleri hayata geçirilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kurumsal CX ve Deneyim Tasarımı Eğitimleri neleri kapsar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kurumların ekiplerine Design Thinking, Customer Journey Mapping, Servis Tasarımı ve Yapay Zeka Destekli CX konularında uygulamalı atölyeler ve masterclass programları ile sürdürülebilir yetkinlik kazandırılmasını sağlar."
+      }
+    }
+  ]
+} : null;
+
 const allSchemas = [
   orgSchema,
   ...(breadcrumbSchema ? [breadcrumbSchema] : []),
   ...(webPageSchema ? [webPageSchema] : []),
+  ...(homeFaqSchema ? [homeFaqSchema] : []),
   ...enrichedCustomSchemas,
 ];
 

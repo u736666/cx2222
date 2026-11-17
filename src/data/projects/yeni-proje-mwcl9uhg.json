@@ -16,10 +16,17 @@
     "dsfgsdfgsdfg"
   ],
   "seo": {
-    "title": "Yeni Proje | cxfolks",
-    "description": "Projenin SEO açıklaması.",
-    "aboutTopics": [],
-    "keyTakeaways": []
+    "title": "Yeni Müşteri Deneyimi Projesi | cx2222",
+    "description": "cx2222 ile yeni nesil müşteri deneyimi dönüşümü, kapsamlı kullanıcı araştırmaları ve uçtan uca servis tasarımı vaka analizi.",
+    "aiSummary": "Uçtan uca müşteri deneyimi dönüşümü ve servis tasarımı vaka analizi.",
+    "aboutTopics": [
+      "Müşteri Deneyimi",
+      "Servis Tasarımı",
+      "CX Dönüşümü"
+    ],
+    "keyTakeaways": [
+      "Bütünsel kullanıcı araştırması ve müşteri yolculuk optimizasyonu"
+    ]
   },
   "metrics": [
     {
