@@ -65,8 +65,16 @@ const orgSchema = {
   "name": site.brand.name,
   "url": siteUrl,
   "logo": `${siteUrl}/logo.png`,
+  "image": absoluteImageUrl,
   "description": site.brand.orgDescription,
   "email": site.brand.email,
+  "telephone": site.brand.phone || "+90-212-000-0000",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "İstanbul",
+    "addressCountry": "TR"
+  },
   "sameAs": site.brand.social.map((s) => s.schemaUrl || s.url),
   "knowsAbout": [
     "Müşteri Deneyimi (CX)",
