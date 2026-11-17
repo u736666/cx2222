@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "cx2222 Akademi",
+    "slug": "cozumler/akademi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "cx2222 Akademi & Kurum Kültürü Dönüşümü | cx2222",
+    "description": "Çalışan Deneyimi (EX) olmadan Müşteri Deneyimi (CX) yaşayamaz. LEGO® Serious Play®, kurumsal empati kampları ve ön hat yetkilendirme programları.",
+    "schemaType": "Service",
+    "keywords": "cx2222 Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
+    "aiSummary": "Çalışan deneyimi (EX) olmadan müşteri deneyimi yaşayamaz; LEGO Serious Play, empati kampları ve liderlik çalıştayları ile kalıcı kültür inşası.",
+    "aboutTopics": [
+      "Çalışan Deneyimi (EX)",
+      "LEGO Serious Play",
+      "Kurumsal Empati Eğitimi"
+    ],
+    "keyTakeaways": [
+      "Ön hat ekiplerini prosedürden inisiyatife taşıma",
+      "Departmanlar arası ortak CX dili"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "",
+        "title": "cx2222 Akademi ve Kültür Dönüşümü32",
+        "desc": "En gelişmiş yapay zeka altyapısına sahip olsanız bile, müşterinizle göz göze gelen çalışanınız empati kuramıyorsa deneyim çöker. Çalışan deneyimini (EX) güçlendiriyor, ekipleri tek bir vizyonda kenetliyoruz.",
+        "ctaText": "Eğitim Talep Edin →",
+        "ctaHref": "/iletisim",
+        "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
+        "imageAlt": "cx2222 Akademi Liderlik Portresi",
+        "headingTag": "h1"
+      },
+      "style": {}
+    },
+    {
+      "id": "capabilities",
+      "type": "capabilitiesGrid",
+      "visible": true,
+      "data": {
+        "items": [
+          {
+            "eyebrow": "01 / STRATEJİK HİZALANMA",
+            "title": "LEGO® Serious Play® Seansları",
+            "body": "Sıkıcı sunumlar ve monolog toplantılar yerine, departman liderlerini ve ekipleri masaya oturtuyoruz. Ellerin zihinle kurduğu nörolojik bağı kullanarak kurumun kör noktalarını, müşteri sürtünmelerini ve gelecek senaryolarını 3 boyutlu inşa ediyoruz.",
+            "style": "platinum"
+          },
+          {
+            "eyebrow": "02 / ÖN HAT GÜÇLENDİRME",
+            "title": "Frontline Çalışan Yetkilendirme",
+            "body": "Müşteri mağduriyet yaşadığında çalışanınızın 'Prosedürümüz böyle, bir şey yapamam' demesini engelliyoruz. Çalışanlara belirli sınırlar dahilinde anında inisiyatif alma, telafi tanımlama ve sorunu yerinde çözme özgürlüğü kazandırıyoruz.",
+            "style": "siteBg"
+          },
+          {
+            "eyebrow": "03 / EMPATİ ATÖLYELERİ",
+            "title": "Müşteri Ayakkabısında Bir Gün",
+            "body": "Masa başındaki yazılımcıyı, pazarlamacıyı ve finans yöneticisini çağrı merkezi kulaklığı takmaya veya şube bankosunda durmaya davet ediyoruz. Karar vericilerin müşterinin gerçek acısını bizzat hissetmesini sağlıyoruz.",
+            "style": "richBlack"
+          },
+          {
+            "eyebrow": "04 / KÜLTÜR ELÇİLERİ",
+            "title": "Kurum İçi CX Elçileri Yetiştirme",
+            "body": "Danışmanlık bittiğinde dönüşümün devam etmesi için kurumunuzun içinden seçilen liderleri 'Deneyim Elçisi' olarak eğitiyoruz. Değişimin kendi çalışanlarınız eliyle yaşatılmasını garanti ediyoruz.",
+            "style": "brandAccent"
+          }
+        ],
+        "columns": 2
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "projects-stacked",
+      "type": "projectShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "İlgili Projeler",
+        "headingTag": "h2",
+        "desc": "",
+        "cardCtaText": "Vaka Analizini Oku →",
+        "allLinkText": "Tüm Projeleri İnceleyin →",
+        "allLinkHref": "/projeler",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog & Düşünce Liderliği",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "cx2222 Akademi Hakkında Sıkça Sorulanlar",
+        "items": [
+          {
+            "question": "LEGO® Serious Play® metodolojisi iş dünyasında ve CX tasarımında nasıl kullanılır?",
+            "answer": "LEGO® Serious Play®, soyut fikirleri ve karmaşık kurumsal çatışmaları 3 boyutlu somut modellere dönüştüren bilimsel olarak kanıtlanmış bir yöntemdir. Departman liderlerinin ve ekiplerin masaya oturup ortak vizyonu elleriyle inşa etmesini sağlar. Katılımcıların %100'ünün eşit söz hakkına sahip olduğu ve siloların dakikalar içinde yıkıldığı benzersiz bir hizalanma ortamı yaratır."
+          },
+          {
+            "question": "Binlerce kişilik dev operasyonlarda (ör. İGA Havalimanı) eğitimler nasıl ölçeklenir?",
+            "answer": "Train-the-Trainer (Eğiticinin Eğitimi) modeli ve mikro öğrenme modülleriyle ölçeklenir. Örneğin İstanbul Havalimanı'nda 30.000 kişilik dev kadro için tasarladığımız misafirperverlik ve deneyim kültürü programında, kurum içi kültür elçileri yetiştirerek bilginin tüm vardiyalara organik olarak yayılmasını sağladık."
+          },
+          {
+            "question": "Akademi programlarının kalıcı davranış değişikliği yarattığını nasıl ölçüyorsunuz?",
+            "answer": "Eğitim öncesi ve sonrası ölçülen çalışan empati endeksi, ön hat çalışanlarının inisiyatif alma sıklığı ve doğrudan eğitim alan ekiplerin baktığı temas noktalarındaki müşteri memnuniyet (CSAT/NPS) artışlarıyla ölçüyoruz."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "title": "",
+        "desc": "",
+        "visible": true,
+        "selectedCtaId": "default-consulting"
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

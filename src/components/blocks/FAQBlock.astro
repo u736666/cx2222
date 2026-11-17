@@ -1,0 +1,27 @@
+---
+import FAQSection from '../FAQSection.astro';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const items = Array.isArray(data.items || data.faqs) ? (data.items || data.faqs) : [];
+const title = data.title || data.faqTitle || 'Sıkça Sorulan Sorular';
+const subtitle = data.subtitle || data.faqSubtitle;
+const sectionId = id || styles.sectionId || 'faq';
+---
+
+{items.length > 0 && (
+  <div id={sectionId} class={styles.sectionClasses} style={styles.inlineStyleString}>
+    <FAQSection 
+      title={title} 
+      subtitle={subtitle}
+      items={items} 
+    />
+  </div>
+)}

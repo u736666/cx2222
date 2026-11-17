@@ -1,0 +1,98 @@
+{
+  "slug": "istanbul-havalimani",
+  "order": 4,
+  "client": "İGA İstanbul Havalimanı",
+  "sector": "",
+  "title": "Misafirperverlikte Küresel Standart: 30.000 Çalışanla Yaşayan Kültür",
+  "shortTitle": "Misafirperverlikte Küresel Standart",
+  "desc": "Dünyanın en işlek havalimanlarından birini otantik Türk misafirperverliğinin küresel vitrinine dönüştürdük.",
+  "listDesc": "Dünyanın en işlek havalimanlarından birini otantik Türk misafirperverliğinin küresel vitrinine dönüştürdük. 30.000 çalışan eğitimi ve %78 memnuniyet artışı.",
+  "image": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1400&q=80",
+  "imageAlt": "İstanbul Havalimanı (İGA)",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "30.000 Kişilik Eğitim",
+    "1 Yılda %78 Memnuniyet Artışı",
+    "14 Kritik Temas Noktası"
+  ],
+  "seo": {
+    "title": "İstanbul Havalimanı (İGA) Vaka Analizi | cx2222",
+    "description": "30.000 çalışan için deneyim kültürü inşası, 14 kritik temas noktası optimizasyonu ve 1 yılda %78 yolcu memnuniyeti artışı.",
+    "headline": "İstanbul Havalimanı (İGA) - Misafirperverlikte Küresel Standart",
+    "schemaDesc": "Dünyanın en yoğun aktarma merkezlerinden birinde 30.000 çalışan için deneyim kültürü inşası ve 1 yılda %78 yolcu memnuniyeti artışı.",
+    "breadcrumbName": "İstanbul Havalimanı",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "metrics": [
+    {
+      "value": "30.000",
+      "label": "Eğitilen Havalimanı Personeli"
+    },
+    {
+      "value": "%78",
+      "label": "1 Yılda Memnuniyet Artışı"
+    },
+    {
+      "value": "14",
+      "label": "Uçtan Uca Temas Noktası"
+    },
+    {
+      "value": "Global 1.",
+      "label": "Skytrax & ACI Ödülleri"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Zorluk & Çıkış Noktası",
+    "title": "Devasa Boyutun Yarattığı Soğukluk ve Kaybolma Hissi",
+    "body": "İstanbul Havalimanı, dünyanın en modern ve en büyük havalimanlarından biri olarak inşa edildi. Ancak yolcuların ilk deneyimlerinde karşılaştığı temel zorluk, mekanın büyüklüğü nedeniyle yaşanan yorgunluk, kaybolma korkusu ve insani sıcaklığın eksikliğiydi. Güvenlikten pasaporta, yer hizmetlerinden perakendeye kadar binlerce farklı şirket çalışanı ortak bir misafirperverlik vizyonundan uzaktı."
+  },
+  "solution": {
+    "eyebrow": "cx2222 Stratejisi",
+    "title": "\"İGA Care\" Deneyim Kültürü ve Çok Katmanlı Dönüşüm Modeli",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Duygu Temelli Yolculuk Haritası",
+        "body": "Güvenlik aramasındaki stres, aktarma uçuşunu kaçırma paniği ve pasaport sırasındaki can sıkıntısı 14 kritik noktada haritalandırıldı.",
+        "style": "platinum"
+      },
+      {
+        "title": "30.000 Personel İçin Deneyim Okulu",
+        "body": "Güvenlik görevlilerinden temizlik personeline tüm ekiplere interaktif empati, beden dili ve kriz anı yönetimi eğitimleri verildi.",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Aile ve Erişilebilirlik Rotaları",
+        "body": "Özel gereksinimli yolcular ve çocuklu aileler için havalimanı içi pürüzsüz hızlandırılmış deneyim koridorları tasarlandı.",
+        "style": "brandAccent"
+      },
+      {
+        "title": "Anlık Geri Bildirim İstasyonları",
+        "body": "Yolcuların yaşadığı anlık aksaklıkları operasyon liderlerine bildiren kapalı döngü geri bildirim terminalleri kuruldu.",
+        "style": "richBlack"
+      }
+    ]
+  },
+  "quote": "\"cx2222 ile birlikte devasa bir beton ve çelik yapıyı, dünyanın en misafirperver yolcu deneyimi ekosistemine dönüştürdük. Yolcularımızın gözündeki gülümseme ve Skytrax ödülleri bu başarının en somut kanıtı.\"",
+  "cta": {
+    "title": "Benzer bir başarı hikayesini kurumunuz için yazalım.",
+    "desc": "Sektörünüzün dinamiklerini ve müşteri temas noktalarınızı birlikte değerlendirelim.",
+    "visible": true,
+    "surface": "platinum",
+    "selectedCtaId": "default-consulting"
+  },
+  "isSample": true,
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
+}

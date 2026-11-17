@@ -1,0 +1,51 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+import { formatRich } from '../../lib/content';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const items = Array.isArray(data.items || data.problemSlider) ? (data.items || data.problemSlider) : [];
+const sectionId = id || styles.sectionId || 'problem-slider-sec';
+---
+
+<section id={sectionId} class={`mt-28 px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class={styles.containerClass}>
+    <div class="relative min-h-[140px] flex items-center">
+      {items.map((ps: any, idx: number) => (
+        <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
+          <Heading as={ps.headingTag || 'h3'} customSize={ps.headingSize || ps.titleSize} color={ps.headingColor || ps.titleColor} size="h2" text={ps.quote} class="text-paletteRichBlack" />
+          <a href={ps.href} data-service={ps.service} class="btn-rect font-semibold tracking-wider text-brandAccent mt-4 hover:underline inline-block">
+            <span set:html={formatRich(ps.solutionLabel)}></span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.sentence-slide');
+    if (slides.length <= 1) return;
+    let currentIdx = 0;
+
+    setInterval(() => {
+      slides[currentIdx]?.classList.remove('active');
+      slides[currentIdx]?.classList.add('hidden', 'opacity-0');
+      currentIdx = (currentIdx + 1) % slides.length;
+      slides[currentIdx]?.classList.remove('hidden');
+      setTimeout(() => {
+        slides[currentIdx]?.classList.add('active');
+        slides[currentIdx]?.classList.remove('opacity-0');
+      }, 50);
+    }, 4500);
+  });
+</script>

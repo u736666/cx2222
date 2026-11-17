@@ -1,0 +1,68 @@
+---
+import Heading from '../Heading.astro';
+import { getSurfaceStyle, resolveTextStyle, formatRich } from '../../lib/content';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const items = Array.isArray(data.items || data.capabilities) ? (data.items || data.capabilities) : [];
+const columns = data.columns || 2;
+const sectionId = id || styles.sectionId || 'capabilities-grid';
+---
+
+<section id={sectionId} class={`section-pad-150 text-paletteRichBlack px-6 md:px-16 ${styles.sectionClasses || 'bg-siteBg'}`} style={styles.inlineStyleString}>
+  <div class={styles.containerClass}>
+    {data.title && (
+      <div class="mb-12">
+        {data.eyebrow && (
+          <span class="typo-small font-bold tracking-widest text-brandAccent block mb-2" set:html={formatRich(data.eyebrow)}></span>
+        )}
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-paletteRichBlack" />
+        {data.desc && (
+          <p class="typo-lead font-light text-paletteRichBlack/75 max-w-3xl mt-4" style={resolveTextStyle(data, 'desc') || undefined} set:html={formatRich(data.desc)}>
+          </p>
+        )}
+      </div>
+    )}
+
+    <div class={`grid grid-cols-1 ${columns === 3 ? 'lg:grid-cols-3' : 'md:grid-cols-2'} gap-0 overflow-hidden`}>
+      {items.map((item: any) => {
+        const st = getSurfaceStyle(item.style);
+        const eyebrowColor = item.style === 'platinum' || item.style === 'richBlack' || item.style === 'siteBg' ? 'text-brandAccent' : 'text-paletteRichBlack';
+        const metricColor = item.style === 'richBlack' ? 'text-brandAccent' : (item.style === 'brandAccent' ? 'text-paletteRichBlack/70' : 'text-paletteRichBlack/60');
+        const HeadingTag = item.headingTag || 'h2';
+        return (
+          <div class={`p-10 md:p-14 space-y-4 ${st.section}`}>
+            {item.eyebrow && (
+              <span class={`typo-small font-bold tracking-widest block ${eyebrowColor}`} set:html={formatRich(item.eyebrow)}></span>
+            )}
+            <Heading as={HeadingTag} customSize={item.headingSize || item.titleSize} color={item.headingColor || item.titleColor} size="h2" text={item.title} class={st.title} />
+            <p class={`typo-body font-light ${st.body}`} style={resolveTextStyle(item, 'body') || resolveTextStyle(item, 'desc') || undefined} set:html={formatRich(item.body || item.desc)}>
+            </p>
+            {item.metric && (
+              <p class={`typo-small font-semibold tracking-widest pt-2 ${metricColor}`} set:html={formatRich(item.metric)}>
+              </p>
+            )}
+            {Array.isArray(item.bullets) && item.bullets.length > 0 && (
+              <ul class="space-y-2 pt-4 typo-small font-light opacity-85">
+                {item.bullets.map((b: string) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-brandAccent leading-none">•</span>
+                    <span set:html={formatRich(b)}></span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

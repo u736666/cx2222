@@ -1,0 +1,178 @@
+---
+import { getSite, resolveTextStyle, formatRich } from '../lib/content';
+
+interface Props {
+  title?: string;
+  desc?: string;
+  eyebrow?: string;
+  headingTag?: string;
+  headingSize?: string;
+  headingColor?: string;
+  descSize?: string;
+  descColor?: string;
+  eyebrowColor?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  surface?: string;
+  bgColor?: string;
+  bgImage?: string;
+  bgAlt?: string;
+  visible?: boolean;
+  showCta?: boolean;
+  selectedCtaId?: string;
+}
+
+const site = getSite() as any;
+const cta = site.cta || {};
+const library: any[] = site.ctaLibrary || [];
+
+// 1. Resolve card from library
+const targetId = Astro.props.selectedCtaId || 'default-consulting';
+const card = library.find((c: any) => c.id === targetId) || library[0] || {};
+
+// 2. Resolve content (explicit prop > card from library > site.cta)
+const title = (Astro.props.title !== undefined && Astro.props.title !== '') ? Astro.props.title : (card.title || cta.title);
+const desc = (Astro.props.desc !== undefined && Astro.props.desc !== '') ? Astro.props.desc : (card.desc || cta.desc);
+const eyebrow = (Astro.props.eyebrow !== undefined && Astro.props.eyebrow !== '') ? Astro.props.eyebrow : (card.eyebrow || cta.eyebrow);
+
+const primaryLabel = (Astro.props.primaryLabel !== undefined && Astro.props.primaryLabel !== '') ? Astro.props.primaryLabel : (card.primaryLabel || cta.primaryLabel);
+const primaryHref = (Astro.props.primaryHref !== undefined && Astro.props.primaryHref !== '') ? Astro.props.primaryHref : (card.primaryHref || cta.primaryHref);
+const secondaryLabel = (Astro.props.secondaryLabel !== undefined && Astro.props.secondaryLabel !== '') ? Astro.props.secondaryLabel : (card.secondaryLabel || cta.secondaryLabel);
+const secondaryHref = (Astro.props.secondaryHref !== undefined && Astro.props.secondaryHref !== '') ? Astro.props.secondaryHref : (card.secondaryHref || cta.secondaryHref);
+
+const surface = Astro.props.surface || card.surface || 'platinum';
+const bgColor = Astro.props.bgColor || card.bgColor || '';
+const bgImage = Astro.props.bgImage || card.bgImage || '';
+const bgAlt = Astro.props.bgAlt || card.bgAlt || title || '';
+
+const rawTag = Astro.props.headingTag || card.headingTag || cta?.headingTag;
+const HeadingTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(rawTag || '') ? rawTag : 'h2') as any;
+
+const isVisible = Astro.props.visible !== false && Astro.props.showCta !== false && cta?.showCta !== false;
+
+const baseTitleStyle = resolveTextStyle(Astro.props, 'title') || resolveTextStyle(Astro.props, 'heading') || resolveTextStyle(card, 'title') || resolveTextStyle(cta, 'title') || '';
+const baseDescStyle = resolveTextStyle(Astro.props, 'desc') || resolveTextStyle(card, 'desc') || resolveTextStyle(cta, 'desc') || '';
+const baseEyebrowStyle = resolveTextStyle(Astro.props, 'eyebrow') || resolveTextStyle(card, 'eyebrow') || resolveTextStyle(cta, 'eyebrow') || '';
+
+let customTitleStyle = baseTitleStyle;
+const headingSize = Astro.props.headingSize || card.headingSize;
+if (headingSize && !customTitleStyle.includes('font-size')) {
+  customTitleStyle += `font-size: ${headingSize}${typeof headingSize === 'number' || /^\d+$/.test(headingSize) ? 'px' : ''};`;
+}
+const headingColor = Astro.props.headingColor || card.headingColor;
+if (headingColor && !customTitleStyle.includes('color')) {
+  customTitleStyle += `color: ${headingColor};`;
+}
+
+let customDescStyle = baseDescStyle;
+const descSize = Astro.props.descSize || card.descSize;
+if (descSize && !customDescStyle.includes('font-size')) {
+  customDescStyle += `font-size: ${descSize}${typeof descSize === 'number' || /^\d+$/.test(descSize) ? 'px' : ''};`;
+}
+const descColor = Astro.props.descColor || card.descColor;
+if (descColor && !customDescStyle.includes('color')) {
+  customDescStyle += `color: ${descColor};`;
+}
+
+let customEyebrowStyle = baseEyebrowStyle;
+const eyebrowColor = Astro.props.eyebrowColor || card.eyebrowColor;
+if (eyebrowColor && !customEyebrowStyle.includes('color')) {
+  customEyebrowStyle += `color: ${eyebrowColor};`;
+}
+
+const surfaceMap: Record<string, { card: string; eyebrow: string; title: string; desc: string }> = {
+  platinum: {
+    card: 'bg-palettePlatinum',
+    eyebrow: 'text-paletteRichBlack/60',
+    title: 'text-paletteRichBlack',
+    desc: 'text-paletteRichBlack/75',
+  },
+  dustGrey: {
+    card: 'bg-paletteDustGrey',
+    eyebrow: 'text-paletteRichBlack/60',
+    title: 'text-paletteRichBlack',
+    desc: 'text-paletteRichBlack/75',
+  },
+  siteBg: {
+    card: 'bg-siteBg',
+    eyebrow: 'text-brandAccent',
+    title: 'text-paletteRichBlack',
+    desc: 'text-paletteRichBlack/75',
+  },
+  brandAccent: {
+    card: 'bg-brandAccent',
+    eyebrow: 'text-paletteRichBlack/80',
+    title: 'text-paletteRichBlack',
+    desc: 'text-paletteRichBlack/85',
+  },
+  richBlack: {
+    card: 'bg-paletteRichBlack text-white',
+    eyebrow: 'text-brandAccent',
+    title: 'text-white',
+    desc: 'text-white/80',
+  },
+};
+
+const sf = surfaceMap[surface] || surfaceMap.platinum;
+const isDark = surface === 'richBlack' || (bgColor && (bgColor === '#1B1C1D' || bgColor.toLowerCase() === '#111' || bgColor.toLowerCase() === '#000'));
+
+let cardStyle = '';
+if (bgColor) {
+  cardStyle += `background-color: ${bgColor};`;
+}
+
+const secBtnClass = isDark
+  ? 'btn-rect min-h-[3rem] py-3 px-8 bg-white hover:bg-palettePlatinum !text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64 shadow-sm transition-colors'
+  : 'btn-rect min-h-[3rem] py-3 px-8 bg-paletteRichBlack hover:bg-black !text-white font-semibold text-center w-full sm:w-auto lg:w-64 shadow-sm transition-colors';
+---
+
+{isVisible && (
+<section class="section-pad-150 bg-siteBg px-6 md:px-16">
+  <div class="max-w-custom mx-auto">
+    <div class={`${sf.card} p-10 md:p-16 lg:p-20 relative overflow-hidden`} style={cardStyle || undefined}>
+      {bgImage && (
+        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <img 
+            src={bgImage} 
+            alt={bgAlt || title || ''} 
+            class="w-full h-full object-cover object-center opacity-30 filter contrast-125"
+          />
+          <div class={`absolute inset-0 ${isDark ? 'bg-black/40' : 'bg-white/20'}`}></div>
+        </div>
+      )}
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-8 space-y-6">
+          {eyebrow && (
+            <span class={`typo-small font-semibold tracking-widest block ${sf.eyebrow}`} style={customEyebrowStyle || undefined} set:html={formatRich(eyebrow)}></span>
+          )}
+          <HeadingTag class={`typo-h2 ${sf.title}`} style={customTitleStyle || undefined} set:html={formatRich(title)}>
+          </HeadingTag>
+          <p class={`typo-lead font-light max-w-2xl ${sf.desc}`} style={customDescStyle || undefined} set:html={formatRich(desc)}>
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-center">
+          {primaryLabel && (
+            <a 
+              href={primaryHref}
+              class="btn-rect min-h-[3rem] py-3 px-8 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64"
+            >
+              {primaryLabel}
+            </a>
+          )}
+          {secondaryLabel && (
+            <a 
+              href={secondaryHref}
+              class={secBtnClass}
+            >
+              {secondaryLabel}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+)}

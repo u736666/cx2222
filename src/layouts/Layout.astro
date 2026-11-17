@@ -1,0 +1,277 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getSite, getTheme, type SeoGeoConfig } from '../lib/content';
+
+const site = getSite();
+const theme = getTheme();
+
+interface Props {
+  title?: string;
+  description?: string;
+  seo?: SeoGeoConfig;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  isHome?: boolean;
+  hideFooter?: boolean;
+  defaultRobots?: string;
+  schema?: Record<string, any> | Record<string, any>[];
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const {
+  title = site.brand.defaultTitle,
+  description = site.brand.defaultDescription,
+  seo,
+  canonical,
+  image = site.brand.defaultOgImage,
+  type = "website",
+  isHome = false,
+  hideFooter = false,
+  defaultRobots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  schema,
+  breadcrumbs,
+} = Astro.props;
+
+const siteUrl = site.brand.siteUrl;
+const currentPath = Astro.url.pathname;
+
+const resolvedTitle = seo?.title || title;
+const resolvedDescription = seo?.description || description;
+const resolvedKeywords = seo?.keywords || '';
+const isNoIndex = site.brand?.noindex === true;
+const resolvedRobots = isNoIndex ? 'noindex, nofollow' : (seo?.robots || defaultRobots);
+const resolvedImage = seo?.ogImage || image || site.brand.defaultOgImage;
+const absoluteImageUrl = resolvedImage.startsWith('http')
+  ? resolvedImage
+  : `${siteUrl}${resolvedImage.startsWith('/') ? '' : '/'}${resolvedImage}`;
+const resolvedCanonical = seo?.canonical
+  ? (seo.canonical.startsWith('http') ? seo.canonical : `${siteUrl}${seo.canonical.startsWith('/') ? '' : '/'}${seo.canonical}`)
+  : canonical || `${siteUrl}${currentPath === '/' ? '' : currentPath}`;
+
+const aiSummary = seo?.aiSummary || (!resolvedRobots.includes('noindex') ? resolvedDescription : '');
+const keyTakeaways = Array.isArray(seo?.keyTakeaways) ? seo.keyTakeaways.filter(Boolean) : [];
+const aboutTopics = Array.isArray(seo?.aboutTopics) ? seo.aboutTopics.filter(Boolean) : [];
+const targetAudience = seo?.targetAudience || '';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  "@id": `${siteUrl}/#organization`,
+  "name": site.brand.name,
+  "url": siteUrl,
+  "logo": `${siteUrl}/logo.png`,
+  "description": site.brand.orgDescription,
+  "email": site.brand.email,
+  "sameAs": site.brand.social.map((s) => s.schemaUrl || s.url),
+  "knowsAbout": [
+    "Müşteri Deneyimi (CX)",
+    "Customer Journey Mapping (Müşteri Yolculuk Haritası)",
+    "Deneyim Haritası",
+    "Servis Tasarımı (Service Design)",
+    "Tasarım Odaklı Düşünme (Design Thinking)",
+    "Etnografik Araştırma",
+    "Kalitatif Araştırma",
+    "Kurumsal CX Eğitimleri",
+    "Yapay Zeka Destekli Müşteri Deneyimi"
+  ],
+  "areaServed": "TR"
+};
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": siteUrl
+    },
+    ...breadcrumbs.map((b, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": b.name,
+      "item": `${siteUrl}${b.url}`
+    }))
+  ]
+} : null;
+
+const geoExtras: Record<string, any> = {};
+if (resolvedKeywords) geoExtras.keywords = resolvedKeywords;
+if (aiSummary) geoExtras.abstract = aiSummary;
+if (seo?.geoRegion) geoExtras.spatialCoverage = seo.geoRegion;
+if (aboutTopics.length > 0) {
+  geoExtras.about = aboutTopics.map((topic) => ({ "@type": "Thing", "name": topic }));
+}
+if (targetAudience) {
+  geoExtras.audience = { "@type": "Audience", "audienceType": targetAudience };
+}
+if (keyTakeaways.length > 0) {
+  geoExtras.mainEntity = {
+    "@type": "ItemList",
+    "name": "Temel Çıkarımlar",
+    "itemListElement": keyTakeaways.map((item, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": item
+    }))
+  };
+}
+
+const rawCustomSchemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
+const enrichedCustomSchemas = rawCustomSchemas.map((s) => ({
+  ...s,
+  ...geoExtras,
+  mainEntity: s.mainEntity || geoExtras.mainEntity,
+}));
+
+const webPageSchema = rawCustomSchemas.length === 0 ? {
+  "@context": "https://schema.org",
+  "@type": seo?.schemaType || "WebPage",
+  "@id": `${resolvedCanonical}#webpage`,
+  "url": resolvedCanonical,
+  "name": seo?.headline || resolvedTitle,
+  "description": seo?.schemaDesc || resolvedDescription,
+  "inLanguage": "tr-TR",
+  "datePublished": seo?.datePublished || "2026-01-15T09:00:00+03:00",
+  "dateModified": seo?.dateModified || new Date().toISOString(),
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".typo-lead"]
+  },
+  "isPartOf": { "@id": `${siteUrl}/#organization` },
+  ...geoExtras,
+} : null;
+
+const allSchemas = [
+  orgSchema,
+  ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+  ...(webPageSchema ? [webPageSchema] : []),
+  ...enrichedCustomSchemas,
+];
+
+const pxToRem = (px: number) => `${(Number(px) / 16).toFixed(4).replace(/\.?0+$/, '')}rem`;
+const fluidClamp = (minVal: any, maxVal: any, fallbackMin: number, fallbackMax: number) => {
+  const minPx = Number(minVal) > 0 ? Number(minVal) : fallbackMin;
+  const maxPx = Number(maxVal) > 0 ? Number(maxVal) : fallbackMax;
+  const lo = Math.min(minPx, maxPx);
+  const hi = Math.max(minPx, maxPx);
+  if (lo === hi) return pxToRem(lo);
+  const loRem = lo / 16;
+  const slope = (hi - lo) / (1440 - 375);
+  const interceptRem = loRem - slope * (375 / 16);
+  const vw = (slope * 100).toFixed(3);
+  return `clamp(${pxToRem(lo)}, ${interceptRem.toFixed(4)}rem + ${vw}vw, ${pxToRem(hi)})`;
+};
+
+const ty = theme.typography || {};
+const bodyLineHeight = Number(ty.bodyLineHeight) > 0 ? Number(ty.bodyLineHeight) : 1.65;
+const headingLetterSpacing = ty.headingLetterSpacing !== undefined && ty.headingLetterSpacing !== '' ? `${Number(ty.headingLetterSpacing)}em` : '-0.02em';
+
+const themeVarsCss = `:root, html {
+  --color-site-bg: ${theme.siteBg};
+  --color-text-main: ${theme.textMain};
+  --color-text-muted: ${theme.textMuted};
+  --color-text-light: ${theme.textLight};
+  --color-brand-accent: ${theme.brandAccent};
+  --color-brand-accent-hover: ${theme.brandAccentHover};
+  --color-sandy-brown: ${theme.sandyBrown};
+  --color-sandy-brown-hover: ${theme.sandyBrownHover};
+  --color-platinum: ${theme.platinum};
+  --color-dust-grey: ${theme.dustGrey};
+  --color-deep-navy: ${theme.deepNavy};
+  --color-rich-black: ${theme.richBlack};
+  --color-card-bg: ${theme.cardBg};
+  --color-card-border: transparent;
+  --fs-body: ${fluidClamp(ty.bodySizeMobile, ty.bodySizeDesktop, 15, 16)};
+  --lh-body: ${bodyLineHeight};
+  --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 17, 20)};
+  --fs-h1: ${fluidClamp(ty.h1SizeMobile, ty.h1SizeDesktop, 32, 42)};
+  --fw-h1: ${Number(ty.h1Weight) || 300};
+  --lh-h1: ${Number(ty.h1LineHeight) || 1.15};
+  --fs-h2: ${fluidClamp(ty.h2SizeMobile, ty.h2SizeDesktop, 26, 38)};
+  --fw-h2: ${Number(ty.h2Weight) || 300};
+  --lh-h2: ${Number(ty.h2LineHeight) || 1.2};
+  --fs-h3: ${fluidClamp(ty.h3SizeMobile, ty.h3SizeDesktop, 20, 25)};
+  --fw-h3: ${Number(ty.h3Weight) || 400};
+  --lh-h3: ${Number(ty.h3LineHeight) || 1.28};
+  --fs-h4: ${fluidClamp(ty.h4SizeMobile, ty.h4SizeDesktop, 16, 18)};
+  --fw-h4: ${Number(ty.h4Weight) || 500};
+  --lh-h4: ${Number(ty.h4LineHeight) || 1.35};
+  --fs-small: ${pxToRem(Number(ty.smallSize) > 0 ? Number(ty.smallSize) : 13)};
+  --fs-btn: ${pxToRem(Number(ty.buttonSize) > 0 ? Number(ty.buttonSize) : 14)};
+  --accordion-title-size: ${Number(ty.accordionTitleSize) > 0 ? ty.accordionTitleSize + 'px' : '22px'};
+  --accordion-title-mobile-size: ${Number(ty.accordionTitleMobileSize) > 0 ? ty.accordionTitleMobileSize + 'px' : '18px'};
+  --ls-heading: ${headingLetterSpacing};
+}
+body, p {
+  font-size: var(--fs-body);
+}
+@media (max-width: 767px) {
+  :root, html {
+    --fs-body: ${pxToRem(Number(ty.bodySizeMobile) > 0 ? Number(ty.bodySizeMobile) : 15)};
+    --fs-lead: ${pxToRem(Number(ty.leadSizeMobile) > 0 ? Number(ty.leadSizeMobile) : 17)};
+    --fs-h1: ${pxToRem(Number(ty.h1SizeMobile) > 0 ? Number(ty.h1SizeMobile) : 36)};
+    --fs-h2: ${pxToRem(Number(ty.h2SizeMobile) > 0 ? Number(ty.h2SizeMobile) : 28)};
+    --fs-h3: ${pxToRem(Number(ty.h3SizeMobile) > 0 ? Number(ty.h3SizeMobile) : 22)};
+    --fs-h4: ${pxToRem(Number(ty.h4SizeMobile) > 0 ? Number(ty.h4SizeMobile) : 16)};
+  }
+}`;
+
+const faviconSvg = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='${encodeURIComponent(theme.richBlack)}'/><rect x='35' y='35' width='30' height='30' fill='${encodeURIComponent(theme.brandAccent)}'/></svg>`;
+---
+
+<!DOCTYPE html>
+<html lang="tr" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>{resolvedTitle}</title>
+  <meta name="title" content={resolvedTitle} />
+  <meta name="description" content={resolvedDescription} />
+  {resolvedKeywords && <meta name="keywords" content={resolvedKeywords} />}
+  {aiSummary && <meta name="ai-summary" content={aiSummary} />}
+  <meta name="author" content={site.brand.name} />
+  <meta property="article:modified_time" content={seo?.dateModified || new Date().toISOString()} />
+  <meta property="article:published_time" content={seo?.datePublished || "2026-01-15T09:00:00+03:00"} />
+  <meta name="robots" content={resolvedRobots} />
+  <link rel="canonical" href={resolvedCanonical} />
+
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={resolvedCanonical} />
+  <meta property="og:title" content={resolvedTitle} />
+  <meta property="og:description" content={resolvedDescription} />
+  <meta property="og:image" content={absoluteImageUrl} />
+  <meta property="og:site_name" content={site.brand.name} />
+  <meta property="og:locale" content="tr_TR" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={resolvedCanonical} />
+  <meta property="twitter:title" content={resolvedTitle} />
+  <meta property="twitter:description" content={resolvedDescription} />
+  <meta property="twitter:image" content={absoluteImageUrl} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href={faviconSvg} />
+
+  <style is:inline set:html={themeVarsCss}></style>
+
+  {allSchemas.map((s) => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+</head>
+<body class="antialiased selection:bg-brandAccent selection:text-white">
+  <Header isHome={isHome} />
+  <main>
+    <slot />
+  </main>
+  {!hideFooter && <Footer />}
+</body>
+</html>

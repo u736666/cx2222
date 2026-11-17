@@ -1,0 +1,162 @@
+---
+import HeroSlider from '../HeroSlider.astro';
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+import { resolveTextStyle, formatRich, resolvePaletteColor } from '../../lib/content';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+// Check if this is a slider hero or a banner hero
+const isSlider = Array.isArray(data.slides) && data.slides.length > 0;
+const sectionId = id || styles.sectionId || 'hero';
+const hasSideImage = Boolean(data.image);
+
+// Hero background resolution (Theme palette or custom hex)
+const rawBgColor = data.bgColor || data.surface || style?.bgColor || style?.surface;
+const resolvedHeroBg = resolvePaletteColor(rawBgColor);
+const isDarkHero = data.dark || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(rawBgColor || '').toLowerCase()) || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(resolvedHeroBg || '').toLowerCase());
+const heroTextClass = isDarkHero ? 'text-white' : 'text-paletteRichBlack';
+const heroSubTextClass = isDarkHero ? 'text-white/80' : 'text-paletteRichBlack/75';
+
+let heroInlineStyle = styles.inlineStyleString || '';
+if (resolvedHeroBg) {
+  heroInlineStyle = (heroInlineStyle ? heroInlineStyle + '; ' : '') + `background-color: ${resolvedHeroBg} !important;`;
+}
+
+const eyebrowStyle = resolveTextStyle(data, 'eyebrow');
+const descStyle = resolveTextStyle(data, 'desc');
+const titleStyle = resolveTextStyle(data, 'title');
+
+// Alt sayfalarda hero içeriği boş ise hero zeminini render etme, sonraki section doğrudan yukarı gelsin
+const hasContent = isSlider || Boolean(
+  (data.title && String(data.title).trim()) ||
+  (data.desc && String(data.desc).trim()) ||
+  (data.badge && String(data.badge).trim()) ||
+  (data.eyebrow && String(data.eyebrow).trim()) ||
+  (data.eyebrowTop && String(data.eyebrowTop).trim()) ||
+  (data.eyebrowBottom && String(data.eyebrowBottom).trim()) ||
+  (data.bigWord && String(data.bigWord).trim()) ||
+  (data.image && String(data.image).trim()) ||
+  (data.bgImage && String(data.bgImage).trim()) ||
+  (data.ctaText && String(data.ctaText).trim()) ||
+  (data.primaryBtnLabel && String(data.primaryBtnLabel).trim())
+);
+---
+
+{hasContent && (isSlider ? (
+  <section id={sectionId} class={`relative ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+    {styles.hasOverlay && (
+      <div class="absolute inset-0 pointer-events-none z-0" style={styles.overlayStyle}></div>
+    )}
+    <HeroSlider />
+  </section>
+) : hasSideImage ? (
+  <section id={sectionId} class={`relative ${resolvedHeroBg ? '' : (isDarkHero ? 'bg-paletteRichBlack' : 'bg-siteBg')} ${heroTextClass} px-6 md:px-16 pt-[82px] pb-16 md:pt-[114px] md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
+    {styles.hasOverlay && (
+      <div class="absolute inset-0 pointer-events-none z-0" style={styles.overlayStyle}></div>
+    )}
+    <div class={`relative z-10 ${styles.containerClass} grid grid-cols-1 lg:grid-cols-12 gap-8 items-center`}>
+      <div class="lg:col-span-7 space-y-6">
+        {data.badge && data.badge.trim() !== '' && (
+          <span class="typo-small font-semibold tracking-widest text-brandAccent bg-palettePlatinum px-3 py-1 inline-block" style={resolveTextStyle(data, 'badge')} set:html={formatRich(data.badge)}></span>
+        )}
+        {data.bigWord && data.bigWord.trim() !== '' && (
+          <div class={`text-4xl sm:text-5xl md:text-6xl font-light tracking-tight ${isDarkHero ? 'text-white' : 'text-paletteRichBlack'} mb-2`} style={resolveTextStyle(data, 'bigWord')} set:html={formatRich(data.bigWord)}>
+          </div>
+        )}
+        {(data.eyebrowTop || data.eyebrowBottom) && (
+          <div class={`text-2xl sm:text-3xl font-normal tracking-tight ${isDarkHero ? 'text-white' : 'text-paletteRichBlack'}`}>
+            <span set:html={formatRich(data.eyebrowTop || 'AI')}></span> <span class="text-brandAccent font-serif font-light align-middle">*</span> <span set:html={formatRich(data.eyebrowBottom || 'EXPERIENCE')}></span>
+          </div>
+        )}
+        {data.eyebrow && data.eyebrow.trim() !== '' && !(data.eyebrowTop || data.eyebrowBottom) && (
+          <span class={`typo-small font-bold tracking-widest ${isDarkHero ? 'text-brandAccent' : 'text-paletteRichBlack/60'} block`} style={eyebrowStyle || undefined} set:html={formatRich(data.eyebrow)}></span>
+        )}
+        <Heading 
+          as={data.headingTag || data.titleTag || 'h1'} 
+          customSize={data.headingSize || data.titleSize}
+          color={data.headingColor || data.titleColor}
+          size="h1" 
+          text={data.title}
+          class={heroTextClass} 
+          customStyle={titleStyle}
+        />
+        {data.desc && data.desc.trim() !== '' && (
+          <p class={`typo-lead font-light max-w-2xl ${heroSubTextClass}`} style={descStyle || undefined} set:html={formatRich(data.desc)}>
+          </p>
+        )}
+        {(data.ctaText || data.primaryBtnLabel) && (
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a 
+              href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 
+              class={`btn-rect px-7 py-3 ${isDarkHero ? 'bg-white !text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack !text-white hover:bg-black'} font-light transition-all`}
+            >
+              <span set:html={formatRich(data.ctaText || data.primaryBtnLabel)}></span>
+            </a>
+            {data.secondaryBtnLabel && (
+              <a 
+                href={data.secondaryBtnHref || '#'} 
+                class={`btn-rect px-7 py-3 border ${isDarkHero ? 'border-white text-white hover:bg-white hover:!text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:!text-white'} font-light transition-all`}
+              >
+                <span set:html={formatRich(data.secondaryBtnLabel)}></span>
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+      <div class={`lg:col-span-5 ${data.imageAspect || 'aspect-square'} overflow-hidden flex items-center justify-center relative`}>
+        <img 
+          src={data.image} 
+          alt={data.imageAlt || data.title} 
+          class={`w-full h-full object-cover ${data.imageBlend || 'grayscale contrast-125'}`} 
+        />
+      </div>
+    </div>
+  </section>
+) : (
+  <section id={sectionId} class={`relative ${resolvedHeroBg ? '' : 'bg-palettePlatinum'} ${heroTextClass} px-6 md:px-16 pt-[82px] md:pt-[114px] pb-16 md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
+    {styles.hasOverlay && (
+      <div class="absolute inset-0 pointer-events-none z-0" style={styles.overlayStyle}></div>
+    )}
+    {data.bgImage && (
+      <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <img src={data.bgImage} alt={data.bgAlt || data.title} class="w-full h-full object-cover object-center opacity-10 grayscale" />
+      </div>
+    )}
+    <div class="relative z-10 max-w-custom mx-auto max-w-3xl space-y-6">
+      {data.eyebrow && data.eyebrow.trim() !== '' && (
+        <span class={`typo-small font-semibold tracking-widest ${isDarkHero ? 'text-brandAccent' : 'text-paletteRichBlack/60'} block`} style={eyebrowStyle || undefined} set:html={formatRich(data.eyebrow)}></span>
+      )}
+      <Heading 
+        as={data.headingTag || data.titleTag || 'h1'} 
+        customSize={data.headingSize || data.titleSize}
+        color={data.headingColor || data.titleColor}
+        size="h1" 
+        text={data.title}
+        class={heroTextClass} 
+        customStyle={titleStyle}
+      />
+      {data.desc && data.desc.trim() !== '' && (
+        <p class={`typo-lead ${heroSubTextClass} font-light`} style={descStyle || undefined} set:html={formatRich(data.desc)}>
+        </p>
+      )}
+      {(data.ctaText || data.primaryBtnLabel) && (
+        <div class="pt-4 flex flex-wrap gap-3">
+          <a 
+            href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 
+            class={`btn-rect px-7 py-3 ${isDarkHero ? 'bg-white !text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack !text-white hover:bg-black'} font-light transition-all`}
+          >
+            <span set:html={formatRich(data.ctaText || data.primaryBtnLabel)}></span>
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+))}

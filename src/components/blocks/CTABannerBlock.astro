@@ -1,0 +1,16 @@
+---
+import CTASection from '../CTASection.astro';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+---
+
+<CTASection
+  {...data}
+  visible={data.visible !== false}
+/>

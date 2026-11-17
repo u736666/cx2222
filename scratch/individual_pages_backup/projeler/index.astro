@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import CTASection from '../../components/CTASection.astro';
+import { getAllProjects, getPages, getSurfaceStyle } from '../../lib/content';
+
+const { projelerIndex: data } = getPages();
+const projects = getAllProjects();
+const HeroTag = (['h1', 'h2', 'h3', 'h4'].includes(data.hero?.headingTag || '') ? data.hero.headingTag : 'h1') as 'h1' | 'h2' | 'h3' | 'h4';
+---
+
+<Layout
+  title={data.seo.title}
+  description={data.seo.description}
+  seo={data.seo}
+  breadcrumbs={[
+    { name: data.seo.breadcrumbName || "Projeler", url: "/projeler" }
+  ]}
+>
+  
+  <section class="bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 py-24">
+    <div class="max-w-custom mx-auto max-w-4xl space-y-6">
+      <span class="typo-small font-semibold tracking-widest text-paletteRichBlack/60 block">{data.hero.eyebrow}</span>
+      <HeroTag class="typo-h1 text-paletteRichBlack">
+        {data.hero.title}
+      </HeroTag>
+      <p class="typo-lead text-paletteRichBlack/75 font-light max-w-2xl">
+        {data.hero.desc}
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Blocks -->
+  <section class="section-pad-150 bg-siteBg px-6 md:px-16">
+    <div class="max-w-custom mx-auto space-y-16">
+      
+      {projects.map((proj) => {
+        const st = getSurfaceStyle(proj.listStyle);
+        const accentClass = proj.listStyle === 'platinum' || proj.listStyle === 'richBlack' ? 'text-brandAccent' : 'text-paletteRichBlack';
+        return (
+          <div class={`overflow-hidden ${st.section}`}>
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[480px]">
+              <div class="lg:col-span-6 relative min-h-[320px] lg:min-h-full overflow-hidden bg-neutral-200">
+                <img 
+                  src={proj.image} 
+                  alt={proj.imageAlt || proj.shortTitle || proj.title} 
+                  class="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              <div class="lg:col-span-6 p-8 sm:p-12 md:p-14 flex flex-col justify-between space-y-8">
+                <div class="space-y-4">
+                  <span class={`typo-body tracking-widest font-semibold block ${accentClass}`}>
+                    {proj.client}
+                  </span>
+                  <h2 class="typo-h2 text-current">
+                    {proj.shortTitle || proj.title}
+                  </h2>
+                  <p class="typo-body font-light opacity-80 pt-2">
+                    {proj.listDesc || proj.desc}
+                  </p>
+                  <div class="pt-4 space-y-2 typo-body font-light opacity-75">
+                    {(proj.bullets || []).map((b) => (
+                      <p>• {b}</p>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <a 
+                    href={`/projeler/${proj.slug}`} 
+                    class={`btn-rect font-medium ${accentClass} hover:underline transition-colors`}
+                  >
+                    {data.cardCtaText || 'Vaka Detaylarını İncele →'}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+    </div>
+  </section>
+
+  {data.faqs && data.faqs.length > 0 && (
+    <FAQSection items={data.faqs} title={data.faqTitle || 'Projeler Hakkında Sıkça Sorulanlar'} />
+  )}
+
+  <CTASection />
+
+</Layout>

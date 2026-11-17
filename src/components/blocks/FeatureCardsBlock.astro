@@ -1,0 +1,239 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+import { formatRich, resolveTextStyle, resolveTextTag, formatSizePx } from '../../lib/content';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const headingLines = Array.isArray(data.headingLines) ? data.headingLines : (data.title ? [data.title] : []);
+const aiCard = data.aiCard || {};
+const cxCard = data.cxCard || {};
+const academyCard = data.academyCard || {};
+const sectionId = id || styles.sectionId || 'solutions';
+
+// Dynamic tags for AI Card
+const AiTopWordTag = (resolveTextTag(aiCard, 'topWord', 'span') || 'span') as any;
+const AiBottomWordTag = (resolveTextTag(aiCard, 'bottomWord', 'span') || 'span') as any;
+const AiDescTag = (resolveTextTag(aiCard, 'desc', 'p') || 'p') as any;
+const AiScopeTitleTag = (resolveTextTag(aiCard, 'scopeTitle', 'h4') || 'h4') as any;
+const AiScopeLeftTag = (resolveTextTag(aiCard, 'scopeLeft', 'p') || 'p') as any;
+const AiScopeRightTag = (resolveTextTag(aiCard, 'scopeRight', 'p') || 'p') as any;
+
+// Dynamic tags for CX/UX Card
+const CxBadgeTag = (resolveTextTag(cxCard, 'badge', 'span') || 'span') as any;
+const CxBigTitleTag = (resolveTextTag(cxCard, 'bigTitle', 'h2') || 'h2') as any;
+const CxDescTag = (resolveTextTag(cxCard, 'desc', 'p') || 'p') as any;
+const CxBottomTitleTag = (resolveTextTag(cxCard, 'bottomTitle', 'h4') || 'h4') as any;
+const CxBottomDescTag = (resolveTextTag(cxCard, 'bottomDesc', 'p') || 'p') as any;
+
+// Dynamic tags for Academy Card
+const AcademyBadgeTag = (resolveTextTag(academyCard, 'badge', 'span') || 'span') as any;
+const AcademyTitleTag = (resolveTextTag(academyCard, 'title', 'h3') || 'h3') as any;
+const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p') as any;
+---
+
+<section id={sectionId} class={`pt-20 md:pt-32 pb-0 bg-siteBg text-paletteRichBlack px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class={styles.containerClass}>
+    
+    {headingLines.length > 0 && (
+      <div class="mb-14">
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" class="text-paletteRichBlack space-y-1">
+          {headingLines.map((line: string) => (
+            <span class="block" set:html={formatRich(line)}></span>
+          ))}
+        </Heading>
+      </div>
+    )}
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 overflow-hidden">
+      
+      <!-- KART 1: AI * EXPERIENCE -->
+      {aiCard.title || aiCard.topWord ? (
+        <a href={aiCard.href || '/cozumler/ai-destekli-cx'} data-service="ai" class="bg-paletteRichBlack text-white p-8 sm:p-10 md:p-12 flex flex-col justify-between space-y-10 min-h-[420px] lg:min-h-[640px] group cursor-pointer hover:bg-[#1a1a1a] transition-colors block">
+          <div class="space-y-4">
+            <div class="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white leading-none">
+              <AiTopWordTag class="inline-block" style={resolveTextStyle(aiCard, 'topWord')} set:html={formatRich(aiCard.topWord)}></AiTopWordTag>{' '}<span class="text-brandAccent font-serif font-light text-3xl align-middle">*</span><br />
+              <AiBottomWordTag class="font-light tracking-wide inline-block" style={resolveTextStyle(aiCard, 'bottomWord')} set:html={formatRich(aiCard.bottomWord)}></AiBottomWordTag>
+            </div>
+            {aiCard.desc && (
+              <AiDescTag class="typo-body tracking-widest text-white/80 pt-2" style={resolveTextStyle(aiCard, 'desc')} set:html={formatRich(aiCard.desc)}>
+              </AiDescTag>
+            )}
+          </div>
+
+          <div class="flex items-center justify-between py-4">
+            <div class="w-32 h-32 bg-neutral-900 flex items-center justify-center overflow-hidden flex-shrink-0">
+              <img 
+                src={aiCard.image} 
+                alt={aiCard.imageAlt || aiCard.topWord} 
+                class="w-full h-full object-cover mix-blend-screen opacity-90 contrast-125 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
+              <svg class="w-full h-full animate-[spin_16s_linear_infinite]" viewBox="0 0 100 100">
+                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                <text class="text-[9px] tracking-[0.22em] fill-white font-semibold" style={aiCard.spinTextSize ? `font-size: ${formatSizePx(aiCard.spinTextSize)} !important` : undefined}>
+                  <textPath href="#circlePath">
+                    {aiCard.spinText || 'DEEP HUMAN EMPATHY • AI VOC '}
+                  </textPath>
+                </text>
+              </svg>
+              <span class="absolute text-base font-bold text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-4">
+            {aiCard.scopeTitle && (
+              <AiScopeTitleTag class="tracking-widest font-normal text-white" style={resolveTextStyle(aiCard, 'scopeTitle')} set:html={formatRich(aiCard.scopeTitle)} />
+            )}
+            <div class="w-full text-[14px] font-light text-white/80 leading-relaxed space-y-2">
+              {aiCard.scopeLeft && (
+                <AiScopeLeftTag class="w-full" style={resolveTextStyle(aiCard, 'scopeLeft')} set:html={formatRich(aiCard.scopeLeft)} />
+              )}
+              {aiCard.scopeRight && (
+                <AiScopeRightTag class="w-full" style={resolveTextStyle(aiCard, 'scopeRight')} set:html={formatRich(aiCard.scopeRight)} />
+              )}
+            </div>
+          </div>
+        </a>
+      ) : null}
+
+      <!-- KART 2: CX/UX -->
+      {cxCard.bigTitle ? (
+        <a href={cxCard.href || '/cozumler/deneyim-tasarimi'} data-service="tasarim" class="bg-siteBg text-paletteRichBlack p-8 sm:p-10 md:p-12 flex flex-col justify-between space-y-12 min-h-[420px] lg:min-h-[640px] relative group cursor-pointer hover:bg-[#f4f4f4] transition-colors block">
+          <div class="flex items-start justify-between">
+            <div class="w-16 h-16 relative">
+              <span class="absolute top-0 left-0 w-8 h-0.5 bg-paletteRichBlack"></span>
+              <span class="absolute top-0 left-0 w-0.5 h-12 bg-paletteRichBlack"></span>
+              <span class="absolute bottom-0 right-0 w-10 h-0.5 bg-paletteRichBlack"></span>
+              <span class="absolute bottom-0 right-0 w-0.5 h-8 bg-paletteRichBlack"></span>
+            </div>
+
+            <div class="text-right text-base font-light text-paletteRichBlack/50 space-y-0.5">
+              {cxCard.badge && (
+                <CxBadgeTag class="block text-paletteRichBlack/80 font-medium" style={resolveTextStyle(cxCard, 'badge')} set:html={formatRich(cxCard.badge)} />
+              )}
+            </div>
+          </div>
+
+          <div class="space-y-4 my-auto">
+            <CxBigTitleTag class="text-6xl sm:text-7xl font-extralight tracking-tighter text-paletteRichBlack leading-none" style={resolveTextStyle(cxCard, 'bigTitle')}>
+              <span set:html={formatRich(cxCard.bigTitle)}></span>
+            </CxBigTitleTag>
+            {cxCard.desc && (
+              <CxDescTag class="typo-body font-light text-paletteRichBlack/70 max-w-xs pt-2" style={resolveTextStyle(cxCard, 'desc')} set:html={formatRich(cxCard.desc)}>
+              </CxDescTag>
+            )}
+          </div>
+
+          <div class="pt-6 space-y-2 text-[14px] font-light text-paletteRichBlack/70 leading-relaxed">
+            {cxCard.bottomTitle && (
+              <CxBottomTitleTag class="text-paletteRichBlack font-medium text-[14px]" style={resolveTextStyle(cxCard, 'bottomTitle')} set:html={formatRich(cxCard.bottomTitle)} />
+            )}
+            {cxCard.bottomDesc && (
+              <CxBottomDescTag class="text-[14px]" style={resolveTextStyle(cxCard, 'bottomDesc')} set:html={formatRich(cxCard.bottomDesc)} />
+            )}
+          </div>
+        </a>
+      ) : null}
+
+      <!-- KART 3: Akademi -->
+      {academyCard.title ? (
+        <div class="bg-brandAccent text-paletteRichBlack pt-0 pr-0 pb-8 sm:pb-10 md:pb-12 pl-6 sm:pl-10 xl:pl-12 flex flex-col justify-between space-y-8 min-h-[420px] lg:min-h-[640px] relative overflow-hidden group">
+          <div class="flex items-start justify-between gap-4 sm:gap-5 pt-6 sm:pt-10 xl:pt-12">
+            <div class="min-w-0 flex-1 hyphens-none space-y-2 text-[15px] sm:text-base font-light text-paletteRichBlack z-10">
+              {academyCard.badge && (
+                <AcademyBadgeTag class="block typo-small font-bold tracking-widest text-paletteRichBlack/60 mb-2" style={resolveTextStyle(academyCard, 'badge')} set:html={formatRich(academyCard.badge)} />
+              )}
+              {(academyCard.links || []).map((l: any) => (
+                <a href={l.href} class="block leading-snug hover:underline transition-colors" style={academyCard.linksSize ? `font-size: ${formatSizePx(academyCard.linksSize)} !important` : undefined} set:html={formatRich(l.label)}></a>
+              ))}
+            </div>
+
+            <div class="w-[42%] max-w-[160px] h-56 sm:w-52 sm:max-w-none sm:h-[340px] lg:w-[44%] lg:h-[300px] xl:w-52 xl:h-[380px] bg-paletteRichBlack overflow-hidden relative flex-shrink-0 -mt-6 sm:-mt-10 xl:-mt-12 mr-0">
+              <img 
+                src={academyCard.image} 
+                alt={academyCard.imageAlt || academyCard.title} 
+                class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-6 pt-4 pr-6 sm:pr-10 xl:pr-12 z-10">
+            <div class="text-right hyphens-none">
+              <AcademyTitleTag class="text-[14px] font-semibold text-paletteRichBlack block" style={resolveTextStyle(academyCard, 'title')} set:html={formatRich(academyCard.title)} />
+              {academyCard.subtitle && (
+                <AcademySubtitleTag class="text-[14px] text-paletteRichBlack/80 font-light block" style={resolveTextStyle(academyCard, 'subtitle')} set:html={formatRich(academyCard.subtitle)} />
+              )}
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+              {academyCard.secondaryBtnLabel && (
+                <a href={academyCard.secondaryBtnHref || '/iletisim'} class="btn-rect w-full sm:w-auto px-6 py-2.5 font-light text-paletteRichBlack bg-siteBg hover:bg-paletteRichBlack hover:text-white transition-all text-center" style={academyCard.secondaryBtnSize ? `font-size: ${formatSizePx(academyCard.secondaryBtnSize)} !important` : undefined}>
+                  <span set:html={formatRich(academyCard.secondaryBtnLabel)}></span>
+                </a>
+              )}
+              {academyCard.primaryBtnLabel && (
+                <a href={academyCard.primaryBtnHref || '/cozumler/akademi'} data-service="akademi" class="btn-rect w-full sm:w-auto px-6 py-2.5 bg-paletteRichBlack text-white font-light hover:bg-palettePlatinum hover:text-paletteRichBlack transition-all text-center" style={academyCard.primaryBtnSize ? `font-size: ${formatSizePx(academyCard.primaryBtnSize)} !important` : undefined}>
+                  <span set:html={formatRich(academyCard.primaryBtnLabel)}></span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+    </div>
+
+    {Array.isArray(data.problemSlider) && data.problemSlider.length > 0 && (
+      <div id="problem-slider-sec" class="mt-28">
+        <div class="relative min-h-[140px] flex items-center">
+          {data.problemSlider.map((ps: any, idx: number) => (
+            <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
+              <Heading as={resolveTextTag(ps, 'quote', 'h3')} customSize={ps.quoteSize} color={ps.quoteColor} size="h2" class="text-paletteRichBlack" text={ps.quote} />
+              <a href={ps.href} data-service={ps.service} class="btn-rect font-semibold tracking-wider text-brandAccent mt-4 hover:underline" style={resolveTextStyle(ps, 'solutionLabel')}>
+                <span set:html={formatRich(ps.solutionLabel)}></span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>
+
+<script>
+  function initSentenceSlider() {
+    const slides = document.querySelectorAll('.sentence-slide');
+    if (!slides || slides.length <= 1) return;
+    let current = 0;
+
+    if ((window as any)._sentenceSliderInterval) {
+      clearInterval((window as any)._sentenceSliderInterval);
+    }
+
+    (window as any)._sentenceSliderInterval = setInterval(() => {
+      slides[current].classList.add('hidden', 'opacity-0');
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove('hidden');
+      setTimeout(() => {
+        slides[current].classList.remove('opacity-0');
+      }, 30);
+    }, 4200);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSentenceSlider);
+  } else {
+    initSentenceSlider();
+  }
+</script>

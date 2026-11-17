@@ -1,0 +1,73 @@
+{
+  "slug": "aksigorta-konut-sigortasi",
+  "order": 2,
+  "client": "Aksigorta",
+  "sector": "",
+  "title": "Konut sigortasını kültüre göre tasarlamak",
+  "desc": "Soyut güvence kavramını yerel ev, aile ve mahalle dinamikleriyle somutlaştıran yeni nesil ürün kurgusu. Karmaşık poliçe dilini anlaşılır ve insani bir deneyime çevirdik.",
+  "image": "/images/uploads/cxfolks-konut-01-mwdpzbh5.png",
+  "imageAlt": "Aksigorta Konut Sigortası",
+  "listStyle": "dustGrey",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "Kültürel Değer Haritalandırması",
+    "Acente & Dijital Deneyim Entegrasyonu",
+    "Hasar Anı Duygu Yönetimi Protokolü"
+  ],
+  "seo": {
+    "title": "Aksigorta Konut Sigortası Vaka Analizi | cx2222",
+    "description": "Soyut güvence kavramını yerel ev, aile ve mahalle dinamikleriyle somutlaştıran kültürel değer haritalandırması ve hasar anı duygu yönetimi.",
+    "headline": "Aksigorta - Konut Sigortasını Kültüre Göre Tasarlamak",
+    "schemaDesc": "Soyut güvence kavramını yerel ev, aile ve mahalle dinamikleriyle somutlaştıran yeni nesil ürün kurgusu.",
+    "breadcrumbName": "Aksigorta",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "metrics": [
+    {
+      "value": "360°",
+      "label": "Kültürel Değer Haritalandırması"
+    },
+    {
+      "value": "%52",
+      "label": "Poliçe Anlaşılabilirlik Skoru Artışı"
+    },
+    {
+      "value": "100+",
+      "label": "Acente & Ev Ziyareti"
+    },
+    {
+      "value": "%38",
+      "label": "Hasar Anı Memnuniyet Yükselişi"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Zorluk",
+    "title": "\"Sigorta Poliçesi Neden Sadece Avukatların Anlayacağı Bir Dille Yazılıyor?\"",
+    "body": "Türkiye'de konut sigortası penetrasyonunun düşük olmasının en büyük sebebi finansal değil, kültürel ve dilsel bariyerlerdi. Kullanıcılar 'tam kapsam', 'enflasyon klozu', 'eksik sigorta' gibi teknik terimler arasında boğuluyor; evini gerçekten neyin koruduğunu anlamıyor ve kriz anında (su baskını, yangın, hırsızlık) yalnız kalacağından korkuyordu."
+  },
+  "solution": {
+    "eyebrow": "Metodoloji & Çözüm",
+    "title": "Ev ve Mahalle Kültüründen Doğan Üç Katmanlı Deneyim Tasarımı",
+    "columns": 3,
+    "cards": [
+      {
+        "title": "Kültürel Değer Haritalandırması",
+        "body": "Ev sahiplerinin ve kiracıların 'yuva' kavramına yüklediği duygusal anlamları haritalandırarak korku odaklı satış dilini koruma odaklı şefkat diline çevirdik.",
+        "style": "platinum"
+      },
+      {
+        "title": "Acente & Dijital Entegrasyonu",
+        "body": "Fiziksel acente güvenini dijital hızla birleştirerek müşterinin hem acenteden hem mobilden tek tuşla sade teminatları görmesini sağladık.",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Hasar Anı Duygu Yönetimi",
+        "body": "Evde hasar yaşandığında soğuk bir dosya numarası vermek yerine ilk 30 dakikada proaktif destek ve usta yönlendirmesi protokolü kurduk.",
+        "style": "brandAccent"
+      }
+    ]
+  },
+  "quote": "",
+  "isSample": true
+}

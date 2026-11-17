@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import CTASection from '../../components/CTASection.astro';
+import { getPages, getSite, getSurfaceStyle } from '../../lib/content';
+
+const pages = getPages() as any;
+const data = pages.akademi || pages.cxFolksAkademi;
+const site = getSite();
+const HeroTag = (['h1', 'h2', 'h3', 'h4'].includes(data.hero?.headingTag || '') ? data.hero.headingTag : 'h1') as 'h1' | 'h2' | 'h3' | 'h4';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": data.seo?.schemaType || "Service",
+  "name": data.seo?.headline || "cx2222 Akademi & Kültür Dönüşümü",
+  "provider": {
+    "@type": "Organization",
+    "name": site.brand.name,
+    "url": site.brand.siteUrl
+  },
+  "serviceType": "Kurumsal Eğitim & Kültür Dönüşümü",
+  "description": data.seo?.schemaDesc || data.seo.description,
+  "areaServed": "Global"
+};
+---
+
+<Layout
+  title={data.seo.title}
+  description={data.seo.description}
+  seo={data.seo}
+  image={data.hero.image}
+  schema={serviceSchema}
+  breadcrumbs={[
+    { name: "Çözümler", url: "/cozumler" },
+    { name: data.seo.breadcrumbName || "cx2222 Akademi", url: "/cozumler/akademi" }
+  ]}
+>
+  
+  <!-- Header Banner in Powder Blush #ECA797 matching cx2222 Card 3 -->
+  <section class="bg-brandAccent text-paletteRichBlack px-6 md:px-16 py-0 overflow-hidden">
+    <div class="max-w-custom mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 py-24 space-y-6">
+        <span class="typo-small font-bold tracking-widest text-paletteRichBlack/60 block">{data.hero.eyebrow}</span>
+        <HeroTag class="typo-h1 text-paletteRichBlack">
+          {data.hero.title}
+        </HeroTag>
+        <p class="typo-lead text-paletteRichBlack/85 font-light max-w-2xl">
+          {data.hero.desc}
+        </p>
+        <div class="pt-4 flex flex-wrap gap-3">
+          <a href={data.hero.ctaHref} class="btn-rect px-7 py-3 bg-paletteRichBlack text-white font-light hover:bg-siteBg hover:text-paletteRichBlack transition-all">
+            {data.hero.ctaText}
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 h-full min-h-[420px] bg-paletteRichBlack overflow-hidden">
+        <img 
+          src={data.hero.image} 
+          alt={data.hero.imageAlt} 
+          class="w-full h-full object-cover grayscale contrast-125"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-150 bg-siteBg text-paletteRichBlack px-6 md:px-16">
+    <div class="max-w-custom mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
+      {data.capabilities.map((cap: any) => {
+        const st = getSurfaceStyle(cap.style);
+        const eyebrowColor = cap.style === 'platinum' || cap.style === 'richBlack' ? 'text-brandAccent' : 'text-paletteRichBlack';
+        return (
+          <div class={`p-10 md:p-14 space-y-4 ${st.section}`}>
+            <span class={`typo-small font-bold tracking-widest block ${eyebrowColor}`}>{cap.eyebrow}</span>
+            <h2 class={`typo-h2 ${st.title}`}>{cap.title}</h2>
+            <p class={`typo-body font-light ${st.body}`}>
+              {cap.body}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <FAQSection items={data.faqs} title={data.faqTitle} />
+
+  <CTASection title={data.cta.title} desc={data.cta.desc} />
+
+</Layout>

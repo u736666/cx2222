@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Çözümler",
+    "slug": "cozumler",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Çözümlerimiz & Araç Setimiz | cx2222",
+    "description": "Uçtan uca müşteri deneyimi ve yapay zeka araç setimiz: AI destekli VOC sistemleri, deneyim tasarımı, kurumsal akademi ve cx2222 Maturity Testi.",
+    "schemaType": "CollectionPage",
+    "keywords": "CX çözümleri, AI destekli CX, deneyim tasarımı, cx2222 Akademi, maturity testi",
+    "aiSummary": "cx2222; AI destekli VOC sistemleri, saha etnografisi ve servis tasarımı, cx2222 Akademi kültür atölyeleri ve ücretsiz cx2222 Maturity Testi çözümleri sunar.",
+    "aboutTopics": [
+      "CX Çözüm Portföyü",
+      "AI VOC",
+      "Servis Tasarımı",
+      "Kurumsal Akademi"
+    ],
+    "keyTakeaways": [
+      "Teknoloji, tasarım ve kültürü kapsayan uçtan uca çözüm seti"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "Araç Setimizer",
+        "title": "Uçtan uca müşteri deneyimi ve yapay zeka çözümlerimiz",
+        "desc": "Veriyi aksiyona dönüştüren algoritmalar, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.",
+        "headingTag": "h1",
+        "surface": "brandAccent"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "solutions-list",
+      "type": "solutionsList",
+      "visible": true,
+      "data": {
+        "items": [
+          {
+            "title": "AI Müşteri  Deneyimi",
+            "tagline": "Veriyi Gerçek Zamanlı Aksiyona Dönüştüren Algoritmalar",
+            "style": "richBlack",
+            "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+            "desc": "Müşterinin sesini (VOC) çağrı kayıtlarından, anketlerden, sosyal medyadan ve web hareketlerinden anlık toplayıp analiz eden; kök nedenleri saniyeler içinde bulan ve ilgili ekiplere kapalı döngü görev atayan uçtan uca akıllı sistemler.",
+            "slug": "ai-destekli-cx",
+            "bullets": [
+              "AI Destekli Müşterinin sesi (VOC) sistem kurulumu ",
+              "AI Destekli Deneyim Yönetim Sistemi, Close-the Loop Entegrasyonu",
+              " AI Destekli Müşteri Deneyim Yolculuğu Yönetimi",
+              "Kök Neden, Müşteri Duygu, Etki Analizleri"
+            ]
+          },
+          {
+            "title": "Deneyim Tasarımı & Haritalandırma",
+            "tagline": "Saha Gerçekliğinden Doğan Pürüzsüz Müşteri Yolculukları",
+            "style": "platinum",
+            "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+            "desc": "Masa başında varsayımlarla değil; müşterinin yanında, sahada yapılan derinlemesine etnografik araştırmalarla uçtan uca müşteri yolculuk haritaları (CJM) ve servis blueprint'leri tasarlıyoruz.",
+            "slug": "deneyim-tasarimi",
+            "bullets": [
+              "Uçtan Uca Müşteri Yolculuk Haritaları (CJM)",
+              "Derin Etnografik & Niteliksel Saha Araştırmaları",
+              "Servis Blueprint & Temas Noktası Optimizasyonu",
+              "Kullanıcı Deneyimi (UX) & Hızlı Prototipleme"
+            ]
+          },
+          {
+            "title": "cx2222 Akademi & Kültür Dönüşümü",
+            "tagline": "Çalışan Deneyimi Olmadan Müşteri Deneyimi Yaşayamaz",
+            "style": "brandAccent",
+            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+            "desc": "Kurum içindeki siloları kıran, C-level'dan saha ekiplerine herkesi ortak bir empati dilinde buluşturan interaktif eğitimler, executive hizalanma kampları ve LEGO® Serious Play® seansları.",
+            "slug": "akademi",
+            "bullets": [
+              "Kurumsal Empati & Müşteri Odaklılık Kampları",
+              "LEGO® Serious Play® ile Stratejik Hizalanma",
+              "Ön Hat (Frontline) Çalışan Güçlendirme Programları",
+              "EX (Employee Experience) & Kültür Teşhisi"
+            ]
+          },
+          {
+            "title": "CX & AI Maturity Testi",
+            "tagline": "Kurumunuzun Deneyim Olgunluğunu 5 Dakikada Teşhis Edin",
+            "style": "dustGrey",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+            "desc": "Organizasyonunuzun veri kullanımı, çalışan yetkilendirmesi, proaktif müdahale kabiliyeti ve yapay zeka entegrasyonu seviyesini ölçen; eksik halkaları ve ilk aksiyon adımlarını anında raporlayan interaktif teşhis sistemi.",
+            "slug": "cx-maturity-testi",
+            "bullets": [
+              "5 Kritik Boyutta Derinlemesine Olgunluk Skoru",
+              "Anlık Seviye Belirleme (Seviye 1 - Seviye 4)",
+              "Kişiselleştirilmiş İlk 3 Aksiyon Tavsiyesi",
+              "Ücretsiz Strateji Değerlendirme İmkanı"
+            ]
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "projects-stacked",
+      "type": "projectShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "İlgili Projeler",
+        "headingTag": "h2",
+        "desc": "",
+        "cardCtaText": "Vaka Analizini Oku →",
+        "allLinkText": "Tüm Projeleri İnceleyin →",
+        "allLinkHref": "/projeler",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog & Düşünce Liderliği",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "items": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "visible": true,
+        "selectedCtaId": "maturity-test",
+        "title": "",
+        "desc": ""
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

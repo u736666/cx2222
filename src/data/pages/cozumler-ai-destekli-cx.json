@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "AI Destekli CX",
+    "slug": "cozumler/ai-destekli-cx",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "AI Destekli CX & VOC Sistemleri | cx2222",
+    "description": "Veriyi aksiyona dönüştüren algoritmalar: Anlık duygu analizi, kök neden tespiti, kapalı döngü (closed-loop) geri bildirim mekanizmaları ve churn erken uyarı sistemleri.",
+    "schemaType": "Service",
+    "keywords": "AI destekli CX, VOC sistemleri, duygu analizi, churn tahmini, closed-loop feedback",
+    "aiSummary": "Veriyi anlık duygu analizi, kök neden keşfi, kapalı döngü geri bildirim ve kayıp önleme (churn) uyarılarına dönüştüren AI destekli müşteri deneyimi mimarisi.",
+    "aboutTopics": [
+      "Voice of Customer",
+      "Duygu Analizi",
+      "Öngörüsel Churn Önleme"
+    ],
+    "keyTakeaways": [
+      "Anlık kök neden sınıflandırma",
+      "İnsan temsilciler için AI Copilot desteği"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "",
+        "title": "AI Destekli Müşteri Deneyimi ve VOC Sistemleri",
+        "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kuruyoruz.",
+        "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+        "imageAlt": "AI Experience Concept",
+        "headingTag": "h1",
+        "titleColor": "sandyBrown",
+        "surface": "richBlack"
+      },
+      "style": {
+        "surface": "richBlack"
+      }
+    },
+    {
+      "id": "capabilities",
+      "type": "capabilitiesGrid",
+      "visible": true,
+      "data": {
+        "items": [
+          {
+            "eyebrow": "01 / ANALİTİK ZEKA",
+            "title": "Gerçek Zamanlı Duygu & Kök Neden Analizi",
+            "body": "Klasik anahtar kelime sayımı müşteri memnuniyetini açıklayamaz. Doğal Dil İşleme (NLP) ve LLM tabanlı analiz motorumuz; ses tonu iniş çıkışlarını, ironiyi, tereddüt anlarını ve öfkenin asıl kök nedenini (fatura şeffaflığı, kargo gecikmesi, yetersiz personel) anında sınıflandırır.",
+            "metric": "• %93+ Türkçe Sentiment Doğruluğu",
+            "style": "siteBg"
+          },
+          {
+            "eyebrow": "02 / OPERASYONEL ÇEVİKLİK",
+            "title": "Kapalı Döngü (Closed-Loop) Aksiyon Motoru",
+            "body": "Veri aksiyona dönüşmüyorsa sadece maliyettir. Olumsuz bir geri bildirim veya sürtünme yaşandığında, sistem ilgili mağaza müdürüne veya müşteri temsilcisine kişiselleştirilmiş bir kurtarma görevi atar. Müşteri şikayeti büyütmeden 15 dakika içinde aranır ve sorun çözülür.",
+            "metric": "• Ortalama Aksiyon Süresi: < 15 Dakika",
+            "style": "dustGrey"
+          },
+          {
+            "eyebrow": "03 / ÖNGÖRÜSEL KORUMA",
+            "title": "Kayıp Riski (Churn) Erken Uyarı Sistemi",
+            "body": "Müşteriler gitmeden önce mutlaka dijital ayak izleri bırakırlar: Kullanım sıklığında ani düşüş, destek sayfasında tekrarlayan aramalar veya faturaya bakma sıklığı. Tahmine dayalı makine öğrenimi modellerimiz, müşterinin ayrılma ihtimalini %85 doğrulukla önceden haber verir.",
+            "metric": "• %60’a Varan Churn Engelleme Oranı",
+            "style": "brandAccent"
+          },
+          {
+            "eyebrow": "04 / ÇALIŞAN DESTEĞİ",
+            "title": "Agentic AI & Temsilci Asistanı (Copilot)",
+            "body": "Ön hat çalışanlarınızı karmaşık CRM ekranlarında kaybolmaktan kurtarıyoruz. Temsilci müşteriyi dinlerken, yapay zeka asistanı müşterinin geçmiş yolculuğunu özetler, en uygun empatik çözüm önerisini üretir ve temsilcinin önüne hazır getirir.",
+            "metric": "• Çağrı Çözüm Süresinde (AHT) %40 Düşüş",
+            "style": "richBlack"
+          }
+        ],
+        "columns": 2
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "projects-stacked",
+      "type": "projectShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "AI ve Otomasyon Vaka Analizleri",
+        "headingTag": "h2",
+        "desc": "Yapay zekanın sahada nasıl somut faydaya dönüştüğünü inceleyin.",
+        "cardCtaText": "Vaka Analizini Oku →",
+        "allLinkText": "Tüm Projeleri İnceleyin →",
+        "allLinkHref": "/projeler",
+        "featuredSlugs": [
+          "istanbul-havalimani",
+          "vodafone-roaming"
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog & Düşünce Liderliği",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "AI Destekli CX Hakkında Sıkça Sorulanlar",
+        "items": [
+          {
+            "question": "AI Destekli CX sistemi mevcut CRM veya santralimizle nasıl entegre olur?",
+            "answer": "Mevcut altyapınızı (Salesforce, HubSpot, Zendesk, Genesys veya şirket içi özel sistemler) terk etmeniz gerekmez. cx2222 AI katmanı, API ve webhook bağlantılarıyla mevcut veri tabanınıza bağlanır; gelen çağrı ses kayıtlarını, canlı sohbet loglarını ve e-postaları gerçek zamanlı analiz ederek mevcut sisteminize zenginleştirilmiş görev ve uyarı kartları gönderir."
+          },
+          {
+            "question": "Kapalı döngü (Closed-Loop) mekanizması sahada pratikte nasıl çalışır?",
+            "answer": "Örneğin bir mağaza ziyaretçisi veya e-ticaret kullanıcısı olumsuz bir deneyim yaşadığında (örneğin kargo gecikmesi veya ürün hatası), AI motoru sentiment ve kök nedeni anında sınıflandırır. Sistem 5 dakika içinde ilgili mağaza yöneticisinin veya müşteri temsilcisinin ekranına 'Müşteri X, sorun Y, telafi önerisi Z' şeklinde aksiyona hazır bir bildirim düşürür. Temsilci müşteriyi henüz öfke büyümeden arar ve sorunu çözer."
+          },
+          {
+            "question": "Türkçe dil modelleri ve yerel duygu analizinde doğruluk oranı nedir?",
+            "answer": "cx2222 olarak Türkçenin zengin morfolojik yapısına, ironi ve yerel ifade kalıplarına özel olarak ince ayar (fine-tuning) yapılmış hibrit dil modelleri kullanıyoruz. Genel yabancı motorların %65-70 seviyesinde kaldığı Türkçe sentiment ve kök neden sınıflandırmasında %93+ doğruluk oranına ulaşıyoruz."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "title": "",
+        "desc": "",
+        "visible": true,
+        "selectedCtaId": "academy-training"
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

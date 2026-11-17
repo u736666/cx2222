@@ -1,0 +1,621 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getHome, getProjectsBySlugs, getPostsBySlugs, getSurfaceStyle, getBarClass } from '../lib/content';
+
+const home = getHome() as any;
+const pickTag = (tag: any, fallback: 'h1' | 'h2' | 'h3' | 'h4' = 'h2') =>
+  (['h1', 'h2', 'h3', 'h4'].includes(tag) ? tag : fallback) as 'h1' | 'h2' | 'h3' | 'h4';
+const HeroHeadingTag = pickTag(home.heroHeadingTag, 'h1');
+const ManifestoHeadingTag = pickTag(home.manifesto?.headingTag, 'h2');
+const WhyNowHeadingTag = pickTag(home.whyNow?.headingTag, 'h2');
+const SolutionsHeadingTag = pickTag(home.solutionsSection?.headingTag, 'h2');
+const ProjectsHeadingTag = pickTag(home.projectsSection?.headingTag, 'h2');
+const BlogHeadingTag = pickTag(home.blogSection?.headingTag, 'h2');
+const featuredProjects = getProjectsBySlugs(home.projectsSection.featuredSlugs);
+const featuredPosts = getPostsBySlugs(home.blogSection.featuredSlugs);
+
+// ==================== LOGO BOYUTLARI ====================
+// Her logo için yükseklik (px). İsimler logonun "name" değeriyle aynı olmalı
+// (büyük/küçük harf fark etmez). Listede olmayan logo VARSAYILAN_YUKSEKLIK ile çıkar.
+// Bir logo küçük kalıyorsa rakamı artırın, büyükse azaltın.
+const VARSAYILAN_YUKSEKLIK = 28;
+const VARSAYILAN_MAX_GENISLIK = 150;
+
+const logoHeights: Record<string, number> = {
+  'Amazon': 28,
+  'Allianz': 26,
+  'Vodafone': 30,
+  'Mercedes': 40,
+  'YILDIZ': 36,
+  'LC WAIKIKI': 14,
+  'MİGROS': 20,
+  'IGA': 36,
+  'AKBANK': 12,
+  "McDonald's": 44,
+  'GARANTİ': 26,
+  'İŞ BANKASI': 36,
+  'AKSİGORTA': 16,
+  'TEB': 40,
+  'TÜRK TELEKOM': 48,
+  'FIAT': 36,
+  'arçelik': 22,
+  'Eureko': 30,
+  'pluxee': 24,
+  'KFC': 22,
+  'MAPFRE': 18,
+  'Eczacıbaşı': 26,
+  'BOYNER': 14,
+  'Tefal': 16,
+};
+
+// Çok geniş logoların taşmaması için genişlik sınırı (px). İsteğe bağlı.
+const logoMaxWidths: Record<string, number> = {
+  'LC WAIKIKI': 160,
+  'İŞ BANKASI': 170,
+};
+
+const normName = (s: any) => String(s ?? '').toLocaleLowerCase('tr').trim();
+const toNormMap = (obj: Record<string, number>) =>
+  Object.fromEntries(Object.entries(obj).map(([k, v]) => [normName(k), v]));
+const heightMap = toNormMap(logoHeights);
+const maxWidthMap = toNormMap(logoMaxWidths);
+const logoHeightOf = (name: any) => heightMap[normName(name)] ?? VARSAYILAN_YUKSEKLIK;
+const logoMaxWidthOf = (name: any) => maxWidthMap[normName(name)] ?? VARSAYILAN_MAX_GENISLIK;
+
+const defaultIcon1 = `<svg class="w-10 h-10 sm:w-12 sm:h-12 text-brandAccent" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+  <rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor"/>
+  <circle cx="24" cy="24" r="5" fill="currentColor" fill-opacity="0.3"/>
+  <path d="M4 18h6M4 30h6M38 18h6M38 30h6M18 4v6M30 4v6M18 38v6M30 38v6" stroke-linecap="round"/>
+  <path d="M22 20l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+</svg>`;
+
+const defaultIcon2 = `<svg class="w-11 h-11 sm:w-14 sm:h-14 text-brandAccent" viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="2">
+  <rect x="42" y="8" width="16" height="24" rx="2" stroke="currentColor"/>
+  <circle cx="50" cy="16" r="1.5" fill="currentColor"/>
+  <circle cx="50" cy="24" r="1.5" fill="currentColor"/>
+  <path d="M4 28 C 14 28, 22 14, 34 20" stroke="currentColor" stroke-linecap="round"/>
+  <path d="M34 16 L38 20 L34 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+const defaultIcon3 = `<svg class="w-7 h-7 text-brandAccent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M9 10h.01M15 10h.01M8 14s1.5 2.5 4 2.5 4-2.5 4-2.5" stroke-linecap="round"/>
+</svg>`;
+
+function renderManifestoSentence(manifesto) {
+  if (!manifesto) return '';
+  const sentence = manifesto.sentence || 
+    `${manifesto.part1 || ''} [icon-1] <u>${manifesto.highlight1 || ''}</u> ${manifesto.part2 || ''} [icon-2] ${manifesto.part3 || ''} [icon-3] <b>${manifesto.highlight2 || ''}</b> ${manifesto.part4 || ''}`;
+
+  const iconMap = new Map();
+  const iconsList = Array.isArray(manifesto.icons) && manifesto.icons.length > 0
+    ? manifesto.icons
+    : [
+        { id: 'icon-1', svg: manifesto.icon1Svg || defaultIcon1, badge: false },
+        { id: 'icon-2', svg: manifesto.icon2Svg || defaultIcon2, badge: false },
+        { id: 'icon-3', svg: manifesto.icon3Svg || defaultIcon3, badge: true },
+      ];
+
+  iconsList.forEach((ic, idx) => {
+    const rawId = (ic.id || ('icon-' + (idx + 1))).toLowerCase();
+    iconMap.set(rawId, ic);
+    iconMap.set('icon:' + (idx + 1), ic);
+    iconMap.set('icon-' + (idx + 1), ic);
+  });
+
+  let html = sentence
+    .replace(/<u>(.*?)<\/u>/gi, '<span class="font-normal text-paletteRichBlack underline decoration-brandAccent decoration-2">$1</span>')
+    .replace(/\[u\](.*?)\[\/u\]/gi, '<span class="font-normal text-paletteRichBlack underline decoration-brandAccent decoration-2">$1</span>')
+    .replace(/<b>(.*?)<\/b>/gi, '<span class="font-normal text-paletteRichBlack">$1</span>')
+    .replace(/\[b\](.*?)\[\/b\]/gi, '<span class="font-normal text-paletteRichBlack">$1</span>');
+
+  html = html.replace(/\[(icon[-:][a-zA-Z0-9_-]+)\]/gi, (_match, token) => {
+    const ic = iconMap.get(token.toLowerCase());
+    if (!ic || !ic.svg) return '';
+    if (ic.badge || ic.wrapper === 'badge') {
+      return `<span class="inline-flex items-center align-middle mx-1.5 -mt-2"><span class="w-10 h-10 sm:w-12 sm:h-12 bg-palettePlatinum flex items-center justify-center rounded-none">${ic.svg}</span></span>`;
+    }
+    return `<span class="inline-flex items-center align-middle mx-1.5 -mt-1">${ic.svg}</span>`;
+  });
+
+  return html;
+}
+
+const manifestoSentenceHtml = renderManifestoSentence(home.manifesto);
+---
+
+<Layout
+  title={home.seo.title}
+  description={home.seo.description}
+  seo={home.seo}
+  isHome={true}
+>
+
+  <!-- ==================== BÖLÜM 1: HERO ==================== -->
+  <HeroSlider />
+
+
+  <!-- ==================== BÖLÜM 2: MANİFESTO ==================== -->
+<section id="manifesto-human" class="pt-[150px] pb-0 relative w-full bg-siteBg text-paletteRichBlack px-6 md:px-16 overflow-hidden">
+    <div class="max-w-custom mx-auto">
+      
+      <div class="max-w-5xl space-y-10">
+        
+        <ManifestoHeadingTag class="typo-h2 text-paletteRichBlack">
+          <Fragment set:html={manifestoSentenceHtml} />
+        </ManifestoHeadingTag>
+
+        <div class="space-y-4 pt-6 max-w-3xl">
+          <p class="typo-lead text-paletteRichBlack font-normal">
+            {home.manifesto.subTitle}
+          </p>
+          <p class="typo-body text-paletteRichBlack/70 font-light">
+            {home.manifesto.subDesc}
+          </p>
+          <div class="pt-2">
+            <a href={home.manifesto.ctaHref} class="btn-rect text-brandAccent hover:underline font-medium">
+              <span>{home.manifesto.ctaText}</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 3: LOGOLAR ==================== -->
+  <section id="logos" class="section-pad-150 px-6 md:px-16 bg-siteBg">
+    <div class="max-w-custom mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12 sm:gap-y-16 lg:gap-y-[110px] items-center justify-items-center opacity-75">
+        {home.logos.map((logo: any) => (
+          logo.kind === 'svg' ? (
+            <svg class={logo.class} viewBox={logo.viewBox} set:html={logo.body} aria-label={logo.name} />
+          ) : logo.kind === 'image' ? (
+            <img
+              src={logo.image}
+              alt={logo.name}
+              style={`height:${logoHeightOf(logo.name)}px; max-width:${logoMaxWidthOf(logo.name)}px;`}
+              class="w-auto object-contain grayscale opacity-90 hover:opacity-100 transition-opacity"
+            />
+          ) : (
+            <svg class={`${logo.height || 'h-5'} w-auto fill-paletteRichBlack hover:fill-brandAccent transition-colors`} viewBox={logo.viewBox || '0 0 120 24'}>
+              <text
+                x="0"
+                y={logo.y || '18'}
+                font-family="'Sora', sans-serif"
+                font-weight={logo.fontWeight || '700'}
+                font-size={logo.fontSize || '18'}
+                fill="currentColor"
+                letter-spacing={logo.letterSpacing || '1'}
+              >
+                {logo.text || logo.name}
+              </text>
+            </svg>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 4: NEDEN ŞİMDİ? ==================== -->
+  <section id="roles" class="section-pad-150 relative w-full bg-siteBg text-paletteRichBlack px-6 md:px-16 overflow-hidden">
+    <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <img src={home.whyNow.bgImage} alt={home.whyNow.bgAlt} class="w-full h-full object-cover object-center opacity-5 filter grayscale" />
+    </div>
+
+    <div class="relative z-10 max-w-custom mx-auto w-full">
+      <div class="grid-standard items-start">
+        <div class="col-span-12 lg:col-span-6 space-y-6 pr-0 lg:pr-10">
+          <WhyNowHeadingTag class="typo-h2 text-paletteRichBlack">
+            {home.whyNow.title}
+          </WhyNowHeadingTag>
+          <p class="typo-body text-paletteRichBlack/70 font-light italic">
+            {home.whyNow.subtitle}
+          </p>
+          {(home.whyNow.primaryLinkText || home.whyNow.secondaryLinkText) && (
+            <div class="pt-4 flex flex-wrap gap-6">
+              {home.whyNow.primaryLinkText && (
+                <a href={home.whyNow.primaryLinkHref} class="btn-rect text-brandAccent hover:underline font-medium">
+                  <span>{home.whyNow.primaryLinkText}</span>
+                </a>
+              )}
+              {home.whyNow.secondaryLinkText && (
+                <a href={home.whyNow.secondaryLinkHref} class="btn-rect text-paletteRichBlack hover:text-brandAccent font-medium">
+                  <span>{home.whyNow.secondaryLinkText}</span>
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div class="col-span-12 lg:col-span-6 space-y-[2px]">
+          {home.whyNow.items.map((item, idx) => (
+            <div class={`accordion-card p-6 sm:p-8 cursor-pointer ${idx === 0 ? 'bg-paletteRichBlack text-white' : 'bg-paletteDustGrey text-paletteRichBlack'}`} data-card={idx}>
+              <div class="flex items-center justify-between gap-4">
+                <h3 class={`card-title min-w-0 typo-h3 ${idx === 0 ? 'text-white' : 'text-paletteRichBlack'}`}>{item.title}</h3>
+                <button type="button" class={`card-icon-btn w-9 h-9 flex-shrink-0 flex items-center justify-center text-base ${idx === 0 ? 'bg-white/10 text-white' : 'bg-paletteRichBlack/10 text-paletteRichBlack'}`}>
+                  {idx === 0 ? '−' : '+'}
+                </button>
+              </div>
+              <div class={`card-content mt-4 pt-4 space-y-3 ${idx === 0 ? 'block text-white/80' : 'hidden text-paletteRichBlack/90'}`}>
+                <p class="typo-body font-light">
+                  {item.body}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 5: ÇÖZÜMLER ==================== -->
+  <section id="masterclass" class="section-pad-150 relative w-full bg-palettePlatinum text-paletteRichBlack px-6 md:px-16">
+    <div class="max-w-custom mx-auto">
+      
+      <div class="mb-14 max-w-4xl">
+        <SolutionsHeadingTag class="typo-h2 text-paletteRichBlack">
+          {home.solutionsSection.headingLines.map((line: string, i: number) => (
+            <>
+              {line}{i < home.solutionsSection.headingLines.length - 1 && <br />}
+            </>
+          ))}
+        </SolutionsHeadingTag>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 overflow-hidden">
+        
+        <!-- KART 1: AI * EXPERIENCE -->
+        <a href={home.solutionsSection.aiCard.href} data-service="ai" class="bg-paletteRichBlack text-white p-8 sm:p-10 md:p-12 flex flex-col justify-between space-y-10 min-h-[420px] lg:min-h-[640px] group cursor-pointer hover:bg-[#1a1a1a] transition-colors block">
+          <div class="space-y-4">
+            <div class="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white leading-none">
+              {home.solutionsSection.aiCard.topWord} <span class="text-brandAccent font-serif font-light text-3xl align-middle">*</span><br />
+              <span class="font-light tracking-wide">{home.solutionsSection.aiCard.bottomWord}</span>
+            </div>
+            <p class="typo-body tracking-widest font-semibold text-white/80 pt-2">
+              {home.solutionsSection.aiCard.desc}
+            </p>
+          </div>
+
+          <div class="flex items-center justify-between py-4">
+            <div class="w-32 h-32 bg-neutral-900 flex items-center justify-center overflow-hidden flex-shrink-0">
+              <img 
+                src={home.solutionsSection.aiCard.image} 
+                alt={home.solutionsSection.aiCard.imageAlt} 
+                class="w-full h-full object-cover mix-blend-screen opacity-90 contrast-125 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
+              <svg class="w-full h-full animate-[spin_16s_linear_infinite]" viewBox="0 0 100 100">
+                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                <text class="text-[9px] tracking-[0.22em] fill-white font-semibold">
+                  <textPath href="#circlePath">
+                    {home.solutionsSection.aiCard.spinText}
+                  </textPath>
+                </text>
+              </svg>
+              <span class="absolute text-base font-bold text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-4">
+            <h4 class="typo-h4 tracking-widest font-bold text-white">
+              {home.solutionsSection.aiCard.scopeTitle}
+            </h4>
+            <div class="grid grid-cols-2 gap-4 text-[14px] font-light text-white/80 leading-relaxed">
+              <p>{home.solutionsSection.aiCard.scopeLeft}</p>
+              <p>{home.solutionsSection.aiCard.scopeRight}</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- KART 2: CX/UX -->
+        <a href={home.solutionsSection.cxCard.href} data-service="tasarim" class="bg-siteBg text-paletteRichBlack p-8 sm:p-10 md:p-12 flex flex-col justify-between space-y-12 min-h-[420px] lg:min-h-[640px] relative group cursor-pointer hover:bg-[#f4f4f4] transition-colors block">
+          <div class="flex items-start justify-between">
+            <div class="w-16 h-16 relative">
+              <span class="absolute top-0 left-0 w-8 h-0.5 bg-paletteRichBlack"></span>
+              <span class="absolute top-0 left-0 w-0.5 h-12 bg-paletteRichBlack"></span>
+              <span class="absolute bottom-0 right-0 w-10 h-0.5 bg-paletteRichBlack"></span>
+              <span class="absolute bottom-0 right-0 w-0.5 h-8 bg-paletteRichBlack"></span>
+            </div>
+
+            <div class="text-right text-base font-light text-paletteRichBlack/50 space-y-0.5">
+              <span class="block text-paletteRichBlack/80 font-medium">{home.solutionsSection.cxCard.badge}</span>
+            </div>
+          </div>
+
+          <div class="space-y-4 my-auto">
+            <div class="text-6xl sm:text-7xl font-extralight tracking-tighter text-paletteRichBlack leading-none">
+              {home.solutionsSection.cxCard.bigTitle}
+            </div>
+            <p class="typo-body font-light text-paletteRichBlack/70 max-w-xs pt-2">
+              {home.solutionsSection.cxCard.desc}
+            </p>
+          </div>
+
+          <div class="pt-6 space-y-2 text-[14px] font-light text-paletteRichBlack/70 leading-relaxed">
+            <p class="text-paletteRichBlack font-medium text-[14px]">{home.solutionsSection.cxCard.bottomTitle}</p>
+            <p class="text-[14px]">{home.solutionsSection.cxCard.bottomDesc}</p>
+          </div>
+        </a>
+
+        <!-- KART 3: cx2222 Akademi -->
+        <div class="bg-brandAccent text-paletteRichBlack pt-0 pr-0 pb-8 sm:pb-10 md:pb-12 pl-6 sm:pl-10 xl:pl-12 flex flex-col justify-between space-y-8 min-h-[420px] lg:min-h-[640px] relative overflow-hidden group">
+          <div class="flex items-start justify-between gap-4 sm:gap-5 pt-6 sm:pt-10 xl:pt-12">
+            <div class="min-w-0 flex-1 hyphens-none space-y-2 text-[15px] sm:text-base font-light text-paletteRichBlack z-10">
+              <span class="block typo-small font-bold tracking-widest text-paletteRichBlack/60 mb-2">{home.solutionsSection.academyCard.badge}</span>
+              {home.solutionsSection.academyCard.links.map((l) => (
+                <a href={l.href} class="block leading-snug hover:underline transition-colors">{l.label}</a>
+              ))}
+            </div>
+
+            <div class="w-[42%] max-w-[160px] h-56 sm:w-52 sm:max-w-none sm:h-[340px] lg:w-[44%] lg:h-[300px] xl:w-52 xl:h-[380px] bg-paletteRichBlack overflow-hidden relative flex-shrink-0 -mt-6 sm:-mt-10 xl:-mt-12 mr-0">
+              <img 
+                src={home.solutionsSection.academyCard.image} 
+                alt={home.solutionsSection.academyCard.imageAlt} 
+                class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-6 pt-4 pr-6 sm:pr-10 xl:pr-12 z-10">
+            <div class="text-right hyphens-none">
+              <span class="text-[14px] font-semibold text-paletteRichBlack block">{home.solutionsSection.academyCard.title}</span>
+              <span class="text-[14px] text-paletteRichBlack/80 font-light">{home.solutionsSection.academyCard.subtitle}</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+              <a href={home.solutionsSection.academyCard.secondaryBtnHref} class="btn-rect w-full sm:w-auto px-6 py-2.5 font-light text-paletteRichBlack bg-siteBg hover:bg-paletteRichBlack hover:text-white transition-all text-center">
+                {home.solutionsSection.academyCard.secondaryBtnLabel}
+              </a>
+              <a href={home.solutionsSection.academyCard.primaryBtnHref} data-service="akademi" class="btn-rect w-full sm:w-auto px-6 py-2.5 bg-paletteRichBlack text-white font-light hover:bg-palettePlatinum hover:text-paletteRichBlack transition-all text-center">
+                {home.solutionsSection.academyCard.primaryBtnLabel}
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PROBLEM SEÇİCİ CÜMLE SLIDERI -->
+      <div id="problem-slider-sec" class="mt-28">
+        <div class="relative min-h-[140px] flex items-center">
+          {home.solutionsSection.problemSlider.map((ps, idx) => (
+            <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
+              <h3 class="typo-h2 text-paletteRichBlack">
+                {ps.quote}
+              </h3>
+              <a href={ps.href} data-service={ps.service} class="btn-rect font-semibold tracking-wider text-brandAccent mt-4 hover:underline">
+                <span>{ps.solutionLabel}</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 6: PROJELER ==================== -->
+  <section id="projects-stacked" class="relative w-full bg-siteBg text-paletteRichBlack px-6 md:px-16 pt-[50px] pb-20 lg:pb-[150px]">
+    <div class="max-w-custom mx-auto">
+      
+      <div class="mb-14 pb-8 flex flex-col md:flex-row md:items-end justify-between">
+        <div>
+          <ProjectsHeadingTag class="typo-h2 text-paletteRichBlack">
+            {home.projectsSection.title}
+          </ProjectsHeadingTag>
+        </div>
+        <div class="flex flex-col items-start md:items-end gap-2 mt-4 md:mt-0">
+          <p class="typo-body font-light text-paletteRichBlack/60 max-w-sm">
+            {home.projectsSection.desc}
+          </p>
+          <a href={home.projectsSection.allLinkHref} class="btn-rect w-max font-medium text-brandAccent hover:text-paletteRichBlack transition-colors">
+            {home.projectsSection.allLinkText}
+          </a>
+        </div>
+      </div>
+
+      <div class="relative space-y-10 lg:space-y-24">
+        {featuredProjects.map((proj, idx) => {
+          const st = getSurfaceStyle(proj.listStyle);
+          const stackNum = Math.min(idx + 1, 3);
+          return (
+            <div class={`stack-card stack-card-${stackNum} ${st.section} rounded-none overflow-hidden`}>
+              <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-0 lg:min-h-[580px]">
+                <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-auto lg:min-h-full overflow-hidden bg-neutral-200">
+                  <img 
+                    src={proj.image} 
+                    alt={proj.imageAlt || `${proj.client} Projesi`} 
+                    class="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                <div class={`lg:col-span-5 p-8 sm:p-12 md:p-14 flex flex-col justify-between ${st.section} space-y-8`}>
+                  <div class="space-y-4">
+                    <span class={`typo-body tracking-widest font-semibold block ${proj.listStyle === 'platinum' ? 'text-brandAccent' : st.title}`}>
+                      {proj.client}
+                    </span>
+                    <h3 class={`typo-h2 ${st.title}`}>
+                      {proj.shortTitle || proj.title}
+                    </h3>
+                    <p class={`typo-body font-light pt-2 ${st.body}`}>
+                      {proj.listDesc || proj.desc}
+                    </p>
+                    <div class={`pt-4 space-y-2 typo-body font-light ${st.muted}`}>
+                      {(proj.bullets || []).map((b) => (
+                        <p>• {b}</p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div class="pt-6 flex items-center justify-between">
+                    <a href={`/projeler/${proj.slug}`} class={`btn-rect font-medium transition-colors ${st.textLink}`}>
+                      <span>{home.projectsSection.cardCtaText}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 7: BLOG ==================== -->
+  <section id="blog-insights" class="section-pad-150 relative w-full bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 overflow-hidden">
+    
+    <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <img 
+        src={home.blogSection.bgImage} 
+        alt={home.blogSection.bgAlt} 
+        class="w-full h-full object-cover object-center opacity-10 filter contrast-125"
+      />
+    </div>
+
+    <div class="relative z-10 max-w-custom mx-auto w-full">
+      
+      <div class="mb-16 pb-6 flex flex-col md:flex-row md:items-end justify-between">
+        <div>
+          <BlogHeadingTag class="typo-h2 text-paletteRichBlack">
+            {home.blogSection.title}
+          </BlogHeadingTag>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        {featuredPosts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="flex flex-col md:flex-row items-stretch group cursor-pointer bg-siteBg transition-all overflow-hidden">
+            
+            <div class={`h-3 w-full md:h-auto md:w-5 flex-shrink-0 transition-colors ${getBarClass(post.barStyle)}`}></div>
+
+            <div class="p-6 sm:p-8 flex-grow min-w-0 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <h3 class="typo-h3 font-normal text-paletteRichBlack group-hover:text-brandAccent transition-colors">
+                  {post.title}
+                </h3>
+                <p class="typo-body text-paletteRichBlack/70 font-light">
+                  {post.homeDesc || post.desc}
+                </p>
+              </div>
+
+              <div class="pt-4 mt-auto">
+                <span class="typo-small font-semibold text-paletteRichBlack group-hover:text-brandAccent transition-colors inline-flex items-center space-x-1.5">
+                  <span>{home.blogSection.readMoreText}</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="w-full h-52 md:w-44 md:h-auto md:self-stretch flex-shrink-0 overflow-hidden relative p-0 m-0 bg-neutral-100">
+              <img 
+                src={post.image} 
+                alt={post.imageAlt || post.title} 
+                class="w-full h-full object-cover object-center grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href={home.blogSection.allLinkHref} class="btn-rect inline-flex items-center space-x-2 font-medium text-paletteRichBlack hover:text-brandAccent bg-siteBg px-8 py-3.5 transition-all">
+          <span>{home.blogSection.allLinkText}</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== BÖLÜM 8: İLETİŞİM ==================== -->
+  <ContactSection />
+
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sentenceSlides = document.querySelectorAll('.sentence-slide');
+    let currentSentence = 0;
+
+    if (sentenceSlides.length > 0) {
+      setInterval(() => {
+        sentenceSlides[currentSentence].classList.add('hidden', 'opacity-0');
+        currentSentence = (currentSentence + 1) % sentenceSlides.length;
+        sentenceSlides[currentSentence].classList.remove('hidden');
+        setTimeout(() => {
+          sentenceSlides[currentSentence].classList.remove('opacity-0');
+        }, 30);
+      }, 4200);
+    }
+
+    const accordionCards = document.querySelectorAll('.accordion-card');
+    accordionCards.forEach(card => {
+      card.addEventListener('click', () => {
+        accordionCards.forEach(otherCard => {
+          const content = otherCard.querySelector('.card-content');
+          const iconBtn = otherCard.querySelector('.card-icon-btn');
+          const title = otherCard.querySelector('.card-title');
+
+          if (!content || !iconBtn || !title) return;
+
+          if (otherCard === card) {
+            const isHidden = content.classList.contains('hidden');
+            if (isHidden) {
+              content.classList.remove('hidden');
+              content.classList.add('block');
+              
+              otherCard.classList.remove('bg-paletteDustGrey', 'text-paletteRichBlack');
+              otherCard.classList.add('bg-paletteRichBlack', 'text-white');
+              title.classList.remove('text-paletteRichBlack');
+              title.classList.add('text-white');
+              content.classList.remove('text-paletteRichBlack/90');
+              content.classList.add('text-white/80');
+              
+              iconBtn.classList.remove('bg-paletteRichBlack/10', 'text-paletteRichBlack');
+              iconBtn.classList.add('bg-white/10', 'text-white');
+              iconBtn.textContent = '−';
+            } else {
+              content.classList.remove('block');
+              content.classList.add('hidden');
+              
+              otherCard.classList.remove('bg-paletteRichBlack', 'text-white');
+              otherCard.classList.add('bg-paletteDustGrey', 'text-paletteRichBlack');
+              title.classList.remove('text-white');
+              title.classList.add('text-paletteRichBlack');
+              content.classList.remove('text-white/80');
+              content.classList.add('text-paletteRichBlack/90');
+
+              iconBtn.classList.remove('bg-white/10', 'text-white');
+              iconBtn.classList.add('bg-paletteRichBlack/10', 'text-paletteRichBlack');
+              iconBtn.textContent = '+';
+            }
+          } else {
+            content.classList.remove('block');
+            content.classList.add('hidden');
+
+            otherCard.classList.remove('bg-paletteRichBlack', 'text-white');
+            otherCard.classList.add('bg-paletteDustGrey', 'text-paletteRichBlack');
+            title.classList.remove('text-white');
+            title.classList.add('text-paletteRichBlack');
+            content.classList.remove('text-white/80');
+            content.classList.add('text-paletteRichBlack/90');
+
+            iconBtn.classList.remove('bg-white/10', 'text-white');
+            iconBtn.classList.add('bg-paletteRichBlack/10', 'text-paletteRichBlack');
+            iconBtn.textContent = '+';
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,421 @@
+{
+  "seo": {
+    "title": "cx2222 | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
+    "description": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
+    "keywords": "müşteri deneyimi, CX danışmanlığı, AI destekli CX, deneyim tasarımı, Voice of Customer, cx2222 Akademi",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "schemaType": "WebPage",
+    "aiSummary": "cx2222, kurumların yapay zeka hızını insan sezgi ve empatisiyle birleştirerek ölçülebilir müşteri deneyimi (CX) dönüşümü gerçekleştiren danışmanlık ve tasarım stüdyosudur.",
+    "keyTakeaways": [
+      "AI hızı ile insan empatisini birleştiren hibrit CX dönüşüm mimarisi",
+      "Saha etnografisi, dijital deneyim tasarımı ve proaktif VOC sistemleri",
+      "cx2222 Akademi ve LEGO Serious Play ile kalıcı organizasyon kültürü"
+    ],
+    "aboutTopics": [
+      "Müşteri Deneyimi Tasarımı",
+      "AI Destekli Müşteri Deneyimi",
+      "Kurumsal Kültür Dönüşümü"
+    ],
+    "targetAudience": "C-Level Yöneticiler, CX Liderleri, Dijital Dönüşüm ve Pazarlama Ekipleri",
+    "llmsInclude": true,
+    "titleTag": "h1"
+  },
+  "heroHeadingTag": "h1",
+  "heroSlides": [
+    {
+      "brand": "",
+      "title": "Yapay Zeka Çağında İnsan Odaklı Deneyim",
+      "desc": "İnsanı merkeze alarak deneyimi tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
+      "link": "/yaklasimimiz",
+      "cta": "Yaklaşımımızı İnceleyin →",
+      "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.png",
+      "alt": "Hero 1 - cx2222",
+      "titleTag": "h1",
+      "titleColor": "sandyBrown"
+    },
+    {
+      "brand": "İGA",
+      "title": "Misafirperverlikte Küresel Standart",
+      "desc": "Dünyanın en işlek havalimanlarından birini otantik Türk misafirperverliğinin küresel vitrinine dönüştürdük.",
+      "link": "/projeler/istanbul-havalimani",
+      "cta": "Projeyi İnceleyin →",
+      "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.png",
+      "alt": "Hero 2 - İGA",
+      "titleTag": "h1",
+      "titleColor": "platinum"
+    },
+    {
+      "brand": "Vodafone",
+      "title": "Seyahatte Güven Yaratan Yeni Roaming Deneyimi",
+      "desc": "Son dakika baş ağrısı olan bir hizmeti, yolculuk boyunca kullanıcıya eşlik eden güvenilir bir arkadaşa dönüştürdük.",
+      "link": "/projeler/vodafone-roaming",
+      "cta": "Projeyi İnceleyin →",
+      "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.png",
+      "alt": "Hero 3 - Vodafone",
+      "titleTag": "h1"
+    },
+    {
+      "brand": "AKBANK",
+      "title": "Bankacılığı Hayatın Anlamlı Anlarına Taşımak",
+      "desc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
+      "link": "/projeler/akbank-degerli-anlar",
+      "cta": "Projeyi İnceleyin →",
+      "image": "/images/uploads/akbank-01-mwdpwe3x.png",
+      "alt": "Hero 4 - Akbank",
+      "titleTag": "h1"
+    },
+    {
+      "brand": "FIAT",
+      "title": "Sürücü Dostu Hizmetler",
+      "desc": "Müşteri yolculuğundan bayi deneyimine, onlarca araştırma ve tasarım projesi ile 13 yıllık ortaklık.",
+      "link": "/projeler/fiat-surucu-dostu",
+      "cta": "Projeyi İnceleyin →",
+      "image": "/images/uploads/fiat-sd-mwdpvp43.jpg",
+      "alt": "Hero 5 - FIAT",
+      "titleTag": "h1"
+    }
+  ],
+  "manifesto": {
+    "part1": "Kurumlar için en büyük risk,",
+    "highlight1": "yapay zeka",
+    "part2": "müşteri deneyimini kökten dönüştürürken, teknolojinin hızına",
+    "part3": "kapılıp",
+    "highlight2": "insanı",
+    "part4": "unutmak.",
+    "subTitle": "cx2222, teknolojinin dönüştürücü gücünü tasarımın empatisiyle dengeleyen bir müşteri deneyimi ve hizmet tasarımı şirketidir.",
+    "subDesc": "",
+    "ctaText": "Yaklaşımımızı Keşfedin →",
+    "ctaHref": "/yaklasimimiz",
+    "headingTag": "h2",
+    "icon1Svg": "<svg class=\"w-10 h-10 sm:w-12 sm:h-12 text-brandAccent\" viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n  <rect x=\"10\" y=\"10\" width=\"28\" height=\"28\" rx=\"2\" stroke=\"currentColor\"/>\n  <circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"currentColor\" fill-opacity=\"0.3\"/>\n  <path d=\"M4 18h6M4 30h6M38 18h6M38 30h6M18 4v6M30 4v6M18 38v6M30 38v6\" stroke-linecap=\"round\"/>\n  <path d=\"M22 20l4 4m0-4l-4 4\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n</svg>",
+    "icon2Svg": "<svg class=\"w-11 h-11 sm:w-14 sm:h-14 text-brandAccent\" viewBox=\"0 0 60 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n  <rect x=\"42\" y=\"8\" width=\"16\" height=\"24\" rx=\"2\" stroke=\"currentColor\"/>\n  <circle cx=\"50\" cy=\"16\" r=\"1.5\" fill=\"currentColor\"/>\n  <circle cx=\"50\" cy=\"24\" r=\"1.5\" fill=\"currentColor\"/>\n  <path d=\"M4 28 C 14 28, 22 14, 34 20\" stroke=\"currentColor\" stroke-linecap=\"round\"/>\n  <path d=\"M34 16 L38 20 L34 24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+    "icon3Svg": "<svg class=\"w-7 h-7 text-brandAccent\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n  <circle cx=\"12\" cy=\"12\" r=\"9\"/>\n  <path d=\"M9 10h.01M15 10h.01M8 14s1.5 2.5 4 2.5 4-2.5 4-2.5\" stroke-linecap=\"round\"/>\n</svg>",
+    "sentence": "Kurumlar için en büyük risk, [icon-1] <u>yapay zeka</u> müşteri deneyimini kökten dönüştürürken, teknolojinin hızına [icon-2] kapılıp [icon-3] <u>insanı</u> unutmak. ",
+    "icons": [
+      {
+        "id": "icon-1",
+        "name": "Yapay Zeka (Çip)",
+        "badge": false,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" fill=\"#F0915B\" viewBox=\"0 0 256 256\"><path d=\"M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z\"></path></svg>"
+      },
+      {
+        "id": "icon-2",
+        "name": "Teknoloji Hızı (Akış)",
+        "badge": false,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" fill=\"#F0915B\" viewBox=\"0 0 256 256\"><path d=\"M114.34,154.34l96-96a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32ZM128,88a63.9,63.9,0,0,1,20.44,3.33,8,8,0,1,0,5.11-15.16A80,80,0,0,0,48.49,160.88,8,8,0,0,0,56.43,168c.29,0,.59,0,.89-.05a8,8,0,0,0,7.07-8.83A64.92,64.92,0,0,1,64,152,64.07,64.07,0,0,1,128,88Zm99.74,13a8,8,0,0,0-14.24,7.3,96.27,96.27,0,0,1,5,75.71l-181.1-.07A96.24,96.24,0,0,1,128,56h.88a95,95,0,0,1,42.82,10.5A8,8,0,1,0,179,52.27a112,112,0,0,0-156.66,137A16.07,16.07,0,0,0,37.46,200H218.53a16,16,0,0,0,15.11-10.71,112.35,112.35,0,0,0-5.9-88.3Z\"></path></svg>"
+      },
+      {
+        "id": "icon-3",
+        "name": "İnsan & Empati (Gülen Yüz)",
+        "badge": false,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" fill=\"#F0915B\" viewBox=\"0 0 256 256\"><path d=\"M100,124a12,12,0,1,1,12-12A12,12,0,0,1,100,124Zm56-24a12,12,0,1,0,12,12A12,12,0,0,0,156,100Zm-4.27,45.23a45,45,0,0,1-47.46,0,8,8,0,0,0-8.54,13.54,61,61,0,0,0,64.54,0,8,8,0,0,0-8.54-13.54ZM216,80v96a32.06,32.06,0,0,1-24,31v17a16,16,0,0,1-16,16H80a16,16,0,0,1-16-16V207a32.06,32.06,0,0,1-24-31V80A32,32,0,0,1,72,48H88V32a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16V48h16A32,32,0,0,1,216,80ZM104,48h48V32H104Zm72,176V208H80v16ZM200,80a16,16,0,0,0-16-16H72A16,16,0,0,0,56,80v96a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16Z\"></path></svg>"
+      },
+      {
+        "id": "icon-4",
+        "name": "Yeni İkon 4",
+        "badge": false,
+        "svg": "<svg class=\"w-10 h-10 sm:w-12 sm:h-12 text-brandAccent\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z\"/></svg>"
+      }
+    ]
+  },
+  "logos": [
+    {
+      "name": "Amazon",
+      "kind": "image",
+      "image": "/images/logos/amazon-logo-svg-mwdffkj8.webp"
+    },
+    {
+      "name": "Allianz",
+      "kind": "image",
+      "image": "/images/logos/allianz-svg-mwdfgcrt.webp"
+    },
+    {
+      "name": "Vodafone",
+      "kind": "image",
+      "image": "/images/logos/vodafone-2017-logo-svg-mwdgpiqv.webp"
+    },
+    {
+      "name": "Mercedes",
+      "kind": "image",
+      "image": "/images/logos/mercedes-benz-logo-svg-mwdh53dh.webp"
+    },
+    {
+      "name": "YILDIZ",
+      "kind": "image",
+      "image": "/images/logos/yildiz-holding-logo-svg-mwdgpeen.webp"
+    },
+    {
+      "name": "LC WAIKIKI",
+      "kind": "image",
+      "image": "/images/logos/lc-waikiki-logo-svg-mwdh3w3h.webp"
+    },
+    {
+      "name": "MİGROS",
+      "kind": "image",
+      "image": "/images/logos/migros-logo-mwdh4edh.svg"
+    },
+    {
+      "name": "IGA",
+      "kind": "image",
+      "image": "/images/logos/asset-1-mwdh2md8.svg"
+    },
+    {
+      "name": "AKBANK",
+      "kind": "image",
+      "image": "/images/logos/akbank-logo-svg-mwdgp747.webp"
+    },
+    {
+      "name": "McDonald's",
+      "kind": "image",
+      "image": "/images/logos/mcdonald-s-golden-arches-svg-mwdgqg62.webp"
+    },
+    {
+      "name": "GARANTİ",
+      "kind": "image",
+      "image": "/images/logos/garanti-bankasi-logo-svg-mwdgp3iq.webp"
+    },
+    {
+      "name": "İŞ BANKASI",
+      "kind": "image",
+      "image": "/images/logos/turkiye-is-bankasi-logo-svg-mwdgozm0.webp"
+    },
+    {
+      "name": "AKSİGORTA",
+      "kind": "image",
+      "image": "/images/logos/aksigorta-white-mwdfrw6q.svg"
+    },
+    {
+      "name": "TEB",
+      "kind": "image",
+      "image": "/images/logos/asset-1-mwdgneus.svg"
+    },
+    {
+      "name": "TÜRK TELEKOM",
+      "kind": "image",
+      "image": "/images/logos/turk-telekom-logo-svg-mwdhbkte.webp"
+    },
+    {
+      "name": "FIAT",
+      "kind": "image",
+      "image": "/images/logos/fiat-logo-2020-svg-mwdgprwk.webp"
+    },
+    {
+      "name": "arçelik",
+      "kind": "image",
+      "image": "/images/logos/arcelik-logo-svg-mwdhko5d.webp"
+    },
+    {
+      "name": "Eureko",
+      "kind": "image",
+      "image": "/images/logos/eureko-logo-blue-du66wmd1-mwdgq32a.svg"
+    },
+    {
+      "name": "pluxee",
+      "kind": "image",
+      "image": "/images/logos/pluxee-logo-2023-mwdhbsvz.svg"
+    },
+    {
+      "name": "KFC",
+      "kind": "image",
+      "image": "/images/logos/kfc-logo-mwdhkjd0.svg"
+    },
+    {
+      "name": "MAPFRE",
+      "kind": "image",
+      "image": "/images/logos/asset-2-mwdhkbzp.svg"
+    },
+    {
+      "name": "Eczacıbaşı",
+      "kind": "image",
+      "image": "/images/logos/asset-3-mwdhk7zz.svg"
+    },
+    {
+      "name": "BOYNER",
+      "kind": "image",
+      "image": "/images/logos/asset-1-mwdhk3ts.svg"
+    },
+    {
+      "name": "Tefal",
+      "kind": "image",
+      "image": "/images/logos/tefal-logo-mwdhc71z.svg"
+    }
+  ],
+  "whyNow": {
+    "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
+    "bgAlt": "Neden Şimdi Arka Plan",
+    "title": "Yapay zeka müşteri deneyimini dönüştürüyor",
+    "subtitle": "Müşteri deneyiminde yapay zekâ sayesinde…",
+    "primaryLinkText": "",
+    "primaryLinkHref": "#masterclass",
+    "secondaryLinkText": "",
+    "secondaryLinkHref": "/neden-simdi",
+    "items": [
+      {
+        "title": "Sesi aksiyona çeviririz",
+        "body": "Müşterinin sesini yalnızca anketlerle duyup statik PDF raporlarına hapsetmeyiz. Gelen her mikro geri bildirimi, çağrı kaydını ve dijital izi doğal dil işleme algoritmalarıyla anında ayrıştırır, kök neden analiziyle birlikte ilgili birimin önüne hazır bir operasyonel aksiyon planı olarak koyarız.",
+        "titleTag": "h3",
+        "bodyColor": "sandyBrown"
+      },
+      {
+        "title": "Aksaklığı anında yakalarız",
+        "body": "Kullanıcı yolculuğundaki sürtünme noktalarını ve kopmaları müşteri henüz sistemi terk etmeden yakalarız. Kapalı döngü (closed-loop) mekanizmalarımız sayesinde, hata oluştuğu saniyede ilgili saha ekibini veya dijital akışı tetikleyerek ilişkiyi kriz büyümeden kurtarırız.",
+        "titleTag": "h3"
+      },
+      {
+        "title": "İhtiyacı önceden görürüz",
+        "body": "Reaktif müşteri hizmetleri dönemi kapandı. Davranışsal veri desenlerinden stres, tereddüt ve kararsızlık sinyallerini okuyarak, müşteriniz yardım talebinde bulunmadan önce proaktif empati adımlarıyla yanında olur, hayal kırıklığını sadakate dönüştürürüz.",
+        "titleTag": "h3"
+      },
+      {
+        "title": "Rutini otomatikleştiririz",
+        "body": "Standart, tekrarlayan ve mekanik süreçleri yapay zekaya devrederken ekiplerinizin zamanını serbest bırakırız. İnsan dokunuşunun vazgeçilmez olduğu güven inşası, karmaşık problem çözümü ve derin müzakere anlarında çalışanlarınızın gerçek potansiyelini sahaya yansıtırız.",
+        "titleTag": "h3"
+      }
+    ],
+    "headingTag": "h2",
+    "subtitleColor": "richBlack"
+  },
+  "solutionsSection": {
+    "headingLines": [
+      "Gerçek verilerden yola çıkarak,",
+      "insanların hayatına dokunan",
+      "servis ve deneyimler tasarlıyoruz."
+    ],
+    "aiCard": {
+      "topWord": "AI",
+      "bottomWord": "MÜŞTERİ DENEYİMİ",
+      "href": "/cozumler/ai-destekli-cx",
+      "desc": "",
+      "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+      "imageAlt": "AI VOC Concept",
+      "spinText": "• VOC • ACTION • INSIGHT • AI •",
+      "scopeTitle": "",
+      "scopeLeft": "AI destekli Müşterinin sesi (VOC) sistem kurulumu,  <br>AI destekli Deneyim Yönetim Sistemi, <br>Close-the Loop Entegrasyonu, AI destekli Müşteri Deneyim Yolculuğu Yönetimi,  Kök neden, Müşteri Duygu, Etki Analizleri",
+      "scopeRight": "",
+      "descColor": "brandAccent",
+      "topWordTag": "span",
+      "bottomWordTag": "span",
+      "descTag": "p",
+      "scopeTitleTag": "h4",
+      "scopeLeftTag": "p",
+      "scopeRightTag": "p",
+      "topWordSize": "",
+      "scopeLeftSize": "14"
+    },
+    "cxCard": {
+      "badge": "",
+      "bigTitle": "CX/UX22",
+      "href": "/cozumler/deneyim-tasarimi",
+      "desc": "Deneyimi teknolojiden değil, onu bizzat yaşayacak insandan başlayarak tasarlayın.",
+      "bottomTitle": "",
+      "bottomDesc": "Uçtan Uca Yolculuk Haritaları<br>Derin Etnografik Araştırmalar, <br>Prototipleme Çalıştayları, <br>cx2222 Northstar & Maturity Assessment.",
+      "badgeTag": "span",
+      "bigTitleTag": "h2",
+      "descTag": "p",
+      "bottomTitleTag": "h4",
+      "bottomDescTag": "p"
+    },
+    "academyCard": {
+      "badge": "",
+      "links": [
+        {
+          "label": "Eğitimler",
+          "href": "/cozumler/akademi"
+        },
+        {
+          "label": "Hizmet Tasarımı",
+          "href": "/cozumler/deneyim-tasarimi"
+        },
+        {
+          "label": "Kültür Çalıştayları",
+          "href": "/cozumler/akademi"
+        },
+        {
+          "label": "LEGO® Play®",
+          "href": "/cozumler/akademi"
+        }
+      ],
+      "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.jpg",
+      "imageAlt": "cx2222 Akademi Liderlik Portresi",
+      "title": "cx2222 Akademi",
+      "subtitle": "Kurum Kültürü & Yetkinlik Dönüşümü",
+      "secondaryBtnLabel": "İletişim",
+      "secondaryBtnHref": "/iletisim",
+      "primaryBtnLabel": "Eğitim Talep Edin",
+      "primaryBtnHref": "/cozumler/akademi",
+      "titleTag": "h1",
+      "titleSize": "25",
+      "badgeTag": "span",
+      "subtitleTag": "p"
+    },
+    "problemSlider": [
+      {
+        "quote": "\"Anket ve verimiz çok ama aksiyona dönüşmüyor.\"",
+        "solutionLabel": "AI ile Müşteri Deneyimi →",
+        "href": "/cozumler/ai-destekli-cx",
+        "service": "ai",
+        "quoteTag": "h3"
+      },
+      {
+        "quote": "\"Müşterilerimizin neden vazgeçtiğini tam bilmiyoruz.\"",
+        "solutionLabel": "İnsan Odaklı Deneyim Tasarımı →",
+        "href": "/cozumler/deneyim-tasarimi",
+        "service": "tasarim",
+        "quoteTag": "h3"
+      },
+      {
+        "quote": "\"Herkes müşteri odaklı ama ekipler farklı yönlere çekiyor.\"",
+        "solutionLabel": "CX Folks Northstar →",
+        "href": "/yaklasimimiz#northstar-cx",
+        "service": "northstar",
+        "quoteTag": "h3"
+      },
+      {
+        "quote": "\"Nereden başlayacağımızı bilmiyoruz.\"",
+        "solutionLabel": "Maturity Assessment veya Ön Görüşme →",
+        "href": "/cozumler/cx-maturity-testi",
+        "service": "maturity",
+        "quoteTag": "h3"
+      }
+    ],
+    "headingTag": "h2"
+  },
+  "projectsSection": {
+    "title": "Projeler",
+    "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi.",
+    "allLinkText": "Tüm Projeleri Görün →",
+    "allLinkHref": "/projeler",
+    "cardCtaText": "Vaka Detaylarını İncele →",
+    "featuredSlugs": [
+      "istanbul-havalimani",
+      "vodafone-roaming",
+      "akbank-degerli-anlar"
+    ],
+    "headingTag": "h2"
+  },
+  "blogSection": {
+    "title": "Blog",
+    "bgImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=2000&q=80",
+    "bgAlt": "Blog Atmosfer Görseli",
+    "readMoreText": "Devamını Oku →",
+    "allLinkText": "Tüm Yazılar →",
+    "allLinkHref": "/blog",
+    "featuredSlugs": [
+      "calisaniniz-neden-mutlu-degil",
+      "yapay-zeka-ve-insan-dokunusunda-denge"
+    ],
+    "headingTag": "h2",
+    "titleColor": "white"
+  },
+  "cta": {
+    "visible": false,
+    "selectedCtaId": "default-consulting",
+    "surface": "platinum",
+    "title": "",
+    "desc": "",
+    "primaryLabel": "",
+    "primaryHref": "",
+    "secondaryLabel": "",
+    "secondaryHref": ""
+  }
+}

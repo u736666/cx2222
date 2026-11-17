@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlockRenderer from '../components/blocks/BlockRenderer.astro';
+import { getAllBlockPages, type BlockPageData } from '../lib/content';
+
+export function getStaticPaths() {
+  const pages = getAllBlockPages();
+  return pages
+    .filter((p) => p.meta?.slug !== '404')
+    .map((page) => {
+      const rawSlug = (page.meta?.slug || '').replace(/^\/|\/$/g, '');
+      return {
+        params: { slug: rawSlug === '' || rawSlug === 'home' ? undefined : rawSlug },
+        props: { page },
+      };
+    });
+}
+
+interface Props {
+  page: BlockPageData;
+}
+
+const { page } = Astro.props;
+const isHome = !page.meta.slug || page.meta.slug === 'home';
+
+const breadcrumbs = isHome
+  ? undefined
+  : [
+      ...(page.meta.slug.includes('/') ? [{ name: 'Çözümler', url: '/cozumler' }] : []),
+      { name: page.seo?.breadcrumbName || page.meta.title, url: `/${page.meta.slug}` }
+    ];
+---
+
+<Layout
+  title={page.seo?.title || page.meta.title}
+  description={page.seo?.description}
+  seo={page.seo}
+  isHome={isHome}
+  breadcrumbs={breadcrumbs}
+>
+  <BlockRenderer blocks={page.blocks || []} />
+</Layout>

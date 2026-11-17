@@ -1,0 +1,38 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const items = Array.isArray(data.items || data.images) ? (data.items || data.images) : [];
+const cols = data.columns || 3;
+const sectionId = id || styles.sectionId || 'gallery';
+---
+
+<section id={sectionId} class={`py-20 px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class={styles.containerClass}>
+    {data.title && (
+      <div class="mb-12">
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-current" />
+      </div>
+    )}
+
+    <div class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${cols} gap-6`}>
+      {items.map((img: any) => (
+        <div class="aspect-[4/3] bg-neutral-200 overflow-hidden">
+          <img 
+            src={typeof img === 'string' ? img : img.src} 
+            alt={typeof img === 'string' ? '' : (img.alt || '')} 
+            class="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-500" 
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

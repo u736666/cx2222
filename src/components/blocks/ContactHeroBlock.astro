@@ -1,0 +1,64 @@
+---
+import Heading from '../Heading.astro';
+import { getSite, resolvePaletteColor, resolveTextStyle, formatRich } from '../../lib/content';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const site = getSite();
+const sectionId = id || styles.sectionId || 'contact-hero';
+
+const rawBgColor = data.bgColor || data.surface || style?.bgColor || style?.surface;
+const resolvedBg = resolvePaletteColor(rawBgColor);
+const isDark = ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(rawBgColor || '').toLowerCase()) || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(resolvedBg || '').toLowerCase());
+const textClass = isDark ? 'text-white' : 'text-paletteRichBlack';
+let inlineStyle = styles.inlineStyleString || '';
+if (resolvedBg) {
+  inlineStyle = (inlineStyle ? inlineStyle + '; ' : '') + `background-color: ${resolvedBg} !important;`;
+}
+
+const offices = Array.isArray(site.brand?.offices) ? site.brand.offices : [];
+const hasOffices = offices.length > 0;
+const hasContent = Boolean((data.title && String(data.title).trim()) || (data.eyebrow && String(data.eyebrow).trim()) || hasOffices);
+---
+
+{hasContent && (
+<section id={sectionId} class={`relative ${resolvedBg ? '' : 'bg-palettePlatinum'} ${textClass} px-6 md:px-16 pt-[82px] md:pt-[114px] pb-16 md:pb-24 ${styles.sectionClasses}`} style={inlineStyle || undefined}>
+  <div class={`${styles.containerClass} grid grid-cols-1 ${hasOffices ? 'lg:grid-cols-12' : ''} gap-12 items-end`}>
+    <div class={`${hasOffices ? 'lg:col-span-8' : 'w-full'} space-y-6`}>
+      {data.eyebrow && data.eyebrow.trim() !== '' && (
+        <span 
+          class={`typo-small font-semibold tracking-widest ${isDark ? 'text-white/60' : 'text-paletteRichBlack/60'} block`}
+          style={resolveTextStyle(data, 'eyebrow')}
+          set:html={formatRich(data.eyebrow)}
+        />
+      )}
+      <Heading 
+        as={data.headingTag || data.titleTag || 'h1'} 
+        customSize={data.headingSize || data.titleSize} 
+        color={data.headingColor || data.titleColor} 
+        size="h1" 
+        text={data.title} 
+        class={textClass}
+        customStyle={resolveTextStyle(data, 'title')}
+      />
+    </div>
+    {hasOffices && (
+      <div class={`lg:col-span-4 grid grid-cols-2 gap-6 typo-small font-light ${isDark ? 'text-white/80' : 'text-paletteRichBlack/80'}`}>
+        {offices.map((office: any) => (
+          <div>
+            <span class={`typo-small font-semibold tracking-widest ${isDark ? 'text-white/40' : 'text-paletteRichBlack/40'} block mb-1`}>{office.countryLabel}</span>
+            <p class="font-normal">{office.city} • {office.district}</p>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+)}

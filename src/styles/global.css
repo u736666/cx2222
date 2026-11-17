@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design token CSS değişkenleri (--color-*) src/data/theme.json üzerinden
+   src/layouts/Layout.astro tarafından <head> içine enjekte edilir. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+:root {
+  --font-family-main: 'Sora', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-main);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  background-color: var(--color-site-bg);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uzun Türkçe kelimelerin html[lang="tr"] üzerinden hece sınırından bölünmesi ve taşmaması */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+/* Uzun metinlerde yetim kelimeyi azalt */
+p, blockquote, li, .typo-lead, .typo-body {
+  text-wrap: pretty;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Üst menü linkleri ve form/kod alanlarında otomatik tirelemeyi engelle, taşma korumasını koru */
+#main-header nav a,
+.hyphens-none,
+input,
+textarea,
+select,
+code,
+pre {
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/* Form alanları erişilebilir durum ve odak görünürlüğü */
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  outline: 2px solid #dc2626;
+  outline-offset: -2px;
+}
+
+/* Siteden tüm gölgeleri ve yuvarlatmaları kaldır (cx8.html Mimarisi) */
+*, ::after, ::before {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Semantik H-Etiketleri ve CMS Tipografi Sistemi */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-main);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+h1, .typo-h1 {
+  font-family: var(--font-family-main);
+  font-size: var(--fs-h1) !important;
+  font-weight: var(--fw-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+}
+
+h2, .typo-h2 {
+  font-family: var(--font-family-main);
+  font-size: var(--fs-h2) !important;
+  font-weight: var(--fw-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+}
+
+h3, .typo-h3 {
+  font-family: var(--font-family-main);
+  font-size: var(--fs-h3) !important;
+  font-weight: var(--fw-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+}
+
+h4, .typo-h4 {
+  font-family: var(--font-family-main);
+  font-size: var(--fs-h4) !important;
+  font-weight: var(--fw-h4);
+  line-height: var(--lh-h4);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+}
+
+h5, .typo-h5 {
+  font-family: var(--font-family-main);
+  font-size: calc(var(--fs-h4) * 0.9) !important;
+  font-weight: var(--fw-h4);
+  line-height: var(--lh-h4);
+  letter-spacing: var(--ls-heading);
+  text-wrap: balance;
+}
+
+h6, .typo-h6 {
+  font-family: var(--font-family-main);
+  font-size: var(--fs-small) !important;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.typo-lead {
+  font-size: var(--fs-lead) !important;
+  line-height: var(--lh-body);
+  text-wrap: pretty;
+}
+
+.typo-body {
+  font-size: var(--fs-body) !important;
+  line-height: var(--lh-body);
+  text-wrap: pretty;
+}
+
+.typo-small {
+  font-size: var(--fs-small) !important;
+  line-height: 1.45;
+}
+
+.grid-standard {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.section-pad-150 {
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 1023px) {
+  .section-pad-150 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+}
+
+/* HEADER & MEGA MENÜ POSITIONING HİZALAMASI */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: transparent;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  border: none !important;
+}
+
+#main-header.solid-subpage {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-site-bg) !important;
+  border: none !important;
+}
+
+#main-header.scrolled-header,
+#main-header.has-active-mega,
+#main-header.mobile-menu-open {
+  background-color: var(--color-site-bg) !important;
+  border: none !important;
+}
+
+/* Ana sayfa tepedeyken (Hero üzerindeyken) logo, navigasyon ve mobil buton BEYAZ */
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-brand {
+  color: #ffffff !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-logo-img {
+  filter: brightness(0) invert(1);
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-nav a.nav-link {
+  color: #ffffff !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-nav a.nav-link:hover {
+  color: var(--color-brand-accent) !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-mobile-btn {
+  color: #ffffff !important;
+}
+
+.mega-dive-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-rich-black) !important;
+  border: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 55;
+}
+
+.nav-trigger {
+  position: relative;
+}
+
+.nav-trigger.active-trigger > a {
+  color: var(--color-brand-accent) !important;
+}
+
+.mega-dive-container.active-panel {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.accordion-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-bg-img {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sentence-slide {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Keskin Köşeli Mimari Buton & Formlar */
+.btn-rect, button, input, select, textarea {
+  border-radius: 0px !important;
+  border: none !important;
+}
+
+.btn-rect, button, a.btn-rect, input[type="submit"], input[type="button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 14px !important;
+}
+
+/* Sitedeki Görüşelim ve Görüşme Planlayın butonlarında yazı rengi beyaz */
+#main-header a.btn-rect,
+#mobile-menu-drawer a.btn-rect,
+button#contact-submit-btn,
+.btn-cta-white {
+  color: #ffffff !important;
+}
+
+/* Açık renkli / beyaz butonların metni koyu olsun */
+.btn-rect.bg-white:not(:hover),
+a.btn-rect.bg-white:not(:hover),
+.btn-rect[class*="bg-white"]:not(:hover),
+a.btn-rect[class*="bg-white"]:not(:hover),
+.btn-rect.bg-siteBg:not(:hover),
+a.btn-rect.bg-siteBg:not(:hover),
+.btn-rect[class*="bg-siteBg"]:not(:hover),
+a.btn-rect[class*="bg-siteBg"]:not(:hover),
+.btn-rect.bg-palettePlatinum:not(:hover),
+a.btn-rect.bg-palettePlatinum:not(:hover) {
+  color: #111111 !important;
+}
+
+/* Genel sitede paragraf ve metinlerde bold (kalınlık) belirgin olsun */
+b, strong, .font-bold {
+  font-weight: 700 !important;
+}
+p b, p strong, .prose b, .prose strong, span b, span strong, li b, li strong {
+  font-weight: 700 !important;
+}
+
+/* Akordeon alanları başlık boyutu değişkeni */
+.accordion-title-var {
+  font-size: var(--accordion-title-size, 22px) !important;
+}
+@media (max-width: 767px) {
+  .accordion-title-var {
+    font-size: var(--accordion-title-mobile-size, 18px) !important;
+  }
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-brand-accent);
+  outline-offset: 2px;
+}
+
+/* Bütün Hero Kutusunu Tıklanabilir Kılan Stretched-Link Katmanı */
+.hero-card {
+  position: relative;
+}
+
+.hero-card a.hero-card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero-card button {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-card a.hero-card-link:focus-visible {
+  outline: none;
+}
+
+.hero-card:has(a.hero-card-link:focus-visible) {
+  outline: 2px solid var(--color-brand-accent);
+  outline-offset: -2px;
+}
+
+.hero-card:has(a.hero-card-link:hover) a.hero-card-link {
+  color: #ffffff;
+}
+
+/* Sticky Stacking Cards (cx8.html Projeler Bölümü — Yalnızca Masaüstünde Sticky) */
+.stack-card {
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: none !important;
+}
+
+@media (min-width: 1024px) {
+  .stack-card {
+    position: sticky;
+  }
+  .stack-card-1 {
+    top: 100px;
+    z-index: 10;
+  }
+  .stack-card-2 {
+    top: 130px;
+    z-index: 20;
+  }
+  .stack-card-3 {
+    top: 160px;
+    z-index: 30;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-site-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dust-grey);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent);
+}

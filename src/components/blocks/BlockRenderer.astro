@@ -1,0 +1,81 @@
+---
+import HeroBlock from './HeroBlock.astro';
+import ManifestoBlock from './ManifestoBlock.astro';
+import LogoMarqueeBlock from './LogoMarqueeBlock.astro';
+import AccordionBlock from './AccordionBlock.astro';
+import FeatureCardsBlock from './FeatureCardsBlock.astro';
+import ProblemSliderBlock from './ProblemSliderBlock.astro';
+import ProjectShowcaseBlock from './ProjectShowcaseBlock.astro';
+import BlogShowcaseBlock from './BlogShowcaseBlock.astro';
+import CTABannerBlock from './CTABannerBlock.astro';
+import ContactFormBlock from './ContactFormBlock.astro';
+import FAQBlock from './FAQBlock.astro';
+import CapabilitiesGridBlock from './CapabilitiesGridBlock.astro';
+import MaturityTestBlock from './MaturityTestBlock.astro';
+import ApproachManifestoTabsBlock from './ApproachManifestoTabsBlock.astro';
+import ShiftsComparisonBlock from './ShiftsComparisonBlock.astro';
+import SolutionsListBlock from './SolutionsListBlock.astro';
+import ProjectsListBlock from './ProjectsListBlock.astro';
+import ArticlesListBlock from './ArticlesListBlock.astro';
+import ContactHeroBlock from './ContactHeroBlock.astro';
+import NotFoundBlock from './NotFoundBlock.astro';
+import ImageTextBlock from './ImageTextBlock.astro';
+import RichTextBlock from './RichTextBlock.astro';
+import StatCounterBlock from './StatCounterBlock.astro';
+import SpacerBlock from './SpacerBlock.astro';
+import GalleryBlock from './GalleryBlock.astro';
+import TeamGridBlock from './TeamGridBlock.astro';
+
+interface BlockItem {
+  id?: string;
+  type: string;
+  visible?: boolean;
+  data?: any;
+  style?: any;
+}
+
+interface Props {
+  blocks: BlockItem[];
+}
+
+const { blocks = [] } = Astro.props;
+
+const blockRegistry: Record<string, any> = {
+  hero: HeroBlock,
+  manifesto: ManifestoBlock,
+  logoMarquee: LogoMarqueeBlock,
+  accordion: AccordionBlock,
+  featureCards: FeatureCardsBlock,
+  problemSlider: ProblemSliderBlock,
+  projectShowcase: ProjectShowcaseBlock,
+  blogShowcase: BlogShowcaseBlock,
+  ctaBanner: CTABannerBlock,
+  contactForm: ContactFormBlock,
+  faq: FAQBlock,
+  capabilitiesGrid: CapabilitiesGridBlock,
+  maturityTest: MaturityTestBlock,
+  approachManifesto: ApproachManifestoTabsBlock,
+  shiftsComparison: ShiftsComparisonBlock,
+  solutionsList: SolutionsListBlock,
+  projectsList: ProjectsListBlock,
+  articlesList: ArticlesListBlock,
+  contactHero: ContactHeroBlock,
+  notFound: NotFoundBlock,
+  imageText: ImageTextBlock,
+  richText: RichTextBlock,
+  statCounter: StatCounterBlock,
+  spacer: SpacerBlock,
+  gallery: GalleryBlock,
+  teamGrid: TeamGridBlock,
+};
+---
+
+{blocks.map((block) => {
+  if (block.visible === false) return null;
+  const Component = blockRegistry[block.type];
+  if (!Component) {
+    console.warn(`[BlockRenderer] Unknown block type: "${block.type}"`);
+    return null;
+  }
+  return <Component id={block.id} data={block.data || {}} style={block.style || {}} />;
+})}

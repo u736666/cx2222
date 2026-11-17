@@ -1,0 +1,18 @@
+---
+import ContactSection from '../ContactSection.astro';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const sectionId = id || styles.sectionId || 'contact-form-block';
+---
+
+<div id={sectionId} class={styles.sectionClasses} style={styles.inlineStyleString}>
+  <ContactSection />
+</div>

@@ -1,0 +1,120 @@
+---
+import { resolvePaletteColor, formatSizePx, formatRich } from '../lib/content';
+
+interface Props {
+  text?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'div' | 'span';
+  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'lead' | 'body' | 'small' | 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | 'custom' | string;
+  customSize?: string | number;
+  customSizeMobile?: string;
+  customSizeDesktop?: string;
+  weight?: string | number;
+  color?: string;
+  customColor?: string;
+  align?: 'left' | 'center' | 'right';
+  class?: string;
+  id?: string;
+  style?: string;
+}
+
+const {
+  text,
+  as: Tag = 'h2',
+  size = 'h2',
+  customSize,
+  customSizeMobile,
+  customSizeDesktop,
+  weight,
+  color,
+  customColor,
+  align,
+  class: className = '',
+  id,
+  style: userInlineStyle = '',
+  customStyle = '',
+} = Astro.props;
+
+const passedStyle = customStyle || userInlineStyle;
+
+// Size mapping to typography classes from theme.json / global.css
+const sizeClassMap: Record<string, string> = {
+  h1: 'typo-h1',
+  h2: 'typo-h2',
+  h3: 'typo-h3',
+  h4: 'typo-h4',
+  lead: 'typo-lead',
+  body: 'typo-body',
+  small: 'typo-small',
+  xs: 'text-xs',
+  sm: 'text-sm',
+  base: 'text-base',
+  lg: 'text-lg',
+  xl: 'text-xl',
+  '2xl': 'text-2xl',
+  '3xl': 'text-3xl',
+};
+
+const resolvedSizeClass = (size !== 'custom' && sizeClassMap[size]) ? sizeClassMap[size] : (size.startsWith('typo-') ? size : (size === 'custom' ? '' : sizeClassMap.h2));
+
+const weightClassMap: Record<string, string> = {
+  light: 'font-light',
+  '300': 'font-light',
+  normal: 'font-normal',
+  '400': 'font-normal',
+  medium: 'font-medium',
+  '500': 'font-medium',
+  semibold: 'font-semibold',
+  '600': 'font-semibold',
+  bold: 'font-bold',
+  '700': 'font-bold',
+  extrabold: 'font-extrabold',
+  '800': 'font-extrabold',
+};
+
+const resolvedWeightClass = weight ? (weightClassMap[String(weight)] || '') : '';
+
+const alignClassMap: Record<string, string> = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right',
+};
+
+const resolvedAlignClass = align ? (alignClassMap[align] || '') : '';
+
+// Distinguish Tailwind classes vs palette tokens/hex colors
+const isTailwindColor = color && (color.startsWith('text-') || color.includes(':text-'));
+const resolvedColorClass = isTailwindColor ? color : '';
+
+const classes = [
+  resolvedSizeClass,
+  resolvedWeightClass,
+  resolvedAlignClass,
+  resolvedColorClass,
+  className
+].filter(Boolean).join(' ');
+
+// Build inline styles for custom font-size or custom color
+const inlineStyles: string[] = [];
+if (passedStyle) inlineStyles.push(passedStyle);
+
+const resolvedFinalColor = resolvePaletteColor(customColor) || (!isTailwindColor ? resolvePaletteColor(color) : '');
+if (resolvedFinalColor) inlineStyles.push(`color: ${resolvedFinalColor} !important`);
+
+if (customSize) {
+  inlineStyles.push(`font-size: ${formatSizePx(customSize)} !important`);
+} else if (size === 'custom' && (customSizeMobile || customSizeDesktop)) {
+  inlineStyles.push(`font-size: var(--heading-size-desktop, var(--heading-size-mobile)) !important`);
+}
+if (customSizeMobile) inlineStyles.push(`--heading-size-mobile: ${formatSizePx(customSizeMobile)}`);
+if (customSizeDesktop) inlineStyles.push(`--heading-size-desktop: ${formatSizePx(customSizeDesktop)}`);
+
+const finalStyle = inlineStyles.join('; ');
+const formattedText = formatRich(text);
+const hasContent = (text !== undefined && text !== null && String(text).trim() !== '') || Astro.slots.has('default');
+---
+
+{hasContent && (
+  <Tag id={id} class={classes} style={finalStyle || undefined}>
+    {formattedText ? <Fragment set:html={formattedText} /> : <slot />}
+  </Tag>
+)}

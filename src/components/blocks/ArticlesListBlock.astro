@@ -1,0 +1,57 @@
+---
+import Heading from '../Heading.astro';
+import { getAllPosts, getBarClass, formatRich } from '../../lib/content';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const articles = getAllPosts();
+const sectionId = id || styles.sectionId || 'articles-list';
+---
+
+<section id={sectionId} class={`section-pad-150 bg-palettePlatinum/50 text-paletteRichBlack px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class={`${styles.containerClass} grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch`}>
+    {articles.map((art: any) => (
+      <a 
+        href={`/blog/${art.slug}`}
+        class="flex flex-col md:flex-row items-stretch group cursor-pointer bg-siteBg transition-all overflow-hidden md:min-h-[260px]"
+      >
+        <div class={`h-3 w-full md:h-auto md:w-5 flex-shrink-0 transition-colors ${getBarClass(art.barStyle)}`}></div>
+
+        <div class="p-6 sm:p-8 flex-grow min-w-0 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 typo-small text-paletteRichBlack/50 tracking-wider font-medium">
+              <span set:html={formatRich(art.category)}></span>
+              <span>•</span>
+              <span set:html={formatRich(art.readTime)}></span>
+            </div>
+            <Heading as="h2" size="h3" text={art.title} class="text-paletteRichBlack group-hover:text-brandAccent transition-colors" />
+            <p class="typo-body text-paletteRichBlack/70 font-light" set:html={formatRich(art.desc)}>
+            </p>
+          </div>
+
+          <div class="pt-4 mt-auto flex items-center justify-between">
+            <span class="font-semibold text-paletteRichBlack group-hover:text-brandAccent transition-colors inline-flex items-center space-x-1.5">
+              <span set:html={formatRich(data.readMoreText || 'Devamını Oku →')}></span>
+            </span>
+            <span class="typo-small text-paletteRichBlack/40">{art.date}</span>
+          </div>
+        </div>
+
+        <div class="w-full h-52 md:w-44 md:h-auto md:self-stretch flex-shrink-0 overflow-hidden relative p-0 m-0 bg-neutral-100">
+          <img 
+            src={art.image} 
+            alt={art.imageAlt || art.title} 
+            class="w-full h-full object-cover object-center grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

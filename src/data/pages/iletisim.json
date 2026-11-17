@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "İletişim",
+    "slug": "iletisim",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "İletişim & Keşif Görüşmesi | cx2222",
+    "description": "Müşteri deneyiminizi birlikte dönüştürelim. 30 dakikalık ücretsiz strateji keşif seansı için bizimle iletişime geçin. Bizimle iletişime geçin.",
+    "schemaType": "ContactPage",
+    "keywords": "cx2222 iletişim, CX keşif görüşmesi, CX danışmanlığı",
+    "aiSummary": "30 dakikalık ücretsiz CX strateji keşif seansı için cx2222 ekibiyle iletişime geçin.",
+    "aboutTopics": [
+      "CX Danışmanlık İletişimi",
+      "Keşif Görüşmesi"
+    ],
+    "keyTakeaways": [
+      "24 saat içinde dönüş ve isteğe bağlı NDA güvencesi"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "contact-hero",
+      "type": "contactHero",
+      "visible": true,
+      "data": {
+        "eyebrow": "",
+        "title": "",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "contact-form",
+      "type": "contactForm",
+      "visible": true,
+      "data": {},
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "İletişim Süreci Hakkında Sıkça Sorulanlar",
+        "items": [
+          {
+            "question": "İlk keşif görüşmesinde neler konuşulur?",
+            "answer": "30 dakikalık ilk görüşmede kurumunuzun mevcut müşteri temas noktalarını, veri akışını ve en çok zorlandığınız 1-2 kritik tıkanma noktasını masaya yatırıyoruz. Size doğrudan uygulanabilir stratejik öneriler ve olası bir iş birliği için ilk yol haritasını sunuyoruz."
+          },
+          {
+            "question": "Gizlilik Sözleşmesi (NDA) imzalıyor musunuz?",
+            "answer": "Evet. Kurumsal müşterilerimizin tüm müşteri verileri, iç süreçleri ve stratejik hedefleri en sıkı gizlilik ilkelerimiz altındadır. Talep ettiğiniz takdirde ilk görüşme öncesinde karşılıklı NDA imzalıyoruz."
+          },
+          {
+            "question": "Projeleriniz yalnızca Türkiye merkezli mi yoksa global ekiplerle de çalışıyor musunuz?",
+            "answer": "Hem Türkiye'nin öncü kurumlarına hem de Avrupa ve Orta Doğu'daki global markalara iki dilde (Türkçe ve İngilizce) hizmet veriyoruz."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    }
+  ]
+}

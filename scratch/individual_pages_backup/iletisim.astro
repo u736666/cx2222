@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { getPages, getSite } from '../lib/content';
+
+const { iletisim: data } = getPages();
+const site = getSite();
+const HeroTag = (['h1', 'h2', 'h3', 'h4'].includes(data.hero?.headingTag || '') ? data.hero.headingTag : 'h1') as 'h1' | 'h2' | 'h3' | 'h4';
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": data.seo?.schemaType || "ContactPage",
+  "name": data.seo?.headline || data.seo?.title || "cx2222 İletişim & Keşif Görüşmesi",
+  "description": data.seo?.schemaDesc || data.seo?.description || "cx2222 İstanbul ve Londra ofisleri iletişim bilgileri ve keşif seansı randevu formu.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": site.brand.name,
+    "email": site.brand.email,
+    "address": site.brand.offices.map((o) => ({
+      "@type": "PostalAddress",
+      "addressLocality": o.city,
+      "streetAddress": o.streetAddress,
+      "addressCountry": o.countryCode
+    }))
+  }
+};
+---
+
+<Layout
+  title={data.seo.title}
+  description={data.seo.description}
+  seo={data.seo}
+  schema={contactSchema}
+  breadcrumbs={[
+    { name: data.seo.breadcrumbName || "İletişim", url: "/iletisim" }
+  ]}
+>
+  
+  <section class="bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 py-24">
+    <div class="max-w-custom mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-8 space-y-6">
+        <span class="typo-small font-semibold tracking-widest text-paletteRichBlack/60 block">{data.hero.eyebrow}</span>
+        <HeroTag class="typo-h1 text-paletteRichBlack">
+          {data.hero.title}
+        </HeroTag>
+      </div>
+      <div class="lg:col-span-4 grid grid-cols-2 gap-6 typo-small font-light text-paletteRichBlack/80">
+        {site.brand.offices.map((office) => (
+          <div>
+            <span class="typo-small font-semibold tracking-widest text-paletteRichBlack/40 block mb-1">{office.countryLabel}</span>
+            <p class="font-normal text-paletteRichBlack">{office.city} • {office.district}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Form matching cx2222 tasarım referansı exact contact styling -->
+  <ContactSection />
+
+  <div class="pt-20">
+    <FAQSection items={data.faqs} title={data.faqTitle} />
+  </div>
+
+</Layout>

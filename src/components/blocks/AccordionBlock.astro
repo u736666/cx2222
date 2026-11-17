@@ -1,0 +1,132 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+import { resolveTextStyle, formatRich, resolvePaletteColor } from '../../lib/content';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const items = Array.isArray(data.items) ? data.items : [];
+const sectionId = id || styles.sectionId || 'roles';
+
+const rawSurface = data.surface || style?.surface || data.bgColor || style?.bgColor;
+const resolvedBg = resolvePaletteColor(rawSurface);
+const isDarkSection = ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(rawSurface || '').toLowerCase()) || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(resolvedBg || '').toLowerCase());
+const sectionTextClass = isDarkSection ? 'text-white' : 'text-paletteRichBlack';
+let sectionInlineStyle = styles.inlineStyleString || '';
+if (resolvedBg) {
+  sectionInlineStyle = (sectionInlineStyle ? sectionInlineStyle + '; ' : '') + `background-color: ${resolvedBg} !important;`;
+}
+
+const titleStyle = resolveTextStyle(data, 'title');
+const subtitleStyle = resolveTextStyle(data, 'subtitle');
+---
+
+<section id={sectionId} class={`section-pad-150 relative w-full ${resolvedBg ? '' : (isDarkSection ? 'bg-paletteRichBlack' : 'bg-siteBg')} ${sectionTextClass} px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={sectionInlineStyle || undefined}>
+  {data.bgImage && (
+    <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <img src={data.bgImage} alt={data.bgAlt || data.title} class="w-full h-full object-cover object-center opacity-5 filter grayscale" />
+    </div>
+  )}
+
+  <div class={`relative z-10 ${styles.containerClass} w-full`}>
+    <div class="grid-standard items-start">
+      <div class="col-span-12 lg:col-span-6 space-y-6 pr-0 lg:pr-10">
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class={sectionTextClass} customStyle={titleStyle} />
+        {data.subtitle && (
+          <p class={`typo-body ${isDarkSection ? 'text-white/70' : 'text-paletteRichBlack/70'} font-light italic`} style={subtitleStyle || undefined} set:html={formatRich(data.subtitle)}>
+          </p>
+        )}
+        {(data.primaryLinkText || data.secondaryLinkText) && (
+          <div class="pt-4 flex flex-wrap gap-6">
+            {data.primaryLinkText && (
+              <a href={data.primaryLinkHref || '/neden-simdi'} class="btn-rect text-brandAccent hover:underline font-medium">
+                <span set:html={formatRich(data.primaryLinkText)}></span>
+              </a>
+            )}
+            {data.secondaryLinkText && (
+              <a href={data.secondaryLinkHref || '/cozumler'} class={`btn-rect ${isDarkSection ? 'text-white hover:text-brandAccent' : 'text-paletteRichBlack hover:text-brandAccent'} font-medium`}>
+                <span set:html={formatRich(data.secondaryLinkText)}></span>
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+
+      <div class="col-span-12 lg:col-span-6 space-y-[2px]">
+        {items.map((item: any, idx: number) => (
+          <div class={`accordion-card p-6 sm:p-8 cursor-pointer ${idx === 0 ? 'bg-paletteRichBlack text-white' : 'bg-paletteDustGrey text-paletteRichBlack'}`} data-card={idx}>
+            <div class="flex items-center justify-between gap-4">
+              <Heading as={item.headingTag || item.titleTag || 'h3'} customSize={item.headingSize || item.titleSize} color={item.headingColor || item.titleColor} size="h3" text={item.title} class={`card-title accordion-title-var min-w-0 ${idx === 0 ? 'text-white' : 'text-paletteRichBlack'}`} />
+              <button type="button" class={`card-icon-btn w-9 h-9 flex-shrink-0 flex items-center justify-center text-base ${idx === 0 ? 'bg-white/10 text-white' : 'bg-paletteRichBlack/10 text-paletteRichBlack'}`}>
+                {idx === 0 ? '−' : '+'}
+              </button>
+            </div>
+            <div class={`card-content mt-4 pt-4 space-y-3 ${idx === 0 ? 'block text-white/80' : 'hidden text-paletteRichBlack/90'}`}>
+              <p class="typo-body font-light" style={resolveTextStyle(item, 'body') || resolveTextStyle(item, 'desc') || undefined} set:html={formatRich(item.body || item.desc)}></p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.accordion-card');
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const isCurrentActive = card.classList.contains('bg-paletteRichBlack');
+        
+        cards.forEach((c) => {
+          c.classList.remove('bg-paletteRichBlack', 'text-white');
+          c.classList.add('bg-paletteDustGrey', 'text-paletteRichBlack');
+          const title = c.querySelector('.card-title');
+          if (title) {
+            title.classList.remove('text-white');
+            title.classList.add('text-paletteRichBlack');
+          }
+          const btn = c.querySelector('.card-icon-btn');
+          if (btn) {
+            btn.classList.remove('bg-white/10', 'text-white');
+            btn.classList.add('bg-paletteRichBlack/10', 'text-paletteRichBlack');
+            btn.textContent = '+';
+          }
+          const content = c.querySelector('.card-content');
+          if (content) {
+            content.classList.remove('block', 'text-white/80');
+            content.classList.add('hidden', 'text-paletteRichBlack/90');
+          }
+        });
+
+        if (!isCurrentActive) {
+          card.classList.add('bg-paletteRichBlack', 'text-white');
+          card.classList.remove('bg-paletteDustGrey', 'text-paletteRichBlack');
+          const title = card.querySelector('.card-title');
+          if (title) {
+            title.classList.add('text-white');
+            title.classList.remove('text-paletteRichBlack');
+          }
+          const btn = card.querySelector('.card-icon-btn');
+          if (btn) {
+            btn.classList.add('bg-white/10', 'text-white');
+            btn.classList.remove('bg-paletteRichBlack/10', 'text-paletteRichBlack');
+            btn.textContent = '−';
+          }
+          const content = card.querySelector('.card-content');
+          if (content) {
+            content.classList.add('block', 'text-white/80');
+            content.classList.remove('hidden', 'text-paletteRichBlack/90');
+          }
+        }
+      });
+    });
+  });
+</script>

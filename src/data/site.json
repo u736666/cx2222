@@ -1,0 +1,395 @@
+{
+  "brand": {
+    "name": "cxfolks",
+    "prefix": "cx",
+    "suffix": "folks",
+    "logoImage": "",
+    "siteUrl": "https://cxfolks.vercel.app",
+    "defaultTitle": "cxfolks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
+    "defaultDescription": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
+    "orgDescription": "Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi Danışmanlığı",
+    "defaultOgImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+    "email": "hello@example.com",
+    "officesSummary": "",
+    "offices": [],
+    "social": [
+      {
+        "label": "LinkedIn ↗",
+        "url": "https://linkedin.com",
+        "schemaUrl": "https://www.linkedin.com/company/cxfolks"
+      },
+      {
+        "label": "Instagram ↗",
+        "url": "https://instagram.com",
+        "schemaUrl": "https://www.instagram.com/cxfolks"
+      }
+    ],
+    "noindex": false
+  },
+  "header": {
+    "showHeader": true,
+    "sticky": true,
+    "brandHref": "/",
+    "showCtaButton": true,
+    "showMobileExtraLink": true,
+    "showMobileCta": true,
+    "mobileCtaHref": "/iletisim",
+    "navLinks": [
+      {
+        "label": "Çözümler",
+        "href": "/cozumler",
+        "megaId": "mega-cozumler"
+      },
+      {
+        "label": "Projeler",
+        "href": "/projeler",
+        "megaId": "mega-projeler"
+      },
+      {
+        "label": "Bizi Tanıyın",
+        "href": "/yaklasimimiz",
+        "megaId": "mega-hakkimizda",
+        "openInNewTab": false
+      }
+    ],
+    "ctaLabel": "Görüşelim",
+    "ctaHref": "/iletisim",
+    "mobileExtraLink": {
+      "label": "Maturity Testi",
+      "href": "/cozumler/cx-maturity-testi"
+    },
+    "mobileCtaLabel": "Görüşelim →"
+  },
+  "megaMenus": [
+    {
+      "id": "mega-hakkimizda",
+      "label": "Hakkımızda Mega Menü",
+      "title": "Dönüşüm bir proje değil, yaşayan bir yolculuktur",
+      "desc": "Yapay zekanın hızını insanın derin sezgisiyle birleştiriyor; kurum kültüründen dijital temas noktalarına kadar kalıcı değer üretiyoruz.",
+      "ctaText": "Görüşme Talep Edin →",
+      "ctaHref": "/iletisim",
+      "showFooterBar": true,
+      "items": [
+        {
+          "title": "Yaklaşımımız",
+          "desc": "Kısa açıklama",
+          "href": "/yaklasimimiz",
+          "image": "/images/uploads/edited-edited-mwdmc5fq.jpg",
+          "alt": "Kart Görseli"
+        },
+        {
+          "title": "Ekibimiz",
+          "desc": "Kısa açıklama",
+          "href": "/ekibimiz",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+          "alt": "Kart Görseli"
+        },
+        {
+          "title": "İnsan Odaklılık",
+          "desc": "Çalışan ve müşterinin hissettiği gerçek duyguları hizalayan stratejik rehberlik.",
+          "href": "/yaklasimimiz#insan-odaklilik",
+          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
+          "alt": "İnsan Odaklılık"
+        },
+        {
+          "title": "cx2222 Northstar",
+          "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
+          "href": "/yaklasimimiz#northstar-cx",
+          "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80",
+          "alt": "cx2222 Northstar"
+        },
+        {
+          "title": "Proaktif Empati",
+          "desc": "Satış yerine destek sunan, müşterinin stres sinyallerini algılayan sistem kurgusu.",
+          "href": "/yaklasimimiz#proaktif-empati",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=500&q=80",
+          "alt": "Proaktif Empati"
+        },
+        {
+          "title": "Kalıcı Kültür",
+          "desc": "Sadece rapor üretmeyen, kurum içine nüfuz eden sürdürülebilir çalışma modelleri.",
+          "href": "/yaklasimimiz#kalici-kultur",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80",
+          "alt": "Kalıcı Kültür"
+        },
+        {
+          "title": "Blog",
+          "desc": "Kısa açıklama",
+          "href": "/blog",
+          "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80",
+          "alt": "Kart Görseli"
+        }
+      ]
+    },
+    {
+      "id": "mega-cozumler",
+      "label": "Çözümler Mega Menü",
+      "title": "Uçtan uca müşteri deneyimi ve yapay zeka araç setimiz",
+      "desc": "Veriyi aksiyona dönüştüren algoritmalar, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleri",
+      "ctaText": "Tüm Çözümler →",
+      "ctaHref": "/cozumler",
+      "showFooterBar": false,
+      "items": [
+        {
+          "title": "AI Destekli CX",
+          "desc": "VOC kurulumu, kapalı döngü mekanizmaları, kök neden ve anlık duygu analizleri.",
+          "href": "/cozumler/ai-destekli-cx",
+          "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+          "alt": "AI Destekli CX"
+        },
+        {
+          "title": "Deneyim Tasarımı",
+          "desc": "Müşteri yolculuk haritaları, derin saha araştırmaları ve prototipleme oturumları.",
+          "href": "/cozumler/deneyim-tasarimi",
+          "image": "/images/uploads/edited-edited-mwdpsi6o.jpg",
+          "alt": "Deneyim Tasarımı"
+        },
+        {
+          "title": "cx2222 Akademi",
+          "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
+          "href": "/cozumler/akademi",
+          "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80",
+          "alt": "cx2222 Akademi"
+        },
+        {
+          "title": "Maturity Testi",
+          "desc": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini ölçen teşhis sistemi.",
+          "href": "/cozumler/cx-maturity-testi",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80",
+          "alt": "Maturity Testi"
+        }
+      ]
+    },
+    {
+      "id": "mega-neden",
+      "label": "Neden Şimdi Mega Menü",
+      "title": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor",
+      "desc": "Beklentiler saniyelerle ölçülüyor; reaktif destek veren şirketler yerini anında proaktif çözüm sunanlara bırakıyor",
+      "ctaText": "Dönüşümü İncele →",
+      "ctaHref": "/neden-simdi",
+      "showFooterBar": false,
+      "items": [
+        {
+          "title": "Sesi Eyleme Dök",
+          "desc": "Geri bildirimleri raporlarda bekletmek yerine anlık operasyonel hamleye çevirin.",
+          "href": "/neden-simdi#sesi-eyleme-dok",
+          "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80",
+          "alt": "Sesi Eyleme Dök"
+        },
+        {
+          "title": "Anında Onar",
+          "desc": "Yolculuktaki kırılma anlarını gerçek zamanlı tespit edip müşteri kaybını durdurun.",
+          "href": "/neden-simdi#aninda-onar",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80",
+          "alt": "Anında Onar"
+        },
+        {
+          "title": "Önceden Gör",
+          "desc": "Müşteri henüz şikayet etmeden stres paternlerini yakalayan proaktif empati.",
+          "href": "/neden-simdi#onceden-gor",
+          "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80",
+          "alt": "Önceden Gör"
+        },
+        {
+          "title": "Rutini Otomatikle",
+          "desc": "Ekiplerinizi sıkıcı tekrarlardan kurtarıp gerçek insan dokunuşuna odaklayın.",
+          "href": "/neden-simdi#rutini-otomatikle",
+          "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80",
+          "alt": "Rutini Otomatikle"
+        }
+      ]
+    },
+    {
+      "id": "mega-projeler",
+      "label": "Projeler Mega Menü",
+      "title": "Farklı sektörlerde sahada kanıtlanmış başarı hikayeleri",
+      "desc": "Havalimanı operasyonlarından telekoma, bankacılıktan otomotive somut iş sonuçları ürettik",
+      "ctaText": "Tüm Projeler →",
+      "ctaHref": "/projeler",
+      "showFooterBar": false,
+      "items": [
+        {
+          "title": "İstanbul Havalimanı",
+          "desc": "30.000 kişilik eğitim ve 1 yılda %78 yolcu memnuniyet artışı ile küresel standart.",
+          "href": "/projeler/istanbul-havalimani",
+          "image": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=500&q=80",
+          "alt": "İstanbul Havalimanı"
+        },
+        {
+          "title": "Vodafone Roaming",
+          "desc": "Seyahatte güven yaratan yeni nesil deneyim: %42 iyileşme, %60 şikayet düşüşü.",
+          "href": "/projeler/vodafone-roaming",
+          "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.png",
+          "alt": "Vodafone Roaming"
+        },
+        {
+          "title": "FIAT Sürücü Dostu",
+          "desc": "13 yıllık ortaklık: Bayi şikayetlerinde %60 azalma ve güçlü bölgesel satış grafiği.",
+          "href": "/projeler/fiat-surucu-dostu",
+          "image": "/images/uploads/fiat-sd-mwdpvp43.jpg",
+          "alt": "FIAT Sürücü Dostu"
+        },
+        {
+          "title": "Akbank Değerli Anlar",
+          "desc": "Satış değil destek odaklı proaktif empati: Hastane ödemesi sonrası geçmiş olsun araması.",
+          "href": "/projeler/akbank-degerli-anlar",
+          "image": "/images/uploads/akbank-01-mwdpwe3x.png",
+          "alt": "Akbank Değerli Anlar"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "showFooter": true,
+    "showCopyright": true,
+    "copyrightPrefix": "© ",
+    "showYear": true,
+    "copyrightSuffix": "cx2222. Tüm hakları saklıdır.",
+    "showSocialLinks": false,
+    "showOffices": false,
+    "extraNote": "",
+    "credits": {
+      "show": true,
+      "prefix": "Made by: ",
+      "text": "Ediz Pinar -Studio™",
+      "url": "https://edizpinar.com"
+    },
+    "links": [
+      {
+        "label": "Yaklaşımımız",
+        "href": "/yaklasimimiz"
+      },
+      {
+        "label": "Çözümler",
+        "href": "/cozumler"
+      },
+      {
+        "label": "Projeler",
+        "href": "/projeler"
+      },
+      {
+        "label": "Maturity Testi",
+        "href": "/cozumler/cx-maturity-testi"
+      },
+      {
+        "label": "İletişim",
+        "href": "/iletisim"
+      }
+    ]
+  },
+  "cta": {
+    "showCta": true,
+    "headingTag": "h2",
+    "eyebrow": "Birlikte Başlayalım",
+    "title": "Nereden başlayacağınızı birlikte belirleyelim",
+    "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
+    "primaryLabel": "Görüşme Planlayın →",
+    "primaryHref": "/iletisim",
+    "secondaryLabel": "Maturity Testi →",
+    "secondaryHref": "/cozumler/cx-maturity-testi"
+  },
+  "ctaLibrary": [
+    {
+      "id": "default-consulting",
+      "name": "Genel Danışmanlık & Ön Görüşme CTA",
+      "eyebrow": "Birlikte Başlayalım",
+      "title": "Nereden başlayacağınızı birlikte belirleyelim2",
+      "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
+      "primaryLabel": "Görüşme Planlayın →",
+      "primaryHref": "/iletisim",
+      "secondaryLabel": "Maturity Testi →",
+      "secondaryHref": "/cozumler/cx-maturity-testi",
+      "surface": "richBlack",
+      "bgColor": "",
+      "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+      "headingTag": "h2"
+    },
+    {
+      "id": "academy-training",
+      "name": "Akademi & Kurumsal Eğitim CTA",
+      "eyebrow": "cx2222 Akademi",
+      "title": "Ekibinizin CX Yetkinliklerini Geliştirin2",
+      "desc": "Yapay zeka ve müşteri deneyimi alanında kurumunuza özel tasarlanan eğitim programları ve atölyeler.",
+      "primaryLabel": "Akademi Programını İnceleyin2 →",
+      "primaryHref": "/cozumler/akademi",
+      "secondaryLabel": "İletişime Geçin →",
+      "secondaryHref": "/iletisim",
+      "surface": "platinum",
+      "bgColor": "",
+      "bgImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+      "headingTag": "h2"
+    },
+    {
+      "id": "maturity-test",
+      "name": "Maturity Assessment CTA22",
+      "eyebrow": "Hızlı Değerlendirme",
+      "title": "Kurumunuzun CX Olgunluk Seviyesini Ölçün2",
+      "desc": "5 dakikada tamamlanan ücretsiz test ile yapay zeka ve deneyim odaklı dönüşüm yol haritanızı çıkarın.",
+      "primaryLabel": "Testi Başlatın (Ücretsiz) →",
+      "primaryHref": "/cozumler/cx-maturity-testi",
+      "secondaryLabel": "Detaylı Bilgi Alın →",
+      "secondaryHref": "/iletisim",
+      "surface": "platinum",
+      "bgColor": "",
+      "bgImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+      "headingTag": "h2"
+    }
+  ],
+  "contactSection": {
+    "showSection": true,
+    "showForm": true,
+    "headingTag": "h2",
+    "eyebrow": "",
+    "title": "Nereden başlayacağınızı birlikte belirleyelim",
+    "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
+    "showEmail": true,
+    "showOffices": true,
+    "emailLabel": "E-Posta",
+    "officesLabel": "Ofisler",
+    "nameLabel": "Adınız Soyadınız",
+    "namePlaceholder": "",
+    "nameRequired": true,
+    "emailFieldLabel": "E-posta Adresiniz",
+    "emailPlaceholder": "",
+    "emailRequired": true,
+    "showCompanyField": true,
+    "companyLabel": "Kurum / Şirket",
+    "companyPlaceholder": "",
+    "companyRequired": false,
+    "showTopicField": true,
+    "topicLabel": "İlgilendiğiniz Konu",
+    "showDescField": true,
+    "descLabel": "Açıklama",
+    "descPlaceholder": "",
+    "descRequired": false,
+    "showConsentCheckbox": false,
+    "consentText": "Kişisel verilerimin iletişim amacıyla işlenmesini onaylıyorum.",
+    "submitLabel": "Görüşme Planlayın →",
+    "submittingLabel": "Gönderiliyor...",
+    "successMessage": "✓ Talebiniz başarıyla alındı. 24 saat içinde sizinle iletişime geçeceğiz.",
+    "errorMessage": "Gönderim sırasında bir hata oluştu, lütfen tekrar deneyin.",
+    "formAction": "",
+    "topics": [
+      {
+        "value": "ai",
+        "label": "AI ile Müşteri Deneyimi"
+      },
+      {
+        "value": "tasarim",
+        "label": "İnsan Odaklı Deneyim Tasarımı"
+      },
+      {
+        "value": "akademi",
+        "label": "cx2222 Akademi"
+      },
+      {
+        "value": "maturity",
+        "label": "Maturity Assessment"
+      },
+      {
+        "value": "on-gorusme",
+        "label": "30 Dakikalık Ön Görüşme"
+      }
+    ]
+  }
+}

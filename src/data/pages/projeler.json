@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Projeler",
+    "slug": "projeler",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Vaka Analizleri & Başarı Hikayeleri | cx2222",
+    "description": "Havalimanı operasyonlarından telekoma, bankacılıktan otomotive sahada kanıtlanmış müşteri deneyimi (CX) ve dijital dönüşüm başarı hikayeleri.",
+    "schemaType": "CollectionPage",
+    "keywords": "CX vaka analizleri, müşteri deneyimi projeleri, başarı hikayeleri",
+    "aiSummary": "Havacılık, telekomünikasyon, bankacılık, sigorta ve otomotiv sektörlerinde sahada ölçülmüş müşteri deneyimi vaka analizleri.",
+    "aboutTopics": [
+      "CX Vaka Analizleri",
+      "Sektörel Dönüşüm Hikayeleri"
+    ],
+    "keyTakeaways": [
+      "Ölçülmüş memnuniyet ve şikayet azalış metrikleriyle doğrulanmış projeler"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "",
+        "title": "Farklı sektörlerde sahada kanıtlanmış başarı hikayeleri.2",
+        "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi ve somut iş sonuçları üretti.",
+        "headingTag": "h1",
+        "surface": "brandAccent"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "projects-list",
+      "type": "projectsList",
+      "visible": true,
+      "data": {
+        "cardCtaText": "Vaka Analizini Oku →"
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog & Düşünce Liderliği",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "items": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "visible": true,
+        "selectedCtaId": "default-consulting",
+        "title": "",
+        "desc": ""
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "yeni-proje-mwcl9uhg",
+  "order": 8,
+  "client": "Yeni Marka",
+  "sector": "",
+  "title": "Yeni Müşteri Deneyimi Projesi",
+  "shortTitle": "Yeni Proje",
+  "desc": "Projenin kısa özeti buraya gelecek.",
+  "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80",
+  "imageAlt": "Yeni Proje Görseli",
+  "listStyle": "platinum",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "qerterg",
+    "sdfgsdfgdsfg",
+    "dsfgsdfgsdfg"
+  ],
+  "seo": {
+    "title": "Yeni Proje | cxfolks",
+    "description": "Projenin SEO açıklaması.",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "metrics": [
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Zorluk",
+    "title": "Karşılaşılan Problem",
+    "body": "Detaylı problem tanımı..."
+  },
+  "solution": {
+    "eyebrow": "Çözüm",
+    "title": "Nasıl Çözdük?",
+    "columns": 3,
+    "cards": [
+      {
+        "title": "Adım 1",
+        "body": "Açıklama...",
+        "style": "platinum"
+      },
+      {
+        "title": "Adım 2",
+        "body": "Açıklama...",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Adım 3",
+        "body": "Açıklama...",
+        "style": "brandAccent"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

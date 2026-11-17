@@ -1,0 +1,74 @@
+{
+  "slug": "akbank-degerli-anlar",
+  "order": 6,
+  "client": "Akbank",
+  "sector": "",
+  "title": "Bankacılığı Hayatın Anlamlı Anlarına Taşımak",
+  "desc": "Finansal işlemlerin ötesinde müşterinin duygusal durumunu anlayan proaktif empati sistemi. Satış baskısını kaldırıp desteği merkeze koyduk.",
+  "listDesc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
+  "image": "/images/uploads/akbank-01-mwdpwe3x.png",
+  "imageAlt": "Akbank Değerli Anlar",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "%84 Duygusal Bağ Artışı",
+    "0 Satış Baskısı",
+    "6 Hassas Yaşam Senaryosu"
+  ],
+  "seo": {
+    "title": "Akbank Değerli Anlar Vaka Analizi | cx2222",
+    "description": "İşlem desenlerinden stres sinyallerini algılayan, satış yerine destek sunan proaktif empati sistemi: %84 duygusal bağ artışı.",
+    "headline": "Akbank - Bankacılığı Hayatın Anlamlı Anlarına Taşımak",
+    "schemaDesc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
+    "breadcrumbName": "Akbank Değerli Anlar",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "metrics": [
+    {
+      "value": "%84",
+      "label": "Duygusal Bağ & Güven Artışı"
+    },
+    {
+      "value": "0",
+      "label": "Satış Baskısı"
+    },
+    {
+      "value": "6",
+      "label": "Kritik Yaşam Senaryosu"
+    },
+    {
+      "value": "2.4x",
+      "label": "Uzun Vadeli Müşteri Sadakati"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Çıkış Noktası",
+    "title": "\"Banka Beni Sadece Param Olduğunda ya da Borç Satarken mi Hatırlayacak?\"",
+    "body": "Müşterilerin geleneksel bankalarla ilişkisi çoğu zaman soğuk ve mesafelidir. Özellikle zor anlarda (hastalık, iş kaybı, taşınma) müşteriye otomatik olarak kredi kartı limiti artırma veya sigorta satışı SMS'i atılması, müşteride derin bir yabancılaşma ve öfke yaratır."
+  },
+  "solution": {
+    "eyebrow": "Tasarım & Müdahale",
+    "title": "Hassas Anlarda Satışı Yasaklayan \"Proaktif Empati Protokolü\"",
+    "columns": 3,
+    "cards": [
+      {
+        "title": "Sağlık Harcaması Desteği",
+        "body": "Gece hastane ödemesi sonrası pazarlama SMS'leri durdurulur; temsilci yalnızca 'Geçmiş olsun' için arar ve faizsiz taksit desteği sunar.",
+        "style": "platinum"
+      },
+      {
+        "title": "İlk Maaş & Kariyer Başlangıcı",
+        "body": "Hesabına ilk maaşı yatan genç profesyonele kredi satmak yerine bütçe yönetimi rehberi ve kutlama jesti iletilir.",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Taşınma ve Yeni Ev Stresi",
+        "body": "Nakliye ve tadilat harcamaları yoğunlaşan müşteriye fatura erteleme esnekliği proaktif olarak tanımlanır.",
+        "style": "brandAccent"
+      }
+    ]
+  },
+  "quote": "\"Bankacılığı rakamlardan çıkarıp insanların gerçek duygusal anlarına dokunan bir desteğe dönüştürdüğümüzde, müşterilerimiz markayı gerçek bir dost olarak görmeye başladı.\"",
+  "isSample": true
+}

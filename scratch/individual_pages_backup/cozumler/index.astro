@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import CTASection from '../../components/CTASection.astro';
+import { getPages, getSurfaceStyle } from '../../lib/content';
+
+const { cozumlerIndex: data } = getPages();
+const HeroTag = (['h1', 'h2', 'h3', 'h4'].includes(data.hero?.headingTag || '') ? data.hero.headingTag : 'h1') as 'h1' | 'h2' | 'h3' | 'h4';
+---
+
+<Layout
+  title={data.seo.title}
+  description={data.seo.description}
+  seo={data.seo}
+  breadcrumbs={[
+    { name: data.seo.breadcrumbName || "Çözümler", url: "/cozumler" }
+  ]}
+>
+  
+  <section class="bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 py-24">
+    <div class="max-w-custom mx-auto max-w-4xl space-y-6">
+      <span class="typo-small font-semibold tracking-widest text-paletteRichBlack/60 block">{data.hero.eyebrow}</span>
+      <HeroTag class="typo-h1 text-paletteRichBlack">
+        {data.hero.title}
+      </HeroTag>
+      <p class="typo-lead text-paletteRichBlack/75 font-light max-w-2xl">
+        {data.hero.desc}
+      </p>
+    </div>
+  </section>
+
+  <!-- Solutions Blocks -->
+  <section class="section-pad-150 bg-siteBg px-6 md:px-16">
+    <div class="max-w-custom mx-auto space-y-16">
+      
+      {data.solutions.map((sol, idx) => {
+        const st = getSurfaceStyle(sol.style);
+        return (
+          <div class={`grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden ${st.section}`}>
+            <div class="lg:col-span-5 min-h-[320px] bg-neutral-200 overflow-hidden">
+              <img src={sol.image} alt={sol.title} class="w-full h-full object-cover grayscale contrast-125" />
+            </div>
+            <div class="lg:col-span-7 p-8 sm:p-12 md:p-16 flex flex-col justify-between space-y-8">
+              <div class="space-y-4">
+                <span class={`typo-small font-semibold tracking-widest block ${st.eyebrow}`}>
+                  Çözüm 0{idx + 1}
+                </span>
+                <h2 class="typo-h2 text-current">
+                  {sol.title}
+                </h2>
+                <p class="typo-body font-normal italic opacity-80">
+                  {sol.tagline}
+                </p>
+                <p class="typo-body font-light opacity-80 pt-2">
+                  {sol.desc}
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 typo-small font-light opacity-85">
+                  {sol.bullets.map((b) => (
+                    <p>• {b}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <a 
+                  href={`/cozumler/${sol.slug}`}
+                  class={`btn-rect px-8 py-3.5 font-medium ${st.btn}`}
+                >
+                  Detaylı Metodolojiyi İncele →
+                </a>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+    </div>
+  </section>
+
+  {data.faqs && data.faqs.length > 0 && (
+    <FAQSection items={data.faqs} title={data.faqTitle || 'Çözümler Hakkında Sıkça Sorulanlar'} />
+  )}
+
+  <CTASection />
+
+</Layout>

@@ -1,0 +1,47 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+import { resolveTextStyle, formatRich } from '../../lib/content';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+const sectionId = id || styles.sectionId || 'not-found';
+const descStyle = resolveTextStyle(data, 'desc');
+---
+
+<section id={sectionId} class={`pt-8 md:pt-16 pb-20 md:pb-32 bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class="max-w-custom mx-auto max-w-2xl space-y-6">
+    {data.badge && (
+      <span class="typo-small font-semibold tracking-widest text-brandAccent bg-paletteRichBlack px-3 py-1 inline-block" set:html={formatRich(data.badge)}></span>
+    )}
+    <Heading as={data.headingTag || data.titleTag || 'h1'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h1" text={data.title} class="text-paletteRichBlack" />
+    {data.desc && (
+      <p class="typo-lead text-paletteRichBlack/75 font-light" style={descStyle || undefined} set:html={formatRich(data.desc)}>
+      </p>
+    )}
+    <div class="pt-6 flex flex-wrap items-center gap-4">
+      {data.primaryBtnLabel && (
+        <a 
+          href={data.primaryBtnHref || '/'} 
+          class="btn-rect px-8 py-3.5 bg-paletteRichBlack text-white hover:bg-paletteDeepNavy font-light"
+          set:html={formatRich(data.primaryBtnLabel)}
+        >
+        </a>
+      )}
+      {data.secondaryBtnLabel && (
+        <a 
+          href={data.secondaryBtnHref || '/cozumler'} 
+          class="btn-rect px-6 py-3.5 bg-brandAccent text-paletteRichBlack hover:bg-brandAccentHover font-semibold"
+          set:html={formatRich(data.secondaryBtnLabel)}
+        >
+        </a>
+      )}
+    </div>
+  </div>
+</section>

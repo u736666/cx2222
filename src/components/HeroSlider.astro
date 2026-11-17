@@ -1,0 +1,209 @@
+---
+import { getHome, resolveTextStyle, formatRich } from '../lib/content';
+
+const home = getHome() as any;
+const slides = home.heroSlides || [];
+const s0 = slides[0] || {};
+const HeroTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(s0.headingTag || s0.titleTag || home.heroHeadingTag || '') ? (s0.headingTag || s0.titleTag || home.heroHeadingTag) : 'h1') as any;
+
+const titleInlineStyle = resolveTextStyle(s0, 'title');
+const brandInlineStyle = resolveTextStyle(s0, 'brand');
+const descInlineStyle = resolveTextStyle(s0, 'desc');
+---
+
+<section id="hero" class="relative min-h-[100svh] sm:min-h-screen w-full flex flex-col justify-end overflow-hidden px-6 md:px-16 bg-paletteRichBlack pb-0">
+  
+  <div id="hero-bg-container" class="absolute inset-0 w-full h-full pointer-events-none z-0">
+    {slides.map((s: any, idx: number) => (
+      <img 
+        src={s.image} 
+        alt={s.alt} 
+        id={`hero-bg-${idx}`}
+        class={`hero-bg-img absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-in-out ${idx === 0 ? 'opacity-100' : 'opacity-0'}`}
+      />
+    ))}
+  </div>
+
+  <!-- TOP GRADIENT OVERLAY (Seamless ease-out fade to 100% transparent, no harsh cutoffs or lines) -->
+  <div 
+    class="pointer-events-none absolute top-0 left-0 right-0 h-64 sm:h-80 md:h-96 z-[5]"
+    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.58) 20%, rgba(0, 0, 0, 0.38) 40%, rgba(0, 0, 0, 0.20) 60%, rgba(0, 0, 0, 0.08) 80%, rgba(0, 0, 0, 0.02) 92%, rgba(0, 0, 0, 0) 100%); pointer-events: none;"
+    aria-hidden="true"
+  ></div>
+
+  <!-- HERO KUTUSU (#111111) -->
+  <div class="relative z-10 max-w-custom mx-auto w-full mb-0 pb-0">
+    <div class="grid-standard">
+      <div class="hero-card col-span-12 md:col-span-6 lg:col-span-5 bg-paletteRichBlack text-white rounded-none p-8 md:p-10 md:pb-12 space-y-6 cursor-pointer">
+        <div class="space-y-2">
+          <span id="hero-box-brand" class="typo-h4 tracking-widest font-medium text-brandAccent block" style={brandInlineStyle || undefined} set:html={formatRich(slides[0]?.brand)}>
+          </span>
+          <HeroTag id="hero-box-title" class="typo-h1 text-white" style={titleInlineStyle || undefined} set:html={formatRich(slides[0]?.title)}>
+          </HeroTag>
+          <p id="hero-box-desc" class="typo-body text-white/85 font-light leading-relaxed pt-1" style={descInlineStyle || undefined} set:html={formatRich(slides[0]?.desc)}>
+          </p>
+        </div>
+
+        <div class="pt-4 flex flex-col items-start gap-4 md:flex-row-reverse md:items-center md:justify-between">
+          <div class="flex items-center space-x-1.5" id="hero-dots">
+            {slides.map((_: any, idx: number) => (
+              <button 
+                type="button"
+                class="py-2 cursor-pointer"
+                data-slide={idx}
+                aria-label={`Slayt ${idx + 1}`}
+                aria-pressed={idx === 0 ? 'true' : 'false'}
+              >
+                <span class={`block w-6 h-1 transition-all ${idx === 0 ? 'bg-white' : 'bg-white/25'}`}></span>
+              </button>
+            ))}
+          </div>
+
+          <a id="hero-box-btn" href={slides[0]?.link} class="hero-card-link hyphens-none btn-rect w-max font-medium text-brandAccent hover:text-white transition-colors">
+            <span id="hero-box-cta" set:html={formatRich(slides[0]?.cta)}></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ slides }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!slides || slides.length === 0) return;
+    let currentHeroSlide = 0;
+    let heroTimer = null;
+    const heroBoxBrand = document.getElementById('hero-box-brand');
+    const heroBoxTitle = document.getElementById('hero-box-title');
+    const heroBoxDesc = document.getElementById('hero-box-desc');
+    const heroBoxBtn = document.getElementById('hero-box-btn');
+    const heroBoxCta = document.getElementById('hero-box-cta');
+    const heroDots = document.querySelectorAll('#hero-dots button');
+
+    const cMap = {
+      brandAccent: 'var(--color-brand-accent, #FF7452)',
+      richBlack: 'var(--color-rich-black, #1C1C1C)',
+      deepNavy: 'var(--color-deep-navy, #313638)',
+      white: '#ffffff',
+      muted: '#666666',
+      sandyBrown: 'var(--color-sandy-brown, #F09D51)',
+      platinum: 'var(--color-platinum, #E8E9EB)',
+    };
+
+    const TURKISH_VOWELS = new Set(['a','e','ı','i','o','ö','u','ü','A','E','I','İ','O','Ö','U','Ü']);
+    function syllabifyWord(word) {
+      if (!word || word.includes('&') || word.includes('http') || word.includes('@') || word.includes('/')) return word;
+      const match = word.match(/^([^a-zA-ZçğıöşüÇĞİÖŞÜ]*)([a-zA-ZçğıöşüÇĞİÖŞÜ]+)([^a-zA-ZçğıöşüÇĞİÖŞÜ]*)$/);
+      if (!match) return word;
+      const [, prefix, letters, suffix] = match;
+      if (letters.length < 6) return word;
+      const vIndices = [];
+      for (let i = 0; i < letters.length; i++) {
+        if (TURKISH_VOWELS.has(letters[i])) vIndices.push(i);
+      }
+      if (vIndices.length <= 1) return word;
+      const cuts = [];
+      for (let i = 0; i < vIndices.length - 1; i++) {
+        const v1 = vIndices[i];
+        const v2 = vIndices[i + 1];
+        const consonantCount = v2 - v1 - 1;
+        let cut;
+        if (consonantCount === 0) cut = v1 + 1;
+        else if (consonantCount === 1) cut = v1 + 1;
+        else if (consonantCount === 2) cut = v1 + 2;
+        else if (consonantCount === 3) cut = v1 + 3;
+        else cut = v1 + 2;
+        if (cut >= 2 && letters.length - cut >= 2) cuts.push(cut);
+      }
+      if (cuts.length === 0) return word;
+      let res = '';
+      let prev = 0;
+      for (const c of cuts) {
+        res += letters.slice(prev, c) + '&shy;';
+        prev = c;
+      }
+      res += letters.slice(prev);
+      return prefix + res + suffix;
+    }
+
+    function formatRichClient(text) {
+      if (!text) return '';
+      let str = String(text);
+      str = str.replace(/<(?!\/?(?:b|strong|br|i|em|span|div|p)\b[^>]*>)/gi, '&lt;');
+      str = str.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+      return str.replace(/(<[^>]+>)|([^<\s]+)/g, (match, tag, word) => {
+        if (tag) return tag;
+        return syllabifyWord(word);
+      });
+    }
+
+    function fmtSz(s) {
+      if (!s) return '';
+      const str = String(s).trim();
+      return /^[0-9]+(\.[0-9]+)?$/.test(str) ? str + 'px' : str;
+    }
+
+    function setHeroSlide(idx) {
+      currentHeroSlide = (idx + slides.length) % slides.length;
+
+      for (let i = 0; i < slides.length; i++) {
+        const bgImg = document.getElementById(`hero-bg-${i}`);
+        if (bgImg) {
+          bgImg.classList.toggle('opacity-100', i === currentHeroSlide);
+          bgImg.classList.toggle('opacity-0', i !== currentHeroSlide);
+        }
+      }
+
+      const data = slides[currentHeroSlide] || {};
+      if (heroBoxBrand) {
+        heroBoxBrand.innerHTML = formatRichClient(data.brand || '');
+        const bSz = data.brandSize;
+        heroBoxBrand.style.fontSize = bSz ? fmtSz(bSz) : '';
+        const bClr = data.brandColor;
+        heroBoxBrand.style.color = bClr ? (cMap[bClr] || bClr) : '';
+      }
+      if (heroBoxTitle) {
+        heroBoxTitle.innerHTML = formatRichClient(data.title || '');
+        const sz = data.headingSize || data.titleSize;
+        heroBoxTitle.style.fontSize = sz ? fmtSz(sz) : '';
+        const clr = data.headingColor || data.titleColor;
+        heroBoxTitle.style.color = clr ? (cMap[clr] || clr) : '';
+      }
+      if (heroBoxDesc) {
+        heroBoxDesc.innerHTML = formatRichClient(data.desc || '');
+        const dSz = data.descSize;
+        heroBoxDesc.style.fontSize = dSz ? fmtSz(dSz) : '';
+        const dClr = data.descColor;
+        heroBoxDesc.style.color = dClr ? (cMap[dClr] || dClr) : '';
+      }
+      if (heroBoxBtn) heroBoxBtn.setAttribute('href', data.link || '#');
+      if (heroBoxCta) heroBoxCta.innerHTML = formatRichClient(data.cta || '');
+
+      heroDots.forEach((d, i) => {
+        const bar = d.querySelector('span');
+        const isActive = i === currentHeroSlide;
+        d.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        if (bar) {
+          bar.classList.toggle('bg-white', isActive);
+          bar.classList.toggle('bg-white/25', !isActive);
+        }
+      });
+    }
+
+    function startHeroSlider() {
+      if (heroTimer) clearInterval(heroTimer);
+      heroTimer = setInterval(() => {
+        setHeroSlide(currentHeroSlide + 1);
+      }, 5500);
+    }
+
+    heroDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        setHeroSlide(idx);
+        startHeroSlider();
+      });
+    });
+
+    startHeroSlider();
+  });
+</script>

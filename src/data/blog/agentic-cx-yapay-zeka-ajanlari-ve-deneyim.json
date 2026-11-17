@@ -1,0 +1,82 @@
+{
+  "slug": "agentic-cx-yapay-zeka-ajanlari-ve-deneyim",
+  "order": 3,
+  "title": "Agentic AI Çağında Müşteri Hizmetleri: Otonom Ajanlar",
+  "articleTitle": "Agentic AI Çağında Müşteri Hizmetleri: Otonom Ajanlar",
+  "desc": "Sadece SSS cevaplayan eski nesil chatbot'lar öldü. Kendi başına problem çözen yapay zeka ajanlarının anatomisi.",
+  "articleSubtitle": "Geleneksel botlar sadece konuşur; yeni nesil yapay zeka ajanları (Agentic AI) ise aksiyon alır, veritabanına bağlanır ve sorunu uçtan uca çözer.",
+  "category": "Teknoloji & Gelecek",
+  "date": "28 Ekim 2026",
+  "datePublishedIso": "2026-10-28T09:00:00+03:00",
+  "readTime": "7 dk okuma",
+  "barStyle": "brandAccent",
+  "heroStyle": "siteBg",
+  "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+  "heroImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+  "imageAlt": "Agentic AI ve CX",
+  "seo": {
+    "title": "Agentic AI Çağında Müşteri Hizmetleri | cx2222 Blog",
+    "description": "Otonom yapay zeka ajanları ile müşteri deneyimi nasıl dönüşüyor? Statik metin üreten botlardan gerçek aksiyon alan agentic CX sistemlerine.",
+    "headline": "Agentic AI Çağında Müşteri Hizmetleri: Statik Botlardan Otonom Çözüm Ajanlarına",
+    "schemaDesc": "Sadece SSS cevaplayan eski nesil chatbot'lar öldü. Kendi başına problem çözen, iade yapan ve sistemler arası köprü kuran yapay zeka ajanlarının anatomisi.",
+    "breadcrumbName": "Agentic CX",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "1. Sohbet Değil, Görev Tamamlama"
+    },
+    {
+      "type": "paragraph",
+      "text": "2023-2024 kuşağındaki yapay zeka patlaması metin üretmeye odaklıydı. Ancak müşteri deneyiminde kelimeler tek başına karın doyurmaz. Müşteri 'Biletimi iptal et ve paramı iade et' dediğinde, ona iptal kurallarının linkini atan bir bot değil; bilet sistemine API ile bağlanıp işlemi tamamlayan bir ajan ister."
+    },
+    {
+      "type": "heading",
+      "text": "2. Ajanlar Arası İş Birliği (Multi-Agent Swarm)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yeni nesil kurumsal CX mimarilerinde tek bir monolitik bot yerine, özelleşmiş mikro ajanlar birlikte çalışır:"
+    },
+    {
+      "type": "gridCards",
+      "gap": "gap-4",
+      "cards": [
+        {
+          "title": "Dinleme ve Triage Ajanı",
+          "body": "Müşterinin duygu durumunu ve aciliyetini sınıflandırır.",
+          "style": "platinum"
+        },
+        {
+          "title": "Veri ve Politika Ajanı",
+          "body": "Müşterinin hesap geçmişini ve şirket şartlarını doğrular.",
+          "style": "dustGrey"
+        },
+        {
+          "title": "Aksiyon Ajanı",
+          "body": "CRM veya ERP sisteminde iade ve değişiklik oluşturur.",
+          "style": "brandAccent"
+        },
+        {
+          "title": "Empati Denetçisi",
+          "body": "Üretilen cevabın marka ses tonuna uygunluğunu kontrol eder.",
+          "style": "richBlack"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "3. İnsan Liderliği ve Güvenlik Sınırları"
+    },
+    {
+      "type": "paragraph",
+      "text": "Otonom ajanlar harikalar yaratırken güvenlik, halüsinasyon riski ve marka itibarı asla şansa bırakılamaz. cx2222 olarak kurduğumuz sistemlerde 'Human-in-the-Loop' prensibini koruyoruz: Belirli bir bütçenin veya risk eşiğinin üzerindeki tüm kritik kararlar insan onayı gerektirir."
+    }
+  ],
+  "relatedLink": {
+    "label": "AI Destekli CX Çözümümüzü İnceleyin →",
+    "href": "/cozumler/ai-destekli-cx"
+  }
+}

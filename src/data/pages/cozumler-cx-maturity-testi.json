@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "title": "cx2222 Maturity Testi",
+    "slug": "cozumler/cx-maturity-testi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "CX & AI Maturity Testi | cx2222 Kurumsal Teşhis Aracı",
+    "description": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini 3 dakikada ölçün. Güçlü yönlerinizi, kör noktalarınızı ve ilk aksiyon önerilerinizi keşfedin.",
+    "schemaType": "WebPage",
+    "keywords": "cx2222 Maturity Testi, müşteri deneyimi olgunluk ölçümü, AI olgunluk testi",
+    "aiSummary": "Kurumların strateji, veri, AI entegrasyonu, çalışan yetkilendirmesi ve proaktif empati boyutlarında olgunluk seviyesini 3 dakikada ölçen interaktif teşhis aracı.",
+    "aboutTopics": [
+      "CX Olgunluk Değerlendirmesi",
+      "Kurumsal Teşhis",
+      "AI Hazırlık Düzeyi"
+    ],
+    "keyTakeaways": [
+      "5 boyutta anlık olgunluk skoru (Seviye 1–4)",
+      "Özel aksiyon yol haritası"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "Teşhis Sistemi",
+        "title": "CX & Yapay Zeka Olgunluk Testi",
+        "desc": "Kurumunuz müşteri deneyiminde ve yapay zeka entegrasyonunda hangi seviyede? 5 kritik soruyu yanıtlayın, organizasyonunuzun seviyesini ve en büyük kör noktalarını anında görün.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "CX Maturity Assessment",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "maturity-test",
+      "type": "maturityTest",
+      "visible": true,
+      "data": {
+        "questions": [
+          {
+            "category": "1. Veri & VOC Aksiyon Hızı",
+            "title": "Müşterilerinizden gelen geri bildirimler (anket, şikayet, çağrı) operasyonel bir aksiyona ne kadar sürede dönüşüyor?",
+            "options": [
+              {
+                "text": "Aylar sürüyor; veriler dönemsel raporlarda toplanıyor fakat sahaya inmiyor.",
+                "points": 1
+              },
+              {
+                "text": "Haftalık veya aylık toplantılarda inceleniyor; aksiyonlar manuel planlanıyor.",
+                "points": 2
+              },
+              {
+                "text": "Kritik şikayetler 24-48 saat içinde ilgili birime ulaşıyor ve çözülüyor.",
+                "points": 3
+              },
+              {
+                "text": "Yapay zeka ile anında (dakikalar içinde) kök neden tespit edilip kapalı döngü görev atanıyor.",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "category": "2. Ekipler ve Departman Hizalanması",
+            "title": "Pazarlama, Satış, Operasyon ve Müşteri Hizmetleri ekipleriniz nasıl hizalanıyor?",
+            "options": [
+              {
+                "text": "Departmanlar tamamen bağımsız (silo); herkes sadece kendi hedefine odaklı.",
+                "points": 1
+              },
+              {
+                "text": "Bazen ortak toplantılar yapılıyor ama ortak bir CX metriğimiz yok.",
+                "points": 2
+              },
+              {
+                "text": "NPS veya CSAT genel bir hedef olarak takip ediliyor ancak yetki çatışmaları yaşanıyor.",
+                "points": 3
+              },
+              {
+                "text": "Tüm ekipler tek bir 'cx2222 Northstar' vizyonu ve ortak deneyim ilkeleri etrafında çalışıyor.",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "category": "3. Yapay Zeka ve Teknoloji Entegrasyonu",
+            "title": "Müşteri deneyimi operasyonlarınızda yapay zekayı nasıl kullanıyorsunuz?",
+            "options": [
+              {
+                "text": "Henüz yapay zeka kullanmıyoruz veya sadece kural bazlı basit bir SSS botumuz var.",
+                "points": 1
+              },
+              {
+                "text": "Temel chatbot ve raporlama araçlarımız var ancak tahmin veya kök neden analizi yapmıyor.",
+                "points": 2
+              },
+              {
+                "text": "Çağrı özetleme ve duygu analizi araçlarını kısmi olarak pilot aşamasında deniyoruz.",
+                "points": 3
+              },
+              {
+                "text": "Gerçek zamanlı VOC, öngörüsel churn uyarısı ve otonom CX ajanları aktif çalışıyor.",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "category": "4. Ön Hat Çalışan Yetkilendirmesi",
+            "title": "Müşteriyle temas eden temsilcileriniz bir memnuniyetsizlik anında ne kadar inisiyatif alabiliyor?",
+            "options": [
+              {
+                "text": "Sıfır inisiyatif; her karar için yönetici onayı veya form doldurmak şart.",
+                "points": 1
+              },
+              {
+                "text": "Sadece çok katı prosedür şablonları çerçevesinde sınırlı indirim/telafi tanımlayabiliyorlar.",
+                "points": 2
+              },
+              {
+                "text": "Belirli bütçe dahilinde inisiyatif alabiliyorlar ancak süreçler hala bürokratik.",
+                "points": 3
+              },
+              {
+                "text": "Çalışanlarımız müşteriyi mutlu etmek için tam yetkili, prosedür yerine empatiyle karar alabiliyor.",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "category": "5. Proaktif Empati & Öngörü",
+            "title": "Müşterinin yaşayabileceği olası bir soruna ne zaman müdahale ediyorsunuz?",
+            "options": [
+              {
+                "text": "Müşteri şikayet edene kadar hiçbir şeyden haberimiz olmuyor (Tamamen reaktif).",
+                "points": 1
+              },
+              {
+                "text": "Sistemde genel bir arıza olduğunda toplu SMS veya e-posta gönderiyoruz.",
+                "points": 2
+              },
+              {
+                "text": "Müşteri sepeti veya işlemi terk ettiğinde otomatik bir hatırlatma gönderiyoruz.",
+                "points": 3
+              },
+              {
+                "text": "İşlem desenlerindeki stres ve kırılmayı önceden algılayıp müşteri aramadan destek sunuyoruz.",
+                "points": 4
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "maxScore": 8,
+            "title": "Seviye 1: Başlangıç (Geleneksel & Silo Yapı)",
+            "desc": "Kurumunuzda müşteri deneyimi henüz merkezi bir stratejiye bağlanmamış. Veriler raporlarda bekliyor, süreçler departman siloları arasında sıkışmış ve müdahaleler tamamen reaktif.",
+            "recommendations": [
+              "• İlk olarak departmanlar arası ortak bir 'cx2222 Northstar' müşteri metriği belirleyin.",
+              "• Şikayetlerin en yoğun olduğu tek bir temas noktasını seçip kök neden analizi yapın.",
+              "• Ön hat çalışanlarınıza onay gerektirmeyen küçük bir telafi bütçesi tanımlayın."
+            ]
+          },
+          {
+            "maxScore": 13,
+            "title": "Seviye 2: Reaktif Müdahale (Farkındalık Var, Entegrasyon Eksik)",
+            "desc": "Müşteri odaklılığın önemini biliyorsunuz ve temel anketleri yapıyorsunuz; fakat veriler aksiyona dönüşmekte geç kalıyor ve yapay zeka araçları operasyonel süreçlerinize tam nüfuz etmemiş.",
+            "recommendations": [
+              "• Anket sonuçlarını anlık görev kartlarına çeviren bir Kapalı Döngü (Closed-Loop) VOC sistemi kurun.",
+              "• Çağrı kayıtlarını LLM destekli duygu analiziyle işleyerek kök nedenleri otomatik sınıflandırın.",
+              "• Ekipler arasındaki siloları kırmak için LEGO® Serious Play® hizalanma çalıştayı düzenleyin."
+            ]
+          },
+          {
+            "maxScore": 17,
+            "title": "Seviye 3: Proaktif Yönetim (Güçlü Altyapı, Ölçeklenme Gerekiyor)",
+            "desc": "Sektör ortalamasının üzerindesiniz. Ekipleriniz müşteri odaklı çalışıyor ve teknolojiyi etkin kullanıyorsunuz. Şimdi sıra tam otonom yapay zeka ajanları ve öngörüsel empati modellerine geçmekte.",
+            "recommendations": [
+              "• Müşteri kaybını (churn) önceden haber veren makine öğrenimi modellerini devreye alın.",
+              "• Temsilcilerinizin önüne anlık müşteri içgörüsü getiren AI Copilot asistanını entegre edin.",
+              "• Memnun müşterileri marka elçisine çevirecek proaktif jest mekanizmaları kurgulayın."
+            ]
+          },
+          {
+            "maxScore": 99,
+            "title": "Seviye 4: Deneyim Lideri (Öngörüsel & İnsan Odaklı AI)",
+            "desc": "Mükemmel seviye. Kurumunuz yapay zekanın hızı ile insanın şefkatini başarıyla harmanlamış durumda. Müşterileriniz şikayet etmeden önce sorunları çözebilen nadir öncülerdensiniz.",
+            "recommendations": [
+              "• Bu başarıyı global standartta bir vaka analizine ve rekabet avantajına dönüştürün.",
+              "• Ekosisteminizdeki partnerleri ve bayileri de aynı deneyim standardına dahil edin.",
+              "• CX modellerinizi yeni pazarlara ve ürün hatlarına ölçekleyin."
+            ]
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "projects-stacked",
+      "type": "projectShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "İlgili Projeler",
+        "headingTag": "h2",
+        "desc": "",
+        "cardCtaText": "Vaka Analizini Oku →",
+        "allLinkText": "Tüm Projeleri İnceleyin →",
+        "allLinkHref": "/projeler",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog & Düşünce Liderliği",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": []
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "Maturity Testi Hakkında Merak Edilenler",
+        "items": [
+          {
+            "question": "CX & AI Maturity Testi ne kadar sürer ve ücretli midir?",
+            "answer": "Testi tamamlamak yaklaşık 3-4 dakika sürer ve cx2222 tarafından kurumlara tamamen ücretsiz olarak sunulan bir teşhis aracıdır."
+          },
+          {
+            "question": "Sonuçlar ve rapor nasıl iletilir?",
+            "answer": "Soruları tamamladığınız anda ekranda anlık olgunluk seviyeniz (Seviye 1'den Seviye 4'e), güçlü yönleriniz ve en kritik gelişim alanlarınız görselleştirilir."
+          },
+          {
+            "question": "Test sonuçlarını cx2222 ekibiyle birlikte değerlendirebilir miyiz?",
+            "answer": "Evet. Test bitiminde çıkan sonuçları 30 dakikalık ücretsiz bir yönetici strateji seansında cx2222 danışmanlarıyla birebir masaya yatırabilirsiniz."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {},
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

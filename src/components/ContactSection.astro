@@ -1,0 +1,264 @@
+---
+import { getSite, resolveTextStyle, formatRich } from '../lib/content';
+
+interface Props {
+  title?: string;
+  desc?: string;
+}
+
+const site = getSite() as any;
+const cs = site.contactSection || {};
+const showSection = cs.showSection !== false;
+const showForm = cs.showForm !== false;
+const showEmail = cs.showEmail !== false;
+const showOffices = cs.showOffices !== false;
+const showCompanyField = cs.showCompanyField !== false;
+const showTopicField = cs.showTopicField !== false;
+const showDescField = cs.showDescField !== false;
+const showConsentCheckbox = cs.showConsentCheckbox === true;
+const nameRequired = cs.nameRequired !== false;
+const emailRequired = cs.emailRequired !== false;
+const companyRequired = cs.companyRequired === true;
+const descRequired = cs.descRequired === true;
+const formAction = cs.formAction || '';
+const HeadingTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(cs.headingTag || '') ? cs.headingTag : 'h2') as any;
+
+const {
+  title = cs.title,
+  desc = cs.desc
+} = Astro.props;
+
+const titleStyle = resolveTextStyle(cs, 'title') || resolveTextStyle(cs, 'heading');
+const descStyle = resolveTextStyle(cs, 'desc');
+const eyebrowStyle = resolveTextStyle(cs, 'eyebrow');
+---
+
+{showSection && (
+<section id="contact" class="pt-[150px] pb-0 relative w-full bg-siteBg text-paletteRichBlack px-6 md:px-16">
+  <div class="max-w-custom mx-auto w-full">
+    <div class="grid-standard items-start">
+      
+      <div class={`${showForm ? 'col-span-12 lg:col-span-4' : 'col-span-12 lg:col-span-8'} space-y-6 pr-0 lg:pr-8`}>
+        {cs.eyebrow && (
+          <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={eyebrowStyle || undefined} set:html={formatRich(cs.eyebrow)}></span>
+        )}
+        <HeadingTag id="contact-section-heading" class="typo-h2 text-paletteRichBlack" style={titleStyle || undefined} set:html={formatRich(title)}>
+        </HeadingTag>
+        <p class="typo-body text-paletteRichBlack/80 font-light" style={descStyle || undefined} set:html={formatRich(desc)}>
+        </p>
+
+        {(showEmail || showOffices) && (
+          <div class="pt-8 space-y-5 typo-body font-light text-paletteRichBlack/70">
+            {showEmail && site.brand?.email && (
+              <div>
+                <span class="block text-paletteRichBlack/40 tracking-widest typo-small mb-1">{cs.emailLabel}</span>
+                <a href={`mailto:${site.brand.email}`} class="typo-body text-brandAccent hover:underline font-normal">{site.brand.email}</a>
+              </div>
+            )}
+            {showOffices && site.brand?.officesSummary && (
+              <div>
+                <span class="block text-paletteRichBlack/40 tracking-widest typo-small mb-1">{cs.officesLabel}</span>
+                <p class="typo-body text-paletteRichBlack">{site.brand.officesSummary}</p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {showForm && <div class="hidden lg:block lg:col-span-2"></div>}
+
+      {showForm && (
+        <div class="col-span-12 lg:col-span-6 mt-10 lg:mt-0">
+          <form
+            id="contact-form"
+            aria-labelledby="contact-section-heading"
+            method="POST"
+            action={formAction || undefined}
+            data-endpoint={formAction}
+            data-success-msg={cs.successMessage}
+            data-error-msg={cs.errorMessage || 'Gönderim sırasında bir sorun oluştu, lütfen tekrar deneyin.'}
+            data-submit-label={cs.submitLabel}
+            data-submitting-label={cs.submittingLabel || 'Gönderiliyor...'}
+            class="space-y-6"
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="c-name" class="block typo-small font-medium text-paletteRichBlack/70 mb-2">
+                  {String(cs.nameLabel || '').replace(/\s*\*+$/, '')} {nameRequired && <span aria-hidden="true" class="text-brandAccent">*</span>}
+                </label>
+                <input
+                  id="c-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required={nameRequired}
+                  placeholder={cs.namePlaceholder || ''}
+                  class="w-full min-h-[3rem] bg-palettePlatinum py-2.5 px-3 text-[max(1rem,1em)] text-paletteRichBlack focus:outline-none focus:bg-paletteDustGrey transition-colors rounded-none"
+                />
+              </div>
+              <div>
+                <label for="c-email" class="block typo-small font-medium text-paletteRichBlack/70 mb-2">
+                  {String(cs.emailFieldLabel || '').replace(/\s*\*+$/, '')} {emailRequired && <span aria-hidden="true" class="text-brandAccent">*</span>}
+                </label>
+                <input
+                  id="c-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  autocorrect="off"
+                  autocapitalize="none"
+                  spellcheck="false"
+                  required={emailRequired}
+                  placeholder={cs.emailPlaceholder || ''}
+                  class="w-full min-h-[3rem] bg-palettePlatinum py-2.5 px-3 text-[max(1rem,1em)] text-paletteRichBlack focus:outline-none focus:bg-paletteDustGrey transition-colors rounded-none"
+                />
+              </div>
+            </div>
+
+            {(showCompanyField || showTopicField) && (
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {showCompanyField && (
+                  <div class={!showTopicField ? 'sm:col-span-2' : ''}>
+                    <label for="c-company" class="block typo-small font-medium text-paletteRichBlack/70 mb-2">
+                      {String(cs.companyLabel || '').replace(/\s*\*+$/, '')} {companyRequired && <span aria-hidden="true" class="text-brandAccent">*</span>}
+                    </label>
+                    <input
+                      id="c-company"
+                      name="company"
+                      type="text"
+                      autocomplete="organization"
+                      required={companyRequired}
+                      placeholder={cs.companyPlaceholder || ''}
+                      class="w-full min-h-[3rem] bg-palettePlatinum py-2.5 px-3 text-[max(1rem,1em)] text-paletteRichBlack focus:outline-none focus:bg-paletteDustGrey transition-colors rounded-none"
+                    />
+                  </div>
+                )}
+                {showTopicField && (
+                  <div class={!showCompanyField ? 'sm:col-span-2' : ''}>
+                    <label for="c-topic" class="block typo-small font-medium text-paletteRichBlack/70 mb-2">{cs.topicLabel}</label>
+                    <select id="c-topic" name="topic" class="w-full min-h-[3rem] bg-palettePlatinum py-2.5 px-3 text-[max(1rem,1em)] text-paletteRichBlack focus:outline-none focus:bg-paletteDustGrey transition-colors rounded-none">
+                      {(cs.topics || []).map((t: any) => (
+                        <option value={t.value}>{t.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {showDescField && (
+              <div>
+                <label for="c-desc" class="block typo-small font-medium text-paletteRichBlack/70 mb-2">
+                  {String(cs.descLabel || '').replace(/\s*\*+$/, '')} {descRequired && <span aria-hidden="true" class="text-brandAccent">*</span>}
+                </label>
+                <textarea
+                  id="c-desc"
+                  name="message"
+                  rows="3"
+                  required={descRequired}
+                  placeholder={cs.descPlaceholder || ''}
+                  class="w-full bg-palettePlatinum py-2.5 px-3 text-[max(1rem,1em)] text-paletteRichBlack focus:outline-none focus:bg-paletteDustGrey transition-colors rounded-none"
+                ></textarea>
+              </div>
+            )}
+
+            {showConsentCheckbox && (
+              <div class="flex items-start gap-3">
+                <input
+                  id="c-consent"
+                  name="consent"
+                  type="checkbox"
+                  required
+                  class="mt-1 w-5 h-5 accent-brandAccent flex-shrink-0"
+                />
+                <label for="c-consent" class="typo-small text-paletteRichBlack/75 font-light cursor-pointer">
+                  {cs.consentText || 'Aydınlatma metnini okudum ve iletişim kurulmasını onaylıyorum.'}
+                </label>
+              </div>
+            )}
+
+            <div class="pt-4">
+              <button id="contact-submit-btn" type="submit" class="btn-rect min-h-[3rem] py-3 px-9 bg-brandAccent text-paletteRichBlack font-semibold hover:bg-brandAccentHover transition-all">
+                {cs.submitLabel}
+              </button>
+            </div>
+
+            <div id="contact-feedback" role="status" aria-live="polite" class="hidden p-4 bg-palettePlatinum text-paletteRichBlack typo-small">
+              {cs.successMessage}
+            </div>
+          </form>
+        </div>
+      )}
+
+    </div>
+  </div>
+</section>
+)}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const feedback = document.getElementById('contact-feedback');
+    const submitBtn = document.getElementById('contact-submit-btn') as HTMLButtonElement | null;
+    if (!form || !feedback) return;
+
+    const controls = form.querySelectorAll('input, select, textarea');
+    controls.forEach((ctrl) => {
+      ctrl.addEventListener('input', () => {
+        ctrl.removeAttribute('aria-invalid');
+      });
+    });
+
+    form.addEventListener('invalid', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (target) target.setAttribute('aria-invalid', 'true');
+    }, true);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        const firstInvalid = form.querySelector(':invalid') as HTMLElement | null;
+        if (firstInvalid) {
+          firstInvalid.setAttribute('aria-invalid', 'true');
+          firstInvalid.focus();
+        }
+        form.reportValidity();
+        return;
+      }
+
+      const endpoint = form.getAttribute('data-endpoint') || '';
+      const successMsg = form.getAttribute('data-success-msg') || '';
+      const errorMsg = form.getAttribute('data-error-msg') || 'Hata oluştu.';
+      const submitLabel = form.getAttribute('data-submit-label') || 'Gönder';
+      const submittingLabel = form.getAttribute('data-submitting-label') || 'Gönderiliyor...';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = submittingLabel;
+      }
+
+      try {
+        if (endpoint) {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form),
+          });
+          if (!res.ok) throw new Error(errorMsg);
+        }
+        feedback.textContent = successMsg;
+        feedback.className = 'p-4 bg-palettePlatinum text-paletteRichBlack typo-small';
+        form.reset();
+        controls.forEach((ctrl) => ctrl.removeAttribute('aria-invalid'));
+      } catch {
+        feedback.textContent = errorMsg;
+        feedback.className = 'p-4 bg-red-100 text-red-900 typo-small';
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      }
+    });
+  });
+</script>

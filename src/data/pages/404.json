@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "404",
+    "slug": "404",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "404 - Sayfa Bulunamadı | cx2222",
+    "description": "Aradığınız sayfa taşınmış veya kaldırılmış olabilir. cx2222 ana sayfasına veya çözümlerimize göz atın.",
+    "robots": "noindex, nofollow",
+    "llmsInclude": false
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "not-found",
+      "type": "notFound",
+      "visible": true,
+      "data": {
+        "seo": {
+          "title": "404 - Sayfa Bulunamadı | cx2222",
+          "description": "Aradığınız sayfa taşınmış veya kaldırılmış olabilir. cx2222 ana sayfasına veya çözümlerimize göz atın.",
+          "robots": "noindex, nofollow",
+          "llmsInclude": false
+        },
+        "badge": "404 Hatası",
+        "title": "Yolculukta küçük bir sapma oldu.",
+        "desc": "Aradığınız sayfa taşınmış, güncellenmiş ya da henüz inşa edilmemiş olabilir. Sizi doğru rotaya geri döndürelim.",
+        "primaryBtnLabel": "Ana Sayfaya Dön →",
+        "primaryBtnHref": "/",
+        "secondaryBtnLabel": "Çözümlerimizi İnceleyin",
+        "secondaryBtnHref": "/cozumler"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+---
+import Heading from '../Heading.astro';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const questions = Array.isArray(data.questions) ? data.questions : [];
+const results = Array.isArray(data.results) ? data.results : [];
+const sectionId = id || styles.sectionId || 'maturity-test';
+---
+
+<section id={sectionId} class={`section-pad-150 bg-siteBg text-paletteRichBlack px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class="max-w-4xl mx-auto">
+    
+    <!-- Progress Bar -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between typo-small font-semibold tracking-widest text-paletteRichBlack/60 mb-3">
+        <span id="step-counter">Soru 1 / {questions.length}</span>
+        <span id="step-percent">%{Math.round(100 / Math.max(questions.length, 1))}</span>
+      </div>
+      <div class="w-full h-1.5 bg-palettePlatinum overflow-hidden">
+        <div id="progress-fill" class="h-full bg-brandAccent transition-all duration-300 w-1/5"></div>
+      </div>
+    </div>
+
+    <!-- Sharp Rectangular Quiz Card -->
+    <div id="quiz-container" class="bg-palettePlatinum p-8 md:p-14 min-h-[420px] flex flex-col justify-between">
+      
+      <div id="question-block">
+        <span id="question-category" class="typo-small font-semibold tracking-widest text-paletteRichBlack/60 block mb-3" set:html={questions[0]?.category}>
+        </span>
+        <Heading as="h2" size="h2" id="question-title" text={questions[0]?.title} class="text-paletteRichBlack mb-8" />
+
+        <div id="options-list" class="space-y-[2px]">
+          <!-- Options injected dynamically by JS -->
+        </div>
+      </div>
+
+      <!-- Result Block -->
+      <div id="result-block" class="hidden space-y-6">
+        <span class="typo-small font-semibold tracking-widest text-brandAccent bg-paletteRichBlack px-4 py-1.5 inline-block">
+          Teşhis Sonucunuz
+        </span>
+        <Heading as="h3" size="h2" id="result-level-title" class="text-paletteRichBlack" />
+        <p id="result-desc" class="typo-body text-paletteRichBlack/80 font-light"></p>
+
+        <div class="p-8 bg-siteBg">
+          <Heading as="h4" size="h4" class="font-bold tracking-widest text-brandAccent mb-4">İlk 3 Aksiyon Önerisi</Heading>
+          <ul id="result-recommendations" class="space-y-3 typo-body font-light text-paletteRichBlack/80">
+          </ul>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-4">
+          <a 
+            href="/iletisim"
+            class="btn-rect px-8 py-3.5 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold"
+          >
+            Sonuçları Birlikte Değerlendirelim →
+          </a>
+          <button 
+            id="restart-quiz-btn"
+            type="button"
+            class="btn-rect px-6 py-3.5 bg-paletteRichBlack text-white hover:bg-paletteDeepNavy font-light"
+          >
+            Testi Yeniden Başlat
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script define:vars={{ questions, results }}>
+  let currentQ = 0;
+  let totalScore = 0;
+
+  const stepCounter = document.getElementById('step-counter');
+  const stepPercent = document.getElementById('step-percent');
+  const progressFill = document.getElementById('progress-fill');
+  const questionBlock = document.getElementById('question-block');
+  const resultBlock = document.getElementById('result-block');
+  const questionCat = document.getElementById('question-category');
+  const questionTitle = document.getElementById('question-title');
+  const optionsList = document.getElementById('options-list');
+  const restartBtn = document.getElementById('restart-quiz-btn');
+
+  function renderQuestion(idx) {
+    const q = questions[idx];
+    if (!q) return;
+
+    if (stepCounter) stepCounter.textContent = `Soru ${idx + 1} / ${questions.length}`;
+    const pct = Math.round(((idx + 1) / questions.length) * 100);
+    if (stepPercent) stepPercent.textContent = `%${pct}`;
+    if (progressFill) progressFill.style.width = `${pct}%`;
+
+    if (questionCat) questionCat.textContent = q.category;
+    if (questionTitle) questionTitle.textContent = q.title;
+
+    if (optionsList) {
+      optionsList.innerHTML = '';
+      q.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'w-full text-left p-5 bg-siteBg hover:bg-paletteRichBlack hover:text-white transition-all duration-200 flex items-center justify-between group cursor-pointer';
+        btn.innerHTML = `
+          <span class="min-w-0 text-sm md:text-base font-light">${opt.text}</span>
+          <span class="ml-4 flex-shrink-0 text-sm font-semibold text-brandAccent">→</span>
+        `;
+        btn.addEventListener('click', () => {
+          totalScore += opt.points;
+          if (currentQ < questions.length - 1) {
+            currentQ++;
+            renderQuestion(currentQ);
+          } else {
+            showResult();
+          }
+        });
+        optionsList.appendChild(btn);
+      });
+    }
+  }
+
+  function showResult() {
+    if (questionBlock) questionBlock.classList.add('hidden');
+    if (resultBlock) resultBlock.classList.remove('hidden');
+
+    const resultTitle = document.getElementById('result-level-title');
+    const resultDesc = document.getElementById('result-desc');
+    const resultRecs = document.getElementById('result-recommendations');
+
+    const sorted = [...results].sort((a, b) => a.maxScore - b.maxScore);
+    const tier = sorted.find((r) => totalScore <= r.maxScore) || sorted[sorted.length - 1];
+
+    if (resultTitle && tier) resultTitle.textContent = tier.title;
+    if (resultDesc && tier) resultDesc.textContent = tier.desc;
+    if (resultRecs && tier) {
+      resultRecs.innerHTML = (tier.recommendations || []).map(r => `<li>${r}</li>`).join('');
+    }
+  }
+
+  function restart() {
+    currentQ = 0;
+    totalScore = 0;
+    if (resultBlock) resultBlock.classList.add('hidden');
+    if (questionBlock) questionBlock.classList.remove('hidden');
+    renderQuestion(0);
+  }
+
+  if (restartBtn) restartBtn.addEventListener('click', restart);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderQuestion(0);
+  });
+</script>

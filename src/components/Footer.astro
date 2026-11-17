@@ -1,0 +1,79 @@
+---
+import { getSite } from '../lib/content';
+
+const year = new Date().getFullYear();
+const site = getSite();
+const footer = site.footer || ({} as any);
+const showFooter = footer.showFooter !== false;
+const showCopyright = footer.showCopyright !== false;
+const showYear = footer.showYear !== false;
+const showSocialLinks = footer.showSocialLinks === true;
+const showOffices = footer.showOffices === true;
+const links = Array.isArray(footer.links) ? footer.links : [];
+const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.length > 0
+  ? footer.socialLinks
+  : (site.brand?.social || []);
+---
+
+{showFooter && (
+<footer class="w-full bg-siteBg text-paletteRichBlack px-6 md:px-16 pt-16 pb-8">
+  <div class="max-w-custom mx-auto w-full pt-8 space-y-6">
+    {(showOffices || showSocialLinks) && (
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-palettePlatinum typo-small text-paletteRichBlack/70">
+        {showOffices && (
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {(site.brand?.offices || []).map((o) => (
+              <span>{o.city} ({o.district})</span>
+            ))}
+            {site.brand?.email && (
+              <a href={`mailto:${site.brand.email}`} class="hover:text-brandAccent transition-colors">
+                {site.brand.email}
+              </a>
+            )}
+          </div>
+        )}
+        {showSocialLinks && socialLinks.length > 0 && (
+          <div class="flex flex-wrap items-center gap-6">
+            {socialLinks.map((s) => (
+              <a
+                href={s.url || s.href || '#'}
+                target={(s.url || s.href || '').startsWith('http') ? '_blank' : undefined}
+                rel={(s.url || s.href || '').startsWith('http') ? 'noopener noreferrer' : undefined}
+                class="hover:text-brandAccent transition-colors"
+              >
+                {s.name || s.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 typo-small font-light text-paletteRichBlack/60">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+        {showCopyright && (
+          <p class="typo-small">
+            {footer.copyrightPrefix || '© '}
+            {showYear ? `${year} ` : ''}
+            {footer.copyrightSuffix}
+          </p>
+        )}
+        {footer.extraNote && (
+          <span class="text-paletteRichBlack/50">{footer.extraNote}</span>
+        )}
+      </div>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            target={link.openInNewTab ? '_blank' : undefined}
+            rel={link.openInNewTab ? 'noopener noreferrer' : undefined}
+            class="hover:text-paletteRichBlack transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+)}

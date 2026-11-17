@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Neden Şimdi?",
+    "slug": "neden-simdi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Neden Şimdi? | cx2222 Dönüşüm Raporu",
+    "description": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor. Reaktif destekten proaktif empatiye geçişin 4 kritik adımı.",
+    "schemaType": "WebPage",
+    "keywords": "CX dönüşüm raporu, proaktif empati, reaktif destekten proaktif deneyime",
+    "aiSummary": "Müşteri beklentileri hızla artarken reaktif destek modelleri yetersiz kalıyor; AI ve öngörüsel empati ile kurumsal çevikliğe geçişin 4 kritik adımı.",
+    "aboutTopics": [
+      "CX Dönüşümü",
+      "Proaktif Empati",
+      "AI Çağı Müşteri Beklentileri"
+    ],
+    "keyTakeaways": [
+      "Statik anketlerden canlı VOC sinyallerine geçiş",
+      "Ön hat çalışanlarını yapay zeka ile yetkilendirme"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "Piyasa Gerçeği",
+        "title": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor.",
+        "desc": "Beklentiler artık saniyelerle ölçülüyor. Şikayet geldiğinde aksiyon alan eski nesil şirketler müşteri kaybederken; ihtiyacı önceden gören ve sürtünmeyi anında onaranlar pazarı domine ediyor.",
+        "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
+        "bgAlt": "Neden Şimdi",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "shifts",
+      "type": "shiftsComparison",
+      "visible": true,
+      "data": {
+        "items": [
+          {
+            "id": "sesi-eyleme-dok",
+            "number": "01",
+            "title": "Sesi Eyleme Dök",
+            "sub": "Raporlanan değil, yaşayan geri bildirim",
+            "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+            "problem": "Geleneksel dünyada müşteri anketleri toplanır, excel dosyalarında birikir, ay sonunda yönetime sunulur. Rapor sunulduğunda o müşteri çoktan rakibe gitmiştir.",
+            "solution": "Sesin Müşterisi (VOC) yapay zeka motorumuz; gelen her olumsuz yorumu, tereddütlü puanı veya çağrı merkezindeki gergin ses tonunu anında ilgili mağaza müdürüne, ürün yöneticisine veya operasyon liderine görev kartı olarak iletir. Aksiyon süresi aylardan 15 dakikaya iner."
+          },
+          {
+            "id": "aninda-onar",
+            "number": "02",
+            "title": "Anında Onar",
+            "sub": "Kırılma anlarında anında kurtarma",
+            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+            "problem": "Müşterilerin %96'sı memnun kalmadığında şikayet formu doldurmaz; sadece ürünü veya sepeti terk eder ve bir daha geri dönmez.",
+            "solution": "Kullanıcının ödeme adımındaki duraksamasını, arama çubuğundaki hüsranını veya mobil uygulamadaki hata döngüsünü milisaniyeler içinde yakalayan yapay zeka modelleriyle anında telafi mekanizması devreye sokulur."
+          },
+          {
+            "id": "onceden-gor",
+            "number": "03",
+            "title": "Önceden Gör",
+            "sub": "Reaktif bekleyişten proaktif empatiye",
+            "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+            "problem": "Müşteri hizmetleri sadece telefon çaldığında çalışmaya başlar. Oysa müşteri öfkelenene kadar pek çok mikro sinyal vermiştir.",
+            "solution": "Öngörücü algoritmalar sayesinde müşterinin stres sinyalleri tespit edilir. Örneğin, seyahatinde uçuşu rötara uğrayan yolcuya havalimanına varmadan önce lounge daveti sunulur veya hastane harcaması yapan banka müşterisine satış yerine 'geçmiş olsun' desteği iletilir."
+          },
+          {
+            "id": "rutini-otomatikle",
+            "number": "04",
+            "title": "Rutini Otomatikle",
+            "sub": "İnsanı robottan kurtarmak",
+            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+            "problem": "Müşteri temsilcileri mesailerinin %70'ini 'Kargom nerede?', 'Faturamı nasıl öderim?' gibi aynı 10 soruyu kopyala-yapıştır yanıtlamakla geçirir ve tükenir.",
+            "solution": "Otonom yapay zeka ajanları rutin operasyonları %100 doğrulukla ve anında çözer. İnsan çalışanlar ise sadece gerçek duygusal bağ, kriz yönetimi ve yaratıcı çözüm gerektiren kritik temas anlarına odaklanır."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "Dönüşüm Süreci Hakkında Merak Edilenler",
+        "subtitle": "Soru & Cevap",
+        "items": [
+          {
+            "question": "Neden geleneksel çağrı merkezi ve şikayet yönetim sistemleri artık yetersiz kalıyor?",
+            "answer": "Çünkü günümüz tüketicisi çözüm için saatler veya günler beklemeyi kabul etmiyor. Yapay zeka destekli dünyada tolerans süreleri saniyelere indi. Reaktif bir sistemde müşteri şikayet ettiğinde bağ zaten zedelenmiştir; günümüzün kazanan markaları sürtünmeyi anında fark edip müşteri henüz arama yapmadan durumu çözenlerdir."
+          },
+          {
+            "question": "Kapalı döngü (Closed-Loop) sistemi ne kadar sürede devreye alınabilir?",
+            "answer": "Mevcut veri kanallarınızın (çağrı kayıtları, web hareketleri, anketler, sosyal medya) entegrasyonu ve ilk yapay zeka tetikleyicilerinin kurgulanması ortalama 3-4 hafta içinde pilot olarak devreye alınabilmektedir."
+          },
+          {
+            "question": "Şirketimizin yapay zeka altyapısı yoksa nereden başlamalıyız?",
+            "answer": "Yapay zeka araçlarını sıfırdan geliştirmek zorunda değilsiniz. cx2222 olarak mevcut CRM ve veri tabanınızın üzerine oturabilen hazır, hafif ve modüler yapay zeka katmanları kuruyor; mimariyi kurumunuza özel hale getiriyoruz."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "title": "",
+        "desc": "",
+        "visible": true,
+        "selectedCtaId": "default-consulting"
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

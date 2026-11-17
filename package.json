@@ -1,0 +1,26 @@
+{
+  "name": "cx2222",
+  "version": "1.0.0",
+  "description": "cx2222 | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [
+    "cx",
+    "müşteri deneyimi",
+    "yapay zeka",
+    "human-centered AI",
+    "deneyim tasarımı"
+  ],
+  "author": "cx2222",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.4.10",
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Ekibimiz",
+    "slug": "ekibimiz",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Ekibimiz | cx2222 Müşteri Deneyimi & Yapay Zeka Ekibi",
+    "description": "Müşteri deneyimi ve yapay zeka dönüşümünde insan sezgisini ve analitik teknolojiyi bir araya getiren multidisipliner uzman ekibimiz.",
+    "schemaType": "AboutPage",
+    "keywords": "cx2222 ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
+    "aiSummary": "cx2222, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
+    "llmsInclude": true,
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "blocks": [
+    {
+      "id": "team-hero-grid",
+      "type": "teamGrid",
+      "visible": true,
+      "data": {
+        "pillBadge": "",
+        "title": "MÜŞTERİ DENEYİMİ VE YAPAY ZEKA EKİBİ",
+        "headingTag": "h1",
+        "storyIntro": "cx2222, KURUMLARIN MÜŞTERİ DENEYİMİNİ VE YAPAY ZEKA YOLCULUKLARINI İNSAN MERKEZLİ TASARIMLA DÖNÜŞTÜRMEK İÇİN BİR ARAYA GELEN ÇOK DİSİPLİNLİ BİR UZMAN KADROSUNDAN OLUŞUR.",
+        "storyP1": "Yapay zeka modellerinin sunduğu hız ve analitik derinlik, ancak insan sezgisi, empati ve sahada test edilmiş servis tasarımı disiplinleriyle birleştiğinde gerçek kurumsal değere dönüşür.",
+        "storyP2": "Veri bilimcilerimiz, deneyim tasarımcılarımız ve CX stratejistlerimizle her temas noktasında sürtünmesiz, kalıcı ve ölçülebilir deneyim ekosistemleri inşa ediyoruz.",
+        "members": [
+          {
+            "id": "ediz-pinar",
+            "name": "<b>UĞUR</b> Akay Köseoğlu",
+            "role": "Founder & CX Principal",
+            "image": "/images/uploads/dsc01870-mwj5qiby.png",
+            "linkedin": "https://linkedin.com",
+            "nameSize": "16"
+          },
+          {
+            "id": "ai-lead",
+            "name": "Can Dağdelen",
+            "role": "Head of AI & Experience Engineering",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "design-lead",
+            "name": "Aylin Yılmaz",
+            "role": "Lead Service & UX Designer",
+            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "quote-card",
+            "name": "cx2222 Ekibi",
+            "role": "Deneyim ve Sezgi Manifestosu",
+            "isQuoteCard": true,
+            "quote": "Müşterinin sesini duymak yetmez, onu algoritmaların ve aksiyonun kalbine yerleştirmek gerekir.",
+            "quoteAuthor": "cx2222 İlkesi",
+            "bgColor": "brandAccent",
+            "linkedin": "https://linkedin.com",
+            "twitter": "https://twitter.com",
+            "quoteColor": "richBlack"
+          },
+          {
+            "id": "research-lead",
+            "name": "Mert Aksoy",
+            "role": "Senior Ethnographic Researcher",
+            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "analytics-lead",
+            "name": "Deniz Kaya",
+            "role": "VOC & Data Analytics Specialist",
+            "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "product-lead",
+            "name": "Barış Demir",
+            "role": "CX Solution Architect",
+            "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "journey-lead",
+            "name": "Selin Erdem",
+            "role": "Customer Journey & Culture Lead",
+            "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          },
+          {
+            "id": "member-1794827162499",
+            "name": "Yeni Üye",
+            "role": "CX Uzmanı",
+            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+            "linkedin": "https://linkedin.com"
+          }
+        ],
+        "seo": {
+          "title": "Ekibimiz | cx2222 Müşteri Deneyimi & Yapay Zeka Ekibi",
+          "description": "Müşteri deneyimi ve yapay zeka dönüşümünde insan sezgisini ve analitik teknolojiyi bir araya getiren multidisipliner uzman ekibimiz.",
+          "schemaType": "AboutPage",
+          "keywords": "cx2222 ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
+          "aiSummary": "cx2222, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
+          "llmsInclude": true,
+          "aboutTopics": [],
+          "keyTakeaways": []
+        },
+        "cta": {
+          "visible": true,
+          "selectedCtaId": "default-consulting",
+          "title": "",
+          "desc": ""
+        },
+        "surface": "platinum",
+        "gridCols": "auto",
+        "gridWidth": "full",
+        "photoAspect": "4/5"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "selectedCtaId": "default-consulting",
+        "title": "",
+        "desc": "",
+        "visible": true
+      }
+    }
+  ]
+}

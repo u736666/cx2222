@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlockRenderer from '../components/blocks/BlockRenderer.astro';
+import { getBlockPageBySlug } from '../lib/content';
+
+const page = getBlockPageBySlug('404');
+---
+
+<Layout
+  title={page?.seo?.title || page?.meta?.title || '404 - Sayfa Bulunamadı'}
+  description={page?.seo?.description}
+  seo={page?.seo}
+  defaultRobots="noindex, nofollow"
+>
+  {page?.blocks ? (
+    <BlockRenderer blocks={page.blocks} />
+  ) : (
+    <section class="pt-8 md:pt-16 pb-20 md:pb-32 bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 text-center">
+      <h1 class="typo-h1 mb-4">404</h1>
+      <p class="typo-lead">Aradığınız sayfa bulunamadı.</p>
+      <a href="/" class="btn-rect mt-6 inline-block px-8 py-3 bg-paletteRichBlack text-white">Ana Sayfaya Dön</a>
+    </section>
+  )}
+</Layout>

@@ -1,0 +1,92 @@
+---
+import Heading from '../Heading.astro';
+import { getProjectsBySlugs, getAllProjects, getSurfaceStyle, resolveTextStyle, resolveTextTag, formatRich } from '../../lib/content';
+import { computeBlockStyles } from '../../lib/style';
+
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {}, style = {} } = Astro.props;
+const styles = computeBlockStyles(style);
+
+const featuredSlugs = data.featuredSlugs;
+const projects = (featuredSlugs && featuredSlugs.length > 0)
+  ? getProjectsBySlugs(featuredSlugs)
+  : getAllProjects().slice(0, data.limit || 3);
+
+const sectionId = id || styles.sectionId || 'projects-stacked';
+const descStyle = resolveTextStyle(data, 'desc');
+---
+
+<section id={sectionId} class={`relative w-full bg-siteBg text-paletteRichBlack px-6 md:px-16 pt-[50px] pb-20 lg:pb-[150px] ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+  <div class={styles.containerClass}>
+    
+    <div class="mb-14 pb-8 flex flex-col md:flex-row md:items-end justify-between">
+      <div>
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-paletteRichBlack" />
+      </div>
+      <div class="flex flex-col items-start md:items-end gap-2 mt-4 md:mt-0">
+        {data.desc && (
+          <p class="typo-body font-light text-paletteRichBlack/60 max-w-sm" style={descStyle || undefined} set:html={formatRich(data.desc)}>
+          </p>
+        )}
+        {data.allLinkText && (
+          <a href={data.allLinkHref || '/projeler'} class="btn-rect w-max font-medium text-brandAccent hover:text-paletteRichBlack transition-colors" set:html={formatRich(data.allLinkText)}>
+          </a>
+        )}
+      </div>
+    </div>
+
+    <div class="relative space-y-10 lg:space-y-24">
+      {projects.map((proj: any, idx: number) => {
+        const st = getSurfaceStyle(proj.listStyle);
+        const stackNum = Math.min(idx + 1, 3);
+        return (
+          <div class={`stack-card stack-card-${stackNum} ${st.section} rounded-none overflow-hidden relative group cursor-pointer transition-all`}>
+            <!-- Full card clickable overlay link (both image and background) -->
+            <a href={`/projeler/${proj.slug}`} class="absolute inset-0 z-10" aria-label={`${proj.client} - ${proj.title}`}></a>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-0 lg:min-h-[580px] relative z-0">
+              <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-auto lg:min-h-full overflow-hidden bg-neutral-200">
+                <img 
+                  src={proj.image} 
+                  alt={proj.imageAlt || proj.title} 
+                  class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" 
+                />
+              </div>
+
+              <div class={`lg:col-span-5 p-8 sm:p-12 md:p-14 flex flex-col justify-between ${st.section} space-y-8`}>
+                <div class="space-y-4">
+                  <span class={`typo-body tracking-widest font-semibold block ${proj.listStyle === 'platinum' ? 'text-brandAccent' : st.title}`} style={resolveTextStyle(proj, 'client') || undefined} set:html={formatRich(proj.client)}>
+                  </span>
+                  <Heading as={proj.headingTag || proj.titleTag || 'h3'} customSize={proj.headingSize || proj.titleSize} color={proj.headingColor || proj.titleColor} size="h2" text={proj.shortTitle || proj.title} class={st.title} />
+                  <p class={`typo-body font-light pt-2 ${st.body}`} style={resolveTextStyle(proj, 'listDesc') || resolveTextStyle(proj, 'desc') || undefined} set:html={formatRich(proj.listDesc || proj.desc)}>
+                  </p>
+                  <div class={`pt-4 space-y-2 typo-body font-light ${st.muted}`}>
+                    {(proj.bullets || []).map((b: string) => {
+                      const BulletTag = (resolveTextTag(proj, 'bullets', 'p') || 'p') as any;
+                      const bulletStyle = resolveTextStyle(proj, 'bullets') || undefined;
+                      return (
+                        <BulletTag style={bulletStyle} set:html={`• ${formatRich(b)}`} />
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div class="pt-6 flex items-center justify-between relative z-20 pointer-events-none">
+                  <span class={`btn-rect font-medium transition-colors ${st.textLink} group-hover:underline`}>
+                    <span set:html={formatRich(data.cardCtaText || 'Vaka Analizini Oku →')}></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>

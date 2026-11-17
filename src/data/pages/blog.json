@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Blog",
+    "slug": "blog",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "İçgörüler & Blog | cx2222",
+    "description": "Müşteri deneyimi, yapay zeka entegrasyonu, çalışan deneyimi (EX) ve davranışsal tasarım üzerine derinlemesine analizler ve düşünce liderliği.",
+    "schemaType": "CollectionPage",
+    "keywords": "CX blog, AI ve müşteri deneyimi yazıları, çalışan deneyimi içgörüleri",
+    "aiSummary": "Müşteri deneyimi, Agentic CX, çalışan mutluluğu ve yapay zeka ile insan empatisi dengesi üzerine saha notları ve analizler.",
+    "aboutTopics": [
+      "CX Düşünce Liderliği",
+      "Agentic CX",
+      "Davranışsal Tasarım"
+    ],
+    "keyTakeaways": [
+      "Sahadan gelen güncel araştırma ve deneyim içgörüleri"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "",
+        "title": "Blog & Deneyim Notları",
+        "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı \"blog\" kisvesi altında bir daha hatırlatıyoruz.",
+        "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.jpg",
+        "bgAlt": "Blog Atmosfer Görseli",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "articles-list",
+      "type": "articlesList",
+      "visible": true,
+      "data": {
+        "readMoreText": "Devamını Oku →"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "items": []
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {},
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

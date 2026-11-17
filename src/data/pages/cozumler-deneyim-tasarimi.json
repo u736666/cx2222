@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "Deneyim Tasarımı",
+    "slug": "cozumler/deneyim-tasarimi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Deneyim Tasarımı & Yolculuk Haritaları (CJM) | cx2222",
+    "description": "Masa başında varsayımlarla değil; müşterinin yanında sahada tasarlanan pürüzsüz müşteri yolculukları (CJM), derin etnografi ve servis blueprinting.",
+    "schemaType": "Service",
+    "keywords": "deneyim tasarımı, müşteri yolculuğu haritası, CJM, saha etnografisi, service blueprint",
+    "aiSummary": "Saha etnografisi, gerçek müşteri gözlemleri ve hızlandırılmış prototipleme ile uçtan uca müşteri yolculukları (CJM) ve servis blueprintleri tasarlanır.",
+    "aboutTopics": [
+      "Müşteri Yolculuğu Tasarımı",
+      "Saha Etnografisi",
+      "Service Blueprinting"
+    ],
+    "keyTakeaways": [
+      "Varsayım yerine saha gözlemine dayalı tasarım",
+      "Ölçülebilir prototipleme ve deneyim standartları"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "badge": "",
+        "bigWord": "CX/UX",
+        "title": "Deneyim Tasarımı ve Müşteri Yolculuk Haritaları (CJM)2",
+        "desc": "Masa başında tahmin yürüterek müşteri memnun edilemez. Gerçek insanların hayatına dokunan, sürtünmesiz ve unutulmaz deneyimleri sahada, müşterinin bizzat yanında tasarlıyoruz.",
+        "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "Deneyim Tasarımı",
+        "headingTag": "h1"
+      },
+      "style": {}
+    },
+    {
+      "id": "capabilities",
+      "type": "capabilitiesGrid",
+      "visible": true,
+      "data": {
+        "items": [
+          {
+            "eyebrow": "01 / DERİN İÇGÖRÜ",
+            "title": "Saha Etnografisi & Davranışsal Gözlem",
+            "body": "Müşterilerinizi yalnızca anket cevaplarıyla değil; alışveriş yaparken, bankacılık işlemi yaparken veya havalimanında bavulunu beklerken gözlemliyoruz. Sözcüklerin arkasındaki mikro mimikleri, tereddüt anlarını ve görünmeyen kültürel dinamikleri haritalıyoruz.",
+            "style": "siteBg"
+          },
+          {
+            "eyebrow": "02 / BÜTÜNSEL BAKIŞ",
+            "title": "Uçtan Uca Yolculuk Haritaları (CJM)",
+            "body": "Müşterinin markanızla ilk temas ettiği andan sadakat veya ayrılma evresine kadar olan tüm serüveni dijital ve fiziksel boyutlarıyla görselleştiriyoruz. Hangi aşamada güvenin zedelendiğini ve hangi anların unutulmaz olduğunu netleştiriyoruz.",
+            "style": "dustGrey"
+          },
+          {
+            "eyebrow": "03 / ARKA OFİS UYUMU",
+            "title": "Servis Blueprinting (Ön Hat & Arka Hat)",
+            "body": "Müşterinin gördüğü vitrin ile o vitrini besleyen arka ofis yazılımları, lojistik süreçleri ve çağrı merkezi akışlarını tek bir mimaride buluşturuyoruz. Deneyimin kırıldığı operasyonel kör noktaları onarıyoruz.",
+            "style": "richBlack"
+          },
+          {
+            "eyebrow": "04 / ÇEVİK DOĞRULAMA",
+            "title": "Hızlı Prototipleme & Gerçek Testler",
+            "body": "Tasarımı aylarca kodlamadan önce; interaktif prototiplerle gerçek kullanıcıların önüne çıkarıyoruz. Gerçek hayatta test edilip onaylanmayan hiçbir deneyim kurgusunu canlıya almıyoruz.",
+            "style": "brandAccent"
+          }
+        ],
+        "columns": 2
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "projects-stacked",
+      "type": "projectShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "İlgili Projeler",
+        "headingTag": "h2",
+        "desc": "",
+        "cardCtaText": "Vaka Analizini Oku →",
+        "allLinkText": "Tüm Projeleri İnceleyin →",
+        "allLinkHref": "/projeler",
+        "featuredSlugs": [
+          "garanti-bbva-yatirim",
+          "vodafone-roaming"
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "blog-section",
+      "type": "blogShowcase",
+      "visible": false,
+      "data": {
+        "visible": false,
+        "title": "Blog",
+        "headingTag": "h2",
+        "desc": "",
+        "allLinkText": "Tüm Yazıları İnceleyin →",
+        "allLinkHref": "/blog",
+        "showAllLink": true,
+        "readMoreText": "Yazıyı Oku →",
+        "featuredSlugs": [
+          "yapay-zeka-ve-insan-dokunusunda-denge",
+          "agentic-cx-yapay-zeka-ajanlari-ve-deneyim"
+        ]
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "visible": true,
+      "data": {
+        "title": "Deneyim Tasarımı Hakkında Sıkça Sorulanlar",
+        "items": [
+          {
+            "question": "Müşteri Yolculuk Haritası (CJM) hazırlamak ne kadar sürer?",
+            "answer": "Kapsama bağlı olarak tipik bir odaklı müşteri yolculuğu haritalama projesi 4 ila 6 hafta sürer. Bu süreç; ön veri analizi, 25-30 derinlemesine müşteri mülakatı, saha etnografisi, iç paydaş çalıştayları ve uygulanabilir servis blueprint'lerinin hazırlanmasını içerir."
+          },
+          {
+            "question": "Geleneksel pazar araştırmaları ile cx2222 saha etnografisi arasındaki fark nedir?",
+            "answer": "Pazar araştırmaları genellikle anketlerle 'insanların ne söylediğini' ölçer. Ancak insanlar çoğunlukla hissettikleriyle söyledikleri arasında çelişirler. Etnografik saha araştırması ise müşteriyi gerçek yaşam alanında (evinde, otomobilinde, havalimanında veya şubede) gözlemleyerek 'gerçekte ne yaptıklarını' ve farkında olmadıkları bilinçdışı ihtiyaçlarını yakalar."
+          },
+          {
+            "question": "Çıkan yolculuk haritasının sadece duvarda asılı bir poster olarak kalmasını nasıl engelliyorsunuz?",
+            "answer": "cx2222 haritaları sadece görselleştirme değildir. Her temas noktasındaki kırılma anı, doğrudan ilgili ürün ekibinin sprint backlog'una, operasyonel KPI'lara ve dijital sistem tetikleyicilerine bağlanır."
+          }
+        ]
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "ctaBanner",
+      "visible": true,
+      "data": {
+        "title": "",
+        "desc": "",
+        "visible": true,
+        "selectedCtaId": "default-consulting"
+      },
+      "style": {
+        "surface": "brandAccent"
+      }
+    }
+  ]
+}

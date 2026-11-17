@@ -1,0 +1,326 @@
+---
+import { getSite } from '../lib/content';
+
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+const site = getSite() as any;
+const headerCfg = site.header || {};
+const showHeader = headerCfg.showHeader !== false;
+const showCtaButton = headerCfg.showCtaButton !== false;
+const showMobileExtraLink = headerCfg.showMobileExtraLink !== false;
+const showMobileCta = headerCfg.showMobileCta !== false;
+
+function isRouteActive(href: string) {
+  return currentPath === href || currentPath === `${href}/` || (href !== '/' && currentPath.startsWith(`${href}/`));
+}
+function isExactPage(href: string) {
+  return currentPath === href || currentPath === `${href}/`;
+}
+---
+
+{showHeader && (
+<header id="main-header" class={`pointer-events-auto ${isHome ? '' : 'solid-subpage'} ${headerCfg.sticky === false ? '!static' : ''}`}>
+  <div class="w-full px-6 md:px-16">
+    <div class="max-w-custom mx-auto min-h-[4rem] md:min-h-[5rem] py-2 flex items-center justify-between gap-4">
+      
+      <div class="flex items-center space-x-12 min-w-0">
+        <a href={headerCfg.brandHref || '/'} class="header-brand inline-flex items-center py-1 text-paletteRichBlack text-2xl leading-none tracking-normal flex-shrink-0 transition-colors duration-200">
+          {site.brand.logoImage ? (
+            <img src={site.brand.logoImage} alt={site.brand.name} class="h-7 w-auto object-contain header-logo-img" />
+          ) : (
+            <><span class="font-light">{site.brand.prefix}</span><span class="font-bold">{site.brand.suffix}</span></>
+          )}
+        </a>
+
+        <nav aria-label="Ana Menü" class="header-nav hidden lg:flex items-center space-x-8 text-[14px] font-light text-paletteRichBlack/80">
+          {(headerCfg.navLinks || []).map((link: any) => {
+            const active = isRouteActive(link.href);
+            const activeClasses = active
+              ? 'text-brandAccent font-medium active-route-link'
+              : 'nav-link text-paletteRichBlack/80';
+            return link.megaId ? (
+              <div class="nav-trigger py-2" data-mega={link.megaId}>
+                <a
+                  href={link.href}
+                  target={link.openInNewTab ? '_blank' : undefined}
+                  rel={link.openInNewTab ? 'noopener noreferrer' : undefined}
+                  aria-current={isExactPage(link.href) ? 'page' : undefined}
+                  class={`hover:text-brandAccent transition-colors py-2 inline-block ${activeClasses}`}
+                >
+                  {link.label}
+                </a>
+              </div>
+            ) : (
+              <div>
+                <a
+                  href={link.href}
+                  target={link.openInNewTab ? '_blank' : undefined}
+                  rel={link.openInNewTab ? 'noopener noreferrer' : undefined}
+                  aria-current={isExactPage(link.href) ? 'page' : undefined}
+                  class={`hover:text-brandAccent transition-colors py-2 inline-block ${activeClasses}`}
+                >
+                  {link.label}
+                </a>
+              </div>
+            );
+          })}
+        </nav>
+      </div>
+
+      {showCtaButton && headerCfg.ctaLabel && (
+        <div class="hidden lg:flex items-center justify-end flex-shrink-0">
+          <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect min-h-[2.75rem] py-2.5 px-7 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold">
+            {headerCfg.ctaLabel}
+          </a>
+        </div>
+      )}
+
+      <!-- Mobil Menü Butonu -->
+      <div class="flex lg:hidden items-center justify-end flex-shrink-0">
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="header-mobile-btn inline-flex items-center justify-center w-10 h-10 -mr-2 text-paletteRichBlack focus-visible:outline focus-visible:outline-2 focus-visible:outline-paletteRichBlack transition-colors duration-200"
+          aria-expanded="false"
+          aria-controls="mobile-menu-drawer"
+          aria-label="Menüyü Aç"
+        >
+          <svg id="mobile-icon-open" aria-hidden="true" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="mobile-icon-close" aria-hidden="true" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MEGA PANELLER (cx2222 tasarım referansı ile %100 Birebir) ================= -->
+  {(site.megaMenus || []).map((panel: any) => (
+    <div id={panel.id} class="mega-dive-container pt-10 pb-12 px-6 md:px-16">
+      <div class="max-w-custom mx-auto">
+        <div class="grid-standard">
+          <div class="col-span-12 lg:col-span-4 flex flex-col justify-between pr-8 space-y-6">
+            <div class="space-y-4">
+              <h3 class="typo-h3 text-white">
+                {panel.title}
+              </h3>
+              <p class="typo-body font-light text-white/70">
+                {panel.desc}
+              </p>
+            </div>
+            <a href={panel.ctaHref} class="btn-rect w-max px-6 py-3 bg-brandAccent text-paletteRichBlack font-semibold hover:bg-brandAccentHover">
+              <span>{panel.ctaText}</span>
+            </a>
+          </div>
+
+          <div class="col-span-12 lg:col-span-8 pl-0 lg:pl-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {(panel.items || []).map((item: any) => {
+              const hasImage = Boolean(item.image && String(item.image).trim());
+              const hasDesc = Boolean(item.desc && String(item.desc).trim() && String(item.desc).trim() !== 'Kısa açıklama');
+              const altText = (item.alt && String(item.alt).trim() !== 'Kart Görseli') ? item.alt : item.title;
+              return (
+                <a href={item.href} class="group space-y-3 block">
+                  {hasImage && (
+                    <div class="w-full aspect-[3/1] bg-neutral-800 overflow-hidden">
+                      <img src={item.image} alt={altText} class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                  )}
+                  <span class="typo-body font-normal text-white group-hover:text-brandAccent transition-colors block">{item.title}</span>
+                  {hasDesc && (
+                    <p class="typo-small font-light text-white/60">{item.desc}</p>
+                  )}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+
+        {panel.showFooterBar && (
+          <div class="mt-10 pt-6 flex flex-wrap items-center justify-between gap-y-2 typo-body font-light text-white/60">
+            <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+              {(site.brand.offices || []).map((office: any) => (
+                <span>{office.city} • {office.district}</span>
+              ))}
+              <a href={`mailto:${site.brand.email}`} class="hover:text-white">{site.brand.email}</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+              {(site.brand.social || []).map((s: any) => (
+                <a href={s.url} target="_blank" rel="noopener" class="hover:text-brandAccent">{s.label}</a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  ))}
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-drawer" class="lg:hidden hidden w-full bg-paletteRichBlack text-white px-6 py-4 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
+    <nav aria-label="Mobil Menü" class="flex flex-col justify-between">
+      <div class="flex flex-col space-y-1 text-[13.5px] font-normal">
+        {/* Çözümler Alt Sayfa Linkleri (Başlık Yok) */}
+        <a href="/cozumler/ai-destekli-cx" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.includes('/cozumler/ai-destekli-cx') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          AI Destekli CX
+        </a>
+        <a href="/cozumler/deneyim-tasarimi" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.includes('/cozumler/deneyim-tasarimi') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Deneyim Tasarımı
+        </a>
+        <a href="/cozumler/akademi" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.includes('/cozumler/akademi') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Akademi
+        </a>
+        <a href="/cozumler/cx-maturity-testi" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.includes('/cozumler/cx-maturity-testi') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Maturity Testi
+        </a>
+
+        {/* Ayırıcı ince çizgi */}
+        <div class="h-px bg-white/10 my-1"></div>
+
+        {/* Diğer Sayfalar */}
+        <a href="/projeler" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.startsWith('/projeler') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Projeler
+        </a>
+        <a href="/yaklasimimiz" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.startsWith('/yaklasimimiz') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Bizi Tanıyın
+        </a>
+        <a href="/yaklasimimiz" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.startsWith('/yaklasimimiz') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Yaklaşımımız
+        </a>
+        <a href="/ekibimiz" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.startsWith('/ekibimiz') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Ekibimiz
+        </a>
+        <a href="/blog" class={`py-1 px-2 hover:text-brandAccent transition-colors ${currentPath.startsWith('/blog') ? 'text-brandAccent bg-white/5 font-medium' : 'text-white/90'}`}>
+          Blog
+        </a>
+      </div>
+
+      {/* Görüşelim Butonu */}
+      <div class="pt-2.5 mt-2 border-t border-white/10">
+        <a
+          href={headerCfg.ctaHref || '/iletisim'}
+          class="btn-rect w-full py-2.5 bg-brandAccent hover:bg-brandAccentHover !text-white text-[14px] font-semibold text-center flex items-center justify-center"
+        >
+          {headerCfg.ctaLabel || 'Görüşelim'}
+        </a>
+      </div>
+    </nav>
+  </div>
+
+</header>
+)}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header');
+    const triggers = document.querySelectorAll('.nav-trigger');
+    const panels = document.querySelectorAll('.mega-dive-container');
+    let hideTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    function closeAllMega() {
+      triggers.forEach(t => t.classList.remove('active-trigger'));
+      panels.forEach(p => p.classList.remove('active-panel'));
+      if (header) header.classList.remove('has-active-mega');
+    }
+
+    triggers.forEach(trigger => {
+      const targetId = trigger.getAttribute('data-mega');
+      const targetPanel = targetId ? document.getElementById(targetId) : null;
+
+      trigger.addEventListener('mouseenter', () => {
+        if (hideTimeout) clearTimeout(hideTimeout);
+        closeAllMega();
+        trigger.classList.add('active-trigger');
+        if (targetPanel) {
+          targetPanel.classList.add('active-panel');
+          if (header) header.classList.add('has-active-mega');
+        }
+      });
+
+      trigger.addEventListener('mouseleave', () => {
+        hideTimeout = setTimeout(() => {
+          closeAllMega();
+        }, 150);
+      });
+
+      if (targetPanel) {
+        targetPanel.addEventListener('mouseenter', () => {
+          if (hideTimeout) clearTimeout(hideTimeout);
+          trigger.classList.add('active-trigger');
+          targetPanel.classList.add('active-panel');
+          if (header) header.classList.add('has-active-mega');
+        });
+
+        targetPanel.addEventListener('mouseleave', () => {
+          hideTimeout = setTimeout(() => {
+            closeAllMega();
+          }, 150);
+        });
+      }
+    });
+
+    // Hero scroll transition
+    const heroSec = document.getElementById('hero');
+    function handleHeaderScroll() {
+      if (!header) return;
+      if (header.classList.contains('solid-subpage')) return;
+
+      const heroHeight = heroSec ? heroSec.offsetHeight : window.innerHeight;
+      const scrollThreshold = heroHeight * 0.30;
+
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add('scrolled-header');
+      } else {
+        header.classList.remove('scrolled-header');
+      }
+    }
+
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-menu-drawer');
+    const iconOpen = document.getElementById('mobile-icon-open');
+    const iconClose = document.getElementById('mobile-icon-close');
+
+    function setMobileMenuOpen(open: boolean) {
+      if (!mobileBtn || !mobileDrawer) return;
+      mobileDrawer.classList.toggle('hidden', !open);
+      if (header) header.classList.toggle('mobile-menu-open', open);
+      if (iconOpen) {
+        iconOpen.classList.toggle('hidden', open);
+        iconOpen.classList.toggle('block', !open);
+      }
+      if (iconClose) {
+        iconClose.classList.toggle('hidden', !open);
+        iconClose.classList.toggle('block', open);
+      }
+      mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      mobileBtn.setAttribute('aria-label', open ? 'Menüyü Kapat' : 'Menüyü Aç');
+    }
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => {
+        const isClosed = mobileDrawer.classList.contains('hidden');
+        setMobileMenuOpen(isClosed);
+      });
+
+      mobileDrawer.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileDrawer.classList.contains('hidden')) {
+          setMobileMenuOpen(false);
+          mobileBtn.focus();
+        }
+      });
+    }
+  });
+</script>

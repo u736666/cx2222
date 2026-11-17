@@ -1,0 +1,21 @@
+---
+interface Props {
+  id?: string;
+  data: any;
+  style?: any;
+}
+
+const { id, data = {} } = Astro.props;
+const heightMap: Record<string, string> = {
+  sm: 'h-8 sm:h-12',
+  md: 'h-16 sm:h-24',
+  lg: 'h-24 sm:h-36',
+  xl: 'h-36 sm:h-48',
+};
+const hClass = heightMap[data.size || 'md'] || 'h-16 sm:h-24';
+const hasDivider = data.divider === true;
+---
+
+<div id={id} class={`w-full ${hClass} flex items-center justify-center`}>
+  {hasDivider && <div class="w-full border-t border-paletteDustGrey/40 max-w-custom mx-auto px-6 md:px-16" />}
+</div>

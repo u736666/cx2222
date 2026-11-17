@@ -1,0 +1,73 @@
+{
+  "slug": "garanti-bbva-yatirim",
+  "order": 3,
+  "client": "Garanti BBVA",
+  "sector": "",
+  "title": "Yatırımı davranışsal gerçekliğe taşımak",
+  "desc": "Finansal kararlardaki bilişsel önyargıları ve yatırımcı korkularını yöneten kullanıcı dostu mobil arayüz deneyimi. Yatırım yapmayı teknik bir işlemden hayat planına dönüştürdük.",
+  "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80",
+  "imageAlt": "Garanti BBVA Yatırım Deneyimi",
+  "listStyle": "brandAccent",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "Bilişsel Önyargı ve Risk Simülasyonu",
+    "Hızlı Prototipleme & Canlı Müşteri Testleri",
+    "Büyüme Odaklı Finansal Mikro-Akışlar"
+  ],
+  "seo": {
+    "title": "Garanti BBVA Yatırım Deneyimi Vaka Analizi | cx2222",
+    "description": "Bilişsel önyargı ve risk simülasyonu, hızlı prototipleme ve büyüme odaklı finansal mikro-akışlar.",
+    "headline": "Garanti BBVA - Yatırımı Davranışsal Gerçekliğe Taşımak",
+    "schemaDesc": "Finansal kararlardaki bilişsel önyargıları ve yatırımcı korkularını yöneten kullanıcı dostu mobil arayüz deneyimi.",
+    "breadcrumbName": "Garanti BBVA",
+    "aboutTopics": [],
+    "keyTakeaways": []
+  },
+  "metrics": [
+    {
+      "value": "2.8x",
+      "label": "İlk Yatırım Dönüşüm Artışı"
+    },
+    {
+      "value": "18",
+      "label": "Canlı Müşteri Test Turu"
+    },
+    {
+      "value": "%64",
+      "label": "İşlem Terk Etme Düşüşü"
+    },
+    {
+      "value": "4.7 / 5",
+      "label": "Kullanıcı Güven Skoru"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Zorluk",
+    "title": "\"Yatırım Uygulamaları Neden Sadece Borsa Brokerları İçin Tasarlanmış Gibi?\"",
+    "body": "Finansal okuryazarlık seviyesi ne olursa olsun, bireyler paralarını yönetirken derin bir kayıp korkusu (loss aversion) ve bilişsel felç yaşar. Karmaşık mum grafikleri, teknik kısaltmalar ve soğuk veri tabloları yeni yatırımcıları daha ilk ekranda korkutup sistemden uzaklaştırıyordu."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Mikro-Akışlar",
+    "title": "Davranışsal Ekonomi İle Tasarlanan Güvenli Yatırım Deneyimi",
+    "columns": 3,
+    "cards": [
+      {
+        "title": "Bilişsel Önyargı & Risk Simülasyonu",
+        "body": "Kullanıcıya soyut risk puanları sormak yerine, gerçek hayat senaryolarıyla karar eğilimlerini ölçen görsel simülasyonlar tasarladık.",
+        "style": "platinum"
+      },
+      {
+        "title": "Hızlı Prototipleme & Canlı Test",
+        "body": "18 ayrı prototip iterasyonu gerçek yatırımcı profilleriyle test edilerek jargon ve sürtünme sıfırlandı.",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Büyüme Odaklı Mikro-Akışlar",
+        "body": "Küçük adımlarla birikim yapmayı ödüllendiren, dalgalanma dönemlerinde panik satışını önleyen şefkatli bilgilendirme kartları kurgulandı.",
+        "style": "richBlack"
+      }
+    ]
+  },
+  "quote": "",
+  "isSample": true
+}
