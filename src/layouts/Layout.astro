@@ -130,6 +130,17 @@ const enrichedCustomSchemas = rawCustomSchemas.map((s) => ({
   mainEntity: s.mainEntity || geoExtras.mainEntity,
 }));
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  "url": siteUrl,
+  "name": site.brand.name,
+  "description": site.brand.orgDescription,
+  "publisher": { "@id": `${siteUrl}/#organization` },
+  "inLanguage": "tr-TR"
+};
+
 const webPageSchema = rawCustomSchemas.length === 0 ? {
   "@context": "https://schema.org",
   "@type": seo?.schemaType || "WebPage",
@@ -144,7 +155,8 @@ const webPageSchema = rawCustomSchemas.length === 0 ? {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", ".typo-lead"]
   },
-  "isPartOf": { "@id": `${siteUrl}/#organization` },
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "publisher": { "@id": `${siteUrl}/#organization` },
   ...geoExtras,
 } : null;
 
@@ -206,6 +218,7 @@ const homeFaqSchema = isHome ? {
 
 const allSchemas = [
   orgSchema,
+  websiteSchema,
   ...(breadcrumbSchema ? [breadcrumbSchema] : []),
   ...(webPageSchema ? [webPageSchema] : []),
   ...(homeFaqSchema ? [homeFaqSchema] : []),
