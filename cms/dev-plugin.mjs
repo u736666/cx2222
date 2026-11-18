@@ -415,12 +415,35 @@ async function syncBlockPages(rootDir, target, data) {
           const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
           if (d.content && typeof d.content === 'object') d.content.text = raw;
           else d.content = { text: raw };
-          const formatted = raw.includes('<p>') || raw.includes('<div>')
-            ? raw
-            : raw.split('\n\n').map(p => p.startsWith('•') ? `<li>${p.slice(1).trim()}</li>` : `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+          const subTag = d.subheadingTag || 'h3';
+          const subWeight = d.subheadingWeight || '400';
+          const subSize = d.subheadingSize || '20px';
+          const weightClass = subWeight === '700' ? 'font-bold' : (subWeight === '600' ? 'font-semibold' : (subWeight === '500' ? 'font-medium' : 'font-normal'));
+          let formatted = raw;
+          if (!raw.includes('<p>') && !raw.includes('<div>')) {
+            formatted = raw.split('\n\n').map(p => {
+              if (p.startsWith('•')) return `<li>${p.slice(1).trim()}</li>`;
+              if (/^#{2,4}\s+/.test(p)) {
+                const titleText = p.replace(/^#{2,4}\s+/, '');
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${titleText}</${subTag}>`;
+              }
+              if (/^\d+\.\s+[^\n]+$/.test(p)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${p}</${subTag}>`;
+              }
+              return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+            }).join('');
+          }
           for (const b of page.blocks || []) {
             if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
-            if (b.type === 'richText') b.data = { ...b.data, content: formatted || b.data?.content };
+            if (b.type === 'richText') {
+              b.data = { 
+                ...b.data, 
+                subheadingTag: subTag,
+                subheadingWeight: subWeight,
+                subheadingSize: subSize,
+                content: formatted || b.data?.content 
+              };
+            }
           }
         },
       },
@@ -432,12 +455,35 @@ async function syncBlockPages(rootDir, target, data) {
           const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
           if (d.content && typeof d.content === 'object') d.content.text = raw;
           else d.content = { text: raw };
-          const formatted = raw.includes('<p>') || raw.includes('<div>')
-            ? raw
-            : raw.split('\n\n').map(p => p.startsWith('•') ? `<li>${p.slice(1).trim()}</li>` : `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+          const subTag = d.subheadingTag || 'h3';
+          const subWeight = d.subheadingWeight || '400';
+          const subSize = d.subheadingSize || '20px';
+          const weightClass = subWeight === '700' ? 'font-bold' : (subWeight === '600' ? 'font-semibold' : (subWeight === '500' ? 'font-medium' : 'font-normal'));
+          let formatted = raw;
+          if (!raw.includes('<p>') && !raw.includes('<div>')) {
+            formatted = raw.split('\n\n').map(p => {
+              if (p.startsWith('•')) return `<li>${p.slice(1).trim()}</li>`;
+              if (/^#{2,4}\s+/.test(p)) {
+                const titleText = p.replace(/^#{2,4}\s+/, '');
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${titleText}</${subTag}>`;
+              }
+              if (/^\d+\.\s+[^\n]+$/.test(p)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${p}</${subTag}>`;
+              }
+              return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+            }).join('');
+          }
           for (const b of page.blocks || []) {
             if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
-            if (b.type === 'richText') b.data = { ...b.data, content: formatted || b.data?.content };
+            if (b.type === 'richText') {
+              b.data = { 
+                ...b.data, 
+                subheadingTag: subTag,
+                subheadingWeight: subWeight,
+                subheadingSize: subSize,
+                content: formatted || b.data?.content 
+              };
+            }
           }
         },
       },

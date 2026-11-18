@@ -5671,40 +5671,202 @@
         ctaCardEditorSection(root, il, 'pages', 'İletişim Sayfası — CTA Kartı (Opsiyonel)', false);
       }
 
+      function renderPolicyEditor(container, pageObj, target, pageTitle) {
+        if (!pageObj.hero) pageObj.hero = {};
+        if (!pageObj.subheadingTag) pageObj.subheadingTag = 'h3';
+        if (!pageObj.subheadingSize) pageObj.subheadingSize = '20px';
+        if (!pageObj.subheadingWeight) pageObj.subheadingWeight = '400';
+        if (!pageObj.text && pageObj.content) {
+          pageObj.text = typeof pageObj.content === 'object' ? (pageObj.content.text || '') : pageObj.content;
+        }
+
+        const card = el('div', { className: 'card' });
+        card.appendChild(el('div', { className: 'card-header' }, [
+          el('h3', { className: 'card-title', text: pageTitle })
+        ]));
+
+        // 1. Hero & Başlık Alanları
+        card.appendChild(el('div', { className: 'grid-2' }, [
+          fieldInput('Üst Başlık (Eyebrow)', pageObj.hero, 'eyebrow', target),
+          fieldInput('Sayfa Başlığı (H1)', pageObj.hero, 'title', target),
+        ]));
+        card.appendChild(fieldInput('Giriş Açıklaması', pageObj.hero, 'desc', target, { multiline: true, rows: 3 }));
+
+        // 2. Alt Başlık Nitelikleri (H-Etiketi, Boyut, Kalınlık Seçimi)
+        const subHeadCard = el('div', {
+          style: 'margin: 18px 0; padding: 14px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px;'
+        });
+        subHeadCard.appendChild(el('div', {
+          style: 'font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;',
+          text: '⚙️ Alt Başlık Nitelikleri (Yeni ve Mevcut Başlıkların Biçimi)'
+        }));
+        
+        const subGrid = el('div', { className: 'grid-3' });
+        
+        // H-Etiketi
+        subGrid.appendChild(fieldSelect('Alt Başlık H-Etiketi', pageObj, 'subheadingTag', [
+          { value: 'h2', label: 'H2 — Bölüm Başlığı' },
+          { value: 'h3', label: 'H3 — Alt Başlık (Önerilen)' },
+          { value: 'h4', label: 'H4 — Küçük Başlık' }
+        ], target));
+
+        // Boyut
+        subGrid.appendChild(fieldSelect('Alt Başlık Yazı Boyutu', pageObj, 'subheadingSize', [
+          { value: '18px', label: '18 px' },
+          { value: '20px', label: '20 px (Standart)' },
+          { value: '22px', label: '22 px' },
+          { value: '24px', label: '24 px' }
+        ], target));
+
+        // Kalınlık (Weight) - Bold olmasın seçeneği varsayılan!
+        subGrid.appendChild(fieldSelect('Alt Başlık Kalınlığı', pageObj, 'subheadingWeight', [
+          { value: '400', label: 'Normal (400) — Bold Değil' },
+          { value: '500', label: 'Medium (500) — Hafif Belirgin' },
+          { value: '600', label: 'Semibold (600) — Yarı Kalın' },
+          { value: '700', label: 'Bold (700) — Kalın' }
+        ], target));
+
+        subHeadCard.appendChild(subGrid);
+        card.appendChild(subHeadCard);
+
+        // 3. Rich Text Alanı ve Hızlı Başlık Araç Çubuğu
+        const textSection = el('div', { style: 'margin-top: 14px;' });
+        
+        // Araç Çubuğu
+        const toolbar = el('div', {
+          style: 'display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 8px 12px; background: #f1f5f9; border: 1px solid #cbd5e1; border-bottom: 0; border-radius: 4px 4px 0 0;'
+        });
+
+        toolbar.appendChild(el('span', {
+          style: 'font-size: 11px; font-weight: 700; color: #475569; margin-right: 4px;',
+          text: 'Hızlı Ekle:'
+        }));
+
+        function insertIntoTextarea(inp, insertBefore, insertAfter = '') {
+          const sStart = inp.selectionStart ?? 0;
+          const sEnd = inp.selectionEnd ?? 0;
+          const cur = inp.value;
+          const selected = cur.substring(sStart, sEnd);
+          const replacement = insertBefore + (selected || 'Yeni Başlık') + insertAfter;
+          inp.value = cur.substring(0, sStart) + replacement + cur.substring(sEnd);
+          inp.focus();
+          inp.setSelectionRange(sStart + insertBefore.length, sStart + replacement.length - insertAfter.length);
+          inp.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        // Buton: Alt Başlık Ekle
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 600; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: '+ H3 Alt Başlık',
+          title: 'Yeni H3 alt başlık ekle',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) insertIntoTextarea(textarea, '\n\n<h3>', '</h3>\n');
+          }
+        }));
+
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 600; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: '+ H2 Bölüm Başlığı',
+          title: 'Yeni H2 başlık ekle',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) insertIntoTextarea(textarea, '\n\n<h2>', '</h2>\n');
+          }
+        }));
+
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 600; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: '+ H4 Küçük Başlık',
+          title: 'Yeni H4 küçük başlık ekle',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) insertIntoTextarea(textarea, '\n\n<h4>', '</h4>\n');
+          }
+        }));
+
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 800; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: 'B (Kalın)',
+          title: 'Seçili metni kalın yap',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) insertIntoTextarea(textarea, '<b>', '</b>');
+          }
+        }));
+
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 600; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: '• Liste',
+          title: 'Maddeli liste şablonu ekle',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) {
+              const sStart = textarea.selectionStart ?? 0;
+              const cur = textarea.value;
+              const template = '\n\n<ul>\n  <li>Madde 1</li>\n  <li>Madde 2</li>\n</ul>\n';
+              textarea.value = cur.substring(0, sStart) + template + cur.substring(sStart);
+              textarea.focus();
+              textarea.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+          }
+        }));
+
+        toolbar.appendChild(el('button', {
+          type: 'button',
+          className: 'fmt-btn',
+          style: 'font-weight: 600; font-size: 12px; padding: 4px 10px; background: #ffffff; border: 1px solid #94a3b8; color: #0f172a;',
+          text: '↵ Paragraf',
+          title: 'Yeni paragraf şablonu ekle',
+          onClick: (e) => {
+            e.preventDefault();
+            const textarea = textSection.querySelector('textarea');
+            if (textarea) insertIntoTextarea(textarea, '\n\n<p>', '</p>\n');
+          }
+        }));
+
+        textSection.appendChild(toolbar);
+
+        const textareaField = fieldInput('Açıklama / Metin (HTML, Başlık ve Liste Destekli)', pageObj, 'text', target, {
+          multiline: true,
+          rows: 18,
+          style: 'border-top-left-radius: 0; border-top-right-radius: 0;'
+        });
+        textSection.appendChild(textareaField);
+
+        // Rehber Kutusu
+        textSection.appendChild(el('div', {
+          style: 'margin-top: 8px; font-size: 12px; color: #64748b; line-height: 1.5; padding: 8px 12px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 0 4px 4px 0;',
+          innerHTML: '<strong>💡 Başlık Ekleme ve Düzenleme:</strong> Yeni bir başlık eklemek için yukarıdaki <code>+ H3 Alt Başlık</code> veya <code>+ H2 Bölüm Başlığı</code> butonlarına basabilir ya da doğrudan metin içerisine <code>&lt;h3&gt;Başlığınız&lt;/h3&gt;</code> yazabilirsiniz. Başlıkların kalınlığı (bold/normal) ve boyutu yukarıdaki <em>Alt Başlık Nitelikleri</em> alanından kontrol edilir.'
+        }));
+
+        card.appendChild(textSection);
+        container.appendChild(card);
+      }
+
       if (UI.pagesSub === 'gizlilikPolitikasi') {
         if (!pages.gizlilikPolitikasi) pages.gizlilikPolitikasi = { hero: { title: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' }, content: { text: '' }, text: '' };
-        const gp = pages.gizlilikPolitikasi;
-        if (!gp.hero) gp.hero = {};
-        if (!gp.text && gp.content) {
-          gp.text = typeof gp.content === 'object' ? (gp.content.text || '') : gp.content;
-        }
-        const gpCard = el('div', { className: 'card' });
-        gpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' })]));
-        gpCard.appendChild(el('div', { className: 'grid-2' }, [
-          fieldInput('Üst Başlık (Eyebrow)', gp.hero, 'eyebrow', 'pages'),
-          fieldInput('Sayfa Başlığı (H1)', gp.hero, 'title', 'pages'),
-        ]));
-        gpCard.appendChild(fieldInput('Giriş Açıklaması', gp.hero, 'desc', 'pages', { multiline: true, rows: 3 }));
-        gpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', gp, 'text', 'pages', { multiline: true, rows: 16 }));
-        root.appendChild(gpCard);
+        renderPolicyEditor(root, pages.gizlilikPolitikasi, 'pages', 'Gizlilik Politikası ve KVKK Aydınlatma Metni');
       }
 
       if (UI.pagesSub === 'cerezPolitikasi') {
         if (!pages.cerezPolitikasi) pages.cerezPolitikasi = { hero: { title: 'Çerez Politikası' }, content: { text: '' }, text: '' };
-        const cp = pages.cerezPolitikasi;
-        if (!cp.hero) cp.hero = {};
-        if (!cp.text && cp.content) {
-          cp.text = typeof cp.content === 'object' ? (cp.content.text || '') : cp.content;
-        }
-        const cpCard = el('div', { className: 'card' });
-        cpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Çerez Politikası Metni' })]));
-        cpCard.appendChild(el('div', { className: 'grid-2' }, [
-          fieldInput('Üst Başlık (Eyebrow)', cp.hero, 'eyebrow', 'pages'),
-          fieldInput('Sayfa Başlığı (H1)', cp.hero, 'title', 'pages'),
-        ]));
-        cpCard.appendChild(fieldInput('Giriş Açıklaması', cp.hero, 'desc', 'pages', { multiline: true, rows: 3 }));
-        cpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', cp, 'text', 'pages', { multiline: true, rows: 16 }));
-        root.appendChild(cpCard);
+        renderPolicyEditor(root, pages.cerezPolitikasi, 'pages', 'Çerez Politikası Metni');
       }
 
       if (UI.pagesSub === 'notFound') {

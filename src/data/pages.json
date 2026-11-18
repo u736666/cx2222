@@ -1201,6 +1201,9 @@
     }
   },
   "gizlilikPolitikasi": {
+    "subheadingTag": "h3",
+    "subheadingSize": "20px",
+    "subheadingWeight": "400",
     "seo": {
       "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni | CX Folks",
       "description": "CX Folks kişisel verilerinizin güvenliğine ve gizliliğine önem verir. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki aydınlatma metnimiz.",
@@ -1232,6 +1235,9 @@
     "text": "1. Veri Sorumlusu\n6698 sayılı Kanun uyarınca 'Veri Sorumlusu', CX Folks şirketidir. Kişisel verileriniz veri sorumlusu güvencesiyle kanuni sınırlar çerçevesinde işlenmektedir.\n\n2. Kişisel Verilerin İşlenme Amaçları\nWeb sitemiz üzerinden paylaştığınız ad, soyad, e-posta, kurum bilgisi ve iletişim formu mesajları; keşif seansı planlama, danışmanlık taleplerinizi yanıtlama, bülten ve içgörü içeriklerimizi ulaştırma ve yasal yükümlülüklerimizi yerine getirme amaçlarıyla sınırlı olarak işlenir.\n\n3. Veri Aktarımı ve Üçüncü Taraflar\nKişisel verileriniz hiçbir koşulda ticari amaçla satılmaz veya kiralanmaz. Yalnızca yasal zorunluluklar gereği yetkili kamu kurumlarına ve teknik barındırma/iletişim altyapısını sağlayan güvenilir servis sağlayıcılarımıza kanuni sınırlar çerçevesinde aktarılabilir.\n\n4. Veri Sahibinin Hakları (KVKK Madde 11)\nKVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.\n\n5. Başvuru ve İletişim\nHaklarınıza ilişkin taleplerinizi hello@cxfolks.com e-posta adresimize yazılı olarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde yasal mevzuata uygun şekilde sonuçlandırılacaktır."
   },
   "cerezPolitikasi": {
+    "subheadingTag": "h3",
+    "subheadingSize": "20px",
+    "subheadingWeight": "400",
     "seo": {
       "title": "Çerez Politikası (Cookie Policy) | CX Folks",
       "description": "CX Folks web sitesinde kullanılan çerez türleri, kullanım amaçları ve çerez tercihlerinizi nasıl yönetebileceğinize ilişkin bilgilendirme.",
