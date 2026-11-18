@@ -63,61 +63,68 @@
   "megaMenus": [
     {
       "id": "mega-hakkimizda",
-      "label": "Hakkımızda Mega Menü",
+      "label": "Bizi Tanıyın Mega Menü",
       "title": "Dönüşüm bir proje değil, yaşayan bir yolculuktur",
       "desc": "Yapay zekanın hızını insanın derin sezgisiyle birleştiriyor; kurum kültüründen dijital temas noktalarına kadar kalıcı değer üretiyoruz.",
-      "ctaText": "Görüşme Talep Edin →",
+      "ctaText": "Görüşelim →",
       "ctaHref": "/iletisim",
       "showFooterBar": true,
       "items": [
         {
           "title": "Yaklaşımımız",
-          "desc": "Kısa açıklama",
+          "desc": "İnsan odaklı müşteri deneyimi ve yapay zeka entegrasyonu",
           "href": "/yaklasimimiz",
           "image": "/images/uploads/edited-edited-mwdmc5fq.jpg",
-          "alt": "Kart Görseli"
+          "alt": "Yaklaşımımız"
         },
         {
           "title": "Ekibimiz",
-          "desc": "Kısa açıklama",
+          "desc": "Çok disiplinli CX ve yapay zeka uzman kadromuz",
           "href": "/ekibimiz",
           "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-          "alt": "Kart Görseli"
+          "alt": "Ekibimiz"
         },
         {
           "title": "İnsan Odaklılık",
-          "desc": "Çalışan ve müşterinin hissettiği gerçek duyguları hizalayan stratejik rehberlik.",
+          "desc": "Müşterinin söylenmemiş ihtiyaçlarını ortaya çıkaran derin dinleme.",
           "href": "/yaklasimimiz#insan-odaklilik",
           "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
           "alt": "İnsan Odaklılık"
         },
         {
-          "title": "cx2222 Northstar",
-          "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
+          "title": "Deneyim Odaklı AI Entegrasyonu",
+          "desc": "Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.",
           "href": "/yaklasimimiz#northstar-cx",
           "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80",
-          "alt": "cx2222 Northstar"
+          "alt": "Deneyim Odaklı AI Entegrasyonu"
         },
         {
-          "title": "Proaktif Empati",
-          "desc": "Satış yerine destek sunan, müşterinin stres sinyallerini algılayan sistem kurgusu.",
+          "title": "Northstar CX Mimarisi",
+          "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
           "href": "/yaklasimimiz#proaktif-empati",
           "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=500&q=80",
-          "alt": "Proaktif Empati"
+          "alt": "Northstar CX Mimarisi"
         },
         {
-          "title": "Kalıcı Kültür",
-          "desc": "Sadece rapor üretmeyen, kurum içine nüfuz eden sürdürülebilir çalışma modelleri.",
+          "title": "Müşteri Odaklı Kültür & EX-CX",
+          "desc": "Çalışan deneyimi olmadan müşteri deneyimi yaşayamaz.",
           "href": "/yaklasimimiz#kalici-kultur",
           "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80",
-          "alt": "Kalıcı Kültür"
+          "alt": "Müşteri Odaklı Kültür & EX-CX"
+        },
+        {
+          "title": "Uygulanabilir Çözümler",
+          "desc": "Sunumda kalan projeler kaynak israfıdır; sahada uygulanan çözümler.",
+          "href": "/yaklasimimiz#uygulanabilir-cozumler",
+          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
+          "alt": "Uygulanabilir Çözümler"
         },
         {
           "title": "Blog",
-          "desc": "Kısa açıklama",
+          "desc": "Deneyim tasarımı ve yapay zeka makaleleri",
           "href": "/blog",
           "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80",
-          "alt": "Kart Görseli"
+          "alt": "Blog"
         }
       ]
     },
@@ -149,7 +156,7 @@
           "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
           "href": "/cozumler/akademi",
           "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80",
-          "alt": "cx2222 Akademi"
+          "alt": "CX Folks Akademi"
         },
         {
           "title": "Maturity Testi",
@@ -249,14 +256,14 @@
     "showOffices": false,
     "extraNote": "",
     "credits": {
-      "show": true,
-      "prefix": "Made by: ",
-      "text": "Ediz Pinar -Studio™",
-      "url": "https://edizpinar.com"
+      "show": false,
+      "prefix": "",
+      "text": "",
+      "url": ""
     },
     "links": [
       {
-        "label": "Yaklaşımımız",
+        "label": "Bizi Tanıyın",
         "href": "/yaklasimimiz"
       },
       {
@@ -291,14 +298,14 @@
   "ctaLibrary": [
     {
       "id": "default-consulting",
-      "name": "Genel Danışmanlık & Ön Görüşme CTA",
+      "name": "AI",
       "eyebrow": "Birlikte Başlayalım",
-      "title": "Nereden başlayacağınızı birlikte belirleyelim2",
-      "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
-      "primaryLabel": "Görüşme Planlayın →",
+      "title": "Şirketinizin Sesini Aksiyona Dönüştürelim",
+      "desc": "Müşteri deneyimi yönetim yapınızı, hedeflerinizi analiz edelim,insan odaklı yapay zeka uygulamalarına nasıl geçebileceğinizi planlayalım.",
+      "primaryLabel": "Görüşelim →",
       "primaryHref": "/iletisim",
-      "secondaryLabel": "Maturity Testi →",
-      "secondaryHref": "/cozumler/cx-maturity-testi",
+      "secondaryLabel": "",
+      "secondaryHref": "",
       "surface": "richBlack",
       "bgColor": "",
       "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
@@ -364,7 +371,7 @@
     "descRequired": false,
     "showConsentCheckbox": false,
     "consentText": "Kişisel verilerimin iletişim amacıyla işlenmesini onaylıyorum.",
-    "submitLabel": "Görüşme Planlayın →",
+    "submitLabel": "Görüşelim →",
     "submittingLabel": "Gönderiliyor...",
     "successMessage": "✓ Talebiniz başarıyla alındı. 24 saat içinde sizinle iletişime geçeceğiz.",
     "errorMessage": "Gönderim sırasında bir hata oluştu, lütfen tekrar deneyin.",
@@ -372,7 +379,7 @@
     "topics": [
       {
         "value": "ai",
-        "label": "AI ile Müşteri Deneyimi"
+        "label": "AI Müşteri Deneyimi"
       },
       {
         "value": "tasarim",
@@ -380,11 +387,11 @@
       },
       {
         "value": "akademi",
-        "label": "cx2222 Akademi"
+        "label": "CX Folks Eğitimleri"
       },
       {
         "value": "maturity",
-        "label": "Maturity Assessment"
+        "label": "CX Folks Maturity Testi"
       },
       {
         "value": "on-gorusme",

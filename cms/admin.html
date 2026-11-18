@@ -3781,9 +3781,17 @@
           el('h3', { className: 'card-title', text: 'Bölüm Başlığı (3 Satır)' }),
           el('p', { className: 'card-sub', text: 'Bölüm ana başlığı ve punto boyutu.' })
         ]));
-        headCard.appendChild(el('div', { className: 'grid-2' }, [
+        headCard.appendChild(el('div', { className: 'grid-3' }, [
           headingTagSelect('Bölüm Başlığı H-Etiketi', ss, 'headingTag', 'home', 'h2'),
           fieldInput('Bölüm Başlığı Punto Boyutu (px)', ss, 'headingSize', 'home', { placeholder: 'Örn: 42' }),
+          fieldSelect('Bölüm Başlığı Font Kalınlığı (Weight)', ss, 'headingWeight', [
+            { value: '', label: '(Varsayılan: 300 / Light)' },
+            { value: '300', label: '300 (Light)' },
+            { value: '400', label: '400 (Normal)' },
+            { value: '500', label: '500 (Medium)' },
+            { value: '600', label: '600 (Semibold)' },
+            { value: '700', label: '700 (Bold)' },
+          ], 'home'),
         ]));
         headCard.appendChild(stringListEditor('Satırlar', ss.headingLines, 'home'));
         root.appendChild(headCard);
@@ -4165,6 +4173,45 @@
       baseCard.appendChild(imagePickerField('Proje Ana Görseli', proj, 'image', 'projects'));
       baseCard.appendChild(stringListEditor('Öne Çıkan Maddeler (Ana Sayfa & Liste Kartı)', proj.bullets, 'projects', null, { styleObj: proj, prefix: 'bullets' }));
       editorCol.appendChild(baseCard);
+
+      // Proje Detay Ek Görselleri (2. ve 3. Görsel)
+      const extraImagesCard = el('div', { className: 'card' });
+      extraImagesCard.appendChild(el('div', { className: 'card-header' }, [
+        el('div', {}, [
+          el('h3', { className: 'card-title', text: 'Proje Detay Sayfası Ek Görselleri (2. ve 3. Görsel)' }),
+          el('p', { className: 'card-sub', text: 'Yazıların veya bölümlerin arasında gösterilecek ek görselleri seçebilir ve metinler arasındaki yerleşimini belirleyebilirsiniz.' }),
+        ])
+      ]));
+
+      const POS_OPTIONS = [
+        { value: 'afterChallenge', label: '1. "Zorluk / Çıkış Noktası" Bölümünün Altında' },
+        { value: 'afterSolution', label: '2. "Çözüm & Bulgular" Kartlarının Altında' },
+        { value: 'afterQuote', label: '3. "Müşteri Alıntısı" Kartının Altında' },
+        { value: 'afterContent', label: '4. "Genel Metin Bloğu" Altında' },
+        { value: 'end', label: '5. Sayfa En Altında (Blog/CTA Öncesi)' },
+      ];
+
+      // Görsel 2
+      const img2Wrap = el('div', { style: 'padding:12px;background:var(--bg-light);border:1px solid var(--border);border-radius:4px;margin-bottom:12px;' });
+      img2Wrap.appendChild(el('strong', { style: 'display:block;font-size:12px;margin-bottom:8px;color:var(--dark);', text: '2. Görsel Ayarları:' }));
+      img2Wrap.appendChild(imagePickerField('2. Görsel', proj, 'image2', 'projects'));
+      img2Wrap.appendChild(el('div', { className: 'grid-2' }, [
+        fieldSelect('2. Görselin Sayfadaki Konumu', proj, 'image2Position', POS_OPTIONS, 'projects'),
+        fieldInput('2. Görsel Alt Açıklaması (Alt Text)', proj, 'image2Alt', 'projects', { placeholder: 'Görsel açıklaması' }),
+      ]));
+      extraImagesCard.appendChild(img2Wrap);
+
+      // Görsel 3
+      const img3Wrap = el('div', { style: 'padding:12px;background:var(--bg-light);border:1px solid var(--border);border-radius:4px;' });
+      img3Wrap.appendChild(el('strong', { style: 'display:block;font-size:12px;margin-bottom:8px;color:var(--dark);', text: '3. Görsel Ayarları:' }));
+      img3Wrap.appendChild(imagePickerField('3. Görsel', proj, 'image3', 'projects'));
+      img3Wrap.appendChild(el('div', { className: 'grid-2' }, [
+        fieldSelect('3. Görselin Sayfadaki Konumu', proj, 'image3Position', POS_OPTIONS, 'projects'),
+        fieldInput('3. Görsel Alt Açıklaması (Alt Text)', proj, 'image3Alt', 'projects', { placeholder: 'Görsel açıklaması' }),
+      ]));
+      extraImagesCard.appendChild(img3Wrap);
+
+      editorCol.appendChild(extraImagesCard);
 
       const mCard = el('div', { className: 'card' });
       const mHead = el('div', { className: 'card-header' });
@@ -4580,13 +4627,13 @@
         const b1 = el('button', {
           type: 'button',
           className: `btn ${UI.yaklasimTab === 'tab-yaklasim' ? 'btn-primary' : 'btn-secondary'}`,
-          text: '1. Sekme: Yaklaşımımız (4 Temel Prensip)',
+          text: `1. Sekme: Yaklaşımımız (${d.pillars.length} Prensip)`,
           onClick: () => { UI.yaklasimTab = 'tab-yaklasim'; renderWorkspace(); }
         });
         const b2 = el('button', {
           type: 'button',
           className: `btn ${UI.yaklasimTab === 'tab-manifesto' ? 'btn-primary' : 'btn-secondary'}`,
-          text: '2. Sekme: Manifestomuz (4 Temel İlke)',
+          text: `2. Sekme: Manifestomuz (${d.manifesto.items.length} İlke)`,
           onClick: () => { UI.yaklasimTab = 'tab-manifesto'; renderWorkspace(); }
         });
         tabBtnRow.appendChild(b1);
@@ -4595,10 +4642,51 @@
 
         if (UI.yaklasimTab === 'tab-yaklasim') {
           const pc = el('div');
-          pc.appendChild(el('h4', { style: 'font-size:14px;font-weight:700;margin-bottom:12px;color:var(--dark);', text: 'Yaklaşımımız — 4 Temel Prensip:' }));
+          const pcHead = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;' }, [
+            el('h4', { style: 'font-size:14px;font-weight:700;color:var(--dark);margin:0;', text: `Yaklaşımımız — Temel Prensipler (${d.pillars.length} Kart):` }),
+            el('button', {
+              type: 'button',
+              className: 'btn btn-primary btn-sm',
+              text: '+ Yeni Prensip Kartı Ekle',
+              onClick: () => {
+                const nextNum = d.pillars.length + 1;
+                d.pillars.push({
+                  num: nextNum < 10 ? `0${nextNum}` : `${nextNum}`,
+                  title: 'Yeni Prensip',
+                  tagline: 'Yeni Prensip Sloganı',
+                  p1: 'Prensip detay metni birinci paragraf.',
+                  p2: 'Prensip detay metni ikinci paragraf.',
+                  iconBg: 'platinum'
+                });
+                markDirty('pages');
+                renderWorkspace();
+              }
+            })
+          ]);
+          pc.appendChild(pcHead);
+
           d.pillars.forEach((p, i) => {
             const r = el('div', { className: 'repeater-item' });
-            r.appendChild(el('div', { className: 'repeater-head' }, [el('span', { className: 'repeater-label', text: `0${i + 1} / ${p.title}` })]));
+            const rHead = el('div', { className: 'repeater-head' }, [
+              el('span', { className: 'repeater-label', text: `0${i + 1} / ${p.title || 'Prensip'}` }),
+              el('button', {
+                type: 'button',
+                className: 'btn btn-danger btn-sm',
+                style: 'padding:2px 8px;font-size:11px;',
+                text: 'Kartı Sil',
+                onClick: () => {
+                  if (d.pillars.length <= 1) {
+                    alert('En az 1 prensip kartı kalmalıdır.');
+                    return;
+                  }
+                  if (!confirm(`"${p.title || 'Bu kart'}" prensibini silmek istediğinize emin misiniz?`)) return;
+                  d.pillars.splice(i, 1);
+                  markDirty('pages');
+                  renderWorkspace();
+                }
+              })
+            ]);
+            r.appendChild(rHead);
             r.appendChild(el('div', { className: 'grid-2' }, [
               fieldInput('Başlık', p, 'title', 'pages'),
               fieldInput('Vurgulu Slogan', p, 'tagline', 'pages'),
@@ -4624,13 +4712,53 @@
           tabSwitcherCard.appendChild(pc);
         } else {
           const mcContent = el('div');
-          mcContent.appendChild(el('h4', { style: 'font-size:14px;font-weight:700;margin-bottom:12px;color:var(--dark);', text: 'Manifestomuz — Başlık ve 4 İlke:' }));
+          const mcHead = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;' }, [
+            el('h4', { style: 'font-size:14px;font-weight:700;color:var(--dark);margin:0;', text: `Manifestomuz — Temel İlkeler (${d.manifesto.items.length} Kart):` }),
+            el('button', {
+              type: 'button',
+              className: 'btn btn-primary btn-sm',
+              text: '+ Yeni İlke Kartı Ekle',
+              onClick: () => {
+                const nextNum = d.manifesto.items.length + 1;
+                d.manifesto.items.push({
+                  num: nextNum < 10 ? `0${nextNum}` : `${nextNum}`,
+                  title: 'Yeni İlke',
+                  tagline: 'Yeni İlke Sloganı',
+                  p1: 'İlke açıklama metni birinci paragraf.',
+                  p2: 'İlke açıklama metni ikinci paragraf.',
+                  iconBg: 'platinum'
+                });
+                markDirty('pages');
+                renderWorkspace();
+              }
+            })
+          ]);
+          mcContent.appendChild(mcHead);
           mcContent.appendChild(fieldInput('Manifesto Başlığı', d.manifesto, 'title', 'pages'));
           mcContent.appendChild(fieldInput('Manifesto Açıklaması', d.manifesto, 'desc', 'pages', { multiline: true }));
 
           d.manifesto.items.forEach((mItem, mIdx) => {
             const r = el('div', { className: 'repeater-item' });
-            r.appendChild(el('div', { className: 'repeater-head' }, [el('span', { className: 'repeater-label', text: `0${mIdx + 1} / ${mItem.title}` })]));
+            const rHead = el('div', { className: 'repeater-head' }, [
+              el('span', { className: 'repeater-label', text: `0${mIdx + 1} / ${mItem.title || 'İlke'}` }),
+              el('button', {
+                type: 'button',
+                className: 'btn btn-danger btn-sm',
+                style: 'padding:2px 8px;font-size:11px;',
+                text: 'Kartı Sil',
+                onClick: () => {
+                  if (d.manifesto.items.length <= 1) {
+                    alert('En az 1 ilke kartı kalmalıdır.');
+                    return;
+                  }
+                  if (!confirm(`"${mItem.title || 'Bu kart'}" ilkesini silmek istediğinize emin misiniz?`)) return;
+                  d.manifesto.items.splice(mIdx, 1);
+                  markDirty('pages');
+                  renderWorkspace();
+                }
+              })
+            ]);
+            r.appendChild(rHead);
             r.appendChild(el('div', { className: 'grid-2' }, [
               fieldInput('İlke Başlığı', mItem, 'title', 'pages'),
               fieldInput('Vurgulu Slogan', mItem, 'tagline', 'pages'),
@@ -4780,13 +4908,13 @@
           r.appendChild(quoteToggle);
 
           if (m.isQuoteCard) {
+            r.appendChild(fieldInput('1. Üst Rozet / Vurgu Başlığı (Örn: cx2222 İLKESİ — Boş bırakılırsa gizlenir)', m, 'quoteAuthor', 'pages', { placeholder: 'Örn: cx2222 İLKESİ' }));
+            r.appendChild(fieldInput('2. Büyük Alıntı Cümlesi (Boş bırakılırsa alıntı gizlenir)', m, 'quote', 'pages', { multiline: true, placeholder: 'Müşterinin sesini duymak yetmez...' }));
             r.appendChild(el('div', { className: 'grid-2' }, [
-              fieldInput('Pill İsim / Başlık', m, 'name', 'pages'),
-              fieldInput('Alt Unvan / Açıklama', m, 'role', 'pages'),
+              fieldInput('3. Alt İsim / İmza (Örn: cx2222 Ekibi — Boş bırakılırsa gizlenir)', m, 'name', 'pages', { placeholder: 'cx2222 Ekibi' }),
+              fieldInput('4. Alt Unvan / Açıklama (Örn: Deneyim ve Sezgi Manifestosu — Boş bırakılırsa gizlenir)', m, 'role', 'pages', { placeholder: 'Deneyim ve Sezgi Manifestosu' }),
             ]));
-            r.appendChild(fieldInput('Alıntı Cümlesi', m, 'quote', 'pages', { multiline: true }));
             r.appendChild(el('div', { className: 'grid-2' }, [
-              fieldInput('Alıntı Sahibi', m, 'quoteAuthor', 'pages'),
               fieldSelect('Kart Arka Plan Rengi (Tema Paleti)', m, 'bgColor', [
                 { value: 'brandAccent', label: 'Turuncu / Mercan (brandAccent — Aktif)' },
                 { value: '#BEF264', label: 'Açık Yeşil / Lime (#BEF264)' },
@@ -4795,14 +4923,15 @@
                 { value: 'richBlack', label: 'Koyu Siyah (#111111)' },
                 { value: 'siteBg', label: 'Beyaz (#FFFFFF)' },
               ], 'pages'),
-            ]));
-            r.appendChild(el('div', { className: 'grid-2' }, [
-              fieldSelect('Turuncu Kart Genişliği / Sütun Yayılımı', m, 'cardSpan', [
+              fieldSelect('Kart Genişliği / Kolon Yayılımı', m, 'cardSpan', [
                 { value: '1', label: '1 Sütun (Standart Fotoğraf Boyutu)' },
                 { value: '2', label: '2 Sütun (Geniş Vurgu Kartı — 2 Kolon)' },
                 { value: 'full', label: 'Tam Sıra (Tüm Genişlik / Full Width Satır)' },
               ], 'pages'),
-              fieldInput('LinkedIn Profili (Opsiyonel)', m, 'linkedin', 'pages', { placeholder: 'https://linkedin.com/in/...' }),
+            ]));
+            r.appendChild(el('div', { className: 'grid-2' }, [
+              fieldInput('LinkedIn URL (Opsiyonel — Sağ üstte ikon olarak görünür ve yeni sekmede açılır)', m, 'linkedin', 'pages', { placeholder: 'https://linkedin.com/...' }),
+              fieldInput('Özel İsim Boyutu (px)', m, 'nameSize', 'pages', { placeholder: 'Örn: 16' }),
             ]));
           } else {
             r.appendChild(el('div', { className: 'grid-2' }, [
@@ -4810,14 +4939,13 @@
               fieldInput('Unvan / Rol', m, 'role', 'pages'),
             ]));
             r.appendChild(imagePickerField('Portre Fotoğrafı', m, 'image', 'pages'));
+            r.appendChild(fieldInput('Özel İsim Boyutu (px)', m, 'nameSize', 'pages', { placeholder: 'Örn: 16' }));
+
+            const socialRow = el('div', { className: 'grid-2', style: 'margin-top:6px;' });
+            socialRow.appendChild(fieldInput('LinkedIn URL (Görsel ve linke tıklayınca yeni sekmede açılır)', m, 'linkedin', 'pages', { placeholder: 'https://linkedin.com/in/...' }));
+            socialRow.appendChild(fieldInput('Twitter / X URL (Opsiyonel)', m, 'twitter', 'pages', { placeholder: 'https://twitter.com/...' }));
+            r.appendChild(socialRow);
           }
-
-          r.appendChild(fieldInput('Özel İsim Boyutu (px)', m, 'nameSize', 'pages', { placeholder: 'Örn: 16' }));
-
-          const socialRow = el('div', { className: 'grid-2', style: 'margin-top:6px;' });
-          socialRow.appendChild(fieldInput('LinkedIn URL (Opsiyonel)', m, 'linkedin', 'pages', { placeholder: 'https://linkedin.com/in/...' }));
-          socialRow.appendChild(fieldInput('Twitter / X URL (Opsiyonel)', m, 'twitter', 'pages', { placeholder: 'https://twitter.com/...' }));
-          r.appendChild(socialRow);
 
           mc.appendChild(r);
         });
@@ -4892,17 +5020,59 @@
         root.appendChild(hc);
 
         const cc = el('div', { className: 'card' });
-        cc.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: '4 Yetkinlik Kutusu' })]));
+        const ccHead = el('div', { className: 'card-header' });
+        ccHead.appendChild(el('div', {}, [
+          el('h3', { className: 'card-title', text: `Yetkinlik Kutuları (${d.capabilities.length} Kutu)` }),
+          el('p', { className: 'card-sub', text: 'Sayfadaki yetkinlik kutularını düzenleyebilir, yeni kutu ekleyebilir veya silebilirsiniz.' }),
+        ]));
+        ccHead.appendChild(el('button', {
+          type: 'button',
+          className: 'btn btn-primary btn-sm',
+          text: '+ Yeni Yetkinlik Ekle',
+          onClick: () => {
+            const nextIdx = d.capabilities.length + 1;
+            d.capabilities.push({
+              eyebrow: `Yetkinlik ${nextIdx}`,
+              title: 'Yeni Yetkinlik Başlığı',
+              body: 'Yetkinlik açıklama metni.',
+              style: 'platinum',
+              metric: ''
+            });
+            markDirty('pages');
+            renderWorkspace();
+          }
+        }));
+        cc.appendChild(ccHead);
+
         d.capabilities.forEach((cap, i) => {
           const r = el('div', { className: 'repeater-item' });
-          r.appendChild(el('div', { className: 'repeater-head' }, [el('span', { className: 'repeater-label', text: `Kutu #${i + 1} — ${cap.title}` })]));
+          const rHead = el('div', { className: 'repeater-head' });
+          rHead.appendChild(el('span', { className: 'repeater-label', text: `Kutu #${i + 1} — ${cap.title || 'Yetkinlik'}` }));
+          rHead.appendChild(el('button', {
+            type: 'button',
+            className: 'btn btn-danger btn-sm',
+            style: 'padding:2px 8px;font-size:11px;',
+            text: 'Sil',
+            onClick: () => {
+              if (d.capabilities.length <= 1) {
+                alert('En az 1 yetkinlik kutusu kalmalıdır.');
+                return;
+              }
+              if (!confirm(`"${cap.title || 'Bu kutu'}" yetkinlik kutusunu silmek istediğinize emin misiniz?`)) return;
+              d.capabilities.splice(i, 1);
+              markDirty('pages');
+              renderWorkspace();
+            }
+          }));
+          r.appendChild(rHead);
+
           r.appendChild(el('div', { className: 'grid-3' }, [
             fieldInput('Üst Etiket', cap, 'eyebrow', 'pages'),
             fieldInput('Başlık', cap, 'title', 'pages'),
             fieldSelect('Zemin Rengi', cap, 'style', SURFACE_OPTIONS, 'pages'),
           ]));
           r.appendChild(fieldInput('Açıklama', cap, 'body', 'pages', { multiline: true }));
-          if ('metric' in cap) r.appendChild(fieldInput('Alt Metrik Satırı', cap, 'metric', 'pages'));
+          r.appendChild(fieldInput('Alt Metrik Satırı (Opsiyonel)', cap, 'metric', 'pages'));
           cc.appendChild(r);
         });
         root.appendChild(cc);
@@ -5013,16 +5183,39 @@
 
         const sc = el('div', { className: 'card' });
         sc.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Çözüm Kartları' })]));
-        d.solutions.forEach((sol) => {
+        d.solutions.forEach((sol, solIdx) => {
           const r = el('div', { className: 'repeater-item' });
+          const rHead = el('div', { className: 'repeater-head' });
+          rHead.appendChild(el('span', { className: 'repeater-label', text: `Kart #${solIdx + 1} — ${sol.badge || sol.title || 'Çözüm'}` }));
+          r.appendChild(rHead);
+
           r.appendChild(el('div', { className: 'grid-2' }, [
-            fieldInput('Başlık', sol, 'title', 'pages'),
+            fieldInput('Rozet / Numara (Örn: Çözüm 01 — Boş bırakılırsa kaldırılır ve boşluk silinir)', sol, 'badge', 'pages', { placeholder: 'Örn: Çözüm 01' }),
             fieldSelect('Kart Rengi', sol, 'style', SURFACE_OPTIONS, 'pages'),
           ]));
+          r.appendChild(el('div', { className: 'grid-2' }, [
+            fieldInput('Kart Başlığı', sol, 'title', 'pages'),
+            fieldInput('Buton Metni (Boş bırakılırsa buton gizlenir)', sol, 'btnLabel', 'pages', { placeholder: 'Örn: Detaylı Çözümleri İncele' }),
+          ]));
+
+          const typoRow = el('div', { className: 'grid-3', style: 'margin-bottom:8px;padding:6px 10px;background:var(--bg-light);border:1px solid var(--border);border-radius:4px;' }, [
+            fieldInput('Başlık Punto (px)', sol, 'titleSize', 'pages', { placeholder: 'Örn: 28' }),
+            fieldSelect('Başlık Kalınlığı (Weight)', sol, 'titleWeight', [
+              { value: '', label: '(Varsayılan)' },
+              { value: '300', label: '300 (Light)' },
+              { value: '400', label: '400 (Normal)' },
+              { value: '500', label: '500 (Medium)' },
+              { value: '600', label: '600 (Semibold)' },
+              { value: '700', label: '700 (Bold)' },
+            ], 'pages'),
+            fieldInput('Kapsam Maddeleri Punto (px, Varsayılan: 14)', sol, 'bulletsSize', 'pages', { placeholder: '14' }),
+          ]);
+          r.appendChild(typoRow);
+
           r.appendChild(fieldInput('Alt Slogan', sol, 'tagline', 'pages'));
           r.appendChild(fieldInput('Açıklama', sol, 'desc', 'pages', { multiline: true }));
           r.appendChild(imagePickerField('Kart Görseli', sol, 'image', 'pages'));
-          r.appendChild(stringListEditor('Kapsam Maddeleri', sol.bullets, 'pages'));
+          r.appendChild(stringListEditor('Kapsam Maddeleri (Varsayılan 14px)', sol.bullets, 'pages'));
           sc.appendChild(r);
         });
         root.appendChild(sc);
@@ -5204,7 +5397,7 @@
       if (!UI.siteSub) UI.siteSub = 'ctaLibrary';
 
       const subTabs = [
-        { id: 'ctaLibrary', label: 'CTA Kartları (3 Kart Tasarımı)' },
+        { id: 'ctaLibrary', label: `CTA Kartları (${site.ctaLibrary.length} Kart)` },
         { id: 'brand', label: 'Marka, Logo & Ofisler' },
         { id: 'nav', label: 'Menü (Header) & Footer' },
         { id: 'mega', label: `Mega Menüler (${site.megaMenus.length})` },
@@ -5224,12 +5417,37 @@
 
       if (UI.siteSub === 'ctaLibrary') {
         const introCard = el('div', { className: 'card', style: 'border-left: 4px solid var(--accent); background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);' });
-        introCard.appendChild(el('div', { className: 'card-header' }, [
-          el('div', {}, [
-            el('h3', { className: 'card-title', text: 'Merkezi CTA Kart Tasarımı (3 Kart Kütüphanesi)' }),
-            el('p', { className: 'card-sub', text: 'Sitenin tüm sayfalarında ve projelerinde kullanılabilecek 3 ana CTA kartı burada merkezi olarak tasarlanır. Her kartın görselini, rengini, başlığını, açıklamasını ve butonlarını buradan düzenleyebilirsiniz. Sayfalarda sadece hangi kartın gösterileceğini seçmeniz yeterlidir.' }),
-          ])
+        const iHead = el('div', { className: 'card-header' });
+        iHead.appendChild(el('div', {}, [
+          el('h3', { className: 'card-title', text: `Merkezi CTA Kart Tasarımı (${site.ctaLibrary.length} Kart Kütüphanesi)` }),
+          el('p', { className: 'card-sub', text: 'Sitenin tüm sayfalarında ve projelerinde kullanılabilecek CTA kartları burada merkezi olarak tasarlanır. Her kartın görselini, rengini, başlığını, açıklamasını ve butonlarını buradan düzenleyebilirsiniz. Yeni kart ekleyebilir veya silebilirsiniz.' }),
         ]));
+        iHead.appendChild(el('button', {
+          type: 'button',
+          className: 'btn btn-primary',
+          text: '+ Yeni CTA Kartı Ekle',
+          onClick: () => {
+            const nextIdx = site.ctaLibrary.length + 1;
+            const newId = 'custom-cta-' + Date.now();
+            site.ctaLibrary.push({
+              id: newId,
+              name: `Yeni CTA Kartı #${nextIdx}`,
+              eyebrow: 'Harekete Geçin',
+              title: 'Yeni CTA Başlığı',
+              desc: 'CTA kartınızın detaylı açıklama metni buraya gelecek.',
+              primaryLabel: 'Görüşme Planlayın →',
+              primaryHref: '/iletisim',
+              secondaryLabel: '',
+              secondaryHref: '',
+              surface: 'platinum',
+              bgColor: '',
+              bgImage: ''
+            });
+            markDirty('site');
+            renderWorkspace();
+          }
+        }));
+        introCard.appendChild(iHead);
         root.appendChild(introCard);
 
         site.ctaLibrary.forEach((cardItem, idx) => {
@@ -5241,8 +5459,23 @@
           const cHead = el('div', { className: 'card-header' });
           cHead.appendChild(el('div', {}, [
             el('h3', { className: 'card-title', text: `Kart #${idx + 1}: ${cardItem.name || cardItem.title || cardItem.id}` }),
-            el('p', { className: 'card-sub', text: `Kimlik: "${cardItem.id}" • Sayfalardan seçildiğinde bu kartın tasarımı ve metinleri yüklenir.` }),
+            el('p', { className: 'card-sub', text: `Kimlik: "${cardItem.id}" • Sayfalardan bu kart seçildiğinde tasarımı ve metinleri yüklenir.` }),
           ]));
+          cHead.appendChild(el('button', {
+            type: 'button',
+            className: 'btn btn-danger btn-sm',
+            text: 'Kartı Sil',
+            onClick: () => {
+              if (site.ctaLibrary.length <= 1) {
+                alert('En az 1 CTA kartı kalmalıdır.');
+                return;
+              }
+              if (!confirm(`"${cardItem.name || cardItem.id}" kartını silmek istediğinize emin misiniz?`)) return;
+              site.ctaLibrary.splice(idx, 1);
+              markDirty('site');
+              renderWorkspace();
+            }
+          }));
           cCard.appendChild(cHead);
 
           // Card Name in CMS
@@ -5951,9 +6184,10 @@
 
     function tagAndSizeGrid(labelPrefix, obj, fieldKey, target, defaultTag = 'p', placeholderSize = 'Örn: 16') {
       if (!obj[fieldKey + 'Tag']) obj[fieldKey + 'Tag'] = defaultTag;
-      const tagLabel = (labelPrefix ? labelPrefix + ' ' : '') + 'HTML Etiketi (Tag)';
-      const sizeLabel = (labelPrefix ? labelPrefix + ' ' : '') + 'Punto Boyutu (px)';
-      return el('div', { className: 'grid-2', style: 'margin-bottom:8px;padding:6px 10px;background:var(--bg-light);border:1px solid var(--border);border-radius:4px;' }, [
+      const tagLabel = (labelPrefix ? labelPrefix + ' ' : '') + 'HTML Etiketi';
+      const sizeLabel = (labelPrefix ? labelPrefix + ' ' : '') + 'Punto (px)';
+      const weightLabel = (labelPrefix ? labelPrefix + ' ' : '') + 'Kalınlık (Weight)';
+      return el('div', { className: 'grid-3', style: 'margin-bottom:8px;padding:6px 10px;background:var(--bg-light);border:1px solid var(--border);border-radius:4px;' }, [
         fieldSelect(tagLabel, obj, fieldKey + 'Tag', [
           { value: 'h1', label: 'H1 Başlık' },
           { value: 'h2', label: 'H2 Başlık' },
@@ -5966,6 +6200,15 @@
           { value: 'div', label: 'DIV Blok' },
         ], target),
         fieldInput(sizeLabel, obj, fieldKey + 'Size', target, { placeholder: placeholderSize }),
+        fieldSelect(weightLabel, obj, fieldKey + 'Weight', [
+          { value: '', label: '(Varsayılan Kalınlık)' },
+          { value: '300', label: '300 (Light)' },
+          { value: '400', label: '400 (Normal)' },
+          { value: '500', label: '500 (Medium)' },
+          { value: '600', label: '600 (Semibold)' },
+          { value: '700', label: '700 (Bold)' },
+          { value: '800', label: '800 (Extra Bold)' },
+        ], target),
       ]);
     }
 
@@ -6066,7 +6309,7 @@
       const trimmed = val.trim();
       if (!trimmed) return false;
       const k = String(key || '').toLowerCase();
-      if (k === 'image' || k === 'bgimage' || k === 'heroimage' || k === 'ogimage' || k === 'defaultogimage' || k === 'logoimage' || k === 'videoimage') {
+      if (k === 'image' || k === 'image2' || k === 'image3' || k === 'bgimage' || k === 'heroimage' || k === 'ogimage' || k === 'defaultogimage' || k === 'logoimage' || k === 'videoimage') {
         return true;
       }
       if (/^\/images\//i.test(trimmed)) return true;

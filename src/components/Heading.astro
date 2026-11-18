@@ -100,6 +100,10 @@ if (passedStyle) inlineStyles.push(passedStyle);
 const resolvedFinalColor = resolvePaletteColor(customColor) || (!isTailwindColor ? resolvePaletteColor(color) : '');
 if (resolvedFinalColor) inlineStyles.push(`color: ${resolvedFinalColor} !important`);
 
+if (weight) {
+  inlineStyles.push(`font-weight: ${weight} !important`);
+}
+
 if (customSize) {
   inlineStyles.push(`font-size: ${formatSizePx(customSize)} !important`);
 } else if (size === 'custom' && (customSizeMobile || customSizeDesktop)) {

@@ -38,6 +38,9 @@ const clientStyle = resolveTextStyle(project, 'client') || resolveTextStyle(proj
 const validMetrics = (project.metrics || []).filter((m: any) => m && (String(m.value || '').trim() || String(m.label || '').trim()));
 const hasMetrics = validMetrics.length > 0;
 
+const img2Pos = project.image2Position || 'afterChallenge';
+const img3Pos = project.image3Position || 'afterSolution';
+
 const caseSchema = {
   "@context": "https://schema.org",
   "@type": project.seo?.schemaType || "Article",
@@ -128,6 +131,17 @@ const caseSchema = {
         <div class="prose max-w-none space-y-6 typo-body text-paletteRichBlack/85 font-light" set:html={project.content}></div>
       )}
 
+      {project.image2 && img2Pos === 'afterContent' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+      {project.image3 && img3Pos === 'afterContent' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+
       {project.challenge && (
         <div class="space-y-4">
           <span class="typo-small font-bold tracking-widest text-brandAccent block">{project.challenge.eyebrow || 'Zorluk'}</span>
@@ -135,6 +149,17 @@ const caseSchema = {
           </h2>
           <p class="typo-body text-paletteRichBlack/75 font-light" set:html={formatRich(project.challenge.body)}>
           </p>
+        </div>
+      )}
+
+      {project.image2 && img2Pos === 'afterChallenge' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+      {project.image3 && img3Pos === 'afterChallenge' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
         </div>
       )}
 
@@ -158,8 +183,30 @@ const caseSchema = {
         </div>
       )}
 
+      {project.image2 && img2Pos === 'afterSolution' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+      {project.image3 && img3Pos === 'afterSolution' && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+
       {project.quote && (
         <div class="p-10 md:p-14 bg-palettePlatinum italic text-lg md:text-2xl text-paletteRichBlack/85 font-light leading-relaxed" set:html={formatRich(project.quote)}>
+        </div>
+      )}
+
+      {project.image2 && (img2Pos === 'afterQuote' || img2Pos === 'end') && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+      )}
+      {project.image3 && (img3Pos === 'afterQuote' || img3Pos === 'end') && (
+        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
         </div>
       )}
 

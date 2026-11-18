@@ -220,6 +220,12 @@ export interface ProjectData {
   listDesc?: string;
   image: string;
   imageAlt?: string;
+  image2?: string;
+  image2Alt?: string;
+  image2Position?: 'afterContent' | 'afterChallenge' | 'afterSolution' | 'afterQuote' | 'end';
+  image3?: string;
+  image3Alt?: string;
+  image3Position?: 'afterContent' | 'afterChallenge' | 'afterSolution' | 'afterQuote' | 'end';
   listStyle?: SurfaceStyleKey;
   heroStyle?: SurfaceStyleKey;
   bullets?: string[];

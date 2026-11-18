@@ -44,7 +44,7 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
     
     {headingLines.length > 0 && (
       <div class="mb-14">
-        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" class="text-paletteRichBlack space-y-1">
+        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} weight={data.headingWeight || data.titleWeight} color={data.headingColor || data.titleColor} size="h2" class="text-paletteRichBlack space-y-1">
           {headingLines.map((line: string) => (
             <span class="block" set:html={formatRich(line)}></span>
           ))}

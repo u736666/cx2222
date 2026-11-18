@@ -43,11 +43,70 @@ const sectionId = id || styles.sectionId || 'maturity-test';
         </div>
       </div>
 
+      <!-- Lead Capture Block (Shown after questions finish, before revealing results) -->
+      <div id="lead-capture-block" class="hidden space-y-6">
+        <div>
+          <span class="typo-small font-semibold tracking-widest text-brandAccent bg-paletteRichBlack px-4 py-1.5 inline-block mb-3">
+            Teşhis Tamamlandı
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-light text-paletteRichBlack tracking-tight leading-snug">
+            Kurumsal Olgunluk Raporunuz Hazır
+          </h3>
+          <p class="typo-body text-paletteRichBlack/80 font-light mt-2 max-w-xl">
+            Kurumunuza özel CX & AI olgunluk skorunuzu ve öncelikli aksiyon planınızı görüntülemek ve detaylı raporu almak için lütfen e-posta adresinizi girin.
+          </p>
+        </div>
+
+        <form id="lead-capture-form" class="space-y-4 max-w-lg pt-2">
+          <div>
+            <label for="lead-email" class="block text-xs font-semibold uppercase tracking-wider text-paletteRichBlack/70 mb-1.5">
+              İş E-posta Adresi <span class="text-red-500">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="lead-email" 
+              required 
+              placeholder="ad.soyad@sirketiniz.com"
+              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-paletteRichBlack outline-none text-paletteRichBlack text-sm transition-colors"
+            />
+          </div>
+
+          <div>
+            <label for="lead-name" class="block text-xs font-semibold uppercase tracking-wider text-paletteRichBlack/70 mb-1.5">
+              Ad Soyad (Opsiyonel)
+            </label>
+            <input 
+              type="text" 
+              id="lead-name" 
+              placeholder="Adınız Soyadınız"
+              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-paletteRichBlack outline-none text-paletteRichBlack text-sm transition-colors"
+            />
+          </div>
+
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              class="btn-rect w-full sm:w-auto px-8 py-3.5 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold text-center transition-colors cursor-pointer"
+            >
+              Sonuçları Gör ve Raporu İlet →
+            </button>
+          </div>
+          <p class="text-xs text-paletteRichBlack/60 font-light">
+            Bilgileriniz üçüncü taraflarla paylaşılmaz. Sadece analiz çıktısı ve ilgili deneyim içgörüleri için kullanılır.
+          </p>
+        </form>
+      </div>
+
       <!-- Result Block -->
       <div id="result-block" class="hidden space-y-6">
-        <span class="typo-small font-semibold tracking-widest text-brandAccent bg-paletteRichBlack px-4 py-1.5 inline-block">
-          Teşhis Sonucunuz
-        </span>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="typo-small font-semibold tracking-widest text-brandAccent bg-paletteRichBlack px-4 py-1.5 inline-block">
+            Teşhis Sonucunuz
+          </span>
+          <span id="lead-sent-tag" class="text-xs font-medium text-emerald-800 bg-emerald-100 px-3 py-1 hidden">
+            ✓ Rapor e-posta adresinize kaydedildi
+          </span>
+        </div>
         <Heading as="h3" size="h2" id="result-level-title" class="text-paletteRichBlack" />
         <p id="result-desc" class="typo-body text-paletteRichBlack/80 font-light"></p>
 
@@ -87,6 +146,10 @@ const sectionId = id || styles.sectionId || 'maturity-test';
   const stepPercent = document.getElementById('step-percent');
   const progressFill = document.getElementById('progress-fill');
   const questionBlock = document.getElementById('question-block');
+  const leadCaptureBlock = document.getElementById('lead-capture-block');
+  const leadCaptureForm = document.getElementById('lead-capture-form');
+  const leadEmailInput = document.getElementById('lead-email');
+  const leadSentTag = document.getElementById('lead-sent-tag');
   const resultBlock = document.getElementById('result-block');
   const questionCat = document.getElementById('question-category');
   const questionTitle = document.getElementById('question-title');
@@ -121,7 +184,7 @@ const sectionId = id || styles.sectionId || 'maturity-test';
             currentQ++;
             renderQuestion(currentQ);
           } else {
-            showResult();
+            showLeadCapture();
           }
         });
         optionsList.appendChild(btn);
@@ -129,8 +192,42 @@ const sectionId = id || styles.sectionId || 'maturity-test';
     }
   }
 
+  function showLeadCapture() {
+    if (questionBlock) questionBlock.classList.add('hidden');
+    if (resultBlock) resultBlock.classList.add('hidden');
+    if (leadCaptureBlock) leadCaptureBlock.classList.remove('hidden');
+    if (stepCounter) stepCounter.textContent = 'Son Aşama';
+    if (stepPercent) stepPercent.textContent = '%100';
+    if (progressFill) progressFill.style.width = '100%';
+  }
+
+  if (leadCaptureForm) {
+    leadCaptureForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = leadEmailInput ? leadEmailInput.value.trim() : '';
+      if (!email) return;
+
+      try {
+        const savedLeads = JSON.parse(localStorage.getItem('cx_maturity_leads') || '[]');
+        savedLeads.push({ email, score: totalScore, date: new Date().toISOString() });
+        localStorage.setItem('cx_maturity_leads', JSON.stringify(savedLeads));
+      } catch (err) {
+        // ignore local storage error
+      }
+
+      if (leadSentTag) {
+        leadSentTag.textContent = `✓ Rapor ${email} adresine kaydedildi`;
+        leadSentTag.classList.remove('hidden');
+      }
+
+      if (leadCaptureBlock) leadCaptureBlock.classList.add('hidden');
+      showResult();
+    });
+  }
+
   function showResult() {
     if (questionBlock) questionBlock.classList.add('hidden');
+    if (leadCaptureBlock) leadCaptureBlock.classList.add('hidden');
     if (resultBlock) resultBlock.classList.remove('hidden');
 
     const resultTitle = document.getElementById('result-level-title');
@@ -151,7 +248,9 @@ const sectionId = id || styles.sectionId || 'maturity-test';
     currentQ = 0;
     totalScore = 0;
     if (resultBlock) resultBlock.classList.add('hidden');
+    if (leadCaptureBlock) leadCaptureBlock.classList.add('hidden');
     if (questionBlock) questionBlock.classList.remove('hidden');
+    if (leadSentTag) leadSentTag.classList.add('hidden');
     renderQuestion(0);
   }
 

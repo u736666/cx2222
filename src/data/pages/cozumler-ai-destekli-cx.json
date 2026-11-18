@@ -29,13 +29,13 @@
       "visible": true,
       "data": {
         "eyebrow": "",
-        "title": "AI Destekli Müşteri Deneyimi ve VOC Sistemleri",
-        "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kuruyoruz.",
+        "title": "AI Destekli Müşteri Deneyimi Yönetimi Sistemleri",
+        "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kurmanızı sağlıyoruz.",
         "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
         "imageAlt": "AI Experience Concept",
         "headingTag": "h1",
-        "titleColor": "sandyBrown",
-        "surface": "richBlack"
+        "surface": "richBlack",
+        "titleColor": "white"
       },
       "style": {
         "surface": "richBlack"
@@ -48,31 +48,31 @@
       "data": {
         "items": [
           {
-            "eyebrow": "01 / ANALİTİK ZEKA",
-            "title": "Gerçek Zamanlı Duygu & Kök Neden Analizi",
-            "body": "Klasik anahtar kelime sayımı müşteri memnuniyetini açıklayamaz. Doğal Dil İşleme (NLP) ve LLM tabanlı analiz motorumuz; ses tonu iniş çıkışlarını, ironiyi, tereddüt anlarını ve öfkenin asıl kök nedenini (fatura şeffaflığı, kargo gecikmesi, yetersiz personel) anında sınıflandırır.",
-            "metric": "• %93+ Türkçe Sentiment Doğruluğu",
+            "eyebrow": "",
+            "title": "AI Destekli Müşterinin Sesi (VOC) Sistem Kurulumu",
+            "body": "Farklı kanallara dağılmış müşteri sinyallerini tek bir akıllı platformda birleştirerek tüm organizasyonunuzu ortak bir hedefte buluştururuz. Yapay zeka ve gerçek zamanlı analizlerle memnuniyetsizliğin erken sinyallerini tespit eder, ekiplerinizi anında proaktif aksiyonlara yönlendiririz. Dağınık geri bildirimleri anlamlı bir deneyim hikayesine dönüştürerek, müşteri içgörülerini doğrudan rekabet avantajı ve ölçülebilir iş sonuçlarına bağlarız.",
+            "metric": "• $10M+  Yapay zeka destekli müşteri deneyimi yönetimi ile operasyonel verimlilik",
             "style": "siteBg"
           },
           {
-            "eyebrow": "02 / OPERASYONEL ÇEVİKLİK",
-            "title": "Kapalı Döngü (Closed-Loop) Aksiyon Motoru",
-            "body": "Veri aksiyona dönüşmüyorsa sadece maliyettir. Olumsuz bir geri bildirim veya sürtünme yaşandığında, sistem ilgili mağaza müdürüne veya müşteri temsilcisine kişiselleştirilmiş bir kurtarma görevi atar. Müşteri şikayeti büyütmeden 15 dakika içinde aranır ve sorun çözülür.",
-            "metric": "• Ortalama Aksiyon Süresi: < 15 Dakika",
-            "style": "dustGrey"
+            "eyebrow": "",
+            "title": "AI Destekli Deneyim Yönetim Sistemi, <b>Close-The Loop</b> Entegrasyonu",
+            "body": "Müşteri geri bildirimlerini yalnızca ölçmekle kalmaz, yapay zeka destekli metin ve duygu analizi ile anında aksiyona dönüştürürüz. İç ve dış döngü (inner-loop, outer-loop) kurgumuz sayesinde bireysel sorunları otomatik alarm ve biletleme sistemleri ile gerçek zamanlı olarak çözerken, elde edilen içgörülerle kurum geneline yayılan stratejik ve sistemsel iyileştirmeler yapmanızı sağlarız. Bütünleşik platformumuz ve danışmanlığımızla müşteri kaybını (churn) önler, sadakati artırır ve deneyimi doğrudan finansal getiriye (ROI) bağlarız. ",
+            "metric": "• %40 İlk müşteri temasında daha hızlı dönüş",
+            "style": "platinum"
           },
           {
-            "eyebrow": "03 / ÖNGÖRÜSEL KORUMA",
-            "title": "Kayıp Riski (Churn) Erken Uyarı Sistemi",
-            "body": "Müşteriler gitmeden önce mutlaka dijital ayak izleri bırakırlar: Kullanım sıklığında ani düşüş, destek sayfasında tekrarlayan aramalar veya faturaya bakma sıklığı. Tahmine dayalı makine öğrenimi modellerimiz, müşterinin ayrılma ihtimalini %85 doğrulukla önceden haber verir.",
-            "metric": "• %60’a Varan Churn Engelleme Oranı",
+            "eyebrow": "",
+            "title": "AI destekli Müşteri Deneyim Yolculuğu Yönetimi",
+            "body": "Kurumunuzun tüm iletişim kanallarında ilk etkileşimden, uzun vadeli sadakate kadar, tüm müşteri yolculuğunu haritalamasını ve analiz etmesini sağlarız. Bu kapsamlı analiz ile, problemli noktaların belirlenmesini sağlayarak müşterinin yolculuğunu yapay zeka gücüyle sürekli geliştirmenizi sağlarız",
+            "metric": "",
             "style": "brandAccent"
           },
           {
-            "eyebrow": "04 / ÇALIŞAN DESTEĞİ",
-            "title": "Agentic AI & Temsilci Asistanı (Copilot)",
-            "body": "Ön hat çalışanlarınızı karmaşık CRM ekranlarında kaybolmaktan kurtarıyoruz. Temsilci müşteriyi dinlerken, yapay zeka asistanı müşterinin geçmiş yolculuğunu özetler, en uygun empatik çözüm önerisini üretir ve temsilcinin önüne hazır getirir.",
-            "metric": "• Çağrı Çözüm Süresinde (AHT) %40 Düşüş",
+            "eyebrow": "",
+            "title": "Kök neden, Müşteri Duygu, Etki Analizleri",
+            "body": "Şikâyetlere odaklanan anlayışını geride bırakarak, yapay zeka destekli duygu analiziyle negatif hislere yol açan kök nedenleri, bağlılık yaratan memnuniyet alanlarını ve CSAT/NPS metriklerini tek bir akışta analiz ederek tüm deneyim panoramasını ortaya çıkarırız. Aksiyonları bir yapılacaklar listesi olmaktan çıkarır; beklentileri anlayan kişiselleştirilmiş stratejilerle markanızın gelirlerini ve müşteri sadakatini artıracak dönüm noktaları yaratırız.",
+            "metric": "• +19  NPS artışı",
             "style": "richBlack"
           }
         ],
@@ -155,7 +155,7 @@
         "title": "",
         "desc": "",
         "visible": true,
-        "selectedCtaId": "academy-training"
+        "selectedCtaId": "default-consulting"
       },
       "style": {
         "surface": "brandAccent"

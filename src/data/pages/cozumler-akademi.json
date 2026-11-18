@@ -29,8 +29,8 @@
       "visible": true,
       "data": {
         "eyebrow": "",
-        "title": "cx2222 Akademi ve Kültür Dönüşümü32",
-        "desc": "En gelişmiş yapay zeka altyapısına sahip olsanız bile, müşterinizle göz göze gelen çalışanınız empati kuramıyorsa deneyim çöker. Çalışan deneyimini (EX) güçlendiriyor, ekipleri tek bir vizyonda kenetliyoruz.",
+        "title": "CX Folks Akademi ve Kültür Dönüşümü",
+        "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
         "ctaText": "Eğitim Talep Edin →",
         "ctaHref": "/iletisim",
         "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
@@ -46,27 +46,27 @@
       "data": {
         "items": [
           {
-            "eyebrow": "01 / STRATEJİK HİZALANMA",
-            "title": "LEGO® Serious Play® Seansları",
-            "body": "Sıkıcı sunumlar ve monolog toplantılar yerine, departman liderlerini ve ekipleri masaya oturtuyoruz. Ellerin zihinle kurduğu nörolojik bağı kullanarak kurumun kör noktalarını, müşteri sürtünmelerini ve gelecek senaryolarını 3 boyutlu inşa ediyoruz.",
+            "eyebrow": "",
+            "title": "\"Müşteri Deneyimi 101\"",
+            "body": "Müşteri deneyimi ekipleri ve yönetim kadrosu için 30’dan fazla gerçek marka deneyimiyle zenginleştirilmiş gelişim programları sunuyoruz. Bilgi ve farkındalığı artıran stratejik eğitimlerle tüm organizasyonun CX yetkinliğini ileriye taşıyoruz.",
             "style": "platinum"
           },
           {
-            "eyebrow": "02 / ÖN HAT GÜÇLENDİRME",
-            "title": "Frontline Çalışan Yetkilendirme",
-            "body": "Müşteri mağduriyet yaşadığında çalışanınızın 'Prosedürümüz böyle, bir şey yapamam' demesini engelliyoruz. Çalışanlara belirli sınırlar dahilinde anında inisiyatif alma, telafi tanımlama ve sorunu yerinde çözme özgürlüğü kazandırıyoruz.",
+            "eyebrow": "",
+            "title": "\"Hizmet Tasarımı (Service Design) 101\"",
+            "body": "Harika bir ürünü olan ama hizmet tarafında (teslimat, destek, iletişim) kaos yaşayan şirketlerin, süreçlerini \"mühendis titizliğiyle\" haritalaması ve iyileştirmesi içindir.Hizmetiniz tesadüflere değil, tasarıma bağlı olsun.Operasyonel boşlukları kapatın ve müşteri deneyimini iyileştirin. Süreçlerinizi netleştirmek için...",
             "style": "siteBg"
           },
           {
-            "eyebrow": "03 / EMPATİ ATÖLYELERİ",
-            "title": "Müşteri Ayakkabısında Bir Gün",
-            "body": "Masa başındaki yazılımcıyı, pazarlamacıyı ve finans yöneticisini çağrı merkezi kulaklığı takmaya veya şube bankosunda durmaya davet ediyoruz. Karar vericilerin müşterinin gerçek acısını bizzat hissetmesini sağlıyoruz.",
+            "eyebrow": "",
+            "title": "\"AI Çağında Müşteri Deneyimi\"",
+            "body": "AI çağında müşterilerin deneyim beklentileri de değişiyor. Yeni teknolojiler önemli fırsatlar sunarken, müşteri deneyimini merkeze almayan bir yaklaşım bu fırsatların riske dönüşmesine neden olabiliyor. Gerçek örneklerden yola çıkarak kurumunuzda hayata geçirebileceğiniz fırsatları ve bunları insan odaklı bir yaklaşımla nasıl uygulayabileceğinizi birlikte keşfediyoruz.",
             "style": "richBlack"
           },
           {
-            "eyebrow": "04 / KÜLTÜR ELÇİLERİ",
-            "title": "Kurum İçi CX Elçileri Yetiştirme",
-            "body": "Danışmanlık bittiğinde dönüşümün devam etmesi için kurumunuzun içinden seçilen liderleri 'Deneyim Elçisi' olarak eğitiyoruz. Değişimin kendi çalışanlarınız eliyle yaşatılmasını garanti ediyoruz.",
+            "eyebrow": "",
+            "title": "LEGO® Serious Play® Seansları",
+            "body": "Fikirlerin yalnızca konuşulmadığı, somut deneyimlere dönüştüğü yaratıcı bir keşif alanı sunuyoruz. Departman liderlerini ve ekipleri bir araya getirerek elleriyle düşünmelerini, fikirlerini üç boyutlu olarak ifade etmelerini ve farklı bakış açıları geliştirmelerini sağlıyoruz. Bu ortak üretim sürecinde kurumun potansiyelini, müşteri deneyimini geliştirme fırsatlarını ve geleceğe yönelik senaryoları birlikte keşfediyoruz.",
             "style": "brandAccent"
           }
         ],

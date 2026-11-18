@@ -28,11 +28,11 @@
       "type": "hero",
       "visible": true,
       "data": {
-        "eyebrow": "Araç Setimizer",
-        "title": "Uçtan uca müşteri deneyimi ve yapay zeka çözümlerimiz",
-        "desc": "Veriyi aksiyona dönüştüren algoritmalar, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.",
+        "eyebrow": "",
+        "title": "İnsan odaklı tasarım ve deneyim odaklı yapay zeka çözümlerimiz",
+        "desc": "Veriyi aksiyona dönüştüren yapay zeka uygulamaları, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.\n",
         "headingTag": "h1",
-        "surface": "brandAccent"
+        "surface": ""
       },
       "style": {
         "surface": "platinum"
@@ -45,10 +45,10 @@
       "data": {
         "items": [
           {
-            "title": "AI Müşteri  Deneyimi",
-            "tagline": "Veriyi Gerçek Zamanlı Aksiyona Dönüştüren Algoritmalar",
+            "title": "Deneyim Odaklı AI Entegrasyonu",
+            "tagline": "Müşteri Deneyimini Geliştiren, İş Sonuçlarına Katkı Sağlayan Uygulamalar",
             "style": "richBlack",
-            "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
             "desc": "Müşterinin sesini (VOC) çağrı kayıtlarından, anketlerden, sosyal medyadan ve web hareketlerinden anlık toplayıp analiz eden; kök nedenleri saniyeler içinde bulan ve ilgili ekiplere kapalı döngü görev atayan uçtan uca akıllı sistemler.",
             "slug": "ai-destekli-cx",
             "bullets": [
@@ -56,7 +56,9 @@
               "AI Destekli Deneyim Yönetim Sistemi, Close-the Loop Entegrasyonu",
               " AI Destekli Müşteri Deneyim Yolculuğu Yönetimi",
               "Kök Neden, Müşteri Duygu, Etki Analizleri"
-            ]
+            ],
+            "badge": "Çözüm 01",
+            "btnLabel": "Detaylı Çözümleri İncele"
           },
           {
             "title": "Deneyim Tasarımı & Haritalandırma",
@@ -70,7 +72,9 @@
               "Derin Etnografik & Niteliksel Saha Araştırmaları",
               "Servis Blueprint & Temas Noktası Optimizasyonu",
               "Kullanıcı Deneyimi (UX) & Hızlı Prototipleme"
-            ]
+            ],
+            "badge": "Çözüm 02",
+            "btnLabel": "Detaylı Metodolojiyi İncele →"
           },
           {
             "title": "cx2222 Akademi & Kültür Dönüşümü",
@@ -84,7 +88,9 @@
               "LEGO® Serious Play® ile Stratejik Hizalanma",
               "Ön Hat (Frontline) Çalışan Güçlendirme Programları",
               "EX (Employee Experience) & Kültür Teşhisi"
-            ]
+            ],
+            "badge": "Çözüm 03",
+            "btnLabel": "Detaylı Metodolojiyi İncele →"
           },
           {
             "title": "CX & AI Maturity Testi",
@@ -98,7 +104,9 @@
               "Anlık Seviye Belirleme (Seviye 1 - Seviye 4)",
               "Kişiselleştirilmiş İlk 3 Aksiyon Tavsiyesi",
               "Ücretsiz Strateji Değerlendirme İmkanı"
-            ]
+            ],
+            "badge": "Çözüm 04",
+            "btnLabel": "Detaylı Metodolojiyi İncele →"
           }
         ]
       },

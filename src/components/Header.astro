@@ -261,6 +261,13 @@ function isExactPage(href: string) {
             closeAllMega();
           }, 150);
         });
+
+        // Close mega menu immediately when any link inside is clicked
+        targetPanel.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            closeAllMega();
+          });
+        });
       }
     });
 

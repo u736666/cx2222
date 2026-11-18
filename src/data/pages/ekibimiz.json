@@ -21,41 +21,43 @@
       "visible": true,
       "data": {
         "pillBadge": "",
-        "title": "MÜŞTERİ DENEYİMİ VE YAPAY ZEKA EKİBİ",
+        "title": "",
         "headingTag": "h1",
-        "storyIntro": "cx2222, KURUMLARIN MÜŞTERİ DENEYİMİNİ VE YAPAY ZEKA YOLCULUKLARINI İNSAN MERKEZLİ TASARIMLA DÖNÜŞTÜRMEK İÇİN BİR ARAYA GELEN ÇOK DİSİPLİNLİ BİR UZMAN KADROSUNDAN OLUŞUR.",
-        "storyP1": "Yapay zeka modellerinin sunduğu hız ve analitik derinlik, ancak insan sezgisi, empati ve sahada test edilmiş servis tasarımı disiplinleriyle birleştiğinde gerçek kurumsal değere dönüşür.",
-        "storyP2": "Veri bilimcilerimiz, deneyim tasarımcılarımız ve CX stratejistlerimizle her temas noktasında sürtünmesiz, kalıcı ve ölçülebilir deneyim ekosistemleri inşa ediyoruz.",
+        "storyIntro": "<b>cxfolks</b>, yapay zekayı insan sezgisi ve servis tasarımıyla birleştirerek kurumların müşteri deneyimini dönüştüren çok disiplinli bir ekiptir. Veri bilimcilerimiz, deneyim tasarımcılarımız ve CX stratejistlerimizle her temas noktasında sürtünmesiz ve ölçülebilir deneyimler inşa ediyoruz.",
+        "storyP1": "",
+        "storyP2": "",
         "members": [
           {
             "id": "ediz-pinar",
-            "name": "<b>UĞUR</b> Akay Köseoğlu",
-            "role": "Founder & CX Principal",
-            "image": "/images/uploads/dsc01870-mwj5qiby.png",
-            "linkedin": "https://linkedin.com",
+            "name": "Gökhan Kaya",
+            "role": "Müşteri Deneyimi Stratejisti / Kurucu Ortak",
+            "image": "/images/uploads/unnamed-mwm0c21q.jpg",
+            "linkedin": "https://www.linkedin.com/in/kayagokhan/",
             "nameSize": "16"
           },
           {
             "id": "ai-lead",
-            "name": "Can Dağdelen",
-            "role": "Head of AI & Experience Engineering",
-            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
+            "name": "Uğur Akay Köseoğlu",
+            "role": "Ürün ve Servis Tasarımcısı / Kurucu Ortak",
+            "image": "/images/uploads/ugur-mwm145n1.png",
+            "linkedin": "https://www.linkedin.com/in/ugurakaykoseoglu/",
+            "nameSize": "16"
           },
           {
             "id": "design-lead",
-            "name": "Aylin Yılmaz",
-            "role": "Lead Service & UX Designer",
-            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
+            "name": "Ekin Saçılık",
+            "role": "Müşteri Deneyimi Danışmanı",
+            "image": "/images/uploads/ekin-mwm14adj.png",
+            "linkedin": "https://www.linkedin.com/in/sacilikekin/",
+            "nameSize": "16"
           },
           {
             "id": "quote-card",
-            "name": "cx2222 Ekibi",
+            "name": "",
             "role": "Deneyim ve Sezgi Manifestosu",
             "isQuoteCard": true,
             "quote": "Müşterinin sesini duymak yetmez, onu algoritmaların ve aksiyonun kalbine yerleştirmek gerekir.",
-            "quoteAuthor": "cx2222 İlkesi",
+            "quoteAuthor": "",
             "bgColor": "brandAccent",
             "linkedin": "https://linkedin.com",
             "twitter": "https://twitter.com",
@@ -63,38 +65,19 @@
           },
           {
             "id": "research-lead",
-            "name": "Mert Aksoy",
-            "role": "Senior Ethnographic Researcher",
-            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
+            "name": "Özgür Kurtuldu",
+            "role": "Müşteri  Araştırmaları Danışmanı",
+            "image": "/images/uploads/ozgur-mwm0za4d.png",
+            "linkedin": "https://www.linkedin.com/in/%C3%B6zg%C3%BCr-kurtuldu-7b6986a/",
+            "nameSize": "16"
           },
           {
             "id": "analytics-lead",
-            "name": "Deniz Kaya",
-            "role": "VOC & Data Analytics Specialist",
-            "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
-          },
-          {
-            "id": "product-lead",
-            "name": "Barış Demir",
-            "role": "CX Solution Architect",
-            "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
-          },
-          {
-            "id": "journey-lead",
-            "name": "Selin Erdem",
-            "role": "Customer Journey & Culture Lead",
-            "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
-          },
-          {
-            "id": "member-1794827162499",
-            "name": "Yeni Üye",
-            "role": "CX Uzmanı",
-            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-            "linkedin": "https://linkedin.com"
+            "name": "Ahmet Topçuoğlu",
+            "role": "Dış Danışman – Eğitmen – Fasilitatör",
+            "image": "/images/uploads/ahmet-mwm0zfuv.png",
+            "linkedin": "https://www.linkedin.com/in/ahmethazimtopcuoglu/",
+            "nameSize": "16"
           }
         ],
         "seo": {

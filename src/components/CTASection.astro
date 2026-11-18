@@ -33,14 +33,21 @@ const targetId = Astro.props.selectedCtaId || 'default-consulting';
 const card = library.find((c: any) => c.id === targetId) || library[0] || {};
 
 // 2. Resolve content (explicit prop > card from library > site.cta)
-const title = (Astro.props.title !== undefined && Astro.props.title !== '') ? Astro.props.title : (card.title || cta.title);
-const desc = (Astro.props.desc !== undefined && Astro.props.desc !== '') ? Astro.props.desc : (card.desc || cta.desc);
-const eyebrow = (Astro.props.eyebrow !== undefined && Astro.props.eyebrow !== '') ? Astro.props.eyebrow : (card.eyebrow || cta.eyebrow);
+const title = (Astro.props.title !== undefined && Astro.props.title !== '') ? Astro.props.title : (card.title || cta.title || '');
+const desc = (Astro.props.desc !== undefined && Astro.props.desc !== '') ? Astro.props.desc : (card.desc || cta.desc || '');
+const eyebrow = (Astro.props.eyebrow !== undefined && Astro.props.eyebrow !== '') ? Astro.props.eyebrow : (card.eyebrow || cta.eyebrow || '');
 
-const primaryLabel = (Astro.props.primaryLabel !== undefined && Astro.props.primaryLabel !== '') ? Astro.props.primaryLabel : (card.primaryLabel || cta.primaryLabel);
-const primaryHref = (Astro.props.primaryHref !== undefined && Astro.props.primaryHref !== '') ? Astro.props.primaryHref : (card.primaryHref || cta.primaryHref);
-const secondaryLabel = (Astro.props.secondaryLabel !== undefined && Astro.props.secondaryLabel !== '') ? Astro.props.secondaryLabel : (card.secondaryLabel || cta.secondaryLabel);
-const secondaryHref = (Astro.props.secondaryHref !== undefined && Astro.props.secondaryHref !== '') ? Astro.props.secondaryHref : (card.secondaryHref || cta.secondaryHref);
+const primaryLabel = (Astro.props.primaryLabel !== undefined && Astro.props.primaryLabel !== '') ? Astro.props.primaryLabel : (card.primaryLabel || cta.primaryLabel || '');
+const primaryHref = (Astro.props.primaryHref !== undefined && Astro.props.primaryHref !== '') ? Astro.props.primaryHref : (card.primaryHref || cta.primaryHref || '#');
+const secondaryLabel = (Astro.props.secondaryLabel !== undefined && Astro.props.secondaryLabel !== '') ? Astro.props.secondaryLabel : (card.secondaryLabel || cta.secondaryLabel || '');
+const secondaryHref = (Astro.props.secondaryHref !== undefined && Astro.props.secondaryHref !== '') ? Astro.props.secondaryHref : (card.secondaryHref || cta.secondaryHref || '#');
+
+const hasEyebrow = Boolean(eyebrow && eyebrow.trim());
+const hasTitle = Boolean(title && title.trim());
+const hasDesc = Boolean(desc && desc.trim());
+const hasPrimary = Boolean(primaryLabel && primaryLabel.trim());
+const hasSecondary = Boolean(secondaryLabel && secondaryLabel.trim());
+const hasButtons = hasPrimary || hasSecondary;
 
 const surface = Astro.props.surface || card.surface || 'platinum';
 const bgColor = Astro.props.bgColor || card.bgColor || '';
@@ -142,35 +149,41 @@ const secBtnClass = isDark
           <div class={`absolute inset-0 ${isDark ? 'bg-black/40' : 'bg-white/20'}`}></div>
         </div>
       )}
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-8 space-y-6">
-          {eyebrow && (
+      <div class={`relative z-10 grid grid-cols-1 ${hasButtons ? 'lg:grid-cols-12 gap-10' : 'gap-6'} items-center`}>
+        <div class={`${hasButtons ? 'lg:col-span-8' : 'lg:col-span-12'} space-y-6`}>
+          {hasEyebrow && (
             <span class={`typo-small font-semibold tracking-widest block ${sf.eyebrow}`} style={customEyebrowStyle || undefined} set:html={formatRich(eyebrow)}></span>
           )}
-          <HeadingTag class={`typo-h2 ${sf.title}`} style={customTitleStyle || undefined} set:html={formatRich(title)}>
-          </HeadingTag>
-          <p class={`typo-lead font-light max-w-2xl ${sf.desc}`} style={customDescStyle || undefined} set:html={formatRich(desc)}>
-          </p>
+          {hasTitle && (
+            <HeadingTag class={`typo-h2 ${sf.title}`} style={customTitleStyle || undefined} set:html={formatRich(title)}>
+            </HeadingTag>
+          )}
+          {hasDesc && (
+            <p class={`typo-lead font-light ${hasButtons ? 'max-w-2xl' : 'max-w-4xl'} ${sf.desc}`} style={customDescStyle || undefined} set:html={formatRich(desc)}>
+            </p>
+          )}
         </div>
 
-        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-center">
-          {primaryLabel && (
-            <a 
-              href={primaryHref}
-              class="btn-rect min-h-[3rem] py-3 px-8 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64"
-            >
-              {primaryLabel}
-            </a>
-          )}
-          {secondaryLabel && (
-            <a 
-              href={secondaryHref}
-              class={secBtnClass}
-            >
-              {secondaryLabel}
-            </a>
-          )}
-        </div>
+        {hasButtons && (
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-center">
+            {hasPrimary && (
+              <a 
+                href={primaryHref}
+                class="btn-rect min-h-[3rem] py-3 px-8 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64"
+              >
+                {primaryLabel}
+              </a>
+            )}
+            {hasSecondary && (
+              <a 
+                href={secondaryHref}
+                class={secBtnClass}
+              >
+                {secondaryLabel}
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   </div>

@@ -18,9 +18,9 @@
       "llmsInclude": true
     },
     "hero": {
-      "eyebrow": "Manifestomuz2",
-      "title": "Dönüşüm bir proje değil, yaşayan bir yolculuktur.",
-      "desc": "Yapay zekanın hızını insanın derin sezgisiyle birleştiriyor; kurum kültüründen dijital temas noktalarına kadar kalıcı değer üretiyoruz.",
+      "eyebrow": "",
+      "title": "Yapay zeka çağında müşteri deneyimini dönüşürken \"insanı\" odağında tutan kurumlar başarılı olacaklar.",
+      "desc": "AI ile güçlendirilmiş müşteri deneyimi ve kurumsal yönetim uzmanlığımızı, yıllara dayanan insan odaklı tasarım tecrübemizle birleştirerek çağımızın ihtiyacı olan kalıcı değeri üretiyoruz.",
       "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80",
       "imageAlt": "cx2222 Yaklaşımı",
       "headingTag": "h1"
@@ -29,74 +29,87 @@
       {
         "id": "insan-odaklilik",
         "title": "İnsan Odaklılık",
-        "tagline": "Verinin kalbi duygudur, algoritmanın kalbi ise empati.",
+        "tagline": "\"Karmaşık problemleri çözmek ve ideal müşteri deneyiminizi  tasarlamak için insan odaklı bir yaklaşım gerekir\"",
         "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-        "p1": "Teknoloji dünyası algoritmalar, modeller ve işlem hızlarıyla büyülenmiş durumda. Ancak günün sonunda satın alma kararı veren, markaya sadık kalan veya öfkeyle ayrılan varlık hala insandır.",
-        "p2": "cx2222 olarak araştırmalarımızı masa başında değil, müşterinin gerçek dünyasında yürütüyoruz. Etnografik görüşmeler, derin dinleme oturumları ve duygu haritalarıyla, müşterinin sözcüklerinin ardındaki söylenmemiş ihtiyaçları ortaya çıkarıyoruz.",
-        "titleColor": "platinum",
-        "iconBg": "#BEF264"
+        "p1": "İş dünyası algoritmalar, modeller ve işlem hızlarından bahsediyor ancak günün sonunda satın alma kararı veren, markaya sadık kalan veya öfkeyle ayrılan varlık hala insan.",
+        "p2": "CX Folks olarak çalışmalarımızı masa başında değil, müşterinin gerçek dünyasında yürütüyoruz. Etnografik görüşmeler, derin dinleme oturumları ve duygu haritalarıyla, müşterinin sözcüklerinin ardındaki söylenmemiş ihtiyaçlarını projelerimizin merkezine getiriyoruz.",
+        "iconBg": ""
       },
       {
         "id": "northstar-cx",
-        "title": "cx2222 Northstar Mimarisi2",
-        "tagline": "Bölünmüş ekipler müşteri deneyimini parçalar.",
+        "title": "Deneyim odaklı AI entegrasyonu",
+        "tagline": "\"Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.\" ",
         "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
-        "p1": "Pazarlama ekibi yeni kullanıcı kazanmak için vaatlerde bulunur, operasyon ekibi maliyet kısmak için adımları kısaltır, çağrı merkezi ise konuşma süresini 90 saniyenin altında tutmaya çalışır. Sonuç: Müşterinin kafası karışır ve güven sarsılır.",
-        "p2": "cx2222 Northstar modeliyle, şirketin C-level yönetiminden en ön saftaki temsilcisine kadar herkesin aynı dili konuştuğu, aynı değerleri koruduğu ve ortak başarı kriterleriyle motive olduğu bütünsel bir yönetsel mimari inşa ediyoruz.",
-        "taglineColor": "sandyBrown",
-        "titleColor": "sandyBrown"
+        "p1": "Yapay zekanın olanaklarını kullanarak deneyimi pürüzsüz ve sürdürülebilir kılarken, insanı merkeze alan ideal deneyim hayata geçirilir.",
+        "p2": "Tasarlanan deneyimden başlayarak en uygun teknolojiyi kullanmanızı sağlar, kurumunuza entegrasyonunda yanınızda oluruz."
       },
       {
         "id": "proaktif-empati",
-        "title": "Proaktif Empati",
-        "tagline": "Müşteri şikayet edene kadar beklemek 2010'ların yöntemidir.",
+        "title": "Northstar CX Mimarisi",
+        "tagline": "\"Ortak dil ve hedefi olmayan ekipler müşteri deneyimini parçalar.\"",
         "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
-        "p1": "Klasik müşteri hizmetleri tamamen 'reaktif' çalışır: Müşteri mağdur olur, sinirlenir, formu doldurur veya çağrı merkezini arar ve saatlerce sıra bekler. Bu noktada müşteri deneyimi zaten kırılmıştır.",
-        "p2": "Biz işlem desenlerindeki anomalileri, tereddütleri ve stres göstergelerini yapay zekayla anlık olarak dinliyoruz. Müşteri daha sorunun adını koymadan, 'İşleminizde bir gecikme oldu, sizin adınıza düzelttik ve yanınızdayız' diyebilen proaktif bir sistem kurguluyoruz.",
+        "p1": "Pazarlama ekibi yeni müşteri kazanmak için vaatlerde bulunur, operasyon ekibi maliyet kısmak için seçenekleri azaltır, çağrı merkezi konuşma süresini 90 saniyenin altında tutmaya çalışır. Sonuç: Müşterinin kafası karışır ve güven sarsılır.",
+        "p2": "Northstar CX modeliyle, şirketin C-level yönetiminden en ön saftaki temsilcisine kadar herkesin aynı dili konuştuğu, aynı değerleri koruduğu ve ortak başarı kriterleriyle motive olduğu bütünsel bir yönetsel mimari inşa ederiz.",
         "taglineColor": "platinum",
-        "iconBg": "brandAccent"
+        "iconBg": ""
       },
       {
         "id": "kalici-kultur",
-        "title": "Kalıcı Kültür & EX-CX Köprüsü",
-        "tagline": "Mutlu olmayan bir çalışanın müşteriyi mutlu etmesi imkansızdır.",
+        "title": "Müşteri odaklı Kültür & EX-CX Köprüsü",
+        "tagline": "\"Kötü bir deneyim yaşayan bir çalışanın iyi bir müşteri deneyimi sunması imkansızdır.\"",
         "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
         "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) aynı madalyonun iki yüzüdür. Ekiplerinize yetki vermeden, onları bürokratik onay süreçlerinden kurtarmadan mükemmel bir müşteri deneyimi yaratamazsınız.",
-        "p2": "cx2222 Akademi çatısı altında kurumiçi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz."
+        "p2": "CX Folks Akademi çatısı altında kurum içi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz."
+      },
+      {
+        "id": "uygulanabilir-cozumler",
+        "title": "Uygulanabilir Çözümler",
+        "tagline": "\"Sunumda kalan projeler kaynak israfıdır.\"",
+        "p1": "Hedeflerinize ve organizasyonel yapınıza en uygun yaklaşımı belirliyor ve sadece teoride kalan değil, doğrudan hayata geçirilebilir çözümler sunuyoruz.",
+        "p2": "Sadece rapor veya sunumla kalmıyor; önerdiğimiz aksiyonların uygulama aşamasında da  yanınızda yer alarak sürecin sonuçlarını  sahipleniyoruz.",
+        "iconBg": ""
       }
     ],
     "manifesto": {
-      "title": "Kurumlar için en büyük risk, yapay zeka müşteri deneyimini kökten dönüştürürken insanı unutmaktır.",
-      "desc": "cx2222, yapay zekanın hızını ve analitik gücünü tasarımın derin empatisiyle dengeleyen bir müşteri deneyimi ve servis tasarımı şirketidir. Teknolojiyi amaç değil, insana değer üreten bir araç olarak konumlandırıyoruz.",
+      "title": "\"Verinin kalbi duygudur, algoritmanın kalbi ise empati.\"",
+      "desc": "Rakamlar müşterinin ne yaptığını milisaniyeler içinde gösterir; ancak derin etnografik dinleme ve insan sezgisi neden yaptığını ortaya çıkarır.\n\nBir müşterinin markayı tercih etmesi, ona sadık kalması veya markadan vazgeçmesi yalnızca verilerle açıklanamaz; bu kararların arkasında insani duygular ve karşılanmayı bekleyen ihtiyaçlar vardır. Algoritmaların göremediği söylenmemiş ihtiyaçları sahadaki sezgiyle yakalıyoruz.",
       "items": [
         {
           "id": "empati-ve-insan-sezgisi",
           "title": "Empati ve İnsan Sezgisi",
-          "tagline": "Verinin kalbi duygudur, algoritmanın kalbi ise empati.",
+          "tagline": "\"Verinin kalbi duygudur, algoritmanın kalbi ise empati.\"",
           "p1": "Rakamlar müşterinin ne yaptığını milisaniyeler içinde gösterir; ancak derin etnografik dinleme ve insan sezgisi neden yaptığını ortaya çıkarır.",
-          "p2": "Günün sonunda satın alma kararı veren, markaya bağlanan veya öfkeyle ayrılan varlık insandır. Algoritmaların göremediği söylenmemiş ihtiyaçları sahadaki sezgiyle yakalıyoruz.",
+          "p2": "Bir müşterinin markayı tercih etmesi, ona sadık kalması veya markadan vazgeçmesi yalnızca verilerle açıklanamaz; bu kararların arkasında insani duygular ve karşılanmayı bekleyen ihtiyaçlar vardır. Algoritmaların göremediği söylenmemiş ihtiyaçları sahadaki sezgiyle yakalıyoruz.",
           "iconBg": "richBlack"
         },
         {
           "id": "etik-ve-dengeli-yapay-zeka",
           "title": "Etik & Dengeli Yapay Zeka",
-          "tagline": "Rutin operasyonlar yapay zekaya, samimi şefkat insana aittir.",
+          "tagline": "\"Rutin operasyonlar yapay zekaya, değerli temaslar insana aittir.\"",
           "p1": "Yapay zeka tekrarlayan işleri hızlandırmak, işlem anomalilerini önceden yakalamak ve kesintisiz ölçeklenmek için mükemmel bir güçtür.",
           "p2": "Ancak kriz, mağduriyet ve güven tesis etme anlarında müşterinin aradığı şey gerçek bir insani anlayıştır. Doğru dönüşüm, bu iki gücün kusursuz uyumundan doğar."
         },
         {
           "id": "ex-olmadan-cx-olmaz",
-          "title": "EX Olmadan CX Olmaz",
-          "tagline": "Mutsuz bir çalışanın müşteriyi mutlu etmesi imkansızdır.",
-          "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) birbirini besleyen tek bir yaşayan organizmadır.",
-          "p2": "Ön hat çalışanlarınıza yetki vermeden, bürokratik engelleri kaldırmadan ve kurumiçi empatiyi inşa etmeden kalıcı bir müşteri deneyimi yaratılamaz."
+          "title": "Proaktif Empati",
+          "tagline": "\"Müşteri şikayet edene kadar beklemek 2010'ların yöntemidir.\"",
+          "p1": "Klasik müşteri hizmetleri tamamen 'reaktif' çalışır: Müşteri mağdur olur, sinirlenir, formu doldurur veya çağrı merkezini arar ve saatlerce sıra bekler. Bu noktada müşteri deneyimi zaten kırılmıştır.",
+          "p2": "Yapay zeka çağında işlem desenlerindeki anomalileri, tereddütleri ve stres göstergelerini yapay zekayla anlayarak müşteri daha sorunun adını koymadan proaktif bir sistem kurmak kurumların sorumluluğudur."
         },
         {
           "id": "surekli-yasayan-kultur",
+          "title": "EX Olmadan CX Olmaz",
+          "tagline": "\"Mutsuz bir çalışanın müşteriyi mutlu etmesi imkansızdır.\"",
+          "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) birbirini besleyen tek bir yaşayan organizmadır. Temelinde İnsan Deneyimi (HX) vardır.",
+          "p2": "Çalışanlarınıza yetki vermeden, bürokratik engelleri kaldırmadan ve kurum içi empatiyi inşa etmeden kalıcı bir müşteri deneyimi yaratılamaz."
+        },
+        {
+          "id": "surekli-yasayan-kultur-manifesto",
           "title": "Sürekli Yaşayan Kültür",
-          "tagline": "Dönüşüm bir proje değil, kurum DNA'sına işleyen bir yolculuktur.",
+          "tagline": "\"Dönüşüm bir proje değil, kurum DNA'sına işleyen bir yolculuktur.\"",
           "p1": "Teorik danışmanlık raporları ve slayt sunumları çekmecelerde unutulmaya mahkumdur.",
-          "p2": "Biz kurumiçi elçiler yetiştirir, ekipleri sahada bizzat yetkinleştirir ve deneyim odaklı düşünmeyi şirketin kalıcı refleksine dönüştürürüz."
+          "p2": "Biz kurum içi elçiler yetiştirir, ekipleri sahada bizzat yetkinleştirir ve deneyim odaklı düşünmeyi şirketin kalıcı refleksine dönüştürürüz.",
+          "iconBg": ""
         }
       ]
     },
@@ -254,18 +267,18 @@
       "llmsInclude": true
     },
     "hero": {
-      "eyebrow": "Araç Setimizer",
-      "title": "Uçtan uca müşteri deneyimi ve yapay zeka çözümlerimiz",
-      "desc": "Veriyi aksiyona dönüştüren algoritmalar, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.",
+      "eyebrow": "",
+      "title": "İnsan odaklı tasarım ve deneyim odaklı yapay zeka çözümlerimiz",
+      "desc": "Veriyi aksiyona dönüştüren yapay zeka uygulamaları, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.\n",
       "headingTag": "h1",
-      "surface": "brandAccent"
+      "surface": ""
     },
     "solutions": [
       {
-        "title": "AI Müşteri  Deneyimi",
-        "tagline": "Veriyi Gerçek Zamanlı Aksiyona Dönüştüren Algoritmalar",
+        "title": "Deneyim Odaklı AI Entegrasyonu",
+        "tagline": "Müşteri Deneyimini Geliştiren, İş Sonuçlarına Katkı Sağlayan Uygulamalar",
         "style": "richBlack",
-        "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+        "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
         "desc": "Müşterinin sesini (VOC) çağrı kayıtlarından, anketlerden, sosyal medyadan ve web hareketlerinden anlık toplayıp analiz eden; kök nedenleri saniyeler içinde bulan ve ilgili ekiplere kapalı döngü görev atayan uçtan uca akıllı sistemler.",
         "slug": "ai-destekli-cx",
         "bullets": [
@@ -273,7 +286,9 @@
           "AI Destekli Deneyim Yönetim Sistemi, Close-the Loop Entegrasyonu",
           " AI Destekli Müşteri Deneyim Yolculuğu Yönetimi",
           "Kök Neden, Müşteri Duygu, Etki Analizleri"
-        ]
+        ],
+        "badge": "Çözüm 01",
+        "btnLabel": "Detaylı Çözümleri İncele"
       },
       {
         "title": "Deneyim Tasarımı & Haritalandırma",
@@ -287,7 +302,9 @@
           "Derin Etnografik & Niteliksel Saha Araştırmaları",
           "Servis Blueprint & Temas Noktası Optimizasyonu",
           "Kullanıcı Deneyimi (UX) & Hızlı Prototipleme"
-        ]
+        ],
+        "badge": "Çözüm 02",
+        "btnLabel": "Detaylı Metodolojiyi İncele →"
       },
       {
         "title": "cx2222 Akademi & Kültür Dönüşümü",
@@ -301,7 +318,9 @@
           "LEGO® Serious Play® ile Stratejik Hizalanma",
           "Ön Hat (Frontline) Çalışan Güçlendirme Programları",
           "EX (Employee Experience) & Kültür Teşhisi"
-        ]
+        ],
+        "badge": "Çözüm 03",
+        "btnLabel": "Detaylı Metodolojiyi İncele →"
       },
       {
         "title": "CX & AI Maturity Testi",
@@ -315,7 +334,9 @@
           "Anlık Seviye Belirleme (Seviye 1 - Seviye 4)",
           "Kişiselleştirilmiş İlk 3 Aksiyon Tavsiyesi",
           "Ücretsiz Strateji Değerlendirme İmkanı"
-        ]
+        ],
+        "badge": "Çözüm 04",
+        "btnLabel": "Detaylı Metodolojiyi İncele →"
       }
     ],
     "faqs": [],
@@ -367,41 +388,41 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "AI Destekli Müşteri Deneyimi ve VOC Sistemleri",
-      "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kuruyoruz.",
+      "title": "AI Destekli Müşteri Deneyimi Yönetimi Sistemleri",
+      "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kurmanızı sağlıyoruz.",
       "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
       "imageAlt": "AI Experience Concept",
       "headingTag": "h1",
-      "titleColor": "sandyBrown",
-      "surface": "richBlack"
+      "surface": "richBlack",
+      "titleColor": "white"
     },
     "capabilities": [
       {
-        "eyebrow": "01 / ANALİTİK ZEKA",
-        "title": "Gerçek Zamanlı Duygu & Kök Neden Analizi",
-        "body": "Klasik anahtar kelime sayımı müşteri memnuniyetini açıklayamaz. Doğal Dil İşleme (NLP) ve LLM tabanlı analiz motorumuz; ses tonu iniş çıkışlarını, ironiyi, tereddüt anlarını ve öfkenin asıl kök nedenini (fatura şeffaflığı, kargo gecikmesi, yetersiz personel) anında sınıflandırır.",
-        "metric": "• %93+ Türkçe Sentiment Doğruluğu",
+        "eyebrow": "",
+        "title": "AI Destekli Müşterinin Sesi (VOC) Sistem Kurulumu",
+        "body": "Farklı kanallara dağılmış müşteri sinyallerini tek bir akıllı platformda birleştirerek tüm organizasyonunuzu ortak bir hedefte buluştururuz. Yapay zeka ve gerçek zamanlı analizlerle memnuniyetsizliğin erken sinyallerini tespit eder, ekiplerinizi anında proaktif aksiyonlara yönlendiririz. Dağınık geri bildirimleri anlamlı bir deneyim hikayesine dönüştürerek, müşteri içgörülerini doğrudan rekabet avantajı ve ölçülebilir iş sonuçlarına bağlarız.",
+        "metric": "• $10M+  Yapay zeka destekli müşteri deneyimi yönetimi ile operasyonel verimlilik",
         "style": "siteBg"
       },
       {
-        "eyebrow": "02 / OPERASYONEL ÇEVİKLİK",
-        "title": "Kapalı Döngü (Closed-Loop) Aksiyon Motoru",
-        "body": "Veri aksiyona dönüşmüyorsa sadece maliyettir. Olumsuz bir geri bildirim veya sürtünme yaşandığında, sistem ilgili mağaza müdürüne veya müşteri temsilcisine kişiselleştirilmiş bir kurtarma görevi atar. Müşteri şikayeti büyütmeden 15 dakika içinde aranır ve sorun çözülür.",
-        "metric": "• Ortalama Aksiyon Süresi: < 15 Dakika",
-        "style": "dustGrey"
+        "eyebrow": "",
+        "title": "AI Destekli Deneyim Yönetim Sistemi, <b>Close-The Loop</b> Entegrasyonu",
+        "body": "Müşteri geri bildirimlerini yalnızca ölçmekle kalmaz, yapay zeka destekli metin ve duygu analizi ile anında aksiyona dönüştürürüz. İç ve dış döngü (inner-loop, outer-loop) kurgumuz sayesinde bireysel sorunları otomatik alarm ve biletleme sistemleri ile gerçek zamanlı olarak çözerken, elde edilen içgörülerle kurum geneline yayılan stratejik ve sistemsel iyileştirmeler yapmanızı sağlarız. Bütünleşik platformumuz ve danışmanlığımızla müşteri kaybını (churn) önler, sadakati artırır ve deneyimi doğrudan finansal getiriye (ROI) bağlarız. ",
+        "metric": "• %40 İlk müşteri temasında daha hızlı dönüş",
+        "style": "platinum"
       },
       {
-        "eyebrow": "03 / ÖNGÖRÜSEL KORUMA",
-        "title": "Kayıp Riski (Churn) Erken Uyarı Sistemi",
-        "body": "Müşteriler gitmeden önce mutlaka dijital ayak izleri bırakırlar: Kullanım sıklığında ani düşüş, destek sayfasında tekrarlayan aramalar veya faturaya bakma sıklığı. Tahmine dayalı makine öğrenimi modellerimiz, müşterinin ayrılma ihtimalini %85 doğrulukla önceden haber verir.",
-        "metric": "• %60’a Varan Churn Engelleme Oranı",
+        "eyebrow": "",
+        "title": "AI destekli Müşteri Deneyim Yolculuğu Yönetimi",
+        "body": "Kurumunuzun tüm iletişim kanallarında ilk etkileşimden, uzun vadeli sadakate kadar, tüm müşteri yolculuğunu haritalamasını ve analiz etmesini sağlarız. Bu kapsamlı analiz ile, problemli noktaların belirlenmesini sağlayarak müşterinin yolculuğunu yapay zeka gücüyle sürekli geliştirmenizi sağlarız",
+        "metric": "",
         "style": "brandAccent"
       },
       {
-        "eyebrow": "04 / ÇALIŞAN DESTEĞİ",
-        "title": "Agentic AI & Temsilci Asistanı (Copilot)",
-        "body": "Ön hat çalışanlarınızı karmaşık CRM ekranlarında kaybolmaktan kurtarıyoruz. Temsilci müşteriyi dinlerken, yapay zeka asistanı müşterinin geçmiş yolculuğunu özetler, en uygun empatik çözüm önerisini üretir ve temsilcinin önüne hazır getirir.",
-        "metric": "• Çağrı Çözüm Süresinde (AHT) %40 Düşüş",
+        "eyebrow": "",
+        "title": "Kök neden, Müşteri Duygu, Etki Analizleri",
+        "body": "Şikâyetlere odaklanan anlayışını geride bırakarak, yapay zeka destekli duygu analiziyle negatif hislere yol açan kök nedenleri, bağlılık yaratan memnuniyet alanlarını ve CSAT/NPS metriklerini tek bir akışta analiz ederek tüm deneyim panoramasını ortaya çıkarırız. Aksiyonları bir yapılacaklar listesi olmaktan çıkarır; beklentileri anlayan kişiselleştirilmiş stratejilerle markanızın gelirlerini ve müşteri sadakatini artıracak dönüm noktaları yaratırız.",
+        "metric": "• +19  NPS artışı",
         "style": "richBlack"
       }
     ],
@@ -442,7 +463,7 @@
       "title": "",
       "desc": "",
       "visible": true,
-      "selectedCtaId": "academy-training"
+      "selectedCtaId": "default-consulting"
     },
     "projectShowcase": {
       "visible": false,
@@ -489,36 +510,36 @@
     },
     "hero": {
       "badge": "",
-      "bigWord": "CX/UX",
-      "title": "Deneyim Tasarımı ve Müşteri Yolculuk Haritaları (CJM)2",
-      "desc": "Masa başında tahmin yürüterek müşteri memnun edilemez. Gerçek insanların hayatına dokunan, sürtünmesiz ve unutulmaz deneyimleri sahada, müşterinin bizzat yanında tasarlıyoruz.",
+      "bigWord": "İnsan Odaklı<br> Deneyim Tasarımı",
+      "title": "",
+      "desc": "Müşteri deneyimini gerçekten anlamak, müşterilerin ihtiyaçlarını, beklentilerini ve günlük yaşamlarındaki deneyimlerini yakından tanımakla başlar. Müşterilerinizin bakış açısını, iş hedefleriniz ve organizasyonel önceliklerinizle bir araya getirerek hem insanlar hem de işiniz için değer yaratan deneyimleri birlikte tasarlıyoruz.",
       "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
       "imageAlt": "Deneyim Tasarımı",
       "headingTag": "h1"
     },
     "capabilities": [
       {
-        "eyebrow": "01 / DERİN İÇGÖRÜ",
-        "title": "Saha Etnografisi & Davranışsal Gözlem",
-        "body": "Müşterilerinizi yalnızca anket cevaplarıyla değil; alışveriş yaparken, bankacılık işlemi yaparken veya havalimanında bavulunu beklerken gözlemliyoruz. Sözcüklerin arkasındaki mikro mimikleri, tereddüt anlarını ve görünmeyen kültürel dinamikleri haritalıyoruz.",
+        "eyebrow": "",
+        "title": "Müşteri Yolculuğu Haritaları",
+        "body": "İş hedeflerinizi ve organizasyonunuzu anlayarak başlayan sahada müşteri ile devam eden bir yaklaşımla, mevcut durum (as-is) müşteri yolculuklarını çıkarıyor, müşteriyi odağına almış bir hedef durum (to-be) deneyimi ve uygulama yol haritasını ekibinizle oluşturuyoruz. ",
         "style": "siteBg"
       },
       {
-        "eyebrow": "02 / BÜTÜNSEL BAKIŞ",
-        "title": "Uçtan Uca Yolculuk Haritaları (CJM)",
-        "body": "Müşterinin markanızla ilk temas ettiği andan sadakat veya ayrılma evresine kadar olan tüm serüveni dijital ve fiziksel boyutlarıyla görselleştiriyoruz. Hangi aşamada güvenin zedelendiğini ve hangi anların unutulmaz olduğunu netleştiriyoruz.",
+        "eyebrow": "",
+        "title": "Müşteri Deneyimi Araştırmaları",
+        "body": "Müşterilerinizi yalnızca anket cevaplarıyla değil; alışveriş yaparken, bankacılık işlemi yaparken veya havaalanında bavulunu beklerken gözlemliyoruz. Sözcüklerin arkasındaki mikro mimikleri, tereddüt anlarını ve görünmeyen kültürel dinamikleri haritalıyoruz. İhtiyacınıza uygun şekilde müşteri deneyimi daklı butik araştırmaları yapıp danışmanlık çıktısı olarak sunuyoruz.",
         "style": "dustGrey"
       },
       {
-        "eyebrow": "03 / ARKA OFİS UYUMU",
+        "eyebrow": "",
         "title": "Servis Blueprinting (Ön Hat & Arka Hat)",
         "body": "Müşterinin gördüğü vitrin ile o vitrini besleyen arka ofis yazılımları, lojistik süreçleri ve çağrı merkezi akışlarını tek bir mimaride buluşturuyoruz. Deneyimin kırıldığı operasyonel kör noktaları onarıyoruz.",
         "style": "richBlack"
       },
       {
-        "eyebrow": "04 / ÇEVİK DOĞRULAMA",
-        "title": "Hızlı Prototipleme & Gerçek Testler",
-        "body": "Tasarımı aylarca kodlamadan önce; interaktif prototiplerle gerçek kullanıcıların önüne çıkarıyoruz. Gerçek hayatta test edilip onaylanmayan hiçbir deneyim kurgusunu canlıya almıyoruz.",
+        "eyebrow": "",
+        "title": "Müşteri Odaklı Stratejik Hizalanma",
+        "body": "Müşteri deneyimi, organizasyonun tüm birimlerinin ortak bir hedef doğrultusunda hareket etmesini gerektiren bir takım oyunudur. Müşteri Odaklı Stratejik Hizalanma yaklaşımımızla ekiplerinizi, süreçlerinizi ve iş hedeflerinizi müşteri deneyimini merkeze alan ortak bir vizyonda buluşturuyoruz.\n\n<br><br><b>CX Folks Northstar</b> ile müşteri deneyimini yönetiminde tüm kurumun mevcut durumunu analiz ediyor , gelişme için aksiyonları belirliyor, CX Folks Maturity Assesment ile kurumunuzda müşteri deneyimini şekillendiren paydaşları bir araya getiren çalıştaylarla müşteri odağında hizalanmayı sağlayıyoruz.",
         "style": "brandAccent"
       }
     ],
@@ -720,8 +741,8 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "cx2222 Akademi ve Kültür Dönüşümü32",
-      "desc": "En gelişmiş yapay zeka altyapısına sahip olsanız bile, müşterinizle göz göze gelen çalışanınız empati kuramıyorsa deneyim çöker. Çalışan deneyimini (EX) güçlendiriyor, ekipleri tek bir vizyonda kenetliyoruz.",
+      "title": "CX Folks Akademi ve Kültür Dönüşümü",
+      "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
       "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
@@ -730,27 +751,27 @@
     },
     "capabilities": [
       {
-        "eyebrow": "01 / STRATEJİK HİZALANMA",
-        "title": "LEGO® Serious Play® Seansları",
-        "body": "Sıkıcı sunumlar ve monolog toplantılar yerine, departman liderlerini ve ekipleri masaya oturtuyoruz. Ellerin zihinle kurduğu nörolojik bağı kullanarak kurumun kör noktalarını, müşteri sürtünmelerini ve gelecek senaryolarını 3 boyutlu inşa ediyoruz.",
+        "eyebrow": "",
+        "title": "\"Müşteri Deneyimi 101\"",
+        "body": "Müşteri deneyimi ekipleri ve yönetim kadrosu için 30’dan fazla gerçek marka deneyimiyle zenginleştirilmiş gelişim programları sunuyoruz. Bilgi ve farkındalığı artıran stratejik eğitimlerle tüm organizasyonun CX yetkinliğini ileriye taşıyoruz.",
         "style": "platinum"
       },
       {
-        "eyebrow": "02 / ÖN HAT GÜÇLENDİRME",
-        "title": "Frontline Çalışan Yetkilendirme",
-        "body": "Müşteri mağduriyet yaşadığında çalışanınızın 'Prosedürümüz böyle, bir şey yapamam' demesini engelliyoruz. Çalışanlara belirli sınırlar dahilinde anında inisiyatif alma, telafi tanımlama ve sorunu yerinde çözme özgürlüğü kazandırıyoruz.",
+        "eyebrow": "",
+        "title": "\"Hizmet Tasarımı (Service Design) 101\"",
+        "body": "Harika bir ürünü olan ama hizmet tarafında (teslimat, destek, iletişim) kaos yaşayan şirketlerin, süreçlerini \"mühendis titizliğiyle\" haritalaması ve iyileştirmesi içindir.Hizmetiniz tesadüflere değil, tasarıma bağlı olsun.Operasyonel boşlukları kapatın ve müşteri deneyimini iyileştirin. Süreçlerinizi netleştirmek için...",
         "style": "siteBg"
       },
       {
-        "eyebrow": "03 / EMPATİ ATÖLYELERİ",
-        "title": "Müşteri Ayakkabısında Bir Gün",
-        "body": "Masa başındaki yazılımcıyı, pazarlamacıyı ve finans yöneticisini çağrı merkezi kulaklığı takmaya veya şube bankosunda durmaya davet ediyoruz. Karar vericilerin müşterinin gerçek acısını bizzat hissetmesini sağlıyoruz.",
+        "eyebrow": "",
+        "title": "\"AI Çağında Müşteri Deneyimi\"",
+        "body": "AI çağında müşterilerin deneyim beklentileri de değişiyor. Yeni teknolojiler önemli fırsatlar sunarken, müşteri deneyimini merkeze almayan bir yaklaşım bu fırsatların riske dönüşmesine neden olabiliyor. Gerçek örneklerden yola çıkarak kurumunuzda hayata geçirebileceğiniz fırsatları ve bunları insan odaklı bir yaklaşımla nasıl uygulayabileceğinizi birlikte keşfediyoruz.",
         "style": "richBlack"
       },
       {
-        "eyebrow": "04 / KÜLTÜR ELÇİLERİ",
-        "title": "Kurum İçi CX Elçileri Yetiştirme",
-        "body": "Danışmanlık bittiğinde dönüşümün devam etmesi için kurumunuzun içinden seçilen liderleri 'Deneyim Elçisi' olarak eğitiyoruz. Değişimin kendi çalışanlarınız eliyle yaşatılmasını garanti ediyoruz.",
+        "eyebrow": "",
+        "title": "LEGO® Serious Play® Seansları",
+        "body": "Fikirlerin yalnızca konuşulmadığı, somut deneyimlere dönüştüğü yaratıcı bir keşif alanı sunuyoruz. Departman liderlerini ve ekipleri bir araya getirerek elleriyle düşünmelerini, fikirlerini üç boyutlu olarak ifade etmelerini ve farklı bakış açıları geliştirmelerini sağlıyoruz. Bu ortak üretim sürecinde kurumun potansiyelini, müşteri deneyimini geliştirme fırsatlarını ve geleceğe yönelik senaryoları birlikte keşfediyoruz.",
         "style": "brandAccent"
       }
     ],
@@ -1015,41 +1036,43 @@
       "keyTakeaways": []
     },
     "pillBadge": "",
-    "title": "MÜŞTERİ DENEYİMİ VE YAPAY ZEKA EKİBİ",
+    "title": "",
     "headingTag": "h1",
-    "storyIntro": "cx2222, KURUMLARIN MÜŞTERİ DENEYİMİNİ VE YAPAY ZEKA YOLCULUKLARINI İNSAN MERKEZLİ TASARIMLA DÖNÜŞTÜRMEK İÇİN BİR ARAYA GELEN ÇOK DİSİPLİNLİ BİR UZMAN KADROSUNDAN OLUŞUR.",
-    "storyP1": "Yapay zeka modellerinin sunduğu hız ve analitik derinlik, ancak insan sezgisi, empati ve sahada test edilmiş servis tasarımı disiplinleriyle birleştiğinde gerçek kurumsal değere dönüşür.",
-    "storyP2": "Veri bilimcilerimiz, deneyim tasarımcılarımız ve CX stratejistlerimizle her temas noktasında sürtünmesiz, kalıcı ve ölçülebilir deneyim ekosistemleri inşa ediyoruz.",
+    "storyIntro": "<b>cxfolks</b>, yapay zekayı insan sezgisi ve servis tasarımıyla birleştirerek kurumların müşteri deneyimini dönüştüren çok disiplinli bir ekiptir. Veri bilimcilerimiz, deneyim tasarımcılarımız ve CX stratejistlerimizle her temas noktasında sürtünmesiz ve ölçülebilir deneyimler inşa ediyoruz.",
+    "storyP1": "",
+    "storyP2": "",
     "members": [
       {
         "id": "ediz-pinar",
-        "name": "<b>UĞUR</b> Akay Köseoğlu",
-        "role": "Founder & CX Principal",
-        "image": "/images/uploads/dsc01870-mwj5qiby.png",
-        "linkedin": "https://linkedin.com",
+        "name": "Gökhan Kaya",
+        "role": "Müşteri Deneyimi Stratejisti / Kurucu Ortak",
+        "image": "/images/uploads/unnamed-mwm0c21q.jpg",
+        "linkedin": "https://www.linkedin.com/in/kayagokhan/",
         "nameSize": "16"
       },
       {
         "id": "ai-lead",
-        "name": "Can Dağdelen",
-        "role": "Head of AI & Experience Engineering",
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
+        "name": "Uğur Akay Köseoğlu",
+        "role": "Ürün ve Servis Tasarımcısı / Kurucu Ortak",
+        "image": "/images/uploads/ugur-mwm145n1.png",
+        "linkedin": "https://www.linkedin.com/in/ugurakaykoseoglu/",
+        "nameSize": "16"
       },
       {
         "id": "design-lead",
-        "name": "Aylin Yılmaz",
-        "role": "Lead Service & UX Designer",
-        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
+        "name": "Ekin Saçılık",
+        "role": "Müşteri Deneyimi Danışmanı",
+        "image": "/images/uploads/ekin-mwm14adj.png",
+        "linkedin": "https://www.linkedin.com/in/sacilikekin/",
+        "nameSize": "16"
       },
       {
         "id": "quote-card",
-        "name": "cx2222 Ekibi",
+        "name": "",
         "role": "Deneyim ve Sezgi Manifestosu",
         "isQuoteCard": true,
         "quote": "Müşterinin sesini duymak yetmez, onu algoritmaların ve aksiyonun kalbine yerleştirmek gerekir.",
-        "quoteAuthor": "cx2222 İlkesi",
+        "quoteAuthor": "",
         "bgColor": "brandAccent",
         "linkedin": "https://linkedin.com",
         "twitter": "https://twitter.com",
@@ -1057,38 +1080,19 @@
       },
       {
         "id": "research-lead",
-        "name": "Mert Aksoy",
-        "role": "Senior Ethnographic Researcher",
-        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
+        "name": "Özgür Kurtuldu",
+        "role": "Müşteri  Araştırmaları Danışmanı",
+        "image": "/images/uploads/ozgur-mwm0za4d.png",
+        "linkedin": "https://www.linkedin.com/in/%C3%B6zg%C3%BCr-kurtuldu-7b6986a/",
+        "nameSize": "16"
       },
       {
         "id": "analytics-lead",
-        "name": "Deniz Kaya",
-        "role": "VOC & Data Analytics Specialist",
-        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
-      },
-      {
-        "id": "product-lead",
-        "name": "Barış Demir",
-        "role": "CX Solution Architect",
-        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
-      },
-      {
-        "id": "journey-lead",
-        "name": "Selin Erdem",
-        "role": "Customer Journey & Culture Lead",
-        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
-      },
-      {
-        "id": "member-1794827162499",
-        "name": "Yeni Üye",
-        "role": "CX Uzmanı",
-        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-        "linkedin": "https://linkedin.com"
+        "name": "Ahmet Topçuoğlu",
+        "role": "Dış Danışman – Eğitmen – Fasilitatör",
+        "image": "/images/uploads/ahmet-mwm0zfuv.png",
+        "linkedin": "https://www.linkedin.com/in/ahmethazimtopcuoglu/",
+        "nameSize": "16"
       }
     ],
     "cta": {
@@ -1119,8 +1123,8 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "cx2222 Akademi ve Kültür Dönüşümü32",
-      "desc": "En gelişmiş yapay zeka altyapısına sahip olsanız bile, müşterinizle göz göze gelen çalışanınız empati kuramıyorsa deneyim çöker. Çalışan deneyimini (EX) güçlendiriyor, ekipleri tek bir vizyonda kenetliyoruz.",
+      "title": "CX Folks Akademi ve Kültür Dönüşümü",
+      "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
       "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
@@ -1129,27 +1133,27 @@
     },
     "capabilities": [
       {
-        "eyebrow": "01 / STRATEJİK HİZALANMA",
-        "title": "LEGO® Serious Play® Seansları",
-        "body": "Sıkıcı sunumlar ve monolog toplantılar yerine, departman liderlerini ve ekipleri masaya oturtuyoruz. Ellerin zihinle kurduğu nörolojik bağı kullanarak kurumun kör noktalarını, müşteri sürtünmelerini ve gelecek senaryolarını 3 boyutlu inşa ediyoruz.",
+        "eyebrow": "",
+        "title": "\"Müşteri Deneyimi 101\"",
+        "body": "Müşteri deneyimi ekipleri ve yönetim kadrosu için 30’dan fazla gerçek marka deneyimiyle zenginleştirilmiş gelişim programları sunuyoruz. Bilgi ve farkındalığı artıran stratejik eğitimlerle tüm organizasyonun CX yetkinliğini ileriye taşıyoruz.",
         "style": "platinum"
       },
       {
-        "eyebrow": "02 / ÖN HAT GÜÇLENDİRME",
-        "title": "Frontline Çalışan Yetkilendirme",
-        "body": "Müşteri mağduriyet yaşadığında çalışanınızın 'Prosedürümüz böyle, bir şey yapamam' demesini engelliyoruz. Çalışanlara belirli sınırlar dahilinde anında inisiyatif alma, telafi tanımlama ve sorunu yerinde çözme özgürlüğü kazandırıyoruz.",
+        "eyebrow": "",
+        "title": "\"Hizmet Tasarımı (Service Design) 101\"",
+        "body": "Harika bir ürünü olan ama hizmet tarafında (teslimat, destek, iletişim) kaos yaşayan şirketlerin, süreçlerini \"mühendis titizliğiyle\" haritalaması ve iyileştirmesi içindir.Hizmetiniz tesadüflere değil, tasarıma bağlı olsun.Operasyonel boşlukları kapatın ve müşteri deneyimini iyileştirin. Süreçlerinizi netleştirmek için...",
         "style": "siteBg"
       },
       {
-        "eyebrow": "03 / EMPATİ ATÖLYELERİ",
-        "title": "Müşteri Ayakkabısında Bir Gün",
-        "body": "Masa başındaki yazılımcıyı, pazarlamacıyı ve finans yöneticisini çağrı merkezi kulaklığı takmaya veya şube bankosunda durmaya davet ediyoruz. Karar vericilerin müşterinin gerçek acısını bizzat hissetmesini sağlıyoruz.",
+        "eyebrow": "",
+        "title": "\"AI Çağında Müşteri Deneyimi\"",
+        "body": "AI çağında müşterilerin deneyim beklentileri de değişiyor. Yeni teknolojiler önemli fırsatlar sunarken, müşteri deneyimini merkeze almayan bir yaklaşım bu fırsatların riske dönüşmesine neden olabiliyor. Gerçek örneklerden yola çıkarak kurumunuzda hayata geçirebileceğiniz fırsatları ve bunları insan odaklı bir yaklaşımla nasıl uygulayabileceğinizi birlikte keşfediyoruz.",
         "style": "richBlack"
       },
       {
-        "eyebrow": "04 / KÜLTÜR ELÇİLERİ",
-        "title": "Kurum İçi CX Elçileri Yetiştirme",
-        "body": "Danışmanlık bittiğinde dönüşümün devam etmesi için kurumunuzun içinden seçilen liderleri 'Deneyim Elçisi' olarak eğitiyoruz. Değişimin kendi çalışanlarınız eliyle yaşatılmasını garanti ediyoruz.",
+        "eyebrow": "",
+        "title": "LEGO® Serious Play® Seansları",
+        "body": "Fikirlerin yalnızca konuşulmadığı, somut deneyimlere dönüştüğü yaratıcı bir keşif alanı sunuyoruz. Departman liderlerini ve ekipleri bir araya getirerek elleriyle düşünmelerini, fikirlerini üç boyutlu olarak ifade etmelerini ve farklı bakış açıları geliştirmelerini sağlıyoruz. Bu ortak üretim sürecinde kurumun potansiyelini, müşteri deneyimini geliştirme fırsatlarını ve geleceğe yönelik senaryoları birlikte keşfediyoruz.",
         "style": "brandAccent"
       }
     ],

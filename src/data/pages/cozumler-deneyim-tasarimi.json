@@ -29,9 +29,9 @@
       "visible": true,
       "data": {
         "badge": "",
-        "bigWord": "CX/UX",
-        "title": "Deneyim Tasarımı ve Müşteri Yolculuk Haritaları (CJM)2",
-        "desc": "Masa başında tahmin yürüterek müşteri memnun edilemez. Gerçek insanların hayatına dokunan, sürtünmesiz ve unutulmaz deneyimleri sahada, müşterinin bizzat yanında tasarlıyoruz.",
+        "bigWord": "İnsan Odaklı<br> Deneyim Tasarımı",
+        "title": "",
+        "desc": "Müşteri deneyimini gerçekten anlamak, müşterilerin ihtiyaçlarını, beklentilerini ve günlük yaşamlarındaki deneyimlerini yakından tanımakla başlar. Müşterilerinizin bakış açısını, iş hedefleriniz ve organizasyonel önceliklerinizle bir araya getirerek hem insanlar hem de işiniz için değer yaratan deneyimleri birlikte tasarlıyoruz.",
         "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
         "imageAlt": "Deneyim Tasarımı",
         "headingTag": "h1"
@@ -45,27 +45,27 @@
       "data": {
         "items": [
           {
-            "eyebrow": "01 / DERİN İÇGÖRÜ",
-            "title": "Saha Etnografisi & Davranışsal Gözlem",
-            "body": "Müşterilerinizi yalnızca anket cevaplarıyla değil; alışveriş yaparken, bankacılık işlemi yaparken veya havalimanında bavulunu beklerken gözlemliyoruz. Sözcüklerin arkasındaki mikro mimikleri, tereddüt anlarını ve görünmeyen kültürel dinamikleri haritalıyoruz.",
+            "eyebrow": "",
+            "title": "Müşteri Yolculuğu Haritaları",
+            "body": "İş hedeflerinizi ve organizasyonunuzu anlayarak başlayan sahada müşteri ile devam eden bir yaklaşımla, mevcut durum (as-is) müşteri yolculuklarını çıkarıyor, müşteriyi odağına almış bir hedef durum (to-be) deneyimi ve uygulama yol haritasını ekibinizle oluşturuyoruz. ",
             "style": "siteBg"
           },
           {
-            "eyebrow": "02 / BÜTÜNSEL BAKIŞ",
-            "title": "Uçtan Uca Yolculuk Haritaları (CJM)",
-            "body": "Müşterinin markanızla ilk temas ettiği andan sadakat veya ayrılma evresine kadar olan tüm serüveni dijital ve fiziksel boyutlarıyla görselleştiriyoruz. Hangi aşamada güvenin zedelendiğini ve hangi anların unutulmaz olduğunu netleştiriyoruz.",
+            "eyebrow": "",
+            "title": "Müşteri Deneyimi Araştırmaları",
+            "body": "Müşterilerinizi yalnızca anket cevaplarıyla değil; alışveriş yaparken, bankacılık işlemi yaparken veya havaalanında bavulunu beklerken gözlemliyoruz. Sözcüklerin arkasındaki mikro mimikleri, tereddüt anlarını ve görünmeyen kültürel dinamikleri haritalıyoruz. İhtiyacınıza uygun şekilde müşteri deneyimi daklı butik araştırmaları yapıp danışmanlık çıktısı olarak sunuyoruz.",
             "style": "dustGrey"
           },
           {
-            "eyebrow": "03 / ARKA OFİS UYUMU",
+            "eyebrow": "",
             "title": "Servis Blueprinting (Ön Hat & Arka Hat)",
             "body": "Müşterinin gördüğü vitrin ile o vitrini besleyen arka ofis yazılımları, lojistik süreçleri ve çağrı merkezi akışlarını tek bir mimaride buluşturuyoruz. Deneyimin kırıldığı operasyonel kör noktaları onarıyoruz.",
             "style": "richBlack"
           },
           {
-            "eyebrow": "04 / ÇEVİK DOĞRULAMA",
-            "title": "Hızlı Prototipleme & Gerçek Testler",
-            "body": "Tasarımı aylarca kodlamadan önce; interaktif prototiplerle gerçek kullanıcıların önüne çıkarıyoruz. Gerçek hayatta test edilip onaylanmayan hiçbir deneyim kurgusunu canlıya almıyoruz.",
+            "eyebrow": "",
+            "title": "Müşteri Odaklı Stratejik Hizalanma",
+            "body": "Müşteri deneyimi, organizasyonun tüm birimlerinin ortak bir hedef doğrultusunda hareket etmesini gerektiren bir takım oyunudur. Müşteri Odaklı Stratejik Hizalanma yaklaşımımızla ekiplerinizi, süreçlerinizi ve iş hedeflerinizi müşteri deneyimini merkeze alan ortak bir vizyonda buluşturuyoruz.\n\n<br><br><b>CX Folks Northstar</b> ile müşteri deneyimini yönetiminde tüm kurumun mevcut durumunu analiz ediyor , gelişme için aksiyonları belirliyor, CX Folks Maturity Assesment ile kurumunuzda müşteri deneyimini şekillendiren paydaşları bir araya getiren çalıştaylarla müşteri odağında hizalanmayı sağlayıyoruz.",
             "style": "brandAccent"
           }
         ],

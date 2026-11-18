@@ -103,7 +103,7 @@
         "part3": "kapılıp",
         "highlight2": "insanı",
         "part4": "unutmak.",
-        "subTitle": "cx2222, teknolojinin dönüştürücü gücünü tasarımın empatisiyle dengeleyen bir müşteri deneyimi ve hizmet tasarımı şirketidir.",
+        "subTitle": "CX Folks yapay zekanın dönüştürücü gücünü tasarımın empatisiyle dengeleyen ve etkili kullanmanızı sağlayan bir müşteri deneyimi ve hizmet tasarım şirketidir.",
         "subDesc": "",
         "ctaText": "Yaklaşımımızı Keşfedin →",
         "ctaHref": "/yaklasimimiz",
@@ -281,7 +281,7 @@
         "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
         "bgAlt": "Neden Şimdi Arka Plan",
         "title": "Yapay zeka müşteri deneyimini dönüştürüyor",
-        "subtitle": "Müşteri deneyiminde yapay zekâ sayesinde…",
+        "subtitle": "Deneyim odaklı yapay zeka ile ",
         "primaryLinkText": "",
         "primaryLinkHref": "#masterclass",
         "secondaryLinkText": "",
@@ -289,28 +289,27 @@
         "items": [
           {
             "title": "Sesi aksiyona çeviririz",
-            "body": "Müşterinin sesini yalnızca anketlerle duyup statik PDF raporlarına hapsetmeyiz. Gelen her mikro geri bildirimi, çağrı kaydını ve dijital izi doğal dil işleme algoritmalarıyla anında ayrıştırır, kök neden analiziyle birlikte ilgili birimin önüne hazır bir operasyonel aksiyon planı olarak koyarız.",
-            "titleTag": "h3",
-            "bodyColor": "sandyBrown"
+            "body": "Müşterinin sesini yalnızca anketlerle duyup statik PDF raporlarına hapsetmeyiz. Gelen her mikro geri bildirimi, çağrı kaydını ve dijital izi doğal dil işleme algoritmaları ile anında ayrıştırır, kök neden analizi ile birlikte ilgili birimin önüne hazır bir operasyonel aksiyon planı olarak koyarız.",
+            "titleTag": "h3"
           },
           {
             "title": "Aksaklığı anında yakalarız",
-            "body": "Kullanıcı yolculuğundaki sürtünme noktalarını ve kopmaları müşteri henüz sistemi terk etmeden yakalarız. Kapalı döngü (closed-loop) mekanizmalarımız sayesinde, hata oluştuğu saniyede ilgili saha ekibini veya dijital akışı tetikleyerek ilişkiyi kriz büyümeden kurtarırız.",
+            "body": "Müşteri yolculuğundaki olumsuz deneyim noktaları ve kopmaları müşteri henüz sistemi terk etmeden yakalarsınız. Kapalı döngü (closed-loop) mekanizmaları sayesinde, hata oluştuğu saniyede ilgili ekibini veya dijital akışı tetikleyerek ilişkiyi kriz büyümeden kurtarabilirsiniz.",
             "titleTag": "h3"
           },
           {
             "title": "İhtiyacı önceden görürüz",
-            "body": "Reaktif müşteri hizmetleri dönemi kapandı. Davranışsal veri desenlerinden stres, tereddüt ve kararsızlık sinyallerini okuyarak, müşteriniz yardım talebinde bulunmadan önce proaktif empati adımlarıyla yanında olur, hayal kırıklığını sadakate dönüştürürüz.",
+            "body": "Sorunlar ortaya çıktıktan sonra harekete geçmek zorunda değilsiniz.  Davranışsal veri desenlerinden stres, tereddüt ve kararsızlık sinyallerini okuyarak, müşteriniz yardım talebinde bulunmadan önce proaktif empati adımlarıyla yanında olur, hayal kırıklığını sadakate dönüştürebilirsiniz.",
             "titleTag": "h3"
           },
           {
             "title": "Rutini otomatikleştiririz",
-            "body": "Standart, tekrarlayan ve mekanik süreçleri yapay zekaya devrederken ekiplerinizin zamanını serbest bırakırız. İnsan dokunuşunun vazgeçilmez olduğu güven inşası, karmaşık problem çözümü ve derin müzakere anlarında çalışanlarınızın gerçek potansiyelini sahaya yansıtırız.",
+            "body": "Ekiplerinizin operasyonel yükünü azaltarak uzmanlıklarını daha etkin kullanmalarını sağlayabilirsiniz. . İnsan dokunuşunun vazgeçilmez olduğu güven inşası, karmaşık problem çözümü ve derin müzakere anlarında çalışanlarınızın gerçek potansiyelini sahaya yansıtırsınız.",
             "titleTag": "h3"
           }
         ],
         "headingTag": "h2",
-        "subtitleColor": "richBlack"
+        "subtitleColor": "white"
       },
       "style": {
         "surface": "richBlack"
@@ -328,7 +327,7 @@
         ],
         "aiCard": {
           "topWord": "AI",
-          "bottomWord": "MÜŞTERİ DENEYİMİ",
+          "bottomWord": "MÜŞTERİ<br>DENEYİMİ",
           "href": "/cozumler/ai-destekli-cx",
           "desc": "",
           "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
@@ -349,11 +348,11 @@
         },
         "cxCard": {
           "badge": "",
-          "bigTitle": "CX/UX22",
+          "bigTitle": "DENEYİM<br>TASARIMI",
           "href": "/cozumler/deneyim-tasarimi",
           "desc": "Deneyimi teknolojiden değil, onu bizzat yaşayacak insandan başlayarak tasarlayın.",
           "bottomTitle": "",
-          "bottomDesc": "Uçtan Uca Yolculuk Haritaları<br>Derin Etnografik Araştırmalar, <br>Prototipleme Çalıştayları, <br>cx2222 Northstar & Maturity Assessment.",
+          "bottomDesc": "Uçtan Uca Yolculuk Haritaları<br>Derin Etnografik Araştırmalar, <br>Prototipleme Çalıştayları, <br><b>CX Folks</b> Northstar & Maturity Assessment.",
           "badgeTag": "span",
           "bigTitleTag": "h2",
           "descTag": "p",
@@ -382,11 +381,11 @@
           ],
           "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.jpg",
           "imageAlt": "cx2222 Akademi Liderlik Portresi",
-          "title": "cx2222 Akademi",
+          "title": "AKADEMİ",
           "subtitle": "Kurum Kültürü & Yetkinlik Dönüşümü",
-          "secondaryBtnLabel": "İletişim",
+          "secondaryBtnLabel": "Görüşelim",
           "secondaryBtnHref": "/iletisim",
-          "primaryBtnLabel": "Eğitim Talep Edin",
+          "primaryBtnLabel": "CX Folks Eğitimleri",
           "primaryBtnHref": "/cozumler/akademi",
           "titleTag": "h1",
           "titleSize": "25",
