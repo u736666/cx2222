@@ -29,10 +29,10 @@
       "visible": true,
       "data": {
         "eyebrow": "",
-        "title": "İnsan odaklı tasarım ve deneyim odaklı yapay zeka çözümlerimiz",
-        "desc": "Veriyi aksiyona dönüştüren yapay zeka uygulamaları, insan odaklı tasarım pratikleri ve kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.\n",
+        "title": "İnsan odaklı tasarım ve <br>deneyim odaklı yapay zeka çözümlerimiz",
+        "desc": "Veriyi aksiyona dönüştüren yapay zeka uygulamaları, insan odaklı tasarım pratikleri ve <br>kurumsal yetkinlik eğitimleriyle somut iş sonuçları üretiyoruz.\n",
         "headingTag": "h1",
-        "surface": ""
+        "surface": "siteBg"
       },
       "style": {
         "surface": "platinum"
