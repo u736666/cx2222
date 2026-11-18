@@ -264,7 +264,8 @@ h6, .typo-h6 {
   color: #ffffff !important;
 }
 
-.mega-dive-container {
+/* Tek Zeminli Master Mega Menü Wrapper (Kapanıp açılma ve patlamayı %100 önler) */
+.mega-wrapper {
   position: absolute;
   top: 100%;
   left: 0;
@@ -279,6 +280,35 @@ h6, .typo-h6 {
   z-index: 55;
 }
 
+.mega-wrapper.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.mega-panel-pane {
+  display: none;
+}
+
+.mega-panel-pane.active-pane {
+  display: block !important;
+  animation: megaPaneFadeIn 0.12s ease-out;
+}
+
+@keyframes megaPaneFadeIn {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Geriye dönük uyumluluk */
+.mega-dive-container {
+  display: none;
+}
+
 .nav-trigger {
   position: relative;
   height: 100%;
@@ -286,14 +316,14 @@ h6, .typo-h6 {
   align-items: center;
 }
 
-/* Hit Alanını Genişleten Görünmez Köprü (Kazara menüden çıkmayı ve kapanmayı önler) */
+/* Hit Alanını Genişleten Görünmez Köprü (Kazara menüden çıkmayı ve menüler arası boşlukta kapanmayı önler) */
 .nav-trigger::after {
   content: '';
   position: absolute;
   top: 0;
-  bottom: -22px;
-  left: 0;
-  right: 0;
+  bottom: -24px;
+  left: -12px;
+  right: -12px;
   pointer-events: auto;
   z-index: 2;
 }
@@ -305,12 +335,6 @@ h6, .typo-h6 {
 
 .nav-trigger.active-trigger > a {
   color: var(--color-brand-accent) !important;
-}
-
-.mega-dive-container.active-panel {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
 }
 
 .accordion-card {
@@ -339,9 +363,14 @@ h6, .typo-h6 {
   font-size: 14px !important;
 }
 
-/* Sitedeki Görüşelim ve Görüşme Planlayın butonlarında yazı rengi beyaz */
+/* Wasabi ve açık vurgulu butonlarda kontrastlı koyu metin */
+.btn-rect.bg-brandAccent,
+a.btn-rect.bg-brandAccent,
 #main-header a.btn-rect,
-#mobile-menu-drawer a.btn-rect,
+#mobile-menu-drawer a.btn-rect {
+  color: var(--color-rich-black) !important;
+}
+
 button#contact-submit-btn,
 .btn-cta-white {
   color: #ffffff !important;

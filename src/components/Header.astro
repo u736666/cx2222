@@ -102,65 +102,67 @@ function isExactPage(href: string) {
     </div>
   </div>
 
-  <!-- ================= MEGA PANELLER (cx2222 tasarım referansı ile %100 Birebir) ================= -->
-  {(site.megaMenus || []).map((panel: any) => (
-    <div id={panel.id} class="mega-dive-container pt-10 pb-12 px-6 md:px-16">
-      <div class="max-w-custom mx-auto">
-        <div class="grid-standard">
-          <div class="col-span-12 lg:col-span-4 flex flex-col justify-between pr-8 space-y-6">
-            <div class="space-y-4">
-              <h3 class="typo-h3 text-white">
-                {panel.title}
-              </h3>
-              <p class="typo-body font-light text-white/70">
-                {panel.desc}
-              </p>
+  <!-- ================= MEGA PANELLER (Tek Zeminli Master Wrapper & Kesintisiz Sıfır-Patlama Tab Panelleri) ================= -->
+  <div id="mega-wrapper" class="mega-wrapper" aria-hidden="true">
+    {(site.megaMenus || []).map((panel: any) => (
+      <div id={panel.id} class="mega-panel-pane pt-10 pb-12 px-6 md:px-16" style="display: none;">
+        <div class="max-w-custom mx-auto">
+          <div class="grid-standard">
+            <div class="col-span-12 lg:col-span-4 flex flex-col justify-between pr-8 space-y-6">
+              <div class="space-y-4">
+                <h3 class="typo-h3 text-white">
+                  {panel.title}
+                </h3>
+                <p class="typo-body font-light text-white/70">
+                  {panel.desc}
+                </p>
+              </div>
+              <a href={panel.ctaHref} class="btn-rect w-max px-6 py-3 bg-brandAccent text-paletteRichBlack font-semibold hover:bg-brandAccentHover">
+                <span>{panel.ctaText}</span>
+              </a>
             </div>
-            <a href={panel.ctaHref} class="btn-rect w-max px-6 py-3 bg-brandAccent text-paletteRichBlack font-semibold hover:bg-brandAccentHover">
-              <span>{panel.ctaText}</span>
-            </a>
+
+            <div class="col-span-12 lg:col-span-8 pl-0 lg:pl-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {(panel.items || []).map((item: any) => {
+                const hasImage = Boolean(item.image && String(item.image).trim());
+                const hasDesc = Boolean(item.desc && String(item.desc).trim() && String(item.desc).trim() !== 'Kısa açıklama');
+                const altText = (item.alt && String(item.alt).trim() !== 'Kart Görseli') ? item.alt : item.title;
+                return (
+                  <a href={item.href} class="group space-y-3 block">
+                    {hasImage && (
+                      <div class="w-full aspect-[3/1] bg-neutral-800 overflow-hidden">
+                        <img src={item.image} alt={altText} class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" />
+                      </div>
+                    )}
+                    <span class="typo-body font-normal text-white group-hover:text-brandAccent transition-colors block">{item.title}</span>
+                    {hasDesc && (
+                      <p class="typo-small font-light text-white/60">{item.desc}</p>
+                    )}
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
-          <div class="col-span-12 lg:col-span-8 pl-0 lg:pl-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {(panel.items || []).map((item: any) => {
-              const hasImage = Boolean(item.image && String(item.image).trim());
-              const hasDesc = Boolean(item.desc && String(item.desc).trim() && String(item.desc).trim() !== 'Kısa açıklama');
-              const altText = (item.alt && String(item.alt).trim() !== 'Kart Görseli') ? item.alt : item.title;
-              return (
-                <a href={item.href} class="group space-y-3 block">
-                  {hasImage && (
-                    <div class="w-full aspect-[3/1] bg-neutral-800 overflow-hidden">
-                      <img src={item.image} alt={altText} class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                  )}
-                  <span class="typo-body font-normal text-white group-hover:text-brandAccent transition-colors block">{item.title}</span>
-                  {hasDesc && (
-                    <p class="typo-small font-light text-white/60">{item.desc}</p>
-                  )}
-                </a>
-              );
-            })}
-          </div>
+          {panel.showFooterBar && (
+            <div class="mt-10 pt-6 flex flex-wrap items-center justify-between gap-y-2 typo-body font-light text-white/60">
+              <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+                {(site.brand.offices || []).map((office: any) => (
+                  <span>{office.city} • {office.district}</span>
+                ))}
+                <a href={`mailto:${site.brand.email}`} class="hover:text-white">{site.brand.email}</a>
+              </div>
+              <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+                {(site.brand.social || []).map((s: any) => (
+                  <a href={s.url} target="_blank" rel="noopener" class="hover:text-brandAccent">{s.label}</a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-
-        {panel.showFooterBar && (
-          <div class="mt-10 pt-6 flex flex-wrap items-center justify-between gap-y-2 typo-body font-light text-white/60">
-            <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
-              {(site.brand.offices || []).map((office: any) => (
-                <span>{office.city} • {office.district}</span>
-              ))}
-              <a href={`mailto:${site.brand.email}`} class="hover:text-white">{site.brand.email}</a>
-            </div>
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {(site.brand.social || []).map((s: any) => (
-                <a href={s.url} target="_blank" rel="noopener" class="hover:text-brandAccent">{s.label}</a>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
-    </div>
-  ))}
+    ))}
+  </div>
 
   <!-- Mobile Drawer -->
   <div id="mobile-menu-drawer" class="lg:hidden hidden w-full bg-paletteRichBlack text-white px-6 py-4 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
@@ -219,21 +221,32 @@ function isExactPage(href: string) {
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('main-header');
+    const megaWrapper = document.getElementById('mega-wrapper');
     const triggers = document.querySelectorAll('.nav-trigger');
-    const panels = document.querySelectorAll('.mega-dive-container');
+    const panes = document.querySelectorAll('.mega-panel-pane');
     let hideTimeout: ReturnType<typeof setTimeout> | null = null;
-    const HIDE_DELAY = 280; // Tolerans süresi
-
-    function closeAllMega() {
-      triggers.forEach(t => t.classList.remove('active-trigger'));
-      panels.forEach(p => p.classList.remove('active-panel'));
-      if (header) header.classList.remove('has-active-mega');
-    }
+    const HIDE_DELAY = 280; // ms tolerans süresi
 
     function cancelHide() {
       if (hideTimeout) {
         clearTimeout(hideTimeout);
         hideTimeout = null;
+      }
+    }
+
+    function closeAllMega() {
+      cancelHide();
+      triggers.forEach(t => t.classList.remove('active-trigger'));
+      panes.forEach(p => {
+        p.classList.remove('active-pane');
+        (p as HTMLElement).style.display = 'none';
+      });
+      if (megaWrapper) {
+        megaWrapper.classList.remove('is-open');
+        megaWrapper.setAttribute('aria-hidden', 'true');
+      }
+      if (header) {
+        header.classList.remove('has-active-mega');
       }
     }
 
@@ -244,11 +257,21 @@ function isExactPage(href: string) {
       }, HIDE_DELAY);
     }
 
-    // Menü öğeleri arasında geçiş yaparken header fonunu kapatıp açmadan (patlama olmadan) paneli akıcı değiştir
-    function switchMega(targetTrigger: Element, targetPanel: HTMLElement | null) {
+    // Menü öğeleri arasında geçiş yaparken tek zeminli mega-wrapper ASLA kapanıp açılmaz (sıfır patlama / kesintisiz geçiş)
+    function showMega(targetTrigger: Element, targetMegaId: string | null) {
       cancelHide();
-      if (header) header.classList.add('has-active-mega');
+      if (!targetMegaId) return;
+      const targetPane = document.getElementById(targetMegaId);
+      if (!targetPane) return;
 
+      // 1. Header ve Mega Wrapper zeminini tek seferde aç ve stabil tut
+      if (header) header.classList.add('has-active-mega');
+      if (megaWrapper) {
+        megaWrapper.classList.add('is-open');
+        megaWrapper.setAttribute('aria-hidden', 'false');
+      }
+
+      // 2. Aktif tetikleyici link stilini güncelle
       triggers.forEach(t => {
         if (t === targetTrigger) {
           t.classList.add('active-trigger');
@@ -257,59 +280,63 @@ function isExactPage(href: string) {
         }
       });
 
-      panels.forEach(p => {
-        if (p === targetPanel) {
-          p.classList.add('active-panel');
+      // 3. Wrapper içindeki panelleri anında değiştir (display toggle)
+      panes.forEach(p => {
+        if (p === targetPane) {
+          (p as HTMLElement).style.display = 'block';
+          p.classList.add('active-pane');
         } else {
-          p.classList.remove('active-panel');
+          (p as HTMLElement).style.display = 'none';
+          p.classList.remove('active-pane');
         }
       });
     }
 
     triggers.forEach(trigger => {
-      const targetId = trigger.getAttribute('data-mega');
-      const targetPanel = targetId ? document.getElementById(targetId) : null;
+      const megaId = trigger.getAttribute('data-mega');
+      if (!megaId) return;
 
       trigger.addEventListener('mouseenter', () => {
-        switchMega(trigger, targetPanel);
+        showMega(trigger, megaId);
       });
-
-      trigger.addEventListener('mouseleave', () => {
-        scheduleHide();
-      });
-
-      if (targetPanel) {
-        targetPanel.addEventListener('mouseenter', () => {
-          cancelHide();
-          if (header) header.classList.add('has-active-mega');
-          trigger.classList.add('active-trigger');
-          targetPanel.classList.add('active-panel');
-        });
-
-        targetPanel.addEventListener('mouseleave', () => {
-          scheduleHide();
-        });
-
-        // Close mega menu immediately when any link inside is clicked
-        targetPanel.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            closeAllMega();
-          });
-        });
-      }
     });
 
-    if (header) {
-      header.addEventListener('mouseenter', () => {
-        if (header.classList.contains('has-active-mega')) {
+    // Mega menü içindeki linke tıklandığında hemen kapat
+    if (megaWrapper) {
+      megaWrapper.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          closeAllMega();
+        });
+      });
+    }
+
+    // Hit-alanı yönetimi: Header ve MegaWrapper arasındaki hareketlerde kapanmayı engelle
+    function handleMouseLeave(e: MouseEvent) {
+      const toEl = e.relatedTarget as Node | null;
+      if (toEl) {
+        if (header && header.contains(toEl)) {
           cancelHide();
+          return;
         }
-      });
-      header.addEventListener('mouseleave', () => {
-        if (header.classList.contains('has-active-mega')) {
-          scheduleHide();
+        if (megaWrapper && megaWrapper.contains(toEl)) {
+          cancelHide();
+          return;
         }
-      });
+      }
+      scheduleHide();
+    }
+
+    function handleMouseEnter() {
+      cancelHide();
+    }
+
+    if (header) {
+      header.addEventListener('mouseleave', handleMouseLeave);
+      header.addEventListener('mouseenter', handleMouseEnter);
+    }
+    if (megaWrapper) {
+      megaWrapper.addEventListener('mouseleave', handleMouseLeave);
+      megaWrapper.addEventListener('mouseenter', handleMouseEnter);
     }
 
     // Hero scroll transition
