@@ -94,7 +94,7 @@ const isMarquee = data.layout === 'marquee';
               src={logo.image || logo.src}
               alt={logo.name}
               style={`height:${logo.heightPx || logoHeightOf(logo.name)}px; max-width:${logo.maxWidthPx || logoMaxWidthOf(logo.name)}px;`}
-              class="w-auto object-contain opacity-100 filter grayscale brightness-0 contrast-125 transition-opacity"
+              class="w-auto object-contain opacity-90 hover:opacity-100 filter grayscale contrast-125 transition-all duration-300"
             />
           ) : (
             <svg class={`${logo.height || 'h-5'} w-auto fill-paletteRichBlack hover:fill-brandAccent transition-colors`} viewBox={logo.viewBox || '0 0 120 24'}>

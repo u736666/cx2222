@@ -427,24 +427,26 @@ a.group span.btn-rect,
   font-weight: 400 !important;
 }
 
-/* Yalnızca gerçek outline butonları pill outline çerçevesi alır */
+/* Yalnızca gerçek outline butonları pill outline çerçevesi alır (Header buton yüksekliği baz alındı) */
 .pill-outline-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px !important;
-  padding: 0.625rem 1.5rem !important;
+  min-height: 2.25rem !important;
+  padding: 0.5rem 1.25rem !important;
   font-size: 14px !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
   background: transparent !important;
-  border: 1px solid var(--color-rich-black) !important;
-  color: var(--color-rich-black) !important;
+  border: 1px solid currentColor !important;
   transition: all 0.25s ease;
 }
 .pill-outline-btn:hover {
   background: var(--color-rich-black) !important;
   color: #ffffff !important;
+  border-color: var(--color-rich-black) !important;
 }
 
 /* Koyu zeminlerdeki outline butonlar */
@@ -566,87 +568,127 @@ textarea:focus {
 /* ================= Erişilebilirlik (Accessibility) Yüksek Kontrast Modu ================= */
 html.accessibility-high-contrast {
   filter: grayscale(100%) !important;
+  --hc-bg: #ffffff;
+  --hc-text: #000000;
+  --hc-border: #000000;
 }
+
+/* 1. Kök Zemin ve Gövde */
 html.accessibility-high-contrast body {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
 
-/* 1. Açık Zeminli Bölümler: Saf Beyaz Zemin, Saf Siyah Metin */
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]),
+/* 2. Açık Zeminli Konteynerler: Saf Beyaz Zemin, Saf Siyah Metin */
+html.accessibility-high-contrast section,
+html.accessibility-high-contrast main,
 html.accessibility-high-contrast article,
-html.accessibility-high-contrast main {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) h1,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) h2,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) h3,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) h4,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) p,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) span,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) a,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) label {
-  color: #000000 !important;
-}
-
-/* 2. Koyu Zeminli Bölümler (RichBlack, Footer, Mega Menü): Saf Siyah Zemin, Saf Beyaz Metin */
-html.accessibility-high-contrast section.bg-paletteRichBlack,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"],
-html.accessibility-high-contrast .mega-wrapper,
-html.accessibility-high-contrast footer {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-html.accessibility-high-contrast section.bg-paletteRichBlack h1,
-html.accessibility-high-contrast section.bg-paletteRichBlack h2,
-html.accessibility-high-contrast section.bg-paletteRichBlack h3,
-html.accessibility-high-contrast section.bg-paletteRichBlack h4,
-html.accessibility-high-contrast section.bg-paletteRichBlack p,
-html.accessibility-high-contrast section.bg-paletteRichBlack a,
-html.accessibility-high-contrast section.bg-paletteRichBlack > div span,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] h1,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] h2,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] h3,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] h4,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] p,
-html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] a,
-html.accessibility-high-contrast .mega-wrapper *,
-html.accessibility-high-contrast footer * {
-  color: #ffffff !important;
-}
-
-/* 3. Açık Renkli Kartlar / Akordeon Kapalı Kartlar: BEYAZ zemin, SİYAH metin */
-html.accessibility-high-contrast .bg-paletteDustGrey,
-html.accessibility-high-contrast .bg-palettePlatinum,
 html.accessibility-high-contrast .bg-siteBg,
-html.accessibility-high-contrast .accordion-card.bg-paletteDustGrey,
-html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack),
-html.accessibility-high-contrast [class*="bg-paletteDustGrey"],
-html.accessibility-high-contrast [class*="bg-palettePlatinum"] {
+html.accessibility-high-contrast .bg-white,
+html.accessibility-high-contrast .bg-palettePlatinum,
+html.accessibility-high-contrast .bg-paletteDustGrey,
+html.accessibility-high-contrast .bg-neutral-100,
+html.accessibility-high-contrast .bg-brandAccent,
+html.accessibility-high-contrast [class*="bg-white"],
+html.accessibility-high-contrast [class*="bg-siteBg"],
+html.accessibility-high-contrast [class*="bg-palettePlatinum"],
+html.accessibility-high-contrast [class*="bg-neutral-100"],
+html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) {
+  --hc-bg: #ffffff;
+  --hc-text: #000000;
+  --hc-border: #000000;
   background-color: #ffffff !important;
   color: #000000 !important;
   border-color: #000000 !important;
 }
-html.accessibility-high-contrast .bg-paletteDustGrey *,
-html.accessibility-high-contrast .bg-palettePlatinum *,
-html.accessibility-high-contrast .bg-siteBg *,
-html.accessibility-high-contrast .accordion-card.bg-paletteDustGrey *,
-html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) *,
-html.accessibility-high-contrast [class*="bg-paletteDustGrey"] *,
-html.accessibility-high-contrast [class*="bg-palettePlatinum"] * {
-  color: #000000 !important;
-}
 
-/* 4. Koyu Kartlar (Akordeon aktif kartı vb.): Saf Siyah Zemin, Saf Beyaz Metin, Beyaz Kenarlık */
-html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack {
+/* 3. Koyu Zeminli Konteynerler: Saf Siyah Zemin, Saf Beyaz Metin */
+html.accessibility-high-contrast section.bg-paletteRichBlack,
+html.accessibility-high-contrast section[class*="bg-paletteRichBlack"],
+html.accessibility-high-contrast .bg-paletteRichBlack,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"],
+html.accessibility-high-contrast .bg-neutral-900,
+html.accessibility-high-contrast .bg-black,
+html.accessibility-high-contrast .mega-wrapper,
+html.accessibility-high-contrast footer,
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack,
+html.accessibility-high-contrast [data-service="ai"] {
+  --hc-bg: #000000;
+  --hc-text: #ffffff;
+  --hc-border: #ffffff;
   background-color: #000000 !important;
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
-html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack * {
-  color: #ffffff !important;
+
+/* 4. İç İçe Geçmiş Durumlar (Koyu Zemin İçindeki Açık Kartlar - örn. Blog Kartı, Soru Kutusu) */
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-siteBg,
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-white,
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-neutral-100,
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-palettePlatinum,
+html.accessibility-high-contrast .bg-paletteRichBlack [class*="bg-siteBg"],
+html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] .bg-siteBg,
+html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] .bg-white,
+html.accessibility-high-contrast section[class*="bg-paletteRichBlack"] a.bg-siteBg,
+html.accessibility-high-contrast .bg-paletteRichBlack a.bg-siteBg {
+  --hc-bg: #ffffff;
+  --hc-text: #000000;
+  --hc-border: #000000;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
 }
+
+/* 5. İç İçe Geçmiş Durumlar (Açık Zemin İçindeki Koyu Kartlar - örn. AI Kartı, Koyu Kutu) */
+html.accessibility-high-contrast .bg-siteBg .bg-paletteRichBlack,
+html.accessibility-high-contrast .bg-white .bg-paletteRichBlack,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) .bg-paletteRichBlack,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) [data-service="ai"],
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack {
+  --hc-bg: #000000;
+  --hc-text: #ffffff;
+  --hc-border: #ffffff;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* 6. Tüm Tipografik Elemanlar Konteynerlerinin --hc-text Değerini Alır */
+html.accessibility-high-contrast h1,
+html.accessibility-high-contrast h2,
+html.accessibility-high-contrast h3,
+html.accessibility-high-contrast h4,
+html.accessibility-high-contrast h5,
+html.accessibility-high-contrast h6,
+html.accessibility-high-contrast p,
+html.accessibility-high-contrast span,
+html.accessibility-high-contrast a,
+html.accessibility-high-contrast label,
+html.accessibility-high-contrast li,
+html.accessibility-high-contrast blockquote,
+html.accessibility-high-contrast strong,
+html.accessibility-high-contrast b {
+  color: var(--hc-text) !important;
+}
+
+/* 7. Özel Butonlar ve İkonlar */
+html.accessibility-high-contrast .pill-outline-btn {
+  border-color: var(--hc-text) !important;
+  color: var(--hc-text) !important;
+  background-color: transparent !important;
+}
+html.accessibility-high-contrast .header-contact-btn,
+html.accessibility-high-contrast .header-contact-btn * {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast .header-contact-btn:hover {
+  background-color: #222222 !important;
+  opacity: 0.8 !important;
+}
+
+/* Akordeon Butonları */
 html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack .card-icon-btn {
   background-color: #ffffff !important;
   color: #000000 !important;
@@ -656,10 +698,18 @@ html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) .card
   color: #ffffff !important;
 }
 
-/* Yüksek Kontrast: Bağlantı ve Butonlarda Tint ile Hover */
-html.accessibility-high-contrast a:hover,
+/* SVG İkonlar: Konteynerin metin rengiyle uyumlu olsun */
+html.accessibility-high-contrast svg:not(#accessibility-widget svg):not(#circlePath) {
+  color: var(--hc-text) !important;
+}
+html.accessibility-high-contrast svg:not(#accessibility-widget svg) text {
+  fill: var(--hc-text) !important;
+}
+
+/* Bağlantı ve Butonlarda Tint ile Hover */
+html.accessibility-high-contrast a:not(#accessibility-widget a):hover,
 html.accessibility-high-contrast button:not(#accessibility-widget button):hover {
-  opacity: 0.65 !important;
+  opacity: 0.7 !important;
   text-decoration: underline !important;
 }
 
@@ -667,36 +717,31 @@ html.accessibility-high-contrast button:not(#accessibility-widget button):hover 
 #accessibility-widget {
   filter: none !important;
 }
-#accessibility-panel {
-  background-color: #ffffff !important;
-  color: #111111 !important;
-  border: 2px solid #000000 !important;
-}
-#accessibility-panel * {
-  color: #111111 !important;
-}
+#accessibility-panel,
 html.accessibility-high-contrast #accessibility-panel {
+  --hc-bg: #ffffff !important;
+  --hc-text: #000000 !important;
+  --hc-border: #000000 !important;
   background-color: #ffffff !important;
   color: #000000 !important;
   border: 2px solid #000000 !important;
 }
+#accessibility-panel *,
 html.accessibility-high-contrast #accessibility-panel * {
   color: #000000 !important;
   text-decoration: none !important;
 }
+#accessibility-panel button,
 html.accessibility-high-contrast #accessibility-panel button {
   background-color: transparent !important;
   color: #000000 !important;
   border: none !important;
 }
+#accessibility-panel button:hover,
 html.accessibility-high-contrast #accessibility-panel button:hover {
-  background-color: #f0f0f0 !important;
+  background-color: #f5f5f5 !important;
   opacity: 1 !important;
   text-decoration: none !important;
-}
-html.accessibility-high-contrast #accessibility-panel #acc-contrast-status {
-  background-color: #000000 !important;
-  color: #ffffff !important;
 }
 
 /* Genel sitede paragraf ve metinlerde bold (kalınlık) belirgin olsun */

@@ -201,7 +201,7 @@ const sectionPadClass = `${isPrecedingWhite ? 'pt-0' : 'pt-12 md:pt-16'} ${isFol
           {hasPrimary && (
             <a 
               href={primaryHref}
-              class={`pill-outline-btn group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max ${isDark ? 'border-white text-white hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white'}`}
+              class={`pill-outline-btn group inline-flex items-center gap-2 px-6 py-2 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max min-h-[2.25rem] ${isDark ? 'border-white text-white hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white'}`}
             >
               <span>{primaryLabel}</span>
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
@@ -210,7 +210,7 @@ const sectionPadClass = `${isPrecedingWhite ? 'pt-0' : 'pt-12 md:pt-16'} ${isFol
           {hasSecondary && (
             <a 
               href={secondaryHref}
-              class={`pill-outline-btn group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max ${isDark ? 'border-white/60 text-white/90 hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack/60 text-paletteRichBlack/90 hover:bg-paletteRichBlack hover:text-white'}`}
+              class={`pill-outline-btn group inline-flex items-center gap-2 px-6 py-2 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max min-h-[2.25rem] ${isDark ? 'border-white/60 text-white/90 hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack/60 text-paletteRichBlack/90 hover:bg-paletteRichBlack hover:text-white'}`}
             >
               <span>{secondaryLabel}</span>
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>

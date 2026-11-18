@@ -47,7 +47,9 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
         />
       </div>
       {data.showAllLink && data.allLinkText && (
-        <a href={data.allLinkHref || '/blog'} class="btn-rect w-max font-medium text-brandAccent hover:text-paletteRichBlack transition-colors mt-4 md:mt-0" set:html={formatRich(data.allLinkText)}>
+        <a href={data.allLinkHref || '/blog'} class="pill-outline-btn group mt-4 md:mt-0">
+          <span>{String(data.allLinkText).replace(/\s*[→↗]\s*$/, '')}</span>
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
         </a>
       )}
     </div>
@@ -55,10 +57,15 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
       {posts.map((post: any) => (
         <a href={`/blog/${post.slug}`} class="flex flex-col md:flex-row items-stretch group cursor-pointer bg-siteBg transition-all overflow-hidden">
-          <div class={`h-3 w-full md:h-auto md:w-5 flex-shrink-0 transition-colors ${getBarClass(post.barStyle)}`}></div>
-
           <div class="p-6 sm:p-8 flex-grow min-w-0 flex flex-col justify-between space-y-6">
-            <div class="space-y-3">
+            <div class="space-y-2.5">
+              {(post.date || post.readTime || post.readingTime) && (
+                <div class="typo-small text-[#111111]/60 font-light flex items-center gap-2">
+                  {post.date && <span>{post.date}</span>}
+                  {post.date && (post.readTime || post.readingTime) && <span>•</span>}
+                  {(post.readTime || post.readingTime) && <span>{post.readTime || post.readingTime}</span>}
+                </div>
+              )}
               <Heading 
                 as={post.headingTag || post.titleTag || 'h3'} 
                 customSize={post.headingSize || post.titleSize} 
@@ -66,7 +73,7 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
                 weight={post.headingWeight || post.titleWeight}
                 size="h3" 
                 text={post.title} 
-                class="font-normal text-paletteRichBlack group-hover:text-brandAccent transition-colors" 
+                class="font-normal text-paletteRichBlack group-hover:opacity-75 transition-opacity" 
                 customStyle={resolveTextStyle(post, 'title')}
               />
               <p class="typo-body font-light line-clamp-2 md:line-clamp-3 leading-relaxed text-[#111111]/75" style={resolveTextStyle(post, 'homeDesc') || resolveTextStyle(post, 'desc') || 'color: rgba(17,17,17,0.75);'} set:html={formatRich(post.homeDesc || post.desc)}>
@@ -74,12 +81,10 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
             </div>
 
             <div class="pt-4 mt-auto flex items-center justify-between">
-              <span class="typo-small font-medium text-[#111111] group-hover:text-brandAccent transition-colors inline-flex items-center space-x-1.5">
-                <span set:html={formatRich(data.readMoreText || 'Yazı Detayı →')}></span>
+              <span class="typo-small font-medium text-[#111111] group-hover:opacity-75 transition-opacity inline-flex items-center gap-1.5">
+                <span>Devamı</span>
+                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </span>
-              {post.date && (
-                <span class="typo-small text-[#111111]/50 font-light" style="color: rgba(17,17,17,0.5);">{post.date}</span>
-              )}
             </div>
           </div>
 
@@ -96,8 +101,9 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
 
     {data.allLinkText && (
       <div class="mt-16 text-center">
-        <a href={data.allLinkHref || '/blog'} class="btn-rect inline-flex items-center space-x-2 font-medium text-paletteRichBlack hover:text-brandAccent bg-siteBg px-8 py-3.5 transition-all">
-          <span set:html={formatRich(data.allLinkText)}></span>
+        <a href={data.allLinkHref || '/blog'} class="pill-outline-btn group">
+          <span>{String(data.allLinkText).replace(/\s*[→↗]\s*$/, '')}</span>
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
         </a>
       </div>
     )}

@@ -408,6 +408,28 @@ async function syncBlockPages(rootDir, target, data) {
         },
       },
       {
+        file: 'gizlilik-politikasi.json',
+        key: 'gizlilikPolitikasi',
+        sync: (page, d) => {
+          if (d.seo) page.seo = d.seo;
+          for (const b of page.blocks || []) {
+            if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
+            if (b.type === 'richText') b.data = { ...b.data, content: d.text || d.content || b.data?.content };
+          }
+        },
+      },
+      {
+        file: 'cerez-politikasi.json',
+        key: 'cerezPolitikasi',
+        sync: (page, d) => {
+          if (d.seo) page.seo = d.seo;
+          for (const b of page.blocks || []) {
+            if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
+            if (b.type === 'richText') b.data = { ...b.data, content: d.text || d.content || b.data?.content };
+          }
+        },
+      },
+      {
         file: '404.json',
         key: 'notFound',
         sync: (page, d) => {

@@ -70,7 +70,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
     
     <!-- Primary Tabs Switcher: Yaklaşımımız vs Manifestomuz -->
     <div 
-      class="inline-flex items-center p-1 sm:p-1.5 bg-palettePlatinum mb-12 sm:mb-16 max-w-full"
+      class="inline-flex items-center p-1 sm:p-1.5 bg-neutral-100 border border-neutral-200 mb-12 sm:mb-16 max-w-full"
       role="tablist"
       aria-label="Yaklaşımımız ve Manifestomuz Sekmeleri"
     >
@@ -90,7 +90,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
         role="tab"
         aria-selected="false"
         aria-controls="panel-manifesto"
-        class="tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/70 hover:text-paletteRichBlack hover:bg-white/70"
+        class="tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/70 hover:text-paletteRichBlack hover:bg-white"
       >
         Manifestomuz
       </button>
@@ -108,16 +108,16 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
         <!-- Left Column: Sticky Subtitle & Description -->
         <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-32">
           {hero.eyebrow && hero.eyebrow.trim() !== '' && (
-            <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={resolveTextStyle(hero, 'eyebrow')} set:html={formatRich(hero.eyebrow)}>
+            <span class="typo-small font-semibold tracking-widest text-paletteRichBlack/60 block" style={resolveTextStyle(hero, 'eyebrow')} set:html={formatRich(hero.eyebrow)}>
             </span>
           )}
           {hero.title && hero.title.trim() !== '' && (
             <Heading 
-              as={resolveTextTag(hero, 'title', 'h1')}
+              as={resolveTextTag(hero, 'title', 'h2')}
               customSize={hero.titleSize}
               color={hero.titleColor}
               weight={hero.titleWeight}
-              size="h1"
+              size="h2"
               text={hero.title}
               class="font-light text-paletteRichBlack leading-snug"
               customStyle={resolveTextStyle(hero, 'title')}
@@ -130,9 +130,10 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
           <div class="pt-2">
             <a 
               href="/iletisim" 
-              class="inline-flex items-center gap-2 font-medium text-paletteRichBlack hover:text-brandAccent underline underline-offset-8 transition-colors"
+              class="inline-flex items-center gap-1.5 font-normal text-paletteRichBlack hover:opacity-75 underline underline-offset-4 transition-opacity"
             >
-              Görüşelim →
+              <span>Görüşelim</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -262,9 +263,10 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
           <div class="pt-2">
             <a 
               href="/iletisim" 
-              class="inline-flex items-center gap-2 font-medium text-paletteRichBlack hover:text-brandAccent underline underline-offset-8 transition-colors"
+              class="inline-flex items-center gap-1.5 font-normal text-paletteRichBlack hover:opacity-75 underline underline-offset-4 transition-opacity"
             >
-              Görüşelim →
+              <span>Görüşelim</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

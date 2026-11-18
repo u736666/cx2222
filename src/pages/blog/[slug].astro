@@ -88,27 +88,20 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
       <div class="mb-8 md:mb-10">
         <a
           href="/blog"
-          class="btn-pill btn-pill-outline w-max px-6 py-2.5 font-medium transition-colors border border-paletteRichBlack/30 text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white rounded-full inline-flex items-center gap-2 typo-small"
+          class="pill-outline-btn group w-max"
         >
-          ← Tüm Yazılar
+          <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true">←</span>
+          <span>Tüm Yazılar</span>
         </a>
       </div>
 
-      <div class="mb-4 typo-small font-semibold tracking-widest flex flex-wrap items-center gap-x-3">
-        {post.category && (
-          <span class={`uppercase ${metaColor}`} style={resolveTextStyle(post, 'category') || undefined} set:html={formatRich(post.category)}></span>
-        )}
+      <div class="mb-4 typo-small font-normal tracking-wide flex flex-wrap items-center gap-x-2 text-paletteRichBlack/70">
         {post.date && (
-          <>
-            {post.category && <span class="opacity-70 font-normal">•</span>}
-            <span class="opacity-70 font-normal">{post.date}</span>
-          </>
+          <span class="opacity-80 font-normal">{post.date}</span>
         )}
+        {post.date && post.readTime && <span class="opacity-50 font-normal">•</span>}
         {post.readTime && (
-          <>
-            <span class="opacity-70 font-normal">•</span>
-            <span class="opacity-70 font-normal" set:html={formatRich(post.readTime)}></span>
-          </>
+          <span class="opacity-80 font-normal" set:html={formatRich(post.readTime)}></span>
         )}
       </div>
 

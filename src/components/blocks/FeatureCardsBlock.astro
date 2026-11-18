@@ -176,15 +176,26 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
               )}
             </div>
 
-            <div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+            <div class="flex flex-col items-stretch sm:items-end gap-2.5 pt-2 w-full">
               {academyCard.secondaryBtnLabel && (
-                <a href={academyCard.secondaryBtnHref || '/iletisim'} class="w-full sm:w-auto px-6 py-2.5 rounded-full border border-paletteRichBlack text-paletteRichBlack font-normal text-[14px] hover:bg-paletteRichBlack hover:text-white transition-all text-center inline-flex items-center justify-center" style={academyCard.secondaryBtnSize ? `font-size: ${formatSizePx(academyCard.secondaryBtnSize)} !important` : undefined}>
-                  <span set:html={formatRich(academyCard.secondaryBtnLabel)}></span>
+                <a 
+                  href={academyCard.secondaryBtnHref || '/iletisim'} 
+                  class="min-h-[2.25rem] py-2 px-5 rounded-full border border-paletteRichBlack text-paletteRichBlack font-medium text-[14px] hover:bg-paletteRichBlack hover:text-white transition-all inline-flex items-center justify-center gap-1.5 whitespace-nowrap" 
+                  style={academyCard.secondaryBtnSize ? `font-size: ${formatSizePx(academyCard.secondaryBtnSize)} !important` : undefined}
+                >
+                  <span set:html={formatRich(academyCard.secondaryBtnLabel.replace(/\s*[→↗]\s*$/, ''))}></span>
+                  <span aria-hidden="true">→</span>
                 </a>
               )}
               {academyCard.primaryBtnLabel && (
-                <a href={academyCard.primaryBtnHref || '/cozumler/akademi'} data-service="akademi" class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-paletteRichBlack text-white font-normal text-[14px] hover:bg-black transition-all text-center inline-flex items-center justify-center border-0" style={academyCard.primaryBtnSize ? `font-size: ${formatSizePx(academyCard.primaryBtnSize)} !important` : undefined}>
-                  <span set:html={formatRich(academyCard.primaryBtnLabel)}></span>
+                <a 
+                  href={academyCard.primaryBtnHref || '/cozumler/akademi'} 
+                  data-service="akademi" 
+                  class="min-h-[2.25rem] py-2 px-5 rounded-full bg-paletteRichBlack text-white font-medium text-[14px] hover:bg-black transition-all inline-flex items-center justify-center gap-1.5 border-0 whitespace-nowrap shadow-none" 
+                  style={academyCard.primaryBtnSize ? `font-size: ${formatSizePx(academyCard.primaryBtnSize)} !important` : undefined}
+                >
+                  <span set:html={formatRich(academyCard.primaryBtnLabel.replace(/\s*[→↗]\s*$/, ''))}></span>
+                  <span aria-hidden="true">→</span>
                 </a>
               )}
             </div>
@@ -200,7 +211,7 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
           {data.problemSlider.map((ps: any, idx: number) => (
             <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
               <Heading as={resolveTextTag(ps, 'quote', 'h3')} customSize={ps.quoteSize} color={ps.quoteColor} size="h2" class="text-paletteRichBlack" text={ps.quote} />
-              <a href={ps.href} data-service={ps.service} class="inline-flex items-center font-semibold tracking-wider text-brandAccent mt-4 hover:underline" style={resolveTextStyle(ps, 'solutionLabel')}>
+              <a href={ps.href} data-service={ps.service} class="inline-flex items-center font-normal tracking-normal text-paletteRichBlack mt-4 hover:underline underline-offset-4" style={resolveTextStyle(ps, 'solutionLabel')}>
                 <span set:html={formatRich(ps.solutionLabel)}></span>
               </a>
             </div>

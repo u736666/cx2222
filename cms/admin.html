@@ -4936,6 +4936,8 @@
         { id: 'projelerIndex', label: 'Projeler Ana' },
         { id: 'blogIndex', label: 'Blog Ana' },
         { id: 'iletisim', label: 'İletişim' },
+        { id: 'gizlilikPolitikasi', label: 'Gizlilik & KVKK' },
+        { id: 'cerezPolitikasi', label: 'Çerez Politikası' },
         { id: 'notFound', label: '404 Sayfası' },
       ];
       if (UI.pagesSub === 'akademi') UI.pagesSub = 'cxFolksAkademi';
@@ -4967,6 +4969,8 @@
         projelerIndex: { url: '/projeler', schema: 'CollectionPage' },
         blogIndex: { url: '/blog', schema: 'CollectionPage' },
         iletisim: { url: '/iletisim', schema: 'ContactPage' },
+        gizlilikPolitikasi: { url: '/gizlilik-politikasi', schema: 'WebPage' },
+        cerezPolitikasi: { url: '/cerez-politikasi', schema: 'WebPage' },
         notFound: { url: '/404', schema: 'WebPage' },
       };
 
@@ -5665,6 +5669,28 @@
         if (!Array.isArray(il.faqs)) il.faqs = [];
         root.appendChild(faqEditor(il.faqs, 'pages'));
         ctaCardEditorSection(root, il, 'pages', 'İletişim Sayfası — CTA Kartı (Opsiyonel)', false);
+      }
+
+      if (UI.pagesSub === 'gizlilikPolitikasi') {
+        if (!pages.gizlilikPolitikasi) pages.gizlilikPolitikasi = { hero: { title: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' }, content: '' };
+        const gp = pages.gizlilikPolitikasi;
+        if (!gp.hero) gp.hero = {};
+        const gpCard = el('div', { className: 'card' });
+        gpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' })]));
+        gpCard.appendChild(fieldInput('Sayfa Başlığı', gp.hero, 'title', 'pages'));
+        gpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', gp, 'text', 'pages', { multiline: true, rows: 14 }));
+        root.appendChild(gpCard);
+      }
+
+      if (UI.pagesSub === 'cerezPolitikasi') {
+        if (!pages.cerezPolitikasi) pages.cerezPolitikasi = { hero: { title: 'Çerez Politikası' }, content: '' };
+        const cp = pages.cerezPolitikasi;
+        if (!cp.hero) cp.hero = {};
+        const cpCard = el('div', { className: 'card' });
+        cpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Çerez Politikası Metni' })]));
+        cpCard.appendChild(fieldInput('Sayfa Başlığı', cp.hero, 'title', 'pages'));
+        cpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', cp, 'text', 'pages', { multiline: true, rows: 14 }));
+        root.appendChild(cpCard);
       }
 
       if (UI.pagesSub === 'notFound') {

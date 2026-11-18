@@ -18,7 +18,7 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
   <div class="max-w-custom mx-auto w-full space-y-12">
     
     <!-- Üst Sütunlar: Marka + Navigasyon (TheDive Stili) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-6">
       
       <!-- Marka Logosu (Header Logosu ile Aynı Boyut ve Tasarım) -->
       <div class="lg:col-span-4 space-y-6">
@@ -51,9 +51,9 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
         </ul>
       </div>
 
-      <!-- Kurumsal Sütunu (Tepe Menüyle Aynı İsimler, Neden Şimdi Kaldırıldı) -->
+      <!-- Bizi Tanıyın Sütunu (Tepe Menüyle Aynı İsim) -->
       <div class="lg:col-span-3 space-y-4">
-        <span class="text-[15px] font-semibold tracking-normal text-white block">Kurumsal</span>
+        <span class="text-[15px] font-semibold tracking-normal text-white block">Bizi Tanıyın</span>
         <ul class="space-y-2.5 typo-small font-light text-white/70">
           <li><a href="/yaklasimimiz" class="hover:text-brandAccent transition-colors">Yaklaşımımız</a></li>
           <li><a href="/ekibimiz" class="hover:text-brandAccent transition-colors">Ekibimiz</a></li>
@@ -86,7 +86,7 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
 
     </div>
 
-    <!-- Alt Satır: Telif Hakkı (13px) & Hukuki / Gizlilik / Çerez Bağlantıları -->
+    <!-- Alt Satır: Telif Hakkı (13px, Border Yok) & Hukuki / Gizlilik / Çerez Bağlantıları -->
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[13px] font-light text-white/60 pt-2">
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
         {showCopyright && (
@@ -104,7 +104,6 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
       <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/60">
         <a href="/gizlilik-politikasi" class="hover:text-white transition-colors">Gizlilik Politikası & KVKK</a>
         <a href="/cerez-politikasi" class="hover:text-white transition-colors">Çerez Politikası</a>
-        <a href="/iletisim" class="hover:text-white transition-colors">İletişim</a>
       </div>
     </div>
 

@@ -179,7 +179,7 @@ function isExactPage(href: string) {
           </div>
 
           {panel.showFooterBar && Array.isArray(site.brand.offices) && site.brand.offices.length > 0 && (
-            <div class="mt-8 pt-5 border-t border-white/10 flex flex-wrap items-center justify-between gap-y-2 typo-body font-light text-white/60">
+            <div class="mt-8 pt-5 flex flex-wrap items-center justify-between gap-y-2 typo-body font-light text-white/60">
               <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
                 {site.brand.offices.map((office: any) => (
                   <span>{office.city} • {office.district}</span>
