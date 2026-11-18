@@ -269,17 +269,17 @@ const themeVarsCss = `:root, html {
   --color-card-border: transparent;
   --fs-body: ${fluidClamp(ty.bodySizeMobile, ty.bodySizeDesktop, 15, 16)};
   --lh-body: ${bodyLineHeight};
-  --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 17, 20)};
-  --fs-h1: ${fluidClamp(ty.h1SizeMobile, ty.h1SizeDesktop, 32, 42)};
+  --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 18, 20)};
+  --fs-h1: ${fluidClamp(ty.h1SizeMobile, ty.h1SizeDesktop, 36, 52)};
   --fw-h1: ${Number(ty.h1Weight) || 300};
   --lh-h1: ${Number(ty.h1LineHeight) || 1.15};
-  --fs-h2: ${fluidClamp(ty.h2SizeMobile, ty.h2SizeDesktop, 26, 38)};
+  --fs-h2: ${fluidClamp(ty.h2SizeMobile, ty.h2SizeDesktop, 28, 38)};
   --fw-h2: ${Number(ty.h2Weight) || 300};
   --lh-h2: ${Number(ty.h2LineHeight) || 1.2};
-  --fs-h3: ${fluidClamp(ty.h3SizeMobile, ty.h3SizeDesktop, 20, 25)};
+  --fs-h3: ${fluidClamp(ty.h3SizeMobile, ty.h3SizeDesktop, 22, 26)};
   --fw-h3: ${Number(ty.h3Weight) || 400};
   --lh-h3: ${Number(ty.h3LineHeight) || 1.28};
-  --fs-h4: ${fluidClamp(ty.h4SizeMobile, ty.h4SizeDesktop, 16, 18)};
+  --fs-h4: ${fluidClamp(ty.h4SizeMobile, ty.h4SizeDesktop, 18, 20)};
   --fw-h4: ${Number(ty.h4Weight) || 500};
   --lh-h4: ${Number(ty.h4LineHeight) || 1.35};
   --fs-small: ${pxToRem(Number(ty.smallSize) > 0 ? Number(ty.smallSize) : 13)};
@@ -294,11 +294,11 @@ body, p {
 @media (max-width: 767px) {
   :root, html {
     --fs-body: ${pxToRem(Number(ty.bodySizeMobile) > 0 ? Number(ty.bodySizeMobile) : 15)};
-    --fs-lead: ${pxToRem(Number(ty.leadSizeMobile) > 0 ? Number(ty.leadSizeMobile) : 17)};
+    --fs-lead: ${pxToRem(Number(ty.leadSizeMobile) > 0 ? Number(ty.leadSizeMobile) : 18)};
     --fs-h1: ${pxToRem(Number(ty.h1SizeMobile) > 0 ? Number(ty.h1SizeMobile) : 36)};
     --fs-h2: ${pxToRem(Number(ty.h2SizeMobile) > 0 ? Number(ty.h2SizeMobile) : 28)};
     --fs-h3: ${pxToRem(Number(ty.h3SizeMobile) > 0 ? Number(ty.h3SizeMobile) : 22)};
-    --fs-h4: ${pxToRem(Number(ty.h4SizeMobile) > 0 ? Number(ty.h4SizeMobile) : 16)};
+    --fs-h4: ${pxToRem(Number(ty.h4SizeMobile) > 0 ? Number(ty.h4SizeMobile) : 18)};
   }
 }`;
 

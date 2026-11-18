@@ -16,7 +16,7 @@
     "Harcama Tavan Kilidi Güvencesi"
   ],
   "seo": {
-    "title": "Vodafone Roaming Deneyimi Vaka Analizi | CX Folks",
+    "title": "Vodafone Roaming Deneyimi Vaka Analizi | cx2222",
     "description": "Yurt dışına çıkan kullanıcıların fatura kaygısını gideren, %42 deneyim iyileşmesi ve %60 şikayet düşüşü sağlayan proaktif mobil deneyim tasarımı.",
     "headline": "Vodafone - Seyahatte Güven Yaratan Yeni Roaming Deneyimi",
     "schemaDesc": "Yurt dışına çıkan kullanıcıların fatura kaygısını ve bağlantı stresini ortadan kaldıran şeffaf, proaktif mobil deneyim tasarımı.",
@@ -70,5 +70,19 @@
     ]
   },
   "quote": "\"Kullanıcıların en çok korktuğu bir hizmeti, en çok güvendikleri seyahat asistanına dönüştürmek Vodafone'un roaming NPS skorlarında tarihi bir rekor kırdı.\"",
-  "isSample": true
+  "isSample": true,
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting",
+  "image2": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
 }

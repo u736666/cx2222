@@ -20,10 +20,14 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
     <!-- Üst Sütunlar: Marka + Navigasyon (TheDive Stili) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
       
-      <!-- Marka Bilgisi & İletişim -->
+      <!-- Marka Logosu (Header Logosu ile Aynı Boyut ve Tasarım) -->
       <div class="lg:col-span-4 space-y-6">
-        <a href="/" class="inline-flex items-center text-white text-2xl font-bold tracking-tight hover:text-brandAccent transition-colors">
-          <span>CX Folks</span>
+        <a href="/" class="inline-flex items-center hover:opacity-85 transition-opacity text-white text-2xl leading-none tracking-normal">
+          {site.brand?.logoImage ? (
+            <img src={site.brand.logoImage} alt={site.brand?.name || 'cxfolks'} class="h-7 w-auto object-contain brightness-0 invert" />
+          ) : (
+            <><span class="font-light text-white">{site.brand?.prefix || 'cx'}</span><span class="font-bold text-white">{site.brand?.suffix || 'folks'}</span></>
+          )}
         </a>
         <p class="typo-body font-light text-white/70 max-w-sm">
           {site.brand?.slogan || 'Yapay zeka çağında insan odaklı müşteri deneyimi ve servis tasarımı danışmanlığı.'}
@@ -33,19 +37,12 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
           {(site.brand?.offices || []).map((o: any) => (
             <div>{o.city} • {o.district}</div>
           ))}
-          {site.brand?.email && (
-            <div>
-              <a href={`mailto:${site.brand.email}`} class="text-brandAccent hover:underline font-normal">
-                {site.brand.email}
-              </a>
-            </div>
-          )}
         </div>
       </div>
 
-      <!-- Çözümler Sütunu -->
+      <!-- Çözümler Sütunu (Capitalize) -->
       <div class="lg:col-span-3 space-y-4">
-        <span class="typo-small font-semibold tracking-wider text-white/90 uppercase block">Çözümler</span>
+        <span class="text-[15px] font-semibold tracking-normal text-white block">Çözümler</span>
         <ul class="space-y-2.5 typo-small font-light text-white/70">
           <li><a href="/cozumler/ai-destekli-cx" class="hover:text-brandAccent transition-colors">AI Destekli CX</a></li>
           <li><a href="/cozumler/deneyim-tasarimi" class="hover:text-brandAccent transition-colors">Deneyim Tasarımı</a></li>
@@ -54,21 +51,20 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
         </ul>
       </div>
 
-      <!-- Kurumsal & Yaklaşım -->
+      <!-- Kurumsal Sütunu (Tepe Menüyle Aynı İsimler, Neden Şimdi Kaldırıldı) -->
       <div class="lg:col-span-3 space-y-4">
-        <span class="typo-small font-semibold tracking-wider text-white/90 uppercase block">Kurumsal</span>
+        <span class="text-[15px] font-semibold tracking-normal text-white block">Kurumsal</span>
         <ul class="space-y-2.5 typo-small font-light text-white/70">
-          <li><a href="/yaklasimimiz" class="hover:text-brandAccent transition-colors">Yaklaşımımız & Manifesto</a></li>
+          <li><a href="/yaklasimimiz" class="hover:text-brandAccent transition-colors">Yaklaşımımız</a></li>
           <li><a href="/ekibimiz" class="hover:text-brandAccent transition-colors">Ekibimiz</a></li>
-          <li><a href="/projeler" class="hover:text-brandAccent transition-colors">Vaka Analizleri</a></li>
-          <li><a href="/blog" class="hover:text-brandAccent transition-colors">İçgörüler & Blog</a></li>
-          <li><a href="/neden-simdi" class="hover:text-brandAccent transition-colors">Neden Şimdi?</a></li>
+          <li><a href="/projeler" class="hover:text-brandAccent transition-colors">Projeler</a></li>
+          <li><a href="/blog" class="hover:text-brandAccent transition-colors">Blog</a></li>
         </ul>
       </div>
 
-      <!-- Sosyal & Hızlı İletişim -->
+      <!-- Sosyal & İletişim Bağlantıları -->
       <div class="lg:col-span-2 space-y-4">
-        <span class="typo-small font-semibold tracking-wider text-white/90 uppercase block">Bağlantıda Kalın</span>
+        <span class="text-[15px] font-semibold tracking-normal text-white block">Bağlantıda Kalın</span>
         <div class="flex flex-col space-y-2.5 typo-small font-light text-white/70">
           {socialLinks.map((s: any) => (
             <a
@@ -81,31 +77,31 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
               <span class="text-xs opacity-60">↗</span>
             </a>
           ))}
-          <a href="/iletisim" class="pill-outline-btn group inline-flex items-center gap-1.5 px-4 py-2 mt-2 rounded-full border border-white/40 text-white text-xs hover:bg-brandAccent hover:border-brandAccent hover:text-paletteRichBlack transition-all w-max font-medium">
-            <span>Görüşelim</span>
-            <span class="text-xs inline-block transition-transform group-hover:translate-x-1">→</span>
+          <a href="/iletisim" class="hover:text-brandAccent transition-colors inline-flex items-center gap-1.5 pt-1 text-white/80">
+            <span>İletişim</span>
+            <span class="text-xs">→</span>
           </a>
         </div>
       </div>
 
     </div>
 
-    <!-- Alt Satır: Telif Hakkı & Hukuki / Gizlilik / Çerez Bağlantıları -->
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 typo-small font-light text-white/50 pt-2">
+    <!-- Alt Satır: Telif Hakkı (14px) & Hukuki / Gizlilik / Çerez Bağlantıları -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[14px] font-light text-white/60 pt-2">
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
         {showCopyright && (
-          <p>
+          <p class="text-[14px]">
             {footer.copyrightPrefix || '© '}
             {showYear ? `${year} ` : ''}
             {footer.copyrightSuffix || 'CX Folks. Tüm hakları saklıdır.'}
           </p>
         )}
         {footer.extraNote && (
-          <span class="text-white/40">{footer.extraNote}</span>
+          <span class="text-white/40 text-[14px]">{footer.extraNote}</span>
         )}
       </div>
 
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/60">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] text-white/60">
         <a href="/gizlilik-politikasi" class="hover:text-white transition-colors">Gizlilik Politikası & KVKK</a>
         <a href="/cerez-politikasi" class="hover:text-white transition-colors">Çerez Politikası</a>
         <a href="/iletisim" class="hover:text-white transition-colors">İletişim</a>

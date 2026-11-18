@@ -59,7 +59,7 @@ const descInlineStyle = resolveTextStyle(s0, 'desc');
             ))}
           </div>
 
-          <a id="hero-box-btn" href={slides[0]?.link} class="hero-card-link hyphens-none btn-rect w-max font-medium text-brandAccent hover:text-white transition-colors">
+          <a id="hero-box-btn" href={slides[0]?.link} class="hero-card-link hyphens-none w-max font-medium text-brandAccent hover:underline transition-colors inline-flex items-center gap-1">
             <span id="hero-box-cta" set:html={formatRich(slides[0]?.cta)}></span>
           </a>
         </div>

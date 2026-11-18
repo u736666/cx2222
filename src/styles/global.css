@@ -264,6 +264,18 @@ h6, .typo-h6 {
   color: #ffffff !important;
 }
 
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon,
+#main-header.has-active-mega .header-social-icon {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon:hover,
+#main-header.has-active-mega .header-social-icon:hover {
+  border-color: var(--color-brand-accent) !important;
+  color: var(--color-brand-accent) !important;
+}
+
 /* Tek Zeminli Master Mega Menü Wrapper (Kapanıp açılma ve patlamayı %100 önler) */
 .mega-wrapper {
   position: absolute;
@@ -349,8 +361,23 @@ h6, .typo-h6 {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+:root {
+  /* TheDive Ethereal Noise Mesh Gradient Renk Değişkenleri (2-4 Renk Katmanı) */
+  --cta-mesh-base-1: #FFFDE8; /* Açık Wasabi Işıltısı */
+  --cta-mesh-base-2: #F0F7FF; /* Cool Blue */
+  --cta-mesh-base-3: #FFF2E8; /* Sıcak Şeftali */
+  --cta-mesh-base-4: #E8F4FD; /* Buzul Mavi */
+  --cta-mesh-orb-1: rgba(233, 240, 86, 0.40); /* Wasabi Orb */
+  --cta-mesh-orb-2: rgba(215, 239, 255, 0.75); /* Cool Blue Orb */
+  --cta-mesh-orb-3: rgba(253, 186, 116, 0.35); /* Şeftali Orb */
+  --cta-mesh-orb-4: rgba(193, 222, 239, 0.50); /* Buzul Orb */
+}
+
 /* ================= BUTONLAR (Dive Stili Pill Button & Outline Yapısı) ================= */
-.btn-rect, a.btn-rect, button.btn-rect, .pill-btn, .pill-outline-btn {
+.pill-btn,
+.pill-outline-btn,
+button.btn-rect,
+a.btn-rect:not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -362,6 +389,20 @@ h6, .typo-h6 {
   white-space: nowrap;
 }
 
+/* Metin bağlantıları (linkler) ASLA outline veya buton çerçevesi almaz */
+a.text-link,
+span.btn-rect,
+.hero-card-link,
+a[class*="hover:underline"],
+.text-link-arrow,
+a.group span.btn-rect,
+.group a.btn-rect {
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
 /* Header CTA butonu (Solid Wasabi Pill - Header harici butonlar outline) */
 #main-header a.btn-rect {
   background-color: var(--color-brand-accent) !important;
@@ -369,16 +410,23 @@ h6, .typo-h6 {
   border: 1px solid var(--color-brand-accent) !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 #main-header a.btn-rect:hover {
   background-color: var(--color-brand-accent-hover) !important;
   border-color: var(--color-brand-accent-hover) !important;
   color: var(--color-rich-black) !important;
 }
+#main-header.has-active-mega a.btn-rect {
+  border: 1px solid var(--color-brand-accent) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /* Header harici sayfa genelindeki butonlar: Outline Pill Button (TheDive Stili) */
-.btn-rect:not(#main-header .btn-rect),
-a.btn-rect:not(#main-header .btn-rect),
+.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]),
+a.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]),
 button#contact-submit-btn,
 .pill-outline-btn {
   background: transparent !important;
@@ -387,8 +435,8 @@ button#contact-submit-btn,
   border-radius: 9999px !important;
 }
 
-.btn-rect:not(#main-header .btn-rect):hover,
-a.btn-rect:not(#main-header .btn-rect):hover,
+.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]):hover,
+a.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]):hover,
 button#contact-submit-btn:hover,
 .pill-outline-btn:hover {
   background: var(--color-rich-black) !important;
@@ -445,7 +493,7 @@ textarea:focus {
 .cta-mesh-gradient {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #FFFDE8 0%, #F0F7FF 35%, #FFF2E8 70%, #E8F4FD 100%);
+  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 35%, var(--cta-mesh-base-3) 70%, var(--cta-mesh-base-4) 100%);
   background-size: 200% 200%;
   animation: ctaMeshDrift 18s ease-in-out infinite alternate;
 }
@@ -467,10 +515,10 @@ textarea:focus {
   position: absolute;
   inset: -10%;
   background-image: 
-    radial-gradient(circle at 18% 25%, rgba(233, 240, 86, 0.40) 0%, transparent 45%),
-    radial-gradient(circle at 82% 35%, rgba(215, 239, 255, 0.75) 0%, transparent 50%),
-    radial-gradient(circle at 45% 80%, rgba(253, 186, 116, 0.35) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(193, 222, 239, 0.50) 0%, transparent 45%);
+    radial-gradient(circle at 18% 25%, var(--cta-mesh-orb-1) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, var(--cta-mesh-orb-2) 0%, transparent 50%),
+    radial-gradient(circle at 45% 80%, var(--cta-mesh-orb-3) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--cta-mesh-orb-4) 0%, transparent 45%);
   filter: blur(45px);
   pointer-events: none;
   animation: ctaOrbsFloat 14s ease-in-out infinite alternate;
@@ -496,34 +544,106 @@ textarea:focus {
   mix-blend-mode: overlay;
 }
 
-/* ================= Erişilebilirlik (Accessibility) Modları ================= */
-.accessibility-high-contrast {
-  filter: contrast(120%);
+/* ================= Erişilebilirlik (Accessibility) Yüksek Kontrast Modu ================= */
+html.accessibility-high-contrast {
+  filter: contrast(130%);
 }
-.accessibility-high-contrast body,
-.accessibility-high-contrast section,
-.accessibility-high-contrast article {
+html.accessibility-high-contrast body {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
-.accessibility-high-contrast a,
-.accessibility-high-contrast p,
-.accessibility-high-contrast h1,
-.accessibility-high-contrast h2,
-.accessibility-high-contrast h3,
-.accessibility-high-contrast h4,
-.accessibility-high-contrast span {
+/* Açık zeminlerdeki yazılar tam siyah ve net */
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer),
+html.accessibility-high-contrast article:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) {
+  background-color: #ffffff !important;
   color: #000000 !important;
 }
-.accessibility-high-contrast .btn-rect,
-.accessibility-high-contrast button {
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) p,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h1,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h2,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) span {
+  color: #000000 !important;
+}
+/* Koyu zeminler (Footer, Mega Menü, RichBlack bloklar) tam siyah zemin ve TAM BEYAZ YAZI */
+html.accessibility-high-contrast .bg-paletteRichBlack,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"],
+html.accessibility-high-contrast .mega-wrapper,
+html.accessibility-high-contrast footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .bg-paletteRichBlack p,
+html.accessibility-high-contrast .bg-paletteRichBlack h1,
+html.accessibility-high-contrast .bg-paletteRichBlack h2,
+html.accessibility-high-contrast .bg-paletteRichBlack h3,
+html.accessibility-high-contrast .bg-paletteRichBlack span,
+html.accessibility-high-contrast .bg-paletteRichBlack a,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] p,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h1,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h2,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h3,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] span,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] a,
+html.accessibility-high-contrast .mega-wrapper p,
+html.accessibility-high-contrast .mega-wrapper h1,
+html.accessibility-high-contrast .mega-wrapper h2,
+html.accessibility-high-contrast .mega-wrapper h3,
+html.accessibility-high-contrast .mega-wrapper span,
+html.accessibility-high-contrast .mega-wrapper a,
+html.accessibility-high-contrast footer p,
+html.accessibility-high-contrast footer h1,
+html.accessibility-high-contrast footer h2,
+html.accessibility-high-contrast footer h3,
+html.accessibility-high-contrast footer span,
+html.accessibility-high-contrast footer a {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast a {
+  text-decoration: underline !important;
+}
+html.accessibility-high-contrast .btn-rect,
+html.accessibility-high-contrast button {
+  border: 2px solid currentColor !important;
+  font-weight: 700 !important;
+}
+html.accessibility-high-contrast .btn-rect:hover,
+html.accessibility-high-contrast button:not(#accessibility-widget button):hover {
+  background: currentColor !important;
+  color: #ffffff !important;
+}
+
+/* Erişilebilirlik Menüsü Paneli İzolasyonu */
+#accessibility-widget {
+  filter: none !important;
+}
+#accessibility-panel {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+#accessibility-panel * {
+  color: #111111;
+}
+html.accessibility-high-contrast #accessibility-panel {
+  background-color: #ffffff !important;
+  color: #000000 !important;
   border: 2px solid #000000 !important;
-  color: #000000 !important;
-  background: transparent !important;
 }
-.accessibility-high-contrast .btn-rect:hover,
-.accessibility-high-contrast button:hover {
-  background: #000000 !important;
+html.accessibility-high-contrast #accessibility-panel * {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+html.accessibility-high-contrast #accessibility-panel button {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-color: transparent !important;
+}
+html.accessibility-high-contrast #accessibility-panel button:hover {
+  background-color: #f3f4f6 !important;
+  color: #000000 !important;
+}
+html.accessibility-high-contrast #accessibility-panel #acc-contrast-status {
+  background-color: #000000 !important;
   color: #ffffff !important;
 }
 

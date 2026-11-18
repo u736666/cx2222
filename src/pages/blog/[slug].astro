@@ -165,11 +165,11 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
       })}
 
       <div class="pt-12 mt-12 flex flex-wrap items-center justify-between gap-4">
-        <a href="/blog" class="btn-rect text-sm font-medium text-paletteRichBlack hover:text-brandAccent">
+        <a href="/blog" class="inline-flex items-center text-sm font-medium text-paletteRichBlack hover:underline">
           ← Tüm Makalelere Dön
         </a>
         {post.relatedLink && (
-          <a href={post.relatedLink.href} class="btn-rect text-sm font-medium text-brandAccent hover:text-paletteRichBlack" set:html={formatRich(post.relatedLink.label)}>
+          <a href={post.relatedLink.href} class="inline-flex items-center text-sm font-medium text-brandAccent hover:underline" set:html={formatRich(post.relatedLink.label)}>
           </a>
         )}
       </div>

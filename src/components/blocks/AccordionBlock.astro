@@ -55,12 +55,12 @@ const subtitleStyle = resolveTextStyle(data, 'subtitle');
         {(data.primaryLinkText || data.secondaryLinkText) && (
           <div class="pt-4 flex flex-wrap gap-6">
             {data.primaryLinkText && (
-              <a href={data.primaryLinkHref || '/neden-simdi'} class="btn-rect text-brandAccent hover:underline font-medium">
+              <a href={data.primaryLinkHref || '/neden-simdi'} class="inline-flex items-center text-brandAccent hover:underline font-medium">
                 <span set:html={formatRich(data.primaryLinkText)}></span>
               </a>
             )}
             {data.secondaryLinkText && (
-              <a href={data.secondaryLinkHref || '/cozumler'} class={`btn-rect ${isDarkSection ? 'text-white hover:text-brandAccent' : 'text-paletteRichBlack hover:text-brandAccent'} font-medium`}>
+              <a href={data.secondaryLinkHref || '/cozumler'} class={`inline-flex items-center ${isDarkSection ? 'text-white hover:text-brandAccent' : 'text-paletteRichBlack hover:text-brandAccent'} font-medium`}>
                 <span set:html={formatRich(data.secondaryLinkText)}></span>
               </a>
             )}

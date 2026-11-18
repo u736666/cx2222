@@ -200,7 +200,7 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
           {data.problemSlider.map((ps: any, idx: number) => (
             <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
               <Heading as={resolveTextTag(ps, 'quote', 'h3')} customSize={ps.quoteSize} color={ps.quoteColor} size="h2" class="text-paletteRichBlack" text={ps.quote} />
-              <a href={ps.href} data-service={ps.service} class="btn-rect font-semibold tracking-wider text-brandAccent mt-4 hover:underline" style={resolveTextStyle(ps, 'solutionLabel')}>
+              <a href={ps.href} data-service={ps.service} class="inline-flex items-center font-semibold tracking-wider text-brandAccent mt-4 hover:underline" style={resolveTextStyle(ps, 'solutionLabel')}>
                 <span set:html={formatRich(ps.solutionLabel)}></span>
               </a>
             </div>

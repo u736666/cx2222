@@ -112,32 +112,32 @@ const caseSchema = {
         </div>
       </div>
 
-      <div class="mt-10 md:mt-14 w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.imageAlt || project.title} 
-          class="w-full h-full block object-cover grayscale contrast-125"
-        />
+      <div class="mt-10 md:mt-14 w-full">
+        <div class="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-palettePlatinum overflow-hidden">
+          <img 
+            src={project.image} 
+            alt={project.imageAlt || project.title} 
+            class="w-full h-full block object-cover grayscale contrast-125"
+          />
+        </div>
+        {hasMetrics && (
+          <div class="w-full bg-paletteRichBlack text-white px-6 md:px-12 py-8 md:py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {validMetrics.map((m: any) => (
+                <div>
+                  <span class="text-3xl md:text-4xl font-light text-brandAccent block mb-1" style={resolveTextStyle(m, 'value') || undefined}>{m.value}</span>
+                  <span class="typo-small tracking-wider text-white/70" style={resolveTextStyle(m, 'label') || undefined}>{m.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   </section>
 
-  <!-- Metrikler -->
-  {hasMetrics && (
-    <section class="bg-paletteRichBlack text-white px-6 md:px-16 py-16">
-      <div class="max-w-custom mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-        {validMetrics.map((m: any) => (
-          <div>
-            <span class="text-3xl md:text-4xl font-light text-brandAccent block mb-1" style={resolveTextStyle(m, 'value') || undefined}>{m.value}</span>
-            <span class="typo-small tracking-wider text-white/60" style={resolveTextStyle(m, 'label') || undefined}>{m.label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
-
   <!-- Narrative -->
-  <section class={`${hasMetrics ? 'section-pad-150' : 'pt-12 md:pt-16 pb-24 md:pb-36'} bg-siteBg text-paletteRichBlack px-6 md:px-16`}>
+  <section class="pt-14 md:pt-20 pb-24 md:pb-36 bg-siteBg text-paletteRichBlack px-6 md:px-16">
     <div class="max-w-4xl mx-auto space-y-16">
       
       {project.content && String(project.content).trim() !== '' && (

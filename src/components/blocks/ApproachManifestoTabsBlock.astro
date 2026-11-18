@@ -90,7 +90,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
         role="tab"
         aria-selected="false"
         aria-controls="panel-manifesto"
-        class="tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/60 hover:text-brandAccent hover:bg-white"
+        class="tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/70 hover:text-paletteRichBlack hover:bg-white/70"
       >
         Manifestomuz
       </button>
@@ -208,7 +208,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
                   customStyle={resolveTextStyle(item, 'title')} 
                 />
                 {item.tagline && item.tagline.trim() !== '' && (
-                  <p class="typo-lead font-medium text-paletteRichBlack italic pt-1 pb-2" style={resolveTextStyle(item, 'tagline')} set:html={`"${formatRich(String(item.tagline).replace(/^["“”']+|["“”']+$/g, ''))}"`}>
+                  <p class="typo-lead font-medium text-paletteRichBlack italic pt-1 pb-2" style={resolveTextStyle(item, 'tagline')} set:html={`"${formatRich(String(item.tagline).trim().replace(/^["“”']+|["“”']+$/g, '').trim())}"`}>
                   </p>
                 )}
                 {item.p1 && item.p1.trim() !== '' && (
@@ -336,7 +336,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
                   customStyle={resolveTextStyle(item, 'title')} 
                 />
                 {item.tagline && item.tagline.trim() !== '' && (
-                  <p class="typo-lead font-medium text-paletteRichBlack italic pt-1 pb-2" style={resolveTextStyle(item, 'tagline')} set:html={`"${formatRich(String(item.tagline).replace(/^["“”']+|["“”']+$/g, ''))}"`}>
+                  <p class="typo-lead font-medium text-paletteRichBlack italic pt-1 pb-2" style={resolveTextStyle(item, 'tagline')} set:html={`"${formatRich(String(item.tagline).trim().replace(/^["“”']+|["“”']+$/g, '').trim())}"`}>
                   </p>
                 )}
                 {item.p1 && item.p1.trim() !== '' && (
@@ -369,7 +369,7 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
     if (!yaklasimBtn || !manifestoBtn || !yaklasimPanel || !manifestoPanel) return;
 
     const activeTabClass = 'tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-paletteRichBlack text-white';
-    const inactiveTabClass = 'tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/60 hover:text-brandAccent hover:bg-white';
+    const inactiveTabClass = 'tab-btn-primary px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 text-sm sm:text-base lg:text-lg font-normal tracking-normal transition-all cursor-pointer bg-transparent text-paletteRichBlack/70 hover:text-paletteRichBlack hover:bg-white/70';
 
     function switchPrimaryTab(activeTab: 'yaklasim' | 'manifesto', updateHash = true) {
       if (activeTab === 'yaklasim') {
