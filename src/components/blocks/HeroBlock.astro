@@ -71,28 +71,32 @@ const hasContent = isSlider || Boolean(
           <div class={`text-4xl sm:text-5xl md:text-6xl font-light tracking-tight ${isDarkHero ? 'text-white' : 'text-paletteRichBlack'} mb-2`} style={resolveTextStyle(data, 'bigWord')} set:html={formatRich(data.bigWord)}>
           </div>
         )}
-        {(data.eyebrowTop || data.eyebrowBottom) && (
+        {(Boolean(data.eyebrowTop?.trim()) || Boolean(data.eyebrowBottom?.trim())) && (
           <div class={`text-2xl sm:text-3xl font-normal tracking-tight ${isDarkHero ? 'text-white' : 'text-paletteRichBlack'}`}>
-            <span set:html={formatRich(data.eyebrowTop || 'AI')}></span> <span class="text-brandAccent font-serif font-light align-middle">*</span> <span set:html={formatRich(data.eyebrowBottom || 'EXPERIENCE')}></span>
+            {data.eyebrowTop?.trim() && <span set:html={formatRich(data.eyebrowTop)}></span>}
+            {data.eyebrowTop?.trim() && data.eyebrowBottom?.trim() && <span class="text-brandAccent font-serif font-light align-middle mx-1">*</span>}
+            {data.eyebrowBottom?.trim() && <span set:html={formatRich(data.eyebrowBottom)}></span>}
           </div>
         )}
-        {data.eyebrow && data.eyebrow.trim() !== '' && !(data.eyebrowTop || data.eyebrowBottom) && (
+        {data.eyebrow && data.eyebrow.trim() !== '' && !(data.eyebrowTop?.trim() || data.eyebrowBottom?.trim()) && (
           <span class={`typo-small font-bold tracking-widest ${isDarkHero ? 'text-brandAccent' : 'text-paletteRichBlack/60'} block`} style={eyebrowStyle || undefined} set:html={formatRich(data.eyebrow)}></span>
         )}
-        <Heading 
-          as={data.headingTag || data.titleTag || 'h1'} 
-          customSize={data.headingSize || data.titleSize}
-          color={data.headingColor || data.titleColor}
-          size="h1" 
-          text={data.title}
-          class={heroTextClass} 
-          customStyle={titleStyle}
-        />
+        {data.title && data.title.trim() !== '' && (
+          <Heading 
+            as={data.headingTag || data.titleTag || 'h1'} 
+            customSize={data.headingSize || data.titleSize}
+            color={data.headingColor || data.titleColor}
+            size="h1" 
+            text={data.title}
+            class={heroTextClass} 
+            customStyle={titleStyle}
+          />
+        )}
         {data.desc && data.desc.trim() !== '' && (
           <p class={`typo-lead font-light max-w-2xl ${heroSubTextClass}`} style={descStyle || undefined} set:html={formatRich(data.desc)}>
           </p>
         )}
-        {(data.ctaText || data.primaryBtnLabel) && (
+        {((data.ctaText && data.ctaText.trim()) || (data.primaryBtnLabel && data.primaryBtnLabel.trim())) && (
           <div class="pt-4 flex flex-wrap gap-3">
             <a 
               href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 
@@ -100,7 +104,7 @@ const hasContent = isSlider || Boolean(
             >
               <span set:html={formatRich(data.ctaText || data.primaryBtnLabel)}></span>
             </a>
-            {data.secondaryBtnLabel && (
+            {data.secondaryBtnLabel && data.secondaryBtnLabel.trim() !== '' && (
               <a 
                 href={data.secondaryBtnHref || '#'} 
                 class={`btn-rect px-7 py-3 border ${isDarkHero ? 'border-white text-white hover:bg-white hover:!text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:!text-white'} font-light transition-all`}

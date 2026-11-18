@@ -107,12 +107,8 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
         
         <!-- Left Column: Sticky Subtitle & Description -->
         <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-32">
-          {hero.eyebrow && hero.eyebrow.trim() !== '' ? (
+          {hero.eyebrow && hero.eyebrow.trim() !== '' && (
             <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={resolveTextStyle(hero, 'eyebrow')} set:html={formatRich(hero.eyebrow)}>
-            </span>
-          ) : (
-            <span class="typo-small font-semibold tracking-widest text-brandAccent block">
-              Yaklaşımımız
             </span>
           )}
           {hero.title && hero.title.trim() !== '' && (
@@ -241,12 +237,8 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
         
         <!-- Left Column: Sticky Subtitle & Description -->
         <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-32">
-          {manifestoData.eyebrow && manifestoData.eyebrow.trim() !== '' ? (
+          {manifestoData.eyebrow && manifestoData.eyebrow.trim() !== '' && (
             <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={resolveTextStyle(manifestoData, 'eyebrow')} set:html={formatRich(manifestoData.eyebrow)}>
-            </span>
-          ) : (
-            <span class="typo-small font-semibold tracking-widest text-brandAccent block">
-              Manifestomuz
             </span>
           )}
           {manifestoData.title && manifestoData.title.trim() !== '' && (

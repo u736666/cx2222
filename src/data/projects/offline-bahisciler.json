@@ -42,9 +42,11 @@
     }
   ],
   "challenge": {
-    "eyebrow": "Araştırma Sorusu",
+    "eyebrow": "Soru",
     "title": "Teknoloji Kolaylığı, İnsanın Ritüel ve Sosyalleşme İhtiyacını Yenemediğinde",
-    "body": "Kurumlar genellikle dijitalleşmeyi bir arayüz tasarımından ibaret görür. 'Mobil uygulamayı yaptık, artık herkes oraya geçer' varsayımı sahada çöktü. Fiziksel bayi sadece bir satış noktası değil; mahalle kahvesi gibi bir sosyalleşme kulübü, taktik alışverişi yapılan bir mikro-dünyaydı."
+    "body": "Kurumlar genellikle dijitalleşmeyi bir arayüz tasarımından ibaret görür. 'Mobil uygulamayı yaptık, artık herkes oraya geçer' varsayımı sahada çöktü. Fiziksel bayi sadece bir satış noktası değil; mahalle kahvesi gibi bir sosyalleşme kulübü, taktik alışverişi yapılan bir mikro-dünyaydı.",
+    "eyebrowColor": "richBlack",
+    "eyebrowSize": "40"
   },
   "solution": {
     "eyebrow": "Ortaya Çıkan Bulgular",
@@ -68,5 +70,18 @@
       }
     ]
   },
-  "quote": "\"İnsan davranışını sadece anketlerle anlamaya çalışmak kör uçuşudur. İnsanların arasına karışıp onların gözünden dünyayı gördüğünüzde, hiçbir dijital ürünün yok sayamayacağı derin hakikatler ortaya çıkar.\""
+  "quote": "\"İnsan davranışını sadece anketlerle anlamaya çalışmak kör uçuşudur. İnsanların arasına karışıp onların gözünden dünyayı gördüğünüzde, hiçbir dijital ürünün yok sayamayacağı derin hakikatler ortaya çıkar.\"",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
 }

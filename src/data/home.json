@@ -292,14 +292,15 @@
       "scopeLeft": "AI destekli Müşterinin sesi (VOC) sistem kurulumu,  <br>AI destekli Deneyim Yönetim Sistemi, <br>Close-the Loop Entegrasyonu, AI destekli Müşteri Deneyim Yolculuğu Yönetimi,  Kök neden, Müşteri Duygu, Etki Analizleri",
       "scopeRight": "",
       "descColor": "brandAccent",
-      "topWordTag": "span",
-      "bottomWordTag": "span",
+      "topWordTag": "h2",
+      "bottomWordTag": "h2",
       "descTag": "p",
       "scopeTitleTag": "h4",
       "scopeLeftTag": "p",
       "scopeRightTag": "p",
       "topWordSize": "",
-      "scopeLeftSize": "14"
+      "scopeLeftSize": "14",
+      "topWordWeight": ""
     },
     "cxCard": {
       "badge": "",
@@ -312,7 +313,8 @@
       "bigTitleTag": "h2",
       "descTag": "p",
       "bottomTitleTag": "h4",
-      "bottomDescTag": "p"
+      "bottomDescTag": "p",
+      "bigTitleWeight": "300"
     },
     "academyCard": {
       "badge": "",
@@ -342,10 +344,10 @@
       "secondaryBtnHref": "/iletisim",
       "primaryBtnLabel": "CX Folks Eğitimleri",
       "primaryBtnHref": "/cozumler/akademi",
-      "titleTag": "h1",
-      "titleSize": "25",
+      "titleTag": "h2",
       "badgeTag": "span",
-      "subtitleTag": "p"
+      "subtitleTag": "p",
+      "titleWeight": "300"
     },
     "problemSlider": [
       {

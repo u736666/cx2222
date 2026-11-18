@@ -12,7 +12,8 @@ interface Props {
 const { id, data = {}, style = {} } = Astro.props;
 const styles = computeBlockStyles(style);
 
-const headingLines = Array.isArray(data.headingLines) ? data.headingLines : (data.title ? [data.title] : []);
+const rawHeadingLines = Array.isArray(data.headingLines) ? data.headingLines : (data.title ? [data.title] : []);
+const headingLines = rawHeadingLines.filter((l: string) => l && String(l).trim() !== '');
 const aiCard = data.aiCard || {};
 const cxCard = data.cxCard || {};
 const academyCard = data.academyCard || {};

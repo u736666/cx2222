@@ -5491,17 +5491,17 @@
 
           // Content Settings
           cCard.appendChild(el('div', { className: 'grid-2' }, [
-            fieldInput('Üst Başlık (Eyebrow)', cardItem, 'eyebrow', 'site'),
+            fieldInput('Üst Başlık (Eyebrow — Boş bırakılırsa gizlenir)', cardItem, 'eyebrow', 'site'),
             headingTagSelect('Başlık H-Etiketi', cardItem, 'headingTag', 'site', 'h2'),
           ]));
-          cCard.appendChild(fieldInput('Kart Başlığı', cardItem, 'title', 'site', { withTag: true, defaultTag: 'h2' }));
-          cCard.appendChild(fieldInput('Açıklama Metni', cardItem, 'desc', 'site', { multiline: true }));
+          cCard.appendChild(fieldInput('Kart Başlığı (Boş bırakılırsa gizlenir)', cardItem, 'title', 'site', { withTag: true, defaultTag: 'h2' }));
+          cCard.appendChild(fieldInput('Açıklama Metni (Boş bırakılırsa gizlenir)', cardItem, 'desc', 'site', { multiline: true }));
 
           // Buttons
           const btnGrid = el('div', { className: 'grid-2', style: 'margin-top:10px;' });
-          btnGrid.appendChild(fieldInput('1. Buton Metni (Vurgulu Buton)', cardItem, 'primaryLabel', 'site'));
+          btnGrid.appendChild(fieldInput('1. Buton Metni (Boş bırakılırsa buton gizlenir)', cardItem, 'primaryLabel', 'site'));
           btnGrid.appendChild(fieldInput('1. Buton Linki / URL', cardItem, 'primaryHref', 'site', { placeholder: '/iletisim' }));
-          btnGrid.appendChild(fieldInput('2. Buton Metni (İkincil Buton)', cardItem, 'secondaryLabel', 'site'));
+          btnGrid.appendChild(fieldInput('2. Buton Metni (Boş bırakılırsa buton gizlenir)', cardItem, 'secondaryLabel', 'site'));
           btnGrid.appendChild(fieldInput('2. Buton Linki / URL', cardItem, 'secondaryHref', 'site', { placeholder: '/cozumler/cx-maturity-testi' }));
           cCard.appendChild(btnGrid);
 

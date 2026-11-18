@@ -32,15 +32,30 @@ const library: any[] = site.ctaLibrary || [];
 const targetId = Astro.props.selectedCtaId || 'default-consulting';
 const card = library.find((c: any) => c.id === targetId) || library[0] || {};
 
-// 2. Resolve content (explicit prop > card from library > site.cta)
-const title = (Astro.props.title !== undefined && Astro.props.title !== '') ? Astro.props.title : (card.title || cta.title || '');
-const desc = (Astro.props.desc !== undefined && Astro.props.desc !== '') ? Astro.props.desc : (card.desc || cta.desc || '');
-const eyebrow = (Astro.props.eyebrow !== undefined && Astro.props.eyebrow !== '') ? Astro.props.eyebrow : (card.eyebrow || cta.eyebrow || '');
+// Helper to resolve value: explicit prop > card from library > site.cta fallback
+// Note: If a field is defined on card as empty string "", it must NOT fall back to site.cta!
+function resolveVal(propVal: any, cardVal: any, fallbackVal: any = '') {
+  if (propVal !== undefined && propVal !== null && String(propVal).trim() !== '') {
+    return String(propVal).trim();
+  }
+  if (cardVal !== undefined && cardVal !== null) {
+    return String(cardVal).trim();
+  }
+  if (fallbackVal !== undefined && fallbackVal !== null) {
+    return String(fallbackVal).trim();
+  }
+  return '';
+}
 
-const primaryLabel = (Astro.props.primaryLabel !== undefined && Astro.props.primaryLabel !== '') ? Astro.props.primaryLabel : (card.primaryLabel || cta.primaryLabel || '');
-const primaryHref = (Astro.props.primaryHref !== undefined && Astro.props.primaryHref !== '') ? Astro.props.primaryHref : (card.primaryHref || cta.primaryHref || '#');
-const secondaryLabel = (Astro.props.secondaryLabel !== undefined && Astro.props.secondaryLabel !== '') ? Astro.props.secondaryLabel : (card.secondaryLabel || cta.secondaryLabel || '');
-const secondaryHref = (Astro.props.secondaryHref !== undefined && Astro.props.secondaryHref !== '') ? Astro.props.secondaryHref : (card.secondaryHref || cta.secondaryHref || '#');
+// 2. Resolve content (explicit prop > card from library > site.cta)
+const title = resolveVal(Astro.props.title, card.title, cta.title);
+const desc = resolveVal(Astro.props.desc, card.desc, cta.desc);
+const eyebrow = resolveVal(Astro.props.eyebrow, card.eyebrow, cta.eyebrow);
+
+const primaryLabel = resolveVal(Astro.props.primaryLabel, card.primaryLabel, cta.primaryLabel);
+const primaryHref = resolveVal(Astro.props.primaryHref, card.primaryHref, cta.primaryHref || '#');
+const secondaryLabel = resolveVal(Astro.props.secondaryLabel, card.secondaryLabel, cta.secondaryLabel);
+const secondaryHref = resolveVal(Astro.props.secondaryHref, card.secondaryHref, cta.secondaryHref || '#');
 
 const hasEyebrow = Boolean(eyebrow && eyebrow.trim());
 const hasTitle = Boolean(title && title.trim());

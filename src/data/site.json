@@ -292,14 +292,14 @@
     "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
     "primaryLabel": "Görüşme Planlayın →",
     "primaryHref": "/iletisim",
-    "secondaryLabel": "Maturity Testi →",
+    "secondaryLabel": "",
     "secondaryHref": "/cozumler/cx-maturity-testi"
   },
   "ctaLibrary": [
     {
       "id": "default-consulting",
       "name": "AI",
-      "eyebrow": "Birlikte Başlayalım",
+      "eyebrow": "",
       "title": "Şirketinizin Sesini Aksiyona Dönüştürelim",
       "desc": "Müşteri deneyimi yönetim yapınızı, hedeflerinizi analiz edelim,insan odaklı yapay zeka uygulamalarına nasıl geçebileceğinizi planlayalım.",
       "primaryLabel": "Görüşelim →",
@@ -308,7 +308,7 @@
       "secondaryHref": "",
       "surface": "richBlack",
       "bgColor": "",
-      "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+      "bgImage": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
       "headingTag": "h2"
     },
     {
