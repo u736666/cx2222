@@ -69,7 +69,7 @@ const descStyle = resolveTextStyle(data, 'desc');
 
               <div class={`lg:col-span-5 p-8 sm:p-12 md:p-14 flex flex-col justify-between ${st.section} space-y-8`}>
                 <div class="space-y-4">
-                  <span class={`typo-body tracking-widest font-semibold block ${proj.listStyle === 'platinum' ? 'text-brandAccent' : st.title}`} style={resolveTextStyle(proj, 'client') || 'color: var(--color-brand-tag, var(--color-brand-accent)) !important'} set:html={formatRich(proj.client)}>
+                  <span class={`typo-body tracking-widest font-semibold block ${proj.listStyle === 'platinum' ? 'text-brandAccent' : st.title}`} style={resolveTextStyle(proj, 'client') || undefined} set:html={formatRich(proj.client)}>
                   </span>
                   <Heading 
                     as={proj.headingTag || proj.titleTag || 'h3'} 

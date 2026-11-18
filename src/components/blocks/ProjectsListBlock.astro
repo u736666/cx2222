@@ -36,7 +36,7 @@ const sectionId = id || styles.sectionId || 'projects-list';
 
             <div class="lg:col-span-6 p-8 sm:p-12 md:p-14 flex flex-col justify-between space-y-8">
               <div class="space-y-4">
-                <span class={`typo-body tracking-widest font-semibold block ${accentClass}`} style={resolveTextStyle(proj, 'client') || 'color: var(--color-brand-tag, var(--color-brand-accent)) !important'} set:html={formatRich(proj.client)}>
+                <span class={`typo-body tracking-widest font-semibold block ${accentClass}`} style={resolveTextStyle(proj, 'client') || undefined} set:html={formatRich(proj.client)}>
                 </span>
                 <Heading 
                   as={proj.headingTag || proj.titleTag || 'h2'} 

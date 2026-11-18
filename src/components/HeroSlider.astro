@@ -7,7 +7,7 @@ const s0 = slides[0] || {};
 const HeroTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(s0.headingTag || s0.titleTag || home.heroHeadingTag || '') ? (s0.headingTag || s0.titleTag || home.heroHeadingTag) : 'h1') as any;
 
 const titleInlineStyle = resolveTextStyle(s0, 'title');
-const brandInlineStyle = resolveTextStyle(s0, 'brand') || 'color: var(--color-brand-tag, var(--color-brand-accent)) !important';
+const brandInlineStyle = resolveTextStyle(s0, 'brand');
 const descInlineStyle = resolveTextStyle(s0, 'desc');
 ---
 
@@ -81,14 +81,14 @@ const descInlineStyle = resolveTextStyle(s0, 'desc');
     const heroDots = document.querySelectorAll('#hero-dots button');
 
     const cMap = {
-      brandTag: 'var(--color-brand-tag, var(--color-brand-accent))',
-      brandAccent: 'var(--color-brand-accent, #FF7452)',
-      richBlack: 'var(--color-rich-black, #1C1C1C)',
-      deepNavy: 'var(--color-deep-navy, #313638)',
+      brandAccent: 'var(--color-brand-accent)',
+      sandyBrown: 'var(--color-sandy-brown)',
+      richBlack: 'var(--color-rich-black)',
+      deepNavy: 'var(--color-deep-navy)',
+      platinum: 'var(--color-platinum)',
+      dustGrey: 'var(--color-dust-grey)',
       white: '#ffffff',
       muted: '#666666',
-      sandyBrown: 'var(--color-sandy-brown, #F09D51)',
-      platinum: 'var(--color-platinum, #E8E9EB)',
     };
 
     const TURKISH_VOWELS = new Set(['a','e','ı','i','o','ö','u','ü','A','E','I','İ','O','Ö','U','Ü']);
@@ -161,7 +161,7 @@ const descInlineStyle = resolveTextStyle(s0, 'desc');
         const bSz = data.brandSize;
         heroBoxBrand.style.fontSize = bSz ? fmtSz(bSz) : '';
         const bClr = data.brandColor;
-        heroBoxBrand.style.color = bClr ? (cMap[bClr] || bClr) : 'var(--color-brand-tag, var(--color-brand-accent))';
+        heroBoxBrand.style.color = bClr ? (cMap[bClr] || bClr) : '';
       }
       if (heroBoxTitle) {
         heroBoxTitle.innerHTML = formatRichClient(data.title || '');
