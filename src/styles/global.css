@@ -199,30 +199,68 @@ h6, .typo-h6 {
 }
 
 #main-header.scrolled-header,
-#main-header.has-active-mega,
 #main-header.mobile-menu-open {
   background-color: var(--color-site-bg) !important;
   border: none !important;
 }
 
-/* Ana sayfa tepedeyken (Hero üzerindeyken) logo, navigasyon ve mobil buton BEYAZ */
-#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-brand {
+/* Mega Menü Açıkken: Header, mega menü ile aynı fon rengini alır (kesintisiz tek koyu blok) */
+#main-header.has-active-mega {
+  background-color: var(--color-rich-black) !important;
+  border: none !important;
+}
+
+/* Mega Menü Açıkken: Logo, linkler ve buton o koyu fonda görünen BEYAZ rengi alır */
+#main-header.has-active-mega .header-brand {
   color: #ffffff !important;
 }
 
-#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-logo-img {
-  filter: brightness(0) invert(1);
+#main-header.has-active-mega .header-logo-img {
+  filter: brightness(0) invert(1) !important;
 }
 
-#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-nav a.nav-link {
+#main-header.has-active-mega .header-nav a {
   color: #ffffff !important;
 }
 
-#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-nav a.nav-link:hover {
+#main-header.has-active-mega .header-nav a:hover,
+#main-header.has-active-mega .header-nav a.active-route-link,
+#main-header.has-active-mega .nav-trigger.active-trigger > a {
   color: var(--color-brand-accent) !important;
 }
 
-#main-header:not(.solid-subpage):not(.scrolled-header):not(.has-active-mega):not(.mobile-menu-open) .header-mobile-btn {
+#main-header.has-active-mega .btn-rect {
+  background-color: #ffffff !important;
+  color: var(--color-rich-black) !important;
+}
+
+#main-header.has-active-mega .btn-rect:hover {
+  background-color: var(--color-brand-accent) !important;
+  color: var(--color-rich-black) !important;
+}
+
+#main-header.has-active-mega .header-mobile-btn {
+  color: #ffffff !important;
+}
+
+/* Ana sayfa tepedeyken (Hero üzerindeyken) logo, navigasyon ve mobil buton BEYAZ */
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-brand {
+  color: #ffffff !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-logo-img {
+  filter: brightness(0) invert(1);
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-nav a.nav-link {
+  color: #ffffff !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-nav a.nav-link:hover {
+  color: var(--color-brand-accent) !important;
+}
+
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-mobile-btn {
   color: #ffffff !important;
 }
 
@@ -243,6 +281,26 @@ h6, .typo-h6 {
 
 .nav-trigger {
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Hit Alanını Genişleten Görünmez Köprü (Kazara menüden çıkmayı ve kapanmayı önler) */
+.nav-trigger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: -22px;
+  left: -16px;
+  right: -16px;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.nav-trigger > a {
+  position: relative;
+  z-index: 3;
 }
 
 .nav-trigger.active-trigger > a {

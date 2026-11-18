@@ -610,10 +610,10 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "Farklı sektörlerde sahada kanıtlanmış başarı hikayeleri.2",
-      "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi ve somut iş sonuçları üretti.",
+      "title": "Farklı sektörlerde sahada kanıtlanmış <br>başarı hikayeleri",
+      "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi <br>ve somut iş sonuçları üretti.",
       "headingTag": "h1",
-      "surface": "brandAccent"
+      "surface": "siteBg"
     },
     "cardCtaText": "Vaka Analizini Oku →",
     "faqs": [],

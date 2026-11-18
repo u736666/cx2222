@@ -25,7 +25,7 @@ function isExactPage(href: string) {
 {showHeader && (
 <header id="main-header" class={`pointer-events-auto ${isHome ? '' : 'solid-subpage'} ${headerCfg.sticky === false ? '!static' : ''}`}>
   <div class="w-full px-6 md:px-16">
-    <div class="max-w-custom mx-auto min-h-[4rem] md:min-h-[5rem] py-2 flex items-center justify-between gap-4">
+    <div class="max-w-custom mx-auto h-16 md:h-20 flex items-center justify-between gap-4">
       
       <a href={headerCfg.brandHref || '/'} class="header-brand inline-flex items-center py-1 text-paletteRichBlack text-2xl leading-none tracking-normal flex-shrink-0 transition-colors duration-200">
         {site.brand.logoImage ? (
@@ -36,33 +36,33 @@ function isExactPage(href: string) {
       </a>
 
       <!-- Desktop Sağ Bölüm: Sağa Yaslı Menü ve Buton -->
-      <div class="hidden lg:flex items-center justify-end space-x-8 ml-auto flex-shrink-0">
-        <nav aria-label="Ana Menü" class="header-nav flex items-center space-x-8 text-[14px] font-light text-paletteRichBlack/80">
+      <div class="hidden lg:flex items-center justify-end space-x-8 ml-auto flex-shrink-0 h-full">
+        <nav aria-label="Ana Menü" class="header-nav flex items-center space-x-8 text-[14px] font-light text-paletteRichBlack/80 h-full">
           {(headerCfg.navLinks || []).map((link: any) => {
             const active = isRouteActive(link.href);
             const activeClasses = active
               ? 'text-brandAccent font-medium active-route-link'
               : 'nav-link text-paletteRichBlack/80';
             return link.megaId ? (
-              <div class="nav-trigger py-2" data-mega={link.megaId}>
+              <div class="nav-trigger h-full flex items-center px-1" data-mega={link.megaId}>
                 <a
                   href={link.href}
                   target={link.openInNewTab ? '_blank' : undefined}
                   rel={link.openInNewTab ? 'noopener noreferrer' : undefined}
                   aria-current={isExactPage(link.href) ? 'page' : undefined}
-                  class={`hover:text-brandAccent transition-colors py-2 inline-block ${activeClasses}`}
+                  class={`hover:text-brandAccent transition-colors py-4 inline-flex items-center h-full ${activeClasses}`}
                 >
                   {link.label}
                 </a>
               </div>
             ) : (
-              <div>
+              <div class="h-full flex items-center">
                 <a
                   href={link.href}
                   target={link.openInNewTab ? '_blank' : undefined}
                   rel={link.openInNewTab ? 'noopener noreferrer' : undefined}
                   aria-current={isExactPage(link.href) ? 'page' : undefined}
-                  class={`hover:text-brandAccent transition-colors py-2 inline-block ${activeClasses}`}
+                  class={`hover:text-brandAccent transition-colors py-4 inline-flex items-center h-full ${activeClasses}`}
                 >
                   {link.label}
                 </a>
@@ -222,6 +222,7 @@ function isExactPage(href: string) {
     const triggers = document.querySelectorAll('.nav-trigger');
     const panels = document.querySelectorAll('.mega-dive-container');
     let hideTimeout: ReturnType<typeof setTimeout> | null = null;
+    const HIDE_DELAY = 300; // Geniş tolerans süresi: kazara menüden çıkmayı önler
 
     function closeAllMega() {
       triggers.forEach(t => t.classList.remove('active-trigger'));
@@ -229,39 +230,56 @@ function isExactPage(href: string) {
       if (header) header.classList.remove('has-active-mega');
     }
 
+    if (header) {
+      header.addEventListener('mouseenter', () => {
+        if (header.classList.contains('has-active-mega')) {
+          if (hideTimeout) {
+            clearTimeout(hideTimeout);
+            hideTimeout = null;
+          }
+        }
+      });
+    }
+
     triggers.forEach(trigger => {
       const targetId = trigger.getAttribute('data-mega');
       const targetPanel = targetId ? document.getElementById(targetId) : null;
 
-      trigger.addEventListener('mouseenter', () => {
-        if (hideTimeout) clearTimeout(hideTimeout);
+      function openMega() {
+        if (hideTimeout) {
+          clearTimeout(hideTimeout);
+          hideTimeout = null;
+        }
         closeAllMega();
         trigger.classList.add('active-trigger');
         if (targetPanel) {
           targetPanel.classList.add('active-panel');
           if (header) header.classList.add('has-active-mega');
         }
-      });
+      }
 
-      trigger.addEventListener('mouseleave', () => {
+      function scheduleClose() {
+        if (hideTimeout) clearTimeout(hideTimeout);
         hideTimeout = setTimeout(() => {
           closeAllMega();
-        }, 150);
-      });
+        }, HIDE_DELAY);
+      }
+
+      trigger.addEventListener('mouseenter', openMega);
+      trigger.addEventListener('mouseleave', scheduleClose);
 
       if (targetPanel) {
         targetPanel.addEventListener('mouseenter', () => {
-          if (hideTimeout) clearTimeout(hideTimeout);
+          if (hideTimeout) {
+            clearTimeout(hideTimeout);
+            hideTimeout = null;
+          }
           trigger.classList.add('active-trigger');
           targetPanel.classList.add('active-panel');
           if (header) header.classList.add('has-active-mega');
         });
 
-        targetPanel.addEventListener('mouseleave', () => {
-          hideTimeout = setTimeout(() => {
-            closeAllMega();
-          }, 150);
-        });
+        targetPanel.addEventListener('mouseleave', scheduleClose);
 
         // Close mega menu immediately when any link inside is clicked
         targetPanel.querySelectorAll('a').forEach((link) => {
