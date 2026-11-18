@@ -1639,20 +1639,23 @@
         if (l < 0.22) {
           if (h >= 140 && h < 210) return 'Koyu Petrol / Gece Yeşili';
           if (h >= 210 && h < 270) return 'Koyu Lacivert / Gece Mavisi';
+          if (h >= 280 || h < 20) return 'Plum Noir / Koyu Mürdüm';
           return 'Koyu Antrasit';
         }
         if (l > 0.88) {
           if (h >= 30 && h < 80) return 'Krem / Fildişi';
+          if (h >= 170 && h < 240) return 'Cool Blue / Açık Mavi';
           return 'Kırık Beyaz / Açık Platin';
         }
         if (h >= 25 && h < 65) return l > 0.65 ? 'Kum Beji / Sıcak Taş' : 'Vizon / Sıcak Gri';
         if (h >= 140 && h < 210) return 'Küllü Su Yeşili / Adaçayı';
         if (h >= 210 && h < 260) return 'Küllü Mavi / Çelik Mavisi';
+        if (h >= 280 && h < 350) return 'Küllü Gül / Mürdüm Mauve';
       }
 
       // Saturated / Distinct hue classification
       if (h >= 355 || h < 11) {
-        if (l < 0.30) return 'Koyu Bordo';
+        if (l < 0.30) return 'Koyu Bordo / Mürdüm';
         if (l > 0.75) return 'Açık Pembe / Pudra';
         return 'Kırmızı';
       }
@@ -1667,15 +1670,15 @@
         if (l > 0.70) return 'Kum Beji / Sıcak Taş';
         return 'Turuncu';
       }
-      if (h >= 52 && h < 68) {
+      if (h >= 52 && h < 60) {
         if (l < 0.35) return 'Koyu Haki';
         if (l < 0.55) return 'Hardal Sarısı';
         if (l > 0.78) return 'Açık Krem / Pastel Sarı';
         return 'Sarı';
       }
-      if (h >= 68 && h < 95) {
+      if (h >= 60 && h < 95) {
         if (l < 0.35) return 'Zeytin Yeşili';
-        if (l > 0.70) return 'Açık Lime / Fıstık';
+        if (l > 0.60) return 'Wasabi / Açık Lime';
         return 'Lime / Fıstık Yeşili';
       }
       if (h >= 95 && h < 155) {
@@ -1690,8 +1693,9 @@
       }
       if (h >= 195 && h < 255) {
         if (l < 0.25) return 'Koyu Lacivert / Gece Mavisi';
-        if (l > 0.70) return 'Açık Buz Mavisi';
-        if (s < 0.50) return 'Çelik Mavisi';
+        if (l > 0.85) return 'Cool Blue / Açık Mavi';
+        if (l > 0.70) return 'Buzul / Seramik Mavi';
+        if (s < 0.50) return 'Akdeniz / Çelik Mavisi';
         return 'Mavi';
       }
       if (h >= 255 && h < 290) {
@@ -1700,12 +1704,13 @@
         return 'Mor / İndigo';
       }
       if (h >= 290 && h < 330) {
-        if (l < 0.28) return 'Koyu Mürdüm';
+        if (l < 0.25) return 'Plum Noir / Koyu Mürdüm';
         if (l > 0.72) return 'Açık Lila / Orkide';
         return 'Fuşya / Magenta';
       }
       if (h >= 330 && h < 355) {
-        if (l < 0.30) return 'Gül Kurusu';
+        if (l < 0.25) return 'Plum Noir / Koyu Mürdüm';
+        if (l < 0.40) return 'Küllü Gül / Mürdüm Mauve';
         if (l > 0.75) return 'Bebek Pembesi';
         return 'Pembe';
       }
@@ -1730,10 +1735,10 @@
 
     function getSurfaceOptions() {
       const theme = STATE.theme || {};
-      const pl = theme.platinum || '#F5F6FA';
-      const dg = theme.dustGrey || '#012420';
-      const ba = theme.brandAccent || '#D9FD91';
-      const rb = theme.richBlack || '#111111';
+      const pl = theme.platinum || '#D7EFFF';
+      const dg = theme.dustGrey || '#C1DEEF';
+      const ba = theme.brandAccent || '#E9F056';
+      const rb = theme.richBlack || '#351E28';
       const bg = theme.siteBg || '#FFFFFF';
       return [
         { value: 'platinum', label: `1. Açık Zemin (${getExactColorName(pl)} — ${pl})` },
@@ -1747,9 +1752,9 @@
 
     function getBarOptions() {
       const theme = STATE.theme || {};
-      const ba = theme.brandAccent || '#D9FD91';
-      const sb = theme.sandyBrown || '#89C9C9';
-      const rb = theme.richBlack || '#111111';
+      const ba = theme.brandAccent || '#E9F056';
+      const sb = theme.sandyBrown || '#7DA5BC';
+      const rb = theme.richBlack || '#351E28';
       return [
         { value: 'brandAccent', label: `1. Ana Vurgu (${getExactColorName(ba)} — ${ba})` },
         { value: 'sandyBrown', label: `2. İkincil Vurgu (${getExactColorName(sb)} — ${sb})` },
@@ -1759,12 +1764,12 @@
 
     function getPaletteOptions() {
       const theme = STATE.theme || {};
-      const ba = theme.brandAccent || '#D9FD91';
-      const sb = theme.sandyBrown || '#89C9C9';
-      const pl = theme.platinum || '#F5F6FA';
-      const dg = theme.dustGrey || '#012420';
-      const rb = theme.richBlack || '#111111';
-      const dn = theme.deepNavy || '#374043';
+      const ba = theme.brandAccent || '#E9F056';
+      const sb = theme.sandyBrown || '#7DA5BC';
+      const pl = theme.platinum || '#D7EFFF';
+      const dg = theme.dustGrey || '#C1DEEF';
+      const rb = theme.richBlack || '#351E28';
+      const dn = theme.deepNavy || '#462937';
       return [
         { value: '', label: 'Renk: Varsayılan (Yüzeye Göre)', hex: 'transparent' },
         { value: 'brandAccent', label: `1. Ana Vurgu (${getExactColorName(ba)} — ${ba})`, hex: ba },
@@ -1781,16 +1786,16 @@
     const DEFAULT_CX8_THEME = {
       siteBg: '#ffffff',
       textMain: '#111111',
-      textMuted: '#313638',
-      textLight: '#666666',
-      brandAccent: '#D9FD91',
-      brandAccentHover: '#fd7a5c',
-      sandyBrown: '#89C9C9',
-      sandyBrownHover: '#77c0c0',
-      platinum: '#F5F6FA',
-      dustGrey: '#012420',
-      deepNavy: '#374043',
-      richBlack: '#111111',
+      textMuted: '#374043',
+      textLight: '#7d818c',
+      brandAccent: '#E9F056',
+      brandAccentHover: '#d6dd3a',
+      sandyBrown: '#7DA5BC',
+      sandyBrownHover: '#6891A8',
+      platinum: '#D7EFFF',
+      dustGrey: '#C1DEEF',
+      deepNavy: '#462937',
+      richBlack: '#351E28',
       cardBg: '#ffffff',
     };
 
@@ -2147,16 +2152,16 @@
         cardBg: 'Genel Kart Yüzeyi',
       };
       const COLOR_HEX_MAP = {
-        platinum: theme.platinum || '#F5F6FA',
-        dustGrey: theme.dustGrey || '#012420',
-        brandAccent: theme.brandAccent || '#D9FD91',
-        richBlack: theme.richBlack || '#111111',
+        platinum: theme.platinum || '#D7EFFF',
+        dustGrey: theme.dustGrey || '#C1DEEF',
+        brandAccent: theme.brandAccent || '#E9F056',
+        richBlack: theme.richBlack || '#351E28',
         darkGraphite: '#222222',
         siteBg: theme.siteBg || '#FFFFFF',
         white: '#FFFFFF',
-        sandyBrown: theme.sandyBrown || '#89C9C9',
-        deepNavy: theme.deepNavy || '#374043',
-        muted: theme.textLight || '#666666',
+        sandyBrown: theme.sandyBrown || '#7DA5BC',
+        deepNavy: theme.deepNavy || '#462937',
+        muted: theme.textLight || '#7d818c',
         '#BEF264': '#BEF264',
       };
 
