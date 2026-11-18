@@ -35,8 +35,8 @@ function isExactPage(href: string) {
         )}
       </a>
 
-      <!-- Desktop Sağ Bölüm: Sağa Yaslı Menü ve Buton -->
-      <div class="hidden lg:flex items-center justify-end ml-auto flex-shrink-0 h-full">
+      <!-- Desktop Ortalanmış Menü -->
+      <div class="hidden lg:flex items-center justify-center flex-1 h-full mx-6">
         <nav aria-label="Ana Menü" class="header-nav flex items-center text-[14px] font-light text-paletteRichBlack/80 h-full">
           {(headerCfg.navLinks || []).map((link: any) => {
             const active = isRouteActive(link.href);
@@ -70,15 +70,16 @@ function isExactPage(href: string) {
             );
           })}
         </nav>
-
-        {showCtaButton && headerCfg.ctaLabel && (
-          <div class="flex items-center justify-end flex-shrink-0 pl-6">
-            <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect min-h-[2.75rem] py-2.5 px-7 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold">
-              {headerCfg.ctaLabel}
-            </a>
-          </div>
-        )}
       </div>
+
+      <!-- Desktop Sağ Bölüm: İletişim Butonu (Olduğu Yerde Sağda) -->
+      {showCtaButton && headerCfg.ctaLabel && (
+        <div class="hidden lg:flex items-center justify-end flex-shrink-0">
+          <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect min-h-[2.75rem] py-2.5 px-7 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold">
+            {headerCfg.ctaLabel}
+          </a>
+        </div>
+      )}
 
       <!-- Mobil Menü Butonu -->
       <div class="flex lg:hidden items-center justify-end flex-shrink-0">
@@ -117,8 +118,9 @@ function isExactPage(href: string) {
                   {panel.desc}
                 </p>
               </div>
-              <a href={panel.ctaHref} class="btn-rect w-max px-6 py-3 bg-brandAccent text-paletteRichBlack font-semibold hover:bg-brandAccentHover">
-                <span>{panel.ctaText}</span>
+              <a href={panel.ctaHref} class="mega-outline-btn group inline-flex items-center gap-2 w-max px-6 py-2.5 rounded-full border border-white text-white font-medium text-sm transition-all duration-300 hover:bg-white hover:text-paletteRichBlack hover:border-white">
+                <span>{(panel.ctaText || '').replace(/\s*[→↗]\s*$/, '')}</span>
+                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </a>
             </div>
 

@@ -22,6 +22,10 @@ interface Props {
   visible?: boolean;
   showCta?: boolean;
   selectedCtaId?: string;
+  fullWidth?: boolean;
+  precedingBg?: string;
+  followedByFooter?: boolean;
+  followedByForm?: boolean;
 }
 
 const site = getSite() as any;
@@ -33,7 +37,6 @@ const targetId = Astro.props.selectedCtaId || 'default-consulting';
 const card = library.find((c: any) => c.id === targetId) || library[0] || {};
 
 // Helper to resolve value: explicit prop > card from library > site.cta fallback
-// Note: If a field is defined on card as empty string "", it must NOT fall back to site.cta!
 function resolveVal(propVal: any, cardVal: any, fallbackVal: any = '') {
   if (propVal !== undefined && propVal !== null && String(propVal).trim() !== '') {
     return String(propVal).trim();
@@ -52,10 +55,14 @@ const title = resolveVal(Astro.props.title, card.title, cta.title);
 const desc = resolveVal(Astro.props.desc, card.desc, cta.desc);
 const eyebrow = resolveVal(Astro.props.eyebrow, card.eyebrow, cta.eyebrow);
 
-const primaryLabel = resolveVal(Astro.props.primaryLabel, card.primaryLabel, cta.primaryLabel);
+const rawPrimaryLabel = resolveVal(Astro.props.primaryLabel, card.primaryLabel, cta.primaryLabel);
 const primaryHref = resolveVal(Astro.props.primaryHref, card.primaryHref, cta.primaryHref || '#');
-const secondaryLabel = resolveVal(Astro.props.secondaryLabel, card.secondaryLabel, cta.secondaryLabel);
+const rawSecondaryLabel = resolveVal(Astro.props.secondaryLabel, card.secondaryLabel, cta.secondaryLabel);
 const secondaryHref = resolveVal(Astro.props.secondaryHref, card.secondaryHref, cta.secondaryHref || '#');
+
+// Strip trailing arrow if present so we can add animated arrow
+const primaryLabel = rawPrimaryLabel.replace(/\s*[→↗]\s*$/, '');
+const secondaryLabel = rawSecondaryLabel.replace(/\s*[→↗]\s*$/, '');
 
 const hasEyebrow = Boolean(eyebrow && eyebrow.trim());
 const hasTitle = Boolean(title && title.trim());
@@ -64,7 +71,8 @@ const hasPrimary = Boolean(primaryLabel && primaryLabel.trim());
 const hasSecondary = Boolean(secondaryLabel && secondaryLabel.trim());
 const hasButtons = hasPrimary || hasSecondary;
 
-const surface = Astro.props.surface || card.surface || 'platinum';
+// Surface: default to 'mesh' (TheDive animated noise gradient)
+const surface = Astro.props.surface || card.surface || 'mesh';
 const bgColor = Astro.props.bgColor || card.bgColor || '';
 const bgImage = Astro.props.bgImage || card.bgImage || '';
 const bgAlt = Astro.props.bgAlt || card.bgAlt || title || '';
@@ -105,6 +113,12 @@ if (eyebrowColor && !customEyebrowStyle.includes('color')) {
 }
 
 const surfaceMap: Record<string, { card: string; eyebrow: string; title: string; desc: string }> = {
+  mesh: {
+    card: 'cta-mesh-gradient text-paletteRichBlack',
+    eyebrow: 'text-paletteRichBlack/60 font-semibold tracking-wider',
+    title: 'text-paletteRichBlack',
+    desc: 'text-paletteRichBlack/80',
+  },
   platinum: {
     card: 'bg-palettePlatinum',
     eyebrow: 'text-paletteRichBlack/60',
@@ -137,7 +151,7 @@ const surfaceMap: Record<string, { card: string; eyebrow: string; title: string;
   },
 };
 
-const sf = surfaceMap[surface] || surfaceMap.platinum;
+const sf = surfaceMap[surface] || surfaceMap.mesh || surfaceMap.platinum;
 const isDark = surface === 'richBlack' || (bgColor && (bgColor === '#1B1C1D' || bgColor.toLowerCase() === '#111' || bgColor.toLowerCase() === '#000'));
 
 let cardStyle = '';
@@ -145,61 +159,65 @@ if (bgColor) {
   cardStyle += `background-color: ${bgColor};`;
 }
 
-const secBtnClass = isDark
-  ? 'btn-rect min-h-[3rem] py-3 px-8 bg-white hover:bg-palettePlatinum !text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64 shadow-sm transition-colors'
-  : 'btn-rect min-h-[3rem] py-3 px-8 bg-paletteRichBlack hover:bg-black !text-white font-semibold text-center w-full sm:w-auto lg:w-64 shadow-sm transition-colors';
+// Padding kuralları (Dive stili):
+// 1. Öncesindeki section beyaz (#ffffff / siteBg) ise padding-top: 0
+const isPrecedingWhite = Astro.props.precedingBg === '#ffffff' || Astro.props.precedingBg === 'white' || Astro.props.precedingBg === 'siteBg' || Astro.props.precedingBg === undefined;
+// 2. CTA sonrası footer veya form geliyorsa bottom padding: 0
+const isFollowedByFooterOrForm = Astro.props.followedByFooter !== false || Astro.props.followedByForm === true;
+
+const sectionPadClass = `${isPrecedingWhite ? 'pt-0' : 'pt-12 md:pt-16'} ${isFollowedByFooterOrForm ? 'pb-0' : 'pb-16 md:pb-24'}`;
 ---
 
 {isVisible && (
-<section class="section-pad-150 bg-siteBg px-6 md:px-16">
-  <div class="max-w-custom mx-auto">
-    <div class={`${sf.card} p-10 md:p-16 lg:p-20 relative overflow-hidden`} style={cardStyle || undefined}>
-      {bgImage && (
-        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <img 
-            src={bgImage} 
-            alt={bgAlt || title || ''} 
-            class="w-full h-full object-cover object-center opacity-30 filter contrast-125"
-          />
-          <div class={`absolute inset-0 ${isDark ? 'bg-black/40' : 'bg-white/20'}`}></div>
-        </div>
-      )}
-      <div class={`relative z-10 grid grid-cols-1 ${hasButtons ? 'lg:grid-cols-12 gap-10' : 'gap-6'} items-center`}>
-        <div class={`${hasButtons ? 'lg:col-span-8' : 'lg:col-span-12'} space-y-6`}>
-          {hasEyebrow && (
-            <span class={`typo-small font-semibold tracking-widest block ${sf.eyebrow}`} style={customEyebrowStyle || undefined} set:html={formatRich(eyebrow)}></span>
-          )}
-          {hasTitle && (
-            <HeadingTag class={`typo-h2 ${sf.title}`} style={customTitleStyle || undefined} set:html={formatRich(title)}>
-            </HeadingTag>
-          )}
-          {hasDesc && (
-            <p class={`typo-lead font-light ${hasButtons ? 'max-w-2xl' : 'max-w-4xl'} ${sf.desc}`} style={customDescStyle || undefined} set:html={formatRich(desc)}>
-            </p>
-          )}
-        </div>
-
-        {hasButtons && (
-          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-center">
-            {hasPrimary && (
-              <a 
-                href={primaryHref}
-                class="btn-rect min-h-[3rem] py-3 px-8 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold text-center w-full sm:w-auto lg:w-64"
-              >
-                {primaryLabel}
-              </a>
-            )}
-            {hasSecondary && (
-              <a 
-                href={secondaryHref}
-                class={secBtnClass}
-              >
-                {secondaryLabel}
-              </a>
-            )}
-          </div>
+<section class={`w-full relative ${sectionPadClass} overflow-hidden bg-siteBg`}>
+  <div class={`w-full ${sf.card} py-16 md:py-24 px-6 md:px-16 relative overflow-hidden`} style={cardStyle || undefined}>
+    {bgImage && (
+      <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <img 
+          src={bgImage} 
+          alt={bgAlt || title || ''} 
+          class="w-full h-full object-cover object-center opacity-30 filter contrast-125"
+        />
+        <div class={`absolute inset-0 ${isDark ? 'bg-black/40' : 'bg-white/20'}`}></div>
+      </div>
+    )}
+    <div class="max-w-custom mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class={`${hasButtons ? 'lg:col-span-8' : 'lg:col-span-12'} space-y-5`}>
+        {hasEyebrow && (
+          <span class={`typo-small font-semibold tracking-widest block ${sf.eyebrow}`} style={customEyebrowStyle || undefined} set:html={formatRich(eyebrow)}></span>
+        )}
+        {hasTitle && (
+          <HeadingTag class={`typo-h2 ${sf.title}`} style={customTitleStyle || undefined} set:html={formatRich(title)}>
+          </HeadingTag>
+        )}
+        {hasDesc && (
+          <p class={`typo-lead font-light ${hasButtons ? 'max-w-2xl' : 'max-w-4xl'} ${sf.desc}`} style={customDescStyle || undefined} set:html={formatRich(desc)}>
+          </p>
         )}
       </div>
+
+      {hasButtons && (
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end justify-center">
+          {hasPrimary && (
+            <a 
+              href={primaryHref}
+              class={`pill-outline-btn group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max ${isDark ? 'border-white text-white hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white'}`}
+            >
+              <span>{primaryLabel}</span>
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+            </a>
+          )}
+          {hasSecondary && (
+            <a 
+              href={secondaryHref}
+              class={`pill-outline-btn group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border text-sm font-medium transition-all duration-300 w-full sm:w-auto lg:w-max ${isDark ? 'border-white/60 text-white/90 hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack/60 text-paletteRichBlack/90 hover:bg-paletteRichBlack hover:text-white'}`}
+            >
+              <span>{secondaryLabel}</span>
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+            </a>
+          )}
+        </div>
+      )}
     </div>
   </div>
 </section>

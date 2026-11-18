@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AccessibilityWidget from '../components/AccessibilityWidget.astro';
 import { getSite, getTheme, type SeoGeoConfig } from '../lib/content';
 
 const site = getSite();
@@ -37,7 +38,7 @@ const {
 
 const siteUrl = (Astro.url.origin && !Astro.url.origin.includes('localhost') && !Astro.url.origin.includes('127.0.0.1'))
   ? Astro.url.origin
-  : (site.brand?.siteUrl || 'https://cx2222.vercel.app');
+  : (site.brand?.siteUrl || 'https://cxfolks.vercel.app');
 const currentPath = Astro.url.pathname;
 
 const resolvedTitle = seo?.title || title;
@@ -353,5 +354,6 @@ const faviconSvg = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' v
     <slot />
   </main>
   {!hideFooter && <Footer />}
+  <AccessibilityWidget />
 </body>
 </html>

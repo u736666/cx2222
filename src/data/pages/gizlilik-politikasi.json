@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+    "slug": "gizlilik-politikasi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Gizlilik Politikası & KVKK Aydınlatma Metni | CX Folks",
+    "description": "CX Folks kişisel verilerinizin güvenliğine ve gizliliğine önem verir. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki aydınlatma metnimiz.",
+    "schemaType": "WebPage",
+    "keywords": "CX Folks gizlilik politikası, KVKK aydınlatma metni, veri güvenliği",
+    "aiSummary": "CX Folks olarak 6698 sayılı KVKK kapsamında kişisel verilerinizi şeffaflık, güvenilirlik ve kanuni sınırlar dahilinde koruyoruz.",
+    "aboutTopics": [
+      "Kişisel Verilerin Korunması",
+      "Gizlilik Politikası",
+      "KVKK Hakları"
+    ],
+    "keyTakeaways": [
+      "Veri sorumlusu: CX Folks",
+      "KVKK Madde 11 uyarınca yasal haklar",
+      "Güvenli ve şeffaf veri işleme süreçleri"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "ŞEFFAFLIK & GÜVENLİK",
+        "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+        "desc": "CX Folks olarak web sitemizi ziyaret eden kullanıcılarımızın ve iş ortaklarımızın kişisel verilerini 6698 sayılı Kişisel Verilerin Korunması Kanunu'na ('KVKK') tam uyumlu olarak işliyor ve koruyoruz.",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "content-section",
+      "type": "richText",
+      "visible": true,
+      "data": {
+        "title": "Veri Sorumlusu Sıfatıyla Hak ve Yükümlülüklerimiz",
+        "content": "<div class='space-y-8 typo-body font-light text-paletteRichBlack/85'><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>1. Veri Sorumlusu</h3><p>6698 sayılı Kişisel Verilerin Korunması Kanunu ('KVKK') uyarınca, veri sorumlusu sıfatıyla CX Folks ('Şirket'), kişisel verilerinizi hukuka ve dürüstlük kurallarına uygun, doğru ve güncel, belirli, açık ve meşru amaçlar doğrultusunda işlemektedir.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>2. İşlenen Kişisel Veriler ve İşleme Amaçları</h3><p>Web sitemizdeki iletişim ve keşif formu, bülten aboneliği ve CX Maturity Testi üzerinden paylaştığınız ad, soyad, kurumsal unvan, e-posta adresi, telefon numarası ve mesaj içerikleriniz; stratejik danışmanlık taleplerinizi karşılamak, keşif seansları planlamak, bülten içeriklerimizi iletmek ve kanuni yükümlülüklerimizi yerine getirmek amacıyla işlenir.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>3. Kişisel Verilerin Aktarımı</h3><p>Kişisel verileriniz hiçbir koşulda ticari amaçla satılmaz, kiralanmaz veya yetkisiz üçüncü taraflarla paylaşılmaz. Verileriniz yalnızca yasal zorunluluklar gereği yetkili kamu kurum ve kuruluşları ile güvenli teknik barındırma altyapımızı sağlayan hizmet sağlayıcılarımıza KVKK Madde 8 ve 9 kapsamında aktarılabilir.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>4. İlgili Kişinin Hakları (KVKK Madde 11)</h3><p>KVKK'nın 11. maddesi uyarınca veri sahipleri; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, eksik veya yanlış işlenmişse düzeltilmesini ve şartları oluştuğunda silinmesini veya yok edilmesini talep etme haklarına sahiptir.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>5. İletişim ve Başvuru</h3><p>Haklarınıza ilişkin taleplerinizi yazılı olarak veya kayıtlı elektronik posta (KEP) adresi, güvenli elektronik imza veya sistemimizde kayıtlı e-posta adresiniz üzerinden <strong>hello@cxfolks.com</strong> adresine iletebilirsiniz. Başvurularınız en geç 30 gün içinde ücretsiz olarak sonuçlandırılacaktır.</p></div>"
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    }
+  ]
+}

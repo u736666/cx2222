@@ -1,11 +1,11 @@
 {
   "yaklasimimiz": {
     "seo": {
-      "title": "Yaklaşımımız & Manifestomuz | cx2222",
+      "title": "Yaklaşımımız & Manifestomuz | CX Folks",
       "description": "Dönüşüm bir proje değil, yaşayan bir yolculuktur. Yapay zekanın hızını insanın derin sezgisiyle birleştiren insan odaklı CX yaklaşımımız.",
       "schemaType": "AboutPage",
-      "keywords": "insan odaklı CX, yapay zeka ve empati, cx2222 yaklaşımı, cx2222 Northstar",
-      "aiSummary": "cx2222, dönüşümü tek seferlik proje değil yaşayan bir yolculuk olarak ele alır; yapay zekanın hızını insan sezgi ve şefkatiyle dengeleyen 4 temel prensip üzerine çalışır.",
+      "keywords": "insan odaklı CX, yapay zeka ve empati, CX Folks yaklaşımı, CX Folks Northstar",
+      "aiSummary": "CX Folks, dönüşümü tek seferlik proje değil yaşayan bir yolculuk olarak ele alır; yapay zekanın hızını insan sezgi ve şefkatiyle dengeleyen 4 temel prensip üzerine çalışır.",
       "aboutTopics": [
         "İnsan Odaklılık",
         "Yapay Zeka ve Empati Dengesi",
@@ -13,7 +13,7 @@
       ],
       "keyTakeaways": [
         "AI ve insan gücünü tek deneyim matrisinde birleştirme",
-        "Departman silolarını kıran cx2222 Northstar yönetimi"
+        "Departman silolarını kıran CX Folks Northstar yönetimi"
       ],
       "llmsInclude": true
     },
@@ -22,7 +22,7 @@
       "title": "Yapay zeka çağında müşteri deneyimini dönüşürken \"insanı\" odağında tutan kurumlar başarılı olacaklar.",
       "desc": "AI ile güçlendirilmiş müşteri deneyimi ve kurumsal yönetim uzmanlığımızı, yıllara dayanan insan odaklı tasarım tecrübemizle birleştirerek çağımızın ihtiyacı olan kalıcı değeri üretiyoruz.",
       "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80",
-      "imageAlt": "cx2222 Yaklaşımı",
+      "imageAlt": "CX Folks Yaklaşımı",
       "headingTag": "h1"
     },
     "pillars": [
@@ -138,16 +138,16 @@
     "faqSubtitle": "Net Yanıtlar",
     "faqs": [
       {
-        "question": "cx2222'un geleneksel yönetim danışmanlıklarından farkı nedir?",
-        "answer": "Geleneksel danışmanlıklar aylarca süren teorik raporlar ve yüzlerce slaytlık sunumlar hazırlayıp sahayı terk eder. cx2222 ise 'uygulamacı danışmanlık' modelini benimser: Sahaya iner, veriyi gerçek zamanlı aksiyona dönüştüren algoritmalar kurar, ekiplerinizi bizzat eğitir ve ölçülebilir iş sonuçları (memnuniyet artışı, şikayet düşüşü, churn engelleme) elde edilene kadar sizinle birlikte çalışır."
+        "question": "CX Folks'un geleneksel yönetim danışmanlıklarından farkı nedir?",
+        "answer": "Geleneksel danışmanlıklar aylarca süren teorik raporlar ve yüzlerce slaytlık sunumlar hazırlayıp sahayı terk eder. CX Folks ise 'uygulamacı danışmanlık' modelini benimser: Sahaya iner, veriyi gerçek zamanlı aksiyona dönüştüren algoritmalar kurar, ekiplerinizi bizzat eğitir ve ölçülebilir iş sonuçları (memnuniyet artışı, şikayet düşüşü, churn engelleme) elde edilene kadar sizinle birlikte çalışır."
       },
       {
         "question": "Yapay zeka müşteri deneyiminde insan faktörünü tamamen ortadan kaldırır mı?",
-        "answer": "Kesinlikle hayır. cx2222 felsefesine göre yapay zeka insani dokunuşu yok etmek için değil, rutini ve sürtünmeyi ortadan kaldırarak insan çalışanların 'gerçek empati, dinleme ve yaratıcı problem çözme' alanlarına odaklanmasını sağlamak için vardır. En yüksek müşteri bağlılığı, pürüzsüz AI altyapısının üzerine inşa edilmiş sıcak insan temasıyla elde edilir."
+        "answer": "Kesinlikle hayır. CX Folks felsefesine göre yapay zeka insani dokunuşu yok etmek için değil, rutini ve sürtünmeyi ortadan kaldırarak insan çalışanların 'gerçek empati, dinleme ve yaratıcı problem çözme' alanlarına odaklanmasını sağlamak için vardır. En yüksek müşteri bağlılığı, pürüzsüz AI altyapısının üzerine inşa edilmiş sıcak insan temasıyla elde edilir."
       },
       {
-        "question": "cx2222 Northstar ne anlama geliyor ve bir kuruma ne kazandırır?",
-        "answer": "Kurumlarda pazarlama, satış, operasyon, finans ve çağrı merkezi çoğu zaman birbirleriyle çelişen KPI'lara sahiptir. cx2222 Northstar, şirketteki her departmanın başarısını tek bir ortak müşteri deneyimi metriğinde ve ortak prensiplerde birleştiren stratejik bir pusuladır."
+        "question": "CX Folks Northstar ne anlama geliyor ve bir kuruma ne kazandırır?",
+        "answer": "Kurumlarda pazarlama, satış, operasyon, finans ve çağrı merkezi çoğu zaman birbirleriyle çelişen KPI'lara sahiptir. CX Folks Northstar, şirketteki her departmanın başarısını tek bir ortak müşteri deneyimi metriğinde ve ortak prensiplerde birleştiren stratejik bir pusuladır."
       },
       {
         "question": "Dönüşüm projeleri ne kadar sürer?",
@@ -163,7 +163,7 @@
   },
   "nedenSimdi": {
     "seo": {
-      "title": "Neden Şimdi? | cx2222 Dönüşüm Raporu",
+      "title": "Neden Şimdi? | CX Folks Dönüşüm Raporu",
       "description": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor. Reaktif destekten proaktif empatiye geçişin 4 kritik adımı.",
       "schemaType": "WebPage",
       "keywords": "CX dönüşüm raporu, proaktif empati, reaktif destekten proaktif deneyime",
@@ -238,7 +238,7 @@
       },
       {
         "question": "Şirketimizin yapay zeka altyapısı yoksa nereden başlamalıyız?",
-        "answer": "Yapay zeka araçlarını sıfırdan geliştirmek zorunda değilsiniz. cx2222 olarak mevcut CRM ve veri tabanınızın üzerine oturabilen hazır, hafif ve modüler yapay zeka katmanları kuruyor; mimariyi kurumunuza özel hale getiriyoruz."
+        "answer": "Yapay zeka araçlarını sıfırdan geliştirmek zorunda değilsiniz. CX Folks olarak mevcut CRM ve veri tabanınızın üzerine oturabilen hazır, hafif ve modüler yapay zeka katmanları kuruyor; mimariyi kurumunuza özel hale getiriyoruz."
       }
     ],
     "cta": {
@@ -250,11 +250,11 @@
   },
   "cozumlerIndex": {
     "seo": {
-      "title": "Çözümlerimiz & Araç Setimiz | cx2222",
-      "description": "Uçtan uca müşteri deneyimi ve yapay zeka araç setimiz: AI destekli VOC sistemleri, deneyim tasarımı, kurumsal akademi ve cx2222 Maturity Testi.",
+      "title": "Çözümlerimiz & Araç Setimiz | CX Folks",
+      "description": "Uçtan uca müşteri deneyimi ve yapay zeka araç setimiz: AI destekli VOC sistemleri, deneyim tasarımı, kurumsal akademi ve CX Folks Maturity Testi.",
       "schemaType": "CollectionPage",
-      "keywords": "CX çözümleri, AI destekli CX, deneyim tasarımı, cx2222 Akademi, maturity testi",
-      "aiSummary": "cx2222; AI destekli VOC sistemleri, saha etnografisi ve servis tasarımı, cx2222 Akademi kültür atölyeleri ve ücretsiz cx2222 Maturity Testi çözümleri sunar.",
+      "keywords": "CX çözümleri, AI destekli CX, deneyim tasarımı, CX Folks Akademi, maturity testi",
+      "aiSummary": "CX Folks; AI destekli VOC sistemleri, saha etnografisi ve servis tasarımı, CX Folks Akademi kültür atölyeleri ve ücretsiz CX Folks Maturity Testi çözümleri sunar.",
       "aboutTopics": [
         "CX Çözüm Portföyü",
         "AI VOC",
@@ -307,7 +307,7 @@
         "btnLabel": "Detaylı Metodolojiyi İncele →"
       },
       {
-        "title": "cx2222 Akademi & Kültür Dönüşümü",
+        "title": "CX Folks Akademi & Kültür Dönüşümü",
         "tagline": "Çalışan Deneyimi Olmadan Müşteri Deneyimi Yaşayamaz",
         "style": "brandAccent",
         "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
@@ -370,7 +370,7 @@
   },
   "aiDestekliCx": {
     "seo": {
-      "title": "AI Destekli CX & VOC Sistemleri | cx2222",
+      "title": "AI Destekli CX & VOC Sistemleri | CX Folks",
       "description": "Veriyi aksiyona dönüştüren algoritmalar: Anlık duygu analizi, kök neden tespiti, kapalı döngü (closed-loop) geri bildirim mekanizmaları ve churn erken uyarı sistemleri.",
       "schemaType": "Service",
       "keywords": "AI destekli CX, VOC sistemleri, duygu analizi, churn tahmini, closed-loop feedback",
@@ -448,7 +448,7 @@
     "faqs": [
       {
         "question": "AI Destekli CX sistemi mevcut CRM veya santralimizle nasıl entegre olur?",
-        "answer": "Mevcut altyapınızı (Salesforce, HubSpot, Zendesk, Genesys veya şirket içi özel sistemler) terk etmeniz gerekmez. cx2222 AI katmanı, API ve webhook bağlantılarıyla mevcut veri tabanınıza bağlanır; gelen çağrı ses kayıtlarını, canlı sohbet loglarını ve e-postaları gerçek zamanlı analiz ederek mevcut sisteminize zenginleştirilmiş görev ve uyarı kartları gönderir."
+        "answer": "Mevcut altyapınızı (Salesforce, HubSpot, Zendesk, Genesys veya şirket içi özel sistemler) terk etmeniz gerekmez. CX Folks AI katmanı, API ve webhook bağlantılarıyla mevcut veri tabanınıza bağlanır; gelen çağrı ses kayıtlarını, canlı sohbet loglarını ve e-postaları gerçek zamanlı analiz ederek mevcut sisteminize zenginleştirilmiş görev ve uyarı kartları gönderir."
       },
       {
         "question": "Kapalı döngü (Closed-Loop) mekanizması sahada pratikte nasıl çalışır?",
@@ -456,7 +456,7 @@
       },
       {
         "question": "Türkçe dil modelleri ve yerel duygu analizinde doğruluk oranı nedir?",
-        "answer": "cx2222 olarak Türkçenin zengin morfolojik yapısına, ironi ve yerel ifade kalıplarına özel olarak ince ayar (fine-tuning) yapılmış hibrit dil modelleri kullanıyoruz. Genel yabancı motorların %65-70 seviyesinde kaldığı Türkçe sentiment ve kök neden sınıflandırmasında %93+ doğruluk oranına ulaşıyoruz."
+        "answer": "CX Folks olarak Türkçenin zengin morfolojik yapısına, ironi ve yerel ifade kalıplarına özel olarak ince ayar (fine-tuning) yapılmış hibrit dil modelleri kullanıyoruz. Genel yabancı motorların %65-70 seviyesinde kaldığı Türkçe sentiment ve kök neden sınıflandırmasında %93+ doğruluk oranına ulaşıyoruz."
       }
     ],
     "cta": {
@@ -492,7 +492,7 @@
   },
   "deneyimTasarimi": {
     "seo": {
-      "title": "Deneyim Tasarımı & Yolculuk Haritaları (CJM) | cx2222",
+      "title": "Deneyim Tasarımı & Yolculuk Haritaları (CJM) | CX Folks",
       "description": "Masa başında varsayımlarla değil; müşterinin yanında sahada tasarlanan pürüzsüz müşteri yolculukları (CJM), derin etnografi ve servis blueprinting.",
       "schemaType": "Service",
       "keywords": "deneyim tasarımı, müşteri yolculuğu haritası, CJM, saha etnografisi, service blueprint",
@@ -550,12 +550,12 @@
         "answer": "Kapsama bağlı olarak tipik bir odaklı müşteri yolculuğu haritalama projesi 4 ila 6 hafta sürer. Bu süreç; ön veri analizi, 25-30 derinlemesine müşteri mülakatı, saha etnografisi, iç paydaş çalıştayları ve uygulanabilir servis blueprint'lerinin hazırlanmasını içerir."
       },
       {
-        "question": "Geleneksel pazar araştırmaları ile cx2222 saha etnografisi arasındaki fark nedir?",
+        "question": "Geleneksel pazar araştırmaları ile CX Folks saha etnografisi arasındaki fark nedir?",
         "answer": "Pazar araştırmaları genellikle anketlerle 'insanların ne söylediğini' ölçer. Ancak insanlar çoğunlukla hissettikleriyle söyledikleri arasında çelişirler. Etnografik saha araştırması ise müşteriyi gerçek yaşam alanında (evinde, otomobilinde, havalimanında veya şubede) gözlemleyerek 'gerçekte ne yaptıklarını' ve farkında olmadıkları bilinçdışı ihtiyaçlarını yakalar."
       },
       {
         "question": "Çıkan yolculuk haritasının sadece duvarda asılı bir poster olarak kalmasını nasıl engelliyorsunuz?",
-        "answer": "cx2222 haritaları sadece görselleştirme değildir. Her temas noktasındaki kırılma anı, doğrudan ilgili ürün ekibinin sprint backlog'una, operasyonel KPI'lara ve dijital sistem tetikleyicilerine bağlanır."
+        "answer": "CX Folks haritaları sadece görselleştirme değildir. Her temas noktasındaki kırılma anı, doğrudan ilgili ürün ekibinin sprint backlog'una, operasyonel KPI'lara ve dijital sistem tetikleyicilerine bağlanır."
       }
     ],
     "cta": {
@@ -594,7 +594,7 @@
   },
   "projelerIndex": {
     "seo": {
-      "title": "Vaka Analizleri & Başarı Hikayeleri | cx2222",
+      "title": "Vaka Analizleri & Başarı Hikayeleri | CX Folks",
       "description": "Havalimanı operasyonlarından telekoma, bankacılıktan otomotive sahada kanıtlanmış müşteri deneyimi (CX) ve dijital dönüşüm başarı hikayeleri.",
       "schemaType": "CollectionPage",
       "keywords": "CX vaka analizleri, müşteri deneyimi projeleri, başarı hikayeleri",
@@ -637,7 +637,7 @@
   },
   "blogIndex": {
     "seo": {
-      "title": "İçgörüler & Blog | cx2222",
+      "title": "İçgörüler & Blog | CX Folks",
       "description": "Müşteri deneyimi, yapay zeka entegrasyonu, çalışan deneyimi (EX) ve davranışsal tasarım üzerine derinlemesine analizler ve düşünce liderliği.",
       "schemaType": "CollectionPage",
       "keywords": "CX blog, AI ve müşteri deneyimi yazıları, çalışan deneyimi içgörüleri",
@@ -665,11 +665,11 @@
   },
   "iletisim": {
     "seo": {
-      "title": "İletişim & Keşif Görüşmesi | cx2222",
+      "title": "İletişim & Keşif Görüşmesi | CX Folks",
       "description": "Müşteri deneyiminizi birlikte dönüştürelim. 30 dakikalık ücretsiz strateji keşif seansı için bizimle iletişime geçin. Bizimle iletişime geçin.",
       "schemaType": "ContactPage",
-      "keywords": "cx2222 iletişim, CX keşif görüşmesi, CX danışmanlığı",
-      "aiSummary": "30 dakikalık ücretsiz CX strateji keşif seansı için cx2222 ekibiyle iletişime geçin.",
+      "keywords": "CX Folks iletişim, CX keşif görüşmesi, CX danışmanlığı",
+      "aiSummary": "30 dakikalık ücretsiz CX strateji keşif seansı için CX Folks ekibiyle iletişime geçin.",
       "aboutTopics": [
         "CX Danışmanlık İletişimi",
         "Keşif Görüşmesi"
@@ -708,8 +708,8 @@
   },
   "notFound": {
     "seo": {
-      "title": "404 - Sayfa Bulunamadı | cx2222",
-      "description": "Aradığınız sayfa taşınmış veya kaldırılmış olabilir. cx2222 ana sayfasına veya çözümlerimize göz atın.",
+      "title": "404 - Sayfa Bulunamadı | CX Folks",
+      "description": "Aradığınız sayfa taşınmış veya kaldırılmış olabilir. CX Folks ana sayfasına veya çözümlerimize göz atın.",
       "robots": "noindex, nofollow",
       "llmsInclude": false
     },
@@ -723,10 +723,10 @@
   },
   "akademi": {
     "seo": {
-      "title": "cx2222 Akademi & Kurum Kültürü Dönüşümü | cx2222",
+      "title": "CX Folks Akademi & Kurum Kültürü Dönüşümü | CX Folks",
       "description": "Çalışan Deneyimi (EX) olmadan Müşteri Deneyimi (CX) yaşayamaz. LEGO® Serious Play®, kurumsal empati kampları ve ön hat yetkilendirme programları.",
       "schemaType": "Service",
-      "keywords": "cx2222 Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
+      "keywords": "CX Folks Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
       "aiSummary": "Çalışan deneyimi (EX) olmadan müşteri deneyimi yaşayamaz; LEGO Serious Play, empati kampları ve liderlik çalıştayları ile kalıcı kültür inşası.",
       "aboutTopics": [
         "Çalışan Deneyimi (EX)",
@@ -746,7 +746,7 @@
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
       "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
-      "imageAlt": "cx2222 Akademi Liderlik Portresi",
+      "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },
     "capabilities": [
@@ -775,7 +775,7 @@
         "style": "brandAccent"
       }
     ],
-    "faqTitle": "cx2222 Akademi Hakkında Sıkça Sorulanlar",
+    "faqTitle": "CX Folks Akademi Hakkında Sıkça Sorulanlar",
     "faqs": [
       {
         "question": "LEGO® Serious Play® metodolojisi iş dünyasında ve CX tasarımında nasıl kullanılır?",
@@ -820,10 +820,10 @@
   },
   "cxMaturityTesti": {
     "seo": {
-      "title": "CX & AI Maturity Testi | cx2222 Kurumsal Teşhis Aracı",
+      "title": "CX & AI Maturity Testi | CX Folks Kurumsal Teşhis Aracı",
       "description": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini 3 dakikada ölçün. Güçlü yönlerinizi, kör noktalarınızı ve ilk aksiyon önerilerinizi keşfedin.",
       "schemaType": "WebPage",
-      "keywords": "cx2222 Maturity Testi, müşteri deneyimi olgunluk ölçümü, AI olgunluk testi",
+      "keywords": "CX Folks Maturity Testi, müşteri deneyimi olgunluk ölçümü, AI olgunluk testi",
       "aiSummary": "Kurumların strateji, veri, AI entegrasyonu, çalışan yetkilendirmesi ve proaktif empati boyutlarında olgunluk seviyesini 3 dakikada ölçen interaktif teşhis aracı.",
       "aboutTopics": [
         "CX Olgunluk Değerlendirmesi",
@@ -884,7 +884,7 @@
             "points": 3
           },
           {
-            "text": "Tüm ekipler tek bir 'cx2222 Northstar' vizyonu ve ortak deneyim ilkeleri etrafında çalışıyor.",
+            "text": "Tüm ekipler tek bir 'CX Folks Northstar' vizyonu ve ortak deneyim ilkeleri etrafında çalışıyor.",
             "points": 4
           }
         ]
@@ -962,7 +962,7 @@
         "title": "Seviye 1: Başlangıç (Geleneksel & Silo Yapı)",
         "desc": "Kurumunuzda müşteri deneyimi henüz merkezi bir stratejiye bağlanmamış. Veriler raporlarda bekliyor, süreçler departman siloları arasında sıkışmış ve müdahaleler tamamen reaktif.",
         "recommendations": [
-          "• İlk olarak departmanlar arası ortak bir 'cx2222 Northstar' müşteri metriği belirleyin.",
+          "• İlk olarak departmanlar arası ortak bir 'CX Folks Northstar' müşteri metriği belirleyin.",
           "• Şikayetlerin en yoğun olduğu tek bir temas noktasını seçip kök neden analizi yapın.",
           "• Ön hat çalışanlarınıza onay gerektirmeyen küçük bir telafi bütçesi tanımlayın."
         ]
@@ -1002,15 +1002,15 @@
     "faqs": [
       {
         "question": "CX & AI Maturity Testi ne kadar sürer ve ücretli midir?",
-        "answer": "Testi tamamlamak yaklaşık 3-4 dakika sürer ve cx2222 tarafından kurumlara tamamen ücretsiz olarak sunulan bir teşhis aracıdır."
+        "answer": "Testi tamamlamak yaklaşık 3-4 dakika sürer ve CX Folks tarafından kurumlara tamamen ücretsiz olarak sunulan bir teşhis aracıdır."
       },
       {
         "question": "Sonuçlar ve rapor nasıl iletilir?",
         "answer": "Soruları tamamladığınız anda ekranda anlık olgunluk seviyeniz (Seviye 1'den Seviye 4'e), güçlü yönleriniz ve en kritik gelişim alanlarınız görselleştirilir."
       },
       {
-        "question": "Test sonuçlarını cx2222 ekibiyle birlikte değerlendirebilir miyiz?",
-        "answer": "Evet. Test bitiminde çıkan sonuçları 30 dakikalık ücretsiz bir yönetici strateji seansında cx2222 danışmanlarıyla birebir masaya yatırabilirsiniz."
+        "question": "Test sonuçlarını CX Folks ekibiyle birlikte değerlendirebilir miyiz?",
+        "answer": "Evet. Test bitiminde çıkan sonuçları 30 dakikalık ücretsiz bir yönetici strateji seansında CX Folks danışmanlarıyla birebir masaya yatırabilirsiniz."
       }
     ],
     "projectShowcase": {
@@ -1026,11 +1026,11 @@
   },
   "ekibimiz": {
     "seo": {
-      "title": "Ekibimiz | cx2222 Müşteri Deneyimi & Yapay Zeka Ekibi",
+      "title": "Ekibimiz | CX Folks Müşteri Deneyimi & Yapay Zeka Ekibi",
       "description": "Müşteri deneyimi ve yapay zeka dönüşümünde insan sezgisini ve analitik teknolojiyi bir araya getiren multidisipliner uzman ekibimiz.",
       "schemaType": "AboutPage",
-      "keywords": "cx2222 ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
-      "aiSummary": "cx2222, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
+      "keywords": "CX Folks ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
+      "aiSummary": "CX Folks, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
       "llmsInclude": true,
       "aboutTopics": [],
       "keyTakeaways": []
@@ -1105,10 +1105,10 @@
   },
   "cxFolksAkademi": {
     "seo": {
-      "title": "cx2222 Akademi & Kurum Kültürü Dönüşümü | cx2222",
+      "title": "CX Folks Akademi & Kurum Kültürü Dönüşümü | CX Folks",
       "description": "Çalışan Deneyimi (EX) olmadan Müşteri Deneyimi (CX) yaşayamaz. LEGO® Serious Play®, kurumsal empati kampları ve ön hat yetkilendirme programları.",
       "schemaType": "Service",
-      "keywords": "cx2222 Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
+      "keywords": "CX Folks Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
       "aiSummary": "Çalışan deneyimi (EX) olmadan müşteri deneyimi yaşayamaz; LEGO Serious Play, empati kampları ve liderlik çalıştayları ile kalıcı kültür inşası.",
       "aboutTopics": [
         "Çalışan Deneyimi (EX)",
@@ -1128,7 +1128,7 @@
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
       "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
-      "imageAlt": "cx2222 Akademi Liderlik Portresi",
+      "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },
     "capabilities": [
@@ -1157,7 +1157,7 @@
         "style": "brandAccent"
       }
     ],
-    "faqTitle": "cx2222 Akademi Hakkında Sıkça Sorulanlar",
+    "faqTitle": "CX Folks Akademi Hakkında Sıkça Sorulanlar",
     "faqs": [
       {
         "question": "LEGO® Serious Play® metodolojisi iş dünyasında ve CX tasarımında nasıl kullanılır?",
@@ -1198,6 +1198,50 @@
       "showAllLink": true,
       "readMoreText": "Yazıyı Oku →",
       "featuredSlugs": []
+    }
+  },
+  "gizlilikPolitikasi": {
+    "seo": {
+      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni | CX Folks",
+      "description": "CX Folks kişisel verilerinizin güvenliğine ve gizliliğine önem verir. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki aydınlatma metnimiz.",
+      "schemaType": "WebPage",
+      "keywords": "CX Folks gizlilik politikası, KVKK aydınlatma metni, veri güvenliği",
+      "aiSummary": "CX Folks olarak 6698 sayılı KVKK kapsamında kişisel verilerinizi şeffaflık, güvenilirlik ve kanuni sınırlar dahilinde koruyoruz.",
+      "aboutTopics": ["Kişisel Verilerin Korunması", "Gizlilik Politikası", "KVKK Hakları"],
+      "keyTakeaways": ["Veri sorumlusu: CX Folks", "KVKK Madde 11 uyarınca yasal haklar", "Güvenli ve şeffaf veri işleme süreçleri"],
+      "llmsInclude": true
+    },
+    "hero": {
+      "eyebrow": "ŞEFFAFLIK & GÜVENLİK",
+      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+      "desc": "CX Folks olarak web sitemizi ziyaret eden kullanıcılarımızın ve iş ortaklarımızın kişisel verilerini 6698 sayılı Kişisel Verilerin Korunması Kanunu'na ('KVKK') tam uyumlu olarak işliyor ve koruyoruz.",
+      "headingTag": "h1"
+    },
+    "content": {
+      "title": "Veri Sorumlusu Sıfatıyla Hak ve Yükümlülüklerimiz",
+      "text": "1. Veri Sorumlusu\n6698 sayılı Kanun uyarınca 'Veri Sorumlusu', CX Folks şirketidir. Kişisel verileriniz veri sorumlusu güvencesiyle kanuni sınırlar çerçevesinde işlenmektedir.\n\n2. Kişisel Verilerin İşlenme Amaçları\nWeb sitemiz üzerinden paylaştığınız ad, soyad, e-posta, kurum bilgisi ve iletişim formu mesajları; keşif seansı planlama, danışmanlık taleplerinizi yanıtlama, bülten ve içgörü içeriklerimizi ulaştırma ve yasal yükümlülüklerimizi yerine getirme amaçlarıyla sınırlı olarak işlenir.\n\n3. Veri Aktarımı ve Üçüncü Taraflar\nKişisel verileriniz hiçbir koşulda ticari amaçla satılmaz veya kiralanmaz. Yalnızca yasal zorunluluklar gereği yetkili kamu kurumlarına ve teknik barındırma/iletişim altyapısını sağlayan güvenilir servis sağlayıcılarımıza kanuni sınırlar çerçevesinde aktarılabilir.\n\n4. Veri Sahibinin Hakları (KVKK Madde 11)\nKVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.\n\n5. Başvuru ve İletişim\nHaklarınıza ilişkin taleplerinizi hello@cxfolks.com e-posta adresimize yazılı olarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde yasal mevzuata uygun şekilde sonuçlandırılacaktır."
+    }
+  },
+  "cerezPolitikasi": {
+    "seo": {
+      "title": "Çerez Politikası (Cookie Policy) | CX Folks",
+      "description": "CX Folks web sitesinde kullanılan çerez türleri, kullanım amaçları ve çerez tercihlerinizi nasıl yönetebileceğinize ilişkin bilgilendirme.",
+      "schemaType": "WebPage",
+      "keywords": "CX Folks çerez politikası, cookie policy, web çerezleri",
+      "aiSummary": "Web sitemizin güvenli, hızlı ve kullanıcı dostu çalışması için kullanılan çerez türleri ve yönetim yöntemleri hakkında detaylı bilgi.",
+      "aboutTopics": ["Çerez Politikası", "Kullanıcı Tercihleri", "Web Sitesi Güvenliği"],
+      "keyTakeaways": ["Zorunlu ve analitik çerez kullanımı", "Kişiselleştirilmiş deneyim ve performans takibi", "Tarayıcı üzerinden çerez yönetimi kılavuzu"],
+      "llmsInclude": true
+    },
+    "hero": {
+      "eyebrow": "ŞEFFAFLIK & PERFORMANS",
+      "title": "Çerez Politikası (Cookie Policy)",
+      "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek amacıyla çerezlerden ('cookies') faydalanmaktayız.",
+      "headingTag": "h1"
+    },
+    "content": {
+      "title": "Kullandığımız Çerezler ve Tercihleriniz",
+      "text": "1. Çerez Nedir?\nÇerezler, ziyaret ettiğiniz web siteleri tarafından tarayıcınız aracılığıyla cihazınıza veya ağ sunucusuna depolanan küçük metin dosyalarıdır. Sitemizin düzgün çalışması, tercihlerin hatırlanması ve genel site performansının analiz edilmesi için kullanılırlar.\n\n2. Sitemizde Kullanılan Çerez Türleri\n• Zorunlu Çerezler: Web sitesinin temel fonksiyonlarının (sayfa navigasyonu, güvenlik, form doğrulamaları ve erişilebilirlik tercihleri) çalışması için zorunludur.\n• Performans ve Analitik Çerezleri: Ziyaretçilerin siteyi nasıl kullandığını anonim olarak anlamamıza ve kullanıcı yolculuklarını optimize etmemize yardımcı olur.\n• İşlevsellik Çerezleri: Erişilebilirlik menüsündeki font boyutu ve kontrast tercihleriniz gibi kişisel ayarlarınızı tarayıcınızda hatırlamak için kullanılır.\n\n3. Çerez Tercihlerini Nasıl Yönetebilirsiniz?\nÇerez kullanımını dilediğiniz zaman tarayıcı ayarlarınızdan kısıtlayabilir veya tamamen devre dışı bırakabilirsiniz. Ancak zorunlu çerezlerin kapatılması web sitemizdeki bazı etkileşimli özelliklerin düzgün çalışmamasına neden olabilir.\n\nGoogle Chrome, Mozilla Firefox, Safari ve Microsoft Edge tarayıcılarının ayarlar menüsünden 'Gizlilik ve Güvenlik' başlığı altından çerez tercihlerinizi kolayca güncelleyebilirsiniz."
     }
   }
 }

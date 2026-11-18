@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Çerez Politikası (Cookie Policy)",
+    "slug": "cerez-politikasi",
+    "status": "yayında"
+  },
+  "seo": {
+    "title": "Çerez Politikası (Cookie Policy) | CX Folks",
+    "description": "CX Folks web sitesinde kullanılan çerez türleri, kullanım amaçları ve çerez tercihlerinizi nasıl yönetebileceğinize ilişkin bilgilendirme.",
+    "schemaType": "WebPage",
+    "keywords": "CX Folks çerez politikası, cookie policy, web çerezleri",
+    "aiSummary": "Web sitemizin güvenli, hızlı ve kullanıcı dostu çalışması için kullanılan çerez türleri ve yönetim yöntemleri hakkında detaylı bilgi.",
+    "aboutTopics": [
+      "Çerez Politikası",
+      "Kullanıcı Tercihleri",
+      "Web Sitesi Güvenliği"
+    ],
+    "keyTakeaways": [
+      "Zorunlu ve analitik çerez kullanımı",
+      "Kişiselleştirilmiş deneyim ve performans takibi",
+      "Tarayıcı üzerinden çerez yönetimi kılavuzu"
+    ],
+    "llmsInclude": true
+  },
+  "status": "yayında",
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "data": {
+        "eyebrow": "ŞEFFAFLIK & PERFORMANS",
+        "title": "Çerez Politikası (Cookie Policy)",
+        "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek amacıyla çerezlerden ('cookies') faydalanmaktayız.",
+        "headingTag": "h1"
+      },
+      "style": {
+        "surface": "platinum"
+      }
+    },
+    {
+      "id": "content-section",
+      "type": "richText",
+      "visible": true,
+      "data": {
+        "title": "Kullandığımız Çerezler ve Tercihleriniz",
+        "content": "<div class='space-y-8 typo-body font-light text-paletteRichBlack/85'><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>1. Çerez (Cookie) Nedir?</h3><p>Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler web sitesinin düzgün ve güvenli çalışmasını sağlar, oturum tercihlerinizi hatırlar ve site performansının ölçülmesine katkıda bulunur.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>2. Sitemizde Kullanılan Çerez Kategorileri</h3><ul class='list-disc pl-5 space-y-2'><li><strong>Zorunlu Çerezler:</strong> Web sitemizin güvenli çalışması, sayfa geçişleri, form gönderimleri ve temel erişilebilirlik ayarlarının korunması için teknik olarak gereklidir. Bu çerezler kapatılamaz.</li><li><strong>İşlevsellik Çerezleri:</strong> Sağ alttaki Erişilebilirlik Menüsü'nde seçtiğiniz font boyutu ölçeği ve yüksek kontrast modu gibi kişiselleştirilmiş ayarların bir sonraki ziyaretinizde hatırlanmasını sağlar.</li><li><strong>Performans ve Analitik Çerezleri:</strong> Ziyaretçilerin sayfalar arasındaki akışını anonim istatistiklerle anlamamıza ve kullanıcı deneyimini sürekli iyileştirmemize yardımcı olur.</li></ul></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>3. Çerez Tercihlerini Yönetme ve Kapatma</h3><p>Tarayıcınızın ayarlarını değiştirerek çerez tercihlerinizi dilediğiniz zaman kişiselleştirebilir, mevcut çerezleri silebilir veya çerez kullanımını engelleyebilirsiniz. Ancak zorunlu çerezlerin engellenmesi durumunda web sitemizin bazı fonksiyonları beklenen şekilde çalışmayabilir.</p><p>Chrome, Safari, Firefox ve Edge tarayıcılarının <em>'Ayarlar &gt; Gizlilik ve Güvenlik &gt; Çerezler'</em> sekmesinden tercihlerinizi kolayca güncelleyebilirsiniz.</p></section><section class='space-y-3'><h3 class='text-xl font-semibold text-paletteRichBlack'>4. İletişim</h3><p>Çerez Politikamıza ilişkin tüm soru ve önerileriniz için <strong>hello@cxfolks.com</strong> adresinden bize dilediğiniz zaman ulaşabilirsiniz.</p></div>"
+      },
+      "style": {
+        "surface": "siteBg"
+      }
+    }
+  ]
+}

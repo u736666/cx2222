@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "cx2222 Maturity Testi",
+    "title": "CX Folks Maturity Testi",
     "slug": "cozumler/cx-maturity-testi",
     "status": "yayında"
   },
   "seo": {
-    "title": "CX & AI Maturity Testi | cx2222 Kurumsal Teşhis Aracı",
+    "title": "CX & AI Maturity Testi | CX Folks Kurumsal Teşhis Aracı",
     "description": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini 3 dakikada ölçün. Güçlü yönlerinizi, kör noktalarınızı ve ilk aksiyon önerilerinizi keşfedin.",
     "schemaType": "WebPage",
-    "keywords": "cx2222 Maturity Testi, müşteri deneyimi olgunluk ölçümü, AI olgunluk testi",
+    "keywords": "CX Folks Maturity Testi, müşteri deneyimi olgunluk ölçümü, AI olgunluk testi",
     "aiSummary": "Kurumların strateji, veri, AI entegrasyonu, çalışan yetkilendirmesi ve proaktif empati boyutlarında olgunluk seviyesini 3 dakikada ölçen interaktif teşhis aracı.",
     "aboutTopics": [
       "CX Olgunluk Değerlendirmesi",
@@ -84,7 +84,7 @@
                 "points": 3
               },
               {
-                "text": "Tüm ekipler tek bir 'cx2222 Northstar' vizyonu ve ortak deneyim ilkeleri etrafında çalışıyor.",
+                "text": "Tüm ekipler tek bir 'CX Folks Northstar' vizyonu ve ortak deneyim ilkeleri etrafında çalışıyor.",
                 "points": 4
               }
             ]
@@ -162,7 +162,7 @@
             "title": "Seviye 1: Başlangıç (Geleneksel & Silo Yapı)",
             "desc": "Kurumunuzda müşteri deneyimi henüz merkezi bir stratejiye bağlanmamış. Veriler raporlarda bekliyor, süreçler departman siloları arasında sıkışmış ve müdahaleler tamamen reaktif.",
             "recommendations": [
-              "• İlk olarak departmanlar arası ortak bir 'cx2222 Northstar' müşteri metriği belirleyin.",
+              "• İlk olarak departmanlar arası ortak bir 'CX Folks Northstar' müşteri metriği belirleyin.",
               "• Şikayetlerin en yoğun olduğu tek bir temas noktasını seçip kök neden analizi yapın.",
               "• Ön hat çalışanlarınıza onay gerektirmeyen küçük bir telafi bütçesi tanımlayın."
             ]
@@ -249,15 +249,15 @@
         "items": [
           {
             "question": "CX & AI Maturity Testi ne kadar sürer ve ücretli midir?",
-            "answer": "Testi tamamlamak yaklaşık 3-4 dakika sürer ve cx2222 tarafından kurumlara tamamen ücretsiz olarak sunulan bir teşhis aracıdır."
+            "answer": "Testi tamamlamak yaklaşık 3-4 dakika sürer ve CX Folks tarafından kurumlara tamamen ücretsiz olarak sunulan bir teşhis aracıdır."
           },
           {
             "question": "Sonuçlar ve rapor nasıl iletilir?",
             "answer": "Soruları tamamladığınız anda ekranda anlık olgunluk seviyeniz (Seviye 1'den Seviye 4'e), güçlü yönleriniz ve en kritik gelişim alanlarınız görselleştirilir."
           },
           {
-            "question": "Test sonuçlarını cx2222 ekibiyle birlikte değerlendirebilir miyiz?",
-            "answer": "Evet. Test bitiminde çıkan sonuçları 30 dakikalık ücretsiz bir yönetici strateji seansında cx2222 danışmanlarıyla birebir masaya yatırabilirsiniz."
+            "question": "Test sonuçlarını CX Folks ekibiyle birlikte değerlendirebilir miyiz?",
+            "answer": "Evet. Test bitiminde çıkan sonuçları 30 dakikalık ücretsiz bir yönetici strateji seansında CX Folks danışmanlarıyla birebir masaya yatırabilirsiniz."
           }
         ]
       },

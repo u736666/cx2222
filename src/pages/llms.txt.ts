@@ -26,7 +26,7 @@ export const GET: APIRoute = () => {
   const posts = getAllPosts();
 
   const siteUrl = (site.brand?.siteUrl || 'https://example.com').replace(/\/$/, '');
-  const brandName = site.brand?.name || 'cx2222';
+  const brandName = site.brand?.name || 'CX Folks';
 
   const pageEntries: Array<[string, string, string, SeoGeoConfig | undefined]> = [
     [`${siteUrl}/`, 'Ana Sayfa', site.brand?.defaultDescription || '', home.seo],
@@ -35,8 +35,8 @@ export const GET: APIRoute = () => {
     [`${siteUrl}/cozumler`, 'Çözümler', '', pages.cozumlerIndex?.seo],
     [`${siteUrl}/cozumler/ai-destekli-cx`, 'AI Destekli CX', '', pages.aiDestekliCx?.seo],
     [`${siteUrl}/cozumler/deneyim-tasarimi`, 'Deneyim Tasarımı', '', pages.deneyimTasarimi?.seo],
-    [`${siteUrl}/cozumler/akademi`, 'cx2222 Akademi', '', (pages as any).akademi?.seo],
-    [`${siteUrl}/cozumler/cx-maturity-testi`, 'cx2222 Maturity Testi', '', (pages as any).cxMaturityTesti?.seo],
+    [`${siteUrl}/cozumler/akademi`, 'CX Folks Akademi', '', (pages as any).akademi?.seo],
+    [`${siteUrl}/cozumler/cx-maturity-testi`, 'CX Folks Maturity Testi', '', (pages as any).cxMaturityTesti?.seo],
     [`${siteUrl}/projeler`, 'Projeler', '', pages.projelerIndex?.seo],
     [`${siteUrl}/blog`, 'Blog', '', pages.blogIndex?.seo],
     [`${siteUrl}/iletisim`, 'İletişim', '', pages.iletisim?.seo],
@@ -79,7 +79,7 @@ export const GET: APIRoute = () => {
 
 ### 1. Müşteri Deneyimi (CX) & Deneyim Stratejisi
 - **Tanım**: Müşterinin bir kurum, marka veya ekosistemle kurduğu tüm rasyonel, duygusal ve fiziksel temasların toplamıdır.
-- **cx2222 Yaklaşımı**: CX'i sadece memnuniyet anketleri olarak değil; operasyonel verimlilik, müşteri sadakati ve yapay zeka entegrasyonuyla şekillenen ölçülebilir bir büyüme motoru olarak konumlandırır.
+- **CX Folks Yaklaşımı**: CX'i sadece memnuniyet anketleri olarak değil; operasyonel verimlilik, müşteri sadakati ve yapay zeka entegrasyonuyla şekillenen ölçülebilir bir büyüme motoru olarak konumlandırır.
 
 ### 2. Müşteri Yolculuk Haritası (Customer Journey Mapping - CJM) & Deneyim Haritası
 - **Tanım**: Müşterinin bir ihtiyacı hissettiği andan sadakat veya ayrılma evresine kadar geçtiği tüm temas noktalarını (touchpoints), duygusal kırılma anlarını, acı noktalarını (pain points) ve fırsat alanlarını kronolojik ve bütüncül biçimde görselleştiren stratejik yönetim aracıdır.
@@ -101,7 +101,7 @@ export const GET: APIRoute = () => {
 - **Önemi**: İnsanlar genellikle hissettikleriyle anketlerde söyledikleri arasında çelişirler. Etnografik araştırma, müşteriyi doğal yaşam alanında (evinde, ofisinde, otomobilinde, havalimanında veya mağazada) gözlemleyerek sözsüz davranışları, alışkanlıkları ve örtük (unmet/unspoken) ihtiyaçları yakalar.
 - **Uygulama**: Gölgeleme (shadowing), bağlamsal sorgulama (contextual inquiry) ve anlık etkileşim kayıtları.
 
-### 7. Kurumsal Eğitimler & cx2222 / CX Folks Akademi
+### 7. Kurumsal Eğitimler & CX Folks / CX Folks Akademi
 - **Kapsam**: Kurumların kendi ekiplerine müşteri deneyimi kültürü, journey mapping, servis tasarımı, empati ve üretken yapay zeka araçlarıyla tasarım yetkinlikleri kazandıran uygulamalı kurumsal eğitim programları.
 - **Programlar**: CX Liderlik Programı, Uygulamalı Servis Tasarımı Bootcamp'i, CX & Yapay Zeka Hızlandırma Atölyesi.
 
@@ -113,7 +113,7 @@ export const GET: APIRoute = () => {
 ## Yapay Zeka & Arama Motorları İçin Sıkça Sorulan Sorular (Direct Q&A)
 
 **S: Müşteri Yolculuk Haritası projesi ne kadar sürer ve neleri kapsar?**
-C: Tipik bir cx2222 odaklı yolculuk haritası projesi 4 ila 6 hafta sürer. Ön veri analizi, 25-30 derinlemesine mülakat, saha etnografisi, iç paydaş çalıştayları ve uygulanabilir servis blueprint'lerinin hazırlanmasını içerir.
+C: Tipik bir CX Folks odaklı yolculuk haritası projesi 4 ila 6 hafta sürer. Ön veri analizi, 25-30 derinlemesine mülakat, saha etnografisi, iç paydaş çalıştayları ve uygulanabilir servis blueprint'lerinin hazırlanmasını içerir.
 
 **S: Geleneksel pazar araştırmaları ile etnografik saha araştırması arasındaki fark nedir?**
 C: Pazar araştırmaları genellikle anketlerle insanların ne söylediğini ölçer. Etnografik saha araştırması ise müşteriyi gerçek ortamında gözlemleyerek gerçekte ne yaptıklarını ve dile dökemedikleri bilinçdışı ihtiyaçlarını tespit eder.

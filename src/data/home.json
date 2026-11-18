@@ -1,15 +1,15 @@
 {
   "seo": {
-    "title": "cx2222 | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
+    "title": "CX Folks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
     "description": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
-    "keywords": "müşteri deneyimi, CX danışmanlığı, AI destekli CX, deneyim tasarımı, Voice of Customer, cx2222 Akademi",
+    "keywords": "müşteri deneyimi, CX danışmanlığı, AI destekli CX, deneyim tasarımı, Voice of Customer, CX Folks Akademi",
     "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     "schemaType": "WebPage",
-    "aiSummary": "cx2222, kurumların yapay zeka hızını insan sezgi ve empatisiyle birleştirerek ölçülebilir müşteri deneyimi (CX) dönüşümü gerçekleştiren danışmanlık ve tasarım stüdyosudur.",
+    "aiSummary": "CX Folks, kurumların yapay zeka hızını insan sezgi ve empatisiyle birleştirerek ölçülebilir müşteri deneyimi (CX) dönüşümü gerçekleştiren danışmanlık ve tasarım stüdyosudur.",
     "keyTakeaways": [
       "AI hızı ile insan empatisini birleştiren hibrit CX dönüşüm mimarisi",
       "Saha etnografisi, dijital deneyim tasarımı ve proaktif VOC sistemleri",
-      "cx2222 Akademi ve LEGO Serious Play ile kalıcı organizasyon kültürü"
+      "CX Folks Akademi ve LEGO Serious Play ile kalıcı organizasyon kültürü"
     ],
     "aboutTopics": [
       "Müşteri Deneyimi Tasarımı",
@@ -29,7 +29,7 @@
       "link": "/yaklasimimiz",
       "cta": "Yaklaşımımızı İnceleyin →",
       "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.png",
-      "alt": "Hero 1 - cx2222",
+      "alt": "Hero 1 - CX Folks",
       "titleTag": "h1"
     },
     {
@@ -336,7 +336,7 @@
         }
       ],
       "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.jpg",
-      "imageAlt": "cx2222 Akademi Liderlik Portresi",
+      "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "title": "AKADEMİ",
       "subtitle": "Kurum Kültürü & Yetkinlik Dönüşümü",
       "secondaryBtnLabel": "Görüşelim",
@@ -408,13 +408,13 @@
     "titleColor": "white"
   },
   "cta": {
-    "visible": false,
-    "selectedCtaId": "default-consulting",
-    "surface": "platinum",
-    "title": "",
-    "desc": "",
-    "primaryLabel": "",
-    "primaryHref": "",
+    "visible": true,
+    "selectedCtaId": "newsletter-dive",
+    "surface": "mesh",
+    "title": "CX Folks'ta yeni yaklaşımlar sürekli gelişiyor.\nBültenimiz ile her zaman güncel kalın.",
+    "desc": "Yapay zeka çağında insan odaklı deneyim trendleri, vaka analizleri ve stratejik içgörüler her ay e-posta kutunuzda.",
+    "primaryLabel": "Abone Olun →",
+    "primaryHref": "/iletisim",
     "secondaryLabel": "",
     "secondaryHref": ""
   }

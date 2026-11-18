@@ -5,7 +5,7 @@ export const GET: APIRoute = ({ url }) => {
   const site = getSite() as any;
   const siteUrl = (url?.origin && !url.origin.includes('localhost') && !url.origin.includes('127.0.0.1'))
     ? url.origin
-    : (site.brand?.siteUrl || 'https://cx2222.vercel.app').replace(/\/$/, '');
+    : (site.brand?.siteUrl || 'https://cxfolks.vercel.app').replace(/\/$/, '');
   const isNoIndex = site.brand?.noindex === true;
 
   if (isNoIndex) {

@@ -5,11 +5,11 @@
     "status": "yayında"
   },
   "seo": {
-    "title": "Yaklaşımımız & Manifestomuz | cx2222",
+    "title": "Yaklaşımımız & Manifestomuz | CX Folks",
     "description": "Dönüşüm bir proje değil, yaşayan bir yolculuktur. Yapay zekanın hızını insanın derin sezgisiyle birleştiren insan odaklı CX yaklaşımımız.",
     "schemaType": "AboutPage",
-    "keywords": "insan odaklı CX, yapay zeka ve empati, cx2222 yaklaşımı, cx2222 Northstar",
-    "aiSummary": "cx2222, dönüşümü tek seferlik proje değil yaşayan bir yolculuk olarak ele alır; yapay zekanın hızını insan sezgi ve şefkatiyle dengeleyen 4 temel prensip üzerine çalışır.",
+    "keywords": "insan odaklı CX, yapay zeka ve empati, CX Folks yaklaşımı, CX Folks Northstar",
+    "aiSummary": "CX Folks, dönüşümü tek seferlik proje değil yaşayan bir yolculuk olarak ele alır; yapay zekanın hızını insan sezgi ve şefkatiyle dengeleyen 4 temel prensip üzerine çalışır.",
     "aboutTopics": [
       "İnsan Odaklılık",
       "Yapay Zeka ve Empati Dengesi",
@@ -17,7 +17,7 @@
     ],
     "keyTakeaways": [
       "AI ve insan gücünü tek deneyim matrisinde birleştirme",
-      "Departman silolarını kıran cx2222 Northstar yönetimi"
+      "Departman silolarını kıran CX Folks Northstar yönetimi"
     ],
     "llmsInclude": true
   },
@@ -33,7 +33,7 @@
           "title": "Yapay zeka çağında müşteri deneyimini dönüşürken \"insanı\" odağında tutan kurumlar başarılı olacaklar.",
           "desc": "AI ile güçlendirilmiş müşteri deneyimi ve kurumsal yönetim uzmanlığımızı, yıllara dayanan insan odaklı tasarım tecrübemizle birleştirerek çağımızın ihtiyacı olan kalıcı değeri üretiyoruz.",
           "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80",
-          "imageAlt": "cx2222 Yaklaşımı",
+          "imageAlt": "CX Folks Yaklaşımı",
           "headingTag": "h1"
         },
         "pillars": [
@@ -159,16 +159,16 @@
         "subtitle": "Net Yanıtlar",
         "items": [
           {
-            "question": "cx2222'un geleneksel yönetim danışmanlıklarından farkı nedir?",
-            "answer": "Geleneksel danışmanlıklar aylarca süren teorik raporlar ve yüzlerce slaytlık sunumlar hazırlayıp sahayı terk eder. cx2222 ise 'uygulamacı danışmanlık' modelini benimser: Sahaya iner, veriyi gerçek zamanlı aksiyona dönüştüren algoritmalar kurar, ekiplerinizi bizzat eğitir ve ölçülebilir iş sonuçları (memnuniyet artışı, şikayet düşüşü, churn engelleme) elde edilene kadar sizinle birlikte çalışır."
+            "question": "CX Folks'un geleneksel yönetim danışmanlıklarından farkı nedir?",
+            "answer": "Geleneksel danışmanlıklar aylarca süren teorik raporlar ve yüzlerce slaytlık sunumlar hazırlayıp sahayı terk eder. CX Folks ise 'uygulamacı danışmanlık' modelini benimser: Sahaya iner, veriyi gerçek zamanlı aksiyona dönüştüren algoritmalar kurar, ekiplerinizi bizzat eğitir ve ölçülebilir iş sonuçları (memnuniyet artışı, şikayet düşüşü, churn engelleme) elde edilene kadar sizinle birlikte çalışır."
           },
           {
             "question": "Yapay zeka müşteri deneyiminde insan faktörünü tamamen ortadan kaldırır mı?",
-            "answer": "Kesinlikle hayır. cx2222 felsefesine göre yapay zeka insani dokunuşu yok etmek için değil, rutini ve sürtünmeyi ortadan kaldırarak insan çalışanların 'gerçek empati, dinleme ve yaratıcı problem çözme' alanlarına odaklanmasını sağlamak için vardır. En yüksek müşteri bağlılığı, pürüzsüz AI altyapısının üzerine inşa edilmiş sıcak insan temasıyla elde edilir."
+            "answer": "Kesinlikle hayır. CX Folks felsefesine göre yapay zeka insani dokunuşu yok etmek için değil, rutini ve sürtünmeyi ortadan kaldırarak insan çalışanların 'gerçek empati, dinleme ve yaratıcı problem çözme' alanlarına odaklanmasını sağlamak için vardır. En yüksek müşteri bağlılığı, pürüzsüz AI altyapısının üzerine inşa edilmiş sıcak insan temasıyla elde edilir."
           },
           {
-            "question": "cx2222 Northstar ne anlama geliyor ve bir kuruma ne kazandırır?",
-            "answer": "Kurumlarda pazarlama, satış, operasyon, finans ve çağrı merkezi çoğu zaman birbirleriyle çelişen KPI'lara sahiptir. cx2222 Northstar, şirketteki her departmanın başarısını tek bir ortak müşteri deneyimi metriğinde ve ortak prensiplerde birleştiren stratejik bir pusuladır."
+            "question": "CX Folks Northstar ne anlama geliyor ve bir kuruma ne kazandırır?",
+            "answer": "Kurumlarda pazarlama, satış, operasyon, finans ve çağrı merkezi çoğu zaman birbirleriyle çelişen KPI'lara sahiptir. CX Folks Northstar, şirketteki her departmanın başarısını tek bir ortak müşteri deneyimi metriğinde ve ortak prensiplerde birleştiren stratejik bir pusuladır."
           },
           {
             "question": "Dönüşüm projeleri ne kadar sürer?",

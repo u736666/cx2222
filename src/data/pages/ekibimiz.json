@@ -5,11 +5,11 @@
     "status": "yayında"
   },
   "seo": {
-    "title": "Ekibimiz | cx2222 Müşteri Deneyimi & Yapay Zeka Ekibi",
+    "title": "Ekibimiz | CX Folks Müşteri Deneyimi & Yapay Zeka Ekibi",
     "description": "Müşteri deneyimi ve yapay zeka dönüşümünde insan sezgisini ve analitik teknolojiyi bir araya getiren multidisipliner uzman ekibimiz.",
     "schemaType": "AboutPage",
-    "keywords": "cx2222 ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
-    "aiSummary": "cx2222, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
+    "keywords": "CX Folks ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
+    "aiSummary": "CX Folks, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
     "llmsInclude": true,
     "aboutTopics": [],
     "keyTakeaways": []
@@ -81,11 +81,11 @@
           }
         ],
         "seo": {
-          "title": "Ekibimiz | cx2222 Müşteri Deneyimi & Yapay Zeka Ekibi",
+          "title": "Ekibimiz | CX Folks Müşteri Deneyimi & Yapay Zeka Ekibi",
           "description": "Müşteri deneyimi ve yapay zeka dönüşümünde insan sezgisini ve analitik teknolojiyi bir araya getiren multidisipliner uzman ekibimiz.",
           "schemaType": "AboutPage",
-          "keywords": "cx2222 ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
-          "aiSummary": "cx2222, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
+          "keywords": "CX Folks ekibi, müşteri deneyimi uzmanları, yapay zeka ve CX danışmanları, servis tasarımcıları",
+          "aiSummary": "CX Folks, yapay zeka ve insan odaklı müşteri deneyimi alanında çok disiplinli uzmanlardan oluşan danışmanlık ve tasarım ekibidir.",
           "llmsInclude": true,
           "aboutTopics": [],
           "keyTakeaways": []

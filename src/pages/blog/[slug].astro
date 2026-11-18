@@ -54,7 +54,7 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
 ---
 
 <Layout
-  title={post.seo?.title || `${post.title} | cx2222 Blog`}
+  title={post.seo?.title || `${post.title} | CX Folks Blog`}
   description={post.seo?.description || post.desc}
   seo={post.seo}
   image={post.heroImage || post.image}
@@ -114,7 +114,7 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
     </div>
   </section>
 
-  <article class="section-pad-150 bg-siteBg text-paletteRichBlack px-6 md:px-16">
+  <article class="pt-16 pb-24 md:pb-36 bg-siteBg text-paletteRichBlack px-6 md:px-16">
     <div class="max-w-3xl mx-auto space-y-8 typo-body text-paletteRichBlack/80 font-light">
       
       {post.content && (

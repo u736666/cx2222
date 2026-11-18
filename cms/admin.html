@@ -1435,7 +1435,7 @@
           </div>
           <div class="field" style="grid-column: 1 / -1;">
             <label for="vercel-url">Vercel Canlı Yayın Adresi</label>
-            <input type="text" class="input" id="vercel-url" value="https://cx2222.vercel.app" />
+            <input type="text" class="input" id="vercel-url" value="https://cxfolks.vercel.app" />
           </div>
         </div>
         <div class="field" style="margin-top: 8px;">
@@ -1741,12 +1741,13 @@
       const rb = theme.richBlack || '#351E28';
       const bg = theme.siteBg || '#FFFFFF';
       return [
+        { value: 'mesh', label: '✨ TheDive Animatic Noised Mesh Zemin (Hareketli Işıltı & Noise)' },
         { value: 'platinum', label: `1. Açık Zemin (${getExactColorName(pl)} — ${pl})` },
         { value: 'dustGrey', label: `2. Nötr Zemin (${getExactColorName(dg)} — ${dg})` },
         { value: 'brandAccent', label: `1. Ana Vurgu (${getExactColorName(ba)} — ${ba})` },
         { value: 'richBlack', label: `Koyu Zemin (${getExactColorName(rb)} — ${rb})` },
         { value: 'siteBg', label: `Site Arka Planı (${getExactColorName(bg)} — ${bg})` },
-        { value: '#BEF264', label: `Açık Lime (${getExactColorName('#BEF264')} — #BEF264)` },
+        { value: '#BEF264', label: `Lime Vurgu (${getExactColorName('#BEF264')} — #BEF264)` },
       ];
     }
 
@@ -3231,8 +3232,8 @@
 
       // 3 CTA Cards from Library
       const ctaLib = (STATE.site && STATE.site.ctaLibrary) || [
-        { id: 'default-consulting', name: 'Genel Danışmanlık & Ön Görüşme (Birlikte Başlayalım)', eyebrow: 'Birlikte Başlayalım', title: 'Nereden başlayacağınızı birlikte belirleyelim', desc: '30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.', primaryLabel: 'Görüşme Planlayın →', primaryHref: '/iletisim', secondaryLabel: 'Maturity Testi →', secondaryHref: '/cozumler/cx-maturity-testi', surface: 'platinum', bgImage: '' },
-        { id: 'academy-training', name: 'Akademi & Kurumsal Eğitim (cx2222 Akademi)', eyebrow: 'cx2222 Akademi', title: 'Ekibinizin CX Yetkinliklerini Geliştirin', desc: 'Yapay zeka ve müşteri deneyimi alanında kurumunuza özel tasarlanan eğitim programları ve atölyeler.', primaryLabel: 'Akademi Programını İnceleyin →', primaryHref: '/cozumler/akademi', secondaryLabel: 'İletişime Geçin →', secondaryHref: '/iletisim', surface: 'platinum', bgImage: '' },
+        { id: 'default-consulting', name: 'Genel Danışmanlık & Ön Görüşme (Birlikte Başlayalım)', eyebrow: 'Birlikte Başlayalım', title: 'Nereden başlayacağınızı birlikte belirleyelim', desc: '30 dakikalık bir ön görüşmeyle ya da CX Folks Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.', primaryLabel: 'Görüşme Planlayın →', primaryHref: '/iletisim', secondaryLabel: 'Maturity Testi →', secondaryHref: '/cozumler/cx-maturity-testi', surface: 'platinum', bgImage: '' },
+        { id: 'academy-training', name: 'Akademi & Kurumsal Eğitim (CX Folks Akademi)', eyebrow: 'CX Folks Akademi', title: 'Ekibinizin CX Yetkinliklerini Geliştirin', desc: 'Yapay zeka ve müşteri deneyimi alanında kurumunuza özel tasarlanan eğitim programları ve atölyeler.', primaryLabel: 'Akademi Programını İnceleyin →', primaryHref: '/cozumler/akademi', secondaryLabel: 'İletişime Geçin →', secondaryHref: '/iletisim', surface: 'platinum', bgImage: '' },
         { id: 'maturity-test', name: 'Maturity Assessment (Hızlı Değerlendirme)', eyebrow: 'Hızlı Değerlendirme', title: 'Kurumunuzun CX Olgunluk Seviyesini Ölçün', desc: '5 dakikada tamamlanan ücretsiz test ile yapay zeka ve deneyim odaklı dönüşüm yol haritanızı çıkarın.', primaryLabel: 'Testi Başlatın (Ücretsiz) →', primaryHref: '/cozumler/cx-maturity-testi', secondaryLabel: 'Detaylı Bilgi Alın →', secondaryHref: '/iletisim', surface: 'platinum', bgImage: '' }
       ];
 
@@ -4202,7 +4203,7 @@
         acCard.appendChild(fieldInput('Rozet Metni', ss.academyCard, 'badge', 'home'));
         acCard.appendChild(tagAndSizeGrid('Rozet', ss.academyCard, 'badge', 'home', 'span', 'Örn: 12'));
 
-        // Başlık ("cx2222 Akademi")
+        // Başlık ("CX Folks Akademi")
         acCard.appendChild(fieldInput('Kart Başlığı Metni', ss.academyCard, 'title', 'home'));
         acCard.appendChild(tagAndSizeGrid('Kart Başlığı', ss.academyCard, 'title', 'home', 'h3', 'Örn: 14'));
 
@@ -5225,10 +5226,10 @@
           r.appendChild(quoteToggle);
 
           if (m.isQuoteCard) {
-            r.appendChild(fieldInput('1. Üst Rozet / Vurgu Başlığı (Örn: cx2222 İLKESİ — Boş bırakılırsa gizlenir)', m, 'quoteAuthor', 'pages', { placeholder: 'Örn: cx2222 İLKESİ' }));
+            r.appendChild(fieldInput('1. Üst Rozet / Vurgu Başlığı (Örn: CX Folks İLKESİ — Boş bırakılırsa gizlenir)', m, 'quoteAuthor', 'pages', { placeholder: 'Örn: CX Folks İLKESİ' }));
             r.appendChild(fieldInput('2. Büyük Alıntı Cümlesi (Boş bırakılırsa alıntı gizlenir)', m, 'quote', 'pages', { multiline: true, placeholder: 'Müşterinin sesini duymak yetmez...' }));
             r.appendChild(el('div', { className: 'grid-2' }, [
-              fieldInput('3. Alt İsim / İmza (Örn: cx2222 Ekibi — Boş bırakılırsa gizlenir)', m, 'name', 'pages', { placeholder: 'cx2222 Ekibi' }),
+              fieldInput('3. Alt İsim / İmza (Örn: CX Folks Ekibi — Boş bırakılırsa gizlenir)', m, 'name', 'pages', { placeholder: 'CX Folks Ekibi' }),
               fieldInput('4. Alt Unvan / Açıklama (Örn: Deneyim ve Sezgi Manifestosu — Boş bırakılırsa gizlenir)', m, 'role', 'pages', { placeholder: 'Deneyim ve Sezgi Manifestosu' }),
             ]));
             r.appendChild(el('div', { className: 'grid-2' }, [
@@ -5664,7 +5665,7 @@
             name: 'Genel Danışmanlık & Ön Görüşme (Birlikte Başlayalım)',
             eyebrow: 'Birlikte Başlayalım',
             title: 'Nereden başlayacağınızı birlikte belirleyelim',
-            desc: '30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.',
+            desc: '30 dakikalık bir ön görüşmeyle ya da CX Folks Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.',
             primaryLabel: 'Görüşme Planlayın →',
             primaryHref: '/iletisim',
             secondaryLabel: 'Maturity Testi →',
@@ -5675,8 +5676,8 @@
           },
           {
             id: 'academy-training',
-            name: 'Akademi & Kurumsal Eğitim (cx2222 Akademi)',
-            eyebrow: 'cx2222 Akademi',
+            name: 'Akademi & Kurumsal Eğitim (CX Folks Akademi)',
+            eyebrow: 'CX Folks Akademi',
             title: 'Ekibinizin CX Yetkinliklerini Geliştirin',
             desc: 'Yapay zeka ve müşteri deneyimi alanında kurumunuza özel tasarlanan eğitim programları ve atölyeler.',
             primaryLabel: 'Akademi Programını İnceleyin →',
@@ -7193,7 +7194,7 @@
       if (status?.config) {
         document.getElementById('gh-repo').value = status.config.githubRepo || 'u736666/cxfolks';
         document.getElementById('gh-branch').value = status.config.productionBranch || 'main';
-        document.getElementById('vercel-url').value = status.config.productionUrl || 'https://cx2222.vercel.app';
+        document.getElementById('vercel-url').value = status.config.productionUrl || 'https://cxfolks.vercel.app';
       }
 
       const tokenHint = document.getElementById('gh-token-hint');
@@ -7311,7 +7312,7 @@
 
         const linksRow = el('div', { style: 'margin-top: 8px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;' });
         linksRow.appendChild(el('a', {
-          href: json.productionUrl || 'https://cx2222.vercel.app',
+          href: json.productionUrl || 'https://cxfolks.vercel.app',
           target: '_blank',
           rel: 'noopener',
           className: 'btn btn-primary btn-sm',

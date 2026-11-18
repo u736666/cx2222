@@ -4,7 +4,7 @@
     "prefix": "cx",
     "suffix": "folks",
     "logoImage": "",
-    "siteUrl": "https://cx2222.vercel.app",
+    "siteUrl": "https://cxfolks.vercel.app",
     "defaultTitle": "cxfolks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
     "defaultDescription": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
     "orgDescription": "Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi Danışmanlığı",
@@ -152,7 +152,7 @@
           "alt": "Deneyim Tasarımı"
         },
         {
-          "title": "cx2222 Akademi",
+          "title": "CX Folks Akademi",
           "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
           "href": "/cozumler/akademi",
           "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80",
@@ -251,7 +251,7 @@
     "showCopyright": true,
     "copyrightPrefix": "© ",
     "showYear": true,
-    "copyrightSuffix": "cx2222. Tüm hakları saklıdır.",
+    "copyrightSuffix": "CX Folks. Tüm hakları saklıdır.",
     "showSocialLinks": false,
     "showOffices": false,
     "extraNote": "",
@@ -281,6 +281,14 @@
       {
         "label": "İletişim",
         "href": "/iletisim"
+      },
+      {
+        "label": "Gizlilik Politikası",
+        "href": "/gizlilik-politikasi"
+      },
+      {
+        "label": "Çerez Politikası",
+        "href": "/cerez-politikasi"
       }
     ]
   },
@@ -289,7 +297,7 @@
     "headingTag": "h2",
     "eyebrow": "Birlikte Başlayalım",
     "title": "Nereden başlayacağınızı birlikte belirleyelim",
-    "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
+    "desc": "30 dakikalık bir ön görüşmeyle ya da CX Folks Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
     "primaryLabel": "Görüşme Planlayın →",
     "primaryHref": "/iletisim",
     "secondaryLabel": "",
@@ -298,23 +306,38 @@
   "ctaLibrary": [
     {
       "id": "default-consulting",
-      "name": "AI",
-      "eyebrow": "",
+      "name": "AI & Deneyim Danışmanlığı (Mesh Zemin)",
+      "eyebrow": "BİRLİKTE BAŞLAYALIM",
       "title": "Şirketinizin Sesini Aksiyona Dönüştürelim",
-      "desc": "Müşteri deneyimi yönetim yapınızı, hedeflerinizi analiz edelim,insan odaklı yapay zeka uygulamalarına nasıl geçebileceğinizi planlayalım.",
+      "desc": "Müşteri deneyimi yönetim yapınızı ve hedeflerinizi analiz edelim; insan odaklı yapay zeka uygulamalarına nasıl geçebileceğinizi birlikte planlayalım.",
       "primaryLabel": "Görüşelim →",
       "primaryHref": "/iletisim",
       "secondaryLabel": "",
       "secondaryHref": "",
-      "surface": "richBlack",
+      "surface": "mesh",
       "bgColor": "",
-      "bgImage": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+      "bgImage": "",
+      "headingTag": "h2"
+    },
+    {
+      "id": "newsletter-dive",
+      "name": "Bülten Aboneliği (TheDive Stili Mesh)",
+      "eyebrow": "GÜNCEL İÇGÖRÜLER",
+      "title": "CX Folks'ta yeni yaklaşımlar sürekli gelişiyor.\nBültenimiz ile her zaman güncel kalın.",
+      "desc": "Yapay zeka çağında insan odaklı deneyim trendleri, vaka analizleri ve stratejik içgörüler her ay e-posta kutunuzda.",
+      "primaryLabel": "Abone Olun →",
+      "primaryHref": "/iletisim",
+      "secondaryLabel": "",
+      "secondaryHref": "",
+      "surface": "mesh",
+      "bgColor": "",
+      "bgImage": "",
       "headingTag": "h2"
     },
     {
       "id": "academy-training",
       "name": "Akademi & Kurumsal Eğitim CTA",
-      "eyebrow": "cx2222 Akademi",
+      "eyebrow": "CX Folks Akademi",
       "title": "Ekibinizin CX Yetkinliklerini Geliştirin2",
       "desc": "Yapay zeka ve müşteri deneyimi alanında kurumunuza özel tasarlanan eğitim programları ve atölyeler.",
       "primaryLabel": "Akademi Programını İnceleyin2 →",
@@ -348,7 +371,7 @@
     "headingTag": "h2",
     "eyebrow": "",
     "title": "Nereden başlayacağınızı birlikte belirleyelim",
-    "desc": "30 dakikalık bir ön görüşmeyle ya da cx2222 Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
+    "desc": "30 dakikalık bir ön görüşmeyle ya da CX Folks Maturity Assessment ile başlayabiliriz. Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
     "showEmail": true,
     "showOffices": true,
     "emailLabel": "E-Posta",
