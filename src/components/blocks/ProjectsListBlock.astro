@@ -38,7 +38,16 @@ const sectionId = id || styles.sectionId || 'projects-list';
               <div class="space-y-4">
                 <span class={`typo-body tracking-widest font-semibold block ${accentClass}`} style={resolveTextStyle(proj, 'client') || undefined} set:html={formatRich(proj.client)}>
                 </span>
-                <Heading as={proj.headingTag || proj.titleTag || 'h2'} customSize={proj.headingSize || proj.titleSize} color={proj.headingColor || proj.titleColor} size="h2" text={proj.shortTitle || proj.title} class="text-current" />
+                <Heading 
+                  as={proj.headingTag || proj.titleTag || 'h2'} 
+                  customSize={proj.headingSize || proj.titleSize} 
+                  color={proj.headingColor || proj.titleColor} 
+                  weight={proj.headingWeight || proj.titleWeight}
+                  size="h2" 
+                  text={proj.shortTitle || proj.title} 
+                  class="text-current" 
+                  customStyle={resolveTextStyle(proj, 'heading') || resolveTextStyle(proj, 'title')}
+                />
                 <p class="typo-body font-light opacity-80 pt-2" style={resolveTextStyle(proj, 'listDesc') || resolveTextStyle(proj, 'desc') || undefined} set:html={formatRich(proj.listDesc || proj.desc)}>
                 </p>
                 {Array.isArray(proj.bullets) && proj.bullets.length > 0 && (() => {

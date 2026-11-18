@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import CTASection from '../../components/CTASection.astro';
-import { getAllPosts, getSite, getSurfaceStyle, resolveTextStyle, formatRich, type BlogPostData } from '../../lib/content';
+import { getAllPosts, getSite, getSurfaceStyle, resolveTextStyle, resolveTextTag, formatRich, type BlogPostData } from '../../lib/content';
 
 export function getStaticPaths() {
   const posts = getAllPosts();
@@ -78,9 +78,15 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
       </div>
 
       <div class="mb-4 typo-small font-semibold tracking-widest flex flex-wrap items-center gap-x-3">
-        <span class={`uppercase ${metaColor}`} set:html={formatRich(post.category || '')}></span>
-        <span class="opacity-70 font-normal">•</span>
-        <span class="opacity-70 font-normal">{post.date}</span>
+        {post.category && (
+          <span class={`uppercase ${metaColor}`} style={resolveTextStyle(post, 'category') || undefined} set:html={formatRich(post.category)}></span>
+        )}
+        {post.date && (
+          <>
+            {post.category && <span class="opacity-70 font-normal">•</span>}
+            <span class="opacity-70 font-normal">{post.date}</span>
+          </>
+        )}
         {post.readTime && (
           <>
             <span class="opacity-70 font-normal">•</span>
@@ -115,35 +121,48 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
         <div class="prose max-w-none space-y-6 typo-body text-paletteRichBlack/80 font-light" set:html={typeof post.content === 'string' ? post.content : post.content.join('\n\n')}></div>
       )}
 
-      {(post.blocks || []).map((block) => (
-        block.type === 'heading' ? (
-          <h2 class="typo-h2 text-paletteRichBlack pt-4" set:html={formatRich(block.text)}>
-          </h2>
-        ) : block.type === 'paragraph' ? (
-          <p set:html={formatRich(block.text)}></p>
-        ) : block.type === 'calloutList' ? (
-          <div class="p-8 md:p-10 bg-palettePlatinum my-8 space-y-4">
-            {block.title && <h3 class="typo-h3 text-paletteRichBlack" set:html={formatRich(block.title)}></h3>}
-            <ul class="space-y-2 typo-body font-light text-paletteRichBlack/80">
-              {(block.items || []).map((item) => (
-                <li set:html={`• ${formatRich(item)}`}></li>
-              ))}
-            </ul>
-          </div>
-        ) : block.type === 'gridCards' ? (
-          <div class={`grid grid-cols-1 ${block.cards && block.cards.length >= 4 ? 'sm:grid-cols-2 gap-4' : 'md:grid-cols-2 gap-0'} my-6`}>
-            {(block.cards || []).map((c) => {
-              const st = getSurfaceStyle(c.style || 'platinum');
-              return (
-                <div class={`${block.gap === 'gap-4' ? 'p-6' : 'p-8'} space-y-2 ${st.section}`}>
-                  <h3 class={`typo-h4 mb-1 ${st.cardTitle}`} set:html={formatRich(c.title)}></h3>
-                  <p class={`typo-small font-light ${st.cardBody}`} set:html={formatRich(c.body)}></p>
-                </div>
-              );
-            })}
-          </div>
-        ) : null
-      ))}
+      {(post.blocks || []).map((block) => {
+        if (block.type === 'heading') {
+          const Tag = (resolveTextTag(block, 'text', 'h2') || 'h2') as any;
+          return (
+            <Tag class="typo-h2 text-paletteRichBlack pt-4" style={resolveTextStyle(block, 'text') || resolveTextStyle(block, 'title') || undefined} set:html={formatRich(block.text)}>
+            </Tag>
+          );
+        }
+        if (block.type === 'paragraph') {
+          return (
+            <p style={resolveTextStyle(block, 'text') || undefined} set:html={formatRich(block.text)}></p>
+          );
+        }
+        if (block.type === 'calloutList') {
+          return (
+            <div class="p-8 md:p-10 bg-palettePlatinum my-8 space-y-4">
+              {block.title && <h3 class="typo-h3 text-paletteRichBlack" style={resolveTextStyle(block, 'title') || undefined} set:html={formatRich(block.title)}></h3>}
+              <ul class="space-y-2 typo-body font-light text-paletteRichBlack/80">
+                {(block.items || []).map((item) => (
+                  <li set:html={`• ${formatRich(item)}`}></li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+        if (block.type === 'gridCards') {
+          return (
+            <div class={`grid grid-cols-1 ${block.cards && block.cards.length >= 4 ? 'sm:grid-cols-2 gap-4' : 'md:grid-cols-2 gap-0'} my-6`}>
+              {(block.cards || []).map((c) => {
+                const st = getSurfaceStyle(c.style || 'platinum');
+                return (
+                  <div class={`${block.gap === 'gap-4' ? 'p-6' : 'p-8'} space-y-2 ${st.section}`}>
+                    <h3 class={`typo-h4 mb-1 ${st.cardTitle}`} style={resolveTextStyle(c, 'title') || undefined} set:html={formatRich(c.title)}></h3>
+                    <p class={`typo-small font-light ${st.cardBody}`} style={resolveTextStyle(c, 'body') || undefined} set:html={formatRich(c.body)}></p>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        }
+        return null;
+      })}
 
       <div class="pt-12 mt-12 flex flex-wrap items-center justify-between gap-4">
         <a href="/blog" class="btn-rect text-sm font-medium text-paletteRichBlack hover:text-brandAccent">

@@ -86,6 +86,7 @@ const hasContent = isSlider || Boolean(
             as={data.headingTag || data.titleTag || 'h1'} 
             customSize={data.headingSize || data.titleSize}
             color={data.headingColor || data.titleColor}
+            weight={data.headingWeight || data.titleWeight}
             size="h1" 
             text={data.title}
             class={heroTextClass} 
@@ -142,6 +143,7 @@ const hasContent = isSlider || Boolean(
         as={data.headingTag || data.titleTag || 'h1'} 
         customSize={data.headingSize || data.titleSize}
         color={data.headingColor || data.titleColor}
+        weight={data.headingWeight || data.titleWeight}
         size="h1" 
         text={data.title}
         class={heroTextClass} 
@@ -151,7 +153,7 @@ const hasContent = isSlider || Boolean(
         <p class={`typo-lead ${heroSubTextClass} font-light`} style={descStyle || undefined} set:html={formatRich(data.desc)}>
         </p>
       )}
-      {(data.ctaText || data.primaryBtnLabel) && (
+      {((data.ctaText && data.ctaText.trim()) || (data.primaryBtnLabel && data.primaryBtnLabel.trim())) && (
         <div class="pt-4 flex flex-wrap gap-3">
           <a 
             href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 

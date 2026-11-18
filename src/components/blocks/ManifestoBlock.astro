@@ -78,20 +78,28 @@ const sectionId = id || styles.sectionId || 'manifesto-human';
 <section id={sectionId} class={`pt-[150px] pb-0 relative w-full px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={styles.inlineStyleString}>
   <div class={styles.containerClass}>
     <div class="max-w-5xl space-y-10">
-      <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" class="text-paletteRichBlack">
+      <Heading 
+        as={data.headingTag || data.titleTag || 'h2'} 
+        customSize={data.headingSize || data.titleSize} 
+        color={data.headingColor || data.titleColor} 
+        weight={data.headingWeight || data.titleWeight}
+        size="h2" 
+        class="text-paletteRichBlack"
+        customStyle={resolveTextStyle(data, 'heading') || resolveTextStyle(data, 'title')}
+      >
         <Fragment set:html={sentenceHtml} />
       </Heading>
 
       <div class="space-y-4 pt-6 max-w-3xl">
-        {data.subTitle && (
+        {data.subTitle && String(data.subTitle).trim() !== '' && (
           <p class="typo-lead text-paletteRichBlack font-normal" style={resolveTextStyle(data, 'subTitle') || undefined} set:html={formatRich(data.subTitle)}>
           </p>
         )}
-        {data.subDesc && (
+        {data.subDesc && String(data.subDesc).trim() !== '' && (
           <p class="typo-body text-paletteRichBlack/70 font-light" style={resolveTextStyle(data, 'subDesc') || undefined} set:html={formatRich(data.subDesc)}>
           </p>
         )}
-        {data.ctaText && (
+        {data.ctaText && String(data.ctaText).trim() !== '' && (
           <div class="pt-2">
             <a href={data.ctaHref || '/yaklasimimiz'} class="btn-rect text-brandAccent hover:underline font-medium">
               <span set:html={formatRich(data.ctaText)}></span>

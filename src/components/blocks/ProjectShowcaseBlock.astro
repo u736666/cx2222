@@ -26,7 +26,16 @@ const descStyle = resolveTextStyle(data, 'desc');
     
     <div class="mb-14 pb-8 flex flex-col md:flex-row md:items-end justify-between">
       <div>
-        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-paletteRichBlack" />
+        <Heading 
+          as={data.headingTag || data.titleTag || 'h2'} 
+          customSize={data.headingSize || data.titleSize} 
+          color={data.headingColor || data.titleColor} 
+          weight={data.headingWeight || data.titleWeight}
+          size="h2" 
+          text={data.title} 
+          class="text-paletteRichBlack" 
+          customStyle={resolveTextStyle(data, 'heading') || resolveTextStyle(data, 'title')}
+        />
       </div>
       <div class="flex flex-col items-start md:items-end gap-2 mt-4 md:mt-0">
         {data.desc && (
@@ -62,7 +71,16 @@ const descStyle = resolveTextStyle(data, 'desc');
                 <div class="space-y-4">
                   <span class={`typo-body tracking-widest font-semibold block ${proj.listStyle === 'platinum' ? 'text-brandAccent' : st.title}`} style={resolveTextStyle(proj, 'client') || undefined} set:html={formatRich(proj.client)}>
                   </span>
-                  <Heading as={proj.headingTag || proj.titleTag || 'h3'} customSize={proj.headingSize || proj.titleSize} color={proj.headingColor || proj.titleColor} size="h2" text={proj.shortTitle || proj.title} class={st.title} />
+                  <Heading 
+                    as={proj.headingTag || proj.titleTag || 'h3'} 
+                    customSize={proj.headingSize || proj.titleSize} 
+                    color={proj.headingColor || proj.titleColor} 
+                    weight={proj.headingWeight || proj.titleWeight}
+                    size="h2" 
+                    text={proj.shortTitle || proj.title} 
+                    class={st.title} 
+                    customStyle={resolveTextStyle(proj, 'heading') || resolveTextStyle(proj, 'title')}
+                  />
                   <p class={`typo-body font-light pt-2 ${st.body}`} style={resolveTextStyle(proj, 'listDesc') || resolveTextStyle(proj, 'desc') || undefined} set:html={formatRich(proj.listDesc || proj.desc)}>
                   </p>
                   <div class={`pt-4 space-y-2 typo-body font-light ${st.muted}`}>

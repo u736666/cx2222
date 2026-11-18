@@ -11,16 +11,23 @@ interface Props {
   subtitle?: string;
   headingTag?: string;
   items: FAQItem[];
+  titleStyle?: string;
+  subtitleStyle?: string;
 }
 
 const {
   title = "Sıkça Sorulan Sorular",
-  subtitle = "Merak Edilenler",
+  subtitle,
   headingTag = "h2",
-  items = []
+  items = [],
+  titleStyle,
+  subtitleStyle
 } = Astro.props;
 
 const HeadingTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(headingTag) ? headingTag : 'h2') as any;
+
+const hasSubtitle = subtitle !== undefined && subtitle !== null && String(subtitle).trim() !== '';
+const hasTitle = title !== undefined && title !== null && String(title).trim() !== '';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -41,11 +48,13 @@ const faqSchema = {
     <div class="grid-standard items-start">
       
       <div class="col-span-12 lg:col-span-5 space-y-4 pr-0 lg:pr-10">
-        {subtitle && (
-          <span class="typo-small font-semibold tracking-widest text-brandAccent block" set:html={formatRich(subtitle)}></span>
+        {hasSubtitle && (
+          <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={subtitleStyle || undefined} set:html={formatRich(subtitle)}></span>
         )}
-        <HeadingTag class="typo-h2 text-paletteRichBlack" set:html={formatRich(title)}>
-        </HeadingTag>
+        {hasTitle && (
+          <HeadingTag class="typo-h2 text-paletteRichBlack" style={titleStyle || undefined} set:html={formatRich(title)}>
+          </HeadingTag>
+        )}
       </div>
 
       <div class="col-span-12 lg:col-span-7 space-y-[2px]">

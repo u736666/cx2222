@@ -39,7 +39,7 @@ const sectionId = id || styles.sectionId || 'solutions-list';
           <div class="lg:col-span-7 p-8 sm:p-12 md:p-16 flex flex-col justify-between space-y-8">
             <div class="space-y-4">
               {showBadge && (
-                <span class={`typo-small font-semibold tracking-widest block ${st.eyebrow}`}>
+                <span class={`typo-small font-semibold tracking-widest block ${st.eyebrow}`} style={resolveTextStyle(sol, 'badge') || undefined}>
                   {badgeText}
                 </span>
               )}
@@ -47,6 +47,7 @@ const sectionId = id || styles.sectionId || 'solutions-list';
                 as={sol.headingTag || 'h2'} 
                 customSize={sol.headingSize || sol.titleSize} 
                 color={sol.headingColor || sol.titleColor} 
+                weight={sol.headingWeight || sol.titleWeight}
                 size="h2" 
                 text={sol.title} 
                 class="text-current" 

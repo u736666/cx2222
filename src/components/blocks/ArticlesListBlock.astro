@@ -1,6 +1,6 @@
 ---
 import Heading from '../Heading.astro';
-import { getAllPosts, getBarClass, formatRich } from '../../lib/content';
+import { getAllPosts, getBarClass, formatRich, resolveTextStyle, resolveTextTag } from '../../lib/content';
 import { computeBlockStyles } from '../../lib/style';
 
 interface Props {
@@ -31,8 +31,17 @@ const sectionId = id || styles.sectionId || 'articles-list';
               <span>•</span>
               <span set:html={formatRich(art.readTime)}></span>
             </div>
-            <Heading as="h2" size="h3" text={art.title} class="text-paletteRichBlack group-hover:text-brandAccent transition-colors" />
-            <p class="typo-body text-paletteRichBlack/70 font-light" set:html={formatRich(art.desc)}>
+            <Heading 
+              as={art.headingTag || art.titleTag || "h2"} 
+              customSize={art.headingSize || art.titleSize} 
+              color={art.headingColor || art.titleColor} 
+              weight={art.headingWeight || art.titleWeight} 
+              size="h3" 
+              text={art.title} 
+              class="text-paletteRichBlack group-hover:text-brandAccent transition-colors" 
+              customStyle={resolveTextStyle(art, 'title')}
+            />
+            <p class="typo-body text-paletteRichBlack/70 font-light" style={resolveTextStyle(art, 'desc') || undefined} set:html={formatRich(art.desc)}>
             </p>
           </div>
 

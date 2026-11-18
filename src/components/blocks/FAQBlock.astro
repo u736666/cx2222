@@ -1,6 +1,7 @@
 ---
 import FAQSection from '../FAQSection.astro';
 import { computeBlockStyles } from '../../lib/style';
+import { resolveTextStyle, resolveTextTag } from '../../lib/content';
 
 interface Props {
   id?: string;
@@ -11,8 +12,11 @@ interface Props {
 const { id, data = {}, style = {} } = Astro.props;
 const styles = computeBlockStyles(style);
 const items = Array.isArray(data.items || data.faqs) ? (data.items || data.faqs) : [];
-const title = data.title || data.faqTitle || 'Sıkça Sorulan Sorular';
-const subtitle = data.subtitle || data.faqSubtitle;
+const title = data.title !== undefined ? data.title : (data.faqTitle !== undefined ? data.faqTitle : 'Sıkça Sorulan Sorular');
+const subtitle = data.subtitle !== undefined ? data.subtitle : data.faqSubtitle;
+const headingTag = resolveTextTag(data, 'title', resolveTextTag(data, 'faqTitle', 'h2'));
+const titleStyle = resolveTextStyle(data, 'title') || resolveTextStyle(data, 'faqTitle');
+const subtitleStyle = resolveTextStyle(data, 'subtitle') || resolveTextStyle(data, 'faqSubtitle');
 const sectionId = id || styles.sectionId || 'faq';
 ---
 
@@ -21,6 +25,9 @@ const sectionId = id || styles.sectionId || 'faq';
     <FAQSection 
       title={title} 
       subtitle={subtitle}
+      headingTag={headingTag}
+      titleStyle={titleStyle}
+      subtitleStyle={subtitleStyle}
       items={items} 
     />
   </div>

@@ -21,11 +21,20 @@ const sectionId = id || styles.sectionId || 'capabilities-grid';
   <div class={styles.containerClass}>
     {data.title && (
       <div class="mb-12">
-        {data.eyebrow && (
-          <span class="typo-small font-bold tracking-widest text-brandAccent block mb-2" set:html={formatRich(data.eyebrow)}></span>
+        {data.eyebrow && String(data.eyebrow).trim() !== '' && (
+          <span class="typo-small font-bold tracking-widest text-brandAccent block mb-2" style={resolveTextStyle(data, 'eyebrow') || undefined} set:html={formatRich(data.eyebrow)}></span>
         )}
-        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-paletteRichBlack" />
-        {data.desc && (
+        <Heading 
+          as={data.headingTag || data.titleTag || 'h2'} 
+          customSize={data.headingSize || data.titleSize} 
+          color={data.headingColor || data.titleColor} 
+          weight={data.headingWeight || data.titleWeight}
+          size="h2" 
+          text={data.title} 
+          class="text-paletteRichBlack" 
+          customStyle={resolveTextStyle(data, 'heading') || resolveTextStyle(data, 'title')}
+        />
+        {data.desc && String(data.desc).trim() !== '' && (
           <p class="typo-lead font-light text-paletteRichBlack/75 max-w-3xl mt-4" style={resolveTextStyle(data, 'desc') || undefined} set:html={formatRich(data.desc)}>
           </p>
         )}
@@ -40,14 +49,25 @@ const sectionId = id || styles.sectionId || 'capabilities-grid';
         const HeadingTag = item.headingTag || 'h2';
         return (
           <div class={`p-10 md:p-14 space-y-4 ${st.section}`}>
-            {item.eyebrow && (
-              <span class={`typo-small font-bold tracking-widest block ${eyebrowColor}`} set:html={formatRich(item.eyebrow)}></span>
+            {item.eyebrow && String(item.eyebrow).trim() !== '' && (
+              <span class={`typo-small font-bold tracking-widest block ${eyebrowColor}`} style={resolveTextStyle(item, 'eyebrow') || undefined} set:html={formatRich(item.eyebrow)}></span>
             )}
-            <Heading as={HeadingTag} customSize={item.headingSize || item.titleSize} color={item.headingColor || item.titleColor} size="h2" text={item.title} class={st.title} />
-            <p class={`typo-body font-light ${st.body}`} style={resolveTextStyle(item, 'body') || resolveTextStyle(item, 'desc') || undefined} set:html={formatRich(item.body || item.desc)}>
-            </p>
-            {item.metric && (
-              <p class={`typo-small font-semibold tracking-widest pt-2 ${metricColor}`} set:html={formatRich(item.metric)}>
+            <Heading 
+              as={HeadingTag} 
+              customSize={item.headingSize || item.titleSize} 
+              color={item.headingColor || item.titleColor} 
+              weight={item.headingWeight || item.titleWeight}
+              size="h2" 
+              text={item.title} 
+              class={st.title} 
+              customStyle={resolveTextStyle(item, 'title')}
+            />
+            {item.body || item.desc ? (
+              <p class={`typo-body font-light ${st.body}`} style={resolveTextStyle(item, 'body') || resolveTextStyle(item, 'desc') || undefined} set:html={formatRich(item.body || item.desc)}>
+              </p>
+            ) : null}
+            {item.metric && String(item.metric).trim() !== '' && (
+              <p class={`typo-small font-semibold tracking-widest pt-2 ${metricColor}`} style={resolveTextStyle(item, 'metric') || undefined} set:html={formatRich(item.metric)}>
               </p>
             )}
             {Array.isArray(item.bullets) && item.bullets.length > 0 && (

@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import CTASection from '../../components/CTASection.astro';
 import BlogShowcaseBlock from '../../components/blocks/BlogShowcaseBlock.astro';
-import { getAllProjects, getSite, getSurfaceStyle, resolveTextStyle, formatRich, type ProjectData } from '../../lib/content';
+import { getAllProjects, getSite, getSurfaceStyle, resolveTextStyle, resolveTextTag, formatRich, type ProjectData } from '../../lib/content';
 
 export function getStaticPaths() {
   const projects = getAllProjects();
@@ -34,6 +34,17 @@ const ProjHeroTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(p
 const projHeroStyle = resolveTextStyle(project, 'title') || resolveTextStyle(project, 'heading');
 const projDescStyle = resolveTextStyle(project, 'desc');
 const clientStyle = resolveTextStyle(project, 'client') || resolveTextStyle(project, 'brand');
+
+const rawChallengeTag = resolveTextTag(project.challenge, 'title', 'h2');
+const ChallengeTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(rawChallengeTag) ? rawChallengeTag : 'h2') as any;
+const challengeEyebrowStyle = resolveTextStyle(project.challenge, 'eyebrow');
+const challengeTitleStyle = resolveTextStyle(project.challenge, 'title');
+const challengeBodyStyle = resolveTextStyle(project.challenge, 'body');
+
+const rawSolutionTag = resolveTextTag(project.solution, 'title', 'h2');
+const SolutionTag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div'].includes(rawSolutionTag) ? rawSolutionTag : 'h2') as any;
+const solutionEyebrowStyle = resolveTextStyle(project.solution, 'eyebrow');
+const solutionTitleStyle = resolveTextStyle(project.solution, 'title');
 
 const validMetrics = (project.metrics || []).filter((m: any) => m && (String(m.value || '').trim() || String(m.label || '').trim()));
 const hasMetrics = validMetrics.length > 0;
@@ -84,9 +95,11 @@ const caseSchema = {
       </div>
 
       <div class="mb-4 typo-small font-semibold tracking-widest flex flex-wrap items-center gap-x-3">
-        <span class={`project-client uppercase ${clientStyle ? '' : heroEyebrowColor}`} style={clientStyle || undefined} set:html={formatRich(project.client || '')}></span>
+        {project.client && (
+          <span class={`project-client uppercase ${clientStyle ? '' : heroEyebrowColor}`} style={clientStyle || undefined} set:html={formatRich(project.client || '')}></span>
+        )}
         {project.sector && (
-          <span class="project-sector opacity-70 font-normal" set:html={formatRich(project.sector)}></span>
+          <span class="project-sector opacity-70 font-normal" style={resolveTextStyle(project, 'sector') || undefined} set:html={formatRich(project.sector)}></span>
         )}
       </div>
 
@@ -115,8 +128,8 @@ const caseSchema = {
       <div class="max-w-custom mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
         {validMetrics.map((m: any) => (
           <div>
-            <span class="text-3xl md:text-4xl font-light text-brandAccent block mb-1">{m.value}</span>
-            <span class="typo-small tracking-wider text-white/60">{m.label}</span>
+            <span class="text-3xl md:text-4xl font-light text-brandAccent block mb-1" style={resolveTextStyle(m, 'value') || undefined}>{m.value}</span>
+            <span class="typo-small tracking-wider text-white/60" style={resolveTextStyle(m, 'label') || undefined}>{m.label}</span>
           </div>
         ))}
       </div>
@@ -127,8 +140,8 @@ const caseSchema = {
   <section class={`${hasMetrics ? 'section-pad-150' : 'pt-12 md:pt-16 pb-24 md:pb-36'} bg-siteBg text-paletteRichBlack px-6 md:px-16`}>
     <div class="max-w-4xl mx-auto space-y-16">
       
-      {project.content && (
-        <div class="prose max-w-none space-y-6 typo-body text-paletteRichBlack/85 font-light" set:html={project.content}></div>
+      {project.content && String(project.content).trim() !== '' && (
+        <div class="prose max-w-none space-y-6 typo-body text-paletteRichBlack/85 font-light" style={resolveTextStyle(project, 'content') || undefined} set:html={project.content}></div>
       )}
 
       {project.image2 && img2Pos === 'afterContent' && (
@@ -144,11 +157,17 @@ const caseSchema = {
 
       {project.challenge && (
         <div class="space-y-4">
-          <span class="typo-small font-bold tracking-widest text-brandAccent block">{project.challenge.eyebrow || 'Zorluk'}</span>
-          <h2 class="typo-h2 text-paletteRichBlack" set:html={formatRich(project.challenge.title)}>
-          </h2>
-          <p class="typo-body text-paletteRichBlack/75 font-light" set:html={formatRich(project.challenge.body)}>
-          </p>
+          {project.challenge.eyebrow && String(project.challenge.eyebrow).trim() !== '' && (
+            <span class="typo-small font-bold tracking-widest text-brandAccent block" style={challengeEyebrowStyle || undefined} set:html={formatRich(project.challenge.eyebrow)}></span>
+          )}
+          {project.challenge.title && String(project.challenge.title).trim() !== '' && (
+            <ChallengeTag class="typo-h2 text-paletteRichBlack" style={challengeTitleStyle || undefined} set:html={formatRich(project.challenge.title)}>
+            </ChallengeTag>
+          )}
+          {project.challenge.body && String(project.challenge.body).trim() !== '' && (
+            <p class="typo-body text-paletteRichBlack/75 font-light" style={challengeBodyStyle || undefined} set:html={formatRich(project.challenge.body)}>
+            </p>
+          )}
         </div>
       )}
 
@@ -163,23 +182,36 @@ const caseSchema = {
         </div>
       )}
 
-      {project.solution && project.solution.cards && project.solution.cards.length > 0 && (
+      {project.solution && (
         <div class="space-y-4">
-          <span class="typo-small font-bold tracking-widest text-brandAccent block">{project.solution.eyebrow || 'Çözüm'}</span>
-          <h2 class="typo-h2 text-paletteRichBlack" set:html={formatRich(project.solution.title)}>
-          </h2>
-          <div class={`grid grid-cols-1 ${project.solution.columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6 pt-4`}>
-            {project.solution.cards.map((card) => {
-              const cardSt = getSurfaceStyle(card.style || 'platinum');
-              return (
-                <div class={`p-8 ${cardSt.section}`}>
-                  <h3 class={`typo-h3 mb-2 ${cardSt.cardTitle}`} set:html={formatRich(card.title)}></h3>
-                  <p class={`typo-small font-light ${cardSt.cardBody}`} set:html={formatRich(card.body)}>
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+          {project.solution.eyebrow && String(project.solution.eyebrow).trim() !== '' && (
+            <span class="typo-small font-bold tracking-widest text-brandAccent block" style={solutionEyebrowStyle || undefined} set:html={formatRich(project.solution.eyebrow)}></span>
+          )}
+          {project.solution.title && String(project.solution.title).trim() !== '' && (
+            <SolutionTag class="typo-h2 text-paletteRichBlack" style={solutionTitleStyle || undefined} set:html={formatRich(project.solution.title)}>
+            </SolutionTag>
+          )}
+          {project.solution.cards && project.solution.cards.length > 0 && (
+            <div class={`grid grid-cols-1 ${project.solution.columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6 pt-4`}>
+              {project.solution.cards.map((card: any) => {
+                const cardSt = getSurfaceStyle(card.style || 'platinum');
+                const cardTitleStyle = resolveTextStyle(card, 'title');
+                const cardBodyStyle = resolveTextStyle(card, 'body');
+                const CardHeadingTag = (resolveTextTag(card, 'title', 'h3') || 'h3') as any;
+                return (
+                  <div class={`p-8 ${cardSt.section}`}>
+                    {card.title && String(card.title).trim() !== '' && (
+                      <CardHeadingTag class={`typo-h3 mb-2 ${cardSt.cardTitle}`} style={cardTitleStyle || undefined} set:html={formatRich(card.title)}></CardHeadingTag>
+                    )}
+                    {card.body && String(card.body).trim() !== '' && (
+                      <p class={`typo-small font-light ${cardSt.cardBody}`} style={cardBodyStyle || undefined} set:html={formatRich(card.body)}>
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
 
@@ -194,8 +226,8 @@ const caseSchema = {
         </div>
       )}
 
-      {project.quote && (
-        <div class="p-10 md:p-14 bg-palettePlatinum italic text-lg md:text-2xl text-paletteRichBlack/85 font-light leading-relaxed" set:html={formatRich(project.quote)}>
+      {project.quote && String(project.quote).trim() !== '' && (
+        <div class="p-10 md:p-14 bg-palettePlatinum italic text-lg md:text-2xl text-paletteRichBlack/85 font-light leading-relaxed" style={resolveTextStyle(project, 'quote') || undefined} set:html={formatRich(project.quote)}>
         </div>
       )}
 

@@ -1641,6 +1641,7 @@
       const tagKey = opts.tagKey || (opts.withTag && typeof opts.withTag === 'string' ? opts.withTag : (obj && obj.headingTag !== undefined && key === 'title' ? 'headingTag' : (key + 'Tag')));
       const sizeKey = opts.sizeKey || (obj && obj.headingSize !== undefined && key === 'title' ? 'headingSize' : (key + 'Size'));
       const colorKey = opts.colorKey || (obj && obj.headingColor !== undefined && key === 'title' ? 'headingColor' : (key + 'Color'));
+      const weightKey = opts.weightKey || (obj && obj.headingWeight !== undefined && key === 'title' ? 'headingWeight' : (key + 'Weight'));
 
       if (hasControls && obj) {
         // Tag Selector (H1-H6, P, DIV, SPAN)
@@ -1691,6 +1692,36 @@
         });
         sizeWrap.appendChild(sizeInp);
         actions.appendChild(sizeWrap);
+
+        // Custom Weight Dropdown
+        const weightWrap = el('div', { style: 'display:inline-flex;align-items:center;gap:3px;' });
+        const weightSel = el('select', {
+          className: 'tag-select-badge',
+          title: 'Yazı Kalınlığı (Font Weight)',
+          style: 'font-size:11px;'
+        });
+        const weightOpts = [
+          { value: '', label: 'Kalınlık: Varsayılan' },
+          { value: '300', label: '300 (Light)' },
+          { value: '400', label: '400 (Normal)' },
+          { value: '500', label: '500 (Medium)' },
+          { value: '600', label: '600 (Semibold)' },
+          { value: '700', label: '700 (Bold)' },
+          { value: '800', label: '800 (Extra Bold)' },
+        ];
+        weightOpts.forEach((w) => {
+          const opt = el('option', { value: w.value, text: w.label });
+          if (String(obj[weightKey] || '') === w.value) opt.selected = true;
+          weightSel.appendChild(opt);
+        });
+        weightSel.addEventListener('change', () => {
+          if (weightSel.value) obj[weightKey] = weightSel.value;
+          else delete obj[weightKey];
+          markDirty(target);
+          updateFormatPreview(inp.value);
+        });
+        weightWrap.appendChild(weightSel);
+        actions.appendChild(weightWrap);
 
         // Palette Color Dropdown with Dot
         const colorWrap = el('div', { style: 'display:inline-flex;align-items:center;gap:5px;' });
@@ -2513,6 +2544,7 @@
         const prefix = opts.prefix || 'bullets';
         const tagKey = `${prefix}Tag`;
         const sizeKey = `${prefix}Size`;
+        const weightKey = `${prefix}Weight`;
         const colorKey = `${prefix}Color`;
         const actions = el('div', { className: 'field-actions', style: 'display:flex;align-items:center;gap:6px;' });
 
@@ -2562,7 +2594,36 @@
         sizeWrap.appendChild(sizeInp);
         actions.appendChild(sizeWrap);
 
-        // Palette Color Dropdown with Dot
+        // Custom Weight Dropdown (stringListEditor)
+        const weightWrap = el('div', { style: 'display:inline-flex;align-items:center;gap:3px;' });
+        const weightSel = el('select', {
+          className: 'tag-select-badge',
+          title: 'Yazı Kalınlığı (Font Weight)',
+          style: 'font-size:11px;'
+        });
+        const weightOpts = [
+          { value: '', label: 'Kalınlık: Varsayılan' },
+          { value: '300', label: '300 (Light)' },
+          { value: '400', label: '400 (Normal)' },
+          { value: '500', label: '500 (Medium)' },
+          { value: '600', label: '600 (Semibold)' },
+          { value: '700', label: '700 (Bold)' },
+          { value: '800', label: '800 (Extra Bold)' },
+        ];
+        weightOpts.forEach((w) => {
+          const opt = el('option', { value: w.value, text: w.label });
+          if (String(styleObj[weightKey] || '') === w.value) opt.selected = true;
+          weightSel.appendChild(opt);
+        });
+        weightSel.addEventListener('change', () => {
+          if (weightSel.value) styleObj[weightKey] = weightSel.value;
+          else delete styleObj[weightKey];
+          markDirty(target);
+        });
+        weightWrap.appendChild(weightSel);
+        actions.appendChild(weightWrap);
+
+        // Palette Color Dropdown with Dot (stringListEditor)
         const colorWrap = el('div', { style: 'display:inline-flex;align-items:center;gap:5px;' });
         const colorDot = el('span', {
           className: 'color-dot-indicator',

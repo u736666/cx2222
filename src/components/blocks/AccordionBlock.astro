@@ -38,8 +38,17 @@ const subtitleStyle = resolveTextStyle(data, 'subtitle');
   <div class={`relative z-10 ${styles.containerClass} w-full`}>
     <div class="grid-standard items-start">
       <div class="col-span-12 lg:col-span-6 space-y-6 pr-0 lg:pr-10">
-        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class={sectionTextClass} customStyle={titleStyle} />
-        {data.subtitle && (
+        <Heading 
+          as={data.headingTag || data.titleTag || 'h2'} 
+          customSize={data.headingSize || data.titleSize} 
+          color={data.headingColor || data.titleColor} 
+          weight={data.headingWeight || data.titleWeight}
+          size="h2" 
+          text={data.title} 
+          class={sectionTextClass} 
+          customStyle={titleStyle} 
+        />
+        {data.subtitle && String(data.subtitle).trim() !== '' && (
           <p class={`typo-body ${isDarkSection ? 'text-white/70' : 'text-paletteRichBlack/70'} font-light italic`} style={subtitleStyle || undefined} set:html={formatRich(data.subtitle)}>
           </p>
         )}
@@ -63,7 +72,16 @@ const subtitleStyle = resolveTextStyle(data, 'subtitle');
         {items.map((item: any, idx: number) => (
           <div class={`accordion-card p-6 sm:p-8 cursor-pointer ${idx === 0 ? 'bg-paletteRichBlack text-white' : 'bg-paletteDustGrey text-paletteRichBlack'}`} data-card={idx}>
             <div class="flex items-center justify-between gap-4">
-              <Heading as={item.headingTag || item.titleTag || 'h3'} customSize={item.headingSize || item.titleSize} color={item.headingColor || item.titleColor} size="h3" text={item.title} class={`card-title accordion-title-var min-w-0 ${idx === 0 ? 'text-white' : 'text-paletteRichBlack'}`} />
+              <Heading 
+                as={item.headingTag || item.titleTag || 'h3'} 
+                customSize={item.headingSize || item.titleSize} 
+                color={item.headingColor || item.titleColor} 
+                weight={item.headingWeight || item.titleWeight}
+                size="h3" 
+                text={item.title} 
+                class={`card-title accordion-title-var min-w-0 ${idx === 0 ? 'text-white' : 'text-paletteRichBlack'}`} 
+                customStyle={resolveTextStyle(item, 'title')}
+              />
               <button type="button" class={`card-icon-btn w-9 h-9 flex-shrink-0 flex items-center justify-center text-base ${idx === 0 ? 'bg-white/10 text-white' : 'bg-paletteRichBlack/10 text-paletteRichBlack'}`}>
                 {idx === 0 ? '−' : '+'}
               </button>

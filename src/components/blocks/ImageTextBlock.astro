@@ -27,15 +27,26 @@ const bodyStyle = resolveTextStyle(data, 'body');
       )}
 
       <div class={`${data.image ? 'lg:col-span-7' : 'lg:col-span-12'} space-y-6`}>
-        {data.eyebrow && (
+        {data.eyebrow && String(data.eyebrow).trim() !== '' && (
           <span class="typo-small font-bold tracking-widest text-brandAccent block" style={eyebrowStyle || undefined} set:html={formatRich(data.eyebrow)}></span>
         )}
-        <Heading as={data.headingTag || data.titleTag || 'h2'} customSize={data.headingSize || data.titleSize} color={data.headingColor || data.titleColor} size="h2" text={data.title} class="text-current" />
-        {data.body && (
+        {data.title && String(data.title).trim() !== '' && (
+          <Heading 
+            as={data.headingTag || data.titleTag || 'h2'} 
+            customSize={data.headingSize || data.titleSize} 
+            color={data.headingColor || data.titleColor} 
+            weight={data.headingWeight || data.titleWeight}
+            size="h2" 
+            text={data.title} 
+            class="text-current" 
+            customStyle={resolveTextStyle(data, 'title')}
+          />
+        )}
+        {data.body && String(data.body).trim() !== '' && (
           <p class="typo-lead font-light opacity-85 leading-relaxed" style={bodyStyle || undefined} set:html={formatRich(data.body)}>
           </p>
         )}
-        {data.ctaText && (
+        {data.ctaText && String(data.ctaText).trim() !== '' && (
           <div class="pt-4">
             <a href={data.ctaHref || '/iletisim'} class="btn-rect px-7 py-3 bg-paletteRichBlack text-white hover:bg-brandAccent hover:text-paletteRichBlack transition-colors" set:html={formatRich(data.ctaText)}>
             </a>

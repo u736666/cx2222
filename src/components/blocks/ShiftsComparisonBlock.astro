@@ -1,7 +1,7 @@
 ---
 import Heading from '../Heading.astro';
 import { computeBlockStyles } from '../../lib/style';
-import { formatRich } from '../../lib/content';
+import { formatRich, resolveTextStyle } from '../../lib/content';
 
 interface Props {
   id?: string;
@@ -24,8 +24,19 @@ const sectionId = id || styles.sectionId || 'shifts';
         <div class="lg:col-span-4 space-y-4 flex flex-col justify-between bg-paletteDustGrey p-8 md:p-10">
           <div>
             <span class="text-3xl font-light text-paletteRichBlack/50 block mb-2">{s.number}</span>
-            <Heading as={s.headingTag || 'h2'} customSize={s.headingSize || s.titleSize} color={s.headingColor || s.titleColor} size="h2" text={s.title} class="text-paletteRichBlack mb-2" />
-            <p class="typo-small font-semibold tracking-widest text-paletteRichBlack/60" set:html={formatRich(s.sub)}></p>
+            <Heading 
+              as={s.headingTag || 'h2'} 
+              customSize={s.headingSize || s.titleSize} 
+              color={s.headingColor || s.titleColor} 
+              weight={s.headingWeight || s.titleWeight}
+              size="h2" 
+              text={s.title} 
+              class="text-paletteRichBlack mb-2" 
+              customStyle={resolveTextStyle(s, 'title')}
+            />
+            {s.sub && String(s.sub).trim() !== '' && (
+              <p class="typo-small font-semibold tracking-widest text-paletteRichBlack/60" style={resolveTextStyle(s, 'sub') || undefined} set:html={formatRich(s.sub)}></p>
+            )}
           </div>
           <div class="w-full aspect-[16/9] bg-neutral-200 overflow-hidden mt-6">
             <img src={s.image} alt={s.title} class="w-full h-full object-cover grayscale contrast-125" />
@@ -34,13 +45,13 @@ const sectionId = id || styles.sectionId || 'shifts';
 
         <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-0">
           <div class="p-8 md:p-12 bg-palettePlatinum flex flex-col justify-center space-y-4">
-            <span class="typo-small font-bold tracking-widest text-paletteRichBlack/50 block">Eski Modelin Çıkmazı</span>
-            <p class="typo-lead text-paletteRichBlack/80 font-light" set:html={formatRich(s.problem)}>
+            <span class="typo-small font-bold tracking-widest text-paletteRichBlack/50 block">{s.problemLabel || 'Eski Modelin Çıkmazı'}</span>
+            <p class="typo-lead text-paletteRichBlack/80 font-light" style={resolveTextStyle(s, 'problem') || undefined} set:html={formatRich(s.problem)}>
             </p>
           </div>
           <div class="p-8 md:p-12 bg-paletteRichBlack text-white flex flex-col justify-center space-y-4">
-            <span class="typo-small font-bold tracking-widest text-brandAccent block">cx2222 Çözümü</span>
-            <p class="typo-lead text-white/85 font-light" set:html={formatRich(s.solution)}>
+            <span class="typo-small font-bold tracking-widest text-brandAccent block">{s.solutionLabel || 'cx2222 Çözümü'}</span>
+            <p class="typo-lead text-white/85 font-light" style={resolveTextStyle(s, 'solution') || undefined} set:html={formatRich(s.solution)}>
             </p>
           </div>
         </div>
