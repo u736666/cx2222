@@ -27,16 +27,17 @@ function isExactPage(href: string) {
   <div class="w-full px-6 md:px-16">
     <div class="max-w-custom mx-auto min-h-[4rem] md:min-h-[5rem] py-2 flex items-center justify-between gap-4">
       
-      <div class="flex items-center space-x-12 min-w-0">
-        <a href={headerCfg.brandHref || '/'} class="header-brand inline-flex items-center py-1 text-paletteRichBlack text-2xl leading-none tracking-normal flex-shrink-0 transition-colors duration-200">
-          {site.brand.logoImage ? (
-            <img src={site.brand.logoImage} alt={site.brand.name} class="h-7 w-auto object-contain header-logo-img" />
-          ) : (
-            <><span class="font-light">{site.brand.prefix}</span><span class="font-bold">{site.brand.suffix}</span></>
-          )}
-        </a>
+      <a href={headerCfg.brandHref || '/'} class="header-brand inline-flex items-center py-1 text-paletteRichBlack text-2xl leading-none tracking-normal flex-shrink-0 transition-colors duration-200">
+        {site.brand.logoImage ? (
+          <img src={site.brand.logoImage} alt={site.brand.name} class="h-7 w-auto object-contain header-logo-img" />
+        ) : (
+          <><span class="font-light">{site.brand.prefix}</span><span class="font-bold">{site.brand.suffix}</span></>
+        )}
+      </a>
 
-        <nav aria-label="Ana Menü" class="header-nav hidden lg:flex items-center space-x-8 text-[14px] font-light text-paletteRichBlack/80">
+      <!-- Desktop Sağ Bölüm: Sağa Yaslı Menü ve Buton -->
+      <div class="hidden lg:flex items-center justify-end space-x-8 ml-auto flex-shrink-0">
+        <nav aria-label="Ana Menü" class="header-nav flex items-center space-x-8 text-[14px] font-light text-paletteRichBlack/80">
           {(headerCfg.navLinks || []).map((link: any) => {
             const active = isRouteActive(link.href);
             const activeClasses = active
@@ -69,15 +70,15 @@ function isExactPage(href: string) {
             );
           })}
         </nav>
-      </div>
 
-      {showCtaButton && headerCfg.ctaLabel && (
-        <div class="hidden lg:flex items-center justify-end flex-shrink-0">
-          <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect min-h-[2.75rem] py-2.5 px-7 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold">
-            {headerCfg.ctaLabel}
-          </a>
-        </div>
-      )}
+        {showCtaButton && headerCfg.ctaLabel && (
+          <div class="flex items-center justify-end flex-shrink-0">
+            <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect min-h-[2.75rem] py-2.5 px-7 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold">
+              {headerCfg.ctaLabel}
+            </a>
+          </div>
+        )}
+      </div>
 
       <!-- Mobil Menü Butonu -->
       <div class="flex lg:hidden items-center justify-end flex-shrink-0">
