@@ -96,7 +96,7 @@ const caseSchema = {
 
       <div class="mb-4 typo-small font-semibold tracking-widest flex flex-wrap items-center gap-x-3">
         {project.client && (
-          <span class={`project-client uppercase ${clientStyle ? '' : heroEyebrowColor}`} style={clientStyle || undefined} set:html={formatRich(project.client || '')}></span>
+          <span class={`project-client uppercase ${clientStyle ? '' : heroEyebrowColor}`} style={clientStyle || (activeHeroStyle !== 'brandAccent' ? 'color: var(--color-brand-tag, var(--color-brand-accent)) !important' : undefined)} set:html={formatRich(project.client || '')}></span>
         )}
         {project.sector && (
           <span class="project-sector opacity-70 font-normal" style={resolveTextStyle(project, 'sector') || undefined} set:html={formatRich(project.sector)}></span>

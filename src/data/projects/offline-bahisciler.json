@@ -56,7 +56,8 @@
       {
         "title": "Fiziksel Dokunuşun Gücü",
         "body": "Kullanıcılar kağıt kuponu katlayıp cebine koymanın somut bir 'umut mülkiyeti' yarattığına inanıyordu.",
-        "style": "platinum"
+        "style": "platinum",
+        "bodySize": "16"
       },
       {
         "title": "Bayi Sahibinin Rolü",
@@ -66,7 +67,7 @@
       {
         "title": "Üçüncü Mekan Ritüeli",
         "body": "Bayide geçirilen 45 dakika, kullanıcının hayatındaki streslerden arındığı kutsal bir mola alanıydı.",
-        "style": "brandAccent"
+        "style": "platinum"
       }
     ]
   },

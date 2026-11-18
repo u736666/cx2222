@@ -1509,6 +1509,7 @@
 
     const COLOR_META = [
       { key: 'brandAccent', label: 'Ana Vurgu Rengi (Powder Blush)', desc: 'Ana CTA butonları, alt çizgiler ve etiket vurguları' },
+      { key: 'brandTagColor', label: 'Marka Etiketleri Rengi (Site Genelinde)', desc: 'Hero slider, proje kartları ve proje detayındaki marka / müşteri etiketlerinin genel rengi' },
       { key: 'brandAccentHover', label: 'Ana Vurgu Hover', desc: 'Ana vurgu butonunun üzerine gelindiğindeki ton' },
       { key: 'sandyBrown', label: 'İkincil Vurgu (Sandy Brown)', desc: 'Blog şeritleri ve sıcak ikincil vurgular' },
       { key: 'sandyBrownHover', label: 'İkincil Vurgu Hover', desc: 'İkincil vurgu hover tonu' },
@@ -1529,6 +1530,7 @@
       textMuted: '#313638',
       textLight: '#666666',
       brandAccent: '#E6620C',
+      brandTagColor: '#E6620C',
       brandAccentHover: '#cf5507',
       sandyBrown: '#F09D51',
       sandyBrownHover: '#d98940',
@@ -1735,6 +1737,7 @@
         });
         const PALETTE_OPTIONS = [
           { value: '', label: 'Renk: Varsayılan', hex: 'transparent' },
+          { value: 'brandTag', label: 'Marka Etiketi Rengi', hex: STATE.theme?.brandTagColor || '#E6620C' },
           { value: 'brandAccent', label: 'Turuncu (#E6620C)', hex: '#E6620C' },
           { value: 'richBlack', label: 'Koyu Siyah (#1C1C1C)', hex: '#1C1C1C' },
           { value: 'deepNavy', label: 'Lacivert Gri (#313638)', hex: '#313638' },
@@ -2635,6 +2638,7 @@
         });
         const PALETTE_OPTIONS = [
           { value: '', label: 'Renk: Varsayılan', hex: 'transparent' },
+          { value: 'brandTag', label: 'Marka Etiketi Rengi', hex: STATE.theme?.brandTagColor || '#E6620C' },
           { value: 'brandAccent', label: 'Turuncu (#E6620C)', hex: '#E6620C' },
           { value: 'richBlack', label: 'Koyu Siyah (#1C1C1C)', hex: '#1C1C1C' },
           { value: 'deepNavy', label: 'Lacivert Gri (#313638)', hex: '#313638' },

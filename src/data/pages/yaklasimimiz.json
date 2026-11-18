@@ -44,7 +44,7 @@
             "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
             "p1": "İş dünyası algoritmalar, modeller ve işlem hızlarından bahsediyor ancak günün sonunda satın alma kararı veren, markaya sadık kalan veya öfkeyle ayrılan varlık hala insan.",
             "p2": "CX Folks olarak çalışmalarımızı masa başında değil, müşterinin gerçek dünyasında yürütüyoruz. Etnografik görüşmeler, derin dinleme oturumları ve duygu haritalarıyla, müşterinin sözcüklerinin ardındaki söylenmemiş ihtiyaçlarını projelerimizin merkezine getiriyoruz.",
-            "iconBg": ""
+            "iconBg": "siteBg"
           },
           {
             "id": "northstar-cx",

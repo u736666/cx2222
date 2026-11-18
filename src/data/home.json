@@ -30,8 +30,7 @@
       "cta": "Yaklaşımımızı İnceleyin →",
       "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.png",
       "alt": "Hero 1 - cx2222",
-      "titleTag": "h1",
-      "titleColor": "sandyBrown"
+      "titleTag": "h1"
     },
     {
       "brand": "İGA",
@@ -42,7 +41,7 @@
       "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.png",
       "alt": "Hero 2 - İGA",
       "titleTag": "h1",
-      "titleColor": "platinum"
+      "titleColor": "muted"
     },
     {
       "brand": "Vodafone",

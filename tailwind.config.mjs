@@ -10,6 +10,7 @@ export default {
         siteBg: 'var(--color-site-bg)',
         brandAccent: 'var(--color-brand-accent)',
         brandAccentHover: 'var(--color-brand-accent-hover)',
+        brandTag: 'var(--color-brand-tag)',
         palettePlatinum: 'var(--color-platinum)',
         paletteDustGrey: 'var(--color-dust-grey)',
         paletteSandyBrown: 'var(--color-sandy-brown)',

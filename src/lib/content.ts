@@ -321,6 +321,8 @@ export function getPostsBySlugs(slugs?: string[]): BlogPostData[] {
 export const PALETTE_COLOR_MAP: Record<string, string> = {
   brandAccent: 'var(--color-brand-accent)',
   brandAccentHover: 'var(--color-brand-accent-hover)',
+  brandTag: 'var(--color-brand-tag)',
+  brandTagColor: 'var(--color-brand-tag)',
   richBlack: 'var(--color-rich-black)',
   deepNavy: 'var(--color-deep-navy)',
   platinum: 'var(--color-platinum)',
