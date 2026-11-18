@@ -46,35 +46,20 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "Yılların bankacılık uzmanlarını araştırmacı ve tasarımcı gibi düşünmeye nasıl alıştırırsınız?",
-    "body": "Deneyimsel öğrenme tasarımı 3 haftalık yoğun programda, dijital, pazarlama ve ürün ekiplerinden 60'tan fazla çalışan yer aldı. Teorik eğitim yerine, gerçek saha araştırması, müşteri etkileşimi ve iş fikri geliştirmeyi birleştiren eylem temelli bir öğrenme modeli kurduk. Gerçek uygulama Katılımcılar ilk kez gerçek müşterilerle görüşmeler yaptı, gözlem gerçekleştirdi ve bulgularını iş fikirlerine dönüştürdü. Tüm egzersizler varsayımsal senaryolar yerine bankanın güncel zorlukları üzerine kuruldu. Yöntem transferi Eğitimde etnografik araştırma teknikleri, Ethnogram'ın \"Persona Creator\" aracıyla persona geliştirme ve \"Lean Canvas\" iş modeli yöntemi bir arada kullanıldı."
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Çözümler",
-    "columns": 2,
-    "cards": [
-      {
-        "title": "Çözüm #1",
-        "body": "Saha araştırması eğitimi Katılımcılar, müşteriyle birebir gözlem ve derin görüşme yapmayı öğrendi; kariyerlerinde ilk kez bağımsız araştırma yürüttüler. Persona geliştirme atölyesi Ekipler, soyut \"kullanıcı\" kavramını somut isimler, motivasyonlar ve zorluklarla tanımlanmış kişilere dönüştürdü. İş fikri geliştirme Lean Canvas eğitimiyle fikirler, ölçülebilir hedefleri olan sunulabilir iş konseptlerine dönüştürüldü. İnovasyon süreçlerine entegrasyon Tasarım odaklı düşünme yaklaşımı, Akbank'ın standart proje geliştirme metodolojisine dahil edildi.",
-        "style": "platinum"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<h2>Yaklaşımımız</h2>\n\n<p>Deneyimsel öğrenme tasarımı 3 haftalık yoğun programda, dijital, pazarlama ve ürün ekiplerinden 60'tan fazla çalışan yer aldı. Teorik eğitim yerine, gerçek saha araştırması, müşteri etkileşimi ve iş fikri geliştirmeyi birleştiren eylem temelli bir öğrenme modeli kurduk. Gerçek uygulama Katılımcılar ilk kez gerçek müşterilerle görüşmeler yaptı, gözlem gerçekleştirdi ve bulgularını iş fikirlerine dönüştürdü. Tüm egzersizler varsayımsal senaryolar yerine bankanın güncel zorlukları üzerine kuruldu. Yöntem transferi Eğitimde etnografik araştırma teknikleri, Ethnogram'ın \"Persona Creator\" aracıyla persona geliştirme ve \"Lean Canvas\" iş modeli yöntemi bir arada kullanıldı.</p>\n\n<h3>Katılımcıların sesinden</h3>\n\n<p>\"Eskiden araştırma deyince aklıma sadece anket gelirdi. Bir kafede müşterilerin para alışkanlıklarını dinleyince aslında ne kadar çok şeyi kaçırdığımızı gördüm.\" \"İlk kez bir fikri yönetimle net biçimde paylaşabildim. Artık sadece güzel bir fikir değil, iş değeri olan bir öneri sunabiliyorum.\"</p>\n\n<h2>Çözümler</h2>\n\n<p>Saha araştırması eğitimi Katılımcılar, müşteriyle birebir gözlem ve derin görüşme yapmayı öğrendi; kariyerlerinde ilk kez bağımsız araştırma yürüttüler. Persona geliştirme atölyesi Ekipler, soyut \"kullanıcı\" kavramını somut isimler, motivasyonlar ve zorluklarla tanımlanmış kişilere dönüştürdü. İş fikri geliştirme Lean Canvas eğitimiyle fikirler, ölçülebilir hedefleri olan sunulabilir iş konseptlerine dönüştürüldü. İnovasyon süreçlerine entegrasyon Tasarım odaklı düşünme yaklaşımı, Akbank'ın standart proje geliştirme metodolojisine dahil edildi.</p>",
+  "summaryItems": [
+    {
+      "title": "Sonuçlar",
+      "body": "Yetkinlik gelişimi 60'tan fazla çalışan, pazarlama, dijital ve ürün ekiplerinde eğitildi. 40'tan fazla yeni hizmet fikri geliştirildi ve yönetimle paylaşıldı. Ekipler içinde bağımsız saha araştırma yetkinliği kalıcı hale geldi. İnovasyon çıktısı Eğitimden doğan bazı fikirler prototip aşamasına taşındı. Persona kartları, ürün geliştirmede standart araç haline geldi. \"Lean Canvas\" yöntemi tüm inovasyon sunumlarında temel model olarak benimsendi. Kültürel dönüşüm Ekipler artık özellik değil, problem odaklı düşünmeye başladı. Müşteri empatisi, yeni projelerde zorunlu adım haline geldi. Tasarım odaklı düşünme, bankanın iş yapış biçiminin parçası oldu. Sürdürülebilir etki Katılımcılar, kurum içi inovasyon elçileri haline geldi. Eğitim modeli, dijital dönüşüm stratejisinin kalıcı bileşeni olarak benimsendi. Müşteri araştırmalarında dış danışman ihtiyacı azaldı."
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Akbank inovasyon programı, müşteri odaklı tasarımın kurum ölçeğinde uygulanabileceğini gösterdi. Etnografik araştırma ve iş fikri geliştirmeyi birleştiren bu model, bilgi değil, davranış değişimi yarattı. Kurumun inovasyon kültürü artık \"Ne inşa edebiliriz?\" değil, \"Ne çözmeliyiz?\" sorusuyla başlıyor."
+    }
+  ],
+  "quote": "Akbank inovasyon programı, müşteri odaklı tasarımın kurum ölçeğinde uygulanabileceğini gösterdi. Etnografik araştırma ve iş fikri geliştirmeyi birleştiren bu model, bilgi değil, davranış değişimi yarattı. Kurumun inovasyon kültürü artık \"Ne inşa edebiliriz?\" değil, \"Ne çözmeliyiz?\" sorusuyla başlıyor.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }

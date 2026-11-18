@@ -232,6 +232,8 @@ export interface ProjectData {
   seo?: SeoGeoConfig;
   metrics?: Array<{ value: string; label: string }>;
   challenge?: { eyebrow?: string; title: string; body: string };
+  content?: string;
+  summaryItems?: Array<{ title: string; body: string }>;
   solution?: {
     eyebrow?: string;
     title: string;

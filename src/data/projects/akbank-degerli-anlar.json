@@ -46,50 +46,20 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "Bankacılık bir hizmet değil, bir yaşam ortağı gibi hissedilebilir mi?",
-    "body": "3 haftalık video etnografi programında müşterilerin şube içi deneyimlerini, duygusal tepkilerini ve mikro anlarını gözlemledik. Sekiz şubede 32 katılımcıyla yapılan saha çalışmaları, insanların büyük jestler değil, küçük ama zamanında gelen destek anlarını hatırladığını gösterdi."
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Çözümler",
-    "columns": 3,
-    "cards": [
-      {
-        "title": "Proaktif empati sistemi",
-        "body": "İşlem desenlerinden (\"patterns) stres sinyallerini algılayıp, satış değil destek odaklı müdahale sağlayan sistem geliştirildi. Örneğin hastane ödemesi sonrası \"geçmiş olsun\" mesajı ve özel destek araması yapıldı.",
-        "style": "platinum"
-      },
-      {
-        "title": "Tanıma mimarisi",
-        "body": "Doğum günü, yıl dönümü gibi kişisel tarihler için özel teşekkür ve jestler planlandı.",
-        "style": "dustGrey"
-      },
-      {
-        "title": "Acil durum protokolleri",
-        "body": "Kritik durumlarda hızlı yardım sağlayan süreçler tasarlandı.",
-        "style": "platinum"
-      },
-      {
-        "title": "Finansal güçlenme araçları",
-        "body": "Kişisel finans farkındalığını artıran sade gösterge panelleri ve mikro eğitimler devreye alındı.",
-        "style": "dustGrey"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<h2>Yaklaşımımız</h2>\n\n<p>3 haftalık video etnografi programında müşterilerin şube içi deneyimlerini, duygusal tepkilerini ve mikro anlarını gözlemledik. Sekiz şubede 32 katılımcıyla yapılan saha çalışmaları, insanların büyük jestler değil, küçük ama zamanında gelen destek anlarını hatırladığını gösterdi.</p>\n\n<h2>Temel içgörüler</h2>\n\n<p>Asıl sorun fiyat değil, güven ve şeffaflık eksikliğiydi. İnsanlar seyahati bir macera olarak yaşıyor, ancak hizmet dili bunu desteklemiyordu. Dolaşım deneyimi, tarifeden çok \"seyahat hazırlığı\" olarak algılanmalıydı.</p>\n\n<h2>Çözümler</h2>\n\n<h3>Proaktif empati sistemi</h3>\n\n<p>İşlem desenlerinden (\"patterns) stres sinyallerini algılayıp, satış değil destek odaklı müdahale sağlayan sistem geliştirildi. Örneğin hastane ödemesi sonrası \"geçmiş olsun\" mesajı ve özel destek araması yapıldı.</p>\n\n<h3>Tanıma mimarisi</h3>\n\n<p>Doğum günü, yıl dönümü gibi kişisel tarihler için özel teşekkür ve jestler planlandı.</p>\n\n<h3>Acil durum protokolleri</h3>\n\n<p>Kritik durumlarda hızlı yardım sağlayan süreçler tasarlandı.</p>\n\n<h3>Finansal güçlenme araçları</h3>\n\n<p>Kişisel finans farkındalığını artıran sade gösterge panelleri ve mikro eğitimler devreye alındı.</p>",
+  "summaryItems": [
+    {
+      "title": "Etkisi",
+      "body": "Proje, yüksek regülasyonlu finans dünyasında bile duygusal tasarımın fark yaratabileceğini gösterdi. Akbank, müşterilerini yalnızca işlem yapan değil, kendini değerli hisseden bireyler olarak tanımladı."
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Akbank deneyimi, insanların hatırladığı şeyin mükemmel işlem değil, kendini anlaşıldığı an olduğunu kanıtladı. Küçük ama anlamlı dokunuşlar, bankayı insanî bir markaya dönüştürdü."
+    }
+  ],
+  "quote": "Akbank deneyimi, insanların hatırladığı şeyin mükemmel işlem değil, kendini anlaşıldığı an olduğunu kanıtladı. Küçük ama anlamlı dokunuşlar, bankayı insanî bir markaya dönüştürdü.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }

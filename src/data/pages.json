@@ -594,7 +594,7 @@
   },
   "projelerIndex": {
     "seo": {
-      "title": "Vaka Analizleri & Başarı Hikayeleri | CX Folks",
+      "title": "Projeler | CX Folks",
       "description": "Havalimanı operasyonlarından telekoma, bankacılıktan otomotive sahada kanıtlanmış müşteri deneyimi (CX) ve dijital dönüşüm başarı hikayeleri.",
       "schemaType": "CollectionPage",
       "keywords": "CX vaka analizleri, müşteri deneyimi projeleri, başarı hikayeleri",
@@ -1207,8 +1207,16 @@
       "schemaType": "WebPage",
       "keywords": "CX Folks gizlilik politikası, KVKK aydınlatma metni, veri güvenliği",
       "aiSummary": "CX Folks olarak 6698 sayılı KVKK kapsamında kişisel verilerinizi şeffaflık, güvenilirlik ve kanuni sınırlar dahilinde koruyoruz.",
-      "aboutTopics": ["Kişisel Verilerin Korunması", "Gizlilik Politikası", "KVKK Hakları"],
-      "keyTakeaways": ["Veri sorumlusu: CX Folks", "KVKK Madde 11 uyarınca yasal haklar", "Güvenli ve şeffaf veri işleme süreçleri"],
+      "aboutTopics": [
+        "Kişisel Verilerin Korunması",
+        "Gizlilik Politikası",
+        "KVKK Hakları"
+      ],
+      "keyTakeaways": [
+        "Veri sorumlusu: CX Folks",
+        "KVKK Madde 11 uyarınca yasal haklar",
+        "Güvenli ve şeffaf veri işleme süreçleri"
+      ],
       "llmsInclude": true
     },
     "hero": {
@@ -1229,8 +1237,16 @@
       "schemaType": "WebPage",
       "keywords": "CX Folks çerez politikası, cookie policy, web çerezleri",
       "aiSummary": "Web sitemizin güvenli, hızlı ve kullanıcı dostu çalışması için kullanılan çerez türleri ve yönetim yöntemleri hakkında detaylı bilgi.",
-      "aboutTopics": ["Çerez Politikası", "Kullanıcı Tercihleri", "Web Sitesi Güvenliği"],
-      "keyTakeaways": ["Zorunlu ve analitik çerez kullanımı", "Kişiselleştirilmiş deneyim ve performans takibi", "Tarayıcı üzerinden çerez yönetimi kılavuzu"],
+      "aboutTopics": [
+        "Çerez Politikası",
+        "Kullanıcı Tercihleri",
+        "Web Sitesi Güvenliği"
+      ],
+      "keyTakeaways": [
+        "Zorunlu ve analitik çerez kullanımı",
+        "Kişiselleştirilmiş deneyim ve performans takibi",
+        "Tarayıcı üzerinden çerez yönetimi kılavuzu"
+      ],
       "llmsInclude": true
     },
     "hero": {

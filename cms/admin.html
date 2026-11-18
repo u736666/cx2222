@@ -4500,8 +4500,9 @@
       if (!proj.seo) proj.seo = {};
       if (!proj.metrics) proj.metrics = [];
       if (!proj.bullets) proj.bullets = [];
-      if (!proj.challenge) proj.challenge = { eyebrow: 'Zorluk', title: '', body: '' };
-      if (!proj.solution) proj.solution = { eyebrow: 'Çözüm', title: '', columns: 3, cards: [] };
+      if (!proj.challenge) proj.challenge = { eyebrow: 'Soru', title: '', body: '' };
+      if (proj.content === undefined) proj.content = '';
+      if (!proj.summaryItems) proj.summaryItems = [];
 
       const baseCard = el('div', { className: 'card' });
       const bHead = el('div', { className: 'card-header' });
@@ -4621,56 +4622,61 @@
       editorCol.appendChild(mCard);
 
       const cCard = el('div', { className: 'card' });
-      cCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Zorluk / Çıkış Noktası' })]));
+      cCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Soru Bölümü (Vurgulu Kutu)' })]));
       cCard.appendChild(el('div', { className: 'grid-2' }, [
-        fieldInput('Üst Etiket', proj.challenge, 'eyebrow', 'projects'),
-        fieldInput('Başlık', proj.challenge, 'title', 'projects'),
+        fieldInput('Üst Etiket (Örn: Soru)', proj.challenge, 'eyebrow', 'projects'),
+        fieldInput('Soru Başlığı', proj.challenge, 'title', 'projects'),
       ]));
-      cCard.appendChild(fieldInput('Detaylı Anlatım', proj.challenge, 'body', 'projects', { multiline: true }));
+      cCard.appendChild(fieldInput('Ek Açıklama (Opsiyonel)', proj.challenge, 'body', 'projects', { multiline: true }));
       editorCol.appendChild(cCard);
 
-      const sCard = el('div', { className: 'card' });
-      const sHead = el('div', { className: 'card-header' });
-      sHead.appendChild(el('h3', { className: 'card-title', text: 'Çözüm & Bulgular Kartları' }));
-      sHead.appendChild(el('button', {
+      // Sol Kolon: Zengin Metin (Rich Text / HTML)
+      const contentCard = el('div', { className: 'card' });
+      contentCard.appendChild(el('div', { className: 'card-header' }, [
+        el('div', {}, [
+          el('h3', { className: 'card-title', text: 'Proje İçeriği (Sol Kolon — Zengin Metin / HTML)' }),
+          el('p', { className: 'card-sub', text: 'Başlıklar (<h2>, <h3>), paragraflar (<p>), listeler (<ul><li>) ve blok alıntıları (<blockquote>) kullanabilirsiniz.' })
+        ])
+      ]));
+      contentCard.appendChild(fieldInput('Zengin Metin İçerik (HTML)', proj, 'content', 'projects', { multiline: true }));
+      contentCard.appendChild(fieldInput('Müşteri Alıntısı (Opsiyonel Vurgulu Kutu)', proj, 'quote', 'projects', { multiline: true }));
+      editorCol.appendChild(contentCard);
+
+      // Sağ Kolon: Gri Kutu Özeti & Çıktılar
+      const summaryCard = el('div', { className: 'card' });
+      const summaryHead = el('div', { className: 'card-header' });
+      summaryHead.appendChild(el('div', {}, [
+        el('h3', { className: 'card-title', text: 'Proje Özeti & Çıktılar (Sağ Kolon — Gri Kutu)' }),
+        el('p', { className: 'card-sub', text: 'Ethnogram stili sağda yapışkan duran özet kutusu maddeleri (Operasyonel, Deneyim, Sonuçlar, Ödüller vb.)' })
+      ]));
+      summaryHead.appendChild(el('button', {
         type: 'button',
         className: 'btn btn-dark btn-sm',
-        text: '+ Kart Ekle',
+        text: '+ Madde Ekle',
         onClick: () => {
-          proj.solution.cards.push({ title: 'Yeni Adım', body: 'Açıklama', style: 'platinum' });
+          if (!proj.summaryItems) proj.summaryItems = [];
+          proj.summaryItems.push({ title: 'Yeni Başlık', body: 'Açıklama' });
           markDirty('projects');
           renderWorkspace();
         },
       }));
-      sCard.appendChild(sHead);
-      sCard.appendChild(el('div', { className: 'grid-3' }, [
-        fieldInput('Üst Etiket', proj.solution, 'eyebrow', 'projects'),
-        fieldInput('Başlık', proj.solution, 'title', 'projects'),
-        fieldSelect('Sütun Sayısı', proj.solution, 'columns', [
-          { value: 3, label: '3 Sütun' },
-          { value: 2, label: '2 Sütun (Grid)' },
-        ], 'projects', (val) => { proj.solution.columns = Number(val); }),
-      ]));
-      (proj.solution.cards || []).forEach((cardItem, idx) => {
+      summaryCard.appendChild(summaryHead);
+      (proj.summaryItems || []).forEach((item, idx) => {
         const r = el('div', { className: 'repeater-item' });
         const rHead = el('div', { className: 'repeater-head' });
-        rHead.appendChild(el('span', { className: 'repeater-label', text: `Kart #${idx + 1}` }));
+        rHead.appendChild(el('span', { className: 'repeater-label', text: `Özet Madde #${idx + 1}` }));
         rHead.appendChild(el('button', {
           type: 'button',
           className: 'btn btn-danger btn-sm',
           text: 'Sil',
-          onClick: () => { proj.solution.cards.splice(idx, 1); markDirty('projects'); renderWorkspace(); },
+          onClick: () => { proj.summaryItems.splice(idx, 1); markDirty('projects'); renderWorkspace(); },
         }));
         r.appendChild(rHead);
-        r.appendChild(el('div', { className: 'grid-2' }, [
-          fieldInput('Kart Başlığı', cardItem, 'title', 'projects'),
-          fieldSelect('Kart Rengi', cardItem, 'style', SURFACE_OPTIONS, 'projects'),
-        ]));
-        r.appendChild(fieldInput('İçerik', cardItem, 'body', 'projects', { multiline: true }));
-        sCard.appendChild(r);
+        r.appendChild(fieldInput('Madde Başlığı (Örn: Operasyonel, Deneyim, Sonuçlar)', item, 'title', 'projects'));
+        r.appendChild(fieldInput('Açıklama Metni', item, 'body', 'projects', { multiline: true }));
+        summaryCard.appendChild(r);
       });
-      sCard.appendChild(fieldInput('Müşteri Alıntısı (Opsiyonel)', proj, 'quote', 'projects', { multiline: true }));
-      editorCol.appendChild(sCard);
+      editorCol.appendChild(summaryCard);
 
       // Öne Çıkan Blog Yazıları (Proje Detayı)
       blogShowcaseEditorSection(editorCol, proj, 'projects', 'Bu Proje Detayında Öne Çıkan Blog Yazıları');

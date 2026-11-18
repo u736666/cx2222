@@ -46,40 +46,28 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "\"Online\" bahis bu kadar kolayken, neden milyonlarca insan hâlâ her hafta sonu fiziksel bayilere gitmeyi tercih ediyordu?",
-    "body": "Çözümler ve çıktıları"
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Çözümler ve çıktıları",
-    "columns": 2,
-    "cards": [
-      {
-        "title": "Çözüm #1",
-        "body": "Dijital topluluk mimarisi Uygulama içine entegre edilen grup alanları sayesinde kullanıcılar artık tahminlerini paylaşabiliyor, birlikte kutlayabiliyor, sosyal bağlarını sürdürebiliyordu. \"Offline\" deneyimi değerli kılan aidiyet duygusu dijitalde yeniden inşa edildi. Güven tasarımı Fiziksel kuponun sağladığı güven duygusu dijitalde görsel onay sistemleriyle yeniden yaratıldı. Gerçek zamanlı ilerleme göstergeleri ve dijital bahis fişleri kullanıcıya somut güven hissi sağladı. Hibrit deneyim stratejisi \"Online\" kolaylığı \"offline\" toplulukla birleştiren kampanyalar geliştirildi. Kullanıcılar artık dijitalden bahis oynarken aynı zamanda topluluk içinde etkileşim kurabiliyordu. Kişilik odaklı özellikler Yeni başlayanlar için sadeleştirilmiş tek tıklama bahis akışı, deneyimli kullanıcılar için gelişmiş çoklu maç araçları ve analitik ekranlar tasarlandı.",
-        "style": "platinum"
-      },
-      {
-        "title": "Çözüm #2",
-        "body": "\"Artık evden oynasam da arkadaşlarla bağlantıdayım. Maç sırasında grup sohbeti neredeyse bayide olmaktan daha keyifli.\" \"Dijital kuponun görünümü kâğıttakiyle aynı. Ekran görüntüsünü alıyorum, içim rahat ediyor.\"",
-        "style": "dustGrey"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<p>Kalabalık, gürültü, sınırlı çalışma saatleri gibi zorluklara rağmen \"offline\" kültür canlıydı. Bilyoner bu davranışı modası geçmiş bir alışkanlık olarak görmedi; aksine stratejik bir karar aldı. Amacı, \"offline\" dünyanın sunduğu ama dijitalde eksik kalan duygusal ve sosyal değerleri anlamak ve bu özü dijital deneyime taşımaktı.</p>\n\n<ul><li>3 haftalık saha araştırmasında, ekibimiz</li><li>Türkiye'nin \"offline\" bahis kültürüne doğrudan dâhil oldu.</li><li>Yüksek bahis yoğunluğuna sahip maç günlerinde saha gözlemleri ve derinlemesine bağlamsal görüşmeler gerçekleştirdik.</li><li>Etnografik dokümantasyonla farklı oyuncu profillerini, davranış kalıplarını ve sosyal ritüelleri gözlemledik.</li><li>Hafta sonu eğlencesi için bahis yapanlardan çoklu kuponlarla ciddi yatırım yapanlara kadar dört temel oyuncu tipi belirlendi.</li><li>Her biri farklı motivasyonlara, alışkanlıklara ve topluluk içi rollere sahipti.</li><li>Araştırma, bireysel kazançtan çok kolektif deneyimin önemli olduğunu gösterdi: insanların birlikte tahmin yürütmesi, kazançları paylaşması, kayıpları birlikte yaşaması güven inşa ediyordu.</li></ul>\n\n<h3>Katılımcıların sesinden</h3>\n\n<blockquote>\"Bayide arkadaşlarla o heyecanı paylaşıyorum. Online oynayınca yalnız hissediyorum. Kazanmak da eğlenceli olmuyor, kimse görmezse.\" \"Kuponu elime aldığımda içim rahatlıyor. Telefonda bazen emin olamıyorum, gerçekten oynadım mı diye.\"</blockquote>\n\n<h2>Çözümler ve çıktıları</h2>\n\n<p>Dijital topluluk mimarisi Uygulama içine entegre edilen grup alanları sayesinde kullanıcılar artık tahminlerini paylaşabiliyor, birlikte kutlayabiliyor, sosyal bağlarını sürdürebiliyordu. \"Offline\" deneyimi değerli kılan aidiyet duygusu dijitalde yeniden inşa edildi. Güven tasarımı Fiziksel kuponun sağladığı güven duygusu dijitalde görsel onay sistemleriyle yeniden yaratıldı. Gerçek zamanlı ilerleme göstergeleri ve dijital bahis fişleri kullanıcıya somut güven hissi sağladı. Hibrit deneyim stratejisi \"Online\" kolaylığı \"offline\" toplulukla birleştiren kampanyalar geliştirildi. Kullanıcılar artık dijitalden bahis oynarken aynı zamanda topluluk içinde etkileşim kurabiliyordu. Kişilik odaklı özellikler Yeni başlayanlar için sadeleştirilmiş tek tıklama bahis akışı, deneyimli kullanıcılar için gelişmiş çoklu maç araçları ve analitik ekranlar tasarlandı.</p>\n\n<blockquote>\"Artık evden oynasam da arkadaşlarla bağlantıdayım. Maç sırasında grup sohbeti neredeyse bayide olmaktan daha keyifli.\" \"Dijital kuponun görünümü kâğıttakiyle aynı. Ekran görüntüsünü alıyorum, içim rahat ediyor.\"</blockquote>",
+  "summaryItems": [
+    {
+      "title": "Sonuçlar",
+      "body": "Operasyonel"
+    },
+    {
+      "title": "Ödüller",
+      "body": "Türkiye International Finance Awards 2024 – En İyi Müşteri Hizmeti International Business Excellence Awards 2024 – En Müşteri Odaklı Kültür Conde Nast Readers' Choice Awards 2024 – Dünyanın En İyi Havalimanı ACI World 2023 – Avrupa'nın En İyi Havalimanı (40 milyon+ yolcu)"
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Kullanım ve benimseme Altı ay içinde offline oyuncuların dijital platformu deneme oranı %24 arttı. Topluluk özelliklerini kullanan kullanıcıların ortalama oturum süresi %19 yükseldi. Dijitale geçen offline oyuncular arasında kullanıcı tutma oranı belirgin şekilde arttı. Güven göstergeleri Bahis onay süreçlerinden memnuniyet %40 yükseldi. Kullanıcıların dijital güven algısı önemli ölçüde arttı, dijital kaygı azaldı. Topluluk katılımı Sosyal özellikler bireysel oyunlara kıyasla 2,5 kat daha fazla etkileşim sağladı. Grup bahis özelliği platformun en çok kullanılan premium modülüne dönüştü. Topluluk içerikleri müşteri edinme maliyetlerini düşürdü. Stratejik konumlanma Bilyoner, Türk bahis kültürünü anlayan ve ona saygı gösteren dijital platform olarak konumlandı. Hibrit kampanyalar dijital odaklı yaklaşımlardan daha yüksek dönüşüm sağladı. Tanımlanan dört oyuncu profili, ürün geliştirme stratejisine kalıcı referans haline geldi."
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Bilyoner, \"offline\" dünyanın topluluk ruhunu ve güven ritüellerini dijitalin kolaylığıyla birleştirdi. Böylece teknoloji, kültürün yerine geçmek yerine onu güçlendiren bir köprüye dönüştü. Kullanıcılar artık bağlantı ve heyecan hissini koruyarak dijital erişim avantajı kazandı. Bilyoner için bu, özelliklerle değil kültürel özgünlükle kazanılmış kalıcı bir üstünlüktü."
+    }
+  ],
+  "quote": "Bilyoner, \"offline\" dünyanın topluluk ruhunu ve güven ritüellerini dijitalin kolaylığıyla birleştirdi. Böylece teknoloji, kültürün yerine geçmek yerine onu güçlendiren bir köprüye dönüştü. Kullanıcılar artık bağlantı ve heyecan hissini koruyarak dijital erişim avantajı kazandı. Bilyoner için bu, özelliklerle değil kültürel özgünlükle kazanılmış kalıcı bir üstünlüktü.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }

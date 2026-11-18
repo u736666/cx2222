@@ -67,9 +67,8 @@ const solutionTitleStyle = resolveTextStyle(project.solution, 'title');
 
 const validMetrics = (project.metrics || []).filter((m: any) => m && (String(m.value || '').trim() || String(m.label || '').trim()));
 const hasMetrics = validMetrics.length > 0;
-
-const img2Pos = project.image2Position || 'afterChallenge';
-const img3Pos = project.image3Position || 'afterSolution';
+const hasSummary = Boolean(project.summaryItems && project.summaryItems.length > 0);
+const hasChallenge = Boolean(project.challenge && (project.challenge.title || project.challenge.body));
 
 const caseSchema = {
   "@context": "https://schema.org",
@@ -155,112 +154,84 @@ const caseSchema = {
     </div>
   </section>
 
-  <!-- Narrative -->
-  <section class="pt-14 md:pt-20 pb-24 md:pb-36 bg-siteBg text-paletteRichBlack px-6 md:px-16">
-    <div class="max-w-4xl mx-auto space-y-16">
-      
-      {project.content && String(project.content).trim() !== '' && (
-        <div class="prose max-w-none space-y-6 typo-body text-paletteRichBlack/85 font-light" style={resolveTextStyle(project, 'content') || undefined} set:html={project.content}></div>
-      )}
-
-      {project.image2 && img2Pos === 'afterContent' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-      {project.image3 && img3Pos === 'afterContent' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-
-      {project.challenge && (
-        <div class="space-y-4">
-          {project.challenge.eyebrow && String(project.challenge.eyebrow).trim() !== '' && (
-            <span class="typo-small font-bold tracking-widest text-brandAccent block" style={challengeEyebrowStyle || undefined} set:html={formatRich(project.challenge.eyebrow)}></span>
+  <!-- Soru Bölümü (Question Callout) -->
+  {hasChallenge && (
+    <section class="px-6 md:px-16 pt-12 md:pt-16 pb-0 bg-siteBg">
+      <div class="max-w-custom mx-auto">
+        <div class="bg-palettePlatinum p-8 md:p-12 border-l-4 border-brandAccent">
+          {project.challenge?.eyebrow && String(project.challenge.eyebrow).trim() !== '' && (
+            <span class="typo-small font-bold uppercase tracking-widest text-brandAccent block mb-3" style={challengeEyebrowStyle || undefined} set:html={formatRich(project.challenge.eyebrow)}></span>
           )}
-          {project.challenge.title && String(project.challenge.title).trim() !== '' && (
+          {project.challenge?.title && String(project.challenge.title).trim() !== '' && (
             <ChallengeTag class="typo-h2 text-paletteRichBlack" style={challengeTitleStyle || undefined} set:html={formatRich(project.challenge.title)}>
             </ChallengeTag>
           )}
-          {project.challenge.body && String(project.challenge.body).trim() !== '' && (
-            <p class="typo-body text-paletteRichBlack/75 font-light" style={challengeBodyStyle || undefined} set:html={formatRich(project.challenge.body)}>
+          {project.challenge?.body && String(project.challenge.body).trim() !== '' && (
+            <p class="typo-body text-paletteRichBlack/75 font-light mt-4" style={challengeBodyStyle || undefined} set:html={formatRich(project.challenge.body)}>
             </p>
           )}
         </div>
-      )}
+      </div>
+    </section>
+  )}
 
-      {project.image2 && img2Pos === 'afterChallenge' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-      {project.image3 && img3Pos === 'afterChallenge' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-
-      {project.solution && (
-        <div class="space-y-4">
-          {project.solution.eyebrow && String(project.solution.eyebrow).trim() !== '' && (
-            <span class="typo-small font-bold tracking-widest text-brandAccent block" style={solutionEyebrowStyle || undefined} set:html={formatRich(project.solution.eyebrow)}></span>
+  <!-- Görsel 2 ve 3 -->
+  {(project.image2 || project.image3) && (
+    <section class="px-6 md:px-16 pt-10 md:pt-14 pb-0 bg-siteBg">
+      <div class="max-w-custom mx-auto">
+        <div class={`grid grid-cols-1 ${project.image2 && project.image3 ? 'md:grid-cols-2' : 'grid-cols-1'} gap-6 md:gap-8`}>
+          {project.image2 && (
+            <div class="w-full aspect-[16/10] bg-palettePlatinum overflow-hidden">
+              <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
+            </div>
           )}
-          {project.solution.title && String(project.solution.title).trim() !== '' && (
-            <SolutionTag class="typo-h2 text-paletteRichBlack" style={solutionTitleStyle || undefined} set:html={formatRich(project.solution.title)}>
-            </SolutionTag>
-          )}
-          {project.solution.cards && project.solution.cards.length > 0 && (
-            <div class={`grid grid-cols-1 ${project.solution.columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6 pt-4`}>
-              {project.solution.cards.map((card: any) => {
-                const cardSt = getSurfaceStyle(card.style || 'platinum');
-                const cardTitleStyle = resolveTextStyle(card, 'title');
-                const cardBodyStyle = resolveTextStyle(card, 'body');
-                const CardHeadingTag = (resolveTextTag(card, 'title', 'h3') || 'h3') as any;
-                return (
-                  <div class={`p-8 ${cardSt.section}`}>
-                    {card.title && String(card.title).trim() !== '' && (
-                      <CardHeadingTag class={`typo-h3 mb-2 ${cardSt.cardTitle}`} style={cardTitleStyle || undefined} set:html={formatRich(card.title)}></CardHeadingTag>
-                    )}
-                    {card.body && String(card.body).trim() !== '' && (
-                      <p class={`typo-small font-light ${cardSt.cardBody}`} style={cardBodyStyle || undefined} set:html={formatRich(card.body)}>
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
+          {project.image3 && (
+            <div class="w-full aspect-[16/10] bg-palettePlatinum overflow-hidden">
+              <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
             </div>
           )}
         </div>
-      )}
+      </div>
+    </section>
+  )}
 
-      {project.image2 && img2Pos === 'afterSolution' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-      {project.image3 && img3Pos === 'afterSolution' && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
+  <!-- 2 Kolonlu İçerik ve Gri Kutu Özeti -->
+  <section class="px-6 md:px-16 pt-12 md:pt-16 pb-24 md:pb-36 bg-siteBg text-paletteRichBlack">
+    <div class="max-w-custom mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        
+        <!-- Sol Kolon: Zengin Metin (Rich Text) & Alıntı -->
+        <div class={`${hasSummary ? 'lg:col-span-8' : 'lg:col-span-12 max-w-4xl'} space-y-8`}>
+          {project.content && String(project.content).trim() !== '' && (
+            <div class="prose-project typo-body font-light text-paletteRichBlack/85 leading-relaxed" style={resolveTextStyle(project, 'content') || undefined} set:html={project.content}></div>
+          )}
 
-      {project.quote && String(project.quote).trim() !== '' && (
-        <div class="p-10 md:p-14 bg-palettePlatinum italic text-lg md:text-2xl text-paletteRichBlack/85 font-light leading-relaxed" style={resolveTextStyle(project, 'quote') || undefined} set:html={formatRich(project.quote)}>
+          {project.quote && String(project.quote).trim() !== '' && (
+            <div class="p-8 md:p-12 bg-palettePlatinum border-l-2 border-brandAccent italic text-lg md:text-xl text-paletteRichBlack/90 font-light leading-relaxed my-8" style={resolveTextStyle(project, 'quote') || undefined} set:html={formatRich(project.quote)}>
+            </div>
+          )}
         </div>
-      )}
 
-      {project.image2 && (img2Pos === 'afterQuote' || img2Pos === 'end') && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image2} alt={project.image2Alt || `${project.title} Görsel 2`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
-      {project.image3 && (img3Pos === 'afterQuote' || img3Pos === 'end') && (
-        <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-palettePlatinum overflow-hidden">
-          <img src={project.image3} alt={project.image3Alt || `${project.title} Görsel 3`} class="w-full h-full object-cover grayscale contrast-125" />
-        </div>
-      )}
+        <!-- Sağ Kolon: Ethnogram Stili Gri Kutu Özeti -->
+        {hasSummary && (
+          <aside class="lg:col-span-4">
+            <div class="sticky top-28 bg-palettePlatinum p-6 md:p-8 space-y-8 border-t-2 md:border-t-0 border-paletteRichBlack/10">
+              <div class="border-b border-paletteRichBlack/10 pb-4">
+                <span class="typo-small font-bold uppercase tracking-widest text-paletteRichBlack/60 block">Proje Özeti & Çıktılar</span>
+              </div>
+              <div class="space-y-6">
+                {project.summaryItems?.map((item: any) => (
+                  <div class="space-y-2">
+                    <h4 class="typo-small font-bold uppercase tracking-wider text-paletteRichBlack" set:html={formatRich(item.title)}></h4>
+                    <p class="typo-small text-paletteRichBlack/80 font-light leading-relaxed whitespace-pre-line" set:html={formatRich(item.body)}></p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </aside>
+        )}
 
+      </div>
     </div>
   </section>
 
@@ -271,3 +242,79 @@ const caseSchema = {
   <CTASection {...project.cta} visible={project.cta?.visible !== false} />
 
 </Layout>
+
+<style>
+  :global(.prose-project h2) {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 768px) {
+    :global(.prose-project h2) {
+      font-size: 2.125rem;
+      line-height: 2.5rem;
+    }
+  }
+  :global(.prose-project h2:first-child) {
+    margin-top: 0;
+  }
+  :global(.prose-project h3) {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #111111;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  @media (min-width: 768px) {
+    :global(.prose-project h3) {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+    }
+  }
+  :global(.prose-project p) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    color: rgba(17, 17, 17, 0.85);
+    margin-bottom: 1.25rem;
+  }
+  :global(.prose-project ul) {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  :global(.prose-project li) {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 300;
+    color: rgba(17, 17, 17, 0.85);
+  }
+  :global(.prose-project strong), :global(.prose-project b) {
+    font-weight: 600;
+    color: #111111;
+  }
+  :global(.prose-project a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  :global(.prose-project a:hover) {
+    color: var(--brand-accent, #E9F056);
+  }
+  :global(.prose-project blockquote) {
+    border-left: 3px solid var(--brand-accent, #E9F056);
+    padding: 1rem 1.5rem;
+    background: #f0f0f0;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+</style>

@@ -44,40 +44,28 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "Kalıcı bağlılığı yaratan insani dokunuş nasıl tasarlanır?",
-    "body": "Katılımcıların sesinden"
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Çözümler",
-    "columns": 2,
-    "cards": [
-      {
-        "title": "Çözüm #1",
-        "body": "Kültürel yeniden çerçeveleme Sigorta, \"riskten korunma\" yerine \"aileni koruma sorumluluğu\" olarak konumlandı. Böylece kadercilik anlayışıyla çatışmak yerine onunla uyum sağlandı. Görsel iletişim sistemi Yoğun metinli poliçeler yerine görseller, ikonlar ve basit grafikler kullanılarak anlaşılabilirlik artırıldı. Rehberli satın alma yolculuğu Adım adım ilerleyen, kullanıcının her aşamada ne yapacağını açıkça gösteren süreç tasarlandı. Güven kanalları Kişisel iletişim tercihleri korunarak yüz yüze rehberlik ve danışmanlık seçenekleri sunuldu.",
-        "style": "platinum"
-      },
-      {
-        "title": "Çözüm #2",
-        "body": "Pilot gruplarda dolaşım aktivasyonu %22 arttı, fatura şoku şikayetleri belirgin şekilde azaldı.",
-        "style": "dustGrey"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<h2>Yaklaşımımız</h2>\n\n<h3>Katılımcıların sesinden</h3>\n\n<ul><li>6 haftalık etnografik araştırmada</li><li>Türk hanelerinin risk, koruma ve hazırlık kavramlarını nasıl tanımladığını inceledik.</li><li>Yeni evliler, ilk kez ev sahibi olanlar ve çok kuşaklı ailelerle derin görüşmeler yapıldı.</li><li>Analiz sonucunda dört temel engel belirlendi: Satın alma süreci karmaşık ve yönsüzdü. Teknik dil, kullanıcıyı yabancılaştırıyordu. Kişisel temas eksikliği güveni azaltıyordu. Kadercilik ile \"hazırlıklı olma\" fikri kültürel olarak çelişiyordu. Davranış tasarımı atölyelerinde bu içgörüler ürün tasarımı ilkelerine dönüştürüldü. Amaç kültüre karşı değil, onunla uyum içinde hareket etmekti.</li></ul>\n\n<blockquote>\"O evrakları hiç anlamadım. Bir sayfa görsel, on sayfa terimden daha çok şey anlatıyor.\" \"İlk evimi aldığımda sigorta istedim ama nereden başlayacağımı bilmiyordum. Adım adım yönlendirilsem çok daha kolay olurdu.\"</blockquote>\n\n<h2>Çözümler</h2>\n\n<p>Kültürel yeniden çerçeveleme Sigorta, \"riskten korunma\" yerine \"aileni koruma sorumluluğu\" olarak konumlandı. Böylece kadercilik anlayışıyla çatışmak yerine onunla uyum sağlandı. Görsel iletişim sistemi Yoğun metinli poliçeler yerine görseller, ikonlar ve basit grafikler kullanılarak anlaşılabilirlik artırıldı. Rehberli satın alma yolculuğu Adım adım ilerleyen, kullanıcının her aşamada ne yapacağını açıkça gösteren süreç tasarlandı. Güven kanalları Kişisel iletişim tercihleri korunarak yüz yüze rehberlik ve danışmanlık seçenekleri sunuldu.</p>\n\n<p>Pilot gruplarda dolaşım aktivasyonu %22 arttı, fatura şoku şikayetleri belirgin şekilde azaldı.</p>",
+  "summaryItems": [
+    {
+      "title": "Sonuçlar",
+      "body": "\"Roaming\" hizmeti memnuniyeti %30 yükseldi, güven ve şeffaflık algısı güçlendi. Destek hattına gelen dolaşım kaynaklı çağrılar azaldı.​"
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Pazar performansı Bir yıl içinde şube pazar payı %47'den %58'e yükseldi. Hedef bölgelerde kategori penetrasyonu %15 arttı. Yeni alıcıların satın alma tamamlama oranı %35 yükseldi. Kullanıcı deneyimi Satın alma sürecinin \"anlaşılır\" olduğunu söyleyen müşteri oranı %28'den %72'ye çıktı. Dijital kanallardaki etkileşim %40 arttı. Aile dönüm noktalarıyla tetiklenen sigorta alımları önemli gelir kaynağı haline geldi. Kültürel dönüşüm Ev sigortası farkındalığı %11 arttı. Kadercilik bariyeri aşıldı, pazarın kapsama alanı genişledi. Yenilikçi iletişim yaklaşımı sektör tarafından örnek gösterildi. Organizasyonel etki Görsel anlatım standardı diğer ürünlere uyarlandı. Kültürel farkındalık eğitimi ürün geliştirme süreçlerine entegre edildi. Tasarım ilkeleri kurum genelinde müşteri deneyimi stratejisini etkiledi."
+    },
+    {
+      "title": "Memnuniyet",
+      "body": "Davranışsal"
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Aksigorta, ürün inovasyonunun ötesine geçip kültürel psikolojiyle pazarı dönüştürdü. Kader anlayışına saygı duyarak geliştirilen bu yaklaşım, sigortayı soğuk bir finansal ürün olmaktan çıkarıp, toplumsal bir sorumluluk sıcak bir ifadesine getirdi. Bu sayede sigorta bir pazar ürünü değil, kültürel bir eğitim aracı haline geldi."
+    }
+  ],
+  "quote": "Aksigorta, ürün inovasyonunun ötesine geçip kültürel psikolojiyle pazarı dönüştürdü. Kader anlayışına saygı duyarak geliştirilen bu yaklaşım, sigortayı soğuk bir finansal ürün olmaktan çıkarıp, toplumsal bir sorumluluk sıcak bir ifadesine getirdi. Bu sayede sigorta bir pazar ürünü değil, kültürel bir eğitim aracı haline geldi.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }

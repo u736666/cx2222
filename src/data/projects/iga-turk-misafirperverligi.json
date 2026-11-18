@@ -46,50 +46,32 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "Farklı kurumlara bağlı 30.000 çalışanı tek bir kültürel değer etrafında nasıl birleştirirsiniz?",
-    "body": "Yönetim, yalnızca operasyonel verimlilik istemiyor, her temas noktasında gerçek Türk misafirperverliğini hissettiren bir yolculuk hedefliyordu. Sekiz haftalık saha araştırması boyunca terminalden mağazalara, güvenlik kontrolünden biniş kapılarına kadar tüm alanlarda gözlem yaptık. Yolcuları ve çalışanları adım adım izleyerek gerilimin, rahatlamanın ve samimi temasın yaşandığı anları belgeledik. Görüşmeler ve kültürel analizler sonucunda Türk misafirperverliğinin özünü tanımladık: Yabancıyı misafir gibi görmek. Bu fikir programın temel ilkesi haline geldi: \"İstanbul Havalimanı bizim evimiz, içeri giren herkes misafirimizdir.\""
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Çözümler ve çıktıları",
-    "columns": 3,
-    "cards": [
-      {
-        "title": "Çözüm #1",
-        "body": "\"Kültür Elçisi\" Programı farklı kurumlara bağlı çalışanların gönüllü katılımıyla tabandan yayıldı. Tüm iç iletişim \"misafir\" diline göre yeniden tasarlandı, kültürel dönüşüm herkesin görebileceği kadar görünür hale geldi. Davranış temelli eğitimlerle çalışanlar ezber değil, içselleştirilmiş davranış modelleri kazandı. İlk kez farklı kurumlar tek bir hizmet felsefesi etrafında hizalandı.",
-        "style": "platinum"
-      },
-      {
-        "title": "Operasyonel",
-        "body": "Altı ayda 30.000 kişi eğitildi, 200 kültür elçisi aktif görev aldı, kurumlar arası koordinasyon sağlandı.",
-        "style": "dustGrey"
-      },
-      {
-        "title": "Deneyim",
-        "body": "\"Yolcu memnuniyeti\" bir yılda %18 arttı. \"Personelin güler yüzü\" memnuniyetin bir numaralı etkeni oldu. Hizmet kalitesi sağlayıcı fark etmeksizin ölçülebilir seviyede dengelendi.",
-        "style": "platinum"
-      },
-      {
-        "title": "Etkileri",
-        "body": "Program, Stevie Awards 2023'te \"Great Employers\" ve Business Culture Awards 2023'te \"Best Learning Initiative\" ödüllerini kazandı. Bu başarı, insan odaklı değerlerin yoğun, regülasyonlu ortamlarda bile tasarlanabilir ve ölçeklenebilir olduğunu kanıtladı. Misafirperverlik artık soyut bir kavram değil, operasyonun parçası haline geldi.",
-        "style": "dustGrey"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<h2>Yaklaşımımız</h2>\n\n<p>Yönetim, yalnızca operasyonel verimlilik istemiyor, her temas noktasında gerçek Türk misafirperverliğini hissettiren bir yolculuk hedefliyordu.</p>\n\n<p>Sekiz haftalık saha araştırması boyunca terminalden mağazalara, güvenlik kontrolünden biniş kapılarına kadar tüm alanlarda gözlem yaptık. Yolcuları ve çalışanları adım adım izleyerek gerilimin, rahatlamanın ve samimi temasın yaşandığı anları belgeledik.</p>\n\n<p>Görüşmeler ve kültürel analizler sonucunda Türk misafirperverliğinin özünü tanımladık: <em>Yabancıyı misafir gibi görmek.</em> Bu fikir programın temel ilkesi haline geldi: <strong>\"İstanbul Havalimanı bizim evimiz, içeri giren herkes misafirimizdir.\"</strong></p>\n\n<h3>Bu ilke dört katmanda hayata geçirildi:</h3>\n\n<ul>\n  <li><strong>Kültür elçileri ağı:</strong> Bölümler arası 200 doğal lider seçilerek davranış modeli oldular.</li>\n  <li><strong>Zincir eğitim sistemi:</strong> Altı ayda 30.000 kişiye ulaşacak 350 eğitmen yetiştirildi.</li>\n  <li><strong>Yönetim katılımı:</strong> CEO ve üst yönetim sürekli destek verdi, kültürü stratejik öncelik haline getirdi.</li>\n  <li><strong>Geri bildirim platformu:</strong> İlk üç ayda 1.200'den fazla çalışan önerisi toplandı.</li>\n</ul>\n\n<h2>Çözümler ve çıktıları</h2>\n\n<p><strong>\"Kültür Elçisi\" Programı</strong> farklı kurumlara bağlı çalışanların gönüllü katılımıyla tabandan yayıldı. Tüm iç iletişim \"misafir\" diline göre yeniden tasarlandı, kültürel dönüşüm herkesin görebileceği kadar görünür hale geldi. Davranış temelli eğitimlerle çalışanlar ezber değil, içselleştirilmiş davranış modelleri kazandı. İlk kez farklı kurumlar tek bir hizmet felsefesi etrafında hizalandı.</p>",
+  "summaryItems": [
+    {
+      "title": "Operasyonel",
+      "body": "Altı ayda 30.000 kişi eğitildi, 200 kültür elçisi aktif görev aldı, kurumlar arası koordinasyon sağlandı."
+    },
+    {
+      "title": "Deneyim",
+      "body": "\"Yolcu memnuniyeti\" bir yılda %18 arttı. \"Personelin güler yüzü\" memnuniyetin bir numaralı etkeni oldu. Hizmet kalitesi sağlayıcı fark etmeksizin ölçülebilir seviyede dengelendi."
+    },
+    {
+      "title": "Etkileri",
+      "body": "Program, Stevie Awards 2023'te \"Great Employers\" ve Business Culture Awards 2023'te \"Best Learning Initiative\" ödüllerini kazandı. Bu başarı, insan odaklı değerlerin yoğun, regülasyonlu ortamlarda bile tasarlanabilir ve ölçeklenebilir olduğunu kanıtladı. Misafirperverlik artık soyut bir kavram değil, operasyonun parçası haline geldi."
+    },
+    {
+      "title": "Ödüller",
+      "body": "Türkiye International Finance Awards 2024 – En İyi Müşteri Hizmeti International Business Excellence Awards 2024 – En Müşteri Odaklı Kültür Conde Nast Readers' Choice Awards 2024 – Dünyanın En İyi Havalimanı ACI World 2023 – Avrupa'nın En İyi Havalimanı (40 milyon+ yolcu) ​ Ödüller sayfası için tıklayın"
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "İstanbul Havalimanı, kültürün çelik ve cam kadar sistematik biçimde inşa edilebileceğini kanıtladı. Misafirperverliği slogan olmaktan çıkarıp yaşayan bir düzene dönüştürerek insani bağ üzerinden sürdürülebilir rekabet avantajı yarattı."
+    }
+  ],
+  "quote": "İstanbul Havalimanı, kültürün çelik ve cam kadar sistematik biçimde inşa edilebileceğini kanıtladı. Misafirperverliği slogan olmaktan çıkarıp yaşayan bir düzene dönüştürerek insani bağ üzerinden sürdürülebilir rekabet avantajı yarattı.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }

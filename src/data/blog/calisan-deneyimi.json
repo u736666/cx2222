@@ -37,7 +37,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Biz Ethnogram olarak bir kuruma girdiğimizde \"Mutlu musunuz?\" diye sormayız. Bizim derdimiz \"sürtünme katsayısı\" ile. İnsanlara pahalı pahalı yazılımları verip, o yazılımların içinde birbirine çarpan hantal iş akışlarıyla sonuç bekleyemezsiniz. Orada teknoloji bir kolaylaştırıcı değil, bir engeldir artık. Gerçek bir deneyim tasarımı; \"İşini yapmanı engelleyenşeyler nedir?\" sorusuyla başlar. Gallup'un verilerine boğulmaya gerek yok, sokağa çıkıp kime sorsanız aynı şeyi söyler: İnsanlar iş yükünden değil, anlamsızlıktan yoruluyor. Bilgi yukarıdan aşağıya inerken nerede kirleniyor? Ekipler arası klikleşmeler iş birliğini nasıl bozuyor? Az biraz kafa çalıştıralım."
+      "text": "Biz CX Folks olarak bir kuruma girdiğimizde \"Mutlu musunuz?\" diye sormayız. Bizim derdimiz \"sürtünme katsayısı\" ile. İnsanlara pahalı pahalı yazılımları verip, o yazılımların içinde birbirine çarpan hantal iş akışlarıyla sonuç bekleyemezsiniz. Orada teknoloji bir kolaylaştırıcı değil, bir engeldir artık. Gerçek bir deneyim tasarımı; \"İşini yapmanı engelleyenşeyler nedir?\" sorusuyla başlar. Gallup'un verilerine boğulmaya gerek yok, sokağa çıkıp kime sorsanız aynı şeyi söyler: İnsanlar iş yükünden değil, anlamsızlıktan yoruluyor. Bilgi yukarıdan aşağıya inerken nerede kirleniyor? Ekipler arası klikleşmeler iş birliğini nasıl bozuyor? Az biraz kafa çalıştıralım."
     },
     {
       "type": "heading",
@@ -45,7 +45,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Ethnogram'ın yaptığı şey bir İK operasyonu değil, bir kültürel röntgen çalışmasıdır. Biz sahada yönetici varsayımlarını bir kenara bırakıp şu dört noktaya odaklanıyoruz: İş Akışındaki çizikler İnsanların vaktini asıl ne çalıyor? Hangi \"eskiden kalma\" sistemler bugün verim ve huzurun önündeki en büyük engel? Kültürel çatlaklar Duvardaki asılı ve çok havalı \"vizyon\" cümleleri, bir kriz anında yöneticinin tavrıyla ne kadar örtüşüyor? Tutarsızlık, güveni saniyeler içinde yok eder. Psikolojik güvenlik İnsanlar hata yaptıklarında bunu bir öğrenme fırsatı olarak mı görüyor, yoksa \"kelleler uçacak\" korkusuyla en güvenli (ve tabi en verimsiz) yolu mu seçiyorlar? Aidiyet değil, \"ortaklık\" İnsanlar sadece maaş için mi orada, yoksa gerçekten o ortamın bir parçası olduklarını hissediyorlar mı? Bunu seviyorlar mı?"
+      "text": "CX Folks'un yaptığı şey bir İK operasyonu değil, bir kültürel röntgen çalışmasıdır. Biz sahada yönetici varsayımlarını bir kenara bırakıp şu dört noktaya odaklanıyoruz: İş Akışındaki çizikler İnsanların vaktini asıl ne çalıyor? Hangi \"eskiden kalma\" sistemler bugün verim ve huzurun önündeki en büyük engel? Kültürel çatlaklar Duvardaki asılı ve çok havalı \"vizyon\" cümleleri, bir kriz anında yöneticinin tavrıyla ne kadar örtüşüyor? Tutarsızlık, güveni saniyeler içinde yok eder. Psikolojik güvenlik İnsanlar hata yaptıklarında bunu bir öğrenme fırsatı olarak mı görüyor, yoksa \"kelleler uçacak\" korkusuyla en güvenli (ve tabi en verimsiz) yolu mu seçiyorlar? Aidiyet değil, \"ortaklık\" İnsanlar sadece maaş için mi orada, yoksa gerçekten o ortamın bir parçası olduklarını hissediyorlar mı? Bunu seviyorlar mı?"
     },
     {
       "type": "heading",
@@ -62,18 +62,6 @@
     {
       "type": "paragraph",
       "text": "Eğer çalışan deneyiminiz sadece yıllık bir anket puanından ibaretse, aslında içeride neler olup bittiğine dair hiçbir fikriniz yok demektir. Biz, o puanların arkasındaki gerçek insan hikâyelerini dinleyecek cesarete sahip karar vericiler ile çalışmayı seviyoruz..."
-    },
-    {
-      "type": "heading",
-      "text": "&copy; 2026 Ethnogram"
-    },
-    {
-      "type": "paragraph",
-      "text": "İster proje ortağınız olarak süreçlerinizi biz tasarlayalım, ister eğitim programlarıyla ekibinize yetkinlik kazandıralım."
     }
-  ],
-  "relatedLink": {
-    "label": "Tüm Makalelere Dön →",
-    "href": "/blog"
-  }
+  ]
 }

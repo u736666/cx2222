@@ -46,35 +46,28 @@
   "challenge": {
     "eyebrow": "Soru",
     "title": "İnsanların en çok çekindiği bu hizmeti, nasıl güvenle kullanılan bir yol arkadaşı haline getirebiliriz?",
-    "body": "On haftalık bir saha çalışmasında yolcuların seyahat öncesinden fatura dönemine kadar tüm deneyimini izledik. Video günlükleri ve derin görüşmeler ile iki temel davranışı ortaya koyduk: Bağlantıyı tamamen kesen temkinliler ve şoka uğrayan farkında olmayan kullanıcılar. Ortak kök neden: Seyahat kararları \"tatil kafasıyla\" alınırken hizmet tasarımı hâlâ \"telekom kafasıyla\" yürütülüyordu. Kullanıcılar plan yaparken operatörler tarife konuşuyordu."
+    "body": ""
   },
-  "solution": {
-    "eyebrow": "Çözüm & Yaklaşım",
-    "title": "Tasarım çözümleri ve çıktılar",
-    "columns": 2,
-    "cards": [
-      {
-        "title": "Çözüm #1",
-        "body": "Kişiselleştirilmiş \"Roaming\" paketleri Yolcuların seyahat alışkanlıklarına ve veri kullanım ihtiyaçlarına göre kişiselleştirilmiş roaming paketleri tasarladık. Kullanıcıların önceki seyahat davranışlarını analiz eden ve en uygun paketi öneren akıllı bir öneri sistemi geliştirdik. Şeffaf fiyatlandırma ve kontrol araçları Kullanıcıların roaming maliyetlerini gerçek zamanlı olarak takip edebilecekleri ve veri kullanımlarını kontrol edebilecekleri yeni dijital arayüzler tasarladık. Beklenmedik faturalardan kaçınmak için akıllı bildirim sistemleri ve harcama limitleri oluşturduk. Sorunsuz müşteri yolculuğu Seyahat öncesi hazırlıklardan seyahat sonrası değerlendirmeye kadar kesintisiz bir müşteri yolculuğu tasarladık. Yolcuların seyahat öncesinde doğru roaming seçenekleri hakkında bilgilendirilmesini ve seyahat sırasında proaktif destek almalarını sağlayan bir iletişim stratejisi geliştirdik.",
-        "style": "platinum"
-      }
-    ]
-  },
-  "quote": "",
-  "blogShowcase": {
-    "visible": true,
-    "title": "İlgili Düşünce Yazıları",
-    "headingTag": "h2",
-    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
-    "allLinkText": "Tüm Yazıları Görün →",
-    "allLinkHref": "/blog",
-    "showAllLink": true,
-    "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": [
-      "calisan-deneyimi",
-      "ai-konusu"
-    ]
-  },
+  "content": "<h2>Yaklaşımımız</h2>\n\n<ul><li>On haftalık bir saha çalışmasında yolcuların seyahat öncesinden fatura dönemine kadar tüm deneyimini izledik.</li><li>Video günlükleri ve derin görüşmeler ile iki temel davranışı ortaya koyduk:</li><li>Bağlantıyı tamamen kesen temkinliler ve şoka uğrayan farkında olmayan kullanıcılar.</li><li>Ortak kök neden: Seyahat kararları \"tatil kafasıyla\" alınırken hizmet tasarımı hâlâ \"telekom kafasıyla\" yürütülüyordu. Kullanıcılar plan yaparken operatörler tarife konuşuyordu.</li></ul>\n\n<h2>Temel içgörüler</h2>\n\n<p>Asıl sorun fiyat değil, güven ve şeffaflık eksikliğiydi. İnsanlar seyahati bir macera olarak yaşıyor, ancak hizmet dili bunu desteklemiyordu. Dolaşım deneyimi, tarifeden çok \"seyahat hazırlığı\" olarak algılanmalıydı.</p>\n\n<h3>Tasarım çözümleri ve çıktılar</h3>\n\n<p>Kişiselleştirilmiş \"Roaming\" paketleri Yolcuların seyahat alışkanlıklarına ve veri kullanım ihtiyaçlarına göre kişiselleştirilmiş roaming paketleri tasarladık. Kullanıcıların önceki seyahat davranışlarını analiz eden ve en uygun paketi öneren akıllı bir öneri sistemi geliştirdik. Şeffaf fiyatlandırma ve kontrol araçları Kullanıcıların roaming maliyetlerini gerçek zamanlı olarak takip edebilecekleri ve veri kullanımlarını kontrol edebilecekleri yeni dijital arayüzler tasarladık. Beklenmedik faturalardan kaçınmak için akıllı bildirim sistemleri ve harcama limitleri oluşturduk. Sorunsuz müşteri yolculuğu Seyahat öncesi hazırlıklardan seyahat sonrası değerlendirmeye kadar kesintisiz bir müşteri yolculuğu tasarladık. Yolcuların seyahat öncesinde doğru roaming seçenekleri hakkında bilgilendirilmesini ve seyahat sırasında proaktif destek almalarını sağlayan bir iletişim stratejisi geliştirdik.</p>",
+  "summaryItems": [
+    {
+      "title": "Sonuçlar",
+      "body": "Yeniden tasarlanan roaming deneyimi aşağıdaki sonuçları sağladı: \"Roaming\" hizmetlerini kullanan müşteri sayısında %35 artış Müşteri memnuniyet skorlarında %42'lik bir iyileşme \"Roaming\" gelirlerinde %28 artış Müşteri şikayetlerinde %60 azalma Rakiplere kıyasla net tavsiye puanında (NPS) önemli bir iyileşme"
+    },
+    {
+      "title": "Stratejik",
+      "body": "Yeni tasarım dili global Vodafone referansına dönüştü. \"Hizmet kategorileri\" yerine \"yaşam bağlamları\" etrafında tasarım anlayışı benimsendi."
+    },
+    {
+      "title": "Etkisi",
+      "body": "Proje, güvenin yeniden tasarlanabileceğini gösterdi. İnsanların teknik detaylarla değil, duygusal rahatlıkla bağ kurduğunu kanıtladı. \"Roaming\", korkulan bir masraftan, seyahatin doğal parçasına dönüştü."
+    },
+    {
+      "title": "Çıktı & Etki",
+      "body": "Seyahat eden müşterilerin gerçek ihtiyaçlarını anlamak ve bu ihtiyaçlara cevap veren yenilikçi çözümler geliştirmek, telekomünikasyon sektöründe artan rekabet ortamında kritik başarı faktörleri olarak öne çıktı. Etnografik araştırma metodolojimiz ve hizmet tasarımı yaklaşımımız, operatörün roaming hizmetlerini kullanıcı beklentileriyle uyumlu hale getirmesine ve değişen pazar koşullarına başarıyla adapte olmasına yardımcı oldu."
+    }
+  ],
+  "quote": "Seyahat eden müşterilerin gerçek ihtiyaçlarını anlamak ve bu ihtiyaçlara cevap veren yenilikçi çözümler geliştirmek, telekomünikasyon sektöründe artan rekabet ortamında kritik başarı faktörleri olarak öne çıktı. Etnografik araştırma metodolojimiz ve hizmet tasarımı yaklaşımımız, operatörün roaming hizmetlerini kullanıcı beklentileriyle uyumlu hale getirmesine ve değişen pazar koşullarına başarıyla adapte olmasına yardımcı oldu.",
   "visible": true,
   "selectedCtaId": "default-consulting"
 }
