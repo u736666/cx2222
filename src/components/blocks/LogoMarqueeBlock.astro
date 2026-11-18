@@ -69,13 +69,16 @@ const isMarquee = data.layout === 'marquee';
           const isGrayscale = (data.grayscale && !logo.originalColors) || logo.grayscale;
           const imgFilterClass = isGrayscale ? 'filter grayscale contrast-125' : '';
           return (
-            <div class="flex items-center justify-center flex-shrink-0 px-8 opacity-85 hover:opacity-100 transition-opacity">
-              <img 
-                src={logo.image || logo.src} 
-                alt={logo.name} 
-                class={`w-auto object-contain ${imgFilterClass}`}
-                style={`height: ${h}px; max-width: ${maxW}px;`}
-              />
+            <div class="flex items-center justify-center flex-shrink-0 px-8 opacity-90 hover:opacity-100 transition-opacity">
+              <div class="logo-tint-wrapper relative inline-flex items-center justify-center">
+                <img 
+                  src={logo.image || logo.src} 
+                  alt={logo.name} 
+                  class={`w-auto object-contain ${imgFilterClass}`}
+                  style={`height: ${h}px; max-width: ${maxW}px;`}
+                />
+                <div class="logo-tint-overlay pointer-events-none absolute inset-0 mix-blend-color opacity-85" style="background-color: var(--color-rich-black);" aria-hidden="true"></div>
+              </div>
             </div>
           );
         })}
@@ -90,12 +93,15 @@ const isMarquee = data.layout === 'marquee';
           logo.kind === 'svg' ? (
             <svg class={logo.class} viewBox={logo.viewBox} set:html={logo.body} aria-label={logo.name} />
           ) : logo.kind === 'image' ? (
-            <img
-              src={logo.image || logo.src}
-              alt={logo.name}
-              style={`height:${logo.heightPx || logoHeightOf(logo.name)}px; max-width:${logo.maxWidthPx || logoMaxWidthOf(logo.name)}px;`}
-              class="w-auto object-contain opacity-90 hover:opacity-100 filter grayscale contrast-125 transition-all duration-300"
-            />
+            <div class="logo-tint-wrapper relative inline-flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+              <img
+                src={logo.image || logo.src}
+                alt={logo.name}
+                style={`height:${logo.heightPx || logoHeightOf(logo.name)}px; max-width:${logo.maxWidthPx || logoMaxWidthOf(logo.name)}px;`}
+                class="w-auto object-contain filter grayscale contrast-125 transition-all duration-300"
+              />
+              <div class="logo-tint-overlay pointer-events-none absolute inset-0 mix-blend-color opacity-85" style="background-color: var(--color-rich-black);" aria-hidden="true"></div>
+            </div>
           ) : (
             <svg class={`${logo.height || 'h-5'} w-auto fill-paletteRichBlack hover:fill-brandAccent transition-colors`} viewBox={logo.viewBox || '0 0 120 24'}>
               <text

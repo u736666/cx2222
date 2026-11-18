@@ -36,7 +36,7 @@ const descInlineStyle = resolveTextStyle(s0, 'desc');
     <div class="grid-standard">
       <div class="hero-card col-span-12 md:col-span-6 lg:col-span-5 bg-paletteRichBlack text-white rounded-none p-8 md:p-10 md:pb-12 space-y-6 cursor-pointer">
         <div class="space-y-2">
-          <span id="hero-box-brand" class="typo-h4 tracking-widest font-medium text-brandAccent block" style={brandInlineStyle || undefined} set:html={formatRich(slides[0]?.brand)}>
+          <span id="hero-box-brand" class="typo-small font-semibold tracking-widest uppercase text-brandAccent block" style={brandInlineStyle || undefined} set:html={formatRich(slides[0]?.brand)}>
           </span>
           <HeroTag id="hero-box-title" class="typo-h1 text-white" style={titleInlineStyle || undefined} set:html={formatRich(slides[0]?.title)}>
           </HeroTag>
@@ -49,12 +49,12 @@ const descInlineStyle = resolveTextStyle(s0, 'desc');
             {slides.map((_: any, idx: number) => (
               <button 
                 type="button"
-                class="py-2 cursor-pointer"
+                class="py-2 cursor-pointer hero-dot-btn"
                 data-slide={idx}
                 aria-label={`Slayt ${idx + 1}`}
                 aria-pressed={idx === 0 ? 'true' : 'false'}
               >
-                <span class={`block w-6 h-1 transition-all ${idx === 0 ? 'bg-white' : 'bg-white/25'}`}></span>
+                <span class={`hero-dot-indicator block w-6 h-1 transition-all ${idx === 0 ? 'bg-white' : 'bg-white/25'}`}></span>
               </button>
             ))}
           </div>

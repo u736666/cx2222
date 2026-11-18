@@ -431,6 +431,7 @@ export function formatRich(text?: string): string {
   // Safely encode standalone '<' that is not part of an allowed html tag (e.g. '< 15', '<100')
   str = str.replace(/<(?!\/?(?:b|strong|br|i|em|span|div|p)\b[^>]*>)/gi, '&lt;');
   str = str.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+  str = str.replace(/\r?\n\r?\n/g, '<br><br>');
   return hyphenateTurkish(str);
 }
 

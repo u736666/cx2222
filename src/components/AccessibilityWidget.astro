@@ -3,24 +3,25 @@
 ---
 
 <div id="accessibility-widget" class="fixed bottom-4 right-4 z-50 print:hidden font-sans">
-  <!-- Accessibility Popover Panel (TheDive Stili Köşeli, Mimari Tasarım) -->
+  <!-- Accessibility Popover Panel (Siyah Zemin, Kenarlıksız, Açık/Kapalı Butonlu) -->
   <div
     id="accessibility-panel"
     role="dialog"
     aria-label="Erişilebilirlik Menüsü"
     aria-hidden="true"
-    class="hidden absolute bottom-14 right-0 w-64 sm:w-72 bg-white text-black border-2 border-black shadow-2xl rounded-none overflow-hidden transition-all duration-200 opacity-0 translate-y-2"
+    class="hidden absolute bottom-16 right-0 w-72 sm:w-80 bg-black text-white shadow-2xl rounded-none overflow-hidden transition-all duration-200 opacity-0 translate-y-2 border-0"
+    style="border: none !important; outline: none !important; background-color: #000000 !important;"
   >
     <!-- Header -->
-    <div class="px-4 py-3 border-b border-neutral-200 flex items-center justify-between bg-white">
-      <span class="font-bold text-[14px] text-black tracking-tight">Erişilebilirlik Menüsü</span>
+    <div class="px-5 py-3.5 flex items-center justify-between bg-neutral-900 border-b border-neutral-800">
+      <span class="font-bold text-[14px] text-white tracking-tight">Erişilebilirlik Menüsü</span>
       <div class="flex items-center gap-1">
         <button
           id="acc-reset-btn"
           type="button"
           title="Ayarları Sıfırla"
           aria-label="Ayarları Sıfırla"
-          class="w-7 h-7 flex items-center justify-center text-neutral-600 hover:text-black hover:bg-neutral-100 transition-colors text-sm rounded-none"
+          class="w-7 h-7 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors text-sm rounded-none"
         >
           ↺
         </button>
@@ -29,55 +30,62 @@
           type="button"
           title="Menüyü Kapat"
           aria-label="Menüyü Kapat"
-          class="w-7 h-7 flex items-center justify-center text-neutral-600 hover:text-black hover:bg-neutral-100 transition-colors text-sm rounded-none"
+          class="w-7 h-7 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors text-sm rounded-none"
         >
           ✕
         </button>
       </div>
     </div>
 
-    <!-- Actions List (TheDive Birebir Yalın Liste Tasarımı) -->
-    <div class="py-2 text-[14px]">
+    <!-- Actions List -->
+    <div class="p-3 space-y-1.5 text-[14px]">
       <button
         id="acc-increase-font"
         type="button"
-        class="w-full px-4 py-2.5 flex items-center gap-3 text-left hover:bg-neutral-100 transition-colors cursor-pointer group text-neutral-800 hover:text-black"
+        class="w-full px-3.5 py-2.5 flex items-center justify-between text-left hover:bg-neutral-900 transition-colors cursor-pointer group text-neutral-200 hover:text-white rounded-none"
       >
-        <span class="font-bold text-[13px] tracking-tighter w-5 text-center select-none text-black">TT</span>
-        <span class="font-normal text-[14px]">Yazı Boyutunu Büyüt</span>
+        <div class="flex items-center gap-3">
+          <span class="font-bold text-[13px] tracking-tighter w-5 text-center select-none text-white">TT</span>
+          <span class="font-normal text-[14px]">Yazı Boyutunu Büyüt</span>
+        </div>
       </button>
 
       <button
         id="acc-decrease-font"
         type="button"
-        class="w-full px-4 py-2.5 flex items-center gap-3 text-left hover:bg-neutral-100 transition-colors cursor-pointer group text-neutral-800 hover:text-black"
+        class="w-full px-3.5 py-2.5 flex items-center justify-between text-left hover:bg-neutral-900 transition-colors cursor-pointer group text-neutral-200 hover:text-white rounded-none"
       >
-        <span class="font-bold text-[12px] tracking-tighter w-5 text-center select-none text-black">T<span class="text-[9px]">T</span></span>
-        <span class="font-normal text-[14px]">Yazı Boyutunu Küçült</span>
+        <div class="flex items-center gap-3">
+          <span class="font-bold text-[12px] tracking-tighter w-5 text-center select-none text-white">T<span class="text-[9px]">T</span></span>
+          <span class="font-normal text-[14px]">Yazı Boyutunu Küçült</span>
+        </div>
       </button>
 
       <button
         id="acc-contrast-toggle"
         type="button"
-        class="w-full px-4 py-2.5 flex items-center gap-3 text-left hover:bg-neutral-100 transition-colors cursor-pointer group text-neutral-800 hover:text-black"
+        class="w-full px-3.5 py-2.5 flex items-center justify-between text-left hover:bg-neutral-900 transition-colors cursor-pointer group text-neutral-200 hover:text-white rounded-none"
       >
-        <span class="text-base w-5 text-center select-none text-black">◐</span>
-        <span class="font-normal text-[14px]">Kontrast</span>
+        <div class="flex items-center gap-3">
+          <span class="text-base w-5 text-center select-none text-white">◐</span>
+          <span class="font-normal text-[14px]">Yüksek Kontrast</span>
+        </div>
+        <span id="acc-contrast-status" class="text-xs px-2.5 py-1 rounded-none font-bold transition-all bg-neutral-800 text-white border border-neutral-700">Kapalı</span>
       </button>
     </div>
   </div>
 
-  <!-- Floating Trigger Button (TheDive Stili: Saf Siyah Kare & Beyaz İkon, Sıfır Kenarlık) -->
+  <!-- Floating Trigger Button (Daire, Brand Accent Arka Plan, Siyah İkon, Kenarlıksız) -->
   <button
     id="accessibility-trigger-btn"
     type="button"
     aria-expanded="false"
     aria-controls="accessibility-panel"
     aria-label="Erişilebilirlik Menüsünü Aç / Kapat"
-    class="w-11 h-11 bg-black text-white hover:bg-neutral-800 flex items-center justify-center transition-all duration-200 focus:outline-none group rounded-none cursor-pointer shadow-md"
-    style="border: none !important; outline: none !important; border-radius: 0 !important; box-shadow: none !important;"
+    class="w-12 h-12 rounded-full bg-brandAccent text-paletteRichBlack hover:opacity-95 flex items-center justify-center transition-all duration-200 focus:outline-none group cursor-pointer shadow-lg hover:scale-105 border-0"
+    style="border: none !important; outline: none !important; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 transition-transform group-hover:scale-105">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256" class="w-6 h-6 transition-transform group-hover:scale-110">
       <path d="M100,36a28,28,0,1,1,28,28A28,28,0,0,1,100,36ZM227.6,92.57A15.7,15.7,0,0,0,212,80H44a16,16,0,0,0-6.7,30.53l.06,0,53.89,23.73-21.92,83.3a16,16,0,0,0,7.9,20.91A15.83,15.83,0,0,0,84,240a16,16,0,0,0,14.44-9.06L128,180l29.58,51a16,16,0,0,0,29.07-13.35l-21.92-83.3,54-23.76A15.7,15.7,0,0,0,227.6,92.57Z"></path>
     </svg>
   </button>
@@ -106,6 +114,14 @@
         document.documentElement.classList.add('accessibility-high-contrast');
       } else {
         document.documentElement.classList.remove('accessibility-high-contrast');
+      }
+
+      const contrastStatus = document.getElementById('acc-contrast-status');
+      if (contrastStatus) {
+        contrastStatus.textContent = state.contrast ? 'Açık' : 'Kapalı';
+        contrastStatus.className = state.contrast 
+          ? 'text-xs px-2.5 py-1 rounded-none bg-brandAccent text-paletteRichBlack font-bold'
+          : 'text-xs px-2.5 py-1 rounded-none bg-neutral-800 text-white font-medium border border-neutral-700';
       }
 
       try {

@@ -119,12 +119,12 @@ const caseSchema = {
         )}
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
         <div class="lg:col-span-6">
           <ProjHeroTag class={`typo-h1 ${heroSt.title}`} style={projHeroStyle || undefined} set:html={formatRich(project.title)} />
         </div>
         <div class="lg:col-span-5 lg:col-start-8">
-          <p class={`typo-lead font-light ${heroSt.body}`} style={projDescStyle || undefined} set:html={formatRich(project.desc)} />
+          <div class={`typo-lead font-light ${heroSt.body} space-y-4`} style={projDescStyle || undefined} set:html={formatRich(project.desc)} />
         </div>
       </div>
 
@@ -158,17 +158,17 @@ const caseSchema = {
       
       <!-- Kutu İçinde Soru (Açık Zemin Cool Blue, Border Yok, Masaüstü 20px) -->
       {hasChallenge && (
-        <div class="bg-[#D7EFFF] text-paletteRichBlack p-8 md:p-12 rounded-none space-y-3">
+        <div class="bg-[#D7EFFF] text-paletteRichBlack p-8 md:p-12 rounded-none space-y-3 challenge-box">
           {project.challenge?.eyebrow && String(project.challenge.eyebrow).trim() !== '' && (
             <span class="typo-small font-bold uppercase tracking-wider text-paletteRichBlack/60 block" style={challengeEyebrowStyle || undefined} set:html={formatRich(project.challenge.eyebrow)}></span>
           )}
           {project.challenge?.title && String(project.challenge.title).trim() !== '' && (
-            <ChallengeTag class="!text-[18px] md:!text-[20px] font-normal leading-snug text-paletteRichBlack" style={`font-size: clamp(18px, 1.5vw, 20px) !important; ${challengeTitleStyle || ''}`} set:html={formatRich(project.challenge.title)}>
+            <ChallengeTag class="!text-[18px] md:!text-[20px] font-normal leading-snug text-paletteRichBlack !text-wrap-normal" style={`font-size: clamp(18px, 1.5vw, 20px) !important; text-wrap: normal !important; ${challengeTitleStyle || ''}`} set:html={formatRich(project.challenge.title)}>
             </ChallengeTag>
           )}
           {project.challenge?.body && String(project.challenge.body).trim() !== '' && (
-            <p class="typo-body !text-[16px] md:!text-[20px] text-paletteRichBlack/80 font-light leading-relaxed mt-3" style={challengeBodyStyle || undefined} set:html={formatRich(project.challenge.body)}>
-            </p>
+            <div class="typo-body !text-[16px] md:!text-[20px] text-paletteRichBlack/80 font-light leading-relaxed mt-3 !text-wrap-normal space-y-4" style={`text-wrap: normal !important; ${challengeBodyStyle || ''}`} set:html={formatRich(project.challenge.body)}>
+            </div>
           )}
         </div>
       )}
@@ -197,13 +197,13 @@ const caseSchema = {
     </div>
   </section>
 
-  <!-- 4. Bölüm: Full-Width 2-Kolonlu Alan (Solda Çözümler & Çıktılar, Sağda ~1/3 Genişliğinde Ethnogram Koyu Kutusu) -->
+  <!-- 4. Bölüm: Full-Width 2-Kolonlu Alan (Solda Çözümler & Çıktılar %50, Sağda ~1/3 Genişliğinde Ethnogram Koyu Kutusu) -->
   <section class="px-6 md:px-16 py-12 md:py-20 bg-siteBg text-paletteRichBlack">
     <div class="max-w-custom mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 relative">
         
-        <!-- Sol Kolon: Çözümler, Çıktılar, Operasyonel, Deneyim, Etkileri, Ödüller (Tek Zengin Metin Alanı) -->
-        <div class="lg:col-span-7 prose-project typo-body font-light text-paletteRichBlack/85 leading-relaxed space-y-6">
+        <!-- Sol Kolon (%50 Genişlik): Çözümler, Çıktılar, Operasyonel, Deneyim, Etkileri, Ödüller (Tek Zengin Metin Alanı) -->
+        <div class="lg:col-span-6 prose-project typo-body font-light text-paletteRichBlack/85 leading-relaxed space-y-6">
           {project.content && String(project.content).trim() !== '' && (
             <div set:html={project.content}></div>
           )}

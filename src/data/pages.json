@@ -1221,14 +1221,15 @@
     },
     "hero": {
       "eyebrow": "ŞEFFAFLIK & GÜVENLİK",
-      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+      "title": "Gizlilik Politikası ve <br>KVKK Aydınlatma Metni",
       "desc": "CX Folks olarak web sitemizi ziyaret eden kullanıcılarımızın ve iş ortaklarımızın kişisel verilerini 6698 sayılı Kişisel Verilerin Korunması Kanunu'na ('KVKK') tam uyumlu olarak işliyor ve koruyoruz.",
       "headingTag": "h1"
     },
     "content": {
       "title": "Veri Sorumlusu Sıfatıyla Hak ve Yükümlülüklerimiz",
       "text": "1. Veri Sorumlusu\n6698 sayılı Kanun uyarınca 'Veri Sorumlusu', CX Folks şirketidir. Kişisel verileriniz veri sorumlusu güvencesiyle kanuni sınırlar çerçevesinde işlenmektedir.\n\n2. Kişisel Verilerin İşlenme Amaçları\nWeb sitemiz üzerinden paylaştığınız ad, soyad, e-posta, kurum bilgisi ve iletişim formu mesajları; keşif seansı planlama, danışmanlık taleplerinizi yanıtlama, bülten ve içgörü içeriklerimizi ulaştırma ve yasal yükümlülüklerimizi yerine getirme amaçlarıyla sınırlı olarak işlenir.\n\n3. Veri Aktarımı ve Üçüncü Taraflar\nKişisel verileriniz hiçbir koşulda ticari amaçla satılmaz veya kiralanmaz. Yalnızca yasal zorunluluklar gereği yetkili kamu kurumlarına ve teknik barındırma/iletişim altyapısını sağlayan güvenilir servis sağlayıcılarımıza kanuni sınırlar çerçevesinde aktarılabilir.\n\n4. Veri Sahibinin Hakları (KVKK Madde 11)\nKVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.\n\n5. Başvuru ve İletişim\nHaklarınıza ilişkin taleplerinizi hello@cxfolks.com e-posta adresimize yazılı olarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde yasal mevzuata uygun şekilde sonuçlandırılacaktır."
-    }
+    },
+    "text": ""
   },
   "cerezPolitikasi": {
     "seo": {

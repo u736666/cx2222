@@ -673,9 +673,24 @@ html.accessibility-high-contrast b {
 
 /* 7. Özel Butonlar ve İkonlar */
 html.accessibility-high-contrast .pill-outline-btn {
-  border-color: var(--hc-text) !important;
-  color: var(--hc-text) !important;
-  background-color: transparent !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast .pill-outline-btn * {
+  color: inherit !important;
+}
+html.accessibility-high-contrast .bg-paletteRichBlack .pill-outline-btn,
+html.accessibility-high-contrast section.bg-paletteRichBlack .pill-outline-btn,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] .pill-outline-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+html.accessibility-high-contrast .bg-paletteRichBlack .pill-outline-btn *,
+html.accessibility-high-contrast section.bg-paletteRichBlack .pill-outline-btn *,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] .pill-outline-btn * {
+  color: inherit !important;
 }
 html.accessibility-high-contrast .header-contact-btn,
 html.accessibility-high-contrast .header-contact-btn * {
@@ -686,6 +701,127 @@ html.accessibility-high-contrast .header-contact-btn * {
 html.accessibility-high-contrast .header-contact-btn:hover {
   background-color: #222222 !important;
   opacity: 0.8 !important;
+}
+
+/* Sosyal Medya İkonları */
+html.accessibility-high-contrast #main-header .header-social-icon,
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon,
+html.accessibility-high-contrast #main-header.has-active-mega .header-social-icon,
+html.accessibility-high-contrast .header-social-icon,
+html.accessibility-high-contrast a.header-social-icon {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+html.accessibility-high-contrast #main-header .header-social-icon svg,
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon svg,
+html.accessibility-high-contrast #main-header.has-active-mega .header-social-icon svg,
+html.accessibility-high-contrast .header-social-icon svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .header-social-icon:hover,
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon:hover {
+  background-color: #222222 !important;
+  border-color: #ffffff !important;
+}
+
+/* Seçili Menü Linki */
+html.accessibility-high-contrast #main-header .header-nav a.active-route-link,
+html.accessibility-high-contrast #main-header .nav-trigger.active-trigger > a,
+html.accessibility-high-contrast #main-header .header-nav a[aria-current="page"] {
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 6px !important;
+  text-decoration-thickness: 2px !important;
+  color: #000000 !important;
+}
+html.accessibility-high-contrast #main-header.has-active-mega .header-nav a.active-route-link,
+html.accessibility-high-contrast #main-header.has-active-mega .nav-trigger.active-trigger > a {
+  color: #ffffff !important;
+}
+
+/* Logo İzolasyonu (Hero ve Hoverda Kaybolmayı Önleme) */
+/* 1. Metin Logo (cxfolks) */
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-brand,
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-brand *,
+html.accessibility-high-contrast #main-header.has-active-mega .header-brand,
+html.accessibility-high-contrast #main-header.has-active-mega .header-brand * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast #main-header.scrolled-header .header-brand,
+html.accessibility-high-contrast #main-header.scrolled-header .header-brand *,
+html.accessibility-high-contrast #main-header.solid-subpage .header-brand,
+html.accessibility-high-contrast #main-header.solid-subpage .header-brand * {
+  color: #000000 !important;
+}
+/* 2. Resim Logo */
+html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-logo-img,
+html.accessibility-high-contrast #main-header.has-active-mega .header-logo-img {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+html.accessibility-high-contrast #main-header.scrolled-header .header-logo-img,
+html.accessibility-high-contrast #main-header.solid-subpage .header-logo-img {
+  filter: brightness(0) !important;
+  opacity: 1 !important;
+}
+html.accessibility-high-contrast a.header-brand:hover {
+  opacity: 0.85 !important;
+  text-decoration: none !important;
+}
+
+/* Hero Görsel Navigasyon Noktaları (Slider Dots) */
+html.accessibility-high-contrast .hero-dot-indicator {
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  opacity: 0.45 !important;
+}
+html.accessibility-high-contrast .hero-dot-btn[aria-pressed="true"] .hero-dot-indicator {
+  background-color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Akademi Kartı Kontrast Modunda Siyah */
+html.accessibility-high-contrast .academy-feature-card,
+html.accessibility-high-contrast .bg-brandAccent.academy-feature-card {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  --hc-border: #ffffff !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+html.accessibility-high-contrast .academy-feature-card * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .academy-feature-card a.border-paletteRichBlack {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+html.accessibility-high-contrast .academy-feature-card a.bg-paletteRichBlack {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+html.accessibility-high-contrast .academy-feature-card a.bg-paletteRichBlack * {
+  color: #000000 !important;
+}
+
+/* Renkli Zeminli Sayfalar (örn. Ekibimiz / Platinum) Kontrast Modunda Beyaz */
+html.accessibility-high-contrast section[style*="background-color"]:not(.bg-paletteRichBlack):not([class*="RichBlack"]):not([class*="richBlack"]),
+html.accessibility-high-contrast section.bg-palettePlatinum,
+html.accessibility-high-contrast [class*="bg-palettePlatinum"],
+html.accessibility-high-contrast .bg-paletteDustGrey {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Logo Tint Overlay Kontrast Modunda Devre Dışı */
+html.accessibility-high-contrast .logo-tint-overlay {
+  display: none !important;
 }
 
 /* Akordeon Butonları */
@@ -707,41 +843,57 @@ html.accessibility-high-contrast svg:not(#accessibility-widget svg) text {
 }
 
 /* Bağlantı ve Butonlarda Tint ile Hover */
-html.accessibility-high-contrast a:not(#accessibility-widget a):hover,
+html.accessibility-high-contrast a:not(#accessibility-widget a):not(.header-brand):hover,
 html.accessibility-high-contrast button:not(#accessibility-widget button):hover {
   opacity: 0.7 !important;
   text-decoration: underline !important;
 }
 
-/* Erişilebilirlik Menüsü Paneli İzolasyonu */
+/* Erişilebilirlik Menüsü Paneli İzolasyonu (Siyah Zemin, Kenarlıksız) */
 #accessibility-widget {
   filter: none !important;
 }
 #accessibility-panel,
 html.accessibility-high-contrast #accessibility-panel {
-  --hc-bg: #ffffff !important;
-  --hc-text: #000000 !important;
-  --hc-border: #000000 !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border: 2px solid #000000 !important;
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  --hc-border: transparent !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
 }
 #accessibility-panel *,
 html.accessibility-high-contrast #accessibility-panel * {
-  color: #000000 !important;
+  color: #ffffff !important;
   text-decoration: none !important;
 }
 #accessibility-panel button,
 html.accessibility-high-contrast #accessibility-panel button {
   background-color: transparent !important;
-  color: #000000 !important;
+  color: #ffffff !important;
   border: none !important;
 }
 #accessibility-panel button:hover,
 html.accessibility-high-contrast #accessibility-panel button:hover {
-  background-color: #f5f5f5 !important;
+  background-color: #262626 !important;
   opacity: 1 !important;
   text-decoration: none !important;
+}
+#accessibility-panel #acc-contrast-status {
+  transition: all 0.2s ease !important;
+}
+#accessibility-panel #acc-contrast-status:not(.active-status) {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast #accessibility-panel #acc-contrast-status {
+  color: #000000 !important;
+}
+
+/* Soru Kutusu İçinde Erken Satır Kırmayı Engelleme */
+.challenge-box,
+.challenge-box * {
+  text-wrap: normal !important;
 }
 
 /* Genel sitede paragraf ve metinlerde bold (kalınlık) belirgin olsun */
