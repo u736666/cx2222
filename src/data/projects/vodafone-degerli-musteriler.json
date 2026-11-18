@@ -1,0 +1,80 @@
+{
+  "slug": "vodafone-degerli-musteriler",
+  "order": 5,
+  "client": "Vodafone",
+  "sector": "Telekomünikasyon",
+  "title": "Bugünün \"değerli müşterilerini\" anlamak",
+  "shortTitle": "Bugünün \"değerli müşterilerini\" anlamak",
+  "desc": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, çevresine etki eden, uzun vadeli kârlılığı taşıyan insanları) tanımlamak istiyordu. Klasik segmentasyon modelleri harcama düzeyi ve abonelik süresi gibi ölçütlere dayanıyordu. Ancak bu göstergeler, müşterinin gerçek potansiyelini anlatmıyordu.",
+  "listDesc": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın a...",
+  "image": "https://static.wixstatic.com/media/384171_708b3a509f884f85a71c1e8758233b83~mv2.jpg",
+  "imageAlt": "Vodafone - Bugünün \"değerli müşterilerini\" anlamak",
+  "image2": "https://static.wixstatic.com/media/384171_71bce1bf366f47f9adfb5e523912595e~mv2.jpg",
+  "image2Alt": "Vodafone Görsel 2",
+  "listStyle": "dustGrey",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "5 Segment Yüksek Değerli Müşteri Tipi",
+    "%38 Segment Büyüme Potansiyeli",
+    "Global Vodafone Referansı"
+  ],
+  "seo": {
+    "title": "Vodafone | Bugünün \"değerli müşterilerini\" anlamak | CX Folks",
+    "description": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, ",
+    "headline": "Vodafone - Bugünün \"değerli müşterilerini\" anlamak",
+    "schemaDesc": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, çevresine etki eden, uzun vadeli kârlılığı taşıyan insanları) tanımlamak istiyordu. Klasik segmentasyon modelleri harcama düzeyi ve abonelik süresi gibi ölçütlere dayanıyordu. Ancak bu göstergeler, müşterinin gerçek potansiyelini anlatmıyordu.",
+    "breadcrumbName": "Vodafone"
+  },
+  "metrics": [
+    {
+      "value": "5 Segment",
+      "label": "Yüksek Değerli Müşteri Tipi"
+    },
+    {
+      "value": "%38",
+      "label": "Segment Büyüme Potansiyeli"
+    },
+    {
+      "value": "Global",
+      "label": "Vodafone Referansı"
+    },
+    {
+      "value": "4",
+      "label": "Yaşam Kanıtı Protokolü"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Sorular",
+    "title": "Demografi ötesinde, bugünün \"yüksek değerli\" müşterileri kim? Onları \"premium\" ücret ödemeye razı eden beklentiler ne? Hangi segmentler kısa vadeli gelir, hangileri uzun vadeli stratejik değer sağlıyor? Ve en önemlisi, onları Vodafone'un doğal tercihi haline getirecek hizmetler ne olabilir?",
+    "body": "Sözle beyan edilen davranış yerine gerçekte yaşananı anlamak için \"Life Evidence Kit\" metodolojisini geliştirdik. Katılımcılara özel araştırma setleri verildi: Yedi günlük ayrıntılı yaşam günlüğü Harcama fişlerini kaydeden takip sistemi Fiziksel duygu izleme araçları Günlük rutini görünür kılan 20 SMS ile tetiklenen video görevi 30 gün süren saha programında bu kişileri iş hayatında, evlerinde, sosyal ortamlarda gözlemledik. Amaç yalnızca ne yaptıklarını değil, teknolojiyi yaşamlarının hangi anlamlı yerinde konumlandırdıklarını görmekti. Ardından Vodafone ekipleriyle üç yoğun analiz atölyesi düzenledik. Bu oturumlarda saha bulgularını müşteri arketiplerine, iş önceliklerine ve yeni hizmet fikirlerine dönüştürdük."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Premium müşteri mimarisi Sadece mevcut yüksek gelirli müşterileri değil, potansiyel yüksek değere sahip gelişen segmentleri de belirleyen kapsamlı bir çerçeve oluşturuldu. RED paketleri güncellendi Tahmine dayalı değer analizi Hızlı gelir sağlayanlarla uzun vadeli stratejik değer yaratan müşteriler ayrıştırıldı. Deneyim farklılaştırması Concierge tarzı destek, proaktif bakım protokolleri ve yaşam temelli hizmet paketleri geliştirildi. Öngörülü hizmet tasarımı Sorunlar yaşanmadan çözen sistemler kuruldu; \"bir adım önde\" marka konumu güçlendi.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

@@ -6,10 +6,29 @@ import { getAllProjects, getSite, getSurfaceStyle, resolveTextStyle, resolveText
 
 export function getStaticPaths() {
   const projects = getAllProjects();
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
+  const paths: any[] = [];
+  const aliasMap: Record<string, string> = {
+    'istanbul-havalimani': 'iga-turk-misafirperverligi',
+    'aksigorta-konut-sigortasi': 'aksigorta-yeni-konut-sigortasi',
+    'fiat-surucu-dostu': 'fiat-surucu-dostu-hizmetler',
+    'garanti-bbva-yatirim': 'garanti-bbva-kucuk-yatirimcilar',
+    'offline-bahisciler': 'bilyoner',
+  };
+  for (const project of projects) {
+    paths.push({
+      params: { slug: project.slug },
+      props: { project },
+    });
+    for (const [oldSlug, newSlug] of Object.entries(aliasMap)) {
+      if (project.slug === newSlug) {
+        paths.push({
+          params: { slug: oldSlug },
+          props: { project },
+        });
+      }
+    }
+  }
+  return paths;
 }
 
 interface Props {

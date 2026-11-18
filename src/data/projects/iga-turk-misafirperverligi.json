@@ -1,0 +1,95 @@
+{
+  "slug": "iga-turk-misafirperverligi",
+  "order": 1,
+  "client": "İstanbul havalimanı",
+  "sector": "Havacılık & Ulaşım",
+  "title": "Türk misafirperverliğini küresel bir standarda dönüştürmek",
+  "shortTitle": "Türk misafirperverliğini küresel bir s...",
+  "desc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarının aksine tek bir işletmeci tarafından değil, farklı önceliklere, standartlara ve eğitim sistemlerine sahip binlerce çalışanın bulunduğu çoklu bir ekosistem tarafından yönetiliyor.",
+  "listDesc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarını...",
+  "image": "https://static.wixstatic.com/media/384171_c8c37d84dac74ebca971559c74c17a76~mv2.png",
+  "imageAlt": "İstanbul havalimanı - Türk misafirperverliğini küresel bir standarda dönüştürmek",
+  "image2": "https://static.wixstatic.com/media/384171_3bb98461a54e4f5ab6db5e2c0096c9db~mv2.png",
+  "image2Alt": "İstanbul havalimanı Görsel 2",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "30.000 Eğitilen Çalışan",
+    "%78 Memnuniyet Artışı",
+    "200 Kültür Elçisi"
+  ],
+  "seo": {
+    "title": "İstanbul havalimanı | Türk misafirperverliğini küresel bir standarda dönüştürmek | CX Folks",
+    "description": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarının aksine tek bir işletm",
+    "headline": "İstanbul havalimanı - Türk misafirperverliğini küresel bir standarda dönüştürmek",
+    "schemaDesc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarının aksine tek bir işletmeci tarafından değil, farklı önceliklere, standartlara ve eğitim sistemlerine sahip binlerce çalışanın bulunduğu çoklu bir ekosistem tarafından yönetiliyor.",
+    "breadcrumbName": "İstanbul havalimanı"
+  },
+  "metrics": [
+    {
+      "value": "30.000",
+      "label": "Eğitilen Çalışan"
+    },
+    {
+      "value": "%78",
+      "label": "Memnuniyet Artışı"
+    },
+    {
+      "value": "200",
+      "label": "Kültür Elçisi"
+    },
+    {
+      "value": "14",
+      "label": "Temas Noktası"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Farklı kurumlara bağlı 30.000 çalışanı tek bir kültürel değer etrafında nasıl birleştirirsiniz?",
+    "body": "Yönetim, yalnızca operasyonel verimlilik istemiyor, her temas noktasında gerçek Türk misafirperverliğini hissettiren bir yolculuk hedefliyordu. Sekiz haftalık saha araştırması boyunca terminalden mağazalara, güvenlik kontrolünden biniş kapılarına kadar tüm alanlarda gözlem yaptık. Yolcuları ve çalışanları adım adım izleyerek gerilimin, rahatlamanın ve samimi temasın yaşandığı anları belgeledik. Görüşmeler ve kültürel analizler sonucunda Türk misafirperverliğinin özünü tanımladık: Yabancıyı misafir gibi görmek. Bu fikir programın temel ilkesi haline geldi: \"İstanbul Havalimanı bizim evimiz, içeri giren herkes misafirimizdir.\""
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler ve çıktıları",
+    "columns": 3,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "\"Kültür Elçisi\" Programı farklı kurumlara bağlı çalışanların gönüllü katılımıyla tabandan yayıldı. Tüm iç iletişim \"misafir\" diline göre yeniden tasarlandı, kültürel dönüşüm herkesin görebileceği kadar görünür hale geldi. Davranış temelli eğitimlerle çalışanlar ezber değil, içselleştirilmiş davranış modelleri kazandı. İlk kez farklı kurumlar tek bir hizmet felsefesi etrafında hizalandı.",
+        "style": "platinum"
+      },
+      {
+        "title": "Operasyonel",
+        "body": "Altı ayda 30.000 kişi eğitildi, 200 kültür elçisi aktif görev aldı, kurumlar arası koordinasyon sağlandı.",
+        "style": "dustGrey"
+      },
+      {
+        "title": "Deneyim",
+        "body": "\"Yolcu memnuniyeti\" bir yılda %18 arttı. \"Personelin güler yüzü\" memnuniyetin bir numaralı etkeni oldu. Hizmet kalitesi sağlayıcı fark etmeksizin ölçülebilir seviyede dengelendi.",
+        "style": "platinum"
+      },
+      {
+        "title": "Etkileri",
+        "body": "Program, Stevie Awards 2023'te \"Great Employers\" ve Business Culture Awards 2023'te \"Best Learning Initiative\" ödüllerini kazandı. Bu başarı, insan odaklı değerlerin yoğun, regülasyonlu ortamlarda bile tasarlanabilir ve ölçeklenebilir olduğunu kanıtladı. Misafirperverlik artık soyut bir kavram değil, operasyonun parçası haline geldi.",
+        "style": "dustGrey"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

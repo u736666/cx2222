@@ -1,0 +1,79 @@
+{
+  "slug": "ai-konusu",
+  "order": 1,
+  "title": "AI çağında \"iş\" yapmak",
+  "articleTitle": "AI Çağında \"İş\" Yapmak: Algoritmalar Veriyi, İnsan Bağlamı Görür",
+  "desc": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dolduruyoruz.",
+  "homeDesc": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dolduruyoruz.",
+  "articleSubtitle": "Yapay zeka size hız kazandırır; ama biz o hızın gerçekten doğru yöne gidip gitmediğiyle ilgileniyoruz.",
+  "category": "Yapay Zeka & CX",
+  "date": "14 Kasım 2026",
+  "datePublishedIso": "2026-11-14T09:00:00+03:00",
+  "readTime": "4 dk okuma",
+  "barStyle": "brandAccent",
+  "heroStyle": "siteBg",
+  "image": "https://static.wixstatic.com/media/384171_ed5eda31daec4b4395e6144f77e0f122~mv2.jpg",
+  "heroImage": "https://static.wixstatic.com/media/384171_ed5eda31daec4b4395e6144f77e0f122~mv2.jpg",
+  "imageAlt": "AI çağında \"iş\" yapmak",
+  "seo": {
+    "title": "AI çağında \"iş\" yapmak | CX Folks Blog",
+    "description": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dold",
+    "headline": "AI Çağında \"İş\" Yapmak: Algoritmalar Veriyi, İnsan Bağlamı Görür",
+    "schemaDesc": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dolduruyoruz.",
+    "breadcrumbName": "AI çağında \"iş\" yapmak"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dolduruyoruz."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hepimiz kullanıyoruz, yalan yok. Neden kullanmayalım ki zaten? Herkes daha hızlı, daha otomatik olmak istiyor. Ama bu büyük gürültüde çok temel bir şeyi atlamayalım: Yapay zeka size saniyeler içinde binlerce yanıt verebilir, ama hala hangi sorunun peşinden gitmeniz gerektiğini size söyleyemez. Sadece teknolojiye güvenerek strateji kurmak, nereye gideceğini bilmeden gaza basmaya benziyor. Hızlanıyorsunuz, evet, ama nereye vardığınız tamamen şans eseri. Gerçek inovasyon dediğimiz şey ise, algoritmanın sunduğu \"steril dünya\" ile insanın bazen irrasyonel, bazen karmaşık olan gerçekliğini karşı karşıya getirdiğimiz an başlıyor."
+    },
+    {
+      "type": "heading",
+      "text": "Bağlam körlüğü: algoritmaların göremediği yer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yapay zeka aslında müthiş bir istatistik makinesi. Kalıpları bizden çok daha iyi görüyor. Yalnız unutmayalım; veri dediğimiz şey geçmişin bir birikimidir. Bir algoritma size kullanıcının hangi düğmeye bastığını, hangi saatte sipariş verdiğini çok net söyler. Ama o düğmeye basarken içinden neler geçtiğini, o anki modunun kararını nasıl etkilediğini göremez. Buna biz \"bağlam körlüğü\" diyoruz. Veri ne kadar devasa olursa olsun, sokağın o anki nabzını ve insanın öngörülemez derinliğini ıskaladığında, elimizde sadece pahalı bir varsayım kalıyor. Ethnogram'da biz, AI'nın sunduğu o soğuk çıktıları alıp, sahadaki gerçek hayatla, gerçek insanlarla test ediyoruz. Çünkü biliyoruz ki, bir verinin büyüklüğü değil, o verinin insanın hayatında bir karşılığı olup olmadığı asıl değeri yaratıyor."
+    },
+    {
+      "type": "heading",
+      "text": "Merak, otomasyondan daha değerli"
+    },
+    {
+      "type": "paragraph",
+      "text": "IDEO'nun da sıkça vurguladığı gibi, bu yeni çağda en hızlı robotlaşanlar değil, en hızlı adapte olanlar ayakta kalacak. Bu adaptasyon meselesi teknik bir konu değil, tamamen bir zihniyet meselesi. Yapay zeka cevapları önümüze yığarken; bizim merak etmek, empati kurmak ve o sonuçları sorgulamak gibi en temel insani kaslarımızı kullanmamız gerekiyor. İsim vermeden gerçek bir projeden: AI size bir bölgedeki insanların \"fiyat hassasiyeti\" olduğunu söylüyor. Siz de buna bakarak fiyat indiriyorsunuz. Ama sahaya indiğimizde görüyoruz ki, o insanlar aslında ucuz olanı değil, kendilerini \"özel\" hissedecekleri bir deneyimi arıyorlar. AI'nın \"ekonomi\" dediği yere, insan \"değer\" diyor. İşte bu çeviri hatası, milyon dolarlık yatırımların neden havada kaldığının cevabı. Artık sadece \"veriye dayalı\" olmak yetmiyor; kararlarınızın \"insanla doğrulanmış\" (human-validated) olması şart."
+    },
+    {
+      "type": "heading",
+      "text": "Kültürel bir kas olarak adaptasyon"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yapay zeka ile kurulan bu ortaklıkta, denetim dediğimiz şey sadece bir \"kontrol\" mekanizması değil. Bu, kurumun kendi içinde geliştirmesi gereken bir yetkinliktir. Biz bu süreci sadece bir dış hizmet olarak görmüyoruz; kurumların kendi içgörü kaslarını geliştirdiği bir öğrenme alanı olarak kurguluyoruz. Teknoloji kuralları her hafta değiştirirken, \"kesinlik\" aramak artık bir çözüm değil, bir yük. Çünkü bizim htiyacımız olan şey kesinlik değil, doğru bir oryantasyon. Kurumsal çeviklik, en gelişmiş yazılımlara sahip olmak değil; o yazılımları insani bir sağduyuyla sorgulayabilecek bir \"değişim okuryazarlığı\" kazanmaktır. Ekiplerinize \"AI böyle diyor ama sokak ne diyor?\" sorusunu sordurabildiğiniz an, gerçek dönüşüm başlıyor."
+    },
+    {
+      "type": "heading",
+      "text": "Uzatmayalım"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yıllardır sahanın tozunu yutan, insanların evlerine giren, market raflarının arasında gözlem yapan bir ekip olarak şundan çok eminiz: Yapay zeka işlerimizi (şimdilik) elimizden taömamen almayacak; ama \"insanı\" sürecin dışına iten veya ona sadece bir veri kaynağı olarak bakan her yapı, zamanla gerçeklikten kopacak. Bizim derdimiz AI'nın hızını kesmek değil; o hızı, insani bir sağduyuyla denetlemek. Bir modelin sunduğu öngörü, eğer bugünün kültürel kodlarıyla örtüşmüyorsa, o strateji sahada duvara çarpar. Bizim görevimiz, o teknolojik hızı sokağın gerçekliğiyle hizalamak. Sonuçta teknoloji size veriyi verir; Ethnogram ise o verinin içindeki \"anlamı\" ve \"yönü\" gösterir. AI bir pusuladır ama o pusulayı okuyup hangi tepenin arkasında fırtına olduğunu sezecek olan hala insandır."
+    },
+    {
+      "type": "heading",
+      "text": "&copy; 2026 Ethnogram"
+    },
+    {
+      "type": "paragraph",
+      "text": "İster proje ortağınız olarak süreçlerinizi biz tasarlayalım, ister eğitim programlarıyla ekibinize yetkinlik kazandıralım."
+    }
+  ],
+  "relatedLink": {
+    "label": "Tüm Makalelere Dön →",
+    "href": "/blog"
+  }
+}

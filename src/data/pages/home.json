@@ -150,7 +150,8 @@
         {
           "name": "Amazon",
           "kind": "image",
-          "image": "/images/logos/amazon-logo-svg-mwdffkj8.webp"
+          "image": "/images/logos/amazon-logo-svg-mwdffkj8.webp",
+          "nameColor": "brandAccent"
         },
         {
           "name": "Allianz",
@@ -440,7 +441,7 @@
         "allLinkHref": "/projeler",
         "cardCtaText": "Vaka Detaylarını İncele →",
         "featuredSlugs": [
-          "istanbul-havalimani",
+          "iga-turk-misafirperverligi",
           "vodafone-roaming",
           "akbank-degerli-anlar"
         ],
@@ -462,8 +463,8 @@
         "allLinkText": "Tüm Yazılar →",
         "allLinkHref": "/blog",
         "featuredSlugs": [
-          "calisaniniz-neden-mutlu-degil",
-          "yapay-zeka-ve-insan-dokunusunda-denge"
+          "calisan-deneyimi",
+          "ai-konusu"
         ],
         "headingTag": "h2",
         "titleColor": "white"

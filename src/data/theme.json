@@ -12,6 +12,12 @@
   "deepNavy": "#462937",
   "richBlack": "#351E28",
   "cardBg": "#ffffff",
+  "ctaMeshBase1": "#D7EFFF",
+  "ctaMeshBase2": "#E9F056",
+  "ctaMeshOrb1": "#E9F056",
+  "ctaMeshOrb2": "#D7EFFF",
+  "ctaMeshOrb3": "#FDBA74",
+  "ctaMeshOrb4": "#C1DEEF",
   "typography": {
     "bodySizeMobile": 15,
     "bodySizeDesktop": 16,

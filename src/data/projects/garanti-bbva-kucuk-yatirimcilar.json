@@ -1,0 +1,80 @@
+{
+  "slug": "garanti-bbva-kucuk-yatirimcilar",
+  "order": 9,
+  "client": "Garanti Bankası",
+  "sector": "Bankacılık & Yatırım",
+  "title": "Yatırımı davranışsal gerçekliğe taşımak",
+  "shortTitle": "Yatırımı davranışsal gerçekliğe taşımak",
+  "desc": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayışını ve yerel yatırım psikolojisini yansıtıyor. Garanti Bankası, dijital liderliğini taşıdığı Paragaranti.com yatırım platformunu, bu davranışsal gerçekliğe uygun biçimde baştan tasarlamak istedi.",
+  "listDesc": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayı...",
+  "image": "https://static.wixstatic.com/media/384171_836724d8c19946cdbd780e71d36b285d~mv2.jpg",
+  "imageAlt": "Garanti Bankası - Yatırımı davranışsal gerçekliğe taşımak",
+  "image2": "https://static.wixstatic.com/media/55d98a_3287270d83ef4efabfdd1f52d0dc6ec2~mv2.jpg",
+  "image2Alt": "Garanti Bankası Görsel 2",
+  "listStyle": "platinum",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "40 Derinlemesine Mülakat",
+    "3 Yatırımcı Segmenti",
+    "%65 İlk Yatırım Artışı"
+  ],
+  "seo": {
+    "title": "Garanti Bankası | Yatırımı davranışsal gerçekliğe taşımak | CX Folks",
+    "description": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayışını ve yerel yatırım p",
+    "headline": "Garanti Bankası - Yatırımı davranışsal gerçekliğe taşımak",
+    "schemaDesc": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayışını ve yerel yatırım psikolojisini yansıtıyor. Garanti Bankası, dijital liderliğini taşıdığı Paragaranti.com yatırım platformunu, bu davranışsal gerçekliğe uygun biçimde baştan tasarlamak istedi.",
+    "breadcrumbName": "Garanti Bankası"
+  },
+  "metrics": [
+    {
+      "value": "40",
+      "label": "Derinlemesine Mülakat"
+    },
+    {
+      "value": "3",
+      "label": "Yatırımcı Segmenti"
+    },
+    {
+      "value": "%65",
+      "label": "İlk Yatırım Artışı"
+    },
+    {
+      "value": "4.8/5",
+      "label": "Kullanım Skoru"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Nasıl bir dijital yatırım deneyimi, sosyal çevresinin önerilerine güvenen ama dijital platformlara kuşkuyla yaklaşan kullanıcıyı kazanabilirdi?",
+    "body": "On haftalık etnografik program boyunca yatırımcıları karar alma, işlem yapma ve sonuç izleme süreçlerinde adım adım izledik. Derinlemesine görüşmeler ve gözlemler, geleneksel finans teorilerini boşa çıkaran iki güçlü davranış örüntüsü ortaya koydu. Sosyal güven haritalaması: Araştırma, Türk yatırımcının kararlarını aile, arkadaş ve sosyal çevresinden aldığı güven üzerinden verdiğini gösterdi. Kişisel tavsiyeler, profesyonel analizlerden çok daha etkiliydi."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Sosyal odaklı arayüz Platform, teknik analiz yerine sosyal doğrulama üzerine yeniden kuruldu. Kullanıcılar topluluk içgörülerini, popüler hisseleri ve güven puanlarını görebiliyordu. Hızlı aksiyon mimarisi Tek tıkla işlem akışı ile hatalı, dürtüsel işlemleri önleyen akıllı bariyerler birlikte tasarlandı. Güven sinyalleri Anlık onaylar, ilerleme göstergeleri ve topluluk puanları, dijital finansal işlemlere duyulan güvensizliği azalttı. Davranışsal rehberlik Eğitim içerikleri analitik dilden uzaklaştırılarak, hikâyeler ve kullanıcı örnekleri üzerinden sunuldu.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "fiat-surucu-dostu-hizmetler",
+  "order": 7,
+  "client": "FIAT",
+  "sector": "Otomotiv & Mobilite",
+  "title": "Sürücü dostu hizmetler yaratmak",
+  "shortTitle": "Sürücü dostu hizmetler yaratmak",
+  "desc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler için FIAT Doblo, yalnızca bir ticari araç değil, geçimlerini taşıyan, haftaiçi iş ortağı, hafta sonu ise aile üyesi olan bir yol arkadaşıdır. Doblo, piyasaya çıktığı günden bu yana rakipsiz fiyat–performans dengesi ve yaygın servis ağıyla küçük işletmelerin varsayılan tercihi haline geldi. Ancak FIAT'ın hedefi sadece satış değildi. Marka, sürücülerin dünyasını anlamak, bu özel bağı güçlendiren hizmetler tasarlamak ve uzun vadeli iş sadakati yaratmak istiyordu.",
+  "listDesc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler i...",
+  "image": "https://static.wixstatic.com/media/384171_43e29e0df4ee428c93c9fff6129b156d~mv2.jpg",
+  "imageAlt": "FIAT - Sürücü dostu hizmetler yaratmak",
+  "image2": "https://static.wixstatic.com/media/384171_10a64facd243493a93f223befe71aa8a~mv2.jpg",
+  "image2Alt": "FIAT Görsel 2",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "500+ Sürücü Görüşmesi",
+    "12 Şehir Saha Gözlemi",
+    "6 Servis İnovasyonu"
+  ],
+  "seo": {
+    "title": "FIAT | Sürücü dostu hizmetler yaratmak | CX Folks",
+    "description": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler için FIAT Doblo, yalnızc",
+    "headline": "FIAT - Sürücü dostu hizmetler yaratmak",
+    "schemaDesc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler için FIAT Doblo, yalnızca bir ticari araç değil, geçimlerini taşıyan, haftaiçi iş ortağı, hafta sonu ise aile üyesi olan bir yol arkadaşıdır. Doblo, piyasaya çıktığı günden bu yana rakipsiz fiyat–performans dengesi ve yaygın servis ağıyla küçük işletmelerin varsayılan tercihi haline geldi. Ancak FIAT'ın hedefi sadece satış değildi. Marka, sürücülerin dünyasını anlamak, bu özel bağı güçlendiren hizmetler tasarlamak ve uzun vadeli iş sadakati yaratmak istiyordu.",
+    "breadcrumbName": "FIAT"
+  },
+  "metrics": [
+    {
+      "value": "500+",
+      "label": "Sürücü Görüşmesi"
+    },
+    {
+      "value": "12 Şehir",
+      "label": "Saha Gözlemi"
+    },
+    {
+      "value": "6",
+      "label": "Servis İnovasyonu"
+    },
+    {
+      "value": "%91",
+      "label": "Memnuniyet Skoru"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Farklı kurumlara bağlı 30.000 çalışanı tek bir kültürel değer etrafında nasıl birleştirirsiniz?",
+    "body": "Türkiye'nin farklı illerinde 3 ay boyunca Türkiye'deki küçük işletme kültürüne derinlemesine daldık. 30 farklı sürücünün yanında saha sürüşlerine katıldık, iş günleri ve hafta sonlarını belgeledik. Görsel ve sesli günlüklerle kargo seferleri, gece teslimatları, aile gezileri ve sürücüler arası etkileşimleri kaydettik. Araştırma sonucunda Doblo'nun bir taşıt olmaktan çok daha fazlası olduğu ortaya çıktı: Sürücülerin ofisi, yemek masası, düşünme alanı, hatta bazen yatak odasıydı. Sahipler araçlarına isim veriyor, iç mekânı kişiselleştiriyor ve aile anılarını onunla biriktiriyordu."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler ve çıktıları",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Sürücü odaklı servis mimarisi Program, bakım takvimine göre değil, sürücünün gerçek hayatına göre tasarlandı. Doblo'nun hem iş hem aile aracı kimliği kabul edildi. Kargo destek programı Teslimat sürecini aksatmadan yük desteği ve hızlı müdahale hizmetleri sunuldu. Gece servis ağı Gündüz işini durduramayan sürücüler için gece saatlerinde hizmet veren bakım noktaları oluşturuldu. Topluluk merkezi stratejisi Servis merkezleri sadece tamir alanı değil, iş fırsatlarının paylaşıldığı, sürücülerin birbirine destek olduğu sosyal alanlara dönüştürüldü. Aile dönüşüm destekleri Doblo'nun hafta sonu aile aracına dönüşmesini destekleyen özel kullanım programları geliştirildi.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "bilyoner",
+  "order": 4,
+  "client": "Bilyoner",
+  "sector": "Dijital Eğlence & Bahis",
+  "title": "\"Offline\" bahisçilerin zihin dünyasına yolculuk",
+  "shortTitle": "\"Offline\" bahisçilerin zihin dünyasına...",
+  "desc": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. Fakat....",
+  "listDesc": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. F...",
+  "image": "https://static.wixstatic.com/media/384171_ff0dcfbab8f642448923dc1a3d7aa1d9~mv2.png",
+  "imageAlt": "Bilyoner - \"Offline\" bahisçilerin zihin dünyasına yolculuk",
+  "image2": "https://static.wixstatic.com/media/384171_4ac2f29c062243ffb8aad6c9d5a103cf~mv2.jpg",
+  "image2Alt": "Bilyoner Görsel 2",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "150+ Saat Bayi Gözlemi",
+    "6 İl Saha Ziyareti",
+    "4 Sosyal Ritüel Modeli"
+  ],
+  "seo": {
+    "title": "Bilyoner | \"Offline\" bahisçilerin zihin dünyasına yolculuk | CX Folks",
+    "description": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. Fakat....",
+    "headline": "Bilyoner - \"Offline\" bahisçilerin zihin dünyasına yolculuk",
+    "schemaDesc": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. Fakat....",
+    "breadcrumbName": "Bilyoner"
+  },
+  "metrics": [
+    {
+      "value": "150+ Saat",
+      "label": "Bayi Gözlemi"
+    },
+    {
+      "value": "6 İl",
+      "label": "Saha Ziyareti"
+    },
+    {
+      "value": "4",
+      "label": "Sosyal Ritüel Modeli"
+    },
+    {
+      "value": "%54",
+      "label": "Dijital Dönüşüm Oranı"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "\"Online\" bahis bu kadar kolayken, neden milyonlarca insan hâlâ her hafta sonu fiziksel bayilere gitmeyi tercih ediyordu?",
+    "body": "Çözümler ve çıktıları"
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler ve çıktıları",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Dijital topluluk mimarisi Uygulama içine entegre edilen grup alanları sayesinde kullanıcılar artık tahminlerini paylaşabiliyor, birlikte kutlayabiliyor, sosyal bağlarını sürdürebiliyordu. \"Offline\" deneyimi değerli kılan aidiyet duygusu dijitalde yeniden inşa edildi. Güven tasarımı Fiziksel kuponun sağladığı güven duygusu dijitalde görsel onay sistemleriyle yeniden yaratıldı. Gerçek zamanlı ilerleme göstergeleri ve dijital bahis fişleri kullanıcıya somut güven hissi sağladı. Hibrit deneyim stratejisi \"Online\" kolaylığı \"offline\" toplulukla birleştiren kampanyalar geliştirildi. Kullanıcılar artık dijitalden bahis oynarken aynı zamanda topluluk içinde etkileşim kurabiliyordu. Kişilik odaklı özellikler Yeni başlayanlar için sadeleştirilmiş tek tıklama bahis akışı, deneyimli kullanıcılar için gelişmiş çoklu maç araçları ve analitik ekranlar tasarlandı.",
+        "style": "platinum"
+      },
+      {
+        "title": "Çözüm #2",
+        "body": "\"Artık evden oynasam da arkadaşlarla bağlantıdayım. Maç sırasında grup sohbeti neredeyse bayide olmaktan daha keyifli.\" \"Dijital kuponun görünümü kâğıttakiyle aynı. Ekran görüntüsünü alıyorum, içim rahat ediyor.\"",
+        "style": "dustGrey"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

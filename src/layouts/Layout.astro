@@ -234,6 +234,19 @@ const allSchemas = [
   ...enrichedCustomSchemas,
 ];
 
+function hexToRgbaStr(hex: any, alpha: number) {
+  if (!hex || typeof hex !== 'string') return '';
+  if (hex.startsWith('rgba') || hex.startsWith('rgb')) return hex;
+  let c = hex.replace('#', '');
+  if (c.length === 3) c = c.split('').map(x => x + x).join('');
+  const num = parseInt(c, 16);
+  if (isNaN(num)) return hex;
+  const r = (num >> 16) & 255;
+  const g = (num >> 8) & 255;
+  const b = num & 255;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 const pxToRem = (px: number) => `${(Number(px) / 16).toFixed(4).replace(/\.?0+$/, '')}rem`;
 const fluidClamp = (minVal: any, maxVal: any, fallbackMin: number, fallbackMax: number) => {
   const minPx = Number(minVal) > 0 ? Number(minVal) : fallbackMin;
@@ -267,6 +280,12 @@ const themeVarsCss = `:root, html {
   --color-rich-black: ${theme.richBlack};
   --color-card-bg: ${theme.cardBg};
   --color-card-border: transparent;
+  --cta-mesh-base-1: ${theme.ctaMeshBase1 || '#D7EFFF'};
+  --cta-mesh-base-2: ${theme.ctaMeshBase2 || '#E9F056'};
+  --cta-mesh-orb-1: ${hexToRgbaStr(theme.ctaMeshOrb1 || '#E9F056', 0.40)};
+  --cta-mesh-orb-2: ${hexToRgbaStr(theme.ctaMeshOrb2 || '#D7EFFF', 0.75)};
+  --cta-mesh-orb-3: ${hexToRgbaStr(theme.ctaMeshOrb3 || '#FDBA74', 0.35)};
+  --cta-mesh-orb-4: ${hexToRgbaStr(theme.ctaMeshOrb4 || '#C1DEEF', 0.50)};
   --fs-body: ${fluidClamp(ty.bodySizeMobile, ty.bodySizeDesktop, 15, 16)};
   --lh-body: ${bodyLineHeight};
   --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 18, 20)};

@@ -1,0 +1,83 @@
+{
+  "slug": "aksigorta-yeni-konut-sigortasi",
+  "order": 6,
+  "client": "Aksigorta",
+  "sector": "Sigortacılık",
+  "title": "Kültüre göre tasarlanmış bir konut sigortası",
+  "shortTitle": "Kültüre göre tasarlanmış bir konut sig...",
+  "desc": "Türkiye'de kader inancı, sigortaya bakışı derinden şekillendirir. Pek çok kişi kazaları önlenebilir olaylar değil, yazgının sonucu olarak görür. Bu düşünce, sigortayı gereksiz hatta \"kaderle iddiaya girmek\" gibi algılatır. Türkiye'nin önde gelen sigorta şirketlerinden Aksigorta, yeni konut sigortası ürününü piyasaya sürerken sadece rakiplerle değil, bu kültürel dirençle karşı karşıyaydı.",
+  "listDesc": "Türkiye'de kader inancı, sigortaya bakışı derinden şekillendirir. Pek çok kişi kazaları önlenebilir olaylar değil, yazgının sonucu olarak...",
+  "image": "https://static.wixstatic.com/media/384171_f8657dea2abe49e2a322ceb67de5a7ad~mv2.png",
+  "imageAlt": "Aksigorta - Kültüre göre tasarlanmış bir konut sigortası",
+  "listStyle": "platinum",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "6 Hafta Etnografik Araştırma",
+    "4 Temel Kültürel Engel Çözümü",
+    "%58 Şube Pazar Payı"
+  ],
+  "seo": {
+    "title": "Aksigorta | Kültüre göre tasarlanmış bir konut sigortası | CX Folks",
+    "description": "Türkiye'de kader inancı, sigortaya bakışı derinden şekillendirir. Pek çok kişi kazaları önlenebilir olaylar değil, yazgının sonucu olarak görür. Bu düşünce, sig",
+    "headline": "Aksigorta - Kültüre göre tasarlanmış bir konut sigortası",
+    "schemaDesc": "Türkiye'de kader inancı, sigortaya bakışı derinden şekillendirir. Pek çok kişi kazaları önlenebilir olaylar değil, yazgının sonucu olarak görür. Bu düşünce, sigortayı gereksiz hatta \"kaderle iddiaya girmek\" gibi algılatır. Türkiye'nin önde gelen sigorta şirketlerinden Aksigorta, yeni konut sigortası ürününü piyasaya sürerken sadece rakiplerle değil, bu kültürel dirençle karşı karşıyaydı.",
+    "breadcrumbName": "Aksigorta"
+  },
+  "metrics": [
+    {
+      "value": "6 Hafta",
+      "label": "Etnografik Araştırma"
+    },
+    {
+      "value": "4 Temel",
+      "label": "Kültürel Engel Çözümü"
+    },
+    {
+      "value": "%58",
+      "label": "Şube Pazar Payı"
+    },
+    {
+      "value": "%30",
+      "label": "Memnuniyet Yükselişi"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Kalıcı bağlılığı yaratan insani dokunuş nasıl tasarlanır?",
+    "body": "Katılımcıların sesinden"
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Kültürel yeniden çerçeveleme Sigorta, \"riskten korunma\" yerine \"aileni koruma sorumluluğu\" olarak konumlandı. Böylece kadercilik anlayışıyla çatışmak yerine onunla uyum sağlandı. Görsel iletişim sistemi Yoğun metinli poliçeler yerine görseller, ikonlar ve basit grafikler kullanılarak anlaşılabilirlik artırıldı. Rehberli satın alma yolculuğu Adım adım ilerleyen, kullanıcının her aşamada ne yapacağını açıkça gösteren süreç tasarlandı. Güven kanalları Kişisel iletişim tercihleri korunarak yüz yüze rehberlik ve danışmanlık seçenekleri sunuldu.",
+        "style": "platinum"
+      },
+      {
+        "title": "Çözüm #2",
+        "body": "Pilot gruplarda dolaşım aktivasyonu %22 arttı, fatura şoku şikayetleri belirgin şekilde azaldı.",
+        "style": "dustGrey"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

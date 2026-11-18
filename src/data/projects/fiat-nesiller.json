@@ -1,0 +1,80 @@
+{
+  "slug": "fiat-nesiller",
+  "order": 12,
+  "client": "FIAT / TOFAŞ",
+  "sector": "Otomotiv & Kültürel Miras",
+  "title": "Bir TOFAŞ sahibinin yolculuğu",
+  "shortTitle": "Bir TOFAŞ sahibinin yolculuğu",
+  "desc": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretilen ilk yerli otomobillerden biri olarak, kuşaklar boyu süren bir gurur sembolü haline geldi. TOFAŞ, müşteri yolculuğunu tanımlamak için Ethnogram'a başvurduğunda konu sadece satış ve servis adımlarını anlamak değil, bir kültürel ilişkiyi, \"miras, aidiyet ve kuşaklar arası bağı\" çözümlemekti",
+  "listDesc": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Tu...",
+  "image": "https://static.wixstatic.com/media/384171_b64aba8570ac4bc48dd2d78d80d16643~mv2.png",
+  "imageAlt": "FIAT / TOFAŞ - Bir TOFAŞ sahibinin yolculuğu",
+  "image2": "https://static.wixstatic.com/media/384171_e7bb6fa698a5441fac41ff42586267d6~mv2.jpg",
+  "image2Alt": "FIAT / TOFAŞ Görsel 2",
+  "listStyle": "platinum",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "3 Kuşak Kültürel Analiz",
+    "12 İl Saha Ziyareti",
+    "%90+ Marka Aidiyet Skoru"
+  ],
+  "seo": {
+    "title": "FIAT / TOFAŞ | Bir TOFAŞ sahibinin yolculuğu | CX Folks",
+    "description": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretil",
+    "headline": "FIAT / TOFAŞ - Bir TOFAŞ sahibinin yolculuğu",
+    "schemaDesc": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretilen ilk yerli otomobillerden biri olarak, kuşaklar boyu süren bir gurur sembolü haline geldi. TOFAŞ, müşteri yolculuğunu tanımlamak için Ethnogram'a başvurduğunda konu sadece satış ve servis adımlarını anlamak değil, bir kültürel ilişkiyi, \"miras, aidiyet ve kuşaklar arası bağı\" çözümlemekti",
+    "breadcrumbName": "FIAT / TOFAŞ"
+  },
+  "metrics": [
+    {
+      "value": "3 Kuşak",
+      "label": "Kültürel Analiz"
+    },
+    {
+      "value": "12 İl",
+      "label": "Saha Ziyareti"
+    },
+    {
+      "value": "%90+",
+      "label": "Marka Aidiyet Skoru"
+    },
+    {
+      "value": "4",
+      "label": "Duygusal Temas Noktası"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Yılların bankacılık uzmanlarını araştırmacı ve tasarımcı gibi düşünmeye nasıl alıştırırsınız?",
+    "body": "Nesiller arası etnografi Üç kuşakta FIAT sahipliği incelendi. 45 araç sahibiyle derin görüşmeler, 15 aileyle günlük kullanım ve bakım gözlemleri gerçekleştirildi. Araştırma, FIAT'ın aile yaşam döngüsüne nasıl entegre olduğunu belgeledi. Kültürel ilişki analizi Mülkiyet süreci boyunca yaşanan duygusal temas noktaları haritalandı: ilk satın alma heyecanı, yıllar içindeki bakım deneyimleri, aile dönüm noktaları ve araç devri anları. Kuşaklar arası anlam gelişimi FIAT markasının üç kuşak boyunca nasıl evrildiği ama özünü koruduğu analiz edildi; geçmişle bugünü birleştiren kalıplar belirlendi."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Kültürel deneyim çerçevesi Satın alma öncesinden nesiller arası miras devrine kadar yedi aşamalı sahiplik yolculuğu tanımlandı. Miras odaklı hizmet tasarımı Doğum, mezuniyet, evlilik gibi aile dönüm noktaları için özel kutlama programları oluşturuldu. Sahipleri nesiller boyu birbirine bağlayan dijital \"Heritage Story\" platformu geliştirildi. Servis deneyimi, topluluk sohbeti ve kültürel aidiyet duygusunu güçlendirecek şekilde yeniden tasarlandı. \"Made in Turkey\" gururunu yaşatan fabrika ziyareti programları planlandı. Duygusal sadakat stratejisi FIAT sahipliğinin bir işlem değil, aile ilişkisi olduğu kabul edilerek hizmet dili bu anlayışla uyumlu hale getirildi. Kurum içi hizalama Pazarlama, satış ve servis ekipleri, ilk kez ortak kültürel içgörü temelinde entegre müşteri deneyimi stratejisiyle hizalandı.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

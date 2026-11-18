@@ -1,0 +1,80 @@
+{
+  "slug": "akbank-dijital-bankacilik",
+  "order": 11,
+  "client": "Akbank",
+  "sector": "Finansal Teknolojiler",
+  "title": "Dijital bankacılıkta inovasyonu hızlandırmak",
+  "shortTitle": "Dijital bankacılıkta inovasyonu hızlan...",
+  "desc": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her yeni proje için dış danışmanlara bağımlı kalmadan, tasarım odaklı düşünme yaklaşımını ekiplerine yerleştirmek ve bu yetkinliği kendi içinde üretmek istiyordu.",
+  "listDesc": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale get...",
+  "image": "https://static.wixstatic.com/media/384171_22d925f116f840028d52f52d8b8cbca7~mv2.jpg",
+  "imageAlt": "Akbank - Dijital bankacılıkta inovasyonu hızlandırmak",
+  "image2": "https://static.wixstatic.com/media/384171_c347a096caf044cc92a2e27b06aad183~mv2.jpg",
+  "image2Alt": "Akbank Görsel 2",
+  "listStyle": "dustGrey",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "60+ Eğitilen Çalışan",
+    "3 Hafta Yoğun Program",
+    "%100 Kurum İçi Yetkinlik"
+  ],
+  "seo": {
+    "title": "Akbank | Dijital bankacılıkta inovasyonu hızlandırmak | CX Folks",
+    "description": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her ye",
+    "headline": "Akbank - Dijital bankacılıkta inovasyonu hızlandırmak",
+    "schemaDesc": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her yeni proje için dış danışmanlara bağımlı kalmadan, tasarım odaklı düşünme yaklaşımını ekiplerine yerleştirmek ve bu yetkinliği kendi içinde üretmek istiyordu.",
+    "breadcrumbName": "Akbank"
+  },
+  "metrics": [
+    {
+      "value": "60+",
+      "label": "Eğitilen Çalışan"
+    },
+    {
+      "value": "3 Hafta",
+      "label": "Yoğun Program"
+    },
+    {
+      "value": "%100",
+      "label": "Kurum İçi Yetkinlik"
+    },
+    {
+      "value": "3 Ekip",
+      "label": "Pazarlama, Dijital, Ürün"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "Yılların bankacılık uzmanlarını araştırmacı ve tasarımcı gibi düşünmeye nasıl alıştırırsınız?",
+    "body": "Deneyimsel öğrenme tasarımı 3 haftalık yoğun programda, dijital, pazarlama ve ürün ekiplerinden 60'tan fazla çalışan yer aldı. Teorik eğitim yerine, gerçek saha araştırması, müşteri etkileşimi ve iş fikri geliştirmeyi birleştiren eylem temelli bir öğrenme modeli kurduk. Gerçek uygulama Katılımcılar ilk kez gerçek müşterilerle görüşmeler yaptı, gözlem gerçekleştirdi ve bulgularını iş fikirlerine dönüştürdü. Tüm egzersizler varsayımsal senaryolar yerine bankanın güncel zorlukları üzerine kuruldu. Yöntem transferi Eğitimde etnografik araştırma teknikleri, Ethnogram'ın \"Persona Creator\" aracıyla persona geliştirme ve \"Lean Canvas\" iş modeli yöntemi bir arada kullanıldı."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Saha araştırması eğitimi Katılımcılar, müşteriyle birebir gözlem ve derin görüşme yapmayı öğrendi; kariyerlerinde ilk kez bağımsız araştırma yürüttüler. Persona geliştirme atölyesi Ekipler, soyut \"kullanıcı\" kavramını somut isimler, motivasyonlar ve zorluklarla tanımlanmış kişilere dönüştürdü. İş fikri geliştirme Lean Canvas eğitimiyle fikirler, ölçülebilir hedefleri olan sunulabilir iş konseptlerine dönüştürüldü. İnovasyon süreçlerine entegrasyon Tasarım odaklı düşünme yaklaşımı, Akbank'ın standart proje geliştirme metodolojisine dahil edildi.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

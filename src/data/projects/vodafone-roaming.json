@@ -1,88 +1,80 @@
 {
   "slug": "vodafone-roaming",
-  "order": 5,
+  "order": 2,
   "client": "Vodafone",
-  "sector": "",
-  "title": "Seyahatte Güven Yaratan Yeni Roaming Deneyimi",
-  "desc": "Son dakika baş ağrısı olan bir hizmeti, yolculuk boyunca kullanıcıya eşlik eden güvenilir bir dijital yol arkadaşına dönüştürdük.",
-  "listDesc": "Son dakika baş ağrısı olan bir hizmeti, yolculuk boyunca kullanıcıya eşlik eden güvenilir bir arkadaşa dönüştürdük.",
-  "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.png",
-  "imageAlt": "Vodafone Roaming Deneyimi",
-  "listStyle": "platinum",
+  "sector": "Telekomünikasyon",
+  "title": "Seyahatte güven yaratan yeni \"Roaming\" deneyimi",
+  "shortTitle": "Seyahatte güven yaratan yeni \"Roaming\"...",
+  "desc": "Yurtdışı dolaşımı, yıllardır yüksek faturalar ve belirsizlikle anılıyordu. Seyahate çıkan müşteriler ya hattını tamamen kapatıyor ya da tarifesini aktif sanarak beklenmedik ücretlerle karşılaşıyordu. 18 milyon müşterisiyle Vodafone Türkiye için her uluslararası yolculuk, markaya duyulan güvenin testi haline gelmişti.",
+  "listDesc": "Yurtdışı dolaşımı, yıllardır yüksek faturalar ve belirsizlikle anılıyordu. Seyahate çıkan müşteriler ya hattını tamamen kapatıyor ya da t...",
+  "image": "https://static.wixstatic.com/media/384171_6f47aa4a436e4b978635aa8515a3e2ef~mv2.png",
+  "imageAlt": "Vodafone - Seyahatte güven yaratan yeni \"Roaming\" deneyimi",
+  "image2": "https://static.wixstatic.com/media/384171_4db6035ad82142d4abb64f2c4cc60ea5~mv2.jpg",
+  "image2Alt": "Vodafone Görsel 2",
+  "listStyle": "dustGrey",
   "heroStyle": "siteBg",
   "bullets": [
-    "%42 Deneyim İyileşmesi",
-    "%60 Şikayet Düşüşü",
-    "Harcama Tavan Kilidi Güvencesi"
+    "10 Hafta Saha Çalışması",
+    "%30 Roaming Memnuniyet Artışı",
+    "%22 Dolaşım Aktivasyon Artışı"
   ],
   "seo": {
-    "title": "Vodafone Roaming Deneyimi Vaka Analizi | cx2222",
-    "description": "Yurt dışına çıkan kullanıcıların fatura kaygısını gideren, %42 deneyim iyileşmesi ve %60 şikayet düşüşü sağlayan proaktif mobil deneyim tasarımı.",
-    "headline": "Vodafone - Seyahatte Güven Yaratan Yeni Roaming Deneyimi",
-    "schemaDesc": "Yurt dışına çıkan kullanıcıların fatura kaygısını ve bağlantı stresini ortadan kaldıran şeffaf, proaktif mobil deneyim tasarımı.",
-    "breadcrumbName": "Vodafone Roaming",
-    "aboutTopics": [],
-    "keyTakeaways": []
+    "title": "Vodafone | Seyahatte güven yaratan yeni \"Roaming\" deneyimi | CX Folks",
+    "description": "Yurtdışı dolaşımı, yıllardır yüksek faturalar ve belirsizlikle anılıyordu. Seyahate çıkan müşteriler ya hattını tamamen kapatıyor ya da tarifesini aktif sanarak",
+    "headline": "Vodafone - Seyahatte güven yaratan yeni \"Roaming\" deneyimi",
+    "schemaDesc": "Yurtdışı dolaşımı, yıllardır yüksek faturalar ve belirsizlikle anılıyordu. Seyahate çıkan müşteriler ya hattını tamamen kapatıyor ya da tarifesini aktif sanarak beklenmedik ücretlerle karşılaşıyordu. 18 milyon müşterisiyle Vodafone Türkiye için her uluslararası yolculuk, markaya duyulan güvenin testi haline gelmişti.",
+    "breadcrumbName": "Vodafone"
   },
   "metrics": [
     {
-      "value": "%42",
-      "label": "Deneyim Memnuniyet Artışı"
+      "value": "10 Hafta",
+      "label": "Saha Çalışması"
     },
     {
-      "value": "%60",
-      "label": "Fatura Şikayeti Azalması"
+      "value": "%30",
+      "label": "Roaming Memnuniyet Artışı"
     },
     {
-      "value": "4.8 / 5",
-      "label": "Mobil Deneyim Skoru"
+      "value": "%22",
+      "label": "Dolaşım Aktivasyon Artışı"
     },
     {
-      "value": "%35",
-      "label": "Paket Benimseme Artışı"
+      "value": "Global",
+      "label": "Vodafone Tasarım Dili"
     }
   ],
   "challenge": {
-    "eyebrow": "Problem Tespiti",
-    "title": "\"Hattımı Açarsam Binlerce Lira Fatura Gelir mi?\"",
-    "body": "Yurt dışına seyahat eden kullanıcıların en büyük kabusu, farkında olmadan internet kullanıp ay sonunda devasa bir fatura sürpriziyle karşılaşmaktı. Bu korku nedeniyle kullanıcılar havaalanına iner inmez telefonlarını uçak moduna alıyor, yerel SIM kart peşinde koşuyor ve operatörün roaming gelirleri düşüyordu."
+    "eyebrow": "Soru",
+    "title": "İnsanların en çok çekindiği bu hizmeti, nasıl güvenle kullanılan bir yol arkadaşı haline getirebiliriz?",
+    "body": "On haftalık bir saha çalışmasında yolcuların seyahat öncesinden fatura dönemine kadar tüm deneyimini izledik. Video günlükleri ve derin görüşmeler ile iki temel davranışı ortaya koyduk: Bağlantıyı tamamen kesen temkinliler ve şoka uğrayan farkında olmayan kullanıcılar. Ortak kök neden: Seyahat kararları \"tatil kafasıyla\" alınırken hizmet tasarımı hâlâ \"telekom kafasıyla\" yürütülüyordu. Kullanıcılar plan yaparken operatörler tarife konuşuyordu."
   },
   "solution": {
-    "eyebrow": "Çözüm Yaklaşımı",
-    "title": "Şeffaflık, Proaktif Karşılama ve Kontrolün Kullanıcıya Verilmesi",
-    "columns": 3,
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Tasarım çözümleri ve çıktılar",
+    "columns": 2,
     "cards": [
       {
-        "title": "Proaktif Seyahat Hatırlatma",
-        "body": "Kullanıcı pasaport kontrolüne yaklaştığında uygulamanın 'Yurt dışı tarifen hazır, günlük sabit ücretin bu' mesajıyla güven vermesi.",
+        "title": "Çözüm #1",
+        "body": "Kişiselleştirilmiş \"Roaming\" paketleri Yolcuların seyahat alışkanlıklarına ve veri kullanım ihtiyaçlarına göre kişiselleştirilmiş roaming paketleri tasarladık. Kullanıcıların önceki seyahat davranışlarını analiz eden ve en uygun paketi öneren akıllı bir öneri sistemi geliştirdik. Şeffaf fiyatlandırma ve kontrol araçları Kullanıcıların roaming maliyetlerini gerçek zamanlı olarak takip edebilecekleri ve veri kullanımlarını kontrol edebilecekleri yeni dijital arayüzler tasarladık. Beklenmedik faturalardan kaçınmak için akıllı bildirim sistemleri ve harcama limitleri oluşturduk. Sorunsuz müşteri yolculuğu Seyahat öncesi hazırlıklardan seyahat sonrası değerlendirmeye kadar kesintisiz bir müşteri yolculuğu tasarladık. Yolcuların seyahat öncesinde doğru roaming seçenekleri hakkında bilgilendirilmesini ve seyahat sırasında proaktif destek almalarını sağlayan bir iletişim stratejisi geliştirdik.",
         "style": "platinum"
-      },
-      {
-        "title": "Harcama Tavan Kilidi",
-        "body": "Kullanıcının belirlediği limitin 1 kuruş dahi aşılamayacağı garantisinin net bir arayüzle sunulması.",
-        "style": "dustGrey"
-      },
-      {
-        "title": "Dostane Karşılama Dili",
-        "body": "Bürokratik tarife metinleri yerine yerel saat ve acil yardım numaralarını içeren insani bir iletişim dili.",
-        "style": "brandAccent"
       }
     ]
   },
-  "quote": "\"Kullanıcıların en çok korktuğu bir hizmeti, en çok güvendikleri seyahat asistanına dönüştürmek Vodafone'un roaming NPS skorlarında tarihi bir rekor kırdı.\"",
-  "isSample": true,
+  "quote": "",
   "blogShowcase": {
-    "visible": false,
-    "title": "Blog & Düşünce Liderliği",
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
     "headingTag": "h2",
-    "desc": "",
-    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
     "allLinkHref": "/blog",
     "showAllLink": true,
     "readMoreText": "Yazıyı Oku →",
-    "featuredSlugs": []
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
   },
   "visible": true,
-  "selectedCtaId": "default-consulting",
-  "image2": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+  "selectedCtaId": "default-consulting"
 }

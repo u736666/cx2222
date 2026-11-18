@@ -5,10 +5,27 @@ import { getAllPosts, getSite, getSurfaceStyle, resolveTextStyle, resolveTextTag
 
 export function getStaticPaths() {
   const posts = getAllPosts();
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  const paths: any[] = [];
+  const aliasMap: Record<string, string> = {
+    'calisaniniz-neden-mutlu-degil': 'calisan-deneyimi',
+    'yapay-zeka-ve-insan-dokunusunda-denge': 'ai-konusu',
+    'agentic-cx-yapay-zeka-ajanlari-ve-deneyim': 'ai-konusu',
+  };
+  for (const post of posts) {
+    paths.push({
+      params: { slug: post.slug },
+      props: { post },
+    });
+    for (const [oldSlug, newSlug] of Object.entries(aliasMap)) {
+      if (post.slug === newSlug) {
+        paths.push({
+          params: { slug: oldSlug },
+          props: { post },
+        });
+      }
+    }
+  }
+  return paths;
 }
 
 interface Props {

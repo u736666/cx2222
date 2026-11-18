@@ -51,20 +51,12 @@ const eyebrowStyle = resolveTextStyle(cs, 'eyebrow');
         <p class="typo-body text-paletteRichBlack/80 font-light" style={descStyle || undefined} set:html={formatRich(desc)}>
         </p>
 
-        {(showEmail || showOffices) && (
+        {showOffices && site.brand?.officesSummary && (
           <div class="pt-8 space-y-5 typo-body font-light text-paletteRichBlack/70">
-            {showEmail && site.brand?.email && (
-              <div>
-                <span class="block text-paletteRichBlack/40 tracking-widest typo-small mb-1">{cs.emailLabel}</span>
-                <a href={`mailto:${site.brand.email}`} class="typo-body text-brandAccent hover:underline font-normal">{site.brand.email}</a>
-              </div>
-            )}
-            {showOffices && site.brand?.officesSummary && (
-              <div>
-                <span class="block text-paletteRichBlack/40 tracking-widest typo-small mb-1">{cs.officesLabel}</span>
-                <p class="typo-body text-paletteRichBlack">{site.brand.officesSummary}</p>
-              </div>
-            )}
+            <div>
+              <span class="block text-paletteRichBlack/40 tracking-widest typo-small mb-1">{cs.officesLabel}</span>
+              <p class="typo-body text-paletteRichBlack">{site.brand.officesSummary}</p>
+            </div>
           </div>
         )}
       </div>

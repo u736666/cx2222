@@ -86,22 +86,22 @@ const socialLinks = Array.isArray(footer.socialLinks) && footer.socialLinks.leng
 
     </div>
 
-    <!-- Alt Satır: Telif Hakkı (14px) & Hukuki / Gizlilik / Çerez Bağlantıları -->
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[14px] font-light text-white/60 pt-2">
+    <!-- Alt Satır: Telif Hakkı (13px) & Hukuki / Gizlilik / Çerez Bağlantıları -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[13px] font-light text-white/60 pt-2">
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
         {showCopyright && (
-          <p class="text-[14px]">
+          <p class="text-[13px]">
             {footer.copyrightPrefix || '© '}
             {showYear ? `${year} ` : ''}
             {footer.copyrightSuffix || 'CX Folks. Tüm hakları saklıdır.'}
           </p>
         )}
         {footer.extraNote && (
-          <span class="text-white/40 text-[14px]">{footer.extraNote}</span>
+          <span class="text-white/40 text-[13px]">{footer.extraNote}</span>
         )}
       </div>
 
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] text-white/60">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/60">
         <a href="/gizlilik-politikasi" class="hover:text-white transition-colors">Gizlilik Politikası & KVKK</a>
         <a href="/cerez-politikasi" class="hover:text-white transition-colors">Çerez Politikası</a>
         <a href="/iletisim" class="hover:text-white transition-colors">İletişim</a>

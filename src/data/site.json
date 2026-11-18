@@ -9,7 +9,7 @@
     "defaultDescription": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
     "orgDescription": "Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi Danışmanlığı",
     "defaultOgImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
-    "email": "hello@example.com",
+    "email": "",
     "officesSummary": "",
     "offices": [],
     "social": [
@@ -68,7 +68,7 @@
       "desc": "Yapay zekanın hızını insanın derin sezgisiyle birleştiriyor; kurum kültüründen dijital temas noktalarına kadar kalıcı değer üretiyoruz.",
       "ctaText": "Görüşelim →",
       "ctaHref": "/iletisim",
-      "showFooterBar": true,
+      "showFooterBar": false,
       "items": [
         {
           "title": "Yaklaşımımız",
@@ -218,7 +218,7 @@
         {
           "title": "İstanbul Havalimanı",
           "desc": "30.000 kişilik eğitim ve 1 yılda %78 yolcu memnuniyet artışı ile küresel standart.",
-          "href": "/projeler/istanbul-havalimani",
+          "href": "/projeler/iga-turk-misafirperverligi",
           "image": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=500&q=80",
           "alt": "İstanbul Havalimanı"
         },
@@ -232,7 +232,7 @@
         {
           "title": "FIAT Sürücü Dostu",
           "desc": "13 yıllık ortaklık: Bayi şikayetlerinde %60 azalma ve güçlü bölgesel satış grafiği.",
-          "href": "/projeler/fiat-surucu-dostu",
+          "href": "/projeler/fiat-surucu-dostu-hizmetler",
           "image": "/images/uploads/fiat-sd-mwdpvp43.jpg",
           "alt": "FIAT Sürücü Dostu"
         },

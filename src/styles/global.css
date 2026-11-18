@@ -264,16 +264,24 @@ h6, .typo-h6 {
   color: #ffffff !important;
 }
 
+#main-header .header-social-icon,
 #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon,
 #main-header.has-active-mega .header-social-icon {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  border: none !important;
+  border-width: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--color-brand-accent) !important;
+  color: var(--color-rich-black) !important;
 }
 
+#main-header .header-social-icon:hover,
 #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon:hover,
 #main-header.has-active-mega .header-social-icon:hover {
-  border-color: var(--color-brand-accent) !important;
-  color: var(--color-brand-accent) !important;
+  border: none !important;
+  outline: none !important;
+  background-color: var(--color-brand-accent-hover) !important;
+  color: var(--color-rich-black) !important;
 }
 
 /* Tek Zeminli Master Mega Menü Wrapper (Kapanıp açılma ve patlamayı %100 önler) */
@@ -373,20 +381,34 @@ h6, .typo-h6 {
   --cta-mesh-orb-4: rgba(193, 222, 239, 0.50); /* Buzul Orb */
 }
 
-/* ================= BUTONLAR (Dive Stili Pill Button & Outline Yapısı) ================= */
-.pill-btn,
-.pill-outline-btn,
-button.btn-rect,
-a.btn-rect:not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border-radius: 9999px !important; /* Pill button */
-  font-size: 14px !important;
-  font-weight: 500;
-  transition: all 0.25s ease;
-  white-space: nowrap;
+/* ================= BUTONLAR & LİNKLER ================= */
+/* Header Butonu ve Sosyal İkonlar: Arka plan rengi varsa border ASLA olmaz */
+#main-header a.btn-rect,
+.header-social-icon,
+#accessibility-trigger-btn {
+  border: none !important;
+  border-width: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#main-header a.btn-rect {
+  background-color: var(--color-brand-accent) !important;
+  color: var(--color-rich-black) !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+}
+#main-header a.btn-rect:hover {
+  background-color: var(--color-brand-accent-hover) !important;
+}
+
+.header-social-icon {
+  background-color: var(--color-brand-accent) !important;
+  color: var(--color-rich-black) !important;
+  border-radius: 9999px !important;
+}
+.header-social-icon:hover {
+  background-color: var(--color-brand-accent-hover) !important;
 }
 
 /* Metin bağlantıları (linkler) ASLA outline veya buton çerçevesi almaz */
@@ -401,55 +423,52 @@ a.group span.btn-rect,
   background: transparent !important;
   border-radius: 0 !important;
   padding: 0 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
 }
 
-/* Header CTA butonu (Solid Wasabi Pill - Header harici butonlar outline) */
-#main-header a.btn-rect {
-  background-color: var(--color-brand-accent) !important;
-  color: var(--color-rich-black) !important;
-  border: 1px solid var(--color-brand-accent) !important;
-  border-radius: 9999px !important;
-  font-weight: 600 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-#main-header a.btn-rect:hover {
-  background-color: var(--color-brand-accent-hover) !important;
-  border-color: var(--color-brand-accent-hover) !important;
-  color: var(--color-rich-black) !important;
-}
-#main-header.has-active-mega a.btn-rect {
-  border: 1px solid var(--color-brand-accent) !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Header harici sayfa genelindeki butonlar: Outline Pill Button (TheDive Stili) */
-.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]),
-a.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]),
-button#contact-submit-btn,
+/* Yalnızca gerçek outline butonları pill outline çerçevesi alır */
 .pill-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px !important;
+  padding: 0.625rem 1.5rem !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
   background: transparent !important;
   border: 1px solid var(--color-rich-black) !important;
   color: var(--color-rich-black) !important;
-  border-radius: 9999px !important;
+  transition: all 0.25s ease;
 }
-
-.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]):hover,
-a.btn-rect:not(#main-header .btn-rect):not([class*="hover:underline"]):not(.hero-card-link):not([class*="tracking-wider"]):hover,
-button#contact-submit-btn:hover,
 .pill-outline-btn:hover {
   background: var(--color-rich-black) !important;
   color: #ffffff !important;
-  border-color: var(--color-rich-black) !important;
 }
 
-/* Koyu zeminlerdeki butonlar (Outline Beyaz -> Hover Beyaz Fill) */
-.bg-paletteRichBlack .btn-rect,
-.bg-paletteRichBlack a.btn-rect,
+/* Koyu zeminlerdeki outline butonlar */
 .bg-paletteRichBlack .pill-outline-btn,
 footer .pill-outline-btn,
-footer .btn-rect,
+.mega-wrapper .pill-outline-btn {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #ffffff !important;
+}
+.bg-paletteRichBlack .pill-outline-btn:hover,
+footer .pill-outline-btn:hover,
+.mega-wrapper .pill-outline-btn:hover {
+  background: #ffffff !important;
+  color: var(--color-rich-black) !important;
+}
+
+/* Site genelinde arka planda resim var ise parallax efekti */
+section[style*="background-image"],
+div[style*="background-image"]:not(.aspect-\[3\/1\]):not(.aspect-\[16\/9\]):not(.aspect-\[4\/3\]):not(.aspect-\[21\/9\]) {
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
 [class*="bg-paletteRichBlack"] .btn-rect,
 [class*="bg-paletteRichBlack"] .pill-outline-btn,
 .mega-wrapper .btn-rect,
@@ -546,71 +565,84 @@ textarea:focus {
 
 /* ================= Erişilebilirlik (Accessibility) Yüksek Kontrast Modu ================= */
 html.accessibility-high-contrast {
-  filter: contrast(130%);
+  filter: grayscale(100%) !important;
 }
 html.accessibility-high-contrast body {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
-/* Açık zeminlerdeki yazılar tam siyah ve net */
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer),
-html.accessibility-high-contrast article:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]) {
+
+/* Tüm Açık Zeminler & Bölümler: Arka plan beyaz, metinler tam siyah */
+html.accessibility-high-contrast section,
+html.accessibility-high-contrast article,
+html.accessibility-high-contrast main,
+html.accessibility-high-contrast div:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer):not(#accessibility-widget):not(#accessibility-panel) {
   background-color: #ffffff !important;
   color: #000000 !important;
+  border-color: #000000 !important;
 }
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) p,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h1,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h2,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) h3,
-html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="bg-paletteRichBlack"]):not(.mega-wrapper):not(footer) span {
+html.accessibility-high-contrast section p,
+html.accessibility-high-contrast section h1,
+html.accessibility-high-contrast section h2,
+html.accessibility-high-contrast section h3,
+html.accessibility-high-contrast section h4,
+html.accessibility-high-contrast section span,
+html.accessibility-high-contrast section a,
+html.accessibility-high-contrast section label {
   color: #000000 !important;
 }
-/* Koyu zeminler (Footer, Mega Menü, RichBlack bloklar) tam siyah zemin ve TAM BEYAZ YAZI */
+
+/* Koyu Zeminler (Footer, Mega Menü, RichBlack bloklar): Arka plan tam siyah, metinler tam beyaz */
 html.accessibility-high-contrast .bg-paletteRichBlack,
 html.accessibility-high-contrast [class*="bg-paletteRichBlack"],
 html.accessibility-high-contrast .mega-wrapper,
 html.accessibility-high-contrast footer {
   background-color: #000000 !important;
   color: #ffffff !important;
+  border-color: #ffffff !important;
 }
-html.accessibility-high-contrast .bg-paletteRichBlack p,
-html.accessibility-high-contrast .bg-paletteRichBlack h1,
-html.accessibility-high-contrast .bg-paletteRichBlack h2,
-html.accessibility-high-contrast .bg-paletteRichBlack h3,
-html.accessibility-high-contrast .bg-paletteRichBlack span,
-html.accessibility-high-contrast .bg-paletteRichBlack a,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] p,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h1,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h2,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] h3,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] span,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"] a,
-html.accessibility-high-contrast .mega-wrapper p,
-html.accessibility-high-contrast .mega-wrapper h1,
-html.accessibility-high-contrast .mega-wrapper h2,
-html.accessibility-high-contrast .mega-wrapper h3,
-html.accessibility-high-contrast .mega-wrapper span,
-html.accessibility-high-contrast .mega-wrapper a,
-html.accessibility-high-contrast footer p,
-html.accessibility-high-contrast footer h1,
-html.accessibility-high-contrast footer h2,
-html.accessibility-high-contrast footer h3,
-html.accessibility-high-contrast footer span,
-html.accessibility-high-contrast footer a {
+html.accessibility-high-contrast .bg-paletteRichBlack *,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"] *,
+html.accessibility-high-contrast .mega-wrapper *,
+html.accessibility-high-contrast footer * {
   color: #ffffff !important;
 }
-html.accessibility-high-contrast a {
-  text-decoration: underline !important;
+
+/* Açık renkli kartlar / akordeonlar: Koyu section içinde olsa bile BEYAZ zemin, SİYAH metin */
+html.accessibility-high-contrast .bg-paletteDustGrey,
+html.accessibility-high-contrast .bg-palettePlatinum,
+html.accessibility-high-contrast .bg-siteBg,
+html.accessibility-high-contrast .accordion-card.bg-paletteDustGrey,
+html.accessibility-high-contrast [class*="bg-paletteDustGrey"],
+html.accessibility-high-contrast [class*="bg-palettePlatinum"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
 }
-html.accessibility-high-contrast .btn-rect,
-html.accessibility-high-contrast button {
-  border: 2px solid currentColor !important;
-  font-weight: 700 !important;
+html.accessibility-high-contrast .bg-paletteDustGrey *,
+html.accessibility-high-contrast .bg-palettePlatinum *,
+html.accessibility-high-contrast .bg-siteBg *,
+html.accessibility-high-contrast .accordion-card.bg-paletteDustGrey *,
+html.accessibility-high-contrast [class*="bg-paletteDustGrey"] *,
+html.accessibility-high-contrast [class*="bg-palettePlatinum"] * {
+  color: #000000 !important;
 }
-html.accessibility-high-contrast .btn-rect:hover,
+
+/* Koyu kartlar (Akordeon aktif kart vb.) */
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack * {
+  color: #ffffff !important;
+}
+
+/* Yüksek Kontrast: Bağlantı ve Butonlarda Tint ile Hover */
+html.accessibility-high-contrast a:hover,
 html.accessibility-high-contrast button:not(#accessibility-widget button):hover {
-  background: currentColor !important;
-  color: #ffffff !important;
+  opacity: 0.65 !important;
+  text-decoration: underline !important;
 }
 
 /* Erişilebilirlik Menüsü Paneli İzolasyonu */
@@ -620,9 +652,10 @@ html.accessibility-high-contrast button:not(#accessibility-widget button):hover 
 #accessibility-panel {
   background-color: #ffffff !important;
   color: #111111 !important;
+  border: 2px solid #000000 !important;
 }
 #accessibility-panel * {
-  color: #111111;
+  color: #111111 !important;
 }
 html.accessibility-high-contrast #accessibility-panel {
   background-color: #ffffff !important;
@@ -636,11 +669,12 @@ html.accessibility-high-contrast #accessibility-panel * {
 html.accessibility-high-contrast #accessibility-panel button {
   background-color: transparent !important;
   color: #000000 !important;
-  border-color: transparent !important;
+  border: none !important;
 }
 html.accessibility-high-contrast #accessibility-panel button:hover {
-  background-color: #f3f4f6 !important;
-  color: #000000 !important;
+  background-color: #f0f0f0 !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
 }
 html.accessibility-high-contrast #accessibility-panel #acc-contrast-status {
   background-color: #000000 !important;

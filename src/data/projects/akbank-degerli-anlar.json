@@ -1,74 +1,95 @@
 {
   "slug": "akbank-degerli-anlar",
-  "order": 6,
+  "order": 3,
   "client": "Akbank",
-  "sector": "",
-  "title": "Bankacılığı Hayatın Anlamlı Anlarına Taşımak",
-  "desc": "Finansal işlemlerin ötesinde müşterinin duygusal durumunu anlayan proaktif empati sistemi. Satış baskısını kaldırıp desteği merkeze koyduk.",
-  "listDesc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
-  "image": "/images/uploads/akbank-01-mwdpwe3x.png",
-  "imageAlt": "Akbank Değerli Anlar",
-  "listStyle": "richBlack",
+  "sector": "Bankacılık & Finans",
+  "title": "Bankacılığı \"hayatın anlamlı anlarına\" taşımak",
+  "shortTitle": "Bankacılığı \"hayatın anlamlı anlarına\"...",
+  "desc": "Bankalar verimlilikte yarışır ama müşteriler bu verimliliği nadiren hatırlar. Kalıcı bağlılığı yaratan şey, bankanın insani bir dokunuşla şaşırttığı anlardır. Türkiye'nin en büyük üç bankasından biri olan Akbank, işlem merkezli olmaktan çıkıp ilişki kuran bir banka haline gelmek istiyordu.",
+  "listDesc": "Bankalar verimlilikte yarışır ama müşteriler bu verimliliği nadiren hatırlar. Kalıcı bağlılığı yaratan şey, bankanın insani bir dokunuşla...",
+  "image": "https://static.wixstatic.com/media/384171_e02b8a82616a4883b2fac395202cf7f4~mv2.png",
+  "imageAlt": "Akbank - Bankacılığı \"hayatın anlamlı anlarına\" taşımak",
+  "image2": "https://static.wixstatic.com/media/55d98a_3287270d83ef4efabfdd1f52d0dc6ec2~mv2.jpg",
+  "image2Alt": "Akbank Görsel 2",
+  "listStyle": "platinum",
   "heroStyle": "siteBg",
   "bullets": [
-    "%84 Duygusal Bağ Artışı",
-    "0 Satış Baskısı",
-    "6 Hassas Yaşam Senaryosu"
+    "8 Şube Derinlemesine İnceleme",
+    "32 Katılımcı ile Video Etnografi",
+    "3 Hafta Yoğun Program"
   ],
   "seo": {
-    "title": "Akbank Değerli Anlar Vaka Analizi | CX Folks",
-    "description": "İşlem desenlerinden stres sinyallerini algılayan, satış yerine destek sunan proaktif empati sistemi: %84 duygusal bağ artışı.",
-    "headline": "Akbank - Bankacılığı Hayatın Anlamlı Anlarına Taşımak",
-    "schemaDesc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
-    "breadcrumbName": "Akbank Değerli Anlar",
-    "aboutTopics": [],
-    "keyTakeaways": []
+    "title": "Akbank | Bankacılığı \"hayatın anlamlı anlarına\" taşımak | CX Folks",
+    "description": "Bankalar verimlilikte yarışır ama müşteriler bu verimliliği nadiren hatırlar. Kalıcı bağlılığı yaratan şey, bankanın insani bir dokunuşla şaşırttığı anlardır. T",
+    "headline": "Akbank - Bankacılığı \"hayatın anlamlı anlarına\" taşımak",
+    "schemaDesc": "Bankalar verimlilikte yarışır ama müşteriler bu verimliliği nadiren hatırlar. Kalıcı bağlılığı yaratan şey, bankanın insani bir dokunuşla şaşırttığı anlardır. Türkiye'nin en büyük üç bankasından biri olan Akbank, işlem merkezli olmaktan çıkıp ilişki kuran bir banka haline gelmek istiyordu.",
+    "breadcrumbName": "Akbank"
   },
   "metrics": [
     {
-      "value": "%84",
-      "label": "Duygusal Bağ & Güven Artışı"
+      "value": "8 Şube",
+      "label": "Derinlemesine İnceleme"
     },
     {
-      "value": "0",
-      "label": "Satış Baskısı"
+      "value": "32",
+      "label": "Katılımcı ile Video Etnografi"
     },
     {
-      "value": "6",
-      "label": "Kritik Yaşam Senaryosu"
+      "value": "3 Hafta",
+      "label": "Yoğun Program"
     },
     {
-      "value": "2.4x",
-      "label": "Uzun Vadeli Müşteri Sadakati"
+      "value": "%85",
+      "label": "Duygusal Bağ Artışı"
     }
   ],
   "challenge": {
-    "eyebrow": "Çıkış Noktası",
-    "title": "\"Banka Beni Sadece Param Olduğunda ya da Borç Satarken mi Hatırlayacak?\"",
-    "body": "Müşterilerin geleneksel bankalarla ilişkisi çoğu zaman soğuk ve mesafelidir. Özellikle zor anlarda (hastalık, iş kaybı, taşınma) müşteriye otomatik olarak kredi kartı limiti artırma veya sigorta satışı SMS'i atılması, müşteride derin bir yabancılaşma ve öfke yaratır."
+    "eyebrow": "Soru",
+    "title": "Bankacılık bir hizmet değil, bir yaşam ortağı gibi hissedilebilir mi?",
+    "body": "3 haftalık video etnografi programında müşterilerin şube içi deneyimlerini, duygusal tepkilerini ve mikro anlarını gözlemledik. Sekiz şubede 32 katılımcıyla yapılan saha çalışmaları, insanların büyük jestler değil, küçük ama zamanında gelen destek anlarını hatırladığını gösterdi."
   },
   "solution": {
-    "eyebrow": "Tasarım & Müdahale",
-    "title": "Hassas Anlarda Satışı Yasaklayan \"Proaktif Empati Protokolü\"",
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
     "columns": 3,
     "cards": [
       {
-        "title": "Sağlık Harcaması Desteği",
-        "body": "Gece hastane ödemesi sonrası pazarlama SMS'leri durdurulur; temsilci yalnızca 'Geçmiş olsun' için arar ve faizsiz taksit desteği sunar.",
+        "title": "Proaktif empati sistemi",
+        "body": "İşlem desenlerinden (\"patterns) stres sinyallerini algılayıp, satış değil destek odaklı müdahale sağlayan sistem geliştirildi. Örneğin hastane ödemesi sonrası \"geçmiş olsun\" mesajı ve özel destek araması yapıldı.",
         "style": "platinum"
       },
       {
-        "title": "İlk Maaş & Kariyer Başlangıcı",
-        "body": "Hesabına ilk maaşı yatan genç profesyonele kredi satmak yerine bütçe yönetimi rehberi ve kutlama jesti iletilir.",
+        "title": "Tanıma mimarisi",
+        "body": "Doğum günü, yıl dönümü gibi kişisel tarihler için özel teşekkür ve jestler planlandı.",
         "style": "dustGrey"
       },
       {
-        "title": "Taşınma ve Yeni Ev Stresi",
-        "body": "Nakliye ve tadilat harcamaları yoğunlaşan müşteriye fatura erteleme esnekliği proaktif olarak tanımlanır.",
-        "style": "brandAccent"
+        "title": "Acil durum protokolleri",
+        "body": "Kritik durumlarda hızlı yardım sağlayan süreçler tasarlandı.",
+        "style": "platinum"
+      },
+      {
+        "title": "Finansal güçlenme araçları",
+        "body": "Kişisel finans farkındalığını artıran sade gösterge panelleri ve mikro eğitimler devreye alındı.",
+        "style": "dustGrey"
       }
     ]
   },
-  "quote": "\"Bankacılığı rakamlardan çıkarıp insanların gerçek duygusal anlarına dokunan bir desteğe dönüştürdüğümüzde, müşterilerimiz markayı gerçek bir dost olarak görmeye başladı.\"",
-  "isSample": true
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
 }

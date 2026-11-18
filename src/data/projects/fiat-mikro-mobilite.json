@@ -1,0 +1,80 @@
+{
+  "slug": "fiat-mikro-mobilite",
+  "order": 10,
+  "client": "FIAT",
+  "sector": "Mobilite & Şehir İçi Ulaşım",
+  "title": "Mikro mobilitenin geleceğini tasarlamak",
+  "shortTitle": "Mikro mobilitenin geleceğini tasarlamak",
+  "desc": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde mallarını taşımak için hamallara güveniyor. Mobilite, sadece ulaşım değil; kentin sinir sistemidir.",
+  "listDesc": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde ...",
+  "image": "https://static.wixstatic.com/media/384171_7a85b44ebe1a453381c888bbd9da4dd6~mv2.png",
+  "imageAlt": "FIAT - Mikro mobilitenin geleceğini tasarlamak",
+  "image2": "https://static.wixstatic.com/media/384171_e4162b2a85204e9dac3775e531a140fc~mv2.png",
+  "image2Alt": "FIAT Görsel 2",
+  "listStyle": "richBlack",
+  "heroStyle": "siteBg",
+  "bullets": [
+    "4 Hafta Saha İncelemesi",
+    "8 Bölge Lojistik & Esnaf Rotası",
+    "3 Model Mobilite Çözüm Konsepti"
+  ],
+  "seo": {
+    "title": "FIAT | Mikro mobilitenin geleceğini tasarlamak | CX Folks",
+    "description": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde mallarını taşımak için ",
+    "headline": "FIAT - Mikro mobilitenin geleceğini tasarlamak",
+    "schemaDesc": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde mallarını taşımak için hamallara güveniyor. Mobilite, sadece ulaşım değil; kentin sinir sistemidir.",
+    "breadcrumbName": "FIAT"
+  },
+  "metrics": [
+    {
+      "value": "4 Hafta",
+      "label": "Saha İncelemesi"
+    },
+    {
+      "value": "8 Bölge",
+      "label": "Lojistik & Esnaf Rotası"
+    },
+    {
+      "value": "3 Model",
+      "label": "Mobilite Çözüm Konsepti"
+    },
+    {
+      "value": "%80+",
+      "label": "Şehir İçi Verimlilik"
+    }
+  ],
+  "challenge": {
+    "eyebrow": "Soru",
+    "title": "FIAT, sadece araç satan bir marka olmaktan çıkıp, şehir hareketliliğinin geleceğini şekillendiren bir iş ortağı haline nasıl gelebilir?",
+    "body": "Mobilitenin gerçekten çöktüğü yerler olan tekstil bölgelerine, toptancı pazarlarına, maç günlerinde trafiğin kaosa dönüştüğü caddelere giderek; kuryelerle birlikte yol alarak, hamalları takip ederek, günün yarısını ceza ve tıkanıklıkla mücadele ederek geçiren esnafı dinledik."
+  },
+  "solution": {
+    "eyebrow": "Çözüm & Yaklaşım",
+    "title": "Çözümler",
+    "columns": 2,
+    "cards": [
+      {
+        "title": "Çözüm #1",
+        "body": "Araçtan Ekosisteme Geçiş TOFAŞ ekipleriyle birlikte saha hikâyelerini gelecek senaryolarına dönüştürdük: Mahalle filoları: Uygulama üzerinden kiralanabilen paylaşımlı Doblo ve Topolino'lar, TOFAŞ tarafından bakımı yapılan mikro filo modeli. Şehir içi dostlar: Türkiye'nin dar sokaklarına uygun çevik üç tekerlekli elektrikli araçlar. Aile + iş paketleri: Küçük işletme sahiplerinin aynı ekosistemi hem iş hem aile yaşamı için kullanabileceği çok işlevli mobilite çözümleri.",
+        "style": "platinum"
+      }
+    ]
+  },
+  "quote": "",
+  "blogShowcase": {
+    "visible": true,
+    "title": "İlgili Düşünce Yazıları",
+    "headingTag": "h2",
+    "desc": "Müşteri ve çalışan deneyiminde insan odaklı stratejiler.",
+    "allLinkText": "Tüm Yazıları Görün →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": [
+      "calisan-deneyimi",
+      "ai-konusu"
+    ]
+  },
+  "visible": true,
+  "selectedCtaId": "default-consulting"
+}

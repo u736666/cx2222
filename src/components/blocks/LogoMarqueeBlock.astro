@@ -64,14 +64,16 @@ const isMarquee = data.layout === 'marquee';
     <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       <div class="flex w-max items-center marquee-track hover:[animation-play-state:paused]">
         {[...items, ...items].map((logo: any) => {
-          const h = logoHeightOf(logo.name);
-          const maxW = logoMaxWidthOf(logo.name);
+          const h = logo.heightPx || logoHeightOf(logo.name);
+          const maxW = logo.maxWidthPx || logoMaxWidthOf(logo.name);
+          const isGrayscale = (data.grayscale && !logo.originalColors) || logo.grayscale;
+          const imgFilterClass = isGrayscale ? 'filter grayscale contrast-125' : '';
           return (
-            <div class="flex items-center justify-center flex-shrink-0 px-8 opacity-70 hover:opacity-100 transition-opacity">
+            <div class="flex items-center justify-center flex-shrink-0 px-8 opacity-85 hover:opacity-100 transition-opacity">
               <img 
                 src={logo.image || logo.src} 
                 alt={logo.name} 
-                class="w-auto object-contain filter grayscale contrast-125"
+                class={`w-auto object-contain ${imgFilterClass}`}
                 style={`height: ${h}px; max-width: ${maxW}px;`}
               />
             </div>
@@ -92,7 +94,7 @@ const isMarquee = data.layout === 'marquee';
               src={logo.image || logo.src}
               alt={logo.name}
               style={`height:${logo.heightPx || logoHeightOf(logo.name)}px; max-width:${logo.maxWidthPx || logoMaxWidthOf(logo.name)}px;`}
-              class="w-auto object-contain grayscale opacity-90 hover:opacity-100 transition-opacity"
+              class={`w-auto object-contain opacity-85 hover:opacity-100 transition-opacity ${data.grayscale ? 'grayscale' : ''}`}
             />
           ) : (
             <svg class={`${logo.height || 'h-5'} w-auto fill-paletteRichBlack hover:fill-brandAccent transition-colors`} viewBox={logo.viewBox || '0 0 120 24'}>

@@ -427,7 +427,10 @@ const sectionId = id || styles.sectionId || 'approach-manifesto';
           switchPrimaryTab('manifesto', false);
         }
         setTimeout(() => {
-          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const headerEl = document.getElementById('main-header');
+          const headerHeight = headerEl ? headerEl.offsetHeight : 80;
+          const y = targetElem.getBoundingClientRect().top + window.pageYOffset - headerHeight - 24;
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }, 120);
       }
     }
