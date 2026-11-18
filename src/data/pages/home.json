@@ -151,7 +151,7 @@
           "name": "Amazon",
           "kind": "image",
           "image": "/images/logos/amazon-logo-svg-mwdffkj8.webp",
-          "nameColor": "brandAccent"
+          "originalColors": false
         },
         {
           "name": "Allianz",
@@ -439,7 +439,7 @@
         "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi.",
         "allLinkText": "Tüm Projeleri Görün →",
         "allLinkHref": "/projeler",
-        "cardCtaText": "Vaka Detaylarını İncele →",
+        "cardCtaText": "Proje Detayı →",
         "featuredSlugs": [
           "iga-turk-misafirperverligi",
           "vodafone-roaming",

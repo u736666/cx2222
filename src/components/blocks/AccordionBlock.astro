@@ -28,7 +28,7 @@ const titleStyle = resolveTextStyle(data, 'title');
 const subtitleStyle = resolveTextStyle(data, 'subtitle');
 ---
 
-<section id={sectionId} class={`section-pad-150 relative w-full ${resolvedBg ? '' : (isDarkSection ? 'bg-paletteRichBlack' : 'bg-siteBg')} ${sectionTextClass} px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={sectionInlineStyle || undefined}>
+<section id={sectionId} class={`section-pad-150 relative w-full ${isDarkSection ? 'bg-paletteRichBlack' : 'bg-siteBg'} ${sectionTextClass} px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={sectionInlineStyle || undefined}>
   {data.bgImage && (
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
       <img src={data.bgImage} alt={data.bgAlt || data.title} class="w-full h-full object-cover object-center opacity-5 filter grayscale" />
