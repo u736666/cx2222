@@ -88,7 +88,7 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
       <div class="mb-8 md:mb-10">
         <a
           href="/blog"
-          class={`btn-rect w-max min-h-[2.75rem] px-5 py-2.5 font-medium transition-colors ${heroBackBtnClass}`}
+          class="btn-pill btn-pill-outline w-max px-6 py-2.5 font-medium transition-colors border border-paletteRichBlack/30 text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white rounded-full inline-flex items-center gap-2 typo-small"
         >
           ← Tüm Yazılar
         </a>
@@ -125,7 +125,7 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
         <img 
           src={post.heroImage || post.image} 
           alt={post.imageAlt || post.title} 
-          class="w-full h-full block object-cover grayscale contrast-125"
+          class="w-full h-full block object-cover"
         />
       </div>
     </div>
@@ -182,13 +182,9 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
       })}
 
       <div class="pt-12 mt-12 flex flex-wrap items-center justify-between gap-4">
-        <a href="/blog" class="inline-flex items-center text-sm font-medium text-paletteRichBlack hover:underline">
+        <a href="/blog" class="btn-pill btn-pill-outline w-max px-6 py-2.5 font-medium transition-colors border border-paletteRichBlack/30 text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white rounded-full inline-flex items-center gap-2 typo-small">
           ← Tüm Makalelere Dön
         </a>
-        {post.relatedLink && (
-          <a href={post.relatedLink.href} class="inline-flex items-center text-sm font-medium text-brandAccent hover:underline" set:html={formatRich(post.relatedLink.label)}>
-          </a>
-        )}
       </div>
 
     </div>

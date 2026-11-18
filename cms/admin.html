@@ -2080,11 +2080,19 @@
         type: opts.type || 'text',
         placeholder: opts.placeholder || '',
       });
+      if (opts.rows) {
+        inp.rows = opts.rows;
+        inp.style.minHeight = (opts.rows * 24) + 'px';
+      }
+      if (opts.style) {
+        inp.style.cssText += ';' + opts.style;
+      }
       inp.value = obj[key] ?? '';
 
-      // Live HTML preview badge when tags/formatting are present
+      // Live HTML preview badge when tags/formatting are present (suppressed when opts.noPreview is true)
       let previewEl = null;
       function updateFormatPreview(val) {
+        if (opts.noPreview) return;
         const str = String(val || '');
         const currentTag = (obj && obj[tagKey]) || defaultTag || 'span';
         const customSz = obj && obj[sizeKey];
@@ -4501,8 +4509,9 @@
       if (!proj.metrics) proj.metrics = [];
       if (!proj.bullets) proj.bullets = [];
       if (!proj.challenge) proj.challenge = { eyebrow: 'Soru', title: '', body: '' };
+      if (proj.approach === undefined) proj.approach = '';
       if (proj.content === undefined) proj.content = '';
-      if (!proj.summaryItems) proj.summaryItems = [];
+      if (proj.closingBoxText === undefined) proj.closingBoxText = proj.quote || '';
 
       const baseCard = el('div', { className: 'card' });
       const bHead = el('div', { className: 'card-header' });
@@ -4622,7 +4631,10 @@
       editorCol.appendChild(mCard);
 
       const cCard = el('div', { className: 'card' });
-      cCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Soru Bölümü (Vurgulu Kutu)' })]));
+      cCard.appendChild(el('div', { className: 'card-header' }, [
+        el('h3', { className: 'card-title', text: 'Soru Bölümü (Açık Mavi Vurgulu Kutu)' }),
+        el('p', { className: 'card-sub', text: 'Tek kolon alanda görselin hemen altında yer alır.' })
+      ]));
       cCard.appendChild(el('div', { className: 'grid-2' }, [
         fieldInput('Üst Etiket (Örn: Soru)', proj.challenge, 'eyebrow', 'projects'),
         fieldInput('Soru Başlığı', proj.challenge, 'title', 'projects'),
@@ -4630,53 +4642,38 @@
       cCard.appendChild(fieldInput('Ek Açıklama (Opsiyonel)', proj.challenge, 'body', 'projects', { multiline: true }));
       editorCol.appendChild(cCard);
 
-      // Sol Kolon: Zengin Metin (Rich Text / HTML)
+      // Tek Kolon Alan: Yaklaşımımız (Zengin Metin / HTML)
+      const approachCard = el('div', { className: 'card' });
+      approachCard.appendChild(el('div', { className: 'card-header' }, [
+        el('div', {}, [
+          el('h3', { className: 'card-title', text: 'Yaklaşımımız (Tek Kolon Alanı — Zengin Metin / HTML)' }),
+          el('p', { className: 'card-sub', text: 'Soru kutusu ile 2. görsel arasında tek kolonda yer alan metin ve katman maddeleri.' })
+        ])
+      ]));
+      approachCard.appendChild(fieldInput('Yaklaşımımız İçeriği (HTML)', proj, 'approach', 'projects', { multiline: true, rows: 12, noPreview: true }));
+      editorCol.appendChild(approachCard);
+
+      // Sol Kolon: Çözümler, Çıktılar & Ödüller (Ferah Uzun Tek Alan, Preview Yok)
       const contentCard = el('div', { className: 'card' });
       contentCard.appendChild(el('div', { className: 'card-header' }, [
         el('div', {}, [
-          el('h3', { className: 'card-title', text: 'Proje İçeriği (Sol Kolon — Zengin Metin / HTML)' }),
-          el('p', { className: 'card-sub', text: 'Başlıklar (<h2>, <h3>), paragraflar (<p>), listeler (<ul><li>) ve blok alıntıları (<blockquote>) kullanabilirsiniz.' })
+          el('h3', { className: 'card-title', text: 'Çözümler, Çıktılar & Ödüller (Sol Kolon — Zengin Metin / HTML)' }),
+          el('p', { className: 'card-sub', text: '2 kolonlu alanda solda aşağıya doğru inen tüm gerçek başlıklar (<h2>, <h3>), paragraflar (<p>), maddeler (<ul><li>) ve linkler. (Ferah uzun düzenleme alanı).' })
         ])
       ]));
-      contentCard.appendChild(fieldInput('Zengin Metin İçerik (HTML)', proj, 'content', 'projects', { multiline: true }));
-      contentCard.appendChild(fieldInput('Müşteri Alıntısı (Opsiyonel Vurgulu Kutu)', proj, 'quote', 'projects', { multiline: true }));
+      contentCard.appendChild(fieldInput('Sol Kolon Zengin Metin (HTML)', proj, 'content', 'projects', { multiline: true, rows: 22, noPreview: true }));
       editorCol.appendChild(contentCard);
 
-      // Sağ Kolon: Gri Kutu Özeti & Çıktılar
-      const summaryCard = el('div', { className: 'card' });
-      const summaryHead = el('div', { className: 'card-header' });
-      summaryHead.appendChild(el('div', {}, [
-        el('h3', { className: 'card-title', text: 'Proje Özeti & Çıktılar (Sağ Kolon — Gri Kutu)' }),
-        el('p', { className: 'card-sub', text: 'Ethnogram stili sağda yapışkan duran özet kutusu maddeleri (Operasyonel, Deneyim, Sonuçlar, Ödüller vb.)' })
+      // Sağ Kolon: Koyu Kutu (Kapanış / Vurgu Metni)
+      const closingCard = el('div', { className: 'card' });
+      closingCard.appendChild(el('div', { className: 'card-header' }, [
+        el('div', {}, [
+          el('h3', { className: 'card-title', text: 'Sağ Kolon Koyu Kutu (Kapanış / Vurgu Metni)' }),
+          el('p', { className: 'card-sub', text: 'Ethnogram sağ tarafındaki yapışkan koyu kutuda gösterilecek büyük puntolu kapanış/kazanım cümlesi.' })
+        ])
       ]));
-      summaryHead.appendChild(el('button', {
-        type: 'button',
-        className: 'btn btn-dark btn-sm',
-        text: '+ Madde Ekle',
-        onClick: () => {
-          if (!proj.summaryItems) proj.summaryItems = [];
-          proj.summaryItems.push({ title: 'Yeni Başlık', body: 'Açıklama' });
-          markDirty('projects');
-          renderWorkspace();
-        },
-      }));
-      summaryCard.appendChild(summaryHead);
-      (proj.summaryItems || []).forEach((item, idx) => {
-        const r = el('div', { className: 'repeater-item' });
-        const rHead = el('div', { className: 'repeater-head' });
-        rHead.appendChild(el('span', { className: 'repeater-label', text: `Özet Madde #${idx + 1}` }));
-        rHead.appendChild(el('button', {
-          type: 'button',
-          className: 'btn btn-danger btn-sm',
-          text: 'Sil',
-          onClick: () => { proj.summaryItems.splice(idx, 1); markDirty('projects'); renderWorkspace(); },
-        }));
-        r.appendChild(rHead);
-        r.appendChild(fieldInput('Madde Başlığı (Örn: Operasyonel, Deneyim, Sonuçlar)', item, 'title', 'projects'));
-        r.appendChild(fieldInput('Açıklama Metni', item, 'body', 'projects', { multiline: true }));
-        summaryCard.appendChild(r);
-      });
-      editorCol.appendChild(summaryCard);
+      closingCard.appendChild(fieldInput('Kapanış Metni (HTML / Metin)', proj, 'closingBoxText', 'projects', { multiline: true, rows: 6, noPreview: true }));
+      editorCol.appendChild(closingCard);
 
       // Öne Çıkan Blog Yazıları (Proje Detayı)
       blogShowcaseEditorSection(editorCol, proj, 'projects', 'Bu Proje Detayında Öne Çıkan Blog Yazıları');

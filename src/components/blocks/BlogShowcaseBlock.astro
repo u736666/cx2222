@@ -69,14 +69,17 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
                 class="font-normal text-paletteRichBlack group-hover:text-brandAccent transition-colors" 
                 customStyle={resolveTextStyle(post, 'title')}
               />
-              <p class="typo-body text-paletteRichBlack/70 font-light" style={resolveTextStyle(post, 'homeDesc') || resolveTextStyle(post, 'desc') || undefined} set:html={formatRich(post.homeDesc || post.desc)}>
+              <p class="typo-body font-light line-clamp-2 md:line-clamp-3 leading-relaxed text-[#111111]/75" style={resolveTextStyle(post, 'homeDesc') || resolveTextStyle(post, 'desc') || 'color: rgba(17,17,17,0.75);'} set:html={formatRich(post.homeDesc || post.desc)}>
               </p>
             </div>
 
-            <div class="pt-4 mt-auto">
-              <span class="typo-small font-semibold text-paletteRichBlack group-hover:text-brandAccent transition-colors inline-flex items-center space-x-1.5">
-                <span set:html={formatRich(data.readMoreText || 'Devamını Oku →')}></span>
+            <div class="pt-4 mt-auto flex items-center justify-between">
+              <span class="typo-small font-medium text-[#111111] group-hover:text-brandAccent transition-colors inline-flex items-center space-x-1.5">
+                <span set:html={formatRich(data.readMoreText || 'Yazı Detayı →')}></span>
               </span>
+              {post.date && (
+                <span class="typo-small text-[#111111]/50 font-light" style="color: rgba(17,17,17,0.5);">{post.date}</span>
+              )}
             </div>
           </div>
 
@@ -84,7 +87,7 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
             <img 
               src={post.image} 
               alt={post.imageAlt || post.title} 
-              class="w-full h-full object-cover object-center grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         </a>

@@ -85,7 +85,7 @@ const isMarquee = data.layout === 'marquee';
 ) : (
   <section id={sectionId} class={`section-pad-150 px-6 md:px-16 bg-siteBg ${styles.sectionClasses}`} style={styles.inlineStyleString}>
     <div class="max-w-custom mx-auto">
-      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12 sm:gap-y-16 lg:gap-y-[110px] items-center justify-items-center opacity-75">
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12 sm:gap-y-16 lg:gap-y-[110px] items-center justify-items-center opacity-100">
         {items.map((logo: any) => (
           logo.kind === 'svg' ? (
             <svg class={logo.class} viewBox={logo.viewBox} set:html={logo.body} aria-label={logo.name} />
@@ -94,7 +94,7 @@ const isMarquee = data.layout === 'marquee';
               src={logo.image || logo.src}
               alt={logo.name}
               style={`height:${logo.heightPx || logoHeightOf(logo.name)}px; max-width:${logo.maxWidthPx || logoMaxWidthOf(logo.name)}px;`}
-              class={`w-auto object-contain opacity-85 hover:opacity-100 transition-opacity ${data.grayscale ? 'grayscale' : ''}`}
+              class="w-auto object-contain opacity-100 filter grayscale brightness-0 contrast-125 transition-opacity"
             />
           ) : (
             <svg class={`${logo.height || 'h-5'} w-auto fill-paletteRichBlack hover:fill-brandAccent transition-colors`} viewBox={logo.viewBox || '0 0 120 24'}>

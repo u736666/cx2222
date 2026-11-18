@@ -43,7 +43,7 @@
       "type": "articlesList",
       "visible": true,
       "data": {
-        "readMoreText": "Devamını Oku →"
+        "readMoreText": "Yazı Detayı →"
       },
       "style": {
         "surface": "platinum"

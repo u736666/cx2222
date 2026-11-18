@@ -99,7 +99,7 @@ function isExactPage(href: string) {
         </div>
 
         {showCtaButton && headerCfg.ctaLabel && (
-          <a href={headerCfg.ctaHref || '/iletisim'} class="btn-rect group min-h-[2.75rem] py-2.5 px-6 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-semibold rounded-full inline-flex items-center gap-2 border-0 shadow-none" style="border: none !important; outline: none !important; box-shadow: none !important;">
+          <a href={headerCfg.ctaHref || '/iletisim'} class="header-contact-btn group min-h-[2.25rem] py-2 px-5 bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-medium leading-normal rounded-full inline-flex items-center gap-1.5 border-0 shadow-none" style="border: none !important; outline: none !important; box-shadow: none !important; font-size: 14px !important;">
             <span>{headerCfg.ctaLabel.replace(/\s*[→↗]\s*$/, '')}</span>
             <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
           </a>
@@ -155,7 +155,7 @@ function isExactPage(href: string) {
                     <a href={item.href} class="group space-y-3 block">
                       {hasImage && (
                         <div class="w-full aspect-[3/1] bg-neutral-800 overflow-hidden">
-                          <img src={item.image} alt={altText} class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" />
+                          <img src={item.image} alt={altText} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                       )}
                       <span class="typo-body font-normal text-white group-hover:text-brandAccent transition-colors block">{item.title}</span>

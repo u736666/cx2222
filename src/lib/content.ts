@@ -232,7 +232,9 @@ export interface ProjectData {
   seo?: SeoGeoConfig;
   metrics?: Array<{ value: string; label: string }>;
   challenge?: { eyebrow?: string; title: string; body: string };
+  approach?: string;
   content?: string;
+  closingBoxText?: string;
   summaryItems?: Array<{ title: string; body: string }>;
   solution?: {
     eyebrow?: string;
