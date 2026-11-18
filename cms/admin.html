@@ -1507,22 +1507,193 @@
       dirtyTarget: null,
     };
 
-    const COLOR_META = [
-      { key: 'brandAccent', label: 'Ana Vurgu Rengi (Powder Blush)', desc: 'Ana CTA butonları, alt çizgiler ve etiket vurguları' },
-      { key: 'brandTagColor', label: 'Marka Etiketleri Rengi (Site Genelinde)', desc: 'Hero slider, proje kartları ve proje detayındaki marka / müşteri etiketlerinin genel rengi' },
-      { key: 'brandAccentHover', label: 'Ana Vurgu Hover', desc: 'Ana vurgu butonunun üzerine gelindiğindeki ton' },
-      { key: 'sandyBrown', label: 'İkincil Vurgu (Sandy Brown)', desc: 'Blog şeritleri ve sıcak ikincil vurgular' },
-      { key: 'sandyBrownHover', label: 'İkincil Vurgu Hover', desc: 'İkincil vurgu hover tonu' },
-      { key: 'richBlack', label: 'Koyu Zemin (Rich Black)', desc: 'Hero kutusu, koyu bloklar ve Mega Menü arka planı' },
-      { key: 'deepNavy', label: 'Koyu Yardımcı (Deep Navy)', desc: 'Koyu buton hover ve ikincil koyu yüzey' },
-      { key: 'siteBg', label: 'Ana Site Arka Planı', desc: 'Sayfa genel arka plan rengi' },
-      { key: 'platinum', label: 'Açık Gri Blok (Platinum)', desc: 'Hero, manifesto ve yumuşak kart zeminleri' },
-      { key: 'dustGrey', label: 'Orta Gri Blok (Dust Grey)', desc: 'Kontrastlı kart zeminleri ve çizgisiz ayrımlar' },
-      { key: 'textMain', label: 'Ana Yazı Rengi', desc: 'Başlıklar ve gövde metinleri' },
-      { key: 'textMuted', label: 'İkincil Yazı Rengi', desc: 'Alt başlıklar ve açıklamalar' },
-      { key: 'textLight', label: 'Açık Yazı Rengi', desc: 'İpucu ve etiket metinleri' },
-      { key: 'cardBg', label: 'Varsayılan Kart Zemini', desc: 'Genel kart yüzey değişkeni' },
+    const KNOWN_COLORS = [
+      { hex: '#000000', name: 'Siyah' },
+      { hex: '#111111', name: 'Koyu Siyah' },
+      { hex: '#1C1C1C', name: 'Karbon Siyah' },
+      { hex: '#2B2D42', name: 'Antrasit' },
+      { hex: '#313638', name: 'Füme / Lacivert Gri' },
+      { hex: '#4A5568', name: 'Füme Gri' },
+      { hex: '#666666', name: 'Orta Gri' },
+      { hex: '#7D818C', name: 'Küllü Gri' },
+      { hex: '#94A3B8', name: 'Gümüş Gri' },
+      { hex: '#ADA599', name: 'Toz Gri' },
+      { hex: '#CBD5E1', name: 'Açık Gri' },
+      { hex: '#D5D5D5', name: 'Açık Gri' },
+      { hex: '#E8E9EB', name: 'Platin Gri' },
+      { hex: '#F4F4F6', name: 'Platin' },
+      { hex: '#F7F4EF', name: 'Kırık Beyaz / Krem' },
+      { hex: '#FFFFFF', name: 'Beyaz' },
+      { hex: '#7F1D1D', name: 'Koyu Bordo' },
+      { hex: '#991B1B', name: 'Bordo' },
+      { hex: '#DC2626', name: 'Kırmızı' },
+      { hex: '#EF4444', name: 'Canlı Kırmızı' },
+      { hex: '#E11D48', name: 'Vişne / Yakut' },
+      { hex: '#9A3412', name: 'Kiremit' },
+      { hex: '#C2410C', name: 'Koyu Turuncu' },
+      { hex: '#E6620C', name: 'Canlı Turuncu' },
+      { hex: '#EA580C', name: 'Turuncu' },
+      { hex: '#F97316', name: 'Açık Turuncu' },
+      { hex: '#FB923C', name: 'Şeftali Turuncu' },
+      { hex: '#FF7452', name: 'Mercan' },
+      { hex: '#FD7A5C', name: 'Mercan Turuncu' },
+      { hex: '#FFB497', name: 'Pudra / Somon' },
+      { hex: '#78350F', name: 'Koyu Kahve' },
+      { hex: '#92400E', name: 'Kahverengi' },
+      { hex: '#B45309', name: 'Kehribar / Karamel' },
+      { hex: '#D3C3AA', name: 'Kum Kahvesi' },
+      { hex: '#AC9C80', name: 'Koyu Kum / Taş' },
+      { hex: '#F09D51', name: 'Sıcak Karamel' },
+      { hex: '#FDE68A', name: 'Açık Bej' },
+      { hex: '#CA8A04', name: 'Hardal Sarısı' },
+      { hex: '#EAB308', name: 'Sarı' },
+      { hex: '#FACC15', name: 'Güneş Sarısı' },
+      { hex: '#FEF08A', name: 'Limon Sarısı' },
+      { hex: '#14532D', name: 'Orman Yeşili' },
+      { hex: '#166534', name: 'Koyu Çimen Yeşili' },
+      { hex: '#15803D', name: 'Çimen Yeşili' },
+      { hex: '#16A34A', name: 'Yeşil' },
+      { hex: '#22C55E', name: 'Canlı Yeşil' },
+      { hex: '#4ADE80', name: 'Açık Yeşil' },
+      { hex: '#047857', name: 'Koyu Zümrüt Yeşili' },
+      { hex: '#059669', name: 'Zümrüt Yeşili' },
+      { hex: '#10B981', name: 'Nane Yeşili / Zümrüt' },
+      { hex: '#34D399', name: 'Açık Nane Yeşili' },
+      { hex: '#65A30D', name: 'Zeytin Yeşili' },
+      { hex: '#84CC16', name: 'Fıstık Yeşili' },
+      { hex: '#BEF264', name: 'Açık Lime / Fıstık' },
+      { hex: '#A3E635', name: 'Lime Yeşili' },
+      { hex: '#0F766E', name: 'Koyu Turkuaz / Petrol' },
+      { hex: '#0D9488', name: 'Su Yeşili' },
+      { hex: '#14B8A6', name: 'Turkuaz' },
+      { hex: '#06B6D4', name: 'Camgöbeği (Cyan)' },
+      { hex: '#22D3EE', name: 'Açık Turkuaz' },
+      { hex: '#0C4A6E', name: 'Gece Mavisi' },
+      { hex: '#0369A1', name: 'Okyanus Mavisi' },
+      { hex: '#0284C7', name: 'Mavi' },
+      { hex: '#38BDF8', name: 'Gökyüzü Mavisi' },
+      { hex: '#1E3A8A', name: 'Koyu Lacivert' },
+      { hex: '#1E40AF', name: 'Lacivert' },
+      { hex: '#2563EB', name: 'Kobalt Mavi' },
+      { hex: '#3B82F6', name: 'Mavi' },
+      { hex: '#60A5FA', name: 'Açık Mavi' },
+      { hex: '#312E81', name: 'Koyu İndigo' },
+      { hex: '#4338CA', name: 'İndigo' },
+      { hex: '#6366F1', name: 'İndigo Mavi' },
+      { hex: '#581C87', name: 'Koyu Mor' },
+      { hex: '#7E22CE', name: 'Mor' },
+      { hex: '#9333EA', name: 'Menekşe / Mor' },
+      { hex: '#A855F7', name: 'Canlı Mor' },
+      { hex: '#C084FC', name: 'Lila' },
+      { hex: '#701A75', name: 'Koyu Fuşya' },
+      { hex: '#A21CAF', name: 'Fuşya' },
+      { hex: '#C026D3', name: 'Canlı Fuşya' },
+      { hex: '#D946EF', name: 'Orkide Pembe' },
+      { hex: '#BE185D', name: 'Gül Kurusu' },
+      { hex: '#DB2777', name: 'Pembe' },
+      { hex: '#EC4899', name: 'Canlı Pembe' },
+      { hex: '#F472B6', name: 'Açık Pembe' },
+      { hex: '#FBCFE8', name: 'Bebek Pembesi' }
     ];
+
+    function hexToRgb(hex) {
+      if (!hex || typeof hex !== 'string') return null;
+      let h = hex.trim().replace(/^#/, '');
+      if (h.length === 3) h = h.split('').map(c => c + c).join('');
+      if (h.length !== 6) return null;
+      const num = parseInt(h, 16);
+      if (isNaN(num)) return null;
+      return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
+    }
+
+    function getExactColorName(hex) {
+      const rgb = hexToRgb(hex);
+      if (!rgb) return '';
+      let closest = KNOWN_COLORS[0];
+      let minD = Infinity;
+      for (const c of KNOWN_COLORS) {
+        const cRgb = hexToRgb(c.hex);
+        if (!cRgb) continue;
+        const dr = rgb.r - cRgb.r;
+        const dg = rgb.g - cRgb.g;
+        const db = rgb.b - cRgb.b;
+        const d = 2 * dr * dr + 4 * dg * dg + 3 * db * db;
+        if (d < minD) {
+          minD = d;
+          closest = c;
+        }
+      }
+      return closest ? closest.name : '';
+    }
+
+    const COLOR_META = [
+      { key: 'brandAccent', baseLabel: 'Ana Vurgu Rengi', label: 'Ana Vurgu Rengi', desc: 'Ana CTA butonları, alt çizgiler ve vurgu alanları' },
+      { key: 'brandTagColor', baseLabel: 'Marka Etiketleri Rengi (Site Genelinde)', label: 'Marka Etiketleri Rengi', desc: 'Hero slider, proje kartları ve proje detayındaki marka / müşteri etiketlerinin genel rengi' },
+      { key: 'brandAccentHover', baseLabel: 'Ana Vurgu Hover', label: 'Ana Vurgu Hover', desc: 'Ana vurgu butonunun üzerine gelindiğindeki ton' },
+      { key: 'sandyBrown', baseLabel: 'İkincil Vurgu', label: 'İkincil Vurgu', desc: 'Blog şeritleri ve sıcak ikincil vurgular' },
+      { key: 'sandyBrownHover', baseLabel: 'İkincil Vurgu Hover', label: 'İkincil Vurgu Hover', desc: 'İkincil vurgu hover tonu' },
+      { key: 'richBlack', baseLabel: 'Koyu Zemin (Siyah)', label: 'Koyu Zemin', desc: 'Hero kutusu, koyu bloklar ve Mega Menü arka planı' },
+      { key: 'deepNavy', baseLabel: 'Koyu Yardımcı Zemin', label: 'Koyu Yardımcı Zemin', desc: 'Koyu buton hover ve ikincil koyu yüzey' },
+      { key: 'siteBg', baseLabel: 'Ana Site Arka Planı', label: 'Ana Site Arka Planı', desc: 'Sayfa genel arka plan rengi' },
+      { key: 'platinum', baseLabel: 'Açık Blok Rengi (Platin)', label: 'Açık Blok Rengi', desc: 'Hero, manifesto ve yumuşak kart zeminleri' },
+      { key: 'dustGrey', baseLabel: 'Orta Gri Blok (Toz Gri)', label: 'Orta Gri Blok', desc: 'Kontrastlı kart zeminleri ve çizgisiz ayrımlar' },
+      { key: 'textMain', baseLabel: 'Ana Yazı Rengi', label: 'Ana Yazı Rengi', desc: 'Başlıklar ve gövde metinleri' },
+      { key: 'textMuted', baseLabel: 'İkincil Yazı Rengi', label: 'İkincil Yazı Rengi', desc: 'Alt başlıklar ve açıklamalar' },
+      { key: 'textLight', baseLabel: 'Açık Yazı Rengi', label: 'Açık Yazı Rengi', desc: 'İpucu ve etiket metinleri' },
+      { key: 'cardBg', baseLabel: 'Varsayılan Kart Zemini', label: 'Varsayılan Kart Zemini', desc: 'Genel kart yüzey değişkeni' },
+    ];
+
+    function getSurfaceOptions() {
+      const theme = STATE.theme || {};
+      const pl = theme.platinum || '#F4F4F6';
+      const dg = theme.dustGrey || '#D5D5D5';
+      const ba = theme.brandAccent || '#E6620C';
+      const rb = theme.richBlack || '#111111';
+      const bg = theme.siteBg || '#FFFFFF';
+      return [
+        { value: 'platinum', label: `Platin (${getExactColorName(pl)} — ${pl})` },
+        { value: 'dustGrey', label: `Toz Gri (${getExactColorName(dg)} — ${dg})` },
+        { value: 'brandAccent', label: `Ana Vurgu (${getExactColorName(ba)} — ${ba})` },
+        { value: 'richBlack', label: `Koyu Zemin (${getExactColorName(rb)} — ${rb})` },
+        { value: 'siteBg', label: `Site Arka Planı (${getExactColorName(bg)} — ${bg})` },
+        { value: '#BEF264', label: 'Açık Yeşil / Lime (#BEF264)' },
+      ];
+    }
+
+    function getBarOptions() {
+      const theme = STATE.theme || {};
+      const ba = theme.brandAccent || '#E6620C';
+      const sb = theme.sandyBrown || '#F09D51';
+      const rb = theme.richBlack || '#111111';
+      return [
+        { value: 'brandAccent', label: `Ana Vurgu (${getExactColorName(ba)} — ${ba})` },
+        { value: 'sandyBrown', label: `İkincil Vurgu (${getExactColorName(sb)} — ${sb})` },
+        { value: 'richBlack', label: `Koyu Zemin (${getExactColorName(rb)} — ${rb})` },
+      ];
+    }
+
+    function getPaletteOptions() {
+      const theme = STATE.theme || {};
+      const ba = theme.brandAccent || '#E6620C';
+      const bt = theme.brandTagColor || ba;
+      const rb = theme.richBlack || '#111111';
+      const dn = theme.deepNavy || '#313638';
+      const sb = theme.sandyBrown || '#F09D51';
+      const pl = theme.platinum || '#E8E9EB';
+      const dg = theme.dustGrey || '#D5D5D5';
+      return [
+        { value: '', label: 'Renk: Varsayılan', hex: 'transparent' },
+        { value: 'brandTag', label: `Marka Etiketi (${getExactColorName(bt)} — ${bt})`, hex: bt },
+        { value: 'brandAccent', label: `Ana Vurgu (${getExactColorName(ba)} — ${ba})`, hex: ba },
+        { value: 'richBlack', label: `Koyu Zemin (${getExactColorName(rb)} — ${rb})`, hex: rb },
+        { value: 'deepNavy', label: `Koyu Yardımcı (${getExactColorName(dn)} — ${dn})`, hex: dn },
+        { value: 'white', label: 'Beyaz (#FFFFFF)', hex: '#FFFFFF' },
+        { value: 'muted', label: 'Gri (#666666)', hex: '#666666' },
+        { value: 'sandyBrown', label: `İkincil Vurgu (${getExactColorName(sb)} — ${sb})`, hex: sb },
+        { value: 'platinum', label: `Platin Gri (${getExactColorName(pl)} — ${pl})`, hex: pl },
+        { value: 'dustGrey', label: `Toz Gri (${getExactColorName(dg)} — ${dg})`, hex: dg },
+      ];
+    }
 
     const DEFAULT_CX8_THEME = {
       siteBg: '#ffffff',
@@ -1541,20 +1712,8 @@
       cardBg: '#E8E9EB',
     };
 
-    const SURFACE_OPTIONS = [
-      { value: 'platinum', label: 'Platin (#F4F4F6)' },
-      { value: 'dustGrey', label: 'Toz Gri (#D5D5D5)' },
-      { value: 'brandAccent', label: 'Turuncu (#E6620C)' },
-      { value: 'richBlack', label: 'Koyu Siyah (#111111)' },
-      { value: 'siteBg', label: 'Beyaz (#FFFFFF)' },
-      { value: '#BEF264', label: 'Açık Yeşil / Lime (#BEF264)' },
-    ];
-
-    const BAR_OPTIONS = [
-      { value: 'brandAccent', label: 'Ana Vurgu (Powder Blush)' },
-      { value: 'sandyBrown', label: 'Sıcak Turuncu (Sandy Brown)' },
-      { value: 'richBlack', label: 'Koyu Siyah (Rich Black)' },
-    ];
+    const SURFACE_OPTIONS = getSurfaceOptions();
+    const BAR_OPTIONS = getBarOptions();
 
     function el(tag, attrs = {}, children = []) {
       const node = document.createElement(tag);
@@ -1735,17 +1894,7 @@
           className: 'color-select-badge',
           title: 'Yazı Rengi (Boş bırakılırsa tema/kart varsayılan rengi kullanılır)',
         });
-        const PALETTE_OPTIONS = [
-          { value: '', label: 'Renk: Varsayılan', hex: 'transparent' },
-          { value: 'brandTag', label: 'Marka Etiketi Rengi', hex: STATE.theme?.brandTagColor || '#E6620C' },
-          { value: 'brandAccent', label: 'Turuncu (#E6620C)', hex: '#E6620C' },
-          { value: 'richBlack', label: 'Koyu Siyah (#1C1C1C)', hex: '#1C1C1C' },
-          { value: 'deepNavy', label: 'Lacivert Gri (#313638)', hex: '#313638' },
-          { value: 'white', label: 'Beyaz (#FFFFFF)', hex: '#FFFFFF' },
-          { value: 'muted', label: 'Gri (#666666)', hex: '#666666' },
-          { value: 'sandyBrown', label: 'Kum Kahvesi (#F09D51)', hex: '#F09D51' },
-          { value: 'platinum', label: 'Platin Gri (#E8E9EB)', hex: '#E8E9EB' },
-        ];
+        const PALETTE_OPTIONS = getPaletteOptions();
         function updatePaletteDot() {
           const cur = obj[colorKey] || '';
           const found = PALETTE_OPTIONS.find(p => p.value === cur);
@@ -1900,17 +2049,19 @@
       const wrap = el('div', { className: 'field' });
       wrap.appendChild(el('label', { text: label }));
 
+      const theme = STATE.theme || {};
       const COLOR_HEX_MAP = {
-        platinum: '#F4F4F6',
-        dustGrey: '#D5D5D5',
-        brandAccent: '#E6620C',
-        richBlack: '#111111',
+        platinum: theme.platinum || '#F4F4F6',
+        dustGrey: theme.dustGrey || '#D5D5D5',
+        brandAccent: theme.brandAccent || '#E6620C',
+        brandTag: theme.brandTagColor || theme.brandAccent || '#E6620C',
+        richBlack: theme.richBlack || '#111111',
         darkGraphite: '#222222',
-        siteBg: '#FFFFFF',
+        siteBg: theme.siteBg || '#FFFFFF',
         white: '#FFFFFF',
-        sandyBrown: '#F09D51',
-        deepNavy: '#313638',
-        muted: '#666666',
+        sandyBrown: theme.sandyBrown || '#F09D51',
+        deepNavy: theme.deepNavy || '#313638',
+        muted: theme.textLight || '#666666',
         '#BEF264': '#BEF264',
       };
 
@@ -1919,8 +2070,13 @@
 
       options.forEach((o) => {
         const valStr = String(o.value ?? '');
-        const lblStr = String(o.label ?? '');
+        let lblStr = String(o.label ?? '');
         const hex = COLOR_HEX_MAP[o.value] || (valStr.startsWith('#') ? valStr : null);
+        if (hex && o.value && COLOR_HEX_MAP[o.value]) {
+          const colorName = getExactColorName(hex);
+          const baseName = lblStr.replace(/^●\s*/, '').replace(/\s*\([^\)]*\)\s*$/, '');
+          lblStr = `${baseName} (${colorName} — ${hex})`;
+        }
         const prefix = hex ? '● ' : '';
         const optText = (prefix && !lblStr.startsWith('●')) ? (prefix + lblStr) : lblStr;
         const opt = el('option', { value: o.value, text: optText });
@@ -2636,17 +2792,7 @@
           className: 'color-select-badge',
           title: 'Yazı Rengi',
         });
-        const PALETTE_OPTIONS = [
-          { value: '', label: 'Renk: Varsayılan', hex: 'transparent' },
-          { value: 'brandTag', label: 'Marka Etiketi Rengi', hex: STATE.theme?.brandTagColor || '#E6620C' },
-          { value: 'brandAccent', label: 'Turuncu (#E6620C)', hex: '#E6620C' },
-          { value: 'richBlack', label: 'Koyu Siyah (#1C1C1C)', hex: '#1C1C1C' },
-          { value: 'deepNavy', label: 'Lacivert Gri (#313638)', hex: '#313638' },
-          { value: 'white', label: 'Beyaz (#FFFFFF)', hex: '#FFFFFF' },
-          { value: 'muted', label: 'Gri (#666666)', hex: '#666666' },
-          { value: 'sandyBrown', label: 'Kum Kahvesi (#F09D51)', hex: '#F09D51' },
-          { value: 'platinum', label: 'Platin Gri (#E8E9EB)', hex: '#E8E9EB' },
-        ];
+        const PALETTE_OPTIONS = getPaletteOptions();
         function updateBulletsColorDot() {
           const currentVal = styleObj[colorKey] || '';
           const found = PALETTE_OPTIONS.find(p => p.value === currentVal);
@@ -3143,11 +3289,15 @@
 
       function updatePreview() {
         swatchStrip.innerHTML = '';
+        const ba = theme.brandAccent || '#E6620C';
+        const rb = theme.richBlack || '#111111';
+        const pl = theme.platinum || '#E8E9EB';
+        const dg = theme.dustGrey || '#D5D5D5';
         const cards = [
-          { bg: theme.richBlack, fg: '#ffffff', tagBg: theme.brandAccent, tagFg: theme.richBlack, title: 'Hero & Koyu Zemin', cta: 'Görüşelim →' },
-          { bg: theme.platinum, fg: theme.richBlack, tagBg: theme.richBlack, tagFg: '#ffffff', title: 'Platin Bölüm', cta: 'İncele →' },
-          { bg: theme.dustGrey, fg: theme.richBlack, tagBg: theme.brandAccent, tagFg: theme.richBlack, title: 'Toz Gri Kart', cta: 'Detaylar →' },
-          { bg: theme.brandAccent, fg: theme.richBlack, tagBg: theme.richBlack, tagFg: '#ffffff', title: 'Akademi & Vurgu', cta: 'Başla →' },
+          { bg: rb, fg: '#ffffff', tagBg: ba, tagFg: rb, title: `Koyu Zemin (${getExactColorName(rb)})`, cta: 'Görüşelim →' },
+          { bg: pl, fg: rb, tagBg: rb, tagFg: '#ffffff', title: `Platin Bölüm (${getExactColorName(pl)})`, cta: 'İncele →' },
+          { bg: dg, fg: rb, tagBg: ba, tagFg: rb, title: `Toz Gri Kart (${getExactColorName(dg)})`, cta: 'Detaylar →' },
+          { bg: ba, fg: rb, tagBg: rb, tagFg: '#ffffff', title: `Ana Vurgu (${getExactColorName(ba)})`, cta: 'Başla →' },
         ];
         cards.forEach((c) => {
           swatchStrip.appendChild(
@@ -3317,9 +3467,21 @@
         picker.value = currentVal;
         hexInp.value = currentVal;
 
+        const titleDiv = el('div', { style: 'font-weight:500;font-size:13px;' });
+        const descDiv = el('div', { style: 'font-size:11px;opacity:0.65;', text: cm.desc });
+
+        function updateColorRowTitle(val) {
+          const hex = (val || '').trim();
+          const colorName = getExactColorName(hex);
+          const badgeText = colorName ? `(${colorName} — ${hex.toUpperCase()})` : `(${hex.toUpperCase()})`;
+          titleDiv.innerHTML = `${cm.baseLabel || cm.label} <span style="font-weight:600;color:var(--brand);margin-left:4px;">${badgeText}</span>`;
+        }
+        updateColorRowTitle(currentVal);
+
         picker.addEventListener('input', () => {
           theme[cm.key] = picker.value;
           hexInp.value = picker.value;
+          updateColorRowTitle(picker.value);
           markDirty('theme');
           updatePreview();
         });
@@ -3329,15 +3491,13 @@
           if (/^#[0-9a-fA-F]{6}$/.test(hexInp.value)) {
             picker.value = hexInp.value;
           }
+          updateColorRowTitle(hexInp.value);
           markDirty('theme');
           updatePreview();
         });
 
         row.appendChild(picker);
-        row.appendChild(el('div', {}, [
-          el('div', { style: 'font-weight:500;font-size:13px;', text: cm.label }),
-          el('div', { style: 'font-size:11px;opacity:0.65;', text: cm.desc }),
-        ]));
+        row.appendChild(el('div', {}, [titleDiv, descDiv]));
         row.appendChild(hexInp);
         paletteCard.appendChild(row);
       });
