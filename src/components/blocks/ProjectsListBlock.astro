@@ -54,7 +54,7 @@ const sectionId = id || styles.sectionId || 'projects-list';
                   const BulletTag = (resolveTextTag(proj, 'bullets', 'p') || 'p') as any;
                   const bulletStyle = resolveTextStyle(proj, 'bullets') || undefined;
                   return (
-                    <div class="pt-4 space-y-2 typo-body font-light opacity-75">
+                    <div class="pt-4 space-y-2 text-[14px] font-light opacity-75">
                       {proj.bullets.map((b: string) => (
                         <BulletTag style={bulletStyle} set:html={`• ${formatRich(b)}`} />
                       ))}

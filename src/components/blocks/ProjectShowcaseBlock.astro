@@ -83,7 +83,7 @@ const descStyle = resolveTextStyle(data, 'desc');
                   />
                   <p class={`typo-body font-light pt-2 ${st.body}`} style={resolveTextStyle(proj, 'listDesc') || resolveTextStyle(proj, 'desc') || undefined} set:html={formatRich(proj.listDesc || proj.desc)}>
                   </p>
-                  <div class={`pt-4 space-y-2 typo-body font-light ${st.muted}`}>
+                  <div class={`pt-4 space-y-2 text-[14px] font-light ${st.muted}`}>
                     {(proj.bullets || []).map((b: string) => {
                       const BulletTag = (resolveTextTag(proj, 'bullets', 'p') || 'p') as any;
                       const bulletStyle = resolveTextStyle(proj, 'bullets') || undefined;

@@ -703,6 +703,26 @@ html.accessibility-high-contrast .header-contact-btn:hover {
   opacity: 0.8 !important;
 }
 
+/* Form Gönder Butonu (Kontrast Modunda Siyah Zemin, Beyaz Metin) */
+html.accessibility-high-contrast #contact-submit-btn,
+html.accessibility-high-contrast form button[type="submit"],
+html.accessibility-high-contrast button.contact-submit-btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast #contact-submit-btn *,
+html.accessibility-high-contrast form button[type="submit"] *,
+html.accessibility-high-contrast button.contact-submit-btn * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast #contact-submit-btn:hover,
+html.accessibility-high-contrast form button[type="submit"]:hover,
+html.accessibility-high-contrast button.contact-submit-btn:hover {
+  background-color: #222222 !important;
+  opacity: 0.85 !important;
+}
+
 /* Sosyal Medya İkonları */
 html.accessibility-high-contrast #main-header .header-social-icon,
 html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon,
@@ -819,10 +839,7 @@ html.accessibility-high-contrast .bg-paletteDustGrey {
   color: #000000 !important;
 }
 
-/* Logo Tint Overlay Kontrast Modunda Devre Dışı */
-html.accessibility-high-contrast .logo-tint-overlay {
-  display: none !important;
-}
+
 
 /* Akordeon Butonları */
 html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack .card-icon-btn {

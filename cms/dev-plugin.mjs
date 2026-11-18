@@ -412,9 +412,15 @@ async function syncBlockPages(rootDir, target, data) {
         key: 'gizlilikPolitikasi',
         sync: (page, d) => {
           if (d.seo) page.seo = d.seo;
+          const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
+          if (d.content && typeof d.content === 'object') d.content.text = raw;
+          else d.content = { text: raw };
+          const formatted = raw.includes('<p>') || raw.includes('<div>')
+            ? raw
+            : raw.split('\n\n').map(p => p.startsWith('•') ? `<li>${p.slice(1).trim()}</li>` : `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
           for (const b of page.blocks || []) {
             if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
-            if (b.type === 'richText') b.data = { ...b.data, content: d.text || d.content || b.data?.content };
+            if (b.type === 'richText') b.data = { ...b.data, content: formatted || b.data?.content };
           }
         },
       },
@@ -423,9 +429,15 @@ async function syncBlockPages(rootDir, target, data) {
         key: 'cerezPolitikasi',
         sync: (page, d) => {
           if (d.seo) page.seo = d.seo;
+          const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
+          if (d.content && typeof d.content === 'object') d.content.text = raw;
+          else d.content = { text: raw };
+          const formatted = raw.includes('<p>') || raw.includes('<div>')
+            ? raw
+            : raw.split('\n\n').map(p => p.startsWith('•') ? `<li>${p.slice(1).trim()}</li>` : `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
           for (const b of page.blocks || []) {
             if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
-            if (b.type === 'richText') b.data = { ...b.data, content: d.text || d.content || b.data?.content };
+            if (b.type === 'richText') b.data = { ...b.data, content: formatted || b.data?.content };
           }
         },
       },

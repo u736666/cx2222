@@ -95,7 +95,7 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
             {aiCard.scopeTitle && (
               <AiScopeTitleTag class="tracking-widest font-normal text-white" style={resolveTextStyle(aiCard, 'scopeTitle')} set:html={formatRich(aiCard.scopeTitle)} />
             )}
-            <div class="w-full text-[16px] font-light text-white/80 leading-relaxed space-y-2">
+            <div class="w-full text-[14px] font-light text-white/80 leading-relaxed space-y-2">
               {aiCard.scopeLeft && (
                 <AiScopeLeftTag class="w-full" style={resolveTextStyle(aiCard, 'scopeLeft')} set:html={formatRich(aiCard.scopeLeft)} />
               )}
@@ -135,12 +135,12 @@ const AcademySubtitleTag = (resolveTextTag(academyCard, 'subtitle', 'p') || 'p')
             )}
           </div>
 
-          <div class="pt-6 space-y-2 text-[16px] font-light text-paletteRichBlack/70 leading-relaxed">
+          <div class="pt-6 space-y-2 text-[14px] font-light text-paletteRichBlack/70 leading-relaxed">
             {cxCard.bottomTitle && (
-              <CxBottomTitleTag class="text-paletteRichBlack font-medium text-[16px]" style={resolveTextStyle(cxCard, 'bottomTitle')} set:html={formatRich(cxCard.bottomTitle)} />
+              <CxBottomTitleTag class="text-paletteRichBlack font-medium text-[14px]" style={resolveTextStyle(cxCard, 'bottomTitle')} set:html={formatRich(cxCard.bottomTitle)} />
             )}
             {cxCard.bottomDesc && (
-              <CxBottomDescTag class="text-[16px]" style={resolveTextStyle(cxCard, 'bottomDesc')} set:html={formatRich(cxCard.bottomDesc)} />
+              <CxBottomDescTag class="text-[14px]" style={resolveTextStyle(cxCard, 'bottomDesc')} set:html={formatRich(cxCard.bottomDesc)} />
             )}
           </div>
         </a>

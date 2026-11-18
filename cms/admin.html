@@ -5672,24 +5672,38 @@
       }
 
       if (UI.pagesSub === 'gizlilikPolitikasi') {
-        if (!pages.gizlilikPolitikasi) pages.gizlilikPolitikasi = { hero: { title: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' }, content: '' };
+        if (!pages.gizlilikPolitikasi) pages.gizlilikPolitikasi = { hero: { title: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' }, content: { text: '' }, text: '' };
         const gp = pages.gizlilikPolitikasi;
         if (!gp.hero) gp.hero = {};
+        if (!gp.text && gp.content) {
+          gp.text = typeof gp.content === 'object' ? (gp.content.text || '') : gp.content;
+        }
         const gpCard = el('div', { className: 'card' });
         gpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Gizlilik Politikası ve KVKK Aydınlatma Metni' })]));
-        gpCard.appendChild(fieldInput('Sayfa Başlığı', gp.hero, 'title', 'pages'));
-        gpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', gp, 'text', 'pages', { multiline: true, rows: 14 }));
+        gpCard.appendChild(el('div', { className: 'grid-2' }, [
+          fieldInput('Üst Başlık (Eyebrow)', gp.hero, 'eyebrow', 'pages'),
+          fieldInput('Sayfa Başlığı (H1)', gp.hero, 'title', 'pages'),
+        ]));
+        gpCard.appendChild(fieldInput('Giriş Açıklaması', gp.hero, 'desc', 'pages', { multiline: true, rows: 3 }));
+        gpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', gp, 'text', 'pages', { multiline: true, rows: 16 }));
         root.appendChild(gpCard);
       }
 
       if (UI.pagesSub === 'cerezPolitikasi') {
-        if (!pages.cerezPolitikasi) pages.cerezPolitikasi = { hero: { title: 'Çerez Politikası' }, content: '' };
+        if (!pages.cerezPolitikasi) pages.cerezPolitikasi = { hero: { title: 'Çerez Politikası' }, content: { text: '' }, text: '' };
         const cp = pages.cerezPolitikasi;
         if (!cp.hero) cp.hero = {};
+        if (!cp.text && cp.content) {
+          cp.text = typeof cp.content === 'object' ? (cp.content.text || '') : cp.content;
+        }
         const cpCard = el('div', { className: 'card' });
         cpCard.appendChild(el('div', { className: 'card-header' }, [el('h3', { className: 'card-title', text: 'Çerez Politikası Metni' })]));
-        cpCard.appendChild(fieldInput('Sayfa Başlığı', cp.hero, 'title', 'pages'));
-        cpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', cp, 'text', 'pages', { multiline: true, rows: 14 }));
+        cpCard.appendChild(el('div', { className: 'grid-2' }, [
+          fieldInput('Üst Başlık (Eyebrow)', cp.hero, 'eyebrow', 'pages'),
+          fieldInput('Sayfa Başlığı (H1)', cp.hero, 'title', 'pages'),
+        ]));
+        cpCard.appendChild(fieldInput('Giriş Açıklaması', cp.hero, 'desc', 'pages', { multiline: true, rows: 3 }));
+        cpCard.appendChild(fieldInput('Açıklama / Metin (HTML & Zengin Metin Destekli)', cp, 'text', 'pages', { multiline: true, rows: 16 }));
         root.appendChild(cpCard);
       }
 
