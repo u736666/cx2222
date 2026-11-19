@@ -44,7 +44,7 @@
             "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
             "p1": "İş dünyası algoritmalar, modeller ve işlem hızlarından bahsediyor ancak günün sonunda satın alma kararı veren, markaya sadık kalan veya öfkeyle ayrılan varlık hala insan.",
             "p2": "CX Folks olarak çalışmalarımızı masa başında değil, müşterinin gerçek dünyasında yürütüyoruz. Etnografik görüşmeler, derin dinleme oturumları ve duygu haritalarıyla, müşterinin sözcüklerinin ardındaki söylenmemiş ihtiyaçlarını projelerimizin merkezine getiriyoruz.",
-            "iconBg": "siteBg"
+            "iconBg": "richBlack"
           },
           {
             "id": "northstar-cx",
@@ -52,7 +52,8 @@
             "tagline": "\"Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.\" ",
             "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
             "p1": "Yapay zekanın olanaklarını kullanarak deneyimi pürüzsüz ve sürdürülebilir kılarken, insanı merkeze alan ideal deneyim hayata geçirilir.",
-            "p2": "Tasarlanan deneyimden başlayarak en uygun teknolojiyi kullanmanızı sağlar, kurumunuza entegrasyonunda yanınızda oluruz."
+            "p2": "Tasarlanan deneyimden başlayarak en uygun teknolojiyi kullanmanızı sağlar, kurumunuza entegrasyonunda yanınızda oluruz.",
+            "iconBg": "richBlack"
           },
           {
             "id": "proaktif-empati",
@@ -61,8 +62,7 @@
             "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
             "p1": "Pazarlama ekibi yeni müşteri kazanmak için vaatlerde bulunur, operasyon ekibi maliyet kısmak için seçenekleri azaltır, çağrı merkezi konuşma süresini 90 saniyenin altında tutmaya çalışır. Sonuç: Müşterinin kafası karışır ve güven sarsılır.",
             "p2": "Northstar CX modeliyle, şirketin C-level yönetiminden en ön saftaki temsilcisine kadar herkesin aynı dili konuştuğu, aynı değerleri koruduğu ve ortak başarı kriterleriyle motive olduğu bütünsel bir yönetsel mimari inşa ederiz.",
-            "taglineColor": "platinum",
-            "iconBg": ""
+            "iconBg": "richBlack"
           },
           {
             "id": "kalici-kultur",
@@ -70,7 +70,8 @@
             "tagline": "\"Kötü bir deneyim yaşayan bir çalışanın iyi bir müşteri deneyimi sunması imkansızdır.\"",
             "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
             "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) aynı madalyonun iki yüzüdür. Ekiplerinize yetki vermeden, onları bürokratik onay süreçlerinden kurtarmadan mükemmel bir müşteri deneyimi yaratamazsınız.",
-            "p2": "CX Folks Akademi çatısı altında kurum içi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz."
+            "p2": "CX Folks Akademi çatısı altında kurum içi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz.",
+            "iconBg": "richBlack"
           },
           {
             "id": "uygulanabilir-cozumler",
@@ -78,7 +79,7 @@
             "tagline": "\"Sunumda kalan projeler kaynak israfıdır.\"",
             "p1": "Hedeflerinize ve organizasyonel yapınıza en uygun yaklaşımı belirliyor ve sadece teoride kalan değil, doğrudan hayata geçirilebilir çözümler sunuyoruz.",
             "p2": "Sadece rapor veya sunumla kalmıyor; önerdiğimiz aksiyonların uygulama aşamasında da  yanınızda yer alarak sürecin sonuçlarını  sahipleniyoruz.",
-            "iconBg": ""
+            "iconBg": "richBlack"
           }
         ],
         "manifesto": {
@@ -91,28 +92,31 @@
               "tagline": "\"Verinin kalbi duygudur, algoritmanın kalbi ise empati.\"",
               "p1": "Rakamlar müşterinin ne yaptığını milisaniyeler içinde gösterir; ancak derin etnografik dinleme ve insan sezgisi neden yaptığını ortaya çıkarır.",
               "p2": "Bir müşterinin markayı tercih etmesi, ona sadık kalması veya markadan vazgeçmesi yalnızca verilerle açıklanamaz; bu kararların arkasında insani duygular ve karşılanmayı bekleyen ihtiyaçlar vardır. Algoritmaların göremediği söylenmemiş ihtiyaçları sahadaki sezgiyle yakalıyoruz.",
-              "iconBg": "richBlack"
+              "iconBg": "dustGrey"
             },
             {
               "id": "etik-ve-dengeli-yapay-zeka",
               "title": "Etik & Dengeli Yapay Zeka",
               "tagline": "\"Rutin operasyonlar yapay zekaya, değerli temaslar insana aittir.\"",
               "p1": "Yapay zeka tekrarlayan işleri hızlandırmak, işlem anomalilerini önceden yakalamak ve kesintisiz ölçeklenmek için mükemmel bir güçtür.",
-              "p2": "Ancak kriz, mağduriyet ve güven tesis etme anlarında müşterinin aradığı şey gerçek bir insani anlayıştır. Doğru dönüşüm, bu iki gücün kusursuz uyumundan doğar."
+              "p2": "Ancak kriz, mağduriyet ve güven tesis etme anlarında müşterinin aradığı şey gerçek bir insani anlayıştır. Doğru dönüşüm, bu iki gücün kusursuz uyumundan doğar.",
+              "iconBg": "dustGrey"
             },
             {
               "id": "ex-olmadan-cx-olmaz",
               "title": "Proaktif Empati",
               "tagline": "\"Müşteri şikayet edene kadar beklemek 2010'ların yöntemidir.\"",
               "p1": "Klasik müşteri hizmetleri tamamen 'reaktif' çalışır: Müşteri mağdur olur, sinirlenir, formu doldurur veya çağrı merkezini arar ve saatlerce sıra bekler. Bu noktada müşteri deneyimi zaten kırılmıştır.",
-              "p2": "Yapay zeka çağında işlem desenlerindeki anomalileri, tereddütleri ve stres göstergelerini yapay zekayla anlayarak müşteri daha sorunun adını koymadan proaktif bir sistem kurmak kurumların sorumluluğudur."
+              "p2": "Yapay zeka çağında işlem desenlerindeki anomalileri, tereddütleri ve stres göstergelerini yapay zekayla anlayarak müşteri daha sorunun adını koymadan proaktif bir sistem kurmak kurumların sorumluluğudur.",
+              "iconBg": "dustGrey"
             },
             {
               "id": "surekli-yasayan-kultur",
               "title": "EX Olmadan CX Olmaz",
               "tagline": "\"Mutsuz bir çalışanın müşteriyi mutlu etmesi imkansızdır.\"",
               "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) birbirini besleyen tek bir yaşayan organizmadır. Temelinde İnsan Deneyimi (HX) vardır.",
-              "p2": "Çalışanlarınıza yetki vermeden, bürokratik engelleri kaldırmadan ve kurum içi empatiyi inşa etmeden kalıcı bir müşteri deneyimi yaratılamaz."
+              "p2": "Çalışanlarınıza yetki vermeden, bürokratik engelleri kaldırmadan ve kurum içi empatiyi inşa etmeden kalıcı bir müşteri deneyimi yaratılamaz.",
+              "iconBg": "dustGrey"
             },
             {
               "id": "surekli-yasayan-kultur-manifesto",
@@ -120,7 +124,7 @@
               "tagline": "\"Dönüşüm bir proje değil, kurum DNA'sına işleyen bir yolculuktur.\"",
               "p1": "Teorik danışmanlık raporları ve slayt sunumları çekmecelerde unutulmaya mahkumdur.",
               "p2": "Biz kurum içi elçiler yetiştirir, ekipleri sahada bizzat yetkinleştirir ve deneyim odaklı düşünmeyi şirketin kalıcı refleksine dönüştürürüz.",
-              "iconBg": ""
+              "iconBg": "dustGrey"
             }
           ]
         },

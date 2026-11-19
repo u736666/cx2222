@@ -54,14 +54,16 @@
           {
             "id": "quote-card",
             "name": "",
-            "role": "Deneyim ve Sezgi Manifestosu",
+            "role": "",
             "isQuoteCard": true,
             "quote": "Müşterinin sesini duymak yetmez, onu algoritmaların ve aksiyonun kalbine yerleştirmek gerekir.",
             "quoteAuthor": "",
-            "bgColor": "brandAccent",
+            "bgColor": "richBlack",
             "linkedin": "https://linkedin.com",
             "twitter": "https://twitter.com",
-            "quoteColor": "richBlack"
+            "quoteColor": "white",
+            "nameColor": "brandAccent",
+            "roleColor": "brandAccent"
           },
           {
             "id": "research-lead",
@@ -96,13 +98,13 @@
           "title": "",
           "desc": ""
         },
-        "surface": "dustGrey",
+        "surface": "siteBg",
         "gridCols": "auto",
         "gridWidth": "full",
         "photoAspect": "4/5"
       },
       "style": {
-        "surface": "dustGrey"
+        "surface": "siteBg"
       }
     },
     {

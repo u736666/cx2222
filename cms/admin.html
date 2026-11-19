@@ -7038,6 +7038,37 @@
       return json.url;
     }
 
+    async function renameMediaFile(oldUrl, newNameInput) {
+      const res = await fetch('/api/cms/media/rename', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ oldUrl, newName: newNameInput }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Yeniden adlandırma hatası.');
+
+      const { newUrl, filename, updatedFiles, uploads, mediaFiles } = json;
+
+      if (Array.isArray(uploads)) STATE.uploads = uploads;
+      if (Array.isArray(mediaFiles)) STATE.mediaFiles = mediaFiles;
+
+      // Update in-memory slots so current session reflects changes immediately
+      const { slots } = collectAllMediaInventory();
+      const matching = slots.filter((s) => s.url === oldUrl);
+      matching.forEach((s) => s.set(newUrl));
+
+      // Reload fresh state from disk to ensure all JSON data is completely aligned
+      try {
+        await loadState();
+      } catch (err) {
+        console.warn('loadState sync warn:', err);
+      }
+
+      showToast(`Görsel adı "${filename}" olarak güncellendi (${updatedFiles?.length || 0} içerik dosyasında yenilendi) ✓`);
+      renderAll();
+      return newUrl;
+    }
+
     function renderMediaTab(root) {
       const { slots, entries } = collectAllMediaInventory();
       const unusedLocal = entries.filter((e) => e.isLocal && e.usages.length === 0);
@@ -7090,7 +7121,7 @@
         folderSelect,
         uploadBtn,
         fileInp,
-        el('span', { className: 'card-sub', text: 'PNG, JPG, WebP, SVG veya GIF dosyalarını birden fazla seçip yükleyebilirsiniz.' }),
+        el('span', { className: 'card-sub', text: '⚡ PNG, JPG, WebP, SVG veya GIF yükleyebilirsiniz. Yüklenen raster görseller otomatik olarak sıkıştırılmış WebP formatına dönüştürülür. SVG dosyaları vektörel saklanır.' }),
       ]));
       root.appendChild(uploadCard);
 
@@ -7265,6 +7296,95 @@
         }));
 
         if (entry.isLocal) {
+          const renameContainer = el('div', {
+            style: 'display:none;width:100%;margin-top:8px;padding:10px;background:var(--sand,#faf8f5);border-radius:6px;border:1px solid var(--dust,#e5e0d8);',
+          });
+          const currFilename = entry.url.split('/').pop() || '';
+          const nameInput = el('input', {
+            type: 'text',
+            className: 'input',
+            value: currFilename,
+            placeholder: 'Yeni dosya adı...',
+            style: 'flex:1;font-size:12px;padding:5px 8px;background:#ffffff;',
+          });
+          const doRenameBtn = el('button', {
+            type: 'button',
+            className: 'btn btn-primary btn-sm',
+            text: 'Kaydet & Kodda Güncelle',
+          });
+          const cancelRenameBtn = el('button', {
+            type: 'button',
+            className: 'btn btn-muted btn-sm',
+            text: 'Vazgeç',
+            onClick: () => {
+              renameContainer.style.display = 'none';
+              renameBtn.style.display = '';
+            },
+          });
+
+          doRenameBtn.addEventListener('click', async () => {
+            const nextName = nameInput.value.trim();
+            if (!nextName) {
+              alert('Lütfen geçerli bir dosya adı girin.');
+              return;
+            }
+            if (nextName === currFilename) {
+              renameContainer.style.display = 'none';
+              renameBtn.style.display = '';
+              return;
+            }
+            doRenameBtn.disabled = true;
+            doRenameBtn.textContent = 'Güncelleniyor...';
+            try {
+              await renameMediaFile(entry.url, nextName);
+            } catch (err) {
+              alert(err.message);
+              doRenameBtn.disabled = false;
+              doRenameBtn.textContent = 'Kaydet & Kodda Güncelle';
+            }
+          });
+
+          nameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              doRenameBtn.click();
+            } else if (e.key === 'Escape') {
+              cancelRenameBtn.click();
+            }
+          });
+
+          const renameRow = el('div', { style: 'display:flex;gap:6px;align-items:center;' }, [
+            nameInput,
+            doRenameBtn,
+            cancelRenameBtn,
+          ]);
+          const renameHelp = el('div', {
+            style: 'font-size:11px;color:var(--slate,#666);margin-top:5px;line-height:1.4;',
+            text: '💡 Dosya adı değiştirildiğinde diskteki dosya yeniden adlandırılır ve sitedeki tüm sayfa/içerik dosyalarındaki referanslar anında otomatik güncellenir.',
+          });
+          renameContainer.appendChild(renameRow);
+          renameContainer.appendChild(renameHelp);
+
+          const renameBtn = el('button', {
+            type: 'button',
+            className: 'btn btn-dark btn-sm',
+            text: 'Adı Değiştir ✏️',
+            title: 'Dosya adını değiştir ve sitedeki tüm kullanımlarında otomatik güncelle',
+            onClick: () => {
+              renameContainer.style.display = 'block';
+              renameBtn.style.display = 'none';
+              nameInput.focus();
+              const dotIdx = currFilename.lastIndexOf('.');
+              if (dotIdx > 0) {
+                nameInput.setSelectionRange(0, dotIdx);
+              } else {
+                nameInput.select();
+              }
+            },
+          });
+
+          footBtns.appendChild(renameBtn);
+
           const delBtn = el('button', {
             type: 'button',
             className: 'btn btn-danger btn-sm',
@@ -7296,9 +7416,12 @@
             },
           });
           footBtns.appendChild(delBtn);
-        }
 
-        body.appendChild(footBtns);
+          body.appendChild(footBtns);
+          body.appendChild(renameContainer);
+        } else {
+          body.appendChild(footBtns);
+        }
         card.appendChild(body);
         grid.appendChild(card);
       });

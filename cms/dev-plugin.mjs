@@ -610,6 +610,58 @@ async function walkImagesDir(baseDir, currentDir = baseDir, acc = []) {
   return acc;
 }
 
+async function replaceImageReferencesAcrossProject(rootDir, oldUrl, newUrl) {
+  if (!oldUrl || !newUrl || oldUrl === newUrl) return [];
+  const updatedFiles = [];
+  const oldUrlBare = oldUrl.startsWith('/') ? oldUrl.slice(1) : oldUrl;
+  const newUrlBare = newUrl.startsWith('/') ? newUrl.slice(1) : newUrl;
+
+  const srcDir = path.join(rootDir, 'src');
+
+  async function walkAndReplace(dir) {
+    let entries;
+    try {
+      entries = await fs.readdir(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walkAndReplace(fullPath);
+      } else if (entry.isFile()) {
+        const ext = path.extname(entry.name).toLowerCase();
+        if (['.json', '.astro', '.md', '.mdx', '.js', '.mjs', '.ts'].includes(ext)) {
+          try {
+            const content = await fs.readFile(fullPath, 'utf-8');
+            let modified = false;
+            let nextContent = content;
+
+            if (nextContent.includes(oldUrl)) {
+              nextContent = nextContent.replaceAll(oldUrl, newUrl);
+              modified = true;
+            }
+            if (nextContent.includes(oldUrlBare)) {
+              nextContent = nextContent.replaceAll(oldUrlBare, newUrlBare);
+              modified = true;
+            }
+
+            if (modified) {
+              await fs.writeFile(fullPath, nextContent, 'utf-8');
+              updatedFiles.push(path.relative(rootDir, fullPath).replace(/\\/g, '/'));
+            }
+          } catch (err) {
+            console.error(`[CMS rename] Error updating file ${fullPath}:`, err);
+          }
+        }
+      }
+    }
+  }
+
+  await walkAndReplace(srcDir);
+  return updatedFiles;
+}
+
 async function listMediaFiles(rootDir) {
   const imagesDir = path.join(rootDir, 'public/images');
   const files = await walkImagesDir(imagesDir);
@@ -843,7 +895,7 @@ export default function cxfolksCmsPlugin() {
             return sendJson(res, 200, { ok: true, count: items.length });
           }
 
-          // POST /api/cms/upload -> Save local image file into public/images/{uploads|logos}/
+          // POST /api/cms/upload -> Save local image file into public/images/{uploads|logos}/ (auto-convert raster images to WebP)
           if (req.method === 'POST' && urlPath === '/api/cms/upload') {
             const body = JSON.parse(await readBody(req));
             const { filename, dataUrl, folder } = body || {};
@@ -859,10 +911,27 @@ export default function cxfolksCmsPlugin() {
             const safeFolder = folder === 'logos' ? 'logos' : 'uploads';
             const baseName = sanitizeSlug(path.basename(filename, ext)) || 'gorsel';
             const stamp = Date.now().toString(36);
-            const finalName = safeFolder === 'logos' ? `${baseName}-${stamp}${ext}` : `${baseName}-${stamp}${ext}`;
             const base64Data = dataUrl.split(',')[1];
-            const buffer = Buffer.from(base64Data, 'base64');
+            let buffer = Buffer.from(base64Data, 'base64');
+            let finalExt = ext;
+            let convertedToWebp = false;
 
+            // Automatically convert raster images (.png, .jpg, .jpeg, .webp, .gif) to optimized .webp (quality: 85)
+            // Keep .svg as vector XML
+            if (ext !== '.svg') {
+              try {
+                const { default: sharp } = await import('sharp');
+                buffer = await sharp(buffer)
+                  .webp({ quality: 85, effort: 4 })
+                  .toBuffer();
+                finalExt = '.webp';
+                convertedToWebp = true;
+              } catch (sharpErr) {
+                console.warn('[CMS upload] Sharp WebP conversion failed, falling back to original:', sharpErr);
+              }
+            }
+
+            const finalName = `${baseName}-${stamp}${finalExt}`;
             const targetDir = path.join(rootDir, 'public/images', safeFolder);
             await fs.mkdir(targetDir, { recursive: true });
             await fs.writeFile(path.join(targetDir, finalName), buffer);
@@ -873,6 +942,7 @@ export default function cxfolksCmsPlugin() {
               url: `/images/${safeFolder}/${finalName}`,
               filename: finalName,
               folder: safeFolder,
+              convertedToWebp,
               uploads: mediaFiles.map((f) => f.url),
               mediaFiles,
             });
@@ -900,6 +970,105 @@ export default function cxfolksCmsPlugin() {
             return sendJson(res, 200, {
               ok: true,
               deleted: url,
+              uploads: mediaFiles.map((f) => f.url),
+              mediaFiles,
+            });
+          }
+
+          // POST /api/cms/media/rename -> Rename a local file under public/images/ and sync all references across project
+          if (req.method === 'POST' && urlPath === '/api/cms/media/rename') {
+            const body = JSON.parse(await readBody(req));
+            const { oldUrl, newName } = body || {};
+
+            if (typeof oldUrl !== 'string' || !oldUrl.startsWith('/images/')) {
+              return sendJson(res, 400, { ok: false, error: 'Yalnızca /images/ altındaki yerel dosyalar yeniden adlandırılabilir.' });
+            }
+
+            if (!newName || typeof newName !== 'string' || !newName.trim()) {
+              return sendJson(res, 400, { ok: false, error: 'Lütfen geçerli bir yeni dosya adı girin.' });
+            }
+
+            const imagesRoot = path.resolve(rootDir, 'public', 'images');
+            const oldRel = oldUrl.slice('/images/'.length);
+            const oldAbsPath = path.resolve(imagesRoot, oldRel);
+
+            if (!oldAbsPath.startsWith(imagesRoot + path.sep)) {
+              return sendJson(res, 403, { ok: false, error: 'Geçersiz dosya yolu.' });
+            }
+
+            const stat = await fs.stat(oldAbsPath).catch(() => null);
+            if (!stat || !stat.isFile()) {
+              return sendJson(res, 404, { ok: false, error: 'Adı değiştirilecek dosya bulunamadı.' });
+            }
+
+            const oldExt = path.extname(oldRel).toLowerCase();
+            const rawNewExt = path.extname(newName).toLowerCase();
+            const hasValidNewExt = ALLOWED_IMAGE_EXTS.has(rawNewExt);
+
+            // Determine final extension: preserve old extension if newName has none or invalid
+            const finalExt = hasValidNewExt ? rawNewExt : oldExt;
+            const rawBase = hasValidNewExt ? path.basename(newName, rawNewExt) : newName;
+            const cleanBase = sanitizeSlug(rawBase);
+
+            if (!cleanBase) {
+              return sendJson(res, 400, { ok: false, error: 'Dosya adı geçersiz karakterler içeriyor.' });
+            }
+
+            const finalFilename = `${cleanBase}${finalExt}`;
+            const targetDir = path.dirname(oldAbsPath);
+            const newAbsPath = path.join(targetDir, finalFilename);
+
+            if (!newAbsPath.startsWith(imagesRoot + path.sep)) {
+              return sendJson(res, 403, { ok: false, error: 'Geçersiz hedef yolu.' });
+            }
+
+            if (oldAbsPath.toLowerCase() === newAbsPath.toLowerCase()) {
+              return sendJson(res, 200, {
+                ok: true,
+                message: 'Dosya adı değişmedi.',
+                oldUrl,
+                newUrl: oldUrl,
+                filename: finalFilename,
+                updatedFiles: [],
+              });
+            }
+
+            // Check if destination file already exists
+            const existingStat = await fs.stat(newAbsPath).catch(() => null);
+            if (existingStat) {
+              return sendJson(res, 409, { ok: false, error: `"${finalFilename}" adında bir dosya zaten mevcut. Lütfen farklı bir isim belirleyin.` });
+            }
+
+            // Check if converting raster to .webp during rename
+            let converted = false;
+            if (finalExt === '.webp' && oldExt !== '.webp' && oldExt !== '.svg') {
+              try {
+                const { default: sharp } = await import('sharp');
+                await sharp(oldAbsPath).webp({ quality: 85, effort: 4 }).toFile(newAbsPath);
+                await fs.unlink(oldAbsPath);
+                converted = true;
+              } catch (sharpErr) {
+                console.warn('[CMS rename] Sharp WebP conversion failed, falling back to rename:', sharpErr);
+                await fs.rename(oldAbsPath, newAbsPath);
+              }
+            } else {
+              await fs.rename(oldAbsPath, newAbsPath);
+            }
+
+            const newRel = path.relative(imagesRoot, newAbsPath).replace(/\\/g, '/');
+            const newUrl = `/images/${newRel}`;
+
+            // Replace all references across project (src/data, src/pages, src/components)
+            const updatedFiles = await replaceImageReferencesAcrossProject(rootDir, oldUrl, newUrl);
+
+            const mediaFiles = await listMediaFiles(rootDir);
+            return sendJson(res, 200, {
+              ok: true,
+              oldUrl,
+              newUrl,
+              filename: finalFilename,
+              converted,
+              updatedFiles,
               uploads: mediaFiles.map((f) => f.url),
               mediaFiles,
             });
