@@ -11,8 +11,10 @@ interface Props {
 const { id, data = {}, style = {} } = Astro.props;
 const styles = computeBlockStyles(style);
 const sectionId = id || styles.sectionId || 'contact-form-block';
+const isIletisim = Astro.url.pathname === '/iletisim' || Astro.url.pathname === '/iletisim/';
+const headingTag = data.headingTag || (isIletisim ? 'h1' : 'h2');
 ---
 
 <div id={sectionId} class={styles.sectionClasses} style={styles.inlineStyleString}>
-  <ContactSection headingTag="h1" />
+  <ContactSection headingTag={headingTag} />
 </div>

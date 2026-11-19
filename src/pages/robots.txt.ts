@@ -60,6 +60,7 @@ export const GET: APIRoute = ({ url }) => {
     '',
     '# LLM Context Protocol',
     `Allow: /llms.txt`,
+    `Allow: /llms-full.txt`,
     '',
     '# Sitemaps',
     `Sitemap: ${siteUrl}/sitemap-index.xml`,
