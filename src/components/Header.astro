@@ -155,7 +155,7 @@ function isExactPage(href: string) {
                     <a href={item.href} class="group space-y-3 block">
                       {hasImage && (
                         <div class="w-full aspect-[3/1] bg-neutral-800 overflow-hidden">
-                          <img src={item.image} alt={altText} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <img src={item.image} alt={altText} class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-all duration-500" />
                         </div>
                       )}
                       <span class="typo-body font-normal text-white group-hover:text-brandAccent transition-colors block">{item.title}</span>
