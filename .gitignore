@@ -17,3 +17,5 @@ Thumbs.db
 
 .cms-backups/
 scratch/
+
+.vercel
