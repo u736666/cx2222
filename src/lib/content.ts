@@ -140,7 +140,7 @@ const SURFACE_STYLES: Record<SurfaceStyleKey, SurfaceStyleConfig> = {
     title: 'text-white',
     body: 'text-white/80',
     muted: 'text-white/60',
-    btn: 'bg-brandAccent text-paletteRichBlack hover:bg-brandAccentHover',
+    btn: 'bg-brandAccent text-white hover:bg-brandAccentHover',
     textLink: 'text-brandAccent hover:text-white',
     cardTitle: 'text-brandAccent',
     cardBody: 'text-white/80',

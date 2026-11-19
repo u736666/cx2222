@@ -43,7 +43,7 @@ const descStyle = resolveTextStyle(data, 'desc');
           </p>
         )}
         {data.allLinkText && (
-          <a href={data.allLinkHref || '/projeler'} class="text-[16px] font-normal text-paletteRichBlack hover:underline transition-colors inline-flex items-center gap-1.5" set:html={formatRich(data.allLinkText)}>
+          <a href={data.allLinkHref || '/projeler'} class="text-[16px] font-medium text-brandAccent hover:underline transition-colors inline-flex items-center gap-1.5" set:html={formatRich(data.allLinkText)}>
           </a>
         )}
       </div>
@@ -91,7 +91,7 @@ const descStyle = resolveTextStyle(data, 'desc');
                 </div>
 
                 <div class="pt-6 flex items-center justify-between relative z-20 pointer-events-none">
-                  <span class={`text-[16px] font-normal transition-colors ${st.textLink} group-hover:underline inline-flex items-center gap-1.5`}>
+                  <span class="text-[16px] font-normal transition-colors text-brandAccent group-hover:underline inline-flex items-center gap-1.5">
                     <span set:html={formatRich(data.cardCtaText || 'Proje Detayı →')}></span>
                   </span>
                 </div>

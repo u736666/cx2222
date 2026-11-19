@@ -177,11 +177,11 @@ const eyebrowStyle = resolveTextStyle(cs, 'eyebrow');
               <button 
                 id="contact-submit-btn" 
                 type="submit" 
-                class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-medium text-[14px] inline-flex items-center gap-1.5 border-0 shadow-none transition-all cursor-pointer"
-                style="border: none !important; outline: none !important;"
+                class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-white font-medium text-[14px] inline-flex items-center gap-1.5 border-0 shadow-none transition-all cursor-pointer"
+                style="border: none !important; outline: none !important; color: #ffffff !important;"
               >
-                <span>{String(cs.submitLabel || 'Görüşelim').replace(/\s*[→↗]\s*$/, '')}</span>
-                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+                <span class="text-white">{String(cs.submitLabel || 'Görüşelim').replace(/\s*[→↗]\s*$/, '')}</span>
+                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1 text-white" aria-hidden="true">→</span>
               </button>
             </div>
 
@@ -206,15 +206,23 @@ const eyebrowStyle = resolveTextStyle(cs, 'eyebrow');
 
     const controls = form.querySelectorAll('input, select, textarea');
     controls.forEach((ctrl) => {
-      ctrl.addEventListener('input', () => {
-        ctrl.removeAttribute('aria-invalid');
+      const input = ctrl as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+      input.addEventListener('invalid', () => {
+        if (input.validity.valueMissing) {
+          input.setCustomValidity('Lütfen bu alanı doldurunuz.');
+        } else if (input.validity.typeMismatch && (input as HTMLInputElement).type === 'email') {
+          input.setCustomValidity('Lütfen geçerli bir e-posta adresi giriniz.');
+        } else {
+          input.setCustomValidity('');
+        }
+        input.setAttribute('aria-invalid', 'true');
+      });
+
+      input.addEventListener('input', () => {
+        input.setCustomValidity('');
+        input.removeAttribute('aria-invalid');
       });
     });
-
-    form.addEventListener('invalid', (e) => {
-      const target = e.target as HTMLElement | null;
-      if (target) target.setAttribute('aria-invalid', 'true');
-    }, true);
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

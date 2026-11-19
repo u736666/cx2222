@@ -280,14 +280,14 @@ const themeVarsCss = `:root, html {
   --color-rich-black: ${theme.richBlack};
   --color-card-bg: ${theme.cardBg};
   --color-card-border: transparent;
-  --cta-mesh-base-1: ${theme.ctaMeshBase1 || '#D7EFFF'};
-  --cta-mesh-base-2: ${theme.ctaMeshBase2 || '#E9F056'};
-  --cta-mesh-base-3: ${theme.ctaMeshBase3 || theme.ctaMeshOrb3 || '#FDBA74'};
-  --cta-mesh-base-4: ${theme.ctaMeshBase4 || theme.ctaMeshOrb4 || '#C1DEEF'};
-  --cta-mesh-orb-1: ${hexToRgbaStr(theme.ctaMeshOrb1 || '#E9F056', 0.40)};
-  --cta-mesh-orb-2: ${hexToRgbaStr(theme.ctaMeshOrb2 || '#D7EFFF', 0.75)};
-  --cta-mesh-orb-3: ${hexToRgbaStr(theme.ctaMeshOrb3 || '#FDBA74', 0.35)};
-  --cta-mesh-orb-4: ${hexToRgbaStr(theme.ctaMeshOrb4 || '#C1DEEF', 0.50)};
+  --cta-mesh-base-1: #CDE1E0;
+  --cta-mesh-base-2: #EE8C75;
+  --cta-mesh-base-3: #3d4457;
+  --cta-mesh-base-4: #CDE1E0;
+  --cta-mesh-orb-1: rgba(238, 140, 117, 0.75);
+  --cta-mesh-orb-2: rgba(205, 225, 224, 0.85);
+  --cta-mesh-orb-3: rgba(61, 68, 87, 0.70);
+  --cta-mesh-orb-4: rgba(238, 140, 117, 0.65);
   --fs-body: ${fluidClamp(ty.bodySizeMobile, ty.bodySizeDesktop, 15, 16)};
   --lh-body: ${bodyLineHeight};
   --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 18, 20)};
@@ -337,6 +337,10 @@ const faviconSvg = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' v
   <meta name="description" content={resolvedDescription} />
   {resolvedKeywords && <meta name="keywords" content={resolvedKeywords} />}
   {aiSummary && <meta name="ai-summary" content={aiSummary} />}
+  <meta name="geo.region" content={seo?.geoRegion || "TR-34"} />
+  <meta name="geo.placename" content="İstanbul" />
+  <meta name="geo.position" content="41.0082;28.9784" />
+  <meta name="ICBM" content="41.0082, 28.9784" />
   <meta name="author" content={site.brand.name} />
   <meta property="article:modified_time" content={seo?.dateModified || new Date().toISOString()} />
   <meta property="article:published_time" content={seo?.datePublished || "2026-01-15T09:00:00+03:00"} />

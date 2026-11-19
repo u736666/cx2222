@@ -41,7 +41,7 @@
       "type": "projectsList",
       "visible": true,
       "data": {
-        "cardCtaText": "Vaka Analizini Oku →"
+        "cardCtaText": "Proje Detayı →"
       },
       "style": {
         "surface": "siteBg"

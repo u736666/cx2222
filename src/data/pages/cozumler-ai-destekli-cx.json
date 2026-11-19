@@ -8,17 +8,19 @@
     "title": "AI Destekli CX & VOC Sistemleri | CX Folks",
     "description": "Veriyi aksiyona dönüştüren algoritmalar: Anlık duygu analizi, kök neden tespiti, kapalı döngü (closed-loop) geri bildirim mekanizmaları ve churn erken uyarı sistemleri.",
     "schemaType": "Service",
-    "keywords": "AI destekli CX, VOC sistemleri, duygu analizi, churn tahmini, closed-loop feedback",
+    "keywords": "AI destekli CX, müşteri deneyimi, VOC sistemleri, kullanıcı davranışı analizi, duygu analizi, müşteri yolculuk haritaları, churn tahmini, closed-loop feedback, deneyim stratejisi",
     "aiSummary": "Veriyi anlık duygu analizi, kök neden keşfi, kapalı döngü geri bildirim ve kayıp önleme (churn) uyarılarına dönüştüren AI destekli müşteri deneyimi mimarisi.",
     "aboutTopics": [
-      "Voice of Customer",
-      "Duygu Analizi",
+      "Voice of Customer (VOC)",
+      "Kullanıcı Davranışı ve Duygu Analizi",
+      "AI Destekli CX Mimarisi",
       "Öngörüsel Churn Önleme"
     ],
     "keyTakeaways": [
       "Anlık kök neden sınıflandırma",
       "İnsan temsilciler için AI Copilot desteği"
     ],
+    "geoRegion": "TR-34, Türkiye",
     "llmsInclude": true
   },
   "status": "yayında",

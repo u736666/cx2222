@@ -412,12 +412,21 @@ h6, .typo-h6 {
 
 #main-header a.btn-rect {
   background-color: var(--color-brand-accent) !important;
-  color: var(--color-rich-black) !important;
+  color: #ffffff !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
 }
 #main-header a.btn-rect:hover {
   background-color: var(--color-brand-accent-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Sitedeki tüm accent rengi butonların içi her zaman beyaz */
+button.bg-brandAccent,
+a.bg-brandAccent,
+button.bg-brandAccent *,
+a.bg-brandAccent * {
+  color: #ffffff !important;
 }
 
 .header-social-icon {
@@ -530,25 +539,31 @@ footer .btn-rect:hover,
   border-color: #ffffff !important;
 }
 
-/* Form girdileri (Temiz modern çerçeve) */
+/* Form girdileri (Highlight olunca border / outline yok) */
 input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
   border-radius: 0px;
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
+  outline: none !important;
 }
 input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):focus,
 select:focus,
-textarea:focus {
-  border-color: var(--color-brand-accent);
+textarea:focus,
+input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* ================= TheDive Stili Ethereal Animatic Noised Mesh Gradient (CTA Zeminleri) ================= */
+/* ================= TheDive Stili Ethereal Animatic Noised Mesh Gradient (Sabit CTA Renkleri: #EE8C75, #CDE1E0, #3d4457) ================= */
 .cta-mesh-gradient {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 40%, var(--cta-mesh-base-3, var(--cta-mesh-base-1)) 70%, var(--cta-mesh-base-4, var(--cta-mesh-base-2)) 100%);
-  background-size: 220% 220%;
+  background: linear-gradient(135deg, #CDE1E0 0%, #EE8C75 45%, #3d4457 100%);
+  background-size: 200% 200%;
   animation: ctaMeshDrift 7s ease-in-out infinite alternate;
 }
 
@@ -569,10 +584,10 @@ textarea:focus {
   position: absolute;
   inset: -15%;
   background-image: 
-    radial-gradient(circle at 20% 25%, var(--cta-mesh-orb-1) 0%, transparent 55%),
-    radial-gradient(circle at 80% 35%, var(--cta-mesh-orb-2) 0%, transparent 60%),
-    radial-gradient(circle at 45% 75%, var(--cta-mesh-orb-3) 0%, transparent 55%),
-    radial-gradient(circle at 75% 75%, var(--cta-mesh-orb-4) 0%, transparent 50%);
+    radial-gradient(circle at 18% 22%, rgba(238, 140, 117, 0.75) 0%, transparent 55%),
+    radial-gradient(circle at 82% 35%, rgba(205, 225, 224, 0.85) 0%, transparent 60%),
+    radial-gradient(circle at 45% 80%, rgba(61, 68, 87, 0.70) 0%, transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(238, 140, 117, 0.65) 0%, transparent 50%);
   filter: blur(40px);
   pointer-events: none;
   animation: ctaOrbsFloat 6s ease-in-out infinite alternate;
@@ -1006,10 +1021,7 @@ p b, p strong, .prose b, .prose strong, span b, span strong, li b, li strong {
 
 button:focus-visible,
 a:focus-visible,
-summary:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+summary:focus-visible {
   outline: 2px solid var(--color-brand-accent);
   outline-offset: 2px;
 }

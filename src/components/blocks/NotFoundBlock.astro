@@ -37,7 +37,8 @@ const descStyle = resolveTextStyle(data, 'desc');
       {data.secondaryBtnLabel && (
         <a 
           href={data.secondaryBtnHref || '/cozumler'} 
-          class="btn-rect px-6 py-3.5 bg-brandAccent text-paletteRichBlack hover:bg-brandAccentHover font-semibold"
+          class="btn-rect px-6 py-3.5 bg-brandAccent text-white hover:bg-brandAccentHover font-semibold"
+          style="color: #ffffff !important;"
           set:html={formatRich(data.secondaryBtnLabel)}
         >
         </a>

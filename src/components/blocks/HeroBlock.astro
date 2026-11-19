@@ -102,16 +102,18 @@ const hasContent = isSlider || Boolean(
           <div class="pt-4 flex flex-wrap gap-3">
             <a 
               href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 
-              class={`btn-rect px-7 py-3 ${isDarkHero ? 'bg-white !text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack !text-white hover:bg-black'} font-light transition-all`}
+              class={`group min-h-[2.25rem] py-2 px-6 rounded-full ${isDarkHero ? 'bg-white text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack text-white hover:bg-black'} font-medium text-[14px] inline-flex items-center gap-1.5 transition-all border-0 shadow-none`}
             >
-              <span set:html={formatRich(data.ctaText || data.primaryBtnLabel)}></span>
+              <span set:html={formatRich(String(data.ctaText || data.primaryBtnLabel || '').replace(/\s*[→↗]\s*$/, ''))}></span>
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
             </a>
             {data.secondaryBtnLabel && data.secondaryBtnLabel.trim() !== '' && (
               <a 
                 href={data.secondaryBtnHref || '#'} 
-                class={`btn-rect px-7 py-3 border ${isDarkHero ? 'border-white text-white hover:bg-white hover:!text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:!text-white'} font-light transition-all`}
+                class={`group min-h-[2.25rem] py-2 px-6 rounded-full border ${isDarkHero ? 'border-white text-white hover:bg-white hover:text-paletteRichBlack' : 'border-paletteRichBlack text-paletteRichBlack hover:bg-paletteRichBlack hover:text-white'} font-medium text-[14px] inline-flex items-center gap-1.5 transition-all`}
               >
-                <span set:html={formatRich(data.secondaryBtnLabel)}></span>
+                <span set:html={formatRich(String(data.secondaryBtnLabel || '').replace(/\s*[→↗]\s*$/, ''))}></span>
+                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </a>
             )}
           </div>
@@ -158,9 +160,10 @@ const hasContent = isSlider || Boolean(
         <div class="pt-4 flex flex-wrap gap-3">
           <a 
             href={data.ctaHref || data.primaryBtnHref || '/iletisim'} 
-            class={`btn-rect px-7 py-3 ${isDarkHero ? 'bg-white !text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack !text-white hover:bg-black'} font-light transition-all`}
+            class={`group min-h-[2.25rem] py-2 px-6 rounded-full ${isDarkHero ? 'bg-white text-paletteRichBlack hover:bg-palettePlatinum' : 'bg-paletteRichBlack text-white hover:bg-black'} font-medium text-[14px] inline-flex items-center gap-1.5 transition-all border-0 shadow-none`}
           >
-            <span set:html={formatRich(data.ctaText || data.primaryBtnLabel)}></span>
+            <span set:html={formatRich(String(data.ctaText || data.primaryBtnLabel || '').replace(/\s*[→↗]\s*$/, ''))}></span>
+            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
           </a>
         </div>
       )}

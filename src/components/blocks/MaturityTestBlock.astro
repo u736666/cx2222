@@ -59,7 +59,7 @@ const sectionId = id || styles.sectionId || 'maturity-test';
 
         <form id="lead-capture-form" class="space-y-4 max-w-lg pt-2">
           <div>
-            <label for="lead-email" class="block text-xs font-semibold uppercase tracking-wider text-paletteRichBlack/70 mb-1.5">
+            <label for="lead-email" class="block text-sm font-medium text-paletteRichBlack/80 mb-1.5">
               İş E-posta Adresi <span class="text-red-500">*</span>
             </label>
             <input 
@@ -67,30 +67,30 @@ const sectionId = id || styles.sectionId || 'maturity-test';
               id="lead-email" 
               required 
               placeholder="ad.soyad@sirketiniz.com"
-              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-paletteRichBlack outline-none text-paletteRichBlack text-sm transition-colors"
+              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-palettePlatinum focus:outline-none focus:ring-0 text-paletteRichBlack text-sm transition-colors"
             />
           </div>
 
           <div>
-            <label for="lead-name" class="block text-xs font-semibold uppercase tracking-wider text-paletteRichBlack/70 mb-1.5">
+            <label for="lead-name" class="block text-sm font-medium text-paletteRichBlack/80 mb-1.5">
               Ad Soyad (Opsiyonel)
             </label>
             <input 
               type="text" 
               id="lead-name" 
               placeholder="Adınız Soyadınız"
-              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-paletteRichBlack outline-none text-paletteRichBlack text-sm transition-colors"
+              class="w-full px-4 py-3 bg-white border border-palettePlatinum focus:border-palettePlatinum focus:outline-none focus:ring-0 text-paletteRichBlack text-sm transition-colors"
             />
           </div>
 
           <div class="pt-2">
             <button 
               type="submit" 
-              class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-medium text-[14px] inline-flex items-center gap-1.5 transition-all cursor-pointer border-0 shadow-none"
-              style="border: none !important; outline: none !important;"
+              class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-white font-medium text-[14px] inline-flex items-center gap-1.5 transition-all cursor-pointer border-0 shadow-none"
+              style="border: none !important; outline: none !important; color: #ffffff !important;"
             >
-              <span>Sonuçları Gör ve Raporu İlet</span>
-              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+              <span class="text-white">Sonuçları Gör ve Raporu İlet</span>
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1 text-white" aria-hidden="true">→</span>
             </button>
           </div>
           <p class="text-xs text-paletteRichBlack/60 font-light">
@@ -121,11 +121,11 @@ const sectionId = id || styles.sectionId || 'maturity-test';
         <div class="pt-4 flex flex-wrap items-center gap-4">
           <a 
             href="/iletisim"
-            class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-paletteRichBlack font-medium text-[14px] inline-flex items-center gap-1.5 transition-all cursor-pointer border-0 shadow-none"
-            style="border: none !important; outline: none !important;"
+            class="group min-h-[2.25rem] py-2 px-6 rounded-full bg-brandAccent hover:bg-brandAccentHover text-white font-medium text-[14px] inline-flex items-center gap-1.5 transition-all cursor-pointer border-0 shadow-none"
+            style="border: none !important; outline: none !important; color: #ffffff !important;"
           >
-            <span>Sonuçları Birlikte Değerlendirelim</span>
-            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+            <span class="text-white">Sonuçları Birlikte Değerlendirelim</span>
+            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1 text-white" aria-hidden="true">→</span>
           </a>
           <button 
             id="restart-quiz-btn"
@@ -206,6 +206,21 @@ const sectionId = id || styles.sectionId || 'maturity-test';
   }
 
   if (leadCaptureForm) {
+    if (leadEmailInput) {
+      leadEmailInput.addEventListener('invalid', () => {
+        if (leadEmailInput.validity.valueMissing) {
+          leadEmailInput.setCustomValidity('Lütfen e-posta adresinizi giriniz.');
+        } else if (leadEmailInput.validity.typeMismatch) {
+          leadEmailInput.setCustomValidity('Lütfen geçerli bir e-posta adresi giriniz.');
+        } else {
+          leadEmailInput.setCustomValidity('');
+        }
+      });
+      leadEmailInput.addEventListener('input', () => {
+        leadEmailInput.setCustomValidity('');
+      });
+    }
+
     leadCaptureForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = leadEmailInput ? leadEmailInput.value.trim() : '';

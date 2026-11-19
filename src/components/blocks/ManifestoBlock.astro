@@ -101,7 +101,7 @@ const sectionId = id || styles.sectionId || 'manifesto-human';
         )}
         {data.ctaText && String(data.ctaText).trim() !== '' && (
           <div class="pt-2">
-            <a href={data.ctaHref || '/yaklasimimiz'} class="inline-flex items-center text-paletteRichBlack hover:text-paletteDeepNavy hover:underline font-normal typo-body" style="color: var(--color-rich-black) !important;">
+            <a href={data.ctaHref || '/yaklasimimiz'} class="inline-flex items-center text-brandAccent hover:underline font-medium typo-body">
               <span set:html={formatRich(data.ctaText)}></span>
             </a>
           </div>

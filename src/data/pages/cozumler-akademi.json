@@ -8,17 +8,20 @@
     "title": "CX Folks Akademi & Kurum Kültürü Dönüşümü | CX Folks",
     "description": "Çalışan Deneyimi (EX) olmadan Müşteri Deneyimi (CX) yaşayamaz. LEGO® Serious Play®, kurumsal empati kampları ve ön hat yetkilendirme programları.",
     "schemaType": "Service",
-    "keywords": "CX Folks Akademi, çalışan deneyimi EX, LEGO Serious Play, kurum kültürü",
+    "keywords": "CX Folks Akademi, müşteri deneyimi, design thinking, kurumsal CX eğitimleri, çalışan deneyimi EX, LEGO Serious Play, kullanıcı davranışı, empati kampları, kurum kültürü dönüşümü",
     "aiSummary": "Çalışan deneyimi (EX) olmadan müşteri deneyimi yaşayamaz; LEGO Serious Play, empati kampları ve liderlik çalıştayları ile kalıcı kültür inşası.",
     "aboutTopics": [
+      "Müşteri Deneyimi Kültürü",
+      "Design Thinking Çalıştayları",
       "Çalışan Deneyimi (EX)",
       "LEGO Serious Play",
-      "Kurumsal Empati Eğitimi"
+      "Kurumsal Empati ve Ön Hat Eğitimi"
     ],
     "keyTakeaways": [
       "Ön hat ekiplerini prosedürden inisiyatife taşıma",
       "Departmanlar arası ortak CX dili"
     ],
+    "geoRegion": "TR-34, Türkiye",
     "llmsInclude": true
   },
   "status": "yayında",
