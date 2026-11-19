@@ -16,7 +16,7 @@ const solutions = Array.isArray(data.items || data.solutions) ? (data.items || d
 const sectionId = id || styles.sectionId || 'solutions-list';
 ---
 
-<section id={sectionId} class={`section-pad-150 bg-siteBg px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+<section id={sectionId} class={`pt-0 pb-20 lg:pb-[150px] bg-siteBg px-6 md:px-16 ${styles.sectionClasses}`} style={styles.inlineStyleString}>
   <div class={`${styles.containerClass} space-y-16`}>
     {solutions.map((sol: any, idx: number) => {
       const st = getSurfaceStyle(sol.style);
@@ -24,19 +24,28 @@ const sectionId = id || styles.sectionId || 'solutions-list';
       const badgeText = String(rawBadge || '').trim();
       const showBadge = Boolean(badgeText);
 
-      const defaultBtn = sol.slug === 'ai-destekli-cx' ? 'Detaylı Çözümleri İncele' : 'Detaylı Metodolojiyi İncele →';
+      const defaultBtn = sol.slug === 'ai-destekli-cx' ? 'Detaylı Çözümleri İncele →' : 'Detaylı Metodolojiyi İncele →';
       const rawBtn = sol.btnLabel !== undefined ? sol.btnLabel : defaultBtn;
       const btnText = String(rawBtn || '').trim();
       const showBtn = sol.hideBtn !== true && Boolean(btnText);
+      const rawLinkText = (data.cardCtaText || btnText || 'Çözüm Detayı').trim();
+      const formattedLinkText = rawLinkText.endsWith('→') ? rawLinkText : `${rawLinkText} →`;
 
       const bulletsFontSize = sol.bulletsSize ? formatSizePx(sol.bulletsSize) : '14px';
 
       return (
-        <div class={`grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden ${st.section}`}>
-          <div class="lg:col-span-5 min-h-[320px] bg-neutral-200 overflow-hidden">
-            <img src={sol.image} alt={sol.title} class="w-full h-full object-cover grayscale contrast-125" />
+        <div class={`grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden ${st.section} relative group cursor-pointer transition-all`}>
+          <!-- Full card clickable overlay link (both image and background) -->
+          <a href={`/cozumler/${sol.slug}`} class="absolute inset-0 z-10" aria-label={sol.title}></a>
+
+          <div class="lg:col-span-5 min-h-[320px] bg-neutral-200 overflow-hidden relative">
+            <img 
+              src={sol.image} 
+              alt={sol.title} 
+              class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" 
+            />
           </div>
-          <div class="lg:col-span-7 p-8 sm:p-12 md:p-16 flex flex-col justify-between space-y-8">
+          <div class="lg:col-span-7 p-8 sm:p-12 md:p-16 flex flex-col justify-between space-y-8 relative z-0">
             <div class="space-y-4">
               {showBadge && (
                 <span class={`typo-small font-semibold tracking-widest block ${st.eyebrow}`} style={resolveTextStyle(sol, 'badge') || undefined}>
@@ -62,22 +71,19 @@ const sectionId = id || styles.sectionId || 'solutions-list';
                 </p>
               )}
               {Array.isArray(sol.bullets) && sol.bullets.length > 0 && (
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 typo-small font-light opacity-85" style={`font-size: ${bulletsFontSize} !important;`}>
+                <div class="pt-4 space-y-2 font-light opacity-75" style={`font-size: ${bulletsFontSize} !important;`}>
                   {sol.bullets.map((b: string) => (
-                    <p style={`font-size: ${bulletsFontSize} !important;`} set:html={`• ${formatRich(b)}`}></p>
+                    <span class="block leading-relaxed font-light" style={`font-size: ${bulletsFontSize} !important; line-height: 1.5 !important;`} set:html={`• ${formatRich(b)}`} />
                   ))}
                 </div>
               )}
             </div>
 
             {showBtn && (
-              <div class="pt-4">
-                <a 
-                  href={`/cozumler/${sol.slug}`}
-                  class={`btn-rect px-8 py-3.5 font-medium ${st.btn}`}
-                >
-                  {btnText}
-                </a>
+              <div class="pt-6 relative z-20 pointer-events-none">
+                <span class="text-[16px] font-normal text-brandAccent group-hover:underline transition-colors inline-flex items-center gap-1.5">
+                  <span set:html={formatRich(formattedLinkText)}></span>
+                </span>
               </div>
             )}
           </div>

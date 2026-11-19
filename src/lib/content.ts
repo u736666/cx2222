@@ -9,6 +9,8 @@ export type BarStyleKey = 'brandAccent' | 'sandyBrown' | 'richBlack';
 export interface ThemeTypography {
   bodySizeMobile?: number;
   bodySizeDesktop?: number;
+  pWeight?: number;
+  bodyWeight?: number;
   bodyLineHeight?: number;
   leadSizeMobile?: number;
   leadSizeDesktop?: number;

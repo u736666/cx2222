@@ -63,8 +63,8 @@
           {
             "title": "Deneyim Tasarımı & Haritalandırma",
             "tagline": "Saha Gerçekliğinden Doğan Pürüzsüz Müşteri Yolculukları",
-            "style": "platinum",
-            "image": "/images/uploads/unsplash-1531403009284-.webp",
+            "style": "richBlack",
+            "image": "/images/uploads/uygulanabilir-cozumler.webp",
             "desc": "Masa başında varsayımlarla değil; müşterinin yanında, sahada yapılan derinlemesine etnografik araştırmalarla uçtan uca müşteri yolculuk haritaları (CJM) ve servis blueprint'leri tasarlıyoruz.",
             "slug": "deneyim-tasarimi",
             "bullets": [
@@ -79,8 +79,8 @@
           {
             "title": "CX Folks Akademi & Kültür Dönüşümü",
             "tagline": "Çalışan Deneyimi Olmadan Müşteri Deneyimi Yaşayamaz",
-            "style": "brandAccent",
-            "image": "/images/uploads/unsplash-1534528741775-.webp",
+            "style": "richBlack",
+            "image": "/images/uploads/cxfolks-egitimler.webp",
             "desc": "Kurum içindeki siloları kıran, C-level'dan saha ekiplerine herkesi ortak bir empati dilinde buluşturan interaktif eğitimler, executive hizalanma kampları ve LEGO® Serious Play® seansları.",
             "slug": "akademi",
             "bullets": [
@@ -95,7 +95,7 @@
           {
             "title": "CX & AI Maturity Testi",
             "tagline": "Kurumunuzun Deneyim Olgunluğunu 5 Dakikada Teşhis Edin",
-            "style": "dustGrey",
+            "style": "richBlack",
             "image": "/images/uploads/unsplash-1460925895917-.webp",
             "desc": "Organizasyonunuzun veri kullanımı, çalışan yetkilendirmesi, proaktif müdahale kabiliyeti ve yapay zeka entegrasyonu seviyesini ölçen; eksik halkaları ve ilk aksiyon adımlarını anında raporlayan interaktif teşhis sistemi.",
             "slug": "cx-maturity-testi",

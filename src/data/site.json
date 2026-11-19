@@ -74,56 +74,56 @@
           "title": "Yaklaşımımız",
           "desc": "İnsan odaklı müşteri deneyimi ve yapay zeka entegrasyonu",
           "href": "/yaklasimimiz",
-          "image": "/images/uploads/edited-edited-mwdmc5fq.webp",
+          "image": "/images/uploads/cxfolks-yaklasim.webp",
           "alt": "Yaklaşımımız"
         },
         {
           "title": "Ekibimiz",
           "desc": "Çok disiplinli CX ve yapay zeka uzman kadromuz",
           "href": "/ekibimiz",
-          "image": "/images/uploads/site-image-mwncvu8c.webp",
+          "image": "/images/uploads/ekibimiz.webp",
           "alt": "Ekibimiz"
         },
         {
           "title": "İnsan Odaklılık",
           "desc": "Müşterinin söylenmemiş ihtiyaçlarını ortaya çıkaran derin dinleme.",
           "href": "/yaklasimimiz#insan-odaklilik",
-          "image": "/images/uploads/gettyimages-2206640712-2048x2048-mwnboypg.webp",
+          "image": "/images/uploads/insan-odaklilik.webp",
           "alt": "İnsan Odaklılık"
         },
         {
           "title": "Deneyim Odaklı AI Entegrasyonu",
           "desc": "Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.",
           "href": "/yaklasimimiz#northstar-cx",
-          "image": "/images/uploads/mockupgettyimages-1371070653-612x612-topaz-upscale-2x-mwnbpo98.webp",
+          "image": "/images/uploads/deneyim-odakli-ai-entegrasyonu.webp",
           "alt": "Deneyim Odaklı AI Entegrasyonu"
         },
         {
           "title": "Northstar CX Mimarisi",
           "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
           "href": "/yaklasimimiz#proaktif-empati",
-          "image": "/images/uploads/site-image-mwncvub7.webp",
+          "image": "/images/uploads/cx-northstar.webp",
           "alt": "Northstar CX Mimarisi"
         },
         {
           "title": "Müşteri Odaklı Kültür & EX-CX",
           "desc": "Çalışan deneyimi olmadan müşteri deneyimi yaşayamaz.",
           "href": "/yaklasimimiz#kalici-kultur",
-          "image": "/images/uploads/gettyimages-1471165032-1024x1024-mwnc4h2i.webp",
+          "image": "/images/uploads/musteri-odakli.webp",
           "alt": "Müşteri Odaklı Kültür & EX-CX"
         },
         {
           "title": "Uygulanabilir Çözümler",
           "desc": "Sunumda kalan projeler kaynak israfıdır; sahada uygulanan çözümler.",
           "href": "/yaklasimimiz#uygulanabilir-cozumler",
-          "image": "/images/uploads/site-image-mwncvude.webp",
+          "image": "/images/uploads/deneyim-tasarimi.webp",
           "alt": "Uygulanabilir Çözümler"
         },
         {
           "title": "Blog",
           "desc": "Deneyim tasarımı ve yapay zeka makaleleri",
           "href": "/blog",
-          "image": "/images/uploads/ethnogram-illustrasyon-mwnbsdp9.webp",
+          "image": "/images/uploads/cxfolks-blog.webp",
           "alt": "Blog"
         }
       ]
@@ -148,21 +148,21 @@
           "title": "Deneyim Tasarımı",
           "desc": "Müşteri yolculuk haritaları, derin saha araştırmaları ve prototipleme oturumları.",
           "href": "/cozumler/deneyim-tasarimi",
-          "image": "/images/uploads/gettyimages-2187548708-2048x2048-mwnbqgbp.webp",
+          "image": "/images/uploads/uygulanabilir-cozumler.webp",
           "alt": "Deneyim Tasarımı"
         },
         {
           "title": "CX Folks Akademi",
           "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
           "href": "/cozumler/akademi",
-          "image": "/images/uploads/site-image-mwncvug2.webp",
+          "image": "/images/uploads/ethnogram-egitimler-mwne2ge1.webp",
           "alt": "CX Folks Akademi"
         },
         {
           "title": "Maturity Testi",
           "desc": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini ölçen teşhis sistemi.",
           "href": "/cozumler/cx-maturity-testi",
-          "image": "/images/uploads/site-image-mwncvui8.webp",
+          "image": "/images/uploads/cxfolks-maturity-test.webp",
           "alt": "Maturity Testi"
         }
       ]
@@ -180,28 +180,28 @@
           "title": "İstanbul Havalimanı",
           "desc": "30.000 kişilik eğitim ve 1 yılda %78 yolcu memnuniyet artışı ile küresel standart.",
           "href": "/projeler/iga-turk-misafirperverligi",
-          "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.webp",
+          "image": "/images/uploads/cxfolks-iga.webp",
           "alt": "İstanbul Havalimanı"
         },
         {
           "title": "Vodafone Roaming",
           "desc": "Seyahatte güven yaratan yeni nesil deneyim: %42 iyileşme, %60 şikayet düşüşü.",
           "href": "/projeler/vodafone-roaming",
-          "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.webp",
+          "image": "/images/uploads/cxfolks-vodafone-roaming-01.webp",
           "alt": "Vodafone Roaming"
         },
         {
           "title": "FIAT Sürücü Dostu",
           "desc": "13 yıllık ortaklık: Bayi şikayetlerinde %60 azalma ve güçlü bölgesel satış grafiği.",
           "href": "/projeler/fiat-surucu-dostu-hizmetler",
-          "image": "/images/uploads/fiat-sd-mwdpvp43.webp",
+          "image": "/images/uploads/fiat-sd.webp",
           "alt": "FIAT Sürücü Dostu"
         },
         {
           "title": "Akbank Değerli Anlar",
           "desc": "Satış değil destek odaklı proaktif empati: Hastane ödemesi sonrası geçmiş olsun araması.",
           "href": "/projeler/akbank-degerli-anlar",
-          "image": "/images/uploads/akbank-01-mwdpwe3x.webp",
+          "image": "/images/uploads/akbank-01.webp",
           "alt": "Akbank Değerli Anlar"
         }
       ]

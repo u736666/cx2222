@@ -289,6 +289,7 @@ const themeVarsCss = `:root, html {
   --cta-mesh-orb-3: rgba(255, 255, 255, 0.90);
   --cta-mesh-orb-4: rgba(238, 140, 117, 0.65);
   --fs-body: ${fluidClamp(ty.bodySizeMobile, ty.bodySizeDesktop, 15, 16)};
+  --fw-p: ${Number(ty.pWeight || ty.bodyWeight) || 300};
   --lh-body: ${bodyLineHeight};
   --fs-lead: ${fluidClamp(ty.leadSizeMobile, ty.leadSizeDesktop, 18, 20)};
   --fs-h1: ${fluidClamp(ty.h1SizeMobile, ty.h1SizeDesktop, 36, 52)};
@@ -311,6 +312,9 @@ const themeVarsCss = `:root, html {
 }
 body, p {
   font-size: var(--fs-body);
+}
+p, .typo-body {
+  font-weight: var(--fw-p, 300);
 }
 @media (max-width: 767px) {
   :root, html {

@@ -149,8 +149,9 @@ h6, .typo-h6 {
   text-wrap: pretty;
 }
 
-.typo-body {
-  font-size: var(--fs-body) !important;
+.typo-body, p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-p, 300);
   line-height: var(--lh-body);
   text-wrap: pretty;
 }

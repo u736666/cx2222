@@ -57,7 +57,7 @@
         "id": "kalici-kultur",
         "title": "Müşteri odaklı Kültür & EX-CX Köprüsü",
         "tagline": "\"Kötü bir deneyim yaşayan bir çalışanın iyi bir müşteri deneyimi sunması imkansızdır.\"",
-        "image": "/images/uploads/unsplash-1522071820081-.webp",
+        "image": "/images/uploads/ekip01.webp",
         "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) aynı madalyonun iki yüzüdür. Ekiplerinize yetki vermeden, onları bürokratik onay süreçlerinden kurtarmadan mükemmel bir müşteri deneyimi yaratamazsınız.",
         "p2": "CX Folks Akademi çatısı altında kurum içi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz.",
         "iconBg": "richBlack"
@@ -297,8 +297,8 @@
       {
         "title": "Deneyim Tasarımı & Haritalandırma",
         "tagline": "Saha Gerçekliğinden Doğan Pürüzsüz Müşteri Yolculukları",
-        "style": "platinum",
-        "image": "/images/uploads/unsplash-1531403009284-.webp",
+        "style": "richBlack",
+        "image": "/images/uploads/uygulanabilir-cozumler.webp",
         "desc": "Masa başında varsayımlarla değil; müşterinin yanında, sahada yapılan derinlemesine etnografik araştırmalarla uçtan uca müşteri yolculuk haritaları (CJM) ve servis blueprint'leri tasarlıyoruz.",
         "slug": "deneyim-tasarimi",
         "bullets": [
@@ -313,8 +313,8 @@
       {
         "title": "CX Folks Akademi & Kültür Dönüşümü",
         "tagline": "Çalışan Deneyimi Olmadan Müşteri Deneyimi Yaşayamaz",
-        "style": "brandAccent",
-        "image": "/images/uploads/unsplash-1534528741775-.webp",
+        "style": "richBlack",
+        "image": "/images/uploads/cxfolks-egitimler.webp",
         "desc": "Kurum içindeki siloları kıran, C-level'dan saha ekiplerine herkesi ortak bir empati dilinde buluşturan interaktif eğitimler, executive hizalanma kampları ve LEGO® Serious Play® seansları.",
         "slug": "akademi",
         "bullets": [
@@ -329,7 +329,7 @@
       {
         "title": "CX & AI Maturity Testi",
         "tagline": "Kurumunuzun Deneyim Olgunluğunu 5 Dakikada Teşhis Edin",
-        "style": "dustGrey",
+        "style": "richBlack",
         "image": "/images/uploads/unsplash-1460925895917-.webp",
         "desc": "Organizasyonunuzun veri kullanımı, çalışan yetkilendirmesi, proaktif müdahale kabiliyeti ve yapay zeka entegrasyonu seviyesini ölçen; eksik halkaları ve ilk aksiyon adımlarını anında raporlayan interaktif teşhis sistemi.",
         "slug": "cx-maturity-testi",
@@ -517,7 +517,7 @@
       "bigWord": "İnsan Odaklı<br> Deneyim Tasarımı",
       "title": "",
       "desc": "Müşteri deneyimini gerçekten anlamak, müşterilerin ihtiyaçlarını, beklentilerini ve günlük yaşamlarındaki deneyimlerini yakından tanımakla başlar. Müşterilerinizin bakış açısını, iş hedefleriniz ve organizasyonel önceliklerinizle bir araya getirerek hem insanlar hem de işiniz için değer yaratan deneyimleri birlikte tasarlıyoruz.",
-      "image": "/images/uploads/unsplash-1531403009284-.webp",
+      "image": "/images/uploads/uygulanabilir-cozumler.webp",
       "imageAlt": "Deneyim Tasarımı",
       "headingTag": "h1"
     },
@@ -660,7 +660,7 @@
       "eyebrow": "",
       "title": "Blog",
       "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, <br>fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. <br>Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı <br>\"blog\" kisvesi altında bir daha hatırlatıyoruz.",
-      "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.webp",
+      "bgImage": "/images/uploads/calisan-memnuniyeti.webp",
       "bgAlt": "Blog Atmosfer Görseli",
       "headingTag": "h1"
     },
@@ -755,7 +755,7 @@
       "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
-      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.webp",
+      "image": "/images/uploads/cxfolks-egitimler.webp",
       "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },
@@ -1074,7 +1074,7 @@
         "id": "ediz-pinar",
         "name": "Gökhan Kaya",
         "role": "Müşteri Deneyimi Stratejisti / Kurucu Ortak",
-        "image": "/images/uploads/unnamed-mwm0c21q.webp",
+        "image": "/images/uploads/gokhan.webp",
         "linkedin": "https://www.linkedin.com/in/kayagokhan/",
         "nameSize": "16"
       },
@@ -1082,7 +1082,7 @@
         "id": "ai-lead",
         "name": "Uğur Akay Köseoğlu",
         "role": "Ürün ve Servis Tasarımcısı / Kurucu Ortak",
-        "image": "/images/uploads/ugur-mwm145n1.webp",
+        "image": "/images/uploads/ugur.webp",
         "linkedin": "https://www.linkedin.com/in/ugurakaykoseoglu/",
         "nameSize": "16"
       },
@@ -1090,7 +1090,7 @@
         "id": "design-lead",
         "name": "Ekin Saçılık",
         "role": "Müşteri Deneyimi Danışmanı",
-        "image": "/images/uploads/ekin-mwm14adj.webp",
+        "image": "/images/uploads/ekin.webp",
         "linkedin": "https://www.linkedin.com/in/sacilikekin/",
         "nameSize": "16"
       },
@@ -1112,7 +1112,7 @@
         "id": "research-lead",
         "name": "Özgür Kurtuldu",
         "role": "Müşteri  Araştırmaları Danışmanı",
-        "image": "/images/uploads/ozgur-mwm0za4d.webp",
+        "image": "/images/uploads/ozgur.webp",
         "linkedin": "https://www.linkedin.com/in/%C3%B6zg%C3%BCr-kurtuldu-7b6986a/",
         "nameSize": "16"
       },
@@ -1157,7 +1157,7 @@
       "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
-      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.webp",
+      "image": "/images/uploads/cxfolks-egitimler.webp",
       "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },

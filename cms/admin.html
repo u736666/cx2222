@@ -3474,8 +3474,8 @@
           text: `Lead Vurgu Metni (${typ.leadSizeMobile || 17}→${lead}px): Yapay zeka çağında insan odaklı deneyim.`,
         }));
         typoPreview.appendChild(el('p', {
-          style: `font-size:${body}px;line-height:${typ.bodyLineHeight || 1.65};margin-bottom:8px;color:#313638;`,
-          text: `Gövde (Body) Metni (${typ.bodySizeMobile || 15}→${body}px, satır yüksekliği ${typ.bodyLineHeight || 1.65}): Editörlerin girdiği Türkçe büyük/küçük harf biçimi sitede birebir korunur.`,
+          style: `font-size:${body}px;font-weight:${typ.pWeight || typ.bodyWeight || 300};line-height:${typ.bodyLineHeight || 1.65};margin-bottom:8px;color:#313638;`,
+          text: `Gövde (Body / P) Metni (${typ.bodySizeMobile || 15}→${body}px, kalınlık ${typ.pWeight || typ.bodyWeight || 300}, satır yüksekliği ${typ.bodyLineHeight || 1.65}): Editörlerin girdiği Türkçe büyük/küçük harf biçimi sitede birebir korunur.`,
         }));
         typoPreview.appendChild(el('div', { style: 'display:flex;align-items:center;gap:14px;flex-wrap:wrap;' }, [
           el('span', { style: `font-size:${small}px;color:#666666;`, text: `Küçük Metin / Meta (${small}px)` }),
@@ -3534,19 +3534,22 @@
 
       const bodyBox = el('div', { className: 'repeater-item' });
       bodyBox.appendChild(el('div', { className: 'repeater-head' }, [
-        el('span', { className: 'repeater-label', text: 'Gövde Metni (Body), Vurgu (Lead), Küçük Yazı & Buton' }),
+        el('span', { className: 'repeater-label', text: 'Gövde Metni (Body / P), Vurgu (Lead), Küçük Yazı & Buton' }),
       ]));
       bodyBox.appendChild(el('div', { className: 'grid-4' }, [
         fieldNumInput('Body Mobil (px)', typ, 'bodySizeMobile', 'theme', { min: 13, max: 22, step: 1, fallback: 15, showRem: true, onChange: updateTypoPreview }),
         fieldNumInput('Body Masaüstü (px)', typ, 'bodySizeDesktop', 'theme', { min: 14, max: 24, step: 1, fallback: 16, showRem: true, onChange: updateTypoPreview }),
+        weightSelect('P / Gövde Kalınlığı (Weight)', typ, 'pWeight'),
         fieldNumInput('Body Satır Yüksekliği', typ, 'bodyLineHeight', 'theme', { min: 1.2, max: 2.2, step: 0.05, fallback: 1.65, onChange: updateTypoPreview }),
-        fieldNumInput('Başlık Harf Aralığı (em)', typ, 'headingLetterSpacing', 'theme', { min: -0.08, max: 0.12, step: 0.005, fallback: -0.02, onChange: updateTypoPreview }),
       ]));
       bodyBox.appendChild(el('div', { className: 'grid-4' }, [
         fieldNumInput('Lead Mobil (px)', typ, 'leadSizeMobile', 'theme', { min: 14, max: 28, step: 1, fallback: 17, showRem: true, onChange: updateTypoPreview }),
         fieldNumInput('Lead Masaüstü (px)', typ, 'leadSizeDesktop', 'theme', { min: 16, max: 32, step: 1, fallback: 20, showRem: true, onChange: updateTypoPreview }),
         fieldNumInput('Küçük / Meta Yazı (px)', typ, 'smallSize', 'theme', { min: 11, max: 18, step: 1, fallback: 13, showRem: true, onChange: updateTypoPreview }),
         fieldNumInput('Buton Yazısı (px)', typ, 'buttonSize', 'theme', { min: 12, max: 20, step: 1, fallback: 14, showRem: true, onChange: updateTypoPreview }),
+      ]));
+      bodyBox.appendChild(el('div', { className: 'grid-2', style: 'margin-top:10px;' }, [
+        fieldNumInput('Başlık Harf Aralığı (em)', typ, 'headingLetterSpacing', 'theme', { min: -0.08, max: 0.12, step: 0.005, fallback: -0.02, onChange: updateTypoPreview }),
       ]));
       typoCard.appendChild(bodyBox);
 
@@ -6616,6 +6619,8 @@
     const DEFAULT_TYPOGRAPHY = {
       bodySizeMobile: 15,
       bodySizeDesktop: 16,
+      pWeight: 300,
+      bodyWeight: 300,
       bodyLineHeight: 1.65,
       leadSizeMobile: 17,
       leadSizeDesktop: 20,

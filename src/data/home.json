@@ -28,7 +28,7 @@
       "desc": "İnsanı merkeze alarak deneyimi tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
       "link": "/yaklasimimiz",
       "cta": "Yaklaşımımızı İnceleyin →",
-      "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.webp",
+      "image": "/images/uploads/cxfolks-egitimler.webp",
       "alt": "Hero 1 - CX Folks",
       "titleTag": "h1"
     },
@@ -38,7 +38,7 @@
       "desc": "Dünyanın en işlek havalimanlarından birini otantik Türk misafirperverliğinin küresel vitrinine dönüştürdük.",
       "link": "/projeler/istanbul-havalimani",
       "cta": "Projeyi İnceleyin →",
-      "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.webp",
+      "image": "/images/uploads/cxfolks-iga.webp",
       "alt": "Hero 2 - İGA",
       "titleTag": "h1"
     },
@@ -48,7 +48,7 @@
       "desc": "Son dakika baş ağrısı olan bir hizmeti, yolculuk boyunca kullanıcıya eşlik eden güvenilir bir arkadaşa dönüştürdük.",
       "link": "/projeler/vodafone-roaming",
       "cta": "Projeyi İnceleyin →",
-      "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.webp",
+      "image": "/images/uploads/cxfolks-vodafone-roaming-01.webp",
       "alt": "Hero 3 - Vodafone",
       "titleTag": "h1"
     },
@@ -58,7 +58,7 @@
       "desc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
       "link": "/projeler/akbank-degerli-anlar",
       "cta": "Projeyi İnceleyin →",
-      "image": "/images/uploads/akbank-01-mwdpwe3x.webp",
+      "image": "/images/uploads/akbank-01.webp",
       "alt": "Hero 4 - Akbank",
       "titleTag": "h1"
     },
@@ -68,7 +68,7 @@
       "desc": "Müşteri yolculuğundan bayi deneyimine, onlarca araştırma ve tasarım projesi ile 13 yıllık ortaklık.",
       "link": "/projeler/fiat-surucu-dostu",
       "cta": "Projeyi İnceleyin →",
-      "image": "/images/uploads/fiat-sd-mwdpvp43.webp",
+      "image": "/images/uploads/fiat-sd.webp",
       "alt": "Hero 5 - FIAT",
       "titleTag": "h1"
     }
@@ -240,7 +240,7 @@
     }
   ],
   "whyNow": {
-    "bgImage": "/images/uploads/cxfolks-ai-mwdkp34f.webp",
+    "bgImage": "/images/uploads/cxfolks-ai.webp",
     "bgAlt": "Neden Şimdi Arka Plan",
     "title": "Yapay zeka müşteri deneyimini dönüştürüyor",
     "subtitle": "Deneyim odaklı yapay zeka ile ",
@@ -395,7 +395,7 @@
   },
   "blogSection": {
     "title": "Blog",
-    "bgImage": "/images/uploads/wix-8a49b349859dd759.webp",
+    "bgImage": "/images/uploads/blog3.webp",
     "bgAlt": "Blog Atmosfer Görseli",
     "readMoreText": "Devamını Oku →",
     "allLinkText": "Tüm Yazılar →",

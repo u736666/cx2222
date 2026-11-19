@@ -21,6 +21,8 @@
   "typography": {
     "bodySizeMobile": 15,
     "bodySizeDesktop": 16,
+    "pWeight": 300,
+    "bodyWeight": 300,
     "bodyLineHeight": 1.65,
     "leadSizeMobile": 18,
     "leadSizeDesktop": 20,

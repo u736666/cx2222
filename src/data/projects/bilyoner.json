@@ -7,11 +7,11 @@
   "shortTitle": "\"Offline\" bahisçilerin zihin dünyasına...",
   "desc": "Türkiye'nin ilk yasal online bahis platformu olan <strong>Bilyoner</strong>, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi.\n\nAncak platform, kullanıcıların yalnızca kupon yaptığı bir işlem aracı olmaktan çıkıp, <strong>topluluk ruhunu ve paylaşılan heyecanı</strong> besleyen bir deneyim ekosistemine dönüşmeyi hedefledi.",
   "listDesc": "Türkiye'nin ilk yasal online bahis platformu olan Bilyoner, kullanıcıların işlem yaptığı bir araçtan çıkıp paylaşılan heyecanı besleyen bir topluluk ekosistemine dönüştü.",
-  "image": "/images/uploads/wix-8923dc1a3d7aa1d9.webp",
+  "image": "/images/uploads/bilyoner01.webp",
   "imageAlt": "Bilyoner - \"Offline\" bahisçilerin zihin dünyasına yolculuk",
-  "image2": "/images/uploads/wix-b8aad6c9d5a103cf.webp",
+  "image2": "/images/uploads/bilyoner02.webp",
   "image2Alt": "Bilyoner Görsel 2",
-  "listStyle": "richBlack",
+  "listStyle": "platinum",
   "heroStyle": "siteBg",
   "bullets": [
     "150+ Saat Bayi Gözlemi",
@@ -23,7 +23,9 @@
     "description": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. Fakat....",
     "headline": "Bilyoner - \"Offline\" bahisçilerin zihin dünyasına yolculuk",
     "schemaDesc": "Türkiye'nin ilk yasal \"online\" bahis platformu olan Bilyoner.com, 2,5 milyondan fazla üyesiyle dijital bahis alanında açık ara liderdi. Fakat....",
-    "breadcrumbName": "Bilyoner"
+    "breadcrumbName": "Bilyoner",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -71,5 +73,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Kalabalık, gürültü, sınırlı çalışma saatleri gibi zorluklara rağmen \"offline\" kültür canlıydı. Bilyoner bu davranışı modası geçmiş bir alışkanlık olarak görmedi; aksine stratejik bir karar aldı. Amacı, \"offline\" dünyanın sunduğu ama dijitalde eksik kalan duygusal ve sosyal değerleri anlamak ve bu özü dijital deneyime taşımaktı.</p>\n\n<p>3 haftalık saha araştırmasında, ekibimiz Türkiye'nin \"offline\" bahis kültürüne doğrudan dâhil oldu. Yüksek bahis yoğunluğuna sahip maç günlerinde saha gözlemleri ve derinlemesine bağlamsal görüşmeler gerçekleştirdik.</p>\n\n<h3>Araştırmanın Öne Çıkan Bulguları</h3>\n\n<ul>\n  <li><strong>Dört Temel Oyuncu Tipi:</strong> Hafta sonu eğlencesi için bahis yapanlardan çoklu kuponlarla ciddi yatırım yapanlara kadar dört arketip belirlendi.</li>\n  <li><strong>Kolektif Deneyim:</strong> Araştırma, bireysel kazançtan çok kolektif deneyimin önemli olduğunu gösterdi; birlikte tahmin yürütmek ve duygusal paylaşımlar güven inşa ediyordu.</li>\n  <li><strong>Sosyal Ritüeller:</strong> Bayi ortamı, dijitalin sunduğu yalnız oyun yerine topluluk aidiyeti sağlıyordu.</li>\n</ul>\n\n<h3>Katılımcıların Sesinden</h3>\n\n<blockquote>\"Bayide arkadaşlarla o heyecanı paylaşıyorum. Online oynayınca yalnız hissediyorum. Kazanmak da eğlenceli olmuyor, kimse görmezse.\"<br><br>\"Kuponu elime aldığımda içim rahatlıyor. Telefonda bazen emin olamıyorum, gerçekten oynadım mı diye.\"</blockquote>",
-  "closingBoxText": "Bilyoner, \"offline\" dünyanın topluluk ruhunu ve güven ritüellerini dijitalin kolaylığıyla birleştirdi.<br><br><strong>Böylece teknoloji, kültürün yerine geçmek yerine onu güçlendiren bir köprüye dönüştü.</strong>"
+  "closingBoxText": "Bilyoner, \"offline\" dünyanın topluluk ruhunu ve güven ritüellerini dijitalin kolaylığıyla birleştirdi.<br><br><strong>Böylece teknoloji, kültürün yerine geçmek yerine onu güçlendiren bir köprüye dönüştü.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }
