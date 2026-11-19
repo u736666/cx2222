@@ -6,10 +6,10 @@
   "title": "Sürücü dostu hizmetler yaratmak",
   "shortTitle": "Sürücü dostu hizmetler yaratmak",
   "desc": "Küçük işletmeler için <strong>FIAT Doblo</strong>, yalnızca bir ticari araç değil; hafta içi iş ortağı, hafta sonu ise aile üyesi olan bir <strong>yol arkadaşıdır</strong>.\n\nFIAT'ın hedefi sadece satış yapmak değil; sürücülerin dünyasını derinlemesine anlamak ve bu özel bağı güçlendiren <strong>sürücü dostu ekosistem hizmetleri</strong> tasarlamaktı.",
-  "listDesc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler i...",
+  "listDesc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir. FIAT, ticari araç sahiplerinin zaman ve maliyet kaygılarını azaltan sürücü dostu hizmetler tasarladı.",
   "image": "https://static.wixstatic.com/media/384171_43e29e0df4ee428c93c9fff6129b156d~mv2.jpg",
   "imageAlt": "FIAT - Sürücü dostu hizmetler yaratmak",
-  "image2": "https://static.wixstatic.com/media/384171_10a64facd243493a93f223befe71aa8a~mv2.jpg",
+  "image2": "",
   "image2Alt": "FIAT Görsel 2",
   "listStyle": "richBlack",
   "heroStyle": "siteBg",
@@ -23,7 +23,9 @@
     "description": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler için FIAT Doblo, yalnızc",
     "headline": "FIAT - Sürücü dostu hizmetler yaratmak",
     "schemaDesc": "Küçük işletmeler Türkiye ekonomisinin belkemiğidir: Milyonlarca kişiye istihdam sağlar ve günlük ticaretin akışını taşır. Bu işletmeler için FIAT Doblo, yalnızca bir ticari araç değil, geçimlerini taşıyan, haftaiçi iş ortağı, hafta sonu ise aile üyesi olan bir yol arkadaşıdır. Doblo, piyasaya çıktığı günden bu yana rakipsiz fiyat–performans dengesi ve yaygın servis ağıyla küçük işletmelerin varsayılan tercihi haline geldi. Ancak FIAT'ın hedefi sadece satış değildi. Marka, sürücülerin dünyasını anlamak, bu özel bağı güçlendiren hizmetler tasarlamak ve uzun vadeli iş sadakati yaratmak istiyordu.",
-    "breadcrumbName": "FIAT"
+    "breadcrumbName": "FIAT",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -67,5 +69,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Otomotiv satış sonrası hizmetlerinde güven en kırılgan unsurdur. Garanti süresi biten araç sahipleri yetkili servislerin pahalı ve bürokratik olduğunu düşünerek hızla sanayiye yönelir. FIAT, sürücülerle olan bağını araç satışıyla sınırlamayıp tüm kullanım ömrüne yaymak istiyordu.</p>\n\n<p>8 hafta boyunca 12 yetkili servis noktasında gözlem yaptık; 60 araç sahibi ve 25 servis danışmanıyla derin görüşmeler gerçekleştirdik. Sürücülerin araçlarını servise bırakırken hissettiği belirsizlik ve endişe anlarını adım adım haritaladık.</p>\n\n<h3>Öne Çıkan Bulgular</h3>\n\n<ul>\n  <li><strong>Fiyat Belirsizliği:</strong> Sürücünün en büyük kaygısı, aracı bıraktıktan sonra çıkacak sürpriz faturalardı.</li>\n  <li><strong>Zaman Kaybı:</strong> Servis süreçlerinin ne zaman tamamlanacağının bilinmemesi gündelik hayatı kilitliyordu.</li>\n  <li><strong>Şeffaflık İhtiyacı:</strong> Değişen parçaların neden değiştiğini gözüyle görme arzusu.</li>\n</ul>",
-  "closingBoxText": "FIAT Sürücü Dostu Hizmetler, <strong>servis ilişkisini belirsizlikten çıkarıp radikal bir şeffaflık üzerine inşa etti.</strong>"
+  "closingBoxText": "FIAT Sürücü Dostu Hizmetler, <strong>servis ilişkisini belirsizlikten çıkarıp radikal bir şeffaflık üzerine inşa etti.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }

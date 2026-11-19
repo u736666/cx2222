@@ -272,7 +272,14 @@ h6, .typo-h6 {
   outline: none !important;
   box-shadow: none !important;
   background-color: var(--color-brand-accent) !important;
-  color: var(--color-rich-black) !important;
+  color: #ffffff !important;
+}
+
+#main-header .header-social-icon svg,
+#main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-social-icon svg,
+#main-header.has-active-mega .header-social-icon svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
 }
 
 #main-header .header-social-icon:hover,
@@ -281,7 +288,7 @@ h6, .typo-h6 {
   border: none !important;
   outline: none !important;
   background-color: var(--color-brand-accent-hover) !important;
-  color: var(--color-rich-black) !important;
+  color: #ffffff !important;
 }
 
 /* Tek Zeminli Master Mega Menü Wrapper (Kapanıp açılma ve patlamayı %100 önler) */
@@ -404,11 +411,26 @@ h6, .typo-h6 {
 
 .header-social-icon {
   background-color: var(--color-brand-accent) !important;
-  color: var(--color-rich-black) !important;
+  color: #ffffff !important;
   border-radius: 9999px !important;
+}
+.header-social-icon svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
 }
 .header-social-icon:hover {
   background-color: var(--color-brand-accent-hover) !important;
+  color: #ffffff !important;
+}
+.header-social-icon:hover svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+#main-header .header-contact-btn,
+#main-header .header-contact-btn span,
+#main-header .header-contact-btn * {
+  color: #ffffff !important;
 }
 
 /* Metin bağlantıları (linkler) ASLA outline veya buton çerçevesi almaz */
@@ -514,7 +536,7 @@ textarea:focus {
 .cta-mesh-gradient {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 35%, var(--cta-mesh-base-3) 70%, var(--cta-mesh-base-4) 100%);
+  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 35%, var(--cta-mesh-base-3, var(--cta-mesh-base-1)) 70%, var(--cta-mesh-base-4, var(--cta-mesh-base-2)) 100%);
   background-size: 200% 200%;
   animation: ctaMeshDrift 18s ease-in-out infinite alternate;
 }

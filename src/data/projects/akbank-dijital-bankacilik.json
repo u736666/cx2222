@@ -23,16 +23,14 @@
     "description": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her ye",
     "headline": "Akbank - Dijital bankacılıkta inovasyonu hızlandırmak",
     "schemaDesc": "15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her yeni proje için dış danışmanlara bağımlı kalmadan, tasarım odaklı düşünme yaklaşımını ekiplerine yerleştirmek ve bu yetkinliği kendi içinde üretmek istiyordu.",
-    "breadcrumbName": "Akbank"
+    "breadcrumbName": "Akbank",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
       "value": "60+",
       "label": "Eğitilen Çalışan"
-    },
-    {
-      "value": "3 Hafta",
-      "label": "Yoğun Program"
     },
     {
       "value": "%100",
@@ -63,5 +61,17 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>15 milyondan fazla müşteriye hizmet veren Akbank, güçlü dijital altyapısına rağmen müşteri odaklı inovasyonu kurum içinde kalıcı hale getirmek istiyordu. Her yeni proje için dış danışmanlara bağımlı kalmadan, tasarım odaklı düşünme yaklaşımını ekiplerine yerleştirmek ve bu yetkinliği kendi içinde üretmek istiyordu.</p>\n\n<p>Deneyimsel öğrenme tasarımıyla 3 haftalık yoğun bir akademi programı kurgulandı; dijital, pazarlama ve ürün ekiplerinden 60'tan fazla çalışan bizzat sahaya indi.</p>\n\n<h3>Eğitim ve Sahada Uygulama</h3>\n\n<ul>\n  <li><strong>Gerçek Saha Görüşmeleri:</strong> Katılımcılar varsayımsal senaryolarla değil, bankanın gerçek müşterileriyle kafelerde ve şubelerde derin mülakatlar yaptı.</li>\n  <li><strong>Persona ve Lean Canvas:</strong> Etnografik araştırma teknikleri doğrudan iş modeli geliştirme araçlarıyla birleştirildi.</li>\n</ul>\n\n<h3>Katılımcıların Sesinden</h3>\n\n<blockquote>\"Eskiden araştırma deyince aklıma sadece anket gelirdi. Bir kafede müşterilerin para alışkanlıklarını gözlemlemek ve bunu bir bankacılık ürününe dönüştürmek ufkumu tamamen açtı.\"</blockquote>",
-  "closingBoxText": "Akbank, <strong>müşteri odaklı tasarım kültürünü kurumun kendi refleksine dönüştürerek kalıcı bir çeviklik kazandı.</strong>"
+  "closingBoxText": "Akbank, <strong>müşteri odaklı tasarım kültürünü kurumun kendi refleksine dönüştürerek kalıcı bir çeviklik kazandı.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  },
+  "image3": "/images/uploads/unnamed-19-mwmuqjqb.jpg"
 }

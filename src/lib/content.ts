@@ -3,7 +3,7 @@ import siteData from '../data/site.json';
 import homeData from '../data/home.json';
 import pagesData from '../data/pages.json';
 
-export type SurfaceStyleKey = 'platinum' | 'dustGrey' | 'brandAccent' | 'richBlack' | 'siteBg';
+export type SurfaceStyleKey = 'platinum' | 'dustGrey' | 'brandAccent' | 'richBlack' | 'siteBg' | 'mesh';
 export type BarStyleKey = 'brandAccent' | 'sandyBrown' | 'richBlack';
 
 export interface ThemeTypography {
@@ -100,7 +100,18 @@ const SURFACE_STYLES: Record<SurfaceStyleKey, SurfaceStyleConfig> = {
     body: 'text-paletteRichBlack/80',
     muted: 'text-paletteRichBlack/70',
     btn: 'bg-paletteRichBlack text-white hover:bg-paletteDeepNavy',
-    textLink: 'text-paletteRichBlack hover:text-brandAccent',
+    textLink: 'text-paletteRichBlack hover:underline underline-offset-4',
+    cardTitle: 'text-paletteRichBlack',
+    cardBody: 'text-paletteRichBlack/80',
+  },
+  mesh: {
+    section: 'cta-mesh-gradient text-paletteRichBlack',
+    eyebrow: 'text-paletteRichBlack/70 font-semibold',
+    title: 'text-paletteRichBlack',
+    body: 'text-paletteRichBlack/80',
+    muted: 'text-paletteRichBlack/65',
+    btn: 'bg-paletteRichBlack text-white hover:bg-black',
+    textLink: 'text-paletteRichBlack hover:underline underline-offset-4',
     cardTitle: 'text-paletteRichBlack',
     cardBody: 'text-paletteRichBlack/80',
   },

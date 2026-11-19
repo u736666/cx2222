@@ -15,15 +15,16 @@
   "heroStyle": "siteBg",
   "bullets": [
     "3 Kuşak Kültürel Analiz",
-    "12 İl Saha Ziyareti",
-    "%90+ Marka Aidiyet Skoru"
+    "4 İl Saha Ziyareti"
   ],
   "seo": {
     "title": "FIAT / TOFAŞ | Bir TOFAŞ sahibinin yolculuğu | CX Folks",
     "description": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretil",
     "headline": "FIAT / TOFAŞ - Bir TOFAŞ sahibinin yolculuğu",
     "schemaDesc": "Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretilen ilk yerli otomobillerden biri olarak, kuşaklar boyu süren bir gurur sembolü haline geldi. TOFAŞ, müşteri yolculuğunu tanımlamak için Ethnogram'a başvurduğunda konu sadece satış ve servis adımlarını anlamak değil, bir kültürel ilişkiyi, \"miras, aidiyet ve kuşaklar arası bağı\" çözümlemekti",
-    "breadcrumbName": "FIAT / TOFAŞ"
+    "breadcrumbName": "FIAT / TOFAŞ",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -31,12 +32,8 @@
       "label": "Kültürel Analiz"
     },
     {
-      "value": "12 İl",
+      "value": "4 İl",
       "label": "Saha Ziyareti"
-    },
-    {
-      "value": "%90+",
-      "label": "Marka Aidiyet Skoru"
     },
     {
       "value": "4",
@@ -63,5 +60,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Türkiye'de otomobil sahipliği bir ulaşım aracından çok daha fazlasıdır: statü, özgürlük ve aile kimliği göstergesidir. TOFAŞ, \"Made in Turkey\" etiketiyle üretilen ilk yerli otomobillerden biri olarak kuşaklar boyu süren bir gurur sembolü haline geldi.</p>\n\n<p>TOFAŞ müşteri yolculuğunu tanımlarken konu sadece satış ve servis adımlarını anlamak değil; bir kültürel ilişkiyi, \"miras, aidiyet ve kuşaklar arası bağı\" çözümlemekti.</p>\n\n<h3>Saha Araştırması ve Kültürel Analiz</h3>\n\n<ul>\n  <li><strong>Nesiller Arası Etnografi:</strong> Üç kuşakta FIAT sahipliği incelendi. 45 araç sahibiyle derin görüşmeler, 15 aileyle günlük kullanım ve bakım gözlemleri gerçekleştirildi. FIAT'ın aile yaşam döngüsüne nasıl entegre olduğu belgelendi.</li>\n  <li><strong>Kültürel İlişki Analizi:</strong> Mülkiyet süreci boyunca yaşanan duygusal temas noktaları haritalandı: ilk satın alma heyecanı, bakım deneyimleri, aile dönüm noktaları ve araç devri anları.</li>\n  <li><strong>Kuşaklar Arası Anlam Gelişimi:</strong> FIAT markasının üç kuşak boyunca nasıl evrildiği ama özünü koruduğu analiz edildi; geçmişle bugünü birleştiren kültürel kodlar belirlendi.</li>\n</ul>\n\n<h3>Katılımcıların Sesinden</h3>\n\n<blockquote>\"Babam 1985'te ilk FIAT'ını aldığında, bu bizim ailenin en büyük yatırımıydı. Şimdi aynı modelin direksiyonundayım. O gururu hâlâ hissediyorum.\"<br><br>\"FIAT'ım hayatımın her döneminde yanımdaydı. Metal değil, anı taşıyor.\"</blockquote>",
-  "closingBoxText": "FIAT müşteri yolculuğu projesi, <strong>sürdürülebilir marka sadakatinin teknik özelliklerle değil, kültürel anlayışla inşa edildiğini kanıtladı.</strong><br><br>Bu, FIAT için geçmişle geleceği birleştiren, kültürel özgünlükten doğan bir rekabet avantajına dönüştü."
+  "closingBoxText": "FIAT müşteri yolculuğu projesi, <strong>sürdürülebilir marka sadakatinin teknik özelliklerle değil, kültürel anlayışla inşa edildiğini kanıtladı.</strong><br><br>Bu, FIAT için geçmişle geleceği birleştiren, kültürel özgünlükten doğan bir rekabet avantajına dönüştü.",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }

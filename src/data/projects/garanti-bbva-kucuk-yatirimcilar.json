@@ -6,10 +6,10 @@
   "title": "Yatırımı davranışsal gerçekliğe taşımak",
   "shortTitle": "Yatırımı davranışsal gerçekliğe taşımak",
   "desc": "Türk yatırımcılar ortalama <strong>90 gün</strong> boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, yerel yatırım psikolojisini ve <strong>kısa vadeli getiri arayışını</strong> yansıtıyor.\n\n<strong>Garanti BBVA</strong>, Paragaranti yatırım platformunu bu davranışsal gerçekliğe uygun biçimde baştan tasarlamak için yola çıktı.",
-  "listDesc": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayı...",
+  "listDesc": "Türk yatırımcılar için borsa çoğu zaman spekülatif bir heyecan olarak algılanır. Garanti BBVA için küçük yatırımcıyı bilinçlendiren rehber bir deneyim kurgulandı.",
   "image": "https://static.wixstatic.com/media/384171_836724d8c19946cdbd780e71d36b285d~mv2.jpg",
   "imageAlt": "Garanti Bankası - Yatırımı davranışsal gerçekliğe taşımak",
-  "image2": "https://static.wixstatic.com/media/55d98a_3287270d83ef4efabfdd1f52d0dc6ec2~mv2.jpg",
+  "image2": "",
   "image2Alt": "Garanti Bankası Görsel 2",
   "listStyle": "platinum",
   "heroStyle": "siteBg",
@@ -23,7 +23,9 @@
     "description": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayışını ve yerel yatırım p",
     "headline": "Garanti Bankası - Yatırımı davranışsal gerçekliğe taşımak",
     "schemaDesc": "Türk yatırımcılar ortalama 90 gün boyunca hisse tutarken, yabancı yatırımcıların ortalaması 376 gündür. Bu fark, kısa vadeli kazanç arayışını ve yerel yatırım psikolojisini yansıtıyor. Garanti Bankası, dijital liderliğini taşıdığı Paragaranti.com yatırım platformunu, bu davranışsal gerçekliğe uygun biçimde baştan tasarlamak istedi.",
-    "breadcrumbName": "Garanti Bankası"
+    "breadcrumbName": "Garanti Bankası",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -63,5 +65,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Yüksek enflasyon döneminde küçük birikimlerini korumak isteyen milyonlarca insan borsa ve yatırım araçlarına yöneldi. Ancak finansal okuryazarlığın sınırlı olması, bu kitleyi panik satışlarına, spekülatif kayıplara ve yoğun bir güven krizine açık hale getiriyordu.</p>\n\n<p>Garanti BBVA ile 6 haftalık bir kullanıcı araştırması gerçekleştirdik. İlk kez yatırım yapan 40 kullanıcıyla derinlemesine görüşmeler ve mobil arayüz kullanılabilirlik testleri yaptık.</p>\n\n<h3>Yatırımcı Korkuları ve İhtiyaçları</h3>\n\n<ul>\n  <li><strong>Kaybetme Korkusu:</strong> Karmaşık grafikler ve profesyonel terimler kullanıcıda yetersizlik hissi yaratıyordu.</li>\n  <li><strong>Sadeleşme İsteği:</strong> \"Bana sadece ne kadar kazanabileceğimi ve riskimin ne olduğunu söyle\" beklentisi.</li>\n  <li><strong>Mikro Rehberlik:</strong> Piyasa dalgalanmalarında güven veren proaktif bildirimler.</li>\n</ul>",
-  "closingBoxText": "Garanti BBVA, <strong>finansal dünyayı sadeleştirerek yatırım yapmayı herkes için erişilebilir bir alışkanlığa dönüştürdü.</strong>"
+  "closingBoxText": "Garanti BBVA, <strong>finansal dünyayı sadeleştirerek yatırım yapmayı herkes için erişilebilir bir alışkanlığa dönüştürdü.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }

@@ -96,13 +96,13 @@
           "title": "",
           "desc": ""
         },
-        "surface": "siteBg",
+        "surface": "dustGrey",
         "gridCols": "auto",
         "gridWidth": "full",
         "photoAspect": "4/5"
       },
       "style": {
-        "surface": "siteBg"
+        "surface": "dustGrey"
       }
     },
     {

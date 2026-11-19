@@ -20,8 +20,9 @@ const hasSideImage = Boolean(data.image);
 
 // Hero background resolution (Theme palette or custom hex)
 const rawBgColor = data.bgColor || data.surface || style?.bgColor || style?.surface;
-const resolvedHeroBg = resolvePaletteColor(rawBgColor);
-const isDarkHero = data.dark || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(rawBgColor || '').toLowerCase()) || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(resolvedHeroBg || '').toLowerCase());
+const isMesh = rawBgColor === 'mesh' || style?.surface === 'mesh' || data.surface === 'mesh';
+const resolvedHeroBg = isMesh ? null : resolvePaletteColor(rawBgColor);
+const isDarkHero = !isMesh && (data.dark || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(rawBgColor || '').toLowerCase()) || ['richblack', 'deepnavy', '#111', '#111111', '#000', '#000000', '#1b1c1d'].includes(String(resolvedHeroBg || '').toLowerCase()));
 const heroTextClass = isDarkHero ? 'text-white' : 'text-paletteRichBlack';
 const heroSubTextClass = isDarkHero ? 'text-white/80' : 'text-paletteRichBlack/75';
 
@@ -58,7 +59,7 @@ const hasContent = isSlider || Boolean(
     <HeroSlider />
   </section>
 ) : hasSideImage ? (
-  <section id={sectionId} class={`relative ${resolvedHeroBg ? '' : (isDarkHero ? 'bg-paletteRichBlack' : 'bg-siteBg')} ${heroTextClass} px-6 md:px-16 pt-[82px] pb-16 md:pt-[114px] md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
+  <section id={sectionId} class={`relative ${isMesh ? 'cta-mesh-gradient' : (resolvedHeroBg ? '' : (isDarkHero ? 'bg-paletteRichBlack' : 'bg-siteBg'))} ${heroTextClass} px-6 md:px-16 pt-[82px] pb-16 md:pt-[114px] md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
     {styles.hasOverlay && (
       <div class="absolute inset-0 pointer-events-none z-0" style={styles.overlayStyle}></div>
     )}
@@ -126,7 +127,7 @@ const hasContent = isSlider || Boolean(
     </div>
   </section>
 ) : (
-  <section id={sectionId} class={`relative ${resolvedHeroBg ? '' : 'bg-palettePlatinum'} ${heroTextClass} px-6 md:px-16 pt-[82px] md:pt-[114px] pb-16 md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
+  <section id={sectionId} class={`relative ${isMesh ? 'cta-mesh-gradient' : (resolvedHeroBg ? '' : 'bg-palettePlatinum')} ${heroTextClass} px-6 md:px-16 pt-[82px] md:pt-[114px] pb-16 md:pb-24 overflow-hidden ${styles.sectionClasses}`} style={heroInlineStyle || undefined}>
     {styles.hasOverlay && (
       <div class="absolute inset-0 pointer-events-none z-0" style={styles.overlayStyle}></div>
     )}

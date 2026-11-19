@@ -6,10 +6,10 @@
   "title": "Türk misafirperverliğini küresel bir standarda dönüştürmek",
   "shortTitle": "Türk misafirperverliğini küresel bir s...",
   "desc": "İstanbul Havalimanı yılda <strong>65 milyondan fazla yolcuya</strong> hizmet veren dünyanın en yoğun merkezlerinden biridir.\n\nFarklı kültürlerden gelen milyonlarca insana tekdüze bir operasyon yerine, <strong>Türk misafirperverliğini</strong> her temas noktasında hissettiren <strong>kültürel bir hizmet mimarisi</strong> tasarlandı.",
-  "listDesc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarını...",
+  "listDesc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor. Otantik Türk misafirperverliğini her temas noktasında hissettiren kültürel bir hizmet mimarisi tasarlandı.",
   "image": "https://static.wixstatic.com/media/384171_c8c37d84dac74ebca971559c74c17a76~mv2.png",
   "imageAlt": "İstanbul havalimanı - Türk misafirperverliğini küresel bir standarda dönüştürmek",
-  "image2": "https://static.wixstatic.com/media/384171_3bb98461a54e4f5ab6db5e2c0096c9db~mv2.png",
+  "image2": "/images/uploads/unnamed-1-mwmuh1au.png",
   "image2Alt": "İstanbul havalimanı Görsel 2",
   "listStyle": "richBlack",
   "heroStyle": "siteBg",
@@ -23,7 +23,9 @@
     "description": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarının aksine tek bir işletm",
     "headline": "İstanbul havalimanı - Türk misafirperverliğini küresel bir standarda dönüştürmek",
     "schemaDesc": "İstanbul Havalimanı yılda 65 milyondan fazla yolcuya hizmet veriyor ve dünyanın en yoğun merkezlerinden biri. Ancak diğer havalimanlarının aksine tek bir işletmeci tarafından değil, farklı önceliklere, standartlara ve eğitim sistemlerine sahip binlerce çalışanın bulunduğu çoklu bir ekosistem tarafından yönetiliyor.",
-    "breadcrumbName": "İstanbul havalimanı"
+    "breadcrumbName": "İstanbul havalimanı",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -75,5 +77,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Yönetim, yalnızca operasyonel verimlilik istemiyor, her temas noktasında gerçek Türk misafirperverliğini hissettiren bir yolculuk hedefliyordu.</p>\n\n<p>Sekiz haftalık saha araştırması boyunca terminalden mağazalara, güvenlik kontrolünden biniş kapılarına kadar tüm alanlarda gözlem yaptık. Yolcuları ve çalışanları adım adım izleyerek gerilimin, rahatlamanın ve samimi temasın yaşandığı anları belgeledik.</p>\n\n<p>Görüşmeler ve kültürel analizler sonucunda Türk misafirperverliğinin özünü tanımladık: <em>Yabancıyı misafir gibi görmek.</em> Bu fikir programın temel ilkesi haline geldi: <strong>\"İstanbul Havalimanı bizim evimiz, içeri giren herkes misafirimizdir.\"</strong></p>\n\n<h3>Bu ilke dört katmanda hayata geçirildi:</h3>\n\n<ul>\n  <li><strong>Kültür elçileri ağı:</strong> Bölümler arası 200 doğal lider seçilerek davranış modeli oldular.</li>\n  <li><strong>Zincir eğitim sistemi:</strong> Altı ayda 30.000 kişiye ulaşacak 350 eğitmen yetiştirildi.</li>\n  <li><strong>Yönetim katılımı:</strong> CEO ve üst yönetim sürekli destek verdi, kültürü stratejik öncelik haline getirdi.</li>\n  <li><strong>Geri bildirim platformu:</strong> İlk üç ayda 1.200'den fazla çalışan önerisi toplandı.</li>\n</ul>",
-  "closingBoxText": "İstanbul Havalimanı, <strong>kültürün çelik ve cam kadar sistematik biçimde inşa edilebileceğini kanıtladı.</strong><br><br>Misafirperverliği slogan olmaktan çıkarıp yaşayan bir düzene dönüştürerek insani bağ üzerinden sürdürülebilir rekabet avantajı yarattı."
+  "closingBoxText": "İstanbul Havalimanı, <strong>kültürün çelik ve cam kadar sistematik biçimde inşa edilebileceğini kanıtladı.</strong><br><br>Misafirperverliği slogan olmaktan çıkarıp yaşayan bir düzene dönüştürerek insani bağ üzerinden sürdürülebilir rekabet avantajı yarattı.",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }

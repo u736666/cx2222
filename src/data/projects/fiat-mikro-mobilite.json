@@ -6,7 +6,7 @@
   "title": "Mikro mobilitenin geleceğini tasarlamak",
   "shortTitle": "Mikro mobilitenin geleceğini tasarlamak",
   "desc": "Türkiye'nin büyük şehirlerinde son kilometre teslimatı kentin sinir sistemini tıkıyor. Teslimat araçları park yeri ararken arka sokaklar kilitleniyor.\n\n<strong>FIAT</strong>, şehir içi lojistiğin geleceğini şekillendirmek adına yalnızca bir araç değil, <strong>kentsel akışı rahatlatan mikro-mobilite çözümleri</strong> geliştirmek için sahaya indi.",
-  "listDesc": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde ...",
+  "listDesc": "Türkiye'nin şehir içi teslimat akışını rahatlatmak adına yalnızca bir araç değil, kentsel hareketliliği kesintisiz kılan mikro-mobilite çözümleri geliştirildi.",
   "image": "https://static.wixstatic.com/media/384171_7a85b44ebe1a453381c888bbd9da4dd6~mv2.png",
   "imageAlt": "FIAT - Mikro mobilitenin geleceğini tasarlamak",
   "image2": "https://static.wixstatic.com/media/384171_e4162b2a85204e9dac3775e531a140fc~mv2.png",
@@ -15,15 +15,16 @@
   "heroStyle": "siteBg",
   "bullets": [
     "4 Hafta Saha İncelemesi",
-    "8 Bölge Lojistik & Esnaf Rotası",
-    "3 Model Mobilite Çözüm Konsepti"
+    "8 Bölge Lojistik & Esnaf Rotası"
   ],
   "seo": {
     "title": "FIAT | Mikro mobilitenin geleceğini tasarlamak | CX Folks",
     "description": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde mallarını taşımak için ",
     "headline": "FIAT - Mikro mobilitenin geleceğini tasarlamak",
     "schemaDesc": "Türkiye'nin şehirleri artık nefes alamıyor. Teslimat araçları park yeri arıyor, arka sokaklar tıkanıyor, esnaflar hâlâ yaya bölgelerinde mallarını taşımak için hamallara güveniyor. Mobilite, sadece ulaşım değil; kentin sinir sistemidir.",
-    "breadcrumbName": "FIAT"
+    "breadcrumbName": "FIAT",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -33,14 +34,6 @@
     {
       "value": "8 Bölge",
       "label": "Lojistik & Esnaf Rotası"
-    },
-    {
-      "value": "3 Model",
-      "label": "Mobilite Çözüm Konsepti"
-    },
-    {
-      "value": "%80+",
-      "label": "Şehir İçi Verimlilik"
     }
   ],
   "challenge": {
@@ -63,5 +56,16 @@
   "visible": true,
   "selectedCtaId": "default-consulting",
   "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Şehirlerde otopark krizleri, trafik yoğunluğu ve değişen tüketici alışkanlıkları yeni bir ulaşım paradigması doğurdu: Mikro mobilite. Genç kentliler artık araç sahibi olmaktan ziyade anlık, çevik ve ekonomik şehir içi hareketliliği önceliklendiriyordu.</p>\n\n<p>İstanbul, İzmir ve Ankara'da 4 haftalık saha araştırmasında genç profesyonellerin, üniversite öğrencilerinin ve şehir içi kuryelerin gündelik hareket rotalarını inceledik.</p>\n\n<h3>Kentsel Hareketlilik Dinamikleri</h3>\n\n<ul>\n  <li><strong>Son Kilometre Sorunu:</strong> Toplu taşımadan inip nihai varış noktasına ulaşmada yaşanan zaman kayıpları.</li>\n  <li><strong>Paylaşım Ekonomisi:</strong> Sabit maliyetler yerine kullandığın kadar öde esnekliği.</li>\n  <li><strong>Sürdürülebilirlik:</strong> Sıfır emisyonlu araçlara duyulan etik sempati.</li>\n</ul>",
-  "closingBoxText": "Mikro mobilite projesi, <strong>FIAT'ı salt otomobil üreticisi kimliğinden kentsel yaşam kolaylaştırıcısına dönüştürdü.</strong>"
+  "closingBoxText": "Mikro mobilite projesi, <strong>FIAT'ı salt otomobil üreticisi kimliğinden kentsel yaşam kolaylaştırıcısına dönüştürdü.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }
