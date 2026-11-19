@@ -307,7 +307,7 @@
           "Servis Blueprint & Temas Noktası Optimizasyonu",
           "Kullanıcı Deneyimi (UX) & Hızlı Prototipleme"
         ],
-        "badge": "",
+        "badge": "Çözüm 02",
         "btnLabel": "Detaylı Metodolojiyi İncele →"
       },
       {
@@ -323,7 +323,7 @@
           "Ön Hat (Frontline) Çalışan Güçlendirme Programları",
           "EX (Employee Experience) & Kültür Teşhisi"
         ],
-        "badge": "",
+        "badge": "Çözüm 03",
         "btnLabel": "Detaylı Metodolojiyi İncele →"
       },
       {
@@ -339,7 +339,7 @@
           "Kişiselleştirilmiş İlk 3 Aksiyon Tavsiyesi",
           "Ücretsiz Strateji Değerlendirme İmkanı"
         ],
-        "badge": "",
+        "badge": "Çözüm 04",
         "btnLabel": "Detaylı Metodolojiyi İncele →"
       }
     ],
@@ -1120,7 +1120,7 @@
         "id": "analytics-lead",
         "name": "Ahmet Topçuoğlu",
         "role": "Dış Danışman – Eğitmen – Fasilitatör",
-        "image": "/images/uploads/ahmet-mwm0zfuv.webp",
+        "image": "/images/uploads/ahmet.webp",
         "linkedin": "https://www.linkedin.com/in/ahmethazimtopcuoglu/",
         "nameSize": "16"
       }
