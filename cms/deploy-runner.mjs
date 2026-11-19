@@ -143,10 +143,12 @@ export async function writeEnvLocalToken(rootDir, tokenInput) {
 export function runCommand(bin, args, options = {}) {
   return new Promise((resolve) => {
     let output = '';
-    const child = spawn(bin, args, {
+    const isWin = process.platform === 'win32';
+    const actualBin = (isWin && bin === 'npm') ? 'npm.cmd' : bin;
+    const child = spawn(actualBin, args, {
       cwd: options.cwd,
       env: { ...process.env, ...(options.env || {}) },
-      shell: false,
+      shell: isWin,
     });
 
     const append = (data) => {

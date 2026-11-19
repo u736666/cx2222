@@ -30,9 +30,10 @@
       "visible": true,
       "data": {
         "eyebrow": "",
-        "title": "Çerez Politikası (Cookie Policy)",
+        "title": "Çerez Politikası<br>(Cookie Policy)",
         "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, <br>kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek <br>amacıyla çerezlerden ('cookies') faydalanmaktayız.",
-        "headingTag": "h1"
+        "headingTag": "h1",
+        "surface": "platinum"
       },
       "style": {
         "surface": "platinum"
