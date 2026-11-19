@@ -8,7 +8,7 @@
     "defaultTitle": "cxfolks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
     "defaultDescription": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
     "orgDescription": "Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi Danışmanlığı",
-    "defaultOgImage": "/images/uploads/unsplash-1517245386807-.webp",
+    "defaultOgImage": "/images/uploads/site-defaultogimage-mwncvu4d.webp",
     "email": "",
     "officesSummary": "",
     "offices": [],
@@ -81,7 +81,7 @@
           "title": "Ekibimiz",
           "desc": "Çok disiplinli CX ve yapay zeka uzman kadromuz",
           "href": "/ekibimiz",
-          "image": "/images/uploads/unsplash-1522071820081-.webp",
+          "image": "/images/uploads/site-image-mwncvu8c.webp",
           "alt": "Ekibimiz"
         },
         {
@@ -102,7 +102,7 @@
           "title": "Northstar CX Mimarisi",
           "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
           "href": "/yaklasimimiz#proaktif-empati",
-          "image": "/images/uploads/unsplash-1531403009284-.webp",
+          "image": "/images/uploads/site-image-mwncvub7.webp",
           "alt": "Northstar CX Mimarisi"
         },
         {
@@ -116,7 +116,7 @@
           "title": "Uygulanabilir Çözümler",
           "desc": "Sunumda kalan projeler kaynak israfıdır; sahada uygulanan çözümler.",
           "href": "/yaklasimimiz#uygulanabilir-cozumler",
-          "image": "/images/uploads/unsplash-1531403009284-.webp",
+          "image": "/images/uploads/site-image-mwncvude.webp",
           "alt": "Uygulanabilir Çözümler"
         },
         {
@@ -155,54 +155,15 @@
           "title": "CX Folks Akademi",
           "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
           "href": "/cozumler/akademi",
-          "image": "/images/uploads/unsplash-1524178232363-.webp",
+          "image": "/images/uploads/site-image-mwncvug2.webp",
           "alt": "CX Folks Akademi"
         },
         {
           "title": "Maturity Testi",
           "desc": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini ölçen teşhis sistemi.",
           "href": "/cozumler/cx-maturity-testi",
-          "image": "/images/uploads/unsplash-1460925895917-.webp",
+          "image": "/images/uploads/site-image-mwncvui8.webp",
           "alt": "Maturity Testi"
-        }
-      ]
-    },
-    {
-      "id": "mega-neden",
-      "label": "Neden Şimdi Mega Menü",
-      "title": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor",
-      "desc": "Beklentiler saniyelerle ölçülüyor; reaktif destek veren şirketler yerini anında proaktif çözüm sunanlara bırakıyor",
-      "ctaText": "Dönüşümü İncele →",
-      "ctaHref": "/neden-simdi",
-      "showFooterBar": false,
-      "items": [
-        {
-          "title": "Sesi Eyleme Dök",
-          "desc": "Geri bildirimleri raporlarda bekletmek yerine anlık operasyonel hamleye çevirin.",
-          "href": "/neden-simdi#sesi-eyleme-dok",
-          "image": "/images/uploads/unsplash-1551836022-d5d.webp",
-          "alt": "Sesi Eyleme Dök"
-        },
-        {
-          "title": "Anında Onar",
-          "desc": "Yolculuktaki kırılma anlarını gerçek zamanlı tespit edip müşteri kaybını durdurun.",
-          "href": "/neden-simdi#aninda-onar",
-          "image": "/images/uploads/unsplash-1451187580459-.webp",
-          "alt": "Anında Onar"
-        },
-        {
-          "title": "Önceden Gör",
-          "desc": "Müşteri henüz şikayet etmeden stres paternlerini yakalayan proaktif empati.",
-          "href": "/neden-simdi#onceden-gor",
-          "image": "/images/uploads/unsplash-1507679799987-.webp",
-          "alt": "Önceden Gör"
-        },
-        {
-          "title": "Rutini Otomatikle",
-          "desc": "Ekiplerinizi sıkıcı tekrarlardan kurtarıp gerçek insan dokunuşuna odaklayın.",
-          "href": "/neden-simdi#rutini-otomatikle",
-          "image": "/images/uploads/unsplash-1486406146926-.webp",
-          "alt": "Rutini Otomatikle"
         }
       ]
     },
@@ -219,7 +180,7 @@
           "title": "İstanbul Havalimanı",
           "desc": "30.000 kişilik eğitim ve 1 yılda %78 yolcu memnuniyet artışı ile küresel standart.",
           "href": "/projeler/iga-turk-misafirperverligi",
-          "image": "/images/uploads/unsplash-1542296332-2e4.webp",
+          "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.webp",
           "alt": "İstanbul Havalimanı"
         },
         {
