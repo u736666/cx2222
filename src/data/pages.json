@@ -282,7 +282,7 @@
         "title": "Deneyim Odaklı AI Entegrasyonu",
         "tagline": "Müşteri Deneyimini Geliştiren, İş Sonuçlarına Katkı Sağlayan Uygulamalar",
         "style": "richBlack",
-        "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+        "image": "/images/uploads/ai-destekli-cx.webp",
         "desc": "Müşterinin sesini (VOC) çağrı kayıtlarından, anketlerden, sosyal medyadan ve web hareketlerinden anlık toplayıp analiz eden; kök nedenleri saniyeler içinde bulan ve ilgili ekiplere kapalı döngü görev atayan uçtan uca akıllı sistemler.",
         "slug": "ai-destekli-cx",
         "bullets": [
@@ -394,7 +394,7 @@
       "eyebrow": "",
       "title": "AI Destekli <br>Müşteri Deneyimi <br>Yönetimi Sistemleri",
       "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kurmanızı sağlıyoruz.",
-      "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+      "image": "/images/uploads/ai-destekli-cx.webp",
       "imageAlt": "AI Experience Concept",
       "headingTag": "h1",
       "surface": "richBlack",
@@ -660,7 +660,7 @@
       "eyebrow": "",
       "title": "Blog",
       "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, <br>fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. <br>Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı <br>\"blog\" kisvesi altında bir daha hatırlatıyoruz.",
-      "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.jpg",
+      "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.webp",
       "bgAlt": "Blog Atmosfer Görseli",
       "headingTag": "h1"
     },
@@ -755,7 +755,7 @@
       "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
-      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
+      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.webp",
       "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },
@@ -1074,7 +1074,7 @@
         "id": "ediz-pinar",
         "name": "Gökhan Kaya",
         "role": "Müşteri Deneyimi Stratejisti / Kurucu Ortak",
-        "image": "/images/uploads/unnamed-mwm0c21q.jpg",
+        "image": "/images/uploads/unnamed-mwm0c21q.webp",
         "linkedin": "https://www.linkedin.com/in/kayagokhan/",
         "nameSize": "16"
       },
@@ -1082,7 +1082,7 @@
         "id": "ai-lead",
         "name": "Uğur Akay Köseoğlu",
         "role": "Ürün ve Servis Tasarımcısı / Kurucu Ortak",
-        "image": "/images/uploads/ugur-mwm145n1.png",
+        "image": "/images/uploads/ugur-mwm145n1.webp",
         "linkedin": "https://www.linkedin.com/in/ugurakaykoseoglu/",
         "nameSize": "16"
       },
@@ -1090,7 +1090,7 @@
         "id": "design-lead",
         "name": "Ekin Saçılık",
         "role": "Müşteri Deneyimi Danışmanı",
-        "image": "/images/uploads/ekin-mwm14adj.png",
+        "image": "/images/uploads/ekin-mwm14adj.webp",
         "linkedin": "https://www.linkedin.com/in/sacilikekin/",
         "nameSize": "16"
       },
@@ -1104,7 +1104,7 @@
         "bgColor": "richBlack",
         "linkedin": "https://linkedin.com",
         "twitter": "https://twitter.com",
-        "quoteColor": "white",
+        "quoteColor": "brandAccent",
         "nameColor": "brandAccent",
         "roleColor": "brandAccent"
       },
@@ -1112,7 +1112,7 @@
         "id": "research-lead",
         "name": "Özgür Kurtuldu",
         "role": "Müşteri  Araştırmaları Danışmanı",
-        "image": "/images/uploads/ozgur-mwm0za4d.png",
+        "image": "/images/uploads/ozgur-mwm0za4d.webp",
         "linkedin": "https://www.linkedin.com/in/%C3%B6zg%C3%BCr-kurtuldu-7b6986a/",
         "nameSize": "16"
       },
@@ -1120,7 +1120,7 @@
         "id": "analytics-lead",
         "name": "Ahmet Topçuoğlu",
         "role": "Dış Danışman – Eğitmen – Fasilitatör",
-        "image": "/images/uploads/ahmet-mwm0zfuv.png",
+        "image": "/images/uploads/ahmet-mwm0zfuv.webp",
         "linkedin": "https://www.linkedin.com/in/ahmethazimtopcuoglu/",
         "nameSize": "16"
       }
@@ -1157,7 +1157,7 @@
       "desc": "Müşteri odaklı bir organizasyonun temelinde kurumunuzdaki çalışanlar vardır. AI ya da diğer teknolojik sistemlere ne kadar yatırım yapsanız da insanlar dönüşmeden deneyim dönüşmez. Kurumunuza özel şekillendirilen çalıştay ve eğitimlerle  müşteri odaklı kurumsal dönüşümü birlikte başlatıyoruz. Hazır modüllerimiz var, ama hiçbir programı kutudan çıktığı gibi sunmuyoruz. Kurumun gerçekliğine göre yeniden kurguluyoruz.",
       "ctaText": "Eğitim Talep Edin →",
       "ctaHref": "/iletisim",
-      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.png",
+      "image": "/images/uploads/sebastien-bonneval-dw15i4mkb7s-unsplash-edited-mwdpouot.webp",
       "imageAlt": "CX Folks Akademi Liderlik Portresi",
       "headingTag": "h1"
     },

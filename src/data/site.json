@@ -74,7 +74,7 @@
           "title": "Yaklaşımımız",
           "desc": "İnsan odaklı müşteri deneyimi ve yapay zeka entegrasyonu",
           "href": "/yaklasimimiz",
-          "image": "/images/uploads/edited-edited-mwdmc5fq.jpg",
+          "image": "/images/uploads/edited-edited-mwdmc5fq.webp",
           "alt": "Yaklaşımımız"
         },
         {
@@ -88,14 +88,14 @@
           "title": "İnsan Odaklılık",
           "desc": "Müşterinin söylenmemiş ihtiyaçlarını ortaya çıkaran derin dinleme.",
           "href": "/yaklasimimiz#insan-odaklilik",
-          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/gettyimages-2206640712-2048x2048-mwnboypg.webp",
           "alt": "İnsan Odaklılık"
         },
         {
           "title": "Deneyim Odaklı AI Entegrasyonu",
           "desc": "Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.",
           "href": "/yaklasimimiz#northstar-cx",
-          "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/mockupgettyimages-1371070653-612x612-topaz-upscale-2x-mwnbpo98.webp",
           "alt": "Deneyim Odaklı AI Entegrasyonu"
         },
         {
@@ -109,21 +109,21 @@
           "title": "Müşteri Odaklı Kültür & EX-CX",
           "desc": "Çalışan deneyimi olmadan müşteri deneyimi yaşayamaz.",
           "href": "/yaklasimimiz#kalici-kultur",
-          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/gettyimages-1471165032-1024x1024-mwnc4h2i.webp",
           "alt": "Müşteri Odaklı Kültür & EX-CX"
         },
         {
           "title": "Uygulanabilir Çözümler",
           "desc": "Sunumda kalan projeler kaynak israfıdır; sahada uygulanan çözümler.",
           "href": "/yaklasimimiz#uygulanabilir-cozumler",
-          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
           "alt": "Uygulanabilir Çözümler"
         },
         {
           "title": "Blog",
           "desc": "Deneyim tasarımı ve yapay zeka makaleleri",
           "href": "/blog",
-          "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80",
+          "image": "/images/uploads/ethnogram-illustrasyon-mwnbsdp9.webp",
           "alt": "Blog"
         }
       ]
@@ -141,14 +141,14 @@
           "title": "AI Destekli CX",
           "desc": "VOC kurulumu, kapalı döngü mekanizmaları, kök neden ve anlık duygu analizleri.",
           "href": "/cozumler/ai-destekli-cx",
-          "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+          "image": "/images/uploads/ai-destekli-cx.webp",
           "alt": "AI Destekli CX"
         },
         {
           "title": "Deneyim Tasarımı",
           "desc": "Müşteri yolculuk haritaları, derin saha araştırmaları ve prototipleme oturumları.",
           "href": "/cozumler/deneyim-tasarimi",
-          "image": "/images/uploads/edited-edited-mwdpsi6o.jpg",
+          "image": "/images/uploads/gettyimages-2187548708-2048x2048-mwnbqgbp.webp",
           "alt": "Deneyim Tasarımı"
         },
         {
@@ -226,21 +226,21 @@
           "title": "Vodafone Roaming",
           "desc": "Seyahatte güven yaratan yeni nesil deneyim: %42 iyileşme, %60 şikayet düşüşü.",
           "href": "/projeler/vodafone-roaming",
-          "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.png",
+          "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.webp",
           "alt": "Vodafone Roaming"
         },
         {
           "title": "FIAT Sürücü Dostu",
           "desc": "13 yıllık ortaklık: Bayi şikayetlerinde %60 azalma ve güçlü bölgesel satış grafiği.",
           "href": "/projeler/fiat-surucu-dostu-hizmetler",
-          "image": "/images/uploads/fiat-sd-mwdpvp43.jpg",
+          "image": "/images/uploads/fiat-sd-mwdpvp43.webp",
           "alt": "FIAT Sürücü Dostu"
         },
         {
           "title": "Akbank Değerli Anlar",
           "desc": "Satış değil destek odaklı proaktif empati: Hastane ödemesi sonrası geçmiş olsun araması.",
           "href": "/projeler/akbank-degerli-anlar",
-          "image": "/images/uploads/akbank-01-mwdpwe3x.png",
+          "image": "/images/uploads/akbank-01-mwdpwe3x.webp",
           "alt": "Akbank Değerli Anlar"
         }
       ]

@@ -39,7 +39,7 @@
             "desc": "İnsanı merkeze alarak deneyimi tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
             "link": "/yaklasimimiz",
             "cta": "Yaklaşımımızı İnceleyin →",
-            "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.png",
+            "image": "/images/uploads/cxfolks-egitimler-mwdkuiai.webp",
             "alt": "Hero 1 - CX Folks",
             "titleTag": "h1"
           },
@@ -49,7 +49,7 @@
             "desc": "Dünyanın en işlek havalimanlarından birini otantik Türk misafirperverliğinin küresel vitrinine dönüştürdük.",
             "link": "/projeler/istanbul-havalimani",
             "cta": "Projeyi İnceleyin →",
-            "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.png",
+            "image": "/images/uploads/cxfolks-iga-01-mwdr9lkh.webp",
             "alt": "Hero 2 - İGA",
             "titleTag": "h1"
           },
@@ -59,7 +59,7 @@
             "desc": "Son dakika baş ağrısı olan bir hizmeti, yolculuk boyunca kullanıcıya eşlik eden güvenilir bir arkadaşa dönüştürdük.",
             "link": "/projeler/vodafone-roaming",
             "cta": "Projeyi İnceleyin →",
-            "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.png",
+            "image": "/images/uploads/cxfolks-vodafone-roaming-01-mwdpv73j.webp",
             "alt": "Hero 3 - Vodafone",
             "titleTag": "h1"
           },
@@ -69,7 +69,7 @@
             "desc": "İşlem desenlerinden stres sinyallerini algılayan, satış değil destek odaklı proaktif empati sistemi.",
             "link": "/projeler/akbank-degerli-anlar",
             "cta": "Projeyi İnceleyin →",
-            "image": "/images/uploads/akbank-01-mwdpwe3x.png",
+            "image": "/images/uploads/akbank-01-mwdpwe3x.webp",
             "alt": "Hero 4 - Akbank",
             "titleTag": "h1"
           },
@@ -79,7 +79,7 @@
             "desc": "Müşteri yolculuğundan bayi deneyimine, onlarca araştırma ve tasarım projesi ile 13 yıllık ortaklık.",
             "link": "/projeler/fiat-surucu-dostu",
             "cta": "Projeyi İnceleyin →",
-            "image": "/images/uploads/fiat-sd-mwdpvp43.jpg",
+            "image": "/images/uploads/fiat-sd-mwdpvp43.webp",
             "alt": "Hero 5 - FIAT",
             "titleTag": "h1"
           }
@@ -277,7 +277,7 @@
       "type": "accordion",
       "visible": true,
       "data": {
-        "bgImage": "/images/uploads/cxfolks-ai-mwdkp34f.jpg",
+        "bgImage": "/images/uploads/cxfolks-ai-mwdkp34f.webp",
         "bgAlt": "Neden Şimdi Arka Plan",
         "title": "Yapay zeka müşteri deneyimini dönüştürüyor",
         "subtitle": "Deneyim odaklı yapay zeka ile ",
@@ -329,7 +329,7 @@
           "bottomWord": "MÜŞTERİ<br>DENEYİMİ",
           "href": "/cozumler/ai-destekli-cx",
           "desc": "",
-          "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
+          "image": "/images/uploads/ai-destekli-cx.webp",
           "imageAlt": "AI VOC Concept",
           "spinText": "• VOC • ACTION • INSIGHT • AI •",
           "scopeTitle": "",
@@ -380,7 +380,7 @@
               "href": "/cozumler/akademi"
             }
           ],
-          "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.jpg",
+          "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.webp",
           "imageAlt": "CX Folks Akademi Liderlik Portresi",
           "title": "AKADEMİ",
           "subtitle": "",
@@ -456,7 +456,7 @@
       "visible": true,
       "data": {
         "title": "Blog",
-        "bgImage": "https://static.wixstatic.com/media/384171_642452f03d4245c68a49b349859dd759~mv2.jpg",
+        "bgImage": "/images/uploads/wix-8a49b349859dd759.webp",
         "bgAlt": "Blog Atmosfer Görseli",
         "readMoreText": "Devamını Oku →",
         "allLinkText": "Tüm Yazılar →",
