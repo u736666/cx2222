@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CTASection from '../../components/CTASection.astro';
 import { getAllPosts, getSite, getSurfaceStyle, resolveTextStyle, resolveTextTag, formatRich, type BlogPostData } from '../../lib/content';
 
 export function getStaticPaths() {
@@ -182,7 +181,5 @@ const blogDescStyle = resolveTextStyle(post, 'desc');
 
     </div>
   </article>
-
-  <CTASection />
 
 </Layout>

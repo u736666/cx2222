@@ -8,21 +8,17 @@
     "title": "Deneyim Tasarımı & Yolculuk Haritaları (CJM) | CX Folks",
     "description": "Masa başında varsayımlarla değil; müşterinin yanında sahada tasarlanan pürüzsüz müşteri yolculukları (CJM), derin etnografi ve servis blueprinting.",
     "schemaType": "Service",
-    "keywords": "deneyim tasarımı, müşteri deneyimi, design thinking, müşteri yolculuk haritaları, customer journey mapping, CJM, kullanıcı davranışı, kalitatif araştırmalar, tüketici araştırmaları, saha etnografisi, servis tasarımı, service blueprint",
+    "keywords": "deneyim tasarımı, müşteri yolculuğu haritası, CJM, saha etnografisi, service blueprint",
     "aiSummary": "Saha etnografisi, gerçek müşteri gözlemleri ve hızlandırılmış prototipleme ile uçtan uca müşteri yolculukları (CJM) ve servis blueprintleri tasarlanır.",
     "aboutTopics": [
-      "Müşteri Yolculuk Haritaları (CJM)",
-      "Design Thinking ve Hizmet Tasarımı",
-      "Kullanıcı Davranışı Analizi",
-      "Kalitatif Etnografik Araştırmalar",
-      "Tüketici Araştırmaları",
+      "Müşteri Yolculuğu Tasarımı",
+      "Saha Etnografisi",
       "Service Blueprinting"
     ],
     "keyTakeaways": [
       "Varsayım yerine saha gözlemine dayalı tasarım",
       "Ölçülebilir prototipleme ve deneyim standartları"
     ],
-    "geoRegion": "TR-34, Türkiye",
     "llmsInclude": true
   },
   "status": "yayında",
@@ -150,7 +146,7 @@
     {
       "id": "cta",
       "type": "ctaBanner",
-      "visible": true,
+      "visible": false,
       "data": {
         "title": "",
         "desc": "",

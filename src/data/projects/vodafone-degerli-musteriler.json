@@ -11,7 +11,7 @@
   "imageAlt": "Vodafone - Bugünün \"değerli müşterilerini\" anlamak",
   "image2": "https://static.wixstatic.com/media/384171_71bce1bf366f47f9adfb5e523912595e~mv2.jpg",
   "image2Alt": "Vodafone Görsel 2",
-  "listStyle": "dustGrey",
+  "listStyle": "richBlack",
   "heroStyle": "siteBg",
   "bullets": [
     "5 Segment Yüksek Değerli Müşteri Tipi",
@@ -23,7 +23,9 @@
     "description": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, ",
     "headline": "Vodafone - Bugünün \"değerli müşterilerini\" anlamak",
     "schemaDesc": "Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (Yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, çevresine etki eden, uzun vadeli kârlılığı taşıyan insanları) tanımlamak istiyordu. Klasik segmentasyon modelleri harcama düzeyi ve abonelik süresi gibi ölçütlere dayanıyordu. Ancak bu göstergeler, müşterinin gerçek potansiyelini anlatmıyordu.",
-    "breadcrumbName": "Vodafone"
+    "breadcrumbName": "Vodafone",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "metrics": [
     {
@@ -45,10 +47,10 @@
   ],
   "challenge": {
     "eyebrow": "Sorular",
-    "title": "Demografi ötesinde, bugünün \"yüksek değerli\" müşterileri kim ve onları Vodafone'un doğal tercihi yapacak deneyim nedir?",
+    "title": "Demografi ötesinde, bugünün \"yüksek değerli\" müşterileri kim? Onları \"premium\" ücret ödemeye razı eden beklentiler ne? Hangi segmentler kısa vadeli gelir, hangileri uzun vadeli stratejik değer sağlıyor? Ve en önemlisi, onları Vodafone'un doğal tercihi haline getirecek hizmetler ne olabilir?",
     "body": ""
   },
-  "content": "<h2>Çözümler ve Çıktıları</h2>\n\n<ul>\n  <li><strong>Premium Müşteri Mimarisi:</strong> Yüksek yaşam boyu değere sahip kitle için proaktif müşteri temsilcisi ve kuyruk önceliği sistemi kuruldu.</li>\n  <li><strong>Yaşam Tarzı Avantajları:</strong> Havalimanı lounge erişimi, seyahat kalkanı ve öncelikli konser biletleri gibi deneyim odaklı yan haklar entegre edildi.</li>\n</ul>\n\n<h2>Sonuçlar ve Etki</h2>\n\n<ul>\n  <li><strong>Müşteri Bağlılığı:</strong> Tanımlanan segmentte yıllık terk (churn) oranı %18 azaldı; tavsiye etme skoru (NPS) 20 puan yükseldi.</li>\n</ul>",
+  "content": "<h2>Çözümler</h2>\n\n<ul>\n  <li><strong>Premium Müşteri Mimarisi:</strong> Sadece mevcut yüksek gelirli müşterileri değil, potansiyel yüksek değere sahip gelişen segmentleri de belirleyen kapsamlı bir çerçeve oluşturuldu. RED paketleri güncellendi.</li>\n  <li><strong>Tahmine Dayalı Değer Analizi:</strong> Hızlı gelir sağlayanlarla uzun vadeli stratejik değer yaratan müşteriler ayrıştırıldı.</li>\n  <li><strong>Deneyim Farklılaştırması:</strong> Concierge tarzı destek, proaktif bakım protokolleri ve yaşam temelli hizmet paketleri geliştirildi.</li>\n  <li><strong>Öngörülü Hizmet Tasarımı:</strong> Sorunlar yaşanmadan çözen sistemler kuruldu; \"bir adım önde\" marka konumu güçlendi.</li>\n</ul>\n\n<h2>Sonuçlar</h2>\n\n<ul>\n  <li><strong>Stratejik Segmentasyon:</strong> Beş farklı yüksek değerli müşteri tipi tanımlandı. Yaşam boyu değer ve kısa vadeli gelir tahmini yapan model geliştirildi. Premium hizmet geliştirme için doğrudan eylem planları oluşturuldu.</li>\n  <li><strong>Hizmet Yenilikleri:</strong> Kişisel destek programı, proaktif bakım protokolü ve yaşam tarzı paketleri tasarlandı. Bağlantıdan öte, yaşam bütünlüğü sunan deneyimler yaratıldı.</li>\n  <li><strong>Pazar Konumlanması:</strong> Vodafone fiyat yerine değer üzerinden rekabet etmeye başladı. Premium müşteri kazanım stratejisi oluşturuldu. Derin içgörüye dayalı farklılaşma sürdürülebilir hale geldi.</li>\n  <li><strong>Araştırma Mirası:</strong> \"Life Evidence Kit\" yöntemi sonraki tüm müşteri araştırmalarında standart haline geldi. Etnografik yaklaşım diğer segment çalışmalarında da referans model oldu. Kültürel içgörüler Vodafone'un strateji süreçlerine kalıcı biçimde entegre edildi.</li>\n</ul>\n\n<h2>Etkisi</h2>\n\n<p>Araştırma, premium sadakatin kampanyalarla değil, anlam ve saygıyla kazanıldığını gösterdi. Vodafone, değerli müşterilerini yalnızca gelir kaynağı değil, marka elçileri olarak görmeye başladı.</p>",
   "summaryItems": [
     {
       "title": "Sonuçlar",
@@ -74,6 +76,17 @@
   "quote": "Bu çalışma, rekabet avantajının özellik bolluğundan değil, derin anlamdan geldiğini kanıtladı. Müşterilerin yalnız kim olduklarını değil, kim olmak istediklerini de anlayarak Vodafone, insan içgörüsüne dayalı bir premium strateji kurdu. Kullanıcılar için bu, kendini özel hisseden, öngörülü hizmetler demekti. Vodafone içinse sadakati güçlendiren, geliri büyüten, markayı üst segmentte konumlandıran bir fark yarattı.",
   "visible": true,
   "selectedCtaId": "default-consulting",
-  "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Türkiye'nin fiyat odaklı telekom pazarında Vodafone, gerçekten \"değerli\" müşterileri (yalnızca yüksek harcama yapanları değil, markanın algısını şekillendiren, çevresine etki eden insanları) tanımlamak istiyordu. Klasik segmentasyon modelleri harcama düzeyi ve abonelik süresi gibi ölçütlere dayanıyordu; ancak bu göstergeler müşterinin gerçek potansiyelini anlatmıyordu.</p>\n\n<p>Sözle beyan edilen davranış yerine gerçekte yaşananı anlamak için \"Life Evidence Kit\" metodolojisini geliştirdik. Katılımcılara 30 gün boyunca yaşam günlüğü, SMS video görevleri ve harcama takip araçları verildi.</p>\n\n<h3>Müşteri Davranış Dinamikleri</h3>\n\n<ul>\n  <li><strong>Zamanın Değeri:</strong> Bu kitle için en büyük lüks, sorunlarının anında ve mazeretsiz çözülmesiydi.</li>\n  <li><strong>Ayrıcalık Algısı:</strong> İndirim değil, öncelikli erişim ve kesintisiz dijital hız arayışı.</li>\n</ul>\n\n<h3>Katılımcıların Sesinden</h3>\n\n<blockquote>\"Daha fazla ödeyebilirim ama operatörümün benden bir adım önde olmasını isterim, gerisinde değil.\"</blockquote>",
-  "closingBoxText": "Vodafone projesi, <strong>rekabet avantajının özellik bolluğundan değil, müşteriye verilen derin değerden doğduğunu kanıtladı.</strong>"
+  "approach": "<h2>Yaklaşımımız</h2>\n\n<p>Sözle beyan edilen davranış yerine gerçekte yaşananı anlamak için \"Life Evidence Kit\" metodolojisini geliştirdik.</p>\n\n<p>Katılımcılara özel araştırma setleri verildi:</p>\n\n<ul>\n  <li>Yedi günlük ayrıntılı yaşam günlüğü</li>\n  <li>Harcama fişlerini kaydeden takip sistemi</li>\n  <li>Fiziksel duygu izleme araçları</li>\n  <li>Günlük rutini görünür kılan 20 SMS ile tetiklenen video görevi</li>\n</ul>\n\n<p>30 gün süren saha programında bu kişileri iş hayatında, evlerinde, sosyal ortamlarda gözlemledik. Amaç yalnızca ne yaptıklarını değil, teknolojiyi yaşamlarının hangi anlamlı yerinde konumlandırdıklarını görmekti. Ardından Vodafone ekipleriyle üç yoğun analiz atölyesi düzenledik. Bu oturumlarda saha bulgularını müşteri arketiplerine, iş önceliklerine ve yeni hizmet fikirlerine dönüştürdük.</p>\n\n<h3>Katılımcıların Sesinden</h3>\n\n<blockquote><p>\"Daha fazla ödeyebilirim ama operatörümün benden bir adım önde olmasını isterim, gerisinde değil.\"</p></blockquote>\n\n<blockquote><p>\"Bana indirim değil, zamanımı değerli hissettiren bir hizmet verin.\"</p></blockquote>",
+  "closingBoxText": "Bu çalışma, rekabet avantajının özellik bolluğundan değil, derin anlamdan geldiğini kanıtladı. <strong>Müşterilerin yalnız kim olduklarını değil, kim olmak istediklerini de anlayarak Vodafone, insan içgörüsüne dayalı bir premium strateji kurdu.</strong>",
+  "blogShowcase": {
+    "visible": false,
+    "title": "Blog & Düşünce Liderliği",
+    "headingTag": "h2",
+    "desc": "",
+    "allLinkText": "Tüm Yazıları İnceleyin →",
+    "allLinkHref": "/blog",
+    "showAllLink": true,
+    "readMoreText": "Yazıyı Oku →",
+    "featuredSlugs": []
+  }
 }

@@ -6,8 +6,8 @@
   },
   "seo": {
     "title": "CX Folks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
-    "description": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz. Design thinking, yolculuk haritaları ve kalitatif araştırmalarla uçtan uca CX dönüşümü.",
-    "keywords": "müşteri deneyimi, müşteri deneyimi tasarımı, CX danışmanlığı, design thinking, müşteri yolculuk haritaları, customer journey mapping, kullanıcı davranışı, kalitatif araştırmalar, tüketici araştırmaları, servis tasarımı, AI destekli CX, Voice of Customer, deneyim stratejisi, CX Folks Akademi",
+    "description": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
+    "keywords": "müşteri deneyimi, CX danışmanlığı, AI destekli CX, deneyim tasarımı, Voice of Customer, CX Folks Akademi",
     "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     "schemaType": "WebPage",
     "aiSummary": "CX Folks, kurumların yapay zeka hızını insan sezgi ve empatisiyle birleştirerek ölçülebilir müşteri deneyimi (CX) dönüşümü gerçekleştiren danışmanlık ve tasarım stüdyosudur.",
@@ -17,16 +17,11 @@
       "CX Folks Akademi ve LEGO Serious Play ile kalıcı organizasyon kültürü"
     ],
     "aboutTopics": [
-      "Müşteri Deneyimi Tasarımı (CX)",
-      "Design Thinking & Hizmet Tasarımı",
-      "Müşteri Yolculuk Haritaları (Journey Mapping)",
-      "Kullanıcı Davranışı ve Kalitatif Etnografik Araştırmalar",
-      "Tüketici Araştırmaları ve İhtiyaç Analizi",
-      "AI Destekli Müşteri Deneyimi ve VOC",
-      "Kurumsal Kültür Dönüşümü ve CX Folks Akademi"
+      "Müşteri Deneyimi Tasarımı",
+      "AI Destekli Müşteri Deneyimi",
+      "Kurumsal Kültür Dönüşümü"
     ],
     "targetAudience": "C-Level Yöneticiler, CX Liderleri, Dijital Dönüşüm ve Pazarlama Ekipleri",
-    "geoRegion": "TR-34, Türkiye",
     "llmsInclude": true,
     "titleTag": "h1"
   },
@@ -447,7 +442,7 @@
         "featuredSlugs": [
           "iga-turk-misafirperverligi",
           "vodafone-roaming",
-          "akbank-degerli-anlar"
+          "fiat-surucu-dostu-hizmetler"
         ],
         "headingTag": "h2"
       },

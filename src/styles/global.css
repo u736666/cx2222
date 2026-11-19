@@ -558,50 +558,79 @@ textarea:focus-visible {
   box-shadow: none !important;
 }
 
-/* ================= TheDive Stili Ethereal Animatic Noised Mesh Gradient (Sabit CTA Renkleri: #EE8C75, #CDE1E0, #ffffff) ================= */
+/* ================= Alıntı Kartları (Quote Cards) — Koyu Zemin, Bar Yok ================= */
+blockquote, .prose blockquote, .prose-project blockquote {
+  border-left: none !important;
+  border: none !important;
+  padding: 1.5rem 2rem !important;
+  background-color: var(--color-rich-black, #23262F) !important;
+  color: #ffffff !important;
+  margin: 1.75rem 0 !important;
+  border-radius: 0 !important;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+}
+blockquote p, .prose blockquote p, .prose-project blockquote p {
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* ================= TheDive Stili Ethereal Animatic Noised Mesh Gradient (Canlı & Hızlı Akış: #EE8C75, #CDE1E0, #ffffff) ================= */
 .cta-mesh-gradient {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #CDE1E0 0%, #EE8C75 45%, #ffffff 100%);
-  background-size: 200% 200%;
-  animation: ctaMeshDrift 7s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, #CDE1E0 0%, #EE8C75 40%, #ffffff 80%, #CDE1E0 100%);
+  background-size: 240% 240%;
+  animation: ctaMeshDrift 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 }
 
 @keyframes ctaMeshDrift {
   0% {
-    background-position: 0% 15%;
+    background-position: 0% 20%;
   }
-  50% {
-    background-position: 100% 85%;
+  33% {
+    background-position: 70% 85%;
+  }
+  66% {
+    background-position: 100% 25%;
   }
   100% {
-    background-position: 0% 15%;
+    background-position: 25% 100%;
   }
 }
 
 .cta-mesh-gradient::before {
   content: '';
   position: absolute;
-  inset: -15%;
+  inset: -25%;
   background-image: 
-    radial-gradient(circle at 18% 22%, rgba(238, 140, 117, 0.75) 0%, transparent 55%),
-    radial-gradient(circle at 82% 35%, rgba(205, 225, 224, 0.85) 0%, transparent 60%),
-    radial-gradient(circle at 45% 80%, rgba(255, 255, 255, 0.90) 0%, transparent 55%),
-    radial-gradient(circle at 75% 75%, rgba(238, 140, 117, 0.65) 0%, transparent 50%);
-  filter: blur(40px);
+    radial-gradient(circle at 20% 25%, rgba(238, 140, 117, 0.85) 0%, transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(205, 225, 224, 0.95) 0%, transparent 60%),
+    radial-gradient(circle at 45% 75%, rgba(255, 255, 255, 0.95) 0%, transparent 55%),
+    radial-gradient(circle at 75% 80%, rgba(238, 140, 117, 0.75) 0%, transparent 50%),
+    radial-gradient(circle at 30% 85%, rgba(205, 225, 224, 0.85) 0%, transparent 55%);
+  filter: blur(45px);
   pointer-events: none;
-  animation: ctaOrbsFloat 6s ease-in-out infinite alternate;
+  animation: ctaOrbsFloat 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 }
 
 @keyframes ctaOrbsFloat {
   0% {
-    transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.18) translate(-6%, 5%) rotate(4deg);
   }
   50% {
-    transform: scale(1.12) translate(-5%, 4%);
+    transform: scale(0.94) translate(7%, -6%) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.22) translate(-4%, -5%) rotate(6deg);
   }
   100% {
-    transform: scale(1.02) translate(4%, -3%);
+    transform: scale(1.05) translate(5%, 4%) rotate(-2deg);
   }
 }
 

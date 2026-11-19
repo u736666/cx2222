@@ -8,20 +8,17 @@
     "title": "Yaklaşımımız & Manifestomuz | CX Folks",
     "description": "Dönüşüm bir proje değil, yaşayan bir yolculuktur. Yapay zekanın hızını insanın derin sezgisiyle birleştiren insan odaklı CX yaklaşımımız.",
     "schemaType": "AboutPage",
-    "keywords": "müşteri deneyimi, insan odaklı CX, design thinking, kalitatif araştırmalar, kullanıcı davranışı, tüketici araştırmaları, yolculuk haritaları, yapay zeka ve empati, CX Folks yaklaşımı, CX Folks Northstar",
+    "keywords": "insan odaklı CX, yapay zeka ve empati, CX Folks yaklaşımı, CX Folks Northstar",
     "aiSummary": "CX Folks, dönüşümü tek seferlik proje değil yaşayan bir yolculuk olarak ele alır; yapay zekanın hızını insan sezgi ve şefkatiyle dengeleyen 4 temel prensip üzerine çalışır.",
     "aboutTopics": [
-      "Müşteri Deneyimi Stratejisi",
-      "Design Thinking Felsefesi",
-      "Kalitatif ve Tüketici Araştırmaları",
+      "İnsan Odaklılık",
       "Yapay Zeka ve Empati Dengesi",
-      "Kurum Kültürü ve CX Northstar"
+      "Kurum Kültürü"
     ],
     "keyTakeaways": [
       "AI ve insan gücünü tek deneyim matrisinde birleştirme",
       "Departman silolarını kıran CX Folks Northstar yönetimi"
     ],
-    "geoRegion": "TR-34, Türkiye",
     "llmsInclude": true
   },
   "status": "yayında",
@@ -189,7 +186,7 @@
       "visible": true,
       "data": {
         "visible": true,
-        "selectedCtaId": "default-consulting",
+        "selectedCtaId": "maturity-test",
         "title": "",
         "desc": ""
       },

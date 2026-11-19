@@ -156,7 +156,7 @@
     ],
     "cta": {
       "visible": true,
-      "selectedCtaId": "default-consulting",
+      "selectedCtaId": "maturity-test",
       "title": "",
       "desc": ""
     }
@@ -561,7 +561,7 @@
     "cta": {
       "title": "",
       "desc": "",
-      "visible": true,
+      "visible": false,
       "selectedCtaId": "default-consulting"
     },
     "projectShowcase": {
@@ -663,7 +663,7 @@
     "readMoreText": "Devamını Oku →",
     "faqs": [],
     "cta": {
-      "visible": true,
+      "visible": false,
       "selectedCtaId": "default-consulting",
       "title": "",
       "desc": ""
@@ -800,7 +800,7 @@
       "title": "",
       "desc": "",
       "visible": true,
-      "selectedCtaId": "default-consulting"
+      "selectedCtaId": "academy-training"
     },
     "projectShowcase": {
       "visible": false,
@@ -1200,7 +1200,7 @@
       "title": "",
       "desc": "",
       "visible": true,
-      "selectedCtaId": "default-consulting"
+      "selectedCtaId": "academy-training"
     },
     "projectShowcase": {
       "visible": false,

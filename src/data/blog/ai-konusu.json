@@ -20,7 +20,9 @@
     "description": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dold",
     "headline": "AI Çağında \"İş\" Yapmak: Algoritmalar Veriyi, İnsan Bağlamı Görür",
     "schemaDesc": "Yapay zeka pazarın \"ne\" yaptığını söyleyebilir ama insanın o an \"neden\" öyle davrandığını sadece tahmin edebilir. Biz o boşluğu, gerçek insan hikâyeleriyle dolduruyoruz.",
-    "breadcrumbName": "AI çağında \"iş\" yapmak"
+    "breadcrumbName": "AI çağında \"iş\" yapmak",
+    "aboutTopics": [],
+    "keyTakeaways": []
   },
   "blocks": [
     {
@@ -63,5 +65,9 @@
       "type": "paragraph",
       "text": "Yıllardır sahanın tozunu yutan, insanların evlerine giren, market raflarının arasında gözlem yapan bir ekip olarak şundan çok eminiz: Yapay zeka işlerimizi (şimdilik) elimizden taömamen almayacak; ama \"insanı\" sürecin dışına iten veya ona sadece bir veri kaynağı olarak bakan her yapı, zamanla gerçeklikten kopacak. Bizim derdimiz AI'nın hızını kesmek değil; o hızı, insani bir sağduyuyla denetlemek. Bir modelin sunduğu öngörü, eğer bugünün kültürel kodlarıyla örtüşmüyorsa, o strateji sahada duvara çarpar. Bizim görevimiz, o teknolojik hızı sokağın gerçekliğiyle hizalamak. Sonuçta teknoloji size veriyi verir; CX Folks ise o verinin içindeki \"anlamı\" ve \"yönü\" gösterir. AI bir pusuladır ama o pusulayı okuyup hangi tepenin arkasında fırtına olduğunu sezecek olan hala insandır."
     }
-  ]
+  ],
+  "relatedLink": {
+    "label": "",
+    "href": ""
+  }
 }

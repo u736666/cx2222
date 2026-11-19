@@ -63,7 +63,7 @@
     {
       "id": "cta",
       "type": "ctaBanner",
-      "visible": true,
+      "visible": false,
       "data": {
         "visible": true,
         "selectedCtaId": "default-consulting",
