@@ -843,34 +843,143 @@ html.accessibility-high-contrast #main-header.has-active-mega .nav-trigger.activ
   color: #ffffff !important;
 }
 
-/* Logo İzolasyonu (Hero ve Hoverda Kaybolmayı Önleme) */
+/* Logo İzolasyonu (Hero, Mega Menü, Mobil Menü ve Hoverda Kaybolmayı Önleme) */
 /* 1. Metin Logo (cxfolks) */
 html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-brand,
 html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-brand *,
 html.accessibility-high-contrast #main-header.has-active-mega .header-brand,
-html.accessibility-high-contrast #main-header.has-active-mega .header-brand * {
+html.accessibility-high-contrast #main-header.has-active-mega .header-brand *,
+html.accessibility-high-contrast #main-header.mobile-menu-open .header-brand,
+html.accessibility-high-contrast #main-header.mobile-menu-open .header-brand * {
   color: #ffffff !important;
 }
-html.accessibility-high-contrast #main-header.scrolled-header .header-brand,
-html.accessibility-high-contrast #main-header.scrolled-header .header-brand *,
-html.accessibility-high-contrast #main-header.solid-subpage .header-brand,
-html.accessibility-high-contrast #main-header.solid-subpage .header-brand * {
+html.accessibility-high-contrast #main-header.scrolled-header:not(.has-active-mega):not(.mobile-menu-open) .header-brand,
+html.accessibility-high-contrast #main-header.scrolled-header:not(.has-active-mega):not(.mobile-menu-open) .header-brand *,
+html.accessibility-high-contrast #main-header.solid-subpage:not(.has-active-mega):not(.mobile-menu-open) .header-brand,
+html.accessibility-high-contrast #main-header.solid-subpage:not(.has-active-mega):not(.mobile-menu-open) .header-brand * {
   color: #000000 !important;
 }
 /* 2. Resim Logo */
 html.accessibility-high-contrast #main-header:not(.solid-subpage):not(.scrolled-header):not(.mobile-menu-open) .header-logo-img,
-html.accessibility-high-contrast #main-header.has-active-mega .header-logo-img {
+html.accessibility-high-contrast #main-header.has-active-mega .header-logo-img,
+html.accessibility-high-contrast #main-header.mobile-menu-open .header-logo-img {
   filter: brightness(0) invert(1) !important;
   opacity: 1 !important;
 }
-html.accessibility-high-contrast #main-header.scrolled-header .header-logo-img,
-html.accessibility-high-contrast #main-header.solid-subpage .header-logo-img {
+html.accessibility-high-contrast #main-header.scrolled-header:not(.has-active-mega):not(.mobile-menu-open) .header-logo-img,
+html.accessibility-high-contrast #main-header.solid-subpage:not(.has-active-mega):not(.mobile-menu-open) .header-logo-img {
   filter: brightness(0) !important;
   opacity: 1 !important;
+}
+/* 3. Footer Logo */
+html.accessibility-high-contrast footer .header-brand,
+html.accessibility-high-contrast footer .header-brand *,
+html.accessibility-high-contrast footer a[href="/"],
+html.accessibility-high-contrast footer a[href="/"] * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast footer a[href="/"] img {
+  filter: brightness(0) invert(1) !important;
 }
 html.accessibility-high-contrast a.header-brand:hover {
   opacity: 0.85 !important;
   text-decoration: none !important;
+}
+
+/* Ekibimiz Alıntı Kartı (Quote Card) & Koyu Kartlar */
+html.accessibility-high-contrast .quote-dark-card,
+html.accessibility-high-contrast [class*="quote-dark-card"] {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  --hc-border: #ffffff !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+html.accessibility-high-contrast .quote-dark-card *,
+html.accessibility-high-contrast .quote-dark-card p,
+html.accessibility-high-contrast .quote-dark-card span,
+html.accessibility-high-contrast .quote-dark-card a,
+html.accessibility-high-contrast .quote-dark-card svg {
+  --hc-text: #ffffff !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+html.accessibility-high-contrast .quote-dark-card a:hover {
+  opacity: 0.8 !important;
+}
+
+/* Yaklaşımımız İkon Çemberleri (Approach Icon Badges) */
+html.accessibility-high-contrast .approach-icon-circle {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  background-color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+html.accessibility-high-contrast .approach-icon-circle *,
+html.accessibility-high-contrast .approach-icon-circle svg,
+html.accessibility-high-contrast .approach-icon-circle svg * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Genel Koyu Renk Zemin Üzerinde Metinler Asla Siyah Kalmasın */
+html.accessibility-high-contrast .bg-paletteRichBlack:not(.bg-siteBg):not(.bg-white),
+html.accessibility-high-contrast section.bg-paletteRichBlack,
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"]:not(.bg-siteBg):not(.bg-white) {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+}
+
+/* Koyu Zemin İçindeki Açık Renk Kartlar (Örn: Blog Kartları) Her Zaman Beyaz Zemin, Siyah Metin */
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-siteBg,
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-white,
+html.accessibility-high-contrast .bg-paletteRichBlack [class*="bg-siteBg"],
+html.accessibility-high-contrast section.bg-paletteRichBlack .bg-siteBg,
+html.accessibility-high-contrast section.bg-paletteRichBlack .bg-white,
+html.accessibility-high-contrast section.bg-paletteRichBlack a.bg-siteBg {
+  --hc-bg: #ffffff !important;
+  --hc-text: #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-siteBg *,
+html.accessibility-high-contrast .bg-paletteRichBlack .bg-white *,
+html.accessibility-high-contrast .bg-paletteRichBlack [class*="bg-siteBg"] *,
+html.accessibility-high-contrast section.bg-paletteRichBlack .bg-siteBg *,
+html.accessibility-high-contrast section.bg-paletteRichBlack .bg-white *,
+html.accessibility-high-contrast section.bg-paletteRichBlack a.bg-siteBg * {
+  --hc-text: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Koyu Zemin Üzerindeki Başlıklar ve Metinler (Açık Kart İçinde Olmayanlar) */
+html.accessibility-high-contrast section.bg-paletteRichBlack h1,
+html.accessibility-high-contrast section.bg-paletteRichBlack h2,
+html.accessibility-high-contrast section.bg-paletteRichBlack > div > div > div > h2,
+html.accessibility-high-contrast section.bg-paletteRichBlack [class*="text-paletteRichBlack"]:not(.bg-siteBg *):not(.bg-white *),
+html.accessibility-high-contrast .bg-paletteRichBlack > p,
+html.accessibility-high-contrast .bg-paletteRichBlack > span,
+html.accessibility-high-contrast footer * {
+  color: #ffffff !important;
+}
+
+html.accessibility-high-contrast .bg-paletteRichBlack svg:not(#accessibility-widget svg):not(.bg-siteBg svg):not(.bg-white svg),
+html.accessibility-high-contrast section.bg-paletteRichBlack svg:not(#accessibility-widget svg):not(.bg-siteBg svg):not(.bg-white svg),
+html.accessibility-high-contrast footer svg:not(#accessibility-widget svg) {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Açık Zeminlerdeki Başlıkların Inline White Stillerini Engelle */
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) h1,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) h2,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) h4 {
+  color: #000000 !important;
 }
 
 /* Hero Kutu (Hero Card) Kontrast Modunda Siyah Zemin, Beyaz Metin */

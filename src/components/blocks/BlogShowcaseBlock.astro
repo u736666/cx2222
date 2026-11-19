@@ -19,9 +19,13 @@ const posts = (featuredSlugs && featuredSlugs.length > 0)
 
 const sectionId = id || styles.sectionId || 'blog-insights';
 const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(data, 'title');
+
+const isDark = (styles.sectionClasses && styles.sectionClasses.includes('bg-paletteRichBlack')) || style?.surface === 'richBlack';
+const baseSectionColor = isDark ? 'bg-paletteRichBlack text-white' : 'bg-palettePlatinum text-paletteRichBlack';
+const headingColorClass = isDark ? 'text-white' : 'text-paletteRichBlack';
 ---
 
-<section id={sectionId} class={`section-pad-150 relative w-full bg-palettePlatinum text-paletteRichBlack px-6 md:px-16 overflow-hidden ${styles.sectionClasses}`} style={styles.inlineStyleString}>
+<section id={sectionId} class={`section-pad-150 relative w-full px-6 md:px-16 overflow-hidden ${styles.sectionClasses || baseSectionColor}`} style={styles.inlineStyleString}>
   {data.bgImage && (
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
       <img 
@@ -42,7 +46,7 @@ const headerTitleStyle = resolveTextStyle(data, 'heading') || resolveTextStyle(d
           weight={data.headingWeight || data.titleWeight}
           size="h2" 
           text={data.title} 
-          class="text-paletteRichBlack" 
+          class={headingColorClass} 
           customStyle={headerTitleStyle}
         />
       </div>
