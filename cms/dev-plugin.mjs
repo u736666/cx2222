@@ -662,6 +662,83 @@ async function replaceImageReferencesAcrossProject(rootDir, oldUrl, newUrl) {
   return updatedFiles;
 }
 
+function isExternalImageUrl(str) {
+  if (typeof str !== 'string') return false;
+  const s = str.trim();
+  if (!s.startsWith('http://') && !s.startsWith('https://')) return false;
+  if (s.includes('images.unsplash.com') || s.includes('static.wixstatic.com')) return true;
+  return /\.(jpg|jpeg|png|webp|avif|gif)(\?.*)?$/i.test(s);
+}
+
+async function downloadAndSaveWebp(url, rootDir, hint = 'gorsel') {
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) return null;
+    const arrayBuf = await resp.arrayBuffer();
+    const buf = Buffer.from(arrayBuf);
+
+    const { default: sharp } = await import('sharp');
+    const stamp = Date.now().toString(36);
+    let base = sanitizeSlug(hint) || 'gorsel';
+    if (base === 'gorsel') {
+      try {
+        const parsed = new URL(url);
+        const pName = path.basename(parsed.pathname, path.extname(parsed.pathname));
+        base = sanitizeSlug(pName).slice(0, 24) || 'gorsel';
+      } catch {
+        base = 'gorsel';
+      }
+    }
+
+    const filename = `${base}-${stamp}.webp`;
+    const targetDir = path.join(rootDir, 'public', 'images', 'uploads');
+    await fs.mkdir(targetDir, { recursive: true });
+    await sharp(buf).webp({ quality: 85, effort: 4 }).toFile(path.join(targetDir, filename));
+    return `/images/uploads/${filename}`;
+  } catch (err) {
+    console.error('[CMS autoImport] Error downloading external image:', url, err);
+    return null;
+  }
+}
+
+async function autoImportExternalImages(obj, rootDir, hint = 'gorsel') {
+  if (!obj || typeof obj !== 'object') return false;
+  let modified = false;
+
+  async function processNode(node) {
+    if (!node || typeof node !== 'object') return;
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) {
+        if (typeof node[i] === 'string' && isExternalImageUrl(node[i])) {
+          const localUrl = await downloadAndSaveWebp(node[i], rootDir, hint);
+          if (localUrl) {
+            node[i] = localUrl;
+            modified = true;
+          }
+        } else if (node[i] && typeof node[i] === 'object') {
+          await processNode(node[i]);
+        }
+      }
+      return;
+    }
+
+    for (const [key, val] of Object.entries(node)) {
+      if (typeof val === 'string' && isExternalImageUrl(val)) {
+        const localUrl = await downloadAndSaveWebp(val, rootDir, `${hint}-${key}`);
+        if (localUrl) {
+          node[key] = localUrl;
+          modified = true;
+        }
+      } else if (val && typeof val === 'object') {
+        await processNode(val);
+      }
+    }
+  }
+
+  await processNode(obj);
+  return modified;
+}
+
 async function listMediaFiles(rootDir) {
   const imagesDir = path.join(rootDir, 'public/images');
   const files = await walkImagesDir(imagesDir);
@@ -810,6 +887,9 @@ export default function cxfolksCmsPlugin() {
               return sendJson(res, 400, { ok: false, error: 'Geçersiz veri formatı.' });
             }
 
+            // Automatically download, convert to WebP and localize any external image URLs
+            await autoImportExternalImages(data, rootDir, slug || target);
+
             if (target in SINGLETON_FILES) {
               if (target === 'pages' && data) {
                 if (data.cxFolksAkademi) {
@@ -874,6 +954,9 @@ export default function cxfolksCmsPlugin() {
               if (!data || typeof data !== 'object') {
                 return sendJson(res, 400, { ok: false, error: 'Geçersiz toplu kayıt öğesi.' });
               }
+              // Automatically localize any external images
+              await autoImportExternalImages(data, rootDir, slug || target);
+
               if (target in SINGLETON_FILES) {
                 await writeJsonFile(path.join(rootDir, SINGLETON_FILES[target]), data);
                 await syncBlockPages(rootDir, target, data);
@@ -975,17 +1058,62 @@ export default function cxfolksCmsPlugin() {
             });
           }
 
-          // POST /api/cms/media/rename -> Rename a local file under public/images/ and sync all references across project
+          // POST /api/cms/media/rename -> Rename a local or external file and sync all references across project
           if (req.method === 'POST' && urlPath === '/api/cms/media/rename') {
             const body = JSON.parse(await readBody(req));
             const { oldUrl, newName } = body || {};
 
-            if (typeof oldUrl !== 'string' || !oldUrl.startsWith('/images/')) {
-              return sendJson(res, 400, { ok: false, error: 'Yalnızca /images/ altındaki yerel dosyalar yeniden adlandırılabilir.' });
+            if (typeof oldUrl !== 'string' || !oldUrl.trim()) {
+              return sendJson(res, 400, { ok: false, error: 'Geçersiz görsel URL formatı.' });
             }
 
             if (!newName || typeof newName !== 'string' || !newName.trim()) {
               return sendJson(res, 400, { ok: false, error: 'Lütfen geçerli bir yeni dosya adı girin.' });
+            }
+
+            const isExternal = oldUrl.startsWith('http://') || oldUrl.startsWith('https://');
+
+            // Handle external image import & rename
+            if (isExternal) {
+              const rawBase = path.basename(newName, path.extname(newName));
+              const cleanBase = sanitizeSlug(rawBase) || 'gorsel';
+              const finalFilename = `${cleanBase}.webp`;
+              const targetDir = path.join(rootDir, 'public', 'images', 'uploads');
+              await fs.mkdir(targetDir, { recursive: true });
+              const newAbsPath = path.join(targetDir, finalFilename);
+
+              // Download external image buffer
+              const fetchRes = await fetch(oldUrl);
+              if (!fetchRes.ok) {
+                return sendJson(res, 400, { ok: false, error: `Harici görsel indirilemedi (${fetchRes.status}).` });
+              }
+              const arrayBuf = await fetchRes.arrayBuffer();
+              const buf = Buffer.from(arrayBuf);
+
+              // Convert to WebP using sharp and save
+              const { default: sharp } = await import('sharp');
+              await sharp(buf).webp({ quality: 85, effort: 4 }).toFile(newAbsPath);
+
+              const newUrl = `/images/uploads/${finalFilename}`;
+
+              // Replace all occurrences of oldUrl across src/
+              const updatedFiles = await replaceImageReferencesAcrossProject(rootDir, oldUrl, newUrl);
+
+              const mediaFiles = await listMediaFiles(rootDir);
+              return sendJson(res, 200, {
+                ok: true,
+                oldUrl,
+                newUrl,
+                filename: finalFilename,
+                converted: true,
+                updatedFiles,
+                uploads: mediaFiles.map((f) => f.url),
+                mediaFiles,
+              });
+            }
+
+            if (!oldUrl.startsWith('/images/')) {
+              return sendJson(res, 400, { ok: false, error: 'Yalnızca /images/ altındaki yerel dosyalar veya geçerli harici URLler adlandırılabilir.' });
             }
 
             const imagesRoot = path.resolve(rootDir, 'public', 'images');

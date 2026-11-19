@@ -32,7 +32,7 @@
           "eyebrow": "",
           "title": "Yapay zeka çağında müşteri deneyimini dönüşürken \"insanı\" odağında tutan kurumlar başarılı olacaklar.",
           "desc": "AI ile güçlendirilmiş müşteri deneyimi ve kurumsal yönetim uzmanlığımızı, yıllara dayanan insan odaklı tasarım tecrübemizle birleştirerek çağımızın ihtiyacı olan kalıcı değeri üretiyoruz.",
-          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80",
+          "image": "/images/uploads/unsplash-1517245386807-.webp",
           "imageAlt": "CX Folks Yaklaşımı",
           "headingTag": "h1"
         },
@@ -41,7 +41,7 @@
             "id": "insan-odaklilik",
             "title": "İnsan Odaklılık",
             "tagline": "\"Karmaşık problemleri çözmek ve ideal müşteri deneyiminizi  tasarlamak için insan odaklı bir yaklaşım gerekir\"",
-            "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1517245386807-.webp",
             "p1": "İş dünyası algoritmalar, modeller ve işlem hızlarından bahsediyor ancak günün sonunda satın alma kararı veren, markaya sadık kalan veya öfkeyle ayrılan varlık hala insan.",
             "p2": "CX Folks olarak çalışmalarımızı masa başında değil, müşterinin gerçek dünyasında yürütüyoruz. Etnografik görüşmeler, derin dinleme oturumları ve duygu haritalarıyla, müşterinin sözcüklerinin ardındaki söylenmemiş ihtiyaçlarını projelerimizin merkezine getiriyoruz.",
             "iconBg": "richBlack"
@@ -50,7 +50,7 @@
             "id": "northstar-cx",
             "title": "Deneyim Odaklı AI Entegrasyonu",
             "tagline": "\"Müşteriye sunulan deneyim amaç, AI bu yolda etkili bir araçtır.\" ",
-            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1552664730-d30.webp",
             "p1": "Yapay zekanın olanaklarını kullanarak deneyimi pürüzsüz ve sürdürülebilir kılarken, insanı merkeze alan ideal deneyim hayata geçirilir.",
             "p2": "Tasarlanan deneyimden başlayarak en uygun teknolojiyi kullanmanızı sağlar, kurumunuza entegrasyonunda yanınızda oluruz.",
             "iconBg": "richBlack"
@@ -59,7 +59,7 @@
             "id": "proaktif-empati",
             "title": "Northstar CX Mimarisi",
             "tagline": "\"Ortak dil ve hedefi olmayan ekipler müşteri deneyimini parçalar.\"",
-            "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1531403009284-.webp",
             "p1": "Pazarlama ekibi yeni müşteri kazanmak için vaatlerde bulunur, operasyon ekibi maliyet kısmak için seçenekleri azaltır, çağrı merkezi konuşma süresini 90 saniyenin altında tutmaya çalışır. Sonuç: Müşterinin kafası karışır ve güven sarsılır.",
             "p2": "Northstar CX modeliyle, şirketin C-level yönetiminden en ön saftaki temsilcisine kadar herkesin aynı dili konuştuğu, aynı değerleri koruduğu ve ortak başarı kriterleriyle motive olduğu bütünsel bir yönetsel mimari inşa ederiz.",
             "iconBg": "richBlack"
@@ -68,7 +68,7 @@
             "id": "kalici-kultur",
             "title": "Müşteri odaklı Kültür & EX-CX Köprüsü",
             "tagline": "\"Kötü bir deneyim yaşayan bir çalışanın iyi bir müşteri deneyimi sunması imkansızdır.\"",
-            "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1522071820081-.webp",
             "p1": "Çalışan Deneyimi (EX) ile Müşteri Deneyimi (CX) aynı madalyonun iki yüzüdür. Ekiplerinize yetki vermeden, onları bürokratik onay süreçlerinden kurtarmadan mükemmel bir müşteri deneyimi yaratamazsınız.",
             "p2": "CX Folks Akademi çatısı altında kurum içi empati kampları, interaktif atölyeler ve LEGO® Serious Play® metodolojisiyle çalışanları projenin nesnesi değil, değişimin bizzat lideri haline getiriyoruz.",
             "iconBg": "richBlack"

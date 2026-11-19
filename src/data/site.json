@@ -8,7 +8,7 @@
     "defaultTitle": "cxfolks | Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi",
     "defaultDescription": "İnsanı merkeze alarak müşteri deneyimini tasarlıyor, yapay zekayla pürüzsüz ve sürdürülebilir kılıyoruz.",
     "orgDescription": "Yapay Zeka Çağında İnsan Odaklı Müşteri Deneyimi Danışmanlığı",
-    "defaultOgImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+    "defaultOgImage": "/images/uploads/unsplash-1517245386807-.webp",
     "email": "",
     "officesSummary": "",
     "offices": [],
@@ -81,7 +81,7 @@
           "title": "Ekibimiz",
           "desc": "Çok disiplinli CX ve yapay zeka uzman kadromuz",
           "href": "/ekibimiz",
-          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+          "image": "/images/uploads/unsplash-1522071820081-.webp",
           "alt": "Ekibimiz"
         },
         {
@@ -102,7 +102,7 @@
           "title": "Northstar CX Mimarisi",
           "desc": "Tüm ekipleri tek bir müşteri deneyimi kuzey yıldızında buluşturan yönetsel mimari.",
           "href": "/yaklasimimiz#proaktif-empati",
-          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1531403009284-.webp",
           "alt": "Northstar CX Mimarisi"
         },
         {
@@ -116,7 +116,7 @@
           "title": "Uygulanabilir Çözümler",
           "desc": "Sunumda kalan projeler kaynak israfıdır; sahada uygulanan çözümler.",
           "href": "/yaklasimimiz#uygulanabilir-cozumler",
-          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+          "image": "/images/uploads/unsplash-1531403009284-.webp",
           "alt": "Uygulanabilir Çözümler"
         },
         {
@@ -155,14 +155,14 @@
           "title": "CX Folks Akademi",
           "desc": "Ekip eğitimleri, kurum içi kültür çalıştayları ve LEGO® Serious Play® seansları.",
           "href": "/cozumler/akademi",
-          "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1524178232363-.webp",
           "alt": "CX Folks Akademi"
         },
         {
           "title": "Maturity Testi",
           "desc": "Kurumunuzun müşteri odaklılık ve yapay zeka olgunluk seviyesini ölçen teşhis sistemi.",
           "href": "/cozumler/cx-maturity-testi",
-          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1460925895917-.webp",
           "alt": "Maturity Testi"
         }
       ]
@@ -180,28 +180,28 @@
           "title": "Sesi Eyleme Dök",
           "desc": "Geri bildirimleri raporlarda bekletmek yerine anlık operasyonel hamleye çevirin.",
           "href": "/neden-simdi#sesi-eyleme-dok",
-          "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1551836022-d5d.webp",
           "alt": "Sesi Eyleme Dök"
         },
         {
           "title": "Anında Onar",
           "desc": "Yolculuktaki kırılma anlarını gerçek zamanlı tespit edip müşteri kaybını durdurun.",
           "href": "/neden-simdi#aninda-onar",
-          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1451187580459-.webp",
           "alt": "Anında Onar"
         },
         {
           "title": "Önceden Gör",
           "desc": "Müşteri henüz şikayet etmeden stres paternlerini yakalayan proaktif empati.",
           "href": "/neden-simdi#onceden-gor",
-          "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1507679799987-.webp",
           "alt": "Önceden Gör"
         },
         {
           "title": "Rutini Otomatikle",
           "desc": "Ekiplerinizi sıkıcı tekrarlardan kurtarıp gerçek insan dokunuşuna odaklayın.",
           "href": "/neden-simdi#rutini-otomatikle",
-          "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1486406146926-.webp",
           "alt": "Rutini Otomatikle"
         }
       ]
@@ -219,7 +219,7 @@
           "title": "İstanbul Havalimanı",
           "desc": "30.000 kişilik eğitim ve 1 yılda %78 yolcu memnuniyet artışı ile küresel standart.",
           "href": "/projeler/iga-turk-misafirperverligi",
-          "image": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=500&q=80",
+          "image": "/images/uploads/unsplash-1542296332-2e4.webp",
           "alt": "İstanbul Havalimanı"
         },
         {

@@ -31,7 +31,7 @@
         "eyebrow": "Piyasa Gerçeği",
         "title": "Yapay zeka müşteri deneyiminin tüm kurallarını baştan yazıyor.",
         "desc": "Beklentiler artık saniyelerle ölçülüyor. Şikayet geldiğinde aksiyon alan eski nesil şirketler müşteri kaybederken; ihtiyacı önceden gören ve sürtünmeyi anında onaranlar pazarı domine ediyor.",
-        "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
+        "bgImage": "/images/uploads/unsplash-1451187580459-.webp",
         "bgAlt": "Neden Şimdi",
         "headingTag": "h1"
       },
@@ -50,7 +50,7 @@
             "number": "01",
             "title": "Sesi Eyleme Dök",
             "sub": "Raporlanan değil, yaşayan geri bildirim",
-            "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1551836022-d5d.webp",
             "problem": "Geleneksel dünyada müşteri anketleri toplanır, excel dosyalarında birikir, ay sonunda yönetime sunulur. Rapor sunulduğunda o müşteri çoktan rakibe gitmiştir.",
             "solution": "Sesin Müşterisi (VOC) yapay zeka motorumuz; gelen her olumsuz yorumu, tereddütlü puanı veya çağrı merkezindeki gergin ses tonunu anında ilgili mağaza müdürüne, ürün yöneticisine veya operasyon liderine görev kartı olarak iletir. Aksiyon süresi aylardan 15 dakikaya iner."
           },
@@ -59,7 +59,7 @@
             "number": "02",
             "title": "Anında Onar",
             "sub": "Kırılma anlarında anında kurtarma",
-            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1451187580459-.webp",
             "problem": "Müşterilerin %96'sı memnun kalmadığında şikayet formu doldurmaz; sadece ürünü veya sepeti terk eder ve bir daha geri dönmez.",
             "solution": "Kullanıcının ödeme adımındaki duraksamasını, arama çubuğundaki hüsranını veya mobil uygulamadaki hata döngüsünü milisaniyeler içinde yakalayan yapay zeka modelleriyle anında telafi mekanizması devreye sokulur."
           },
@@ -68,7 +68,7 @@
             "number": "03",
             "title": "Önceden Gör",
             "sub": "Reaktif bekleyişten proaktif empatiye",
-            "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1507679799987-.webp",
             "problem": "Müşteri hizmetleri sadece telefon çaldığında çalışmaya başlar. Oysa müşteri öfkelenene kadar pek çok mikro sinyal vermiştir.",
             "solution": "Öngörücü algoritmalar sayesinde müşterinin stres sinyalleri tespit edilir. Örneğin, seyahatinde uçuşu rötara uğrayan yolcuya havalimanına varmadan önce lounge daveti sunulur veya hastane harcaması yapan banka müşterisine satış yerine 'geçmiş olsun' desteği iletilir."
           },
@@ -77,7 +77,7 @@
             "number": "04",
             "title": "Rutini Otomatikle",
             "sub": "İnsanı robottan kurtarmak",
-            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+            "image": "/images/uploads/unsplash-1486406146926-.webp",
             "problem": "Müşteri temsilcileri mesailerinin %70'ini 'Kargom nerede?', 'Faturamı nasıl öderim?' gibi aynı 10 soruyu kopyala-yapıştır yanıtlamakla geçirir ve tükenir.",
             "solution": "Otonom yapay zeka ajanları rutin operasyonları %100 doğrulukla ve anında çözer. İnsan çalışanlar ise sadece gerçek duygusal bağ, kriz yönetimi ve yaratıcı çözüm gerektiren kritik temas anlarına odaklanır."
           }
