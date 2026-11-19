@@ -686,8 +686,8 @@ html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) {
 /* 3. Koyu Zeminli Konteynerler: Saf Siyah Zemin, Saf Beyaz Metin */
 html.accessibility-high-contrast section.bg-paletteRichBlack,
 html.accessibility-high-contrast section[class*="bg-paletteRichBlack"],
-html.accessibility-high-contrast .bg-paletteRichBlack,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"],
+html.accessibility-high-contrast .bg-paletteRichBlack:not(details):not(.faq-item),
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"]:not(details):not(.faq-item),
 html.accessibility-high-contrast .hero-card,
 html.accessibility-high-contrast .bg-neutral-900,
 html.accessibility-high-contrast .bg-black,
@@ -925,9 +925,9 @@ html.accessibility-high-contrast .approach-icon-circle svg * {
 }
 
 /* Genel Koyu Renk Zemin Üzerinde Metinler Asla Siyah Kalmasın */
-html.accessibility-high-contrast .bg-paletteRichBlack:not(.bg-siteBg):not(.bg-white),
+html.accessibility-high-contrast .bg-paletteRichBlack:not(.bg-siteBg):not(.bg-white):not(details):not(.faq-item),
 html.accessibility-high-contrast section.bg-paletteRichBlack,
-html.accessibility-high-contrast [class*="bg-paletteRichBlack"]:not(.bg-siteBg):not(.bg-white) {
+html.accessibility-high-contrast [class*="bg-paletteRichBlack"]:not(.bg-siteBg):not(.bg-white):not(details):not(.faq-item) {
   --hc-bg: #000000 !important;
   --hc-text: #ffffff !important;
 }
@@ -1076,6 +1076,240 @@ html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack .card-icon-
   background-color: #ffffff !important;
   color: #000000 !important;
   border: 1px solid #ffffff !important;
+}
+
+/* Erişilebilirlik Yüksek Kontrast: SSS / Details / Akordeon */
+html.accessibility-high-contrast details,
+html.accessibility-high-contrast details:not([open]),
+html.accessibility-high-contrast .faq-item:not([open]),
+html.accessibility-high-contrast section details:not([open]),
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) details:not([open]),
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) .faq-item:not([open]) {
+  --hc-bg: #ffffff !important;
+  --hc-text: #000000 !important;
+  --hc-border: #000000 !important;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  margin-bottom: 2px !important;
+}
+
+html.accessibility-high-contrast details:not([open]) summary,
+html.accessibility-high-contrast details:not([open]) summary *,
+html.accessibility-high-contrast details:not([open]) summary h3,
+html.accessibility-high-contrast details:not([open]) h3,
+html.accessibility-high-contrast section details:not([open]) h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) details:not([open]) h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) details:not([open]) h3,
+html.accessibility-high-contrast .faq-item:not([open]) h3,
+html.accessibility-high-contrast .faq-item:not([open]) summary h3 {
+  --hc-text: #000000 !important;
+  color: #000000 !important;
+}
+
+html.accessibility-high-contrast details:not([open]) summary span,
+html.accessibility-high-contrast section details:not([open]) summary span,
+html.accessibility-high-contrast .faq-item:not([open]) summary span {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+
+html.accessibility-high-contrast details:not([open]) summary span *,
+html.accessibility-high-contrast section details:not([open]) summary span *,
+html.accessibility-high-contrast .faq-item:not([open]) summary span * {
+  color: #ffffff !important;
+}
+
+/* SSS / Details: Açık Durum (Open State) */
+html.accessibility-high-contrast details[open],
+html.accessibility-high-contrast .faq-item[open],
+html.accessibility-high-contrast section details[open],
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) details[open],
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) .faq-item[open] {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  --hc-border: #ffffff !important;
+  background-color: #000000 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  margin-bottom: 2px !important;
+}
+
+html.accessibility-high-contrast details[open] summary,
+html.accessibility-high-contrast details[open] summary *,
+html.accessibility-high-contrast details[open] summary h3,
+html.accessibility-high-contrast details[open] h3,
+html.accessibility-high-contrast details[open] div,
+html.accessibility-high-contrast details[open] p,
+html.accessibility-high-contrast details[open] span:not(summary span),
+html.accessibility-high-contrast section details[open] h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack) details[open] h3,
+html.accessibility-high-contrast section:not(.bg-paletteRichBlack):not([class*="RichBlack"]) details[open] h3,
+html.accessibility-high-contrast .faq-item[open] h3,
+html.accessibility-high-contrast .faq-item[open] summary h3,
+html.accessibility-high-contrast .faq-item[open] div,
+html.accessibility-high-contrast .faq-item[open] p {
+  --hc-text: #ffffff !important;
+  color: #ffffff !important;
+}
+
+html.accessibility-high-contrast details[open] summary span,
+html.accessibility-high-contrast section details[open] summary span,
+html.accessibility-high-contrast .faq-item[open] summary span {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+html.accessibility-high-contrast details[open] summary span *,
+html.accessibility-high-contrast section details[open] summary span *,
+html.accessibility-high-contrast .faq-item[open] summary span * {
+  color: #000000 !important;
+}
+
+/* Erişilebilirlik Yüksek Kontrast: Sekmeler (Tabs - Yaklaşımımız vs Manifestomuz) */
+html.accessibility-high-contrast [role="tablist"] {
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast [role="tab"],
+html.accessibility-high-contrast .tab-btn-primary {
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast [role="tab"][aria-selected="true"],
+html.accessibility-high-contrast .tab-btn-primary[aria-selected="true"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast [role="tab"][aria-selected="true"] *,
+html.accessibility-high-contrast .tab-btn-primary[aria-selected="true"] * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast [role="tab"][aria-selected="false"],
+html.accessibility-high-contrast .tab-btn-primary[aria-selected="false"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast [role="tab"][aria-selected="false"] *,
+html.accessibility-high-contrast .tab-btn-primary[aria-selected="false"] * {
+  color: #000000 !important;
+}
+
+/* Erişilebilirlik Yüksek Kontrast: Test / Anket Seçenek Kartları */
+html.accessibility-high-contrast #options-list button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  margin-bottom: 2px !important;
+}
+html.accessibility-high-contrast #options-list button * {
+  color: #000000 !important;
+}
+html.accessibility-high-contrast #options-list button:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast #options-list button:hover * {
+  color: #ffffff !important;
+}
+
+/* Erişilebilirlik Yüksek Kontrast: Form Alanları Görünürlüğü (2px Siyah Çerçeve) */
+html.accessibility-high-contrast input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+html.accessibility-high-contrast select,
+html.accessibility-high-contrast textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+html.accessibility-high-contrast input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):focus,
+html.accessibility-high-contrast select:focus,
+html.accessibility-high-contrast textarea:focus,
+html.accessibility-high-contrast input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):focus-visible,
+html.accessibility-high-contrast select:focus-visible,
+html.accessibility-high-contrast textarea:focus-visible {
+  border-color: #000000 !important;
+  outline: 2px solid #000000 !important;
+  outline-offset: 2px !important;
+}
+html.accessibility-high-contrast input::placeholder,
+html.accessibility-high-contrast textarea::placeholder {
+  color: #555555 !important;
+  opacity: 1 !important;
+}
+html.accessibility-high-contrast label {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+/* Erişilebilirlik Yüksek Kontrast: CTA Banner Beyaz Zemin, Siyah Metin, Siyah Buton */
+html.accessibility-high-contrast .cta-section-wrapper {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient,
+html.accessibility-high-contrast [class*="cta-mesh-gradient"],
+html.accessibility-high-contrast .cta-card-inner,
+html.accessibility-high-contrast section[id*="cta"],
+html.accessibility-high-contrast div[data-block="ctaBanner"] {
+  --hc-bg: #ffffff !important;
+  --hc-text: #000000 !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  animation: none !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient::before,
+html.accessibility-high-contrast .cta-mesh-gradient::after,
+html.accessibility-high-contrast [class*="cta-mesh-gradient"]::before,
+html.accessibility-high-contrast [class*="cta-mesh-gradient"]::after {
+  display: none !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient *,
+html.accessibility-high-contrast [class*="cta-mesh-gradient"] *,
+html.accessibility-high-contrast .cta-card-inner *,
+html.accessibility-high-contrast section[id*="cta"] *,
+html.accessibility-high-contrast div[data-block="ctaBanner"] * {
+  --hc-text: #000000 !important;
+  color: #000000 !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient img,
+html.accessibility-high-contrast .cta-card-inner img,
+html.accessibility-high-contrast section[id*="cta"] img,
+html.accessibility-high-contrast div[data-block="ctaBanner"] img {
+  display: none !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient a,
+html.accessibility-high-contrast .cta-card-inner a,
+html.accessibility-high-contrast section[id*="cta"] a,
+html.accessibility-high-contrast div[data-block="ctaBanner"] a {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient a *,
+html.accessibility-high-contrast .cta-card-inner a *,
+html.accessibility-high-contrast section[id*="cta"] a *,
+html.accessibility-high-contrast div[data-block="ctaBanner"] a * {
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .cta-mesh-gradient a:hover,
+html.accessibility-high-contrast .cta-card-inner a:hover,
+html.accessibility-high-contrast section[id*="cta"] a:hover,
+html.accessibility-high-contrast div[data-block="ctaBanner"] a:hover {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  opacity: 0.9 !important;
 }
 
 /* SVG İkonlar: Konteynerin metin rengiyle uyumlu olsun */

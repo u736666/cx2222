@@ -169,8 +169,8 @@ const sectionPadClass = `${isPrecedingWhite ? 'pt-0' : 'pt-12 md:pt-16'} ${isFol
 ---
 
 {isVisible && (
-<section class={`w-full relative ${sectionPadClass} overflow-hidden bg-siteBg`}>
-  <div class={`w-full ${sf.card} py-16 md:py-24 px-6 md:px-16 relative overflow-hidden`} style={cardStyle || undefined}>
+<section class={`w-full relative ${sectionPadClass} overflow-hidden bg-siteBg cta-section-wrapper`}>
+  <div class={`w-full ${sf.card} py-16 md:py-24 px-6 md:px-16 relative overflow-hidden cta-card-inner`} style={cardStyle || undefined}>
     {bgImage && (
       <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
         <img 
