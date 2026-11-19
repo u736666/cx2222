@@ -66,6 +66,14 @@ export interface ThemeConfig {
   deepNavy: string;
   richBlack: string;
   cardBg: string;
+  ctaMeshBase1?: string;
+  ctaMeshBase2?: string;
+  ctaMeshBase3?: string;
+  ctaMeshBase4?: string;
+  ctaMeshOrb1?: string;
+  ctaMeshOrb2?: string;
+  ctaMeshOrb3?: string;
+  ctaMeshOrb4?: string;
   typography?: ThemeTypography;
 }
 
@@ -170,19 +178,46 @@ export function getBarClass(key?: string): string {
   return BAR_STYLES.brandAccent;
 }
 
+import fs from 'node:fs';
+import path from 'node:path';
+
 export function getTheme(): ThemeConfig {
+  try {
+    const p = path.resolve(process.cwd(), 'src/data/theme.json');
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf-8'));
+    }
+  } catch (e) {}
   return themeData as ThemeConfig;
 }
 
 export function getSite() {
+  try {
+    const p = path.resolve(process.cwd(), 'src/data/site.json');
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf-8'));
+    }
+  } catch (e) {}
   return siteData;
 }
 
 export function getHome() {
+  try {
+    const p = path.resolve(process.cwd(), 'src/data/home.json');
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf-8'));
+    }
+  } catch (e) {}
   return homeData;
 }
 
 export function getPages() {
+  try {
+    const p = path.resolve(process.cwd(), 'src/data/pages.json');
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf-8'));
+    }
+  } catch (e) {}
   return pagesData;
 }
 

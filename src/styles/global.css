@@ -397,6 +397,17 @@ h6, .typo-h6 {
   border-width: 0 !important;
   outline: none !important;
   box-shadow: none !important;
+  background-color: var(--color-rich-black) !important;
+  color: #ffffff !important;
+}
+
+#accessibility-trigger-btn svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+#accessibility-trigger-btn:hover {
+  background-color: #000000 !important;
 }
 
 #main-header a.btn-rect {
@@ -536,53 +547,56 @@ textarea:focus {
 .cta-mesh-gradient {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 35%, var(--cta-mesh-base-3, var(--cta-mesh-base-1)) 70%, var(--cta-mesh-base-4, var(--cta-mesh-base-2)) 100%);
-  background-size: 200% 200%;
-  animation: ctaMeshDrift 18s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, var(--cta-mesh-base-1) 0%, var(--cta-mesh-base-2) 40%, var(--cta-mesh-base-3, var(--cta-mesh-base-1)) 70%, var(--cta-mesh-base-4, var(--cta-mesh-base-2)) 100%);
+  background-size: 220% 220%;
+  animation: ctaMeshDrift 7s ease-in-out infinite alternate;
 }
 
 @keyframes ctaMeshDrift {
   0% {
-    background-position: 0% 40%;
+    background-position: 0% 15%;
   }
   50% {
-    background-position: 100% 60%;
+    background-position: 100% 85%;
   }
   100% {
-    background-position: 0% 40%;
+    background-position: 0% 15%;
   }
 }
 
 .cta-mesh-gradient::before {
   content: '';
   position: absolute;
-  inset: -10%;
+  inset: -15%;
   background-image: 
-    radial-gradient(circle at 18% 25%, var(--cta-mesh-orb-1) 0%, transparent 45%),
-    radial-gradient(circle at 82% 35%, var(--cta-mesh-orb-2) 0%, transparent 50%),
-    radial-gradient(circle at 45% 80%, var(--cta-mesh-orb-3) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, var(--cta-mesh-orb-4) 0%, transparent 45%);
-  filter: blur(45px);
+    radial-gradient(circle at 20% 25%, var(--cta-mesh-orb-1) 0%, transparent 55%),
+    radial-gradient(circle at 80% 35%, var(--cta-mesh-orb-2) 0%, transparent 60%),
+    radial-gradient(circle at 45% 75%, var(--cta-mesh-orb-3) 0%, transparent 55%),
+    radial-gradient(circle at 75% 75%, var(--cta-mesh-orb-4) 0%, transparent 50%);
+  filter: blur(40px);
   pointer-events: none;
-  animation: ctaOrbsFloat 14s ease-in-out infinite alternate;
+  animation: ctaOrbsFloat 6s ease-in-out infinite alternate;
 }
 
 @keyframes ctaOrbsFloat {
   0% {
     transform: scale(1) translate(0, 0);
   }
+  50% {
+    transform: scale(1.12) translate(-5%, 4%);
+  }
   100% {
-    transform: scale(1.06) translate(-2%, 2%);
+    transform: scale(1.02) translate(4%, -3%);
   }
 }
 
-/* Fine SVG Noise Texture Grain Overlay */
+/* Fine SVG Noise Texture Grain Overlay — Belirgin Doku (Artsırılmış Noise Opaklığı) */
 .cta-mesh-gradient::after {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.22;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.52;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   pointer-events: none;
   mix-blend-mode: overlay;
 }

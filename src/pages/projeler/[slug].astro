@@ -67,6 +67,13 @@ const solutionTitleStyle = resolveTextStyle(project.solution, 'title');
 
 const validMetrics = (project.metrics || []).filter((m: any) => m && (String(m.value || '').trim() || String(m.label || '').trim()));
 const hasMetrics = validMetrics.length > 0;
+const metricsGridClass = validMetrics.length === 1
+  ? 'grid grid-cols-1 max-w-sm mx-auto text-center'
+  : validMetrics.length === 2
+  ? 'grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16 w-full'
+  : validMetrics.length === 3
+  ? 'grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 w-full'
+  : 'grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full';
 const hasSummary = Boolean(project.summaryItems && project.summaryItems.length > 0);
 const hasChallenge = Boolean(project.challenge && (project.challenge.title || project.challenge.body));
 
@@ -138,9 +145,9 @@ const caseSchema = {
         </div>
         {hasMetrics && (
           <div class="w-full bg-paletteRichBlack text-white px-6 md:px-12 py-8 md:py-12">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div class={metricsGridClass}>
               {validMetrics.map((m: any) => (
-                <div>
+                <div class="w-full text-left">
                   <span class="text-3xl md:text-4xl font-light text-brandAccent block mb-1" style={resolveTextStyle(m, 'value') || undefined}>{m.value}</span>
                   <span class="typo-small tracking-wider text-white/70" style={resolveTextStyle(m, 'label') || undefined}>{m.label}</span>
                 </div>
