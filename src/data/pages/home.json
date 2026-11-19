@@ -384,7 +384,7 @@
           "image": "/images/uploads/sebastien-bonneval-53harygeltm-unsplash-edited-mwdkwcj1.jpg",
           "imageAlt": "CX Folks Akademi Liderlik Portresi",
           "title": "AKADEMİ",
-          "subtitle": "Kurum Kültürü & Yetkinlik Dönüşümü",
+          "subtitle": "",
           "secondaryBtnLabel": "Görüşelim",
           "secondaryBtnHref": "/iletisim",
           "primaryBtnLabel": "CX Folks Eğitimleri",
@@ -457,7 +457,7 @@
       "visible": true,
       "data": {
         "title": "Blog",
-        "bgImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=2000&q=80",
+        "bgImage": "https://static.wixstatic.com/media/384171_642452f03d4245c68a49b349859dd759~mv2.jpg",
         "bgAlt": "Blog Atmosfer Görseli",
         "readMoreText": "Devamını Oku →",
         "allLinkText": "Tüm Yazılar →",

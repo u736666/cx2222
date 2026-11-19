@@ -388,7 +388,7 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "AI Destekli Müşteri Deneyimi Yönetimi Sistemleri",
+      "title": "AI Destekli <br>Müşteri Deneyimi <br>Yönetimi Sistemleri",
       "desc": "Anketleri raporlarda bekletmeyin. Müşterinin sesini (VOC) çağrı kayıtlarından, metinlerden ve dijital hareketlerden anlık olarak dinleyen, kök nedeni teşhis eden ve ekibinize kapalı döngü aksiyon aldıran akıllı sistemler kurmanızı sağlıyoruz.",
       "image": "/images/uploads/cxfolks-ai-mwdkrp3t.jpg",
       "imageAlt": "AI Experience Concept",
@@ -610,7 +610,7 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "Farklı sektörlerde sahada kanıtlanmış <br>başarı hikayeleri",
+      "title": "Örnek Projeler",
       "desc": "Her vaka, veriyi ve insan sezgisini birleştiren kendine has bir metodoloji ile şekillendi <br>ve somut iş sonuçları üretti.",
       "headingTag": "h1",
       "surface": "siteBg"
@@ -654,14 +654,20 @@
     },
     "hero": {
       "eyebrow": "",
-      "title": "Blog & Deneyim Notları",
-      "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı \"blog\" kisvesi altında bir daha hatırlatıyoruz.",
+      "title": "Blog",
+      "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, <br>fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. <br>Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı <br>\"blog\" kisvesi altında bir daha hatırlatıyoruz.",
       "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.jpg",
       "bgAlt": "Blog Atmosfer Görseli",
       "headingTag": "h1"
     },
     "readMoreText": "Devamını Oku →",
-    "faqs": []
+    "faqs": [],
+    "cta": {
+      "visible": true,
+      "selectedCtaId": "default-consulting",
+      "title": "",
+      "desc": ""
+    }
   },
   "iletisim": {
     "seo": {
@@ -837,12 +843,13 @@
       "llmsInclude": true
     },
     "hero": {
-      "eyebrow": "Teşhis Sistemi",
+      "eyebrow": "",
       "title": "CX & Yapay Zeka Olgunluk Testi",
-      "desc": "Kurumunuz müşteri deneyiminde ve yapay zeka entegrasyonunda hangi seviyede? 5 kritik soruyu yanıtlayın, organizasyonunuzun seviyesini ve en büyük kör noktalarını anında görün.",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "desc": "Kurumunuz müşteri deneyiminde ve yapay zeka entegrasyonunda hangi seviyede? <br>5 kritik soruyu yanıtlayın, organizasyonunuzun seviyesini ve en büyük kör noktalarını anında görün.",
+      "image": "",
       "imageAlt": "CX Maturity Assessment",
-      "headingTag": "h1"
+      "headingTag": "h1",
+      "surface": "siteBg"
     },
     "questions": [
       {
@@ -1022,6 +1029,23 @@
       "allLinkText": "Tüm Projeleri İnceleyin →",
       "allLinkHref": "/projeler",
       "featuredSlugs": []
+    },
+    "blogShowcase": {
+      "visible": false,
+      "title": "Blog & Düşünce Liderliği",
+      "headingTag": "h2",
+      "desc": "",
+      "allLinkText": "Tüm Yazıları İnceleyin →",
+      "allLinkHref": "/blog",
+      "showAllLink": true,
+      "readMoreText": "Yazıyı Oku →",
+      "featuredSlugs": []
+    },
+    "cta": {
+      "visible": true,
+      "selectedCtaId": "default-consulting",
+      "title": "",
+      "desc": ""
     }
   },
   "ekibimiz": {
@@ -1230,9 +1254,9 @@
     },
     "content": {
       "title": "Veri Sorumlusu Sıfatıyla Hak ve Yükümlülüklerimiz",
-      "text": "1. Veri Sorumlusu\n6698 sayılı Kanun uyarınca 'Veri Sorumlusu', CX Folks şirketidir. Kişisel verileriniz veri sorumlusu güvencesiyle kanuni sınırlar çerçevesinde işlenmektedir.\n\n2. Kişisel Verilerin İşlenme Amaçları\nWeb sitemiz üzerinden paylaştığınız ad, soyad, e-posta, kurum bilgisi ve iletişim formu mesajları; keşif seansı planlama, danışmanlık taleplerinizi yanıtlama, bülten ve içgörü içeriklerimizi ulaştırma ve yasal yükümlülüklerimizi yerine getirme amaçlarıyla sınırlı olarak işlenir.\n\n3. Veri Aktarımı ve Üçüncü Taraflar\nKişisel verileriniz hiçbir koşulda ticari amaçla satılmaz veya kiralanmaz. Yalnızca yasal zorunluluklar gereği yetkili kamu kurumlarına ve teknik barındırma/iletişim altyapısını sağlayan güvenilir servis sağlayıcılarımıza kanuni sınırlar çerçevesinde aktarılabilir.\n\n4. Veri Sahibinin Hakları (KVKK Madde 11)\nKVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.\n\n5. Başvuru ve İletişim\nHaklarınıza ilişkin taleplerinizi hello@cxfolks.com e-posta adresimize yazılı olarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde yasal mevzuata uygun şekilde sonuçlandırılacaktır."
+      "text": "<section>\n  <h3>1. Veri Sorumlusu</h3>\n  <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ('KVKK') uyarınca, veri sorumlusu sıfatıyla CX Folks ('Şirket'), kişisel verilerinizi hukuka ve dürüstlük kurallarına uygun, doğru ve güncel, belirli, açık ve meşru amaçlar doğrultusunda işlemektedir.</p>\n</section>\n\n<section>\n  <h3>2. İşlenen Kişisel Veriler ve İşleme Amaçları</h3>\n  <p>Web sitemizdeki iletişim ve keşif formu, bülten aboneliği ve CX Maturity Testi üzerinden paylaştığınız ad, soyad, kurumsal unvan, e-posta adresi, telefon numarası ve mesaj içerikleriniz; stratejik danışmanlık taleplerinizi karşılamak, keşif seansları planlamak, bülten içeriklerimizi iletmek ve kanuni yükümlülüklerimizi yerine getirmek amacıyla işlenir.</p>\n</section>\n\n<section>\n  <h3>3. Kişisel Verilerin Aktarımı</h3>\n  <p>Kişisel verileriniz hiçbir koşulda ticari amaçla satılmaz, kiralanmaz veya yetkisiz üçüncü taraflarla paylaşılmaz. Verileriniz yalnızca yasal zorunluluklar gereği yetkili kamu kurum ve kuruluşları ile güvenli teknik barındırma altyapımızı sağlayan hizmet sağlayıcılarımıza KVKK Madde 8 ve 9 kapsamında aktarılabilir.</p>\n</section>\n\n<section>\n  <h3>4. İlgili Kişinin Hakları (KVKK Madde 11)</h3>\n  <p>KVKK'nın 11. maddesi uyarınca veri sahipleri; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, eksik veya yanlış işlenmişse düzeltilmesini ve şartları oluştuğunda silinmesini veya yok edilmesini talep etme haklarına sahiptir.</p>\n</section>\n\n<section>\n  <h3>5. İletişim ve Başvuru</h3>\n  <p>Haklarınıza ilişkin taleplerinizi yazılı olarak veya kayıtlı elektronik posta (KEP) adresi, güvenli elektronik imza veya sistemimizde kayıtlı e-posta adresiniz üzerinden <b>hello@cxfolks.com</b> adresine iletebilirsiniz. Başvurularınız en geç 30 gün içinde ücretsiz olarak sonuçlandırılacaktır.</p>\n</section>"
     },
-    "text": "1. Veri Sorumlusu\n6698 sayılı Kanun uyarınca 'Veri Sorumlusu', CX Folks şirketidir. Kişisel verileriniz veri sorumlusu güvencesiyle kanuni sınırlar çerçevesinde işlenmektedir.\n\n2. Kişisel Verilerin İşlenme Amaçları\nWeb sitemiz üzerinden paylaştığınız ad, soyad, e-posta, kurum bilgisi ve iletişim formu mesajları; keşif seansı planlama, danışmanlık taleplerinizi yanıtlama, bülten ve içgörü içeriklerimizi ulaştırma ve yasal yükümlülüklerimizi yerine getirme amaçlarıyla sınırlı olarak işlenir.\n\n3. Veri Aktarımı ve Üçüncü Taraflar\nKişisel verileriniz hiçbir koşulda ticari amaçla satılmaz veya kiralanmaz. Yalnızca yasal zorunluluklar gereği yetkili kamu kurumlarına ve teknik barındırma/iletişim altyapısını sağlayan güvenilir servis sağlayıcılarımıza kanuni sınırlar çerçevesinde aktarılabilir.\n\n4. Veri Sahibinin Hakları (KVKK Madde 11)\nKVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.\n\n5. Başvuru ve İletişim\nHaklarınıza ilişkin taleplerinizi hello@cxfolks.com e-posta adresimize yazılı olarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde yasal mevzuata uygun şekilde sonuçlandırılacaktır."
+    "text": "<section>\n  <h3>1. Veri Sorumlusu</h3>\n  <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ('KVKK') uyarınca, veri sorumlusu sıfatıyla CX Folks ('Şirket'), kişisel verilerinizi hukuka ve dürüstlük kurallarına uygun, doğru ve güncel, belirli, açık ve meşru amaçlar doğrultusunda işlemektedir.</p>\n</section>\n\n<section>\n  <h3>2. İşlenen Kişisel Veriler ve İşleme Amaçları</h3>\n  <p>Web sitemizdeki iletişim ve keşif formu, bülten aboneliği ve CX Maturity Testi üzerinden paylaştığınız ad, soyad, kurumsal unvan, e-posta adresi, telefon numarası ve mesaj içerikleriniz; stratejik danışmanlık taleplerinizi karşılamak, keşif seansları planlamak, bülten içeriklerimizi iletmek ve kanuni yükümlülüklerimizi yerine getirmek amacıyla işlenir.</p>\n</section>\n\n<section>\n  <h3>3. Kişisel Verilerin Aktarımı</h3>\n  <p>Kişisel verileriniz hiçbir koşulda ticari amaçla satılmaz, kiralanmaz veya yetkisiz üçüncü taraflarla paylaşılmaz. Verileriniz yalnızca yasal zorunluluklar gereği yetkili kamu kurum ve kuruluşları ile güvenli teknik barındırma altyapımızı sağlayan hizmet sağlayıcılarımıza KVKK Madde 8 ve 9 kapsamında aktarılabilir.</p>\n</section>\n\n<section>\n  <h3>4. İlgili Kişinin Hakları (KVKK Madde 11)</h3>\n  <p>KVKK'nın 11. maddesi uyarınca veri sahipleri; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, eksik veya yanlış işlenmişse düzeltilmesini ve şartları oluştuğunda silinmesini veya yok edilmesini talep etme haklarına sahiptir.</p>\n</section>\n\n<section>\n  <h3>5. İletişim ve Başvuru</h3>\n  <p>Haklarınıza ilişkin taleplerinizi yazılı olarak veya kayıtlı elektronik posta (KEP) adresi, güvenli elektronik imza veya sistemimizde kayıtlı e-posta adresiniz üzerinden <b>hello@cxfolks.com</b> adresine iletebilirsiniz. Başvurularınız en geç 30 gün içinde ücretsiz olarak sonuçlandırılacaktır.</p>\n</section>"
   },
   "cerezPolitikasi": {
     "subheadingTag": "h3",
@@ -1257,15 +1281,15 @@
       "llmsInclude": true
     },
     "hero": {
-      "eyebrow": "ŞEFFAFLIK & PERFORMANS",
+      "eyebrow": "",
       "title": "Çerez Politikası (Cookie Policy)",
-      "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek amacıyla çerezlerden ('cookies') faydalanmaktayız.",
+      "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, <br>kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek <br>amacıyla çerezlerden ('cookies') faydalanmaktayız.",
       "headingTag": "h1"
     },
     "content": {
       "title": "Kullandığımız Çerezler ve Tercihleriniz",
-      "text": "1. Çerez Nedir?\nÇerezler, ziyaret ettiğiniz web siteleri tarafından tarayıcınız aracılığıyla cihazınıza veya ağ sunucusuna depolanan küçük metin dosyalarıdır. Sitemizin düzgün çalışması, tercihlerin hatırlanması ve genel site performansının analiz edilmesi için kullanılırlar.\n\n2. Sitemizde Kullanılan Çerez Türleri\n• Zorunlu Çerezler: Web sitesinin temel fonksiyonlarının (sayfa navigasyonu, güvenlik, form doğrulamaları ve erişilebilirlik tercihleri) çalışması için zorunludur.\n• Performans ve Analitik Çerezleri: Ziyaretçilerin siteyi nasıl kullandığını anonim olarak anlamamıza ve kullanıcı yolculuklarını optimize etmemize yardımcı olur.\n• İşlevsellik Çerezleri: Erişilebilirlik menüsündeki font boyutu ve kontrast tercihleriniz gibi kişisel ayarlarınızı tarayıcınızda hatırlamak için kullanılır.\n\n3. Çerez Tercihlerini Nasıl Yönetebilirsiniz?\nÇerez kullanımını dilediğiniz zaman tarayıcı ayarlarınızdan kısıtlayabilir veya tamamen devre dışı bırakabilirsiniz. Ancak zorunlu çerezlerin kapatılması web sitemizdeki bazı etkileşimli özelliklerin düzgün çalışmamasına neden olabilir.\n\nGoogle Chrome, Mozilla Firefox, Safari ve Microsoft Edge tarayıcılarının ayarlar menüsünden 'Gizlilik ve Güvenlik' başlığı altından çerez tercihlerinizi kolayca güncelleyebilirsiniz."
+      "text": "<section>\n  <h3>1. Çerez (Cookie) Nedir?</h3>\n  <p>Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler web sitesinin düzgün ve güvenli çalışmasını sağlar, oturum tercihlerinizi hatırlar ve site performansının ölçülmesine katkıda bulunur.</p>\n</section>\n\n<section>\n  <h3>2. Sitemizde Kullanılan Çerez Kategorileri</h3>\n  <ul>\n    <li><b>Zorunlu Çerezler:</b> Web sitemizin güvenli çalışması, sayfa geçişleri, form gönderimleri ve temel erişilebilirlik ayarlarının korunması için teknik olarak gereklidir. Bu çerezler kapatılamaz.</li>\n    <li><b>İşlevsellik Çerezleri:</b> Sağ alttaki Erişilebilirlik Menüsü'nde seçtiğiniz font boyutu ölçeği ve yüksek kontrast modu gibi kişiselleştirilmiş ayarların bir sonraki ziyaretinizde hatırlanmasını sağlar.</li>\n    <li><b>Performans ve Analitik Çerezleri:</b> Ziyaretçilerin sayfalar arasındaki akışını anonim istatistiklerle anlamamıza ve kullanıcı deneyimini sürekli iyileştirmemize yardımcı olur.</li>\n  </ul>\n</section>\n\n<section>\n  <h3>3. Çerez Tercihlerini Yönetme ve Kapatma</h3>\n  <p>Tarayıcınızın ayarlarını değiştirerek çerez tercihlerinizi dilediğiniz zaman kişiselleştirebilir, mevcut çerezleri silebilir veya çerez kullanımını engelleyebilirsiniz. Ancak zorunlu çerezlerin engellenmesi durumunda web sitemizin bazı fonksiyonları beklenen şekilde çalışmayabilir.</p>\n  <p>Chrome, Safari, Firefox ve Edge tarayıcılarının <i>'Ayarlar &gt; Gizlilik ve Güvenlik &gt; Çerezler'</i> sekmesinden tercihlerinizi kolayca güncelleyebilirsiniz.</p>\n</section>\n\n<section>\n  <h3>4. İletişim</h3>\n  <p>Çerez Politikamıza ilişkin tüm soru ve önerileriniz için <b>hello@cxfolks.com</b> adresinden bize dilediğiniz zaman ulaşabilirsiniz.</p>\n</section>"
     },
-    "text": "1. Çerez Nedir?\nÇerezler, ziyaret ettiğiniz web siteleri tarafından tarayıcınız aracılığıyla cihazınıza veya ağ sunucusuna depolanan küçük metin dosyalarıdır. Sitemizin düzgün çalışması, tercihlerin hatırlanması ve genel site performansının analiz edilmesi için kullanılırlar.\n\n2. Sitemizde Kullanılan Çerez Türleri\n• Zorunlu Çerezler: Web sitesinin temel fonksiyonlarının (sayfa navigasyonu, güvenlik, form doğrulamaları ve erişilebilirlik tercihleri) çalışması için zorunludur.\n• Performans ve Analitik Çerezleri: Ziyaretçilerin siteyi nasıl kullandığını anonim olarak anlamamıza ve kullanıcı yolculuklarını optimize etmemize yardımcı olur.\n• İşlevsellik Çerezleri: Erişilebilirlik menüsündeki font boyutu ve kontrast tercihleriniz gibi kişisel ayarlarınızı tarayıcınızda hatırlamak için kullanılır.\n\n3. Çerez Tercihlerini Nasıl Yönetebilirsiniz?\nÇerez kullanımını dilediğiniz zaman tarayıcı ayarlarınızdan kısıtlayabilir veya tamamen devre dışı bırakabilirsiniz. Ancak zorunlu çerezlerin kapatılması web sitemizdeki bazı etkileşimli özelliklerin düzgün çalışmamasına neden olabilir.\n\nGoogle Chrome, Mozilla Firefox, Safari ve Microsoft Edge tarayıcılarının ayarlar menüsünden 'Gizlilik ve Güvenlik' başlığı altından çerez tercihlerinizi kolayca güncelleyebilirsiniz."
+    "text": "<section>\n  <h3>1. Çerez (Cookie) Nedir?</h3>\n  <p>Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler web sitesinin düzgün ve güvenli çalışmasını sağlar, oturum tercihlerinizi hatırlar ve site performansının ölçülmesine katkıda bulunur.</p>\n</section>\n\n<section>\n  <h3>2. Sitemizde Kullanılan Çerez Kategorileri</h3>\n  <ul>\n    <li><b>Zorunlu Çerezler:</b> Web sitemizin güvenli çalışması, sayfa geçişleri, form gönderimleri ve temel erişilebilirlik ayarlarının korunması için teknik olarak gereklidir. Bu çerezler kapatılamaz.</li>\n    <li><b>İşlevsellik Çerezleri:</b> Sağ alttaki Erişilebilirlik Menüsü'nde seçtiğiniz font boyutu ölçeği ve yüksek kontrast modu gibi kişiselleştirilmiş ayarların bir sonraki ziyaretinizde hatırlanmasını sağlar.</li>\n    <li><b>Performans ve Analitik Çerezleri:</b> Ziyaretçilerin sayfalar arasındaki akışını anonim istatistiklerle anlamamıza ve kullanıcı deneyimini sürekli iyileştirmemize yardımcı olur.</li>\n  </ul>\n</section>\n\n<section>\n  <h3>3. Çerez Tercihlerini Yönetme ve Kapatma</h3>\n  <p>Tarayıcınızın ayarlarını değiştirerek çerez tercihlerinizi dilediğiniz zaman kişiselleştirebilir, mevcut çerezleri silebilir veya çerez kullanımını engelleyebilirsiniz. Ancak zorunlu çerezlerin engellenmesi durumunda web sitemizin bazı fonksiyonları beklenen şekilde çalışmayabilir.</p>\n  <p>Chrome, Safari, Firefox ve Edge tarayıcılarının <i>'Ayarlar &gt; Gizlilik ve Güvenlik &gt; Çerezler'</i> sekmesinden tercihlerinizi kolayca güncelleyebilirsiniz.</p>\n</section>\n\n<section>\n  <h3>4. İletişim</h3>\n  <p>Çerez Politikamıza ilişkin tüm soru ve önerileriniz için <b>hello@cxfolks.com</b> adresinden bize dilediğiniz zaman ulaşabilirsiniz.</p>\n</section>"
   }
 }

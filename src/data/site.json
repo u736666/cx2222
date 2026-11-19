@@ -374,20 +374,20 @@
     "desc": "30 dakikalık bir ön görüşmeyle ya da <b>CX Folks Maturity Testi</b> ile başlayabiliriz. <br><br>Mevcut durumunuzu kısaca yazın, nereden başlayacağımıza birlikte bakalım.",
     "showEmail": true,
     "showOffices": true,
-    "emailLabel": "E-Posta",
+    "emailLabel": "E-posta",
     "officesLabel": "Ofisler",
-    "nameLabel": "Adınız Soyadınız",
+    "nameLabel": "Adınız soyadınız",
     "namePlaceholder": "",
     "nameRequired": true,
-    "emailFieldLabel": "E-posta Adresiniz",
+    "emailFieldLabel": "E-posta adresiniz",
     "emailPlaceholder": "",
     "emailRequired": true,
     "showCompanyField": true,
-    "companyLabel": "Kurum / Şirket",
+    "companyLabel": "Kurum / şirket",
     "companyPlaceholder": "",
     "companyRequired": false,
     "showTopicField": true,
-    "topicLabel": "İlgilendiğiniz Konu",
+    "topicLabel": "İlgilendiğiniz konu",
     "showDescField": true,
     "descLabel": "Açıklama",
     "descPlaceholder": "",
@@ -401,24 +401,28 @@
     "formAction": "",
     "topics": [
       {
-        "value": "ai",
-        "label": "AI Müşteri Deneyimi"
+        "value": "ai-destekli-cx",
+        "label": "AI Destekli Müşteri Deneyimi"
       },
       {
-        "value": "tasarim",
+        "value": "deneyim-tasarimi",
         "label": "İnsan Odaklı Deneyim Tasarımı"
       },
       {
-        "value": "akademi",
-        "label": "CX Folks Eğitimleri"
+        "value": "cx-folks-akademi",
+        "label": "CX Folks Akademi"
       },
       {
-        "value": "maturity",
-        "label": "CX Folks Maturity Testi"
+        "value": "cx-maturity-testi",
+        "label": "CX Maturity Testi & Değerlendirme"
       },
       {
-        "value": "on-gorusme",
-        "label": "30 Dakikalık Ön Görüşme"
+        "value": "kesif-seansi",
+        "label": "30 Dakikalık Stratejik Keşif Seansı"
+      },
+      {
+        "value": "genel-danismanlik",
+        "label": "Genel Danışmanlık & İş Birliği"
       }
     ]
   }

@@ -607,6 +607,7 @@ html.accessibility-high-contrast section.bg-paletteRichBlack,
 html.accessibility-high-contrast section[class*="bg-paletteRichBlack"],
 html.accessibility-high-contrast .bg-paletteRichBlack,
 html.accessibility-high-contrast [class*="bg-paletteRichBlack"],
+html.accessibility-high-contrast .hero-card,
 html.accessibility-high-contrast .bg-neutral-900,
 html.accessibility-high-contrast .bg-black,
 html.accessibility-high-contrast .mega-wrapper,
@@ -791,14 +792,27 @@ html.accessibility-high-contrast a.header-brand:hover {
   text-decoration: none !important;
 }
 
+/* Hero Kutu (Hero Card) Kontrast Modunda Siyah Zemin, Beyaz Metin */
+html.accessibility-high-contrast .hero-card,
+html.accessibility-high-contrast .hero-card * {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .hero-card a,
+html.accessibility-high-contrast .hero-card a * {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
 /* Hero Görsel Navigasyon Noktaları (Slider Dots) */
 html.accessibility-high-contrast .hero-dot-indicator {
-  background-color: #ffffff !important;
-  border: 1px solid #000000 !important;
-  opacity: 0.45 !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  opacity: 0.5 !important;
 }
 html.accessibility-high-contrast .hero-dot-btn[aria-pressed="true"] .hero-dot-indicator {
-  background-color: #000000 !important;
+  background-color: #ffffff !important;
   border: 1px solid #ffffff !important;
   opacity: 1 !important;
 }
@@ -839,16 +853,39 @@ html.accessibility-high-contrast .bg-paletteDustGrey {
   color: #000000 !important;
 }
 
-
-
-/* Akordeon Butonları */
-html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack .card-icon-btn {
+/* Akordeon Kartları - Kontrast Modunda Açık Kartlar Beyaz Zemin Siyah Metin, Aktif Kart Siyah Zemin Beyaz Metin */
+html.accessibility-high-contrast .accordion-card {
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) {
+  --hc-bg: #ffffff !important;
+  --hc-text: #000000 !important;
   background-color: #ffffff !important;
+  border-color: #000000 !important;
+}
+html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) * {
+  --hc-text: #000000 !important;
   color: #000000 !important;
 }
 html.accessibility-high-contrast .accordion-card:not(.bg-paletteRichBlack) .card-icon-btn {
   background-color: #000000 !important;
   color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack {
+  --hc-bg: #000000 !important;
+  --hc-text: #ffffff !important;
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack * {
+  --hc-text: #ffffff !important;
+  color: #ffffff !important;
+}
+html.accessibility-high-contrast .accordion-card.bg-paletteRichBlack .card-icon-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
 }
 
 /* SVG İkonlar: Konteynerin metin rengiyle uyumlu olsun */

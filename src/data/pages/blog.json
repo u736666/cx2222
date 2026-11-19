@@ -28,8 +28,8 @@
       "visible": true,
       "data": {
         "eyebrow": "",
-        "title": "Blog & Deneyim Notları",
-        "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı \"blog\" kisvesi altında bir daha hatırlatıyoruz.",
+        "title": "Blog",
+        "desc": "İlgimizi çeken çeşitli konulardaki düşüncelerimizi, <br>fikirlerimizi ve içgörülerimizi burada paylaşıyoruz. <br>Dürüst olmak gerekirse, hizmetlerimizi ve nasıl çalıştığımızı <br>\"blog\" kisvesi altında bir daha hatırlatıyoruz.",
         "bgImage": "/images/uploads/ethnogram-calisan-memnuniyeti-mwdqujap.jpg",
         "bgAlt": "Blog Atmosfer Görseli",
         "headingTag": "h1"
@@ -64,7 +64,12 @@
       "id": "cta",
       "type": "ctaBanner",
       "visible": true,
-      "data": {},
+      "data": {
+        "visible": true,
+        "selectedCtaId": "default-consulting",
+        "title": "",
+        "desc": ""
+      },
       "style": {
         "surface": "brandAccent"
       }

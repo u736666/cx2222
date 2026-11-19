@@ -22,7 +22,7 @@ const sectionId = id || styles.sectionId || 'problem-slider-sec';
       {items.map((ps: any, idx: number) => (
         <div class={`sentence-slide w-full ${idx === 0 ? 'active' : 'hidden opacity-0'}`} data-sentence={idx}>
           <Heading as={ps.headingTag || 'h3'} customSize={ps.headingSize || ps.titleSize} color={ps.headingColor || ps.titleColor} size="h2" text={ps.quote} class="text-paletteRichBlack" />
-          <a href={ps.href} data-service={ps.service} class="inline-flex items-center font-semibold tracking-wider text-brandAccent mt-4 hover:underline">
+          <a href={ps.href} data-service={ps.service} class="inline-flex items-center font-normal typo-body text-paletteRichBlack hover:text-paletteDeepNavy hover:underline mt-4 gap-1.5">
             <span set:html={formatRich(ps.solutionLabel)}></span>
           </a>
         </div>

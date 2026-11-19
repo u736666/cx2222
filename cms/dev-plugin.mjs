@@ -434,14 +434,23 @@ async function syncBlockPages(rootDir, target, data) {
             }).join('');
           }
           for (const b of page.blocks || []) {
-            if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
+            if (b.type === 'hero') {
+              b.data = { 
+                ...b.data, 
+                ...d.hero,
+                eyebrow: (d.hero && typeof d.hero.eyebrow === 'string') ? d.hero.eyebrow : ''
+              };
+              if (d.hero && d.hero.surface) {
+                b.style = { ...b.style, surface: d.hero.surface };
+              }
+            }
             if (b.type === 'richText') {
               b.data = { 
                 ...b.data, 
                 subheadingTag: subTag,
                 subheadingWeight: subWeight,
                 subheadingSize: subSize,
-                content: formatted || b.data?.content 
+                content: raw || formatted || b.data?.content 
               };
             }
           }
@@ -474,14 +483,23 @@ async function syncBlockPages(rootDir, target, data) {
             }).join('');
           }
           for (const b of page.blocks || []) {
-            if (b.type === 'hero') b.data = { ...b.data, ...d.hero };
+            if (b.type === 'hero') {
+              b.data = { 
+                ...b.data, 
+                ...d.hero,
+                eyebrow: (d.hero && typeof d.hero.eyebrow === 'string') ? d.hero.eyebrow : ''
+              };
+              if (d.hero && d.hero.surface) {
+                b.style = { ...b.style, surface: d.hero.surface };
+              }
+            }
             if (b.type === 'richText') {
               b.data = { 
                 ...b.data, 
                 subheadingTag: subTag,
                 subheadingWeight: subWeight,
                 subheadingSize: subSize,
-                content: formatted || b.data?.content 
+                content: raw || formatted || b.data?.content 
               };
             }
           }

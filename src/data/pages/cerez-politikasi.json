@@ -29,7 +29,7 @@
       "type": "hero",
       "visible": true,
       "data": {
-        "eyebrow": "ŞEFFAFLIK & PERFORMANS",
+        "eyebrow": "",
         "title": "Çerez Politikası (Cookie Policy)",
         "desc": "CX Folks olarak, web sitemizin kusursuz, hızlı ve güvenli çalışmasını sağlamak, kullanıcı deneyiminizi geliştirmek ve içeriklerimizi optimize etmek amacıyla çerezlerden ('cookies') faydalanmaktayız.",
         "headingTag": "h1"

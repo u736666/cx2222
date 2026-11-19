@@ -5687,10 +5687,19 @@
 
         // 1. Hero & Başlık Alanları
         card.appendChild(el('div', { className: 'grid-2' }, [
-          fieldInput('Üst Başlık (Eyebrow)', pageObj.hero, 'eyebrow', target),
+          fieldInput('Üst Başlık (Eyebrow - Boş bırakılabilir)', pageObj.hero, 'eyebrow', target),
           fieldInput('Sayfa Başlığı (H1)', pageObj.hero, 'title', target),
         ]));
-        card.appendChild(fieldInput('Giriş Açıklaması', pageObj.hero, 'desc', target, { multiline: true, rows: 3 }));
+        card.appendChild(el('div', { className: 'grid-2' }, [
+          fieldInput('Giriş Açıklaması', pageObj.hero, 'desc', target, { multiline: true, rows: 3 }),
+          fieldSelect('Hero Arka Plan Rengi (Zemin)', pageObj.hero, 'surface', [
+            { value: 'platinum', label: 'Platinum (Açık Gri)' },
+            { value: 'siteBg', label: 'Site Zemin (Beyaz)' },
+            { value: 'dustGrey', label: 'Dust Grey (Gri)' },
+            { value: 'richBlack', label: 'Rich Black (Koyu)' },
+            { value: 'brandAccent', label: 'Brand Accent (Sarı)' }
+          ], target)
+        ]));
 
         // 2. Alt Başlık Nitelikleri (H-Etiketi, Boyut, Kalınlık Seçimi)
         const subHeadCard = el('div', {
