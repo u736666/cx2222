@@ -135,7 +135,7 @@
       ]
     },
     "faqTitle": "Yaklaşımımız Hakkında Sıkça Sorulanlar",
-    "faqSubtitle": "Net Yanıtlar",
+    "faqSubtitle": "",
     "faqs": [
       {
         "question": "CX Folks'un geleneksel yönetim danışmanlıklarından farkı nedir?",
@@ -226,7 +226,7 @@
       }
     ],
     "faqTitle": "Dönüşüm Süreci Hakkında Merak Edilenler",
-    "faqSubtitle": "Soru & Cevap",
+    "faqSubtitle": "",
     "faqs": [
       {
         "question": "Neden geleneksel çağrı merkezi ve şikayet yönetim sistemleri artık yetersiz kalıyor?",
@@ -1125,7 +1125,7 @@
       "title": "",
       "desc": ""
     },
-    "surface": "mesh"
+    "surface": "siteBg"
   },
   "cxFolksAkademi": {
     "seo": {

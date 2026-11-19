@@ -48,9 +48,6 @@ const faqSchema = {
     <div class="grid-standard items-start">
       
       <div class="col-span-12 lg:col-span-5 space-y-4 pr-0 lg:pr-10">
-        {hasSubtitle && (
-          <span class="typo-small font-semibold tracking-widest text-brandAccent block" style={subtitleStyle || undefined} set:html={formatRich(subtitle)}></span>
-        )}
         {hasTitle && (
           <HeadingTag class="typo-h2 text-paletteRichBlack" style={titleStyle || undefined} set:html={formatRich(title)}>
           </HeadingTag>

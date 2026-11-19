@@ -239,7 +239,7 @@ async function syncBlockPages(rootDir, target, data) {
           if (d.seo) page.seo = d.seo;
           for (const b of page.blocks || []) {
             if (b.type === 'approachManifesto') b.data = { hero: d.hero, pillars: d.pillars, manifesto: d.manifesto, matrix: d.matrix };
-            if (b.type === 'faq') b.data = { title: d.faqTitle, subtitle: d.faqSubtitle, items: d.faqs };
+            if (b.type === 'faq') b.data = { title: d.faqTitle, subtitle: '', items: d.faqs };
           }
           syncCta(page, d.cta);
         },
@@ -252,7 +252,7 @@ async function syncBlockPages(rootDir, target, data) {
           for (const b of page.blocks || []) {
             if (b.type === 'hero') b.data = { ...d.hero, bgImage: d.hero?.bgImage };
             if (b.type === 'shiftsComparison') b.data = { items: d.shifts };
-            if (b.type === 'faq') b.data = { title: d.faqTitle, subtitle: d.faqSubtitle, items: d.faqs };
+            if (b.type === 'faq') b.data = { title: d.faqTitle, subtitle: '', items: d.faqs };
           }
           syncCta(page, d.cta);
         },

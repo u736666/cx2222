@@ -96,13 +96,13 @@
           "title": "",
           "desc": ""
         },
-        "surface": "mesh",
+        "surface": "siteBg",
         "gridCols": "auto",
         "gridWidth": "full",
         "photoAspect": "4/5"
       },
       "style": {
-        "surface": "mesh"
+        "surface": "siteBg"
       }
     },
     {
