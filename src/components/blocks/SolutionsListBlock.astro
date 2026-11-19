@@ -20,9 +20,6 @@ const sectionId = id || styles.sectionId || 'solutions-list';
   <div class={`${styles.containerClass} space-y-16`}>
     {solutions.map((sol: any, idx: number) => {
       const st = getSurfaceStyle(sol.style);
-      const rawBadge = sol.badge !== undefined ? sol.badge : `Çözüm 0${idx + 1}`;
-      const badgeText = String(rawBadge || '').trim();
-      const showBadge = Boolean(badgeText);
 
       const defaultBtn = sol.slug === 'ai-destekli-cx' ? 'Detaylı Çözümleri İncele →' : 'Detaylı Metodolojiyi İncele →';
       const rawBtn = sol.btnLabel !== undefined ? sol.btnLabel : defaultBtn;
@@ -47,11 +44,6 @@ const sectionId = id || styles.sectionId || 'solutions-list';
           </div>
           <div class="lg:col-span-7 p-8 sm:p-12 md:p-16 flex flex-col justify-between space-y-8 relative z-0">
             <div class="space-y-4">
-              {showBadge && (
-                <span class={`typo-small font-semibold tracking-widest block ${st.eyebrow}`} style={resolveTextStyle(sol, 'badge') || undefined}>
-                  {badgeText}
-                </span>
-              )}
               <Heading 
                 as={sol.headingTag || 'h2'} 
                 customSize={sol.headingSize || sol.titleSize} 
