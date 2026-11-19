@@ -411,7 +411,7 @@ async function syncBlockPages(rootDir, target, data) {
         file: 'gizlilik-politikasi.json',
         key: 'gizlilikPolitikasi',
         sync: (page, d) => {
-          if (d.seo) page.seo = d.seo;
+          if (d.seo) page.seo = { ...page.seo, ...d.seo };
           const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
           if (d.content && typeof d.content === 'object') d.content.text = raw;
           else d.content = { text: raw };
@@ -419,20 +419,38 @@ async function syncBlockPages(rootDir, target, data) {
           const subWeight = d.subheadingWeight || '400';
           const subSize = d.subheadingSize || '20px';
           const weightClass = subWeight === '700' ? 'font-bold' : (subWeight === '600' ? 'font-semibold' : (subWeight === '500' ? 'font-medium' : 'font-normal'));
-          let formatted = raw;
-          if (!raw.includes('<p>') && !raw.includes('<div>')) {
-            formatted = raw.split('\n\n').map(p => {
-              if (p.startsWith('•')) return `<li>${p.slice(1).trim()}</li>`;
-              if (/^#{2,4}\s+/.test(p)) {
-                const titleText = p.replace(/^#{2,4}\s+/, '');
-                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${titleText}</${subTag}>`;
+          
+          let formattedContent = raw;
+          if (!raw.includes('<p>') && !raw.includes('<div>') && !raw.includes('<section>')) {
+            const parts = raw.split(/\n\s*\n/).map(block => {
+              const trimmed = block.trim();
+              if (!trimmed) return '';
+              if (trimmed.startsWith('•') || trimmed.startsWith('- ')) {
+                const lis = trimmed.split('\n').map(l => `<li>${l.replace(/^[\s•\-]+\s*/, '').trim()}</li>`).join('');
+                return `<ul class="list-disc pl-5 space-y-2">${lis}</ul>`;
               }
-              if (/^\d+\.\s+[^\n]+$/.test(p)) {
-                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${p}</${subTag}>`;
+              if (/^#{2,4}\s+/.test(trimmed)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${trimmed.replace(/^#{2,4}\s+/, '')}</${subTag}>`;
               }
-              return `<p>${p.replace(/\n/g, '<br>')}</p>`;
-            }).join('');
+              if (/^\d+\.\s+[^\n]+$/.test(trimmed)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${trimmed}</${subTag}>`;
+              }
+              const nlIdx = trimmed.indexOf('\n');
+              if (nlIdx !== -1 && /^\d+\.\s+[^\n]+$/.test(trimmed.slice(0, nlIdx).trim())) {
+                const headingLine = trimmed.slice(0, nlIdx).trim();
+                const bodyText = trimmed.slice(nlIdx + 1).trim();
+                return `<section class="space-y-3"><${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${headingLine}</${subTag}><p>${bodyText.replace(/\n/g, '<br>')}</p></section>`;
+              }
+              return `<p>${trimmed.replace(/\n/g, '<br>')}</p>`;
+            }).filter(Boolean);
+            formattedContent = `<div class="space-y-8 typo-body font-light text-paletteRichBlack/85">${parts.join('')}</div>`;
           }
+
+          if (d.hero?.title) {
+            page.meta = page.meta || {};
+            page.meta.title = d.hero.title.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          }
+
           for (const b of page.blocks || []) {
             if (b.type === 'hero') {
               b.data = { 
@@ -450,8 +468,11 @@ async function syncBlockPages(rootDir, target, data) {
                 subheadingTag: subTag,
                 subheadingWeight: subWeight,
                 subheadingSize: subSize,
-                content: raw || formatted || b.data?.content 
+                content: formattedContent || raw || b.data?.content 
               };
+              if (d.content && typeof d.content === 'object' && d.content.title) {
+                b.data.title = d.content.title;
+              }
             }
           }
         },
@@ -460,7 +481,7 @@ async function syncBlockPages(rootDir, target, data) {
         file: 'cerez-politikasi.json',
         key: 'cerezPolitikasi',
         sync: (page, d) => {
-          if (d.seo) page.seo = d.seo;
+          if (d.seo) page.seo = { ...page.seo, ...d.seo };
           const raw = d.text || (d.content && typeof d.content === 'object' ? d.content.text : d.content) || '';
           if (d.content && typeof d.content === 'object') d.content.text = raw;
           else d.content = { text: raw };
@@ -468,20 +489,38 @@ async function syncBlockPages(rootDir, target, data) {
           const subWeight = d.subheadingWeight || '400';
           const subSize = d.subheadingSize || '20px';
           const weightClass = subWeight === '700' ? 'font-bold' : (subWeight === '600' ? 'font-semibold' : (subWeight === '500' ? 'font-medium' : 'font-normal'));
-          let formatted = raw;
-          if (!raw.includes('<p>') && !raw.includes('<div>')) {
-            formatted = raw.split('\n\n').map(p => {
-              if (p.startsWith('•')) return `<li>${p.slice(1).trim()}</li>`;
-              if (/^#{2,4}\s+/.test(p)) {
-                const titleText = p.replace(/^#{2,4}\s+/, '');
-                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${titleText}</${subTag}>`;
+          
+          let formattedContent = raw;
+          if (!raw.includes('<p>') && !raw.includes('<div>') && !raw.includes('<section>')) {
+            const parts = raw.split(/\n\s*\n/).map(block => {
+              const trimmed = block.trim();
+              if (!trimmed) return '';
+              if (trimmed.startsWith('•') || trimmed.startsWith('- ')) {
+                const lis = trimmed.split('\n').map(l => `<li>${l.replace(/^[\s•\-]+\s*/, '').trim()}</li>`).join('');
+                return `<ul class="list-disc pl-5 space-y-2">${lis}</ul>`;
               }
-              if (/^\d+\.\s+[^\n]+$/.test(p)) {
-                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${p}</${subTag}>`;
+              if (/^#{2,4}\s+/.test(trimmed)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${trimmed.replace(/^#{2,4}\s+/, '')}</${subTag}>`;
               }
-              return `<p>${p.replace(/\n/g, '<br>')}</p>`;
-            }).join('');
+              if (/^\d+\.\s+[^\n]+$/.test(trimmed)) {
+                return `<${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${trimmed}</${subTag}>`;
+              }
+              const nlIdx = trimmed.indexOf('\n');
+              if (nlIdx !== -1 && /^\d+\.\s+[^\n]+$/.test(trimmed.slice(0, nlIdx).trim())) {
+                const headingLine = trimmed.slice(0, nlIdx).trim();
+                const bodyText = trimmed.slice(nlIdx + 1).trim();
+                return `<section class="space-y-3"><${subTag} class="text-xl ${weightClass} text-paletteRichBlack">${headingLine}</${subTag}><p>${bodyText.replace(/\n/g, '<br>')}</p></section>`;
+              }
+              return `<p>${trimmed.replace(/\n/g, '<br>')}</p>`;
+            }).filter(Boolean);
+            formattedContent = `<div class="space-y-8 typo-body font-light text-paletteRichBlack/85">${parts.join('')}</div>`;
           }
+
+          if (d.hero?.title) {
+            page.meta = page.meta || {};
+            page.meta.title = d.hero.title.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          }
+
           for (const b of page.blocks || []) {
             if (b.type === 'hero') {
               b.data = { 
@@ -499,8 +538,11 @@ async function syncBlockPages(rootDir, target, data) {
                 subheadingTag: subTag,
                 subheadingWeight: subWeight,
                 subheadingSize: subSize,
-                content: raw || formatted || b.data?.content 
+                content: formattedContent || raw || b.data?.content 
               };
+              if (d.content && typeof d.content === 'object' && d.content.title) {
+                b.data.title = d.content.title;
+              }
             }
           }
         },

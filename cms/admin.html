@@ -5849,12 +5849,22 @@
           }
         }));
 
+        if (!pageObj.content || typeof pageObj.content !== 'object') {
+          pageObj.content = { title: '', text: pageObj.text || '' };
+        }
+        textSection.appendChild(fieldInput('İçerik Bölüm Başlığı (Opsiyonel)', pageObj.content, 'title', target));
+
         textSection.appendChild(toolbar);
 
         const textareaField = fieldInput('Açıklama / Metin (HTML, Başlık ve Liste Destekli)', pageObj, 'text', target, {
           multiline: true,
           rows: 18,
-          style: 'border-top-left-radius: 0; border-top-right-radius: 0;'
+          style: 'border-top-left-radius: 0; border-top-right-radius: 0;',
+          onChange: (val) => {
+            if (pageObj.content && typeof pageObj.content === 'object') {
+              pageObj.content.text = val;
+            }
+          }
         });
         textSection.appendChild(textareaField);
 
