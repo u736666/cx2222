@@ -307,7 +307,7 @@
     {
       "id": "default-consulting",
       "name": "AI & Deneyim Danışmanlığı (Mesh Zemin)",
-      "eyebrow": "BİRLİKTE BAŞLAYALIM",
+      "eyebrow": "",
       "title": "Şirketinizin Sesini Aksiyona Dönüştürelim",
       "desc": "Müşteri deneyimi yönetim yapınızı ve hedeflerinizi analiz edelim; insan odaklı yapay zeka uygulamalarına nasıl geçebileceğinizi birlikte planlayalım.",
       "primaryLabel": "Görüşelim →",
@@ -317,7 +317,9 @@
       "surface": "mesh",
       "bgColor": "",
       "bgImage": "",
-      "headingTag": "h2"
+      "headingTag": "h2",
+      "descColor": "richBlack",
+      "titleColor": "richBlack"
     },
     {
       "id": "newsletter-dive",
