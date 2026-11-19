@@ -7129,8 +7129,8 @@
       const filterBtnsWrap = el('div', { className: 'subtabs', style: 'margin-bottom:0;' });
       const filters = [
         { id: 'all', label: `Tümü (${entries.length})` },
-        { id: 'used', label: `Kullanımda (${entries.filter((e) => e.usages.length > 0).length})` },
-        { id: 'unused', label: `Kullanılmayan Yerel (${unusedLocal.length})` },
+        { id: 'used', label: `Kullanımda: Evet (${entries.filter((e) => e.usages.length > 0).length})` },
+        { id: 'unused', label: `Kullanımda: Hayır (${unusedLocal.length})` },
         { id: 'external', label: `Harici URL (${externalEntries.length})` },
         { id: 'logos', label: `Logolar (${logoEntries.length})` },
         { id: 'uploads', label: `Yüklenenler (${entries.filter((e) => e.folder === 'uploads').length})` },
@@ -7151,7 +7151,7 @@
       const searchInp = el('input', {
         type: 'search',
         className: 'input',
-        placeholder: 'URL veya sayfa/alan ara...',
+        placeholder: 'Dosya adı veya sayfa ara...',
         style: 'max-width:280px;background:#ffffff;border:1px solid var(--dust);',
       });
       searchInp.value = UI.mediaSearch || '';
@@ -7190,100 +7190,121 @@
         img.onerror = () => { img.style.opacity = '0.25'; };
         thumbWrap.appendChild(img);
 
-        const sizeText = entry.size ? ` (${Math.max(1, Math.round(entry.size / 1024))} KB)` : '';
-        const sourceBadge = entry.isLocal
-          ? `${entry.folder === 'logos' ? 'Logo' : 'Yerel'}${sizeText}`
-          : 'Harici URL';
-        const usageBadgeText = entry.usages.length > 0 ? `${entry.usages.length} kullanım` : 'Kullanılmıyor';
-        thumbWrap.appendChild(el('div', { className: 'media-badge-row' }, [
-          el('span', { className: 'badge-mini', text: sourceBadge }),
-          el('span', { className: `badge-mini ${entry.usages.length > 0 ? 'ok' : 'warn'}`, text: usageBadgeText }),
-        ]));
+        const currFilename = entry.url.split('/').pop() || '';
+        const isUsed = entry.usages.length > 0;
+        const usageText = isUsed ? 'Evet' : 'Hayır';
+        const usageClass = isUsed ? 'ok' : 'warn';
+        const sizeText = entry.size
+          ? (entry.size >= 1024 * 1024
+              ? `${(entry.size / (1024 * 1024)).toFixed(1)} MB`
+              : `${Math.max(1, Math.round(entry.size / 1024))} KB`)
+          : (entry.isLocal ? '—' : 'Harici');
+
+        // Görsel üstü rozetler: Kullanım Durumu (Sol) & Boyut (Sağ)
+        const badgeRow = el('div', {
+          style: 'position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;align-items:center;pointer-events:none;',
+        }, [
+          el('span', { className: `badge-mini ${usageClass}`, text: `Kullanım: ${usageText}` }),
+          el('span', { className: 'badge-mini', text: sizeText }),
+        ]);
+        thumbWrap.appendChild(badgeRow);
         card.appendChild(thumbWrap);
 
-        const body = el('div', { className: 'media-body' });
-        body.appendChild(el('div', { className: 'media-url', text: entry.url }));
+        // Gövde: Değiştirilebilir İsim Alanı + Bilgi Satırı + İşlemler
+        const body = el('div', { className: 'media-body', style: 'padding:12px;display:flex;flex-direction:column;gap:10px;' });
 
-        if (entry.usages.length > 0) {
-          const usagesList = el('div', { className: 'media-usages' });
-          entry.usages.forEach((u) => {
-            const chip = el('div', { className: 'media-usage-chip' });
-            chip.appendChild(el('span', { text: u.slotLabel, style: 'min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;' }));
-            chip.appendChild(el('button', {
-              type: 'button',
-              className: 'btn btn-muted btn-sm',
-              style: 'padding:2px 6px;font-size:10px;flex-shrink:0;',
-              text: 'Düzenle ↗',
-              onClick: () => {
-                UI.tab = u.tab;
-                if (u.tab === 'pages' && u.sub) UI.pagesSub = u.sub;
-                if (u.tab === 'projects' && u.entitySlug) {
-                  UI.selectedProjectSlug = u.entitySlug;
-                  UI.selectedProjectOriginalSlug = u.entitySlug;
-                }
-                if (u.tab === 'blog' && u.entitySlug) {
-                  UI.selectedBlogSlug = u.entitySlug;
-                  UI.selectedBlogOriginalSlug = u.entitySlug;
-                }
-                renderAll();
-              },
-            }));
-            usagesList.appendChild(chip);
+        // 1. Değiştirilebilir İsim Alanı (Doğrudan düzenlenebilir + Kaydet)
+        if (entry.isLocal) {
+          const nameInput = el('input', {
+            type: 'text',
+            className: 'input',
+            value: currFilename,
+            placeholder: 'Dosya adı...',
+            title: 'Dosya adını değiştirmek için yazın ve Kaydet\'e basın',
+            style: 'flex:1;font-size:12px;padding:6px 8px;font-weight:600;border:1px solid var(--dust);border-radius:6px;background:#ffffff;',
           });
-          body.appendChild(usagesList);
-        }
-
-        if (entry.usages.length > 0) {
-          const replaceBox = el('div', { style: 'display:flex;flex-direction:column;gap:6px;padding-top:6px;border-top:1px solid var(--platinum);' });
-          replaceBox.appendChild(el('span', { style: 'font-size:11px;font-weight:600;color:var(--navy);', text: 'Sitedeki Tüm Kullanımlarını Değiştir:' }));
-          const urlInput = el('input', { type: 'text', className: 'input', value: entry.url, placeholder: 'Yeni URL yazın veya aşağıdan seçin...' });
-          const localSelect = el('select', { className: 'select' }, [
-            el('option', { value: '', text: '-- Yüklü görsellerden / logolardan seçin --' }),
-            ...(STATE.uploads || []).map((u) => el('option', { value: u, text: u })),
-          ]);
-          localSelect.addEventListener('change', () => {
-            if (localSelect.value) urlInput.value = localSelect.value;
+          const saveBtn = el('button', {
+            type: 'button',
+            className: 'btn btn-primary btn-sm',
+            style: 'padding:6px 12px;font-size:11px;font-weight:600;white-space:nowrap;',
+            text: 'Kaydet',
+            title: 'Yeni adı kaydet ve sitedeki tüm sayfalarda otomatik güncelle',
           });
 
-          const hiddenFile = el('input', { type: 'file', accept: '.png,.jpg,.jpeg,.webp,.svg,.gif', style: 'display:none;' });
-          hiddenFile.addEventListener('change', async () => {
-            const f = hiddenFile.files?.[0];
-            if (!f) return;
+          const doRename = async () => {
+            const nextName = nameInput.value.trim();
+            if (!nextName) {
+              alert('Lütfen geçerli bir dosya adı girin.');
+              nameInput.value = currFilename;
+              return;
+            }
+            if (nextName === currFilename) {
+              showToast('Dosya adı değişmedi.');
+              return;
+            }
+            saveBtn.disabled = true;
+            saveBtn.textContent = '...';
             try {
-              const targetFolder = entry.folder === 'logos' ? 'logos' : 'uploads';
-              const nextUrl = await uploadMediaFileToFolder(f, targetFolder);
-              await replaceMediaEverywhere(entry.url, nextUrl);
+              await renameMediaFile(entry.url, nextName);
             } catch (err) {
               alert(err.message);
-            } finally {
-              hiddenFile.value = '';
+              saveBtn.disabled = false;
+              saveBtn.textContent = 'Kaydet';
+            }
+          };
+
+          saveBtn.addEventListener('click', doRename);
+          nameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              doRename();
             }
           });
 
-          replaceBox.appendChild(urlInput);
-          replaceBox.appendChild(localSelect);
-          replaceBox.appendChild(el('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;' }, [
-            el('button', {
-              type: 'button',
-              className: 'btn btn-dark btn-sm',
-              text: 'Yeni Dosya Yükle & Değiştir',
-              onClick: () => hiddenFile.click(),
-            }),
-            el('button', {
-              type: 'button',
-              className: 'btn btn-primary btn-sm',
-              text: 'Tümünü Güncelle & Kaydet',
-              onClick: () => replaceMediaEverywhere(entry.url, urlInput.value),
-            }),
+          body.appendChild(el('div', { style: 'display:flex;gap:6px;align-items:center;' }, [
+            nameInput,
+            saveBtn,
           ]));
-          replaceBox.appendChild(hiddenFile);
-          body.appendChild(replaceBox);
+        } else {
+          const extInp = el('input', {
+            type: 'text',
+            className: 'input',
+            value: entry.url,
+            readOnly: true,
+            title: entry.url,
+            style: 'flex:1;font-size:11px;padding:6px 8px;background:var(--sand,#faf8f5);color:var(--slate);border:1px solid var(--dust);border-radius:6px;',
+          });
+          body.appendChild(extInp);
         }
 
-        const footBtns = el('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;padding-top:6px;' });
-        footBtns.appendChild(el('button', {
+        // 2. Kullanım Durumu ve Boyut Özeti
+        const metaRow = el('div', {
+          style: 'display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--slate);padding:2px 0;',
+        }, [
+          el('span', {}, [
+            el('span', { text: 'Kullanım: ' }),
+            el('strong', {
+              style: `color: ${isUsed ? '#059669' : '#d97706'};font-weight:700;`,
+              text: usageText,
+            }),
+            ...(isUsed ? [el('span', { style: 'font-size:11px;color:var(--slate);margin-left:4px;', text: `(${entry.usages.length} yer)` })] : []),
+          ]),
+          el('span', {}, [
+            el('span', { text: 'Boyut: ' }),
+            el('strong', { style: 'color:var(--navy);font-weight:600;', text: sizeText }),
+          ]),
+        ]);
+        body.appendChild(metaRow);
+
+        // 3. Alt Aksiyonlar: URL Kopyala & Sil
+        const footBtns = el('div', {
+          style: 'display:flex;gap:6px;justify-content:flex-end;align-items:center;padding-top:6px;border-top:1px solid var(--border-subtle,#e2e8f0);',
+        });
+
+        const copyBtn = el('button', {
           type: 'button',
           className: 'btn btn-muted btn-sm',
+          style: 'padding:4px 10px;font-size:11px;',
           text: 'URL Kopyala',
           onClick: async () => {
             try {
@@ -7293,110 +7314,22 @@
               prompt('Görsel URL:', entry.url);
             }
           },
-        }));
+        });
+        footBtns.appendChild(copyBtn);
 
         if (entry.isLocal) {
-          const renameContainer = el('div', {
-            style: 'display:none;width:100%;margin-top:8px;padding:10px;background:var(--sand,#faf8f5);border-radius:6px;border:1px solid var(--dust,#e5e0d8);',
-          });
-          const currFilename = entry.url.split('/').pop() || '';
-          const nameInput = el('input', {
-            type: 'text',
-            className: 'input',
-            value: currFilename,
-            placeholder: 'Yeni dosya adı...',
-            style: 'flex:1;font-size:12px;padding:5px 8px;background:#ffffff;',
-          });
-          const doRenameBtn = el('button', {
-            type: 'button',
-            className: 'btn btn-primary btn-sm',
-            text: 'Kaydet & Kodda Güncelle',
-          });
-          const cancelRenameBtn = el('button', {
-            type: 'button',
-            className: 'btn btn-muted btn-sm',
-            text: 'Vazgeç',
-            onClick: () => {
-              renameContainer.style.display = 'none';
-              renameBtn.style.display = '';
-            },
-          });
-
-          doRenameBtn.addEventListener('click', async () => {
-            const nextName = nameInput.value.trim();
-            if (!nextName) {
-              alert('Lütfen geçerli bir dosya adı girin.');
-              return;
-            }
-            if (nextName === currFilename) {
-              renameContainer.style.display = 'none';
-              renameBtn.style.display = '';
-              return;
-            }
-            doRenameBtn.disabled = true;
-            doRenameBtn.textContent = 'Güncelleniyor...';
-            try {
-              await renameMediaFile(entry.url, nextName);
-            } catch (err) {
-              alert(err.message);
-              doRenameBtn.disabled = false;
-              doRenameBtn.textContent = 'Kaydet & Kodda Güncelle';
-            }
-          });
-
-          nameInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              doRenameBtn.click();
-            } else if (e.key === 'Escape') {
-              cancelRenameBtn.click();
-            }
-          });
-
-          const renameRow = el('div', { style: 'display:flex;gap:6px;align-items:center;' }, [
-            nameInput,
-            doRenameBtn,
-            cancelRenameBtn,
-          ]);
-          const renameHelp = el('div', {
-            style: 'font-size:11px;color:var(--slate,#666);margin-top:5px;line-height:1.4;',
-            text: '💡 Dosya adı değiştirildiğinde diskteki dosya yeniden adlandırılır ve sitedeki tüm sayfa/içerik dosyalarındaki referanslar anında otomatik güncellenir.',
-          });
-          renameContainer.appendChild(renameRow);
-          renameContainer.appendChild(renameHelp);
-
-          const renameBtn = el('button', {
-            type: 'button',
-            className: 'btn btn-dark btn-sm',
-            text: 'Adı Değiştir ✏️',
-            title: 'Dosya adını değiştir ve sitedeki tüm kullanımlarında otomatik güncelle',
-            onClick: () => {
-              renameContainer.style.display = 'block';
-              renameBtn.style.display = 'none';
-              nameInput.focus();
-              const dotIdx = currFilename.lastIndexOf('.');
-              if (dotIdx > 0) {
-                nameInput.setSelectionRange(0, dotIdx);
-              } else {
-                nameInput.select();
-              }
-            },
-          });
-
-          footBtns.appendChild(renameBtn);
-
           const delBtn = el('button', {
             type: 'button',
             className: 'btn btn-danger btn-sm',
-            text: 'Dosyayı Sil',
-            title: entry.usages.length > 0 ? `Sitede ${entry.usages.length} yerde kullanımda — silindiğinde bu alanlardan kaldırılır.` : 'Yerel dosyayı sil',
+            style: 'padding:4px 10px;font-size:11px;',
+            text: 'Sil',
             onClick: async () => {
-              const msg = entry.usages.length > 0
-                ? `"${entry.url}" dosyası sitede ${entry.usages.length} yerde kullanılmaktadır!\n\nDosyayı silmek istediğinize emin misiniz? (Silindiğinde sitedeki kullanıldığı alanlar otomatik temizlenecektir)`
-                : `"${entry.url}" yerel dosyasını silmek istediğinize emin misiniz?`;
+              const msg = isUsed
+                ? `"${currFilename}" dosyası sitede ${entry.usages.length} yerde kullanılmaktadır!\n\nDosyayı silmek istediğinize emin misiniz? (Silindiğinde kullanıldığı alanlardan kaldırılacaktır)`
+                : `"${currFilename}" dosyasını silmek istediğinize emin misiniz?`;
               if (!confirm(msg)) return;
               try {
-                if (entry.usages.length > 0) {
+                if (isUsed) {
                   await replaceMediaEverywhere(entry.url, '');
                 }
                 const res = await fetch('/api/cms/media/delete', {
@@ -7408,7 +7341,7 @@
                 if (!json.ok) throw new Error(json.error || 'Silme hatası.');
                 if (Array.isArray(json.uploads)) STATE.uploads = json.uploads;
                 if (Array.isArray(json.mediaFiles)) STATE.mediaFiles = json.mediaFiles;
-                showToast('Yerel dosya silindi.');
+                showToast('Dosya silindi.');
                 renderAll();
               } catch (err) {
                 alert(err.message);
@@ -7416,12 +7349,9 @@
             },
           });
           footBtns.appendChild(delBtn);
-
-          body.appendChild(footBtns);
-          body.appendChild(renameContainer);
-        } else {
-          body.appendChild(footBtns);
         }
+
+        body.appendChild(footBtns);
         card.appendChild(body);
         grid.appendChild(card);
       });
